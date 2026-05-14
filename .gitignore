@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+playwright-report/
+test-results/
+Log Download/
+.claude/
+*.log
+*.tmp

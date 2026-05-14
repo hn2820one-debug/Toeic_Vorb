@@ -1,0 +1,5610 @@
+[
+  {
+    "question_id": "v1_b_21_q_001",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Recruiting: The recruiter reviewed the applicant's ______ before scheduling the final interview.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 qualify 字族中正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_002",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Interviews: Only candidates who ______ for the trainee program will be contacted this week.",
+    "options": {
+      "A": "qualified",
+      "B": "qualifying",
+      "C": "qualify",
+      "D": "qualification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 qualify 字族中正確答案是 qualify。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_003",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Screening: The hotel is looking for a ______ supervisor for the front desk team.",
+    "options": {
+      "A": "qualifying",
+      "B": "qualified",
+      "C": "qualification",
+      "D": "qualify"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格修飾名詞或描述主詞，需要形容詞。 qualify 字族中正確答案是 qualified。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_004",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Interviews: The recruiter reviewed the applicant's ______ before scheduling the final interview.",
+    "options": {
+      "A": "qualification",
+      "B": "qualify",
+      "C": "qualified",
+      "D": "qualifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 qualify 字族中正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_005",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Screening: The recruiter reviewed the applicant's ______ before scheduling the final interview.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 qualify 字族中正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_006",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Recruiting: The HR system helps managers with ______ applicants before interviews.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 qualify 字族中正確答案是 qualifying。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_007",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "All workers must hold a valid safety ______ to enter the construction site.",
+    "options": {
+      "A": "qualifying",
+      "B": "qualification",
+      "C": "qualify",
+      "D": "qualified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "hold a valid ___ 後接名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_008",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Each candidate's educational ______ was listed clearly on the application form.",
+    "options": {
+      "A": "qualification",
+      "B": "qualify",
+      "C": "qualified",
+      "D": "qualifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "educational ___ 後接名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_009",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The committee set a new ______ standard for all overseas job applicants.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "a new ___ standard 後接名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_010",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Recruiting: Only candidates who ______ for the trainee program will be contacted this week.",
+    "options": {
+      "A": "qualified",
+      "B": "qualifying",
+      "C": "qualify",
+      "D": "qualification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 qualify 字族中正確答案是 qualify。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_011",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The company sought a ______ professional for the senior audit role.",
+    "options": {
+      "A": "qualifying",
+      "B": "qualified",
+      "C": "qualification",
+      "D": "qualify"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "名詞 professional 前需要形容詞修飾。正確答案是 qualified。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_012",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The HR team verified each applicant's ______ before the interview stage.",
+    "options": {
+      "A": "qualification",
+      "B": "qualify",
+      "C": "qualified",
+      "D": "qualifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "each applicant's ___ 需要名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_013",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Attending the course was a minimum ______ for the management promotion.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "a minimum ___ 後接名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_014",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Screening: The HR system helps managers with ______ applicants before interviews.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 qualify 字族中正確答案是 qualifying。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_015",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The board reviewed the ______ requirements for committee membership.",
+    "options": {
+      "A": "qualifying",
+      "B": "qualification",
+      "C": "qualify",
+      "D": "qualified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "the ___ requirements 需要名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_016",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
+    "question_text": "Operations: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "productivity",
+      "B": "productive",
+      "C": "productively",
+      "D": "unproductive"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 productive 字族中正確答案是 productivity。",
+    "target_item_id": "item_productive_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_017",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_BEFORE_NOUN",
+    "question_text": "Airline: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "competitive",
+      "B": "competitively",
+      "C": "competitiveness",
+      "D": "competition"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 competitive 字族中正確答案是 competition。",
+    "target_item_id": "item_competitive_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_018",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
+    "question_text": "Candidates must ______ by submitting proof of relevant experience.",
+    "options": {
+      "A": "qualification",
+      "B": "qualified",
+      "C": "qualify",
+      "D": "qualifying"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "must 後接動詞原形。正確答案是 qualify。",
+    "target_item_id": "item_profitable_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_019",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "IT: The ______ report was sent to the department manager.",
+    "options": {
+      "A": "insecure",
+      "B": "secure",
+      "C": "security",
+      "D": "securely"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 secure 字族中正確答案是 secure。",
+    "target_item_id": "item_secure_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_q_020",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "SVC_LINKING_VERB_ADJ",
+    "question_text": "Reports: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "accuracy",
+      "B": "accurate",
+      "C": "accurately",
+      "D": "inaccuracy"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 accurate 字族中正確答案是 accuracy。",
+    "target_item_id": "item_accurate_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_rv_021",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Screening: Quick review: choose the correct qualify word-family form. The recruiter reviewed the applicant's ______ before scheduling the final interview.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 qualify 字族中正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_rv_022",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Staff are reminded that ______ for the bonus requires full-year attendance.",
+    "options": {
+      "A": "qualify",
+      "B": "qualified",
+      "C": "qualifying",
+      "D": "qualification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "___ for the bonus 作主語，要用動名詞形式。正確答案是 qualifying。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_rv_023",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "A professional ______ is often required before applying for senior roles.",
+    "options": {
+      "A": "qualifying",
+      "B": "qualification",
+      "C": "qualify",
+      "D": "qualified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "A professional ___ 後接名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_21_rv_024",
+    "lesson_id": "V1-B-21",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The minimum ______ for the position was a degree in engineering.",
+    "options": {
+      "A": "qualification",
+      "B": "qualify",
+      "C": "qualified",
+      "D": "qualifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The minimum ___ 後接名詞。正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_001",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR: The agency offers ______ services for recent graduates.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要名詞。 employ 字族中正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_002",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Staffing: The retailer plans to ______ ten temporary workers in December.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 employ 字族中正確答案是 employ。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_003",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Employment Contracts: The agency offers ______ services for recent graduates.",
+    "options": {
+      "A": "employment",
+      "B": "employee",
+      "C": "employer",
+      "D": "employ"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 employ 字族中正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_004",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Staffing: The technicians were ______ by a certified maintenance firm.",
+    "options": {
+      "A": "employment",
+      "B": "employee",
+      "C": "employer",
+      "D": "employed"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要過去分詞或已完成狀態。 employ 字族中正確答案是 employed。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_005",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The new regulation sets minimum conditions for ______ in private companies.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "conditions for ___ 後接抽象名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_006",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The center assists job seekers in finding and securing stable ______.",
+    "options": {
+      "A": "employ",
+      "B": "employment",
+      "C": "employee",
+      "D": "employer"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "securing stable ___ 後接抽象名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_007",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Employment Contracts: The ______ must provide safety training to all staff.",
+    "options": {
+      "A": "employer",
+      "B": "employment",
+      "C": "employee",
+      "D": "employ"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要表示人的名詞。 employ 字族中正確答案是 employer。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_008",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The government launched a new initiative to boost youth ______ nationally.",
+    "options": {
+      "A": "employee",
+      "B": "employer",
+      "C": "employ",
+      "D": "employment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "boost youth ___ 後接抽象名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_009",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Staffing: The agency offers ______ services for recent graduates.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要名詞。 employ 字族中正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_010",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR: The retailer plans to ______ ten temporary workers in December.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 employ 字族中正確答案是 employ。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_011",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Rising ______ rates were cited in the company's annual economic report.",
+    "options": {
+      "A": "employment",
+      "B": "employee",
+      "C": "employer",
+      "D": "employ"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "___ rates 後接抽象名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_012",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "She has been ______ at the same firm for over a decade.",
+    "options": {
+      "A": "employment",
+      "B": "employee",
+      "C": "employer",
+      "D": "employed"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "has been ___ 後接過去分詞。正確答案是 employed。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_013",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The agency provides ______ services to recent graduates seeking work.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "___ services 後接名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_014",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "All forms of self-______ must be declared on the annual tax return.",
+    "options": {
+      "A": "employ",
+      "B": "employment",
+      "C": "employee",
+      "D": "employer"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "self-___ 複合詞後接名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_015",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The ______ provided health insurance for all full-time workers.",
+    "options": {
+      "A": "employer",
+      "B": "employment",
+      "C": "employee",
+      "D": "employ"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "句意指提供保險的一方，要用僱主名詞。正確答案是 employer。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_016",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADV_MODIFIES_VERB",
+    "question_text": "Customers: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "successful",
+      "B": "successfully",
+      "C": "unsuccessful",
+      "D": "success"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 successful 字族中正確答案是 success。",
+    "target_item_id": "item_successful_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_017",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_BEFORE_NOUN",
+    "question_text": "Medical: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "reliably",
+      "B": "unreliable",
+      "C": "reliability",
+      "D": "reliable"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 reliable 字族中正確答案是 reliability。",
+    "target_item_id": "item_reliable_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_018",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
+    "question_text": "The firm will ______ fifty additional technicians next month.",
+    "options": {
+      "A": "employment",
+      "B": "employ",
+      "C": "employee",
+      "D": "employer"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "will 後接動詞原形。正確答案是 employ。",
+    "target_item_id": "item_productive_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_019",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "ADJ_BEFORE_NOUN",
+    "question_text": "Airline: The ______ report was sent to the department manager.",
+    "options": {
+      "A": "competitive",
+      "B": "competition",
+      "C": "competitively",
+      "D": "competitiveness"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 competitive 字族中正確答案是 competitive。",
+    "target_item_id": "item_competitive_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_q_020",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
+    "question_text": "Branches: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "profit",
+      "B": "profitable",
+      "C": "profitably",
+      "D": "profitability"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 profitable 字族中正確答案是 profitability。",
+    "target_item_id": "item_profitable_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_rv_021",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Employment Contracts: Quick review: choose the correct employ word-family form. The agency offers ______ services for recent graduates.",
+    "options": {
+      "A": "employer",
+      "B": "employ",
+      "C": "employment",
+      "D": "employee"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要名詞。 employ 字族中正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_rv_022",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Contract terms outlined the conditions of ______ for seasonal workers.",
+    "options": {
+      "A": "employ",
+      "B": "employment",
+      "C": "employee",
+      "D": "employer"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "conditions of ___ 後接抽象名詞。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_rv_023",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Any changes to the work schedule must be approved by the ______.",
+    "options": {
+      "A": "employer",
+      "B": "employment",
+      "C": "employee",
+      "D": "employ"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "句意指有批准權的一方，要用僱主名詞。正確答案是 employer。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_22_rv_024",
+    "lesson_id": "V1-B-22",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The ______ contract was reviewed and signed before the quarter began.",
+    "options": {
+      "A": "employee",
+      "B": "employer",
+      "C": "employ",
+      "D": "employment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "___ contract 作名詞修飾。正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_001",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Jobs: Please complete the online ______ before the recruitment deadline.",
+    "options": {
+      "A": "applicable",
+      "B": "application",
+      "C": "applicant",
+      "D": "apply"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 apply 字族中正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_002",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Forms: Employees may ______ for the transfer program through the HR portal.",
+    "options": {
+      "A": "apply",
+      "B": "application",
+      "C": "applicant",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 apply 字族中正確答案是 apply。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_003",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Policy: The discount is not ______ to international shipping charges.",
+    "options": {
+      "A": "application",
+      "B": "applicant",
+      "C": "apply",
+      "D": "applicable"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格修飾名詞或描述主詞，需要形容詞。 apply 字族中正確答案是 applicable。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_004",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Forms: Please complete the online ______ before the recruitment deadline.",
+    "options": {
+      "A": "apply",
+      "B": "applicable",
+      "C": "application",
+      "D": "applicant"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要名詞。 apply 字族中正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_005",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Policy: Please complete the online ______ before the recruitment deadline.",
+    "options": {
+      "A": "applicable",
+      "B": "application",
+      "C": "applicant",
+      "D": "apply"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 apply 字族中正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_006",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The scholarship ______ must be submitted before the end of the month.",
+    "options": {
+      "A": "application",
+      "B": "applicant",
+      "C": "apply",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The scholarship ___ 後接名詞。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_007",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Policy: The ______ answered all interview questions clearly.",
+    "options": {
+      "A": "application",
+      "B": "apply",
+      "C": "applicable",
+      "D": "applicant"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要表示人的名詞。 apply 字族中正確答案是 applicant。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_008",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Successful candidates are contacted after reviewing each ______ carefully.",
+    "options": {
+      "A": "apply",
+      "B": "applicable",
+      "C": "application",
+      "D": "applicant"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "reviewing each ___ 後接名詞。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_009",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The manager evaluated each ______ carefully and shortlisted the top five.",
+    "options": {
+      "A": "applicable",
+      "B": "application",
+      "C": "applicant",
+      "D": "apply"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "evaluated each ___ 後接名詞。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_010",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Jobs: Employees may ______ for the transfer program through the HR portal.",
+    "options": {
+      "A": "apply",
+      "B": "application",
+      "C": "applicant",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 apply 字族中正確答案是 apply。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_011",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Please read all terms and conditions that are ______ to your account type.",
+    "options": {
+      "A": "application",
+      "B": "applicant",
+      "C": "apply",
+      "D": "applicable"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "that are ___ to 需要形容詞。正確答案是 applicable。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_012",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The deadline for submitting your ______ is the end of this month.",
+    "options": {
+      "A": "apply",
+      "B": "applicable",
+      "C": "application",
+      "D": "applicant"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "submitting your ___ 後接名詞。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_013",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "You must complete the online ______ before the screening process begins.",
+    "options": {
+      "A": "applicable",
+      "B": "application",
+      "C": "applicant",
+      "D": "apply"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "the online ___ 後接名詞。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_014",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The ______ pack required a resume, a cover letter, and two references.",
+    "options": {
+      "A": "application",
+      "B": "applicant",
+      "C": "apply",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The ___ pack 名詞修飾。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_015",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Each ______ will receive an email notification within two business days.",
+    "options": {
+      "A": "application",
+      "B": "apply",
+      "C": "applicable",
+      "D": "applicant"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "句意指提交申請的人，要用表人名詞。正確答案是 applicant。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_016",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "Safety: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "responsibly",
+      "B": "irresponsible",
+      "C": "responsibility",
+      "D": "responsible"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 responsible 字族中正確答案是 responsibility。",
+    "target_item_id": "item_responsible_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_017",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "Hotel: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "unavailable",
+      "B": "availability",
+      "C": "available",
+      "D": "availably"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 available 字族中正確答案是 availability。",
+    "target_item_id": "item_available_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_018",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADV_MODIFIES_VERB",
+    "question_text": "Interested candidates should ______ online before the closing date.",
+    "options": {
+      "A": "apply",
+      "B": "applicant",
+      "C": "application",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "should 後接動詞原形。正確答案是 apply。",
+    "target_item_id": "item_successful_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_019",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "ADJ_BEFORE_NOUN",
+    "question_text": "Medical: The ______ report was sent to the department manager.",
+    "options": {
+      "A": "reliability",
+      "B": "reliably",
+      "C": "unreliable",
+      "D": "reliable"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 reliable 字族中正確答案是 reliable。",
+    "target_item_id": "item_reliable_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_q_020",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
+    "question_text": "Scheduling: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "productively",
+      "B": "unproductive",
+      "C": "productivity",
+      "D": "productive"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 productive 字族中正確答案是 productivity。",
+    "target_item_id": "item_productive_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_rv_021",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Policy: Quick review: choose the correct apply word-family form. Please complete the online ______ before the recruitment deadline.",
+    "options": {
+      "A": "applicable",
+      "B": "application",
+      "C": "applicant",
+      "D": "apply"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 apply 字族中正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_rv_022",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The ______ form required three professional references from each candidate.",
+    "options": {
+      "A": "application",
+      "B": "applicant",
+      "C": "apply",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "___ form 名詞修飾。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_rv_023",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "A successful ______ must have at least five years of field experience.",
+    "options": {
+      "A": "application",
+      "B": "apply",
+      "C": "applicable",
+      "D": "applicant"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "A successful ___ 指成功申請者，要用表人名詞。正確答案是 applicant。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_23_rv_024",
+    "lesson_id": "V1-B-23",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The recruiter shortlisted ten ______ forms from over a hundred submissions.",
+    "options": {
+      "A": "apply",
+      "B": "applicable",
+      "C": "application",
+      "D": "applicant"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "ten ___ forms 後接名詞。正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_001",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Retail: The sales team prepared a new ______ for the summer catalog.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 promote 字族中正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_002",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Marketing: The company will ______ the assistant manager next month.",
+    "options": {
+      "A": "promotion",
+      "B": "promotional",
+      "C": "promoting",
+      "D": "promote"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 promote 字族中正確答案是 promote。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_003",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Advancement: The retail chain printed ______ coupons for loyal customers.",
+    "options": {
+      "A": "promote",
+      "B": "promoting",
+      "C": "promotional",
+      "D": "promotion"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格修飾名詞或描述主詞，需要形容詞。 promote 字族中正確答案是 promotional。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_004",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Marketing: The sales team prepared a new ______ for the summer catalog.",
+    "options": {
+      "A": "promoting",
+      "B": "promotion",
+      "C": "promote",
+      "D": "promotional"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 promote 字族中正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_005",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Advancement: The sales team prepared a new ______ for the summer catalog.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 promote 字族中正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_006",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Retail: The marketing team is responsible for ______ the new service.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 promote 字族中正確答案是 promoting。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_007",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "An exciting ______ was launched to raise awareness of the new product line.",
+    "options": {
+      "A": "promotional",
+      "B": "promoting",
+      "C": "promotion",
+      "D": "promote"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "An exciting ___ 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_008",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The staff member was informed of her ______ to head of department.",
+    "options": {
+      "A": "promoting",
+      "B": "promotion",
+      "C": "promote",
+      "D": "promotional"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "her ___ to 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_009",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The limited-time ______ offered all customers a thirty percent discount.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The limited-time ___ 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_010",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Retail: The company will ______ the assistant manager next month.",
+    "options": {
+      "A": "promotion",
+      "B": "promotional",
+      "C": "promoting",
+      "D": "promote"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 promote 字族中正確答案是 promote。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_011",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The store distributed ______ leaflets near the entrance to attract shoppers.",
+    "options": {
+      "A": "promote",
+      "B": "promoting",
+      "C": "promotional",
+      "D": "promotion"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "___ leaflets 名詞前要用形容詞。正確答案是 promotional。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_012",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Her ______ to regional manager was officially announced at the staff meeting.",
+    "options": {
+      "A": "promoting",
+      "B": "promotion",
+      "C": "promote",
+      "D": "promotional"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "Her ___ to 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_013",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The advertising campaign relied on aggressive ______ through social media.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "relied on ___ 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_014",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Advancement: The marketing team is responsible for ______ the new service.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 promote 字族中正確答案是 promoting。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_015",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "She worked hard to earn a ______ within her first year at the company.",
+    "options": {
+      "A": "promotional",
+      "B": "promoting",
+      "C": "promotion",
+      "D": "promote"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "earn a ___ 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_016",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "SVC_LINKING_VERB_ADJ",
+    "question_text": "Invoices: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "inaccuracy",
+      "B": "accuracy",
+      "C": "accurate",
+      "D": "accurately"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 accurate 字族中正確答案是 accuracy。",
+    "target_item_id": "item_accurate_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_017",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADV_MODIFIES_VERB",
+    "question_text": "Warehouse: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "efficiency",
+      "B": "efficient",
+      "C": "efficiently",
+      "D": "inefficiency"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 efficient 字族中正確答案是 efficiency。",
+    "target_item_id": "item_efficient_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_018",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "The marketing team agreed to ______ the new product at the upcoming trade fair.",
+    "options": {
+      "A": "promotional",
+      "B": "promotion",
+      "C": "promoting",
+      "D": "promote"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "agreed to 後接動詞原形。正確答案是 promote。",
+    "target_item_id": "item_responsible_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_019",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "Hotel: The ______ report was sent to the department manager.",
+    "options": {
+      "A": "availably",
+      "B": "unavailable",
+      "C": "available",
+      "D": "availability"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 available 字族中正確答案是 available。",
+    "target_item_id": "item_available_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_q_020",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADV_MODIFIES_VERB",
+    "question_text": "Marketing: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "unsuccessful",
+      "B": "success",
+      "C": "successful",
+      "D": "successfully"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 successful 字族中正確答案是 success。",
+    "target_item_id": "item_successful_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_rv_021",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Advancement: Quick review: choose the correct promote word-family form. The sales team prepared a new ______ for the summer catalog.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 promote 字族中正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_rv_022",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The intern was responsible for ______ upcoming events on the company's social pages.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promotional",
+      "D": "promoting"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "responsible for ___ 後接動名詞。正確答案是 promoting。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_rv_023",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The manager designed a special ______ to clear end-of-season inventory.",
+    "options": {
+      "A": "promotional",
+      "B": "promoting",
+      "C": "promotion",
+      "D": "promote"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "a special ___ 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_24_rv_024",
+    "lesson_id": "V1-B-24",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "An internal ______ was awarded to the most dedicated employee of the year.",
+    "options": {
+      "A": "promoting",
+      "B": "promotion",
+      "C": "promote",
+      "D": "promotional"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "An internal ___ 後接名詞。正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_001",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Training: The supervisor completed an employee ______ after the probation period.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 assess 字族中正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_002",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Performance: Managers must ______ each trainee's progress before certification.",
+    "options": {
+      "A": "assessed",
+      "B": "assessing",
+      "C": "assess",
+      "D": "assessment"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 assess 字族中正確答案是 assess。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_003",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "HR Review: The supervisor completed an employee ______ after the probation period.",
+    "options": {
+      "A": "assessing",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessed"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 assess 字族中正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_004",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Performance: The candidates were ______ by three department heads.",
+    "options": {
+      "A": "assessed",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessing"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要過去分詞或已完成狀態。 assess 字族中正確答案是 assessed。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_005",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The results of the financial ______ were discussed at the board meeting.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "the financial ___ 後接名詞。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_006",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Training: The online tool is useful for ______ customer satisfaction.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 assess 字族中正確答案是 assessing。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_007",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Staff Reviews: The supervisor completed an employee ______ at the end of probation.",
+    "options": {
+      "A": "assessing",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessed"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 assess 字族中正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_008",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The annual risk ______ highlighted several areas needing immediate improvement.",
+    "options": {
+      "A": "assessment",
+      "B": "assess",
+      "C": "assessed",
+      "D": "assessing"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The annual risk ___ 後接名詞。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_009",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Performance: The supervisor completed an employee ______ after the probation period.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 assess 字族中正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_010",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Training: Managers must ______ each trainee's progress before certification.",
+    "options": {
+      "A": "assessed",
+      "B": "assessing",
+      "C": "assess",
+      "D": "assessment"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 assess 字族中正確答案是 assess。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_011",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The manager requested a full ______ of the project's current risks.",
+    "options": {
+      "A": "assessing",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessed"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "a full ___ of 後接名詞。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_012",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Each new employee's skills were ______ during the onboarding process.",
+    "options": {
+      "A": "assessed",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessing"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "were ___ 後接過去分詞。正確答案是 assessed。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_013",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The safety ______ revealed several hazards in the warehouse layout.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "The safety ___ 後接名詞。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_014",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "HR Review: The online tool is useful for ______ customer satisfaction.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 assess 字族中正確答案是 assessing。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_015",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Results of the performance ______ will be shared with each department head.",
+    "options": {
+      "A": "assessing",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessed"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "the performance ___ 後接名詞。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_016",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Policy: Please complete the online ______ before the recruitment deadline.",
+    "options": {
+      "A": "application",
+      "B": "applicant",
+      "C": "apply",
+      "D": "applicable"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 apply 字族中正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_017",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Retail: The sales team prepared a new ______ for the summer catalog.",
+    "options": {
+      "A": "promote",
+      "B": "promotional",
+      "C": "promoting",
+      "D": "promotion"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 promote 字族中正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_018",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "SVC_LINKING_VERB_ADJ",
+    "question_text": "The board asked the consultant to ______ all existing supplier contracts.",
+    "options": {
+      "A": "assessing",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessed"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "to 後接動詞原形。正確答案是 assess。",
+    "target_item_id": "item_accurate_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_019",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "ADV_MODIFIES_VERB",
+    "question_text": "Warehouse: The ______ report was sent to the department manager.",
+    "options": {
+      "A": "inefficiency",
+      "B": "efficient",
+      "C": "efficiency",
+      "D": "efficiently"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 efficient 字族中正確答案是 efficient。",
+    "target_item_id": "item_efficient_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_q_020",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "Supervision: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "responsibility",
+      "B": "responsible",
+      "C": "responsibly",
+      "D": "irresponsible"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 responsible 字族中正確答案是 responsibility。",
+    "target_item_id": "item_responsible_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_rv_021",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "HR Review: Quick review: choose the correct assess word-family form. The supervisor completed an employee ______ after the probation period.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 assess 字族中正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_rv_022",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The committee spent a week ______ bids from three different contractors.",
+    "options": {
+      "A": "assess",
+      "B": "assessed",
+      "C": "assessing",
+      "D": "assessment"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "spent a week ___ 後接動名詞。正確答案是 assessing。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_rv_023",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "A thorough ______ of the system's vulnerabilities was completed last quarter.",
+    "options": {
+      "A": "assessing",
+      "B": "assessment",
+      "C": "assess",
+      "D": "assessed"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "A thorough ___ of 後接名詞。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_25_rv_024",
+    "lesson_id": "V1-B-25",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The HR team developed a new ______ tool for annual performance reviews.",
+    "options": {
+      "A": "assessment",
+      "B": "assess",
+      "C": "assessed",
+      "D": "assessing"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "a new ___ tool 名詞前要用名詞修飾。正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_001",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Recruiting: The hospital expanded its nurse ______ campaign this year.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruition",
+      "C": "recruitment",
+      "D": "recruit"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要名詞。 recruit 字族中正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_002",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Job Fairs: The airline hopes to ______ bilingual customer service agents.",
+    "options": {
+      "A": "recruition",
+      "B": "recruit",
+      "C": "recruitment",
+      "D": "recruiter"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 recruit 字族中正確答案是 recruit。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_003",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "HR: The hospital expanded its nurse ______ campaign this year.",
+    "options": {
+      "A": "recruitment",
+      "B": "recruit",
+      "C": "recruiter",
+      "D": "recruition"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 recruit 字族中正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_004",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Job Fairs: The hospital expanded its nurse ______ campaign this year.",
+    "options": {
+      "A": "recruit",
+      "B": "recruiter",
+      "C": "recruition",
+      "D": "recruitment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 recruit 字族中正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_005",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The new platform streamlined ______ by automating the initial screening step.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruition",
+      "C": "recruitment",
+      "D": "recruit"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "streamlined ___ 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_006",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The agency's ______ fees are paid by the hiring company, not the candidate.",
+    "options": {
+      "A": "recruition",
+      "B": "recruitment",
+      "C": "recruit",
+      "D": "recruiter"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "agency's ___ fees 名詞修飾。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_007",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "HR: The ______ reviewed twenty resumes before lunch.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruitment",
+      "C": "recruit",
+      "D": "recruition"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要表示人的名詞。 recruit 字族中正確答案是 recruiter。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_008",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The company announced a major ______ effort to expand its engineering division.",
+    "options": {
+      "A": "recruit",
+      "B": "recruiter",
+      "C": "recruition",
+      "D": "recruitment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "a major ___ effort 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_009",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The annual job fair served as a key ______ opportunity for local companies.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruition",
+      "C": "recruitment",
+      "D": "recruit"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "a key ___ opportunity 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_010",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Recruiting: The airline hopes to ______ bilingual customer service agents.",
+    "options": {
+      "A": "recruition",
+      "B": "recruit",
+      "C": "recruitment",
+      "D": "recruiter"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 recruit 字族中正確答案是 recruit。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_011",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The company launched a ______ drive to hire fifty engineers this quarter.",
+    "options": {
+      "A": "recruitment",
+      "B": "recruit",
+      "C": "recruiter",
+      "D": "recruition"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "a ___ drive 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_012",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The agency specializes in ______ for the financial services industry.",
+    "options": {
+      "A": "recruit",
+      "B": "recruiter",
+      "C": "recruition",
+      "D": "recruitment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "specializes in ___ 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_013",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Online platforms have transformed the ______ process significantly.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruition",
+      "C": "recruitment",
+      "D": "recruit"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "the ___ process 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_014",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Managers attended a seminar on modern ______ practices and talent strategies.",
+    "options": {
+      "A": "recruition",
+      "B": "recruitment",
+      "C": "recruit",
+      "D": "recruiter"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "modern ___ practices 名詞修飾。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_015",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The ______ contacted three shortlisted candidates after the job fair.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruitment",
+      "C": "recruit",
+      "D": "recruition"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "句意指執行招募工作的人，要用表人名詞。正確答案是 recruiter。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_016",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Employment Contracts: The agency offers ______ services for recent graduates.",
+    "options": {
+      "A": "employee",
+      "B": "employer",
+      "C": "employ",
+      "D": "employment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 employ 字族中正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_017",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Jobs: Please complete the online ______ before the recruitment deadline.",
+    "options": {
+      "A": "apply",
+      "B": "applicable",
+      "C": "application",
+      "D": "applicant"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 apply 字族中正確答案是 application。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_018",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The campaign was designed to ______ graduates with strong analytical skills.",
+    "options": {
+      "A": "recruitment",
+      "B": "recruit",
+      "C": "recruiter",
+      "D": "recruition"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "to 後接動詞原形。正確答案是 recruit。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_019",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Training: The supervisor completed an employee ______ after the probation period.",
+    "options": {
+      "A": "assessment",
+      "B": "assess",
+      "C": "assessed",
+      "D": "assessing"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 assess 字族中正確答案是 assessment。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_q_020",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "SVC_LINKING_VERB_ADJ",
+    "question_text": "Reports: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "accurate",
+      "B": "accurately",
+      "C": "inaccuracy",
+      "D": "accuracy"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 accurate 字族中正確答案是 accuracy。",
+    "target_item_id": "item_accurate_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_rv_021",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "HR: Quick review: choose the correct recruit word-family form. The hospital expanded its nurse ______ campaign this year.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruition",
+      "C": "recruitment",
+      "D": "recruit"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要名詞。 recruit 字族中正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_rv_022",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The HR budget allocated thirty percent to ______ and onboarding activities.",
+    "options": {
+      "A": "recruition",
+      "B": "recruitment",
+      "C": "recruit",
+      "D": "recruiter"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "allocated to ___ 後接名詞。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_rv_023",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "An external ______ was hired to find candidates for the new overseas division.",
+    "options": {
+      "A": "recruiter",
+      "B": "recruitment",
+      "C": "recruit",
+      "D": "recruition"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "An external ___ 指外部招募人員。正確答案是 recruiter。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_26_rv_024",
+    "lesson_id": "V1-B-26",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "The policy outlined clear ethical standards for ______ agencies to follow.",
+    "options": {
+      "A": "recruit",
+      "B": "recruiter",
+      "C": "recruition",
+      "D": "recruitment"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "___ agencies 名詞修飾。正確答案是 recruitment。",
+    "target_item_id": "item_recruit_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_001",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Orientation: The company scheduled safety ______ for warehouse employees.",
+    "options": {
+      "A": "trained",
+      "B": "training",
+      "C": "trainer",
+      "D": "train"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 train 字族中正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_002",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Safety: The consultant will ______ the accounting staff on the new software.",
+    "options": {
+      "A": "train",
+      "B": "training",
+      "C": "trainer",
+      "D": "trained"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 train 字族中正確答案是 train。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_003",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Office Systems: The company scheduled safety ______ for warehouse employees.",
+    "options": {
+      "A": "trainer",
+      "B": "train",
+      "C": "trained",
+      "D": "training"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要名詞。 train 字族中正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_004",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Safety: Only ______ operators may use the calibration equipment.",
+    "options": {
+      "A": "trainer",
+      "B": "train",
+      "C": "trained",
+      "D": "training"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格需要過去分詞或已完成狀態。 train 字族中正確答案是 trained。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_005",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The division invested in leadership ______ for all department heads.",
+    "options": {
+      "A": "trained",
+      "B": "training",
+      "C": "trainer",
+      "D": "train"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "leadership ___ 後接名詞。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_006",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Staff were given ______ on how to use the new digital invoice system.",
+    "options": {
+      "A": "training",
+      "B": "trainer",
+      "C": "train",
+      "D": "trained"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "given ___ on 後接名詞。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_007",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Office Systems: The ______ explained the emergency procedures clearly.",
+    "options": {
+      "A": "training",
+      "B": "train",
+      "C": "trained",
+      "D": "trainer"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格需要表示人的名詞。 train 字族中正確答案是 trainer。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_008",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The updated ______ schedule was posted on the company intranet yesterday.",
+    "options": {
+      "A": "train",
+      "B": "trained",
+      "C": "training",
+      "D": "trainer"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "The updated ___ schedule 名詞修飾。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_009",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Safety: The company scheduled safety ______ for warehouse employees.",
+    "options": {
+      "A": "trained",
+      "B": "training",
+      "C": "trainer",
+      "D": "train"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 train 字族中正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_010",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Orientation: The consultant will ______ the accounting staff on the new software.",
+    "options": {
+      "A": "train",
+      "B": "training",
+      "C": "trainer",
+      "D": "trained"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 train 字族中正確答案是 train。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_011",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "All new staff members must complete a safety ______ before starting work.",
+    "options": {
+      "A": "trainer",
+      "B": "train",
+      "C": "trained",
+      "D": "training"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "a safety ___ 後接名詞。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_012",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The new customer service team was fully ______ within two weeks.",
+    "options": {
+      "A": "trainer",
+      "B": "train",
+      "C": "trained",
+      "D": "training"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "was fully ___ 後接過去分詞。正確答案是 trained。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_013",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The annual ______ budget was increased by twenty percent this year.",
+    "options": {
+      "A": "trained",
+      "B": "training",
+      "C": "trainer",
+      "D": "train"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "The annual ___ budget 名詞修飾。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_014",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Completion of the online ______ module is mandatory for all new recruits.",
+    "options": {
+      "A": "training",
+      "B": "trainer",
+      "C": "train",
+      "D": "trained"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "the ___ module 後接名詞。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_015",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "An experienced ______ was brought in to lead the team's development workshop.",
+    "options": {
+      "A": "training",
+      "B": "train",
+      "C": "trained",
+      "D": "trainer"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "An experienced ___ 指有經驗的講師。正確答案是 trainer。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_016",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR Screening: The recruiter reviewed the applicant's ______ before scheduling the final interview.",
+    "options": {
+      "A": "qualified",
+      "B": "qualifying",
+      "C": "qualification",
+      "D": "qualify"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 qualify 字族中正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_017",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "HR: The agency offers ______ services for recent graduates.",
+    "options": {
+      "A": "employ",
+      "B": "employment",
+      "C": "employee",
+      "D": "employer"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 employ 字族中正確答案是 employment。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_018",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The workshop was designed to ______ staff on the new inventory software.",
+    "options": {
+      "A": "train",
+      "B": "training",
+      "C": "trainer",
+      "D": "trained"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "to 後接動詞原形。正確答案是 train。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_019",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Retail: The retail chain printed ______ coupons for loyal customers.",
+    "options": {
+      "A": "promotion",
+      "B": "promote",
+      "C": "promoting",
+      "D": "promotional"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 promote 字族中正確答案是 promotional。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_q_020",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "past",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
+    "question_text": "Performance: The candidates were ______ by three department heads.",
+    "options": {
+      "A": "assess",
+      "B": "assessing",
+      "C": "assessed",
+      "D": "assessment"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格需要過去分詞或已完成狀態。 assess 字族中正確答案是 assessed。",
+    "target_item_id": "item_assess_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_rv_021",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Office Systems: Quick review: choose the correct train word-family form. The company scheduled safety ______ for warehouse employees.",
+    "options": {
+      "A": "trained",
+      "B": "training",
+      "C": "trainer",
+      "D": "train"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 train 字族中正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_rv_022",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The ______ program was revised after receiving feedback from the previous cohort.",
+    "options": {
+      "A": "training",
+      "B": "trainer",
+      "C": "train",
+      "D": "trained"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The ___ program 名詞修飾。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_rv_023",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "personNoun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Each department was assigned a dedicated ______ for the software rollout.",
+    "options": {
+      "A": "training",
+      "B": "train",
+      "C": "trained",
+      "D": "trainer"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "a dedicated ___ 指負責的講師。正確答案是 trainer。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_27_rv_024",
+    "lesson_id": "V1-B-27",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The policy requires all managers to complete compliance ______ every two years.",
+    "options": {
+      "A": "train",
+      "B": "trained",
+      "C": "training",
+      "D": "trainer"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "complete compliance ___ 後接名詞。正確答案是 training。",
+    "target_item_id": "item_train_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_001",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Maintenance: The technician must renew his safety ______ every two years.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 certify 字族中正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_002",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Training: The agency will ______ inspectors who complete the course.",
+    "options": {
+      "A": "certification",
+      "B": "certified",
+      "C": "certifying",
+      "D": "certify"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 certify 字族中正確答案是 certify。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_003",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Professional Licenses: Only a ______ electrician may repair the control panel.",
+    "options": {
+      "A": "certify",
+      "B": "certifying",
+      "C": "certified",
+      "D": "certification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "此空格修飾名詞或描述主詞，需要形容詞。 certify 字族中正確答案是 certified。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_004",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Training: The technician must renew his safety ______ every two years.",
+    "options": {
+      "A": "certifying",
+      "B": "certification",
+      "C": "certify",
+      "D": "certified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "此空格需要名詞。 certify 字族中正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_005",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Professional Licenses: The technician must renew his safety ______ every two years.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 certify 字族中正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_006",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Maintenance: The board is responsible for ______ medical assistants.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 certify 字族中正確答案是 certifying。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_007",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "A food safety ______ is required for all commercial kitchen operations.",
+    "options": {
+      "A": "certified",
+      "B": "certifying",
+      "C": "certification",
+      "D": "certify"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "A food safety ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_008",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The manufacturer needed a quality ______ before selling products overseas.",
+    "options": {
+      "A": "certifying",
+      "B": "certification",
+      "C": "certify",
+      "D": "certified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "a quality ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_009",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Candidates receive an official ______ upon successfully passing the final exam.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "an official ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_010",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Maintenance: The agency will ______ inspectors who complete the course.",
+    "options": {
+      "A": "certification",
+      "B": "certified",
+      "C": "certifying",
+      "D": "certify"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於助動詞或不定詞後，需要動詞原形。 certify 字族中正確答案是 certify。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_011",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Only ______ electricians are permitted to inspect the building's wiring.",
+    "options": {
+      "A": "certify",
+      "B": "certifying",
+      "C": "certified",
+      "D": "certification"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "___ electricians 名詞前要用形容詞。正確答案是 certified。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_012",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Completing the course grants a ______ recognized by major industry bodies.",
+    "options": {
+      "A": "certifying",
+      "B": "certification",
+      "C": "certify",
+      "D": "certified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "grants a ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_013",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The ______ process involves both written exams and practical assessments.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "The ___ process 名詞修飾。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_014",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Professional Licenses: The board is responsible for ______ medical assistants.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "此空格位於介系詞或程序描述後，需要動名詞。 certify 字族中正確答案是 certifying。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_015",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The employee submitted her industry ______ to the HR department upon hire.",
+    "options": {
+      "A": "certified",
+      "B": "certifying",
+      "C": "certification",
+      "D": "certify"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "her industry ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_016",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "ADJ_AFTER_BE",
+    "question_text": "Security: The manager reviewed the ______ before approving the request.",
+    "options": {
+      "A": "insecure",
+      "B": "security",
+      "C": "secure",
+      "D": "securely"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 secure 字族中正確答案是 security。",
+    "target_item_id": "item_secure_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-a",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_017",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Recruiting: The recruiter reviewed the applicant's ______ before scheduling the final interview.",
+    "options": {
+      "A": "qualification",
+      "B": "qualify",
+      "C": "qualified",
+      "D": "qualifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 qualify 字族中正確答案是 qualification。",
+    "target_item_id": "item_qualify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_018",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "part5_sentence_completion",
+    "skill": "word_family",
+    "subskill": "verb",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The lab must ______ all test results before sending reports to clients.",
+    "options": {
+      "A": "certification",
+      "B": "certified",
+      "C": "certifying",
+      "D": "certify"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "must 後接動詞原形。正確答案是 certify。",
+    "target_item_id": "item_employ_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_019",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "adj",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Jobs: The discount is not ______ to international shipping charges.",
+    "options": {
+      "A": "applicant",
+      "B": "apply",
+      "C": "applicable",
+      "D": "application"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "舊字族干擾題：此空格修飾名詞或描述主詞，需要形容詞。 apply 字族中正確答案是 applicable。",
+    "target_item_id": "item_apply_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_q_020",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "word_family",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Marketing: The sales team prepared a new ______ for the summer catalog.",
+    "options": {
+      "A": "promoting",
+      "B": "promotion",
+      "C": "promote",
+      "D": "promotional"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "舊字族干擾題：此空格需要名詞。 promote 字族中正確答案是 promotion。",
+    "target_item_id": "item_promote_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 20,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b",
+      "old_item_interference"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_rv_021",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "Professional Licenses: Quick review: choose the correct certify word-family form. The technician must renew his safety ______ every two years.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "A",
+    "explanation_zh": "此空格需要名詞。 certify 字族中正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_rv_022",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "gerund",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The agency was responsible for ______ all field equipment before deployment.",
+    "options": {
+      "A": "certification",
+      "B": "certify",
+      "C": "certified",
+      "D": "certifying"
+    },
+    "correct_answer": "D",
+    "explanation_zh": "responsible for ___ 後接動名詞。正確答案是 certifying。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_rv_023",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "A valid product ______ is required before distribution to retailers begins.",
+    "options": {
+      "A": "certified",
+      "B": "certifying",
+      "C": "certification",
+      "D": "certify"
+    },
+    "correct_answer": "C",
+    "explanation_zh": "A valid product ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 2,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  },
+  {
+    "question_id": "v1_b_28_rv_024",
+    "lesson_id": "V1-B-28",
+    "stage": "V1",
+    "type": "review_question",
+    "skill": "word_family",
+    "subskill": "noun",
+    "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
+    "question_text": "The company was proud of its ISO ______ for quality management standards.",
+    "options": {
+      "A": "certifying",
+      "B": "certification",
+      "C": "certify",
+      "D": "certified"
+    },
+    "correct_answer": "B",
+    "explanation_zh": "its ISO ___ 後接名詞。正確答案是 certification。",
+    "target_item_id": "item_certify_family",
+    "distractor_type": "same_word_family",
+    "difficulty": 3,
+    "estimated_time_seconds": 12,
+    "default_error_code": "WORD_FAMILY_POS",
+    "tags": [
+      "toeic_part5",
+      "word_family",
+      "v1_full",
+      "v1-b"
+    ]
+  }
+]

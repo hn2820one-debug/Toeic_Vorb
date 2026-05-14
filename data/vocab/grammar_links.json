@@ -1,0 +1,86 @@
+{
+  "ADJ_AFTER_BE": {
+    "title": "Adjective after 'be'",
+    "title_zh": "be 動詞後接形容詞",
+    "rule_zh": "在 be 動詞後，選擇形容詞作表語補語，而非副詞或名詞。",
+    "example": "The report is accurate. ✓ | The report is accuracy. ✗"
+  },
+  "ADJ_AFTER_LINKING_VERB": {
+    "title": "Adjective after linking verb",
+    "title_zh": "連繫動詞後接形容詞",
+    "rule_zh": "appear / become / feel / remain / seem / look 等連繫動詞後接形容詞，不能接副詞。",
+    "example": "The solution seems effective. ✓ | The solution seems effectively. ✗"
+  },
+  "ADJ_BEFORE_NOUN": {
+    "title": "Adjective before noun",
+    "title_zh": "形容詞修飾名詞（定語）",
+    "rule_zh": "在名詞前，選擇形容詞作定語修飾，而非副詞或名詞形式。",
+    "example": "accurate data ✓ | accurately data ✗ | accuracy data ✗"
+  },
+  "ADV_MODIFIES_VERB": {
+    "title": "Adverb modifies verb",
+    "title_zh": "副詞修飾動詞",
+    "rule_zh": "修飾動詞或形容詞時，選擇副詞形式（通常以 -ly 結尾），而非形容詞。",
+    "example": "She works efficiently. ✓ | She works efficient. ✗"
+  },
+  "SVC_LINKING_VERB_ADJ": {
+    "title": "S + linking verb + adjective",
+    "title_zh": "主詞 + 連繫動詞 + 形容詞補語",
+    "rule_zh": "在 S + 連繫動詞 + 補語結構中，補語須為形容詞而非副詞（連繫動詞後不接副詞）。",
+    "example": "The budget remains accurate. ✓ | The budget remains accurately. ✗"
+  },
+  "WORD_FAMILY_NOUN_ADJ": {
+    "title": "Noun vs. adjective",
+    "title_zh": "名詞 vs. 形容詞辨析",
+    "rule_zh": "依句子位置判斷詞性：修飾名詞選形容詞（定語）；作主詞、受詞選名詞。",
+    "example": "accuracy (名詞) | accurate (形容詞)"
+  },
+  "WORD_FAMILY_NOUN_ADJ_ADV": {
+    "title": "Noun / adjective / adverb",
+    "title_zh": "名詞 / 形容詞 / 副詞三選一",
+    "rule_zh": "名詞作主詞 / 受詞；形容詞修飾名詞或作補語；副詞修飾動詞或形容詞。",
+    "example": "accuracy / accurate / accurately"
+  },
+  "WORD_FAMILY_NOUN_USAGE": {
+    "title": "Correct noun form",
+    "title_zh": "名詞形式辨析",
+    "rule_zh": "從同一字族中選出正確的名詞後綴形式（-ness / -ity / -tion / -ance 等），TOEIC 以高頻形式為主。",
+    "example": "accuracy ✓ | accurateness ✗（TOEIC 不常見）"
+  },
+  "WORD_FAMILY_NOUN_VERB": {
+    "title": "Noun vs. verb",
+    "title_zh": "名詞 vs. 動詞辨析",
+    "rule_zh": "依句子結構判斷：作主詞 / 受詞選名詞；需要述語動詞時選動詞形式。",
+    "example": "to verify (動詞) | verification (名詞)"
+  },
+  "WORD_FAMILY_VERB_NOUN": {
+    "title": "Verb vs. noun",
+    "title_zh": "動詞 vs. 名詞辨析",
+    "rule_zh": "需要述語時選動詞；需要主詞 / 受詞時選名詞；注意動詞位置不能放名詞。",
+    "example": "to achieve (動詞) | achievement (名詞)"
+  },
+  "WORD_FAMILY_VERB_NOUN_ADJ": {
+    "title": "Verb / noun / adjective",
+    "title_zh": "動詞 / 名詞 / 形容詞三選一",
+    "rule_zh": "動詞作述語；名詞作主詞 / 受詞；形容詞修飾名詞或作補語。三者位置功能不可互換。",
+    "example": "verify (動詞) | verification (名詞) | verified (形容詞)"
+  },
+  "SCENE_VOCAB_CONTEXT": {
+    "title": "TOEIC scene vocabulary context",
+    "title_zh": "TOEIC 情境詞彙",
+    "rule_zh": "依辦公室、人事、物流、財務、服務等情境辨認常見 TOEIC 詞彙。",
+    "example": "shipment / warehouse / invoice / applicant"
+  },
+  "COLLOCATION_VERB_NOUN": {
+    "title": "Verb-noun collocation",
+    "title_zh": "動詞 + 名詞固定搭配",
+    "rule_zh": "TOEIC 常測自然搭配，例如 make arrangements、submit a report、meet a deadline。",
+    "example": "make arrangements ✓ | do arrangements ✗"
+  },
+  "PART6_CONTEXT_COLLOCATION": {
+    "title": "Part 6 context collocation",
+    "title_zh": "Part 6 上下文搭配",
+    "rule_zh": "依段落語意與商務情境選出自然搭配，重點是語境連貫與固定用法。",
+    "example": "Please submit a report before Friday."
+  }
+}
