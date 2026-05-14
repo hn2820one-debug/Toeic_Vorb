@@ -3,42 +3,119 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TOEIC Vocabulary Tracker</title>
+  <title>TOEIC Vocabulary Tracker - 操作員入口</title>
   <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/icon-192.svg">
   <link rel="stylesheet" href="./css/base.css">
   <style>
     .launcher-shell {
-      width: min(640px, calc(100% - 18px));
+      width: min(920px, calc(100% - 18px));
+    }
+    .launcher-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.82);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+    .launcher-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #e8f1ff;
+      color: #1e3a8a;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
     }
     .launcher-hero {
-      padding: 32px 24px 24px;
-      text-align: center;
+      padding: 28px 24px 24px;
+      text-align: left;
+    }
+    .launcher-hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 20px;
+      align-items: start;
+    }
+    .launcher-hero {
+      padding: 0;
     }
     .launcher-hero h1 {
-      margin: 0 0 8px;
-      font-size: 28px;
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.05;
     }
     .launcher-hero p {
-      margin: 0 0 24px;
+      margin: 0;
       color: var(--text-secondary);
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
     }
-    .launcher-open {
+    .launcher-card {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    }
+    .launcher-open,
+    .launcher-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      min-height: 52px;
-      border-radius: 10px;
+      min-height: 56px;
+      border-radius: 14px;
       color: #fff;
       background: #2563eb;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 800;
       text-decoration: none;
       transition: background 0.12s ease;
     }
     .launcher-open:hover { background: #1d4ed8; }
+    .launcher-secondary {
+      color: #0f172a;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+    }
+    .launcher-secondary:hover { background: #eef2ff; }
+    .launcher-actions {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .launcher-steps {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .launcher-step {
+      padding: 14px 14px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+    .launcher-step strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    .launcher-step span {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+    }
     .launcher-info {
       margin-top: 24px;
       padding: 16px;
@@ -50,6 +127,35 @@
       line-height: 1.7;
     }
     .launcher-info strong { color: var(--text-primary); }
+    .launcher-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+    .launcher-box {
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.88);
+    }
+    .launcher-box h2 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+    .launcher-box-title {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .launcher-box p, .launcher-box li {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .launcher-box ul {
+      margin: 0;
+      padding-left: 18px;
+    }
     .launcher-footer {
       padding: 16px 24px 24px;
       font-size: 12px;
@@ -65,29 +171,116 @@
       color: #1e3a8a;
       font-size: 12px;
     }
+    .launcher-quiet {
+      color: var(--text-tertiary);
+      font-size: 12px;
+      line-height: 1.6;
+      margin-top: 12px;
+    }
+    @media (max-width: 820px) {
+      .launcher-top,
+      .launcher-hero-grid,
+      .launcher-grid,
+      .launcher-steps {
+        grid-template-columns: 1fr;
+      }
+      .launcher-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="top-strip">TOEIC Vocabulary Tracker｜獨立單字程式 — 與文法程式完全分離</div>
+  <div class="top-strip">TOEIC Vocabulary Tracker｜操作員版首頁</div>
   <main class="app-shell launcher-shell">
-    <header class="launcher-hero">
-      <h1 class="page-title">TOEIC Vocabulary Tracker</h1>
-      <p>單字 / Word Family / Collocation / Vocabulary Tracking<br>
-         本程式為獨立程式，與 Grammar / PoS App 完全分離。</p>
-      <a class="launcher-open" href="./tracker.html">進入 Vocabulary Tracker →</a>
-      <div class="launcher-info">
-        <strong>資料位置：</strong>data/vocab/*<br>
-        <strong>IndexedDB：</strong>toeic_vocab_tracker_db<br>
-        <strong>localStorage：</strong>toeic_vocab_tracker_preferences, toeic_vocab_active_session<br>
-        <strong>目前內容：</strong>V0 Diagnostic + V1 Word Family + V2 Scene Vocabulary + V3 Collocation = 180 lessons / 4,608 questions<br>
-        <strong>Grammar / PoS App：</strong>位於獨立資料夾 C:\Users\Keith\toeic-app
-        <div class="launcher-note">
-          ℹ️ 如需清除 Service Worker 快取，請開啟 <a href="./clear-sw.html">clear-sw.html</a>
+    <header class="launcher-top">
+      <div class="launcher-badge">適合非技術使用者</div>
+      <div class="launcher-badge">建議用 Chrome 開啟</div>
+      <div class="launcher-badge">離線也可用</div>
+    </header>
+
+    <section class="launcher-card launcher-hero">
+      <div class="launcher-hero-grid">
+        <div>
+          <h1 class="page-title">TOEIC Vocabulary Tracker</h1>
+          <p>這是單字學習程式的入口。你只需要按按鈕，不需要懂程式設定、資料庫或檔案結構。</p>
+
+          <div class="launcher-actions">
+            <a class="launcher-open" href="./tracker.html">開始學習 / 開啟主程式</a>
+            <a class="launcher-secondary" href="./clear-sw.html">如果畫面怪怪的，先清除快取</a>
+          </div>
+
+          <div class="launcher-steps">
+            <div class="launcher-step">
+              <strong>1. 開啟主程式</strong>
+              <span>按「開始學習」進入內容頁面。</span>
+            </div>
+            <div class="launcher-step">
+              <strong>2. 點 Lesson / Review</strong>
+              <span>一般上課按 Lesson；要複習錯題按 Mistakes。</span>
+            </div>
+            <div class="launcher-step">
+              <strong>3. 如果看見舊畫面</strong>
+              <span>先按「清除快取」，再回來重新開啟。</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="launcher-card">
+          <h2 class="launcher-box-title">你需要知道的只有這些</h2>
+          <ul>
+            <li>這個程式是獨立的，不會改到 Grammar / PoS App。</li>
+            <li>學習資料已經預先放好，直接打開就能用。</li>
+            <li>如果資料更新後沒有看到新內容，先清除快取。</li>
+          </ul>
+          <div class="launcher-note">
+            目前內容：V0 + V1 + V2 + V3，共 180 lessons / 4,608 questions
+          </div>
+          <div class="launcher-quiet">
+            本機資料位置：data/vocab/*<br>
+            儲存位置：toeic_vocab_tracker_db
+          </div>
+        </aside>
+      </div>
+
+      <div class="launcher-grid">
+        <div class="launcher-box">
+          <h2>平日使用</h2>
+          <ul>
+            <li>先開主程式。</li>
+            <li>按 Lesson 開始上課。</li>
+            <li>答題後直接按下一題。</li>
+          </ul>
+        </div>
+        <div class="launcher-box">
+          <h2>複習使用</h2>
+          <ul>
+            <li>按 Mistakes 查看錯題。</li>
+            <li>按 Review Mode 開始複習。</li>
+            <li>複習完按 Finish Review。</li>
+          </ul>
+        </div>
+        <div class="launcher-box">
+          <h2>維護使用</h2>
+          <ul>
+            <li>更新後看不到新內容時，先清除快取。</li>
+            <li>如果瀏覽器舊資料卡住，重新開頁面。</li>
+            <li>不需要手動改檔案。</li>
+          </ul>
         </div>
       </div>
-    </header>
+
+      <div class="launcher-info">
+        <strong>如果你只想最快開始：</strong>按「開始學習 / 開啟主程式」即可。
+        <div class="launcher-note">
+          如需清除 Service Worker 快取，請開啟 <a href="./clear-sw.html">清除快取頁面</a>。
+        </div>
+      </div>
+    </section>
+
     <footer class="launcher-footer">
-      Run: <code>python -m http.server 8787 --bind 127.0.0.1</code> in this folder, then open <code>http://127.0.0.1:8787/</code>
+      本頁是操作員入口，不是技術設定頁。
     </footer>
   </main>
   <script>
