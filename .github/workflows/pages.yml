@@ -28,10 +28,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Collect web assets
+        run: |
+          mkdir -p /tmp/site
+          cp index.html tracker.html clear-sw.html manifest.json sw.js /tmp/site/
+          cp -r css js data icons /tmp/site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: /tmp/site
 
       - name: Deploy to GitHub Pages
         id: deployment
