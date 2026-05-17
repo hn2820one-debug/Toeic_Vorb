@@ -191,12 +191,60 @@ function renderGrammarLink(grammarLinkId) {
   `;
 }
 
+function renderV0Diagnostic(sessionId) {
+  const allAttempts = state.attempts.filter((a) => a.session_id === sessionId);
+  const total = allAttempts.length;
+  const correctCount = allAttempts.filter((a) => a.is_correct).length;
+  const accuracy = total ? correctCount / total : 0;
+  const pct = Math.round(accuracy * 100);
+
+  const wrongByCode = {};
+  allAttempts.filter((a) => !a.is_correct).forEach((a) => {
+    const code = a.error_code || a.default_error_code || "UNKNOWN";
+    wrongByCode[code] = (wrongByCode[code] || 0) + 1;
+  });
+
+  const codeInfo = {
+    VOCAB_UNKNOWN:      { label: "核心詞義不熟",   rec: "V1 Word Family 詞族基礎" },
+    VOCAB_WEAK_RECALL:  { label: "記憶鞏固不足",   rec: "V1 Review Sessions 間隔複習" },
+    SCENE_VOCAB_GAP:    { label: "商業情境詞彙",   rec: "V2 Business Context 商業情境" },
+    FORMAL_PHRASE:      { label: "正式用語欠缺",   rec: "V4 Formal Phrases（規劃中）" },
+    FALSE_FRIEND:       { label: "近義詞混淆",     rec: "V1 False Friends 題型" },
+    TIME_PRESSURE:      { label: "反應速度不足",   rec: "各階段 Speed Drill 練習" }
+  };
+
+  const weakItems = Object.entries(wrongByCode)
+    .sort((a, b) => b[1] - a[1])
+    .map(([code, count]) => {
+      const info = codeInfo[code] || { label: code, rec: "General Practice" };
+      return `<li><strong>${html(info.label)}</strong>（${count} 題）→ 建議加強：${html(info.rec)}</li>`;
+    }).join("");
+
+  const advice = accuracy >= 0.8
+    ? "成績良好，V1 可以正常進度推進。"
+    : accuracy >= 0.6
+      ? "基礎尚可，按 V1 標準進度學習，注意弱點題型。"
+      : "建議放慢 V1 節奏，每課都完成複習題，勿跳過 Review Session。";
+
+  return `
+    <section class="tracker-panel v0-diagnostic">
+      <h3>V0 診斷結果</h3>
+      <p class="tracker-bigline">${correctCount} / ${total} 正確 · ${pct}%</p>
+      <p class="muted-note">${html(advice)}</p>
+      ${weakItems ? `<h4 class="diagnostic-heading">發現弱點 → 建議學習重點</h4><ul class="diagnostic-list">${weakItems}</ul>` : `<p class="muted-note">全部答對，各題型掌握良好！</p>`}
+    </section>
+  `;
+}
+
 export function renderSessionErrorReview(sessionId) {
   const questionMap = byId(state.questions, "question_id");
   const itemMap = byId(state.vocabItems, "item_id");
+  const session = state.sessions.find((s) => s.session_id === sessionId);
+  const isV0 = session?.stage === "V0";
   const attempts = state.attempts.filter((attempt) => attempt.session_id === sessionId && !attempt.is_correct);
   if (!attempts.length) {
     return `
+      ${isV0 ? renderV0Diagnostic(sessionId) : ""}
       <section class="tracker-panel">
         <h3>Error Review + Scheduling</h3>
         <p class="tracker-bigline">No incorrect answers in this session.</p>
@@ -205,6 +253,7 @@ export function renderSessionErrorReview(sessionId) {
     `;
   }
   return `
+    ${isV0 ? renderV0Diagnostic(sessionId) : ""}
     <section class="tracker-panel">
       <h3>Error Review + Scheduling</h3>
       <p class="muted-note">Confirm or change the actual cause. Confirmed errors update attempts, error logs, item mastery, and review queue.</p>

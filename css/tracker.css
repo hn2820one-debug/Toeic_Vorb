@@ -639,6 +639,23 @@ textarea {
 .queue-card,
 .wrong-line,
 .mastery-row,
+.v0-diagnostic {
+  border-left: 4px solid var(--accent);
+  background: #f0f7ff;
+}
+
+.diagnostic-heading {
+  margin: 12px 0 6px;
+  font-size: 0.9rem;
+}
+
+.diagnostic-list {
+  margin: 0;
+  padding-left: 1.4em;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
 .error-card,
 .answer-record {
   border: 1px solid var(--border-light);
