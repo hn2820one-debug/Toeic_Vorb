@@ -610,9 +610,9 @@
     "question_text": "All ______ activities must comply with the company's equal opportunity employment policy. (V2-C-91-21)",
     "options": {
       "A": "applicant",
-      "B": "resume",
+      "B": "boarding pass",
       "C": "recruitment",
-      "D": "reference"
+      "D": "accommodation"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"recruitment\" 表示「招募」。",
@@ -639,9 +639,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Every ______ is required to provide two professional references at the time of application. (V2-C-91-22)",
     "options": {
-      "A": "recruitment",
+      "A": "delivery date",
       "B": "resume",
-      "C": "reference",
+      "C": "return authorization",
       "D": "applicant"
     },
     "correct_answer": "D",
@@ -670,8 +670,8 @@
     "question_text": "Your ______ should be no longer than two pages and tailored to the position applied for. (V2-C-91-23)",
     "options": {
       "A": "resume",
-      "B": "recruitment",
-      "C": "applicant",
+      "B": "refund",
+      "C": "delivery date",
       "D": "reference"
     },
     "correct_answer": "A",
@@ -701,8 +701,8 @@
     "options": {
       "A": "recruitment",
       "B": "reference",
-      "C": "applicant",
-      "D": "resume"
+      "C": "purchase order",
+      "D": "travel allowance"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"reference\" 表示「推薦人」。",
@@ -1330,9 +1330,9 @@
     "question_text": "Prepare specific examples for the behavioral questions during your ______. (V2-C-92-21)",
     "options": {
       "A": "orientation",
-      "B": "probation",
+      "B": "quotation",
       "C": "interview",
-      "D": "position"
+      "D": "purchase order"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"interview\" 表示「面試」。",
@@ -1359,9 +1359,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "New staff who miss the scheduled ______ must complete the online self-paced version. (V2-C-92-22)",
     "options": {
-      "A": "interview",
+      "A": "delay",
       "B": "probation",
-      "C": "position",
+      "C": "recruitment",
       "D": "orientation"
     },
     "correct_answer": "D",
@@ -1390,8 +1390,8 @@
     "question_text": "Any conduct issues during the ______ period must be documented and reported to HR. (V2-C-92-23)",
     "options": {
       "A": "probation",
-      "B": "interview",
-      "C": "orientation",
+      "B": "resume",
+      "C": "delay",
       "D": "position"
     },
     "correct_answer": "A",
@@ -1421,8 +1421,8 @@
     "options": {
       "A": "interview",
       "B": "position",
-      "C": "orientation",
-      "D": "probation"
+      "C": "cargo",
+      "D": "delivery date"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"position\" 表示「職位」。",
@@ -2050,9 +2050,9 @@
     "question_text": "New employees will be enrolled in the standard ______ program from their first working day. (V2-C-93-21)",
     "options": {
       "A": "payroll",
-      "B": "overtime",
+      "B": "bill of lading",
       "C": "benefits",
-      "D": "vacation leave"
+      "D": "cargo"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"benefits\" 表示「福利」。",
@@ -2079,9 +2079,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Contact the HR department immediately if you notice any discrepancy in your ______ statement. (V2-C-93-22)",
     "options": {
-      "A": "benefits",
+      "A": "warranty",
       "B": "overtime",
-      "C": "vacation leave",
+      "C": "interview",
       "D": "payroll"
     },
     "correct_answer": "D",
@@ -2110,8 +2110,8 @@
     "question_text": "Submit your ______ claim form to HR within five business days of the additional hours worked. (V2-C-93-23)",
     "options": {
       "A": "overtime",
-      "B": "benefits",
-      "C": "payroll",
+      "B": "probation",
+      "C": "warranty",
       "D": "vacation leave"
     },
     "correct_answer": "A",
@@ -2141,8 +2141,8 @@
     "options": {
       "A": "benefits",
       "B": "vacation leave",
-      "C": "payroll",
-      "D": "overtime"
+      "C": "replacement",
+      "D": "delay"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"vacation leave\" 表示「休假」。",
@@ -2770,9 +2770,9 @@
     "question_text": "Your ______ score will influence eligibility for a salary increase and promotion. (V2-C-94-21)",
     "options": {
       "A": "promotion",
-      "B": "transfer",
+      "B": "return authorization",
       "C": "appraisal",
-      "D": "resignation"
+      "D": "replacement"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"appraisal\" 表示「考核」。",
@@ -2799,9 +2799,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The committee will review all ______ nominations at the end of the quarterly cycle. (V2-C-94-22)",
     "options": {
-      "A": "appraisal",
+      "A": "reference",
       "B": "transfer",
-      "C": "resignation",
+      "C": "benefits",
       "D": "promotion"
     },
     "correct_answer": "D",
@@ -2830,8 +2830,8 @@
     "question_text": "All personal belongings and access credentials must be updated upon completing the ______. (V2-C-94-23)",
     "options": {
       "A": "transfer",
-      "B": "appraisal",
-      "C": "promotion",
+      "B": "overtime",
+      "C": "reference",
       "D": "resignation"
     },
     "correct_answer": "A",
@@ -2861,8 +2861,8 @@
     "options": {
       "A": "appraisal",
       "B": "resignation",
-      "C": "promotion",
-      "D": "transfer"
+      "C": "applicant",
+      "D": "warranty"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"resignation\" 表示「辭職」。",
@@ -3490,9 +3490,9 @@
     "question_text": "Employees who complete the ______ will receive two hours of professional development credit. (V2-C-95-21)",
     "options": {
       "A": "certificate",
-      "B": "instructor",
+      "B": "recruitment",
       "C": "workshop",
-      "D": "enrollment"
+      "D": "applicant"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"workshop\" 表示「工作坊」。",
@@ -3519,9 +3519,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Display your ______ in your workspace as confirmation of your completed training. (V2-C-95-22)",
     "options": {
-      "A": "workshop",
+      "A": "position",
       "B": "instructor",
-      "C": "enrollment",
+      "C": "appraisal",
       "D": "certificate"
     },
     "correct_answer": "D",
@@ -3550,8 +3550,8 @@
     "question_text": "Participants are encouraged to ask the ______ any questions at the end of each module. (V2-C-95-23)",
     "options": {
       "A": "instructor",
-      "B": "workshop",
-      "C": "certificate",
+      "B": "transfer",
+      "C": "position",
       "D": "enrollment"
     },
     "correct_answer": "A",
@@ -3581,8 +3581,8 @@
     "options": {
       "A": "workshop",
       "B": "enrollment",
-      "C": "certificate",
-      "D": "instructor"
+      "C": "orientation",
+      "D": "reference"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"enrollment\" 表示「報名」。",
@@ -4210,9 +4210,9 @@
     "question_text": "Repeated unexplained absences may affect your ______ record and performance review. (V2-C-96-21)",
     "options": {
       "A": "dress code",
-      "B": "supervisor",
+      "B": "interview",
       "C": "attendance",
-      "D": "colleague"
+      "D": "orientation"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"attendance\" 表示「出勤」。",
@@ -4239,9 +4239,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Any questions about appropriate attire should be directed to HR using the published ______ guide. (V2-C-96-22)",
     "options": {
-      "A": "attendance",
+      "A": "vacation leave",
       "B": "supervisor",
-      "C": "colleague",
+      "C": "workshop",
       "D": "dress code"
     },
     "correct_answer": "D",
@@ -4270,8 +4270,8 @@
     "question_text": "Report any workplace safety issues to your ______ or the facilities management team. (V2-C-96-23)",
     "options": {
       "A": "supervisor",
-      "B": "attendance",
-      "C": "dress code",
+      "B": "instructor",
+      "C": "vacation leave",
       "D": "colleague"
     },
     "correct_answer": "A",
@@ -4301,8 +4301,8 @@
     "options": {
       "A": "attendance",
       "B": "colleague",
-      "C": "dress code",
-      "D": "supervisor"
+      "C": "payroll",
+      "D": "position"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"colleague\" 表示「同事」。",
@@ -4930,9 +4930,9 @@
     "question_text": "Applicants can apply for any current ______ through the online HR portal. (V2-C-97-21)",
     "options": {
       "A": "candidate",
-      "B": "department",
+      "B": "benefits",
       "C": "vacancy",
-      "D": "branch"
+      "D": "payroll"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"vacancy\" 表示「職缺」。",
@@ -4959,9 +4959,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Each ______ must complete a written test before advancing to the panel interview stage. (V2-C-97-22)",
     "options": {
-      "A": "vacancy",
+      "A": "resignation",
       "B": "department",
-      "C": "branch",
+      "C": "attendance",
       "D": "candidate"
     },
     "correct_answer": "D",
@@ -4990,8 +4990,8 @@
     "question_text": "Check with your ______ manager before committing to any additional project responsibilities. (V2-C-97-23)",
     "options": {
       "A": "department",
-      "B": "vacancy",
-      "C": "candidate",
+      "B": "supervisor",
+      "C": "resignation",
       "D": "branch"
     },
     "correct_answer": "A",
@@ -5021,8 +5021,8 @@
     "options": {
       "A": "vacancy",
       "B": "branch",
-      "C": "candidate",
-      "D": "department"
+      "C": "promotion",
+      "D": "vacation leave"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"branch\" 表示「分公司」。",
@@ -5650,9 +5650,9 @@
     "question_text": "The ______ outlines all company policies, procedures, and employee responsibilities. (V2-C-98-21)",
     "options": {
       "A": "badge",
-      "B": "access card",
+      "B": "appraisal",
       "C": "handbook",
-      "D": "workspace"
+      "D": "promotion"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"handbook\" 表示「手冊」。",
@@ -5679,9 +5679,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Wearing your ______ ensures that security personnel can quickly identify authorized staff. (V2-C-98-22)",
     "options": {
-      "A": "handbook",
+      "A": "enrollment",
       "B": "access card",
-      "C": "workspace",
+      "C": "vacancy",
       "D": "badge"
     },
     "correct_answer": "D",
@@ -5710,8 +5710,8 @@
     "question_text": "Do not lend your ______ to anyone — each one is registered to an individual employee. (V2-C-98-23)",
     "options": {
       "A": "access card",
-      "B": "handbook",
-      "C": "badge",
+      "B": "department",
+      "C": "enrollment",
       "D": "workspace"
     },
     "correct_answer": "A",
@@ -5741,8 +5741,8 @@
     "options": {
       "A": "handbook",
       "B": "workspace",
-      "C": "badge",
-      "D": "access card"
+      "C": "certificate",
+      "D": "resignation"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"workspace\" 表示「工作空間」。",
@@ -6370,9 +6370,9 @@
     "question_text": "Ensure all performance appraisal records are accurately documented in the employee's ______. (V2-C-99-21)",
     "options": {
       "A": "emergency contact",
-      "B": "tax form",
+      "B": "workshop",
       "C": "personnel file",
-      "D": "direct deposit"
+      "D": "certificate"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"personnel file\" 表示「人事檔案」。",
@@ -6399,9 +6399,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "An accurate ______ record ensures that the right person is notified in an emergency. (V2-C-99-22)",
     "options": {
-      "A": "personnel file",
+      "A": "colleague",
       "B": "tax form",
-      "C": "direct deposit",
+      "C": "handbook",
       "D": "emergency contact"
     },
     "correct_answer": "D",
@@ -6430,8 +6430,8 @@
     "question_text": "Contact the payroll team if you have questions about completing your ______. (V2-C-99-23)",
     "options": {
       "A": "tax form",
-      "B": "personnel file",
-      "C": "emergency contact",
+      "B": "access card",
+      "C": "colleague",
       "D": "direct deposit"
     },
     "correct_answer": "A",
@@ -6461,8 +6461,8 @@
     "options": {
       "A": "personnel file",
       "B": "direct deposit",
-      "C": "emergency contact",
-      "D": "tax form"
+      "C": "dress code",
+      "D": "enrollment"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"direct deposit\" 表示「薪資轉帳」。",
@@ -7090,9 +7090,9 @@
     "question_text": "All staff must be familiar with the nearest ______ route from their workspace. (V2-C-100-21)",
     "options": {
       "A": "hazard",
-      "B": "incident report",
+      "B": "attendance",
       "C": "evacuation",
-      "D": "first aid kit"
+      "D": "dress code"
     },
     "correct_answer": "C",
     "explanation_zh": "在 human resources 情境中，\"evacuation\" 表示「疏散」。",
@@ -7119,9 +7119,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Employees who identify a ______ on site should place a warning sign and report it promptly. (V2-C-100-22)",
     "options": {
-      "A": "evacuation",
+      "A": "branch",
       "B": "incident report",
-      "C": "first aid kit",
+      "C": "personnel file",
       "D": "hazard"
     },
     "correct_answer": "D",
@@ -7150,8 +7150,8 @@
     "question_text": "An accurate ______ helps identify patterns and prevent future workplace accidents. (V2-C-100-23)",
     "options": {
       "A": "incident report",
-      "B": "evacuation",
-      "C": "hazard",
+      "B": "tax form",
+      "C": "branch",
       "D": "first aid kit"
     },
     "correct_answer": "A",
@@ -7181,8 +7181,8 @@
     "options": {
       "A": "evacuation",
       "B": "first aid kit",
-      "C": "hazard",
-      "D": "incident report"
+      "C": "candidate",
+      "D": "colleague"
     },
     "correct_answer": "B",
     "explanation_zh": "在 human resources 情境中，\"first aid kit\" 表示「急救箱」。",

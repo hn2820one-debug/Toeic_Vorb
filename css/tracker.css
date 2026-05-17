@@ -143,6 +143,15 @@
   font-size: 24px;
 }
 
+.tracker-stat.stat-alert {
+  border-color: var(--warn);
+  background: #fffbf0;
+}
+
+.tracker-stat.stat-alert strong {
+  color: var(--warn);
+}
+
 .tracker-section-grid,
 .bank-layout {
   display: grid;

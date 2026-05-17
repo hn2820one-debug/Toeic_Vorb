@@ -611,8 +611,8 @@
     "options": {
       "A": "front desk",
       "B": "housekeeping",
-      "C": "checkout",
-      "D": "guest room"
+      "C": "procurement",
+      "D": "vendor"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"front desk\" 表示「櫃檯」。",
@@ -639,10 +639,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The ______ team maintains all common areas, corridors, and guest rooms to the highest standard. (V2-E-111-22)",
     "options": {
-      "A": "front desk",
+      "A": "license",
       "B": "housekeeping",
       "C": "checkout",
-      "D": "guest room"
+      "D": "portfolio"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"housekeeping\" 表示「客房清潔」。",
@@ -669,8 +669,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Present your room key at reception to complete the ______ process before departure. (V2-E-111-23)",
     "options": {
-      "A": "front desk",
-      "B": "housekeeping",
+      "A": "shareholder",
+      "B": "license",
       "C": "checkout",
       "D": "guest room"
     },
@@ -700,8 +700,8 @@
     "question_text": "If anything in your ______ requires attention, contact the front desk for prompt service. (V2-E-111-24)",
     "options": {
       "A": "front desk",
-      "B": "housekeeping",
-      "C": "checkout",
+      "B": "violation",
+      "C": "bid",
       "D": "guest room"
     },
     "correct_answer": "D",
@@ -1331,8 +1331,8 @@
     "options": {
       "A": "menu",
       "B": "catering",
-      "C": "beverage",
-      "D": "reservation desk"
+      "C": "regulation",
+      "D": "violation"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"menu\" 表示「菜單」。",
@@ -1359,10 +1359,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The ______ order must be confirmed two weeks in advance to ensure sufficient preparation time. (V2-E-112-22)",
     "options": {
-      "A": "menu",
+      "A": "policyholder",
       "B": "catering",
       "C": "beverage",
-      "D": "reservation desk"
+      "D": "front desk"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"catering\" 表示「外燴」。",
@@ -1389,8 +1389,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The ______ package for the event includes soft drinks, juice, and bottled water. (V2-E-112-23)",
     "options": {
-      "A": "menu",
-      "B": "catering",
+      "A": "checkout",
+      "B": "policyholder",
       "C": "beverage",
       "D": "reservation desk"
     },
@@ -1420,8 +1420,8 @@
     "question_text": "Confirm the booking directly with the ______ at least 24 hours before the scheduled time. (V2-E-112-24)",
     "options": {
       "A": "menu",
-      "B": "catering",
-      "C": "beverage",
+      "B": "claim",
+      "C": "license",
       "D": "reservation desk"
     },
     "correct_answer": "D",
@@ -2051,8 +2051,8 @@
     "options": {
       "A": "merchandise",
       "B": "aisle",
-      "C": "cashier",
-      "D": "exchange policy"
+      "C": "coverage",
+      "D": "claim"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"merchandise\" 表示「商品」。",
@@ -2079,10 +2079,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The center ______ display has been redesigned to feature the latest seasonal promotion. (V2-E-113-22)",
     "options": {
-      "A": "merchandise",
+      "A": "forecast",
       "B": "aisle",
       "C": "cashier",
-      "D": "exchange policy"
+      "D": "menu"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"aisle\" 表示「走道」。",
@@ -2109,8 +2109,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "If you notice an error in your change, please speak directly to the ______ on duty. (V2-E-113-23)",
     "options": {
-      "A": "merchandise",
-      "B": "aisle",
+      "A": "beverage",
+      "B": "forecast",
       "C": "cashier",
       "D": "exchange policy"
     },
@@ -2140,8 +2140,8 @@
     "question_text": "Refer to the ______ card included in the packaging before requesting a product swap. (V2-E-113-24)",
     "options": {
       "A": "merchandise",
-      "B": "aisle",
-      "C": "cashier",
+      "B": "dividend",
+      "C": "policyholder",
       "D": "exchange policy"
     },
     "correct_answer": "D",
@@ -2771,8 +2771,8 @@
     "options": {
       "A": "complaint",
       "B": "representative",
-      "C": "resolution",
-      "D": "follow-up"
+      "C": "portfolio",
+      "D": "dividend"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"complaint\" 表示「投訴」。",
@@ -2799,10 +2799,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The sales ______ should provide a written summary of the meeting outcome to the client. (V2-E-114-22)",
     "options": {
-      "A": "complaint",
+      "A": "guest room",
       "B": "representative",
       "C": "resolution",
-      "D": "follow-up"
+      "D": "merchandise"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"representative\" 表示「客服代表」。",
@@ -2829,8 +2829,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Once a ______ is confirmed, send a summary to the client and close the support ticket. (V2-E-114-23)",
     "options": {
-      "A": "complaint",
-      "B": "representative",
+      "A": "cashier",
+      "B": "guest room",
       "C": "resolution",
       "D": "follow-up"
     },
@@ -2860,8 +2860,8 @@
     "question_text": "Schedule a ______ meeting with the client one week after delivering the solution. (V2-E-114-24)",
     "options": {
       "A": "complaint",
-      "B": "representative",
-      "C": "resolution",
+      "B": "housekeeping",
+      "C": "forecast",
       "D": "follow-up"
     },
     "correct_answer": "D",
@@ -3491,8 +3491,8 @@
     "options": {
       "A": "prescription",
       "B": "clinic",
-      "C": "patient",
-      "D": "appointment reminder"
+      "C": "front desk",
+      "D": "housekeeping"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"prescription\" 表示「處方」。",
@@ -3519,10 +3519,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The ______ provides basic medical services and can refer employees to specialists as needed. (V2-E-115-22)",
     "options": {
-      "A": "prescription",
+      "A": "reservation desk",
       "B": "clinic",
       "C": "patient",
-      "D": "appointment reminder"
+      "D": "complaint"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"clinic\" 表示「診所」。",
@@ -3549,8 +3549,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "A ______ who misses their appointment without notice may be charged a cancellation fee. (V2-E-115-23)",
     "options": {
-      "A": "prescription",
-      "B": "clinic",
+      "A": "resolution",
+      "B": "reservation desk",
       "C": "patient",
       "D": "appointment reminder"
     },
@@ -3580,8 +3580,8 @@
     "question_text": "The ______ includes date, time, and location details to help you prepare for your visit. (V2-E-115-24)",
     "options": {
       "A": "prescription",
-      "B": "clinic",
-      "C": "patient",
+      "B": "catering",
+      "C": "guest room",
       "D": "appointment reminder"
     },
     "correct_answer": "D",
@@ -4211,8 +4211,8 @@
     "options": {
       "A": "gate",
       "B": "boarding",
-      "C": "luggage",
-      "D": "flight delay"
+      "C": "menu",
+      "D": "catering"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"gate\" 表示「登機門」。",
@@ -4239,10 +4239,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Late ______ may result in your seat being released to a standby passenger. (V2-E-116-22)",
     "options": {
-      "A": "gate",
+      "A": "exchange policy",
       "B": "boarding",
       "C": "luggage",
-      "D": "flight delay"
+      "D": "prescription"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"boarding\" 表示「登機」。",
@@ -4269,8 +4269,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Label all pieces of ______ clearly with your name, contact number, and destination. (V2-E-116-23)",
     "options": {
-      "A": "gate",
-      "B": "boarding",
+      "A": "patient",
+      "B": "exchange policy",
       "C": "luggage",
       "D": "flight delay"
     },
@@ -4300,8 +4300,8 @@
     "question_text": "Passengers affected by a ______ of more than three hours may be eligible for compensation. (V2-E-116-24)",
     "options": {
       "A": "gate",
-      "B": "boarding",
-      "C": "luggage",
+      "B": "aisle",
+      "C": "reservation desk",
       "D": "flight delay"
     },
     "correct_answer": "D",
@@ -4931,8 +4931,8 @@
     "options": {
       "A": "renovation",
       "B": "closure",
-      "C": "relocation",
-      "D": "access restriction"
+      "C": "merchandise",
+      "D": "aisle"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"renovation\" 表示「整修」。",
@@ -4959,10 +4959,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "All clients have been notified in advance of the scheduled branch ______. (V2-E-117-22)",
     "options": {
-      "A": "renovation",
+      "A": "follow-up",
       "B": "closure",
       "C": "relocation",
-      "D": "access restriction"
+      "D": "gate"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"closure\" 表示「關閉」。",
@@ -4989,8 +4989,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Prepare your workstation for the ______ by boxing personal items by Friday afternoon. (V2-E-117-23)",
     "options": {
-      "A": "renovation",
-      "B": "closure",
+      "A": "luggage",
+      "B": "follow-up",
       "C": "relocation",
       "D": "access restriction"
     },
@@ -5020,8 +5020,8 @@
     "question_text": "Staff must comply with any ______ until the area has been cleared for normal use. (V2-E-117-24)",
     "options": {
       "A": "renovation",
-      "B": "closure",
-      "C": "relocation",
+      "B": "representative",
+      "C": "exchange policy",
       "D": "access restriction"
     },
     "correct_answer": "D",
@@ -5651,8 +5651,8 @@
     "options": {
       "A": "password",
       "B": "outage",
-      "C": "update",
-      "D": "backup"
+      "C": "complaint",
+      "D": "representative"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"password\" 表示「密碼」。",
@@ -5679,10 +5679,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Report any unplanned service ______ to the IT helpdesk immediately for investigation. (V2-E-118-22)",
     "options": {
-      "A": "password",
+      "A": "appointment reminder",
       "B": "outage",
       "C": "update",
-      "D": "backup"
+      "D": "renovation"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"outage\" 表示「服務中斷」。",
@@ -5709,8 +5709,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Enable automatic ______ on all devices to protect against security vulnerabilities. (V2-E-118-23)",
     "options": {
-      "A": "password",
-      "B": "outage",
+      "A": "relocation",
+      "B": "appointment reminder",
       "C": "update",
       "D": "backup"
     },
@@ -5740,8 +5740,8 @@
     "question_text": "Set your files to ______ automatically to the cloud to prevent data loss in case of a failure. (V2-E-118-24)",
     "options": {
       "A": "password",
-      "B": "outage",
-      "C": "update",
+      "B": "clinic",
+      "C": "follow-up",
       "D": "backup"
     },
     "correct_answer": "D",
@@ -6371,8 +6371,8 @@
     "options": {
       "A": "brochure",
       "B": "campaign",
-      "C": "sample",
-      "D": "feedback"
+      "C": "prescription",
+      "D": "clinic"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"brochure\" 表示「小冊子」。",
@@ -6399,10 +6399,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Analyze the results of the previous ______ before planning the next marketing initiative. (V2-E-119-22)",
     "options": {
-      "A": "brochure",
+      "A": "flight delay",
       "B": "campaign",
       "C": "sample",
-      "D": "feedback"
+      "D": "password"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"campaign\" 表示「活動」。",
@@ -6429,8 +6429,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Request a ______ from the supplier before committing to a bulk order of any new material. (V2-E-119-23)",
     "options": {
-      "A": "brochure",
-      "B": "campaign",
+      "A": "update",
+      "B": "flight delay",
       "C": "sample",
       "D": "feedback"
     },
@@ -6460,8 +6460,8 @@
     "question_text": "Act on customer ______ promptly to demonstrate your commitment to continuous improvement. (V2-E-119-24)",
     "options": {
       "A": "brochure",
-      "B": "campaign",
-      "C": "sample",
+      "B": "boarding",
+      "C": "appointment reminder",
       "D": "feedback"
     },
     "correct_answer": "D",
@@ -7091,8 +7091,8 @@
     "options": {
       "A": "electricity",
       "B": "plumbing",
-      "C": "heating",
-      "D": "ventilation"
+      "C": "gate",
+      "D": "boarding"
     },
     "correct_answer": "A",
     "explanation_zh": "在 customer service 情境中，\"electricity\" 表示「電力」。",
@@ -7119,10 +7119,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Any ______ problem such as a blocked drain or leaking pipe must be reported to facilities. (V2-E-120-22)",
     "options": {
-      "A": "electricity",
+      "A": "access restriction",
       "B": "plumbing",
       "C": "heating",
-      "D": "ventilation"
+      "D": "brochure"
     },
     "correct_answer": "B",
     "explanation_zh": "在 customer service 情境中，\"plumbing\" 表示「水管系統」。",
@@ -7149,8 +7149,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Report any issues with the ______ system to the facilities team, especially during cold months. (V2-E-120-23)",
     "options": {
-      "A": "electricity",
-      "B": "plumbing",
+      "A": "sample",
+      "B": "access restriction",
       "C": "heating",
       "D": "ventilation"
     },
@@ -7180,8 +7180,8 @@
     "question_text": "Report any ______ issues or unusual odors to the facilities team for immediate inspection. (V2-E-120-24)",
     "options": {
       "A": "electricity",
-      "B": "plumbing",
-      "C": "heating",
+      "B": "closure",
+      "C": "flight delay",
       "D": "ventilation"
     },
     "correct_answer": "D",

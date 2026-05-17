@@ -2,7 +2,7 @@
   "course_id": "toeic_vocab_v1",
   "course_name": "TOEIC Vocabulary Tracker",
   "schema_version": 1,
-  "seed_version": "toeic_vocab_tracker_quality_fixed_2026_05_17",
+  "seed_version": "toeic_vocab_tracker_c001_cross_lesson_2026_05_17",
   "generated_at": "2026-05-14T10:30:00+08:00",
   "default_user": {
     "user_id": "Keith",

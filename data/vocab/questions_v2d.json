@@ -610,8 +610,8 @@
     "question_text": "Ensure all planned expenditures are aligned with the approved departmental ______. (V2-D-101-21)",
     "options": {
       "A": "expense",
-      "B": "revenue",
-      "C": "profit",
+      "B": "vacancy",
+      "C": "candidate",
       "D": "budget"
     },
     "correct_answer": "D",
@@ -640,9 +640,9 @@
     "question_text": "Keep all receipts for any business ______ you incur while representing the company. (V2-D-101-22)",
     "options": {
       "A": "expense",
-      "B": "budget",
+      "B": "workspace",
       "C": "revenue",
-      "D": "profit"
+      "D": "evacuation"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"expense\" 表示「費用」。",
@@ -669,9 +669,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Accurate ______ reporting is critical for evaluating business performance and planning. (V2-D-101-23)",
     "options": {
-      "A": "budget",
+      "A": "incident report",
       "B": "revenue",
-      "C": "expense",
+      "C": "workspace",
       "D": "profit"
     },
     "correct_answer": "B",
@@ -700,9 +700,9 @@
     "question_text": "The finance team analyzes ______ margins quarterly to evaluate the performance of each division. (V2-D-101-24)",
     "options": {
       "A": "budget",
-      "B": "expense",
+      "B": "badge",
       "C": "profit",
-      "D": "revenue"
+      "D": "branch"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"profit\" 表示「利潤」。",
@@ -1330,8 +1330,8 @@
     "question_text": "Notify the accounts team if a ______ fails to appear in the system within three business days. (V2-D-102-21)",
     "options": {
       "A": "billing address",
-      "B": "balance",
-      "C": "due date",
+      "B": "handbook",
+      "C": "badge",
       "D": "payment"
     },
     "correct_answer": "D",
@@ -1360,9 +1360,9 @@
     "question_text": "An incorrect ______ can delay invoice processing and payment by several weeks. (V2-D-102-22)",
     "options": {
       "A": "billing address",
-      "B": "payment",
+      "B": "direct deposit",
       "C": "balance",
-      "D": "due date"
+      "D": "budget"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"billing address\" 表示「帳單地址」。",
@@ -1389,9 +1389,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Ensure the invoice ______ is settled before the end of the billing period to avoid penalties. (V2-D-102-23)",
     "options": {
-      "A": "payment",
+      "A": "revenue",
       "B": "balance",
-      "C": "billing address",
+      "C": "direct deposit",
       "D": "due date"
     },
     "correct_answer": "B",
@@ -1420,9 +1420,9 @@
     "question_text": "Review the invoice carefully to confirm the ______ before scheduling payment. (V2-D-102-24)",
     "options": {
       "A": "payment",
-      "B": "billing address",
+      "B": "emergency contact",
       "C": "due date",
-      "D": "balance"
+      "D": "workspace"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"due date\" 表示「到期日」。",
@@ -2050,8 +2050,8 @@
     "question_text": "The ______ was credited to the account within two business days of the transfer. (V2-D-103-21)",
     "options": {
       "A": "withdrawal",
-      "B": "transaction",
-      "C": "statement",
+      "B": "personnel file",
+      "C": "emergency contact",
       "D": "deposit"
     },
     "correct_answer": "D",
@@ -2080,9 +2080,9 @@
     "question_text": "Submit a ______ request form to the finance team with all supporting documentation. (V2-D-103-22)",
     "options": {
       "A": "withdrawal",
-      "B": "deposit",
+      "B": "first aid kit",
       "C": "transaction",
-      "D": "statement"
+      "D": "payment"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"withdrawal\" 表示「提款」。",
@@ -2109,9 +2109,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Print a copy of the ______ confirmation for the file before the end of the business day. (V2-D-103-23)",
     "options": {
-      "A": "deposit",
+      "A": "balance",
       "B": "transaction",
-      "C": "withdrawal",
+      "C": "first aid kit",
       "D": "statement"
     },
     "correct_answer": "B",
@@ -2140,9 +2140,9 @@
     "question_text": "Review your ______ carefully each month to identify any unauthorized transactions. (V2-D-103-24)",
     "options": {
       "A": "deposit",
-      "B": "withdrawal",
+      "B": "hazard",
       "C": "statement",
-      "D": "transaction"
+      "D": "direct deposit"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"statement\" 表示「對帳單」。",
@@ -2770,8 +2770,8 @@
     "question_text": "All financial activity should be accurately reflected in the general ______ in real time. (V2-D-104-21)",
     "options": {
       "A": "audit",
-      "B": "tax",
-      "C": "deduction",
+      "B": "evacuation",
+      "C": "hazard",
       "D": "ledger"
     },
     "correct_answer": "D",
@@ -2800,9 +2800,9 @@
     "question_text": "Keep all financial records for at least seven years in case of a future ______. (V2-D-104-22)",
     "options": {
       "A": "audit",
-      "B": "ledger",
+      "B": "profit",
       "C": "tax",
-      "D": "deduction"
+      "D": "deposit"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"audit\" 表示「稽核」。",
@@ -2829,9 +2829,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Consult with the external accountant to ensure full compliance with ______ obligations. (V2-D-104-23)",
     "options": {
-      "A": "ledger",
+      "A": "transaction",
       "B": "tax",
-      "C": "audit",
+      "C": "profit",
       "D": "deduction"
     },
     "correct_answer": "B",
@@ -2860,9 +2860,9 @@
     "question_text": "Employees can claim a ______ for approved professional development expenses. (V2-D-104-24)",
     "options": {
       "A": "ledger",
-      "B": "audit",
+      "B": "expense",
       "C": "deduction",
-      "D": "tax"
+      "D": "first aid kit"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"deduction\" 表示「扣除額」。",
@@ -3490,8 +3490,8 @@
     "question_text": "Compare the final invoice to the original ______ to verify that no additional charges were added. (V2-D-105-21)",
     "options": {
       "A": "discount",
-      "B": "surcharge",
-      "C": "rate",
+      "B": "budget",
+      "C": "expense",
       "D": "estimate"
     },
     "correct_answer": "D",
@@ -3520,9 +3520,9 @@
     "question_text": "Apply the correct ______ code at checkout to ensure the promotion price is honored. (V2-D-105-22)",
     "options": {
       "A": "discount",
-      "B": "estimate",
+      "B": "due date",
       "C": "surcharge",
-      "D": "rate"
+      "D": "ledger"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"discount\" 表示「折扣」。",
@@ -3549,9 +3549,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Notify the accounts team of any ______ that was not agreed upon in the original contract. (V2-D-105-23)",
     "options": {
-      "A": "estimate",
+      "A": "tax",
       "B": "surcharge",
-      "C": "discount",
+      "C": "due date",
       "D": "rate"
     },
     "correct_answer": "B",
@@ -3580,9 +3580,9 @@
     "question_text": "Review the agreed ______ before approving any additional work beyond the original scope. (V2-D-105-24)",
     "options": {
       "A": "estimate",
-      "B": "discount",
+      "B": "billing address",
       "C": "rate",
-      "D": "surcharge"
+      "D": "profit"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"rate\" 表示「費率」。",
@@ -4210,8 +4210,8 @@
     "question_text": "Maintain regular communication with each ______ to strengthen the business relationship. (V2-D-106-21)",
     "options": {
       "A": "prospect",
-      "B": "subscription",
-      "C": "renewal",
+      "B": "payment",
+      "C": "billing address",
       "D": "client"
     },
     "correct_answer": "D",
@@ -4240,9 +4240,9 @@
     "question_text": "Convert each ______ into a confirmed client by providing tailored proposals. (V2-D-106-22)",
     "options": {
       "A": "prospect",
-      "B": "client",
+      "B": "statement",
       "C": "subscription",
-      "D": "renewal"
+      "D": "estimate"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"prospect\" 表示「潛在客戶」。",
@@ -4269,9 +4269,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "A list of all active ______ and their renewal dates is maintained by the IT department. (V2-D-106-23)",
     "options": {
-      "A": "client",
+      "A": "surcharge",
       "B": "subscription",
-      "C": "prospect",
+      "C": "statement",
       "D": "renewal"
     },
     "correct_answer": "B",
@@ -4300,9 +4300,9 @@
     "question_text": "Track upcoming contract ______ dates in the CRM to avoid gaps in service coverage. (V2-D-106-24)",
     "options": {
       "A": "client",
-      "B": "prospect",
+      "B": "withdrawal",
       "C": "renewal",
-      "D": "subscription"
+      "D": "due date"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"renewal\" 表示「續約」。",
@@ -4930,8 +4930,8 @@
     "question_text": "Centralized ______ ensures that the company benefits from bulk discounts across all departments. (V2-D-107-21)",
     "options": {
       "A": "vendor",
-      "B": "requisition",
-      "C": "bid",
+      "B": "deposit",
+      "C": "withdrawal",
       "D": "procurement"
     },
     "correct_answer": "D",
@@ -4960,9 +4960,9 @@
     "question_text": "A ______ evaluation form must be completed within 30 days of receiving the first delivery. (V2-D-107-22)",
     "options": {
       "A": "vendor",
-      "B": "procurement",
+      "B": "deduction",
       "C": "requisition",
-      "D": "bid"
+      "D": "client"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"vendor\" 表示「供應商」。",
@@ -4989,9 +4989,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "A ______ must be raised before any non-standard purchase is authorized by the finance team. (V2-D-107-23)",
     "options": {
-      "A": "procurement",
+      "A": "subscription",
       "B": "requisition",
-      "C": "vendor",
+      "C": "deduction",
       "D": "bid"
     },
     "correct_answer": "B",
@@ -5020,9 +5020,9 @@
     "question_text": "The winning ______ will be selected based on price, quality, and delivery timeline. (V2-D-107-24)",
     "options": {
       "A": "procurement",
-      "B": "vendor",
+      "B": "audit",
       "C": "bid",
-      "D": "requisition"
+      "D": "statement"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"bid\" 表示「投標」。",
@@ -5650,8 +5650,8 @@
     "question_text": "Stay updated on changes to industry ______ to ensure full compliance at all times. (V2-D-108-21)",
     "options": {
       "A": "violation",
-      "B": "permit",
-      "C": "license",
+      "B": "ledger",
+      "C": "audit",
       "D": "regulation"
     },
     "correct_answer": "D",
@@ -5680,9 +5680,9 @@
     "question_text": "A ______ of import regulations was identified and the shipment was temporarily detained. (V2-D-108-22)",
     "options": {
       "A": "violation",
-      "B": "regulation",
+      "B": "rate",
       "C": "permit",
-      "D": "license"
+      "D": "procurement"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"violation\" 表示「違規」。",
@@ -5709,9 +5709,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Operating without the required ______ can result in significant fines and business closure. (V2-D-108-23)",
     "options": {
-      "A": "regulation",
+      "A": "requisition",
       "B": "permit",
-      "C": "violation",
+      "C": "rate",
       "D": "license"
     },
     "correct_answer": "B",
@@ -5740,9 +5740,9 @@
     "question_text": "Keep all business ______ documents in a secure file and renew them before their expiry date. (V2-D-108-24)",
     "options": {
       "A": "regulation",
-      "B": "violation",
+      "B": "discount",
       "C": "license",
-      "D": "permit"
+      "D": "deduction"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"license\" 表示「執照」。",
@@ -6370,8 +6370,8 @@
     "question_text": "Confirm the scope of your travel insurance ______ before departing on any business trip. (V2-D-109-21)",
     "options": {
       "A": "claim",
-      "B": "premium",
-      "C": "policyholder",
+      "B": "estimate",
+      "C": "discount",
       "D": "coverage"
     },
     "correct_answer": "D",
@@ -6400,9 +6400,9 @@
     "question_text": "Keep all receipts and photographs to support your insurance ______ in case of loss. (V2-D-109-22)",
     "options": {
       "A": "claim",
-      "B": "coverage",
+      "B": "renewal",
       "C": "premium",
-      "D": "policyholder"
+      "D": "regulation"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"claim\" 表示「理賠申請」。",
@@ -6429,9 +6429,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Pay the ______ on time to avoid a lapse in coverage or a penalty charge. (V2-D-109-23)",
     "options": {
-      "A": "coverage",
+      "A": "permit",
       "B": "premium",
-      "C": "claim",
+      "C": "renewal",
       "D": "policyholder"
     },
     "correct_answer": "B",
@@ -6460,9 +6460,9 @@
     "question_text": "The ______ is responsible for ensuring that the information on the policy is accurate and current. (V2-D-109-24)",
     "options": {
       "A": "coverage",
-      "B": "claim",
+      "B": "prospect",
       "C": "policyholder",
-      "D": "premium"
+      "D": "rate"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"policyholder\" 表示「保戶」。",
@@ -7090,8 +7090,8 @@
     "question_text": "Diversify your ______ across multiple asset classes to reduce exposure to market risk. (V2-D-110-21)",
     "options": {
       "A": "dividend",
-      "B": "shareholder",
-      "C": "forecast",
+      "B": "client",
+      "C": "prospect",
       "D": "portfolio"
     },
     "correct_answer": "D",
@@ -7120,9 +7120,9 @@
     "question_text": "The ______ payout ratio reflects the portion of earnings distributed to shareholders. (V2-D-110-22)",
     "options": {
       "A": "dividend",
-      "B": "portfolio",
+      "B": "bid",
       "C": "shareholder",
-      "D": "forecast"
+      "D": "coverage"
     },
     "correct_answer": "A",
     "explanation_zh": "在 finance and sales 情境中，\"dividend\" 表示「股利」。",
@@ -7149,9 +7149,9 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Each ______ is entitled to one vote per share held at the time of the record date. (V2-D-110-23)",
     "options": {
-      "A": "portfolio",
+      "A": "premium",
       "B": "shareholder",
-      "C": "dividend",
+      "C": "bid",
       "D": "forecast"
     },
     "correct_answer": "B",
@@ -7180,9 +7180,9 @@
     "question_text": "The finance team uses historical data and market trends to build the annual ______. (V2-D-110-24)",
     "options": {
       "A": "portfolio",
-      "B": "dividend",
+      "B": "vendor",
       "C": "forecast",
-      "D": "shareholder"
+      "D": "renewal"
     },
     "correct_answer": "C",
     "explanation_zh": "在 finance and sales 情境中，\"forecast\" 表示「預測」。",

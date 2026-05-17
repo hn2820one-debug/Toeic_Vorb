@@ -2051,8 +2051,8 @@
     "options": {
       "A": "appointment",
       "B": "deadline",
-      "C": "itinerary",
-      "D": "availability"
+      "C": "workstation",
+      "D": "extension"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"appointment\" 表示「預約」。",
@@ -2079,10 +2079,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Late submissions after the ______ will not be considered for this round. (V2-A-73-22)",
     "options": {
-      "A": "appointment",
+      "A": "venue",
       "B": "deadline",
       "C": "itinerary",
-      "D": "availability"
+      "D": "agenda"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"deadline\" 表示「截止期限」。",
@@ -2109,8 +2109,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Review your ______ carefully and contact the travel desk if any adjustments are needed. (V2-A-73-23)",
     "options": {
-      "A": "appointment",
-      "B": "deadline",
+      "A": "attendee",
+      "B": "extension",
       "C": "itinerary",
       "D": "availability"
     },
@@ -2140,8 +2140,8 @@
     "question_text": "Please confirm your ______ for the client call before the coordinator sends an invite. (V2-A-73-24)",
     "options": {
       "A": "appointment",
-      "B": "deadline",
-      "C": "itinerary",
+      "B": "minutes",
+      "C": "attendee",
       "D": "availability"
     },
     "correct_answer": "D",
@@ -2771,8 +2771,8 @@
     "options": {
       "A": "memo",
       "B": "invoice",
-      "C": "attachment",
-      "D": "directory"
+      "C": "workstation",
+      "D": "extension"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"memo\" 表示「備忘錄」。",
@@ -2799,10 +2799,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Finance will not process any ______ that is missing a valid purchase order number. (V2-A-74-22)",
     "options": {
-      "A": "memo",
+      "A": "venue",
       "B": "invoice",
       "C": "attachment",
-      "D": "directory"
+      "D": "workstation"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"invoice\" 表示「發票」。",
@@ -2829,8 +2829,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "If the ______ fails to open, please contact the IT helpdesk for assistance. (V2-A-74-23)",
     "options": {
-      "A": "memo",
-      "B": "invoice",
+      "A": "photocopier",
+      "B": "workstation",
       "C": "attachment",
       "D": "directory"
     },
@@ -2860,8 +2860,8 @@
     "question_text": "Refer to the branch ______ for contact information for all regional offices. (V2-A-74-24)",
     "options": {
       "A": "memo",
-      "B": "invoice",
-      "C": "attachment",
+      "B": "deadline",
+      "C": "workstation",
       "D": "directory"
     },
     "correct_answer": "D",
@@ -3491,8 +3491,8 @@
     "options": {
       "A": "correspondence",
       "B": "notification",
-      "C": "inquiry",
-      "D": "recipient"
+      "C": "workstation",
+      "D": "extension"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"correspondence\" 表示「往來信件」。",
@@ -3519,10 +3519,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Please ensure that all team members receive the ______ before the end of the day. (V2-A-75-22)",
     "options": {
-      "A": "correspondence",
+      "A": "venue",
       "B": "notification",
       "C": "inquiry",
-      "D": "recipient"
+      "D": "memo"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"notification\" 表示「通知」。",
@@ -3549,8 +3549,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "All ______ about the job posting should be directed to the HR department. (V2-A-75-23)",
     "options": {
-      "A": "correspondence",
-      "B": "notification",
+      "A": "attachment",
+      "B": "venue",
       "C": "inquiry",
       "D": "recipient"
     },
@@ -3580,8 +3580,8 @@
     "question_text": "The email was delivered to the wrong ______ due to a typo in the address. (V2-A-75-24)",
     "options": {
       "A": "correspondence",
-      "B": "notification",
-      "C": "inquiry",
+      "B": "minutes",
+      "C": "stationery",
       "D": "recipient"
     },
     "correct_answer": "D",
@@ -4211,8 +4211,8 @@
     "options": {
       "A": "lobby",
       "B": "elevator",
-      "C": "cafeteria",
-      "D": "parking"
+      "C": "agenda",
+      "D": "minutes"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"lobby\" 表示「大廳」。",
@@ -4239,10 +4239,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Visitors should use the main ______ near reception to access the upper floors. (V2-A-76-22)",
     "options": {
-      "A": "lobby",
+      "A": "availability",
       "B": "elevator",
       "C": "cafeteria",
-      "D": "parking"
+      "D": "correspondence"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"elevator\" 表示「電梯」。",
@@ -4269,8 +4269,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Hot meals in the ______ are available from 11:30 a.m. to 2:00 p.m. on weekdays. (V2-A-76-23)",
     "options": {
-      "A": "lobby",
-      "B": "elevator",
+      "A": "inquiry",
+      "B": "availability",
       "C": "cafeteria",
       "D": "parking"
     },
@@ -4300,8 +4300,8 @@
     "question_text": "Employees without a registered ______ permit should use the nearby public lot. (V2-A-76-24)",
     "options": {
       "A": "lobby",
-      "B": "elevator",
-      "C": "cafeteria",
+      "B": "deadline",
+      "C": "venue",
       "D": "parking"
     },
     "correct_answer": "D",
@@ -4931,8 +4931,8 @@
     "options": {
       "A": "authorization",
       "B": "request form",
-      "C": "approval",
-      "D": "submission"
+      "C": "appointment",
+      "D": "deadline"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"authorization\" 表示「授權」。",
@@ -4959,10 +4959,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "All supply orders must be accompanied by an approved ______. (V2-A-77-22)",
     "options": {
-      "A": "authorization",
+      "A": "directory",
       "B": "request form",
       "C": "approval",
-      "D": "submission"
+      "D": "lobby"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"request form\" 表示「申請表」。",
@@ -4989,8 +4989,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Purchases above the department threshold must have prior ______ from a senior manager. (V2-A-77-23)",
     "options": {
-      "A": "authorization",
-      "B": "request form",
+      "A": "cafeteria",
+      "B": "directory",
       "C": "approval",
       "D": "submission"
     },
@@ -5020,8 +5020,8 @@
     "question_text": "Confirm your ______ by checking the confirmation email sent to your registered address. (V2-A-77-24)",
     "options": {
       "A": "authorization",
-      "B": "request form",
-      "C": "approval",
+      "B": "invoice",
+      "C": "availability",
       "D": "submission"
     },
     "correct_answer": "D",
@@ -5651,8 +5651,8 @@
     "options": {
       "A": "registration",
       "B": "banquet",
-      "C": "booth",
-      "D": "seminar"
+      "C": "memo",
+      "D": "invoice"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"registration\" 表示「報名」。",
@@ -5679,10 +5679,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "All ______ arrangements including seating and catering have been confirmed. (V2-A-78-22)",
     "options": {
-      "A": "registration",
+      "A": "recipient",
       "B": "banquet",
       "C": "booth",
-      "D": "seminar"
+      "D": "authorization"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"banquet\" 表示「宴會」。",
@@ -5709,8 +5709,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Assemble the display materials at your designated ______ before the doors open. (V2-A-78-23)",
     "options": {
-      "A": "registration",
-      "B": "banquet",
+      "A": "approval",
+      "B": "recipient",
       "C": "booth",
       "D": "seminar"
     },
@@ -5740,8 +5740,8 @@
     "question_text": "Participants who complete the ______ will receive a certificate of attendance. (V2-A-78-24)",
     "options": {
       "A": "registration",
-      "B": "banquet",
-      "C": "booth",
+      "B": "notification",
+      "C": "directory",
       "D": "seminar"
     },
     "correct_answer": "D",
@@ -6371,8 +6371,8 @@
     "options": {
       "A": "reservation",
       "B": "confirmation",
-      "C": "departure",
-      "D": "baggage"
+      "C": "correspondence",
+      "D": "notification"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"reservation\" 表示「預訂」。",
@@ -6399,10 +6399,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Present your registration ______ at the venue entrance to collect your badge. (V2-A-79-22)",
     "options": {
-      "A": "reservation",
+      "A": "parking",
       "B": "confirmation",
       "C": "departure",
-      "D": "baggage"
+      "D": "registration"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"confirmation\" 表示「確認函」。",
@@ -6429,8 +6429,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The bus for the ______ terminal will leave the hotel at 6:00 a.m. sharp. (V2-A-79-23)",
     "options": {
-      "A": "reservation",
-      "B": "confirmation",
+      "A": "booth",
+      "B": "parking",
       "C": "departure",
       "D": "baggage"
     },
@@ -6460,8 +6460,8 @@
     "question_text": "Checked ______ allowances are outlined in your travel policy document. (V2-A-79-24)",
     "options": {
       "A": "reservation",
-      "B": "confirmation",
-      "C": "departure",
+      "B": "elevator",
+      "C": "recipient",
       "D": "baggage"
     },
     "correct_answer": "D",
@@ -7091,8 +7091,8 @@
     "options": {
       "A": "policy",
       "B": "guideline",
-      "C": "compliance",
-      "D": "requirement"
+      "C": "lobby",
+      "D": "elevator"
     },
     "correct_answer": "A",
     "explanation_zh": "在 office administration 情境中，\"policy\" 表示「政策」。",
@@ -7119,10 +7119,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Refer to the departmental ______ before submitting your quarterly progress report. (V2-A-80-22)",
     "options": {
-      "A": "policy",
+      "A": "submission",
       "B": "guideline",
       "C": "compliance",
-      "D": "requirement"
+      "D": "reservation"
     },
     "correct_answer": "B",
     "explanation_zh": "在 office administration 情境中，\"guideline\" 表示「指引」。",
@@ -7149,8 +7149,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Employees found in violation of ______ standards may face disciplinary action. (V2-A-80-23)",
     "options": {
-      "A": "policy",
-      "B": "guideline",
+      "A": "departure",
+      "B": "submission",
       "C": "compliance",
       "D": "requirement"
     },
@@ -7180,8 +7180,8 @@
     "question_text": "Failure to meet the certification ______ will result in the application being rejected. (V2-A-80-24)",
     "options": {
       "A": "policy",
-      "B": "guideline",
-      "C": "compliance",
+      "B": "request form",
+      "C": "parking",
       "D": "requirement"
     },
     "correct_answer": "D",

@@ -134,14 +134,17 @@ export function setReviewFilter(filter) {
 
 export function renderWrongAttemptList() {
   const questionMap = byId(state.questions, "question_id");
+  const itemMap = byId(state.vocabItems, "item_id");
   const wrong = state.attempts.filter((attempt) => !attempt.is_correct).slice(-20).reverse();
   if (!wrong.length) return `<p class="muted-note">No wrong attempts yet.</p>`;
   return wrong.map((attempt) => {
     const q = questionMap[attempt.question_id];
+    const vocabItem = itemMap[q?.target_item_id];
     return `
       <article class="wrong-line">
         <strong>${html(attempt.lesson_id)} · ${html(q?.question_text || attempt.question_id)}</strong>
         <small>Your ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · Correct ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(attempt.error_code || attempt.default_error_code)}</small>
+        ${vocabItem?.chinese ? `<div class="vocab-card"><p class="vocab-chinese">${html(vocabItem.chinese)}</p>${vocabItem.example ? `<p class="vocab-example">${html(vocabItem.example)}</p>` : ""}</div>` : ""}
       </article>
     `;
   }).join("");

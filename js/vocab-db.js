@@ -2,7 +2,7 @@
   const DB_NAME = "toeic_vocab_tracker_db";
   const DB_VERSION = 1;
   const COURSE_ID = "toeic_vocab_v1";
-  const SEED_VERSION = "toeic_vocab_tracker_quality_fixed_2026_05_17";
+  const SEED_VERSION = "toeic_vocab_tracker_c001_cross_lesson_2026_05_17";
   const PREF_KEY = "toeic_vocab_tracker_preferences";
   const ACTIVE_SESSION_KEY = "toeic_vocab_active_session";
 

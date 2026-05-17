@@ -611,8 +611,8 @@
     "options": {
       "A": "carrier",
       "B": "shipment",
-      "C": "tracking number",
-      "D": "warehouse"
+      "C": "authorization",
+      "D": "request form"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"shipment\" 表示「貨運」。",
@@ -639,10 +639,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Contact the ______ directly if the package has not arrived within the estimated window. (V2-B-81-22)",
     "options": {
-      "A": "shipment",
+      "A": "seminar",
       "B": "tracking number",
       "C": "carrier",
-      "D": "warehouse"
+      "D": "policy"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"carrier\" 表示「承運商」。",
@@ -669,8 +669,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "If the ______ is invalid, contact the logistics department for a corrected reference. (V2-B-81-23)",
     "options": {
-      "A": "shipment",
-      "B": "carrier",
+      "A": "compliance",
+      "B": "seminar",
       "C": "warehouse",
       "D": "tracking number"
     },
@@ -701,8 +701,8 @@
     "options": {
       "A": "warehouse",
       "B": "shipment",
-      "C": "carrier",
-      "D": "tracking number"
+      "C": "banquet",
+      "D": "submission"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"warehouse\" 表示「倉庫」。",
@@ -1331,8 +1331,8 @@
     "options": {
       "A": "stock",
       "B": "inventory",
-      "C": "reorder",
-      "D": "supplier"
+      "C": "registration",
+      "D": "banquet"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"inventory\" 表示「庫存」。",
@@ -1359,10 +1359,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Check the ______ status on the inventory portal before confirming any customer orders. (V2-B-82-22)",
     "options": {
-      "A": "inventory",
+      "A": "baggage",
       "B": "reorder",
       "C": "stock",
-      "D": "supplier"
+      "D": "shipment"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"stock\" 表示「存貨」。",
@@ -1389,8 +1389,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Review the current stock levels and initiate a ______ for any items below safety stock. (V2-B-82-23)",
     "options": {
-      "A": "inventory",
-      "B": "stock",
+      "A": "tracking number",
+      "B": "baggage",
       "C": "supplier",
       "D": "reorder"
     },
@@ -1421,8 +1421,8 @@
     "options": {
       "A": "supplier",
       "B": "inventory",
-      "C": "stock",
-      "D": "reorder"
+      "C": "confirmation",
+      "D": "seminar"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"supplier\" 表示「供應商」。",
@@ -2051,8 +2051,8 @@
     "options": {
       "A": "freight",
       "B": "delivery",
-      "C": "customs",
-      "D": "clearance"
+      "C": "reservation",
+      "D": "confirmation"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"delivery\" 表示「送貨」。",
@@ -2079,10 +2079,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The ______ cost is calculated based on actual weight or dimensional weight, whichever is higher. (V2-B-83-22)",
     "options": {
-      "A": "delivery",
+      "A": "requirement",
       "B": "customs",
       "C": "freight",
-      "D": "clearance"
+      "D": "inventory"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"freight\" 表示「貨運費」。",
@@ -2109,8 +2109,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Failure to declare items correctly at ______ can result in significant fines. (V2-B-83-23)",
     "options": {
-      "A": "delivery",
-      "B": "freight",
+      "A": "reorder",
+      "B": "requirement",
       "C": "clearance",
       "D": "customs"
     },
@@ -2141,8 +2141,8 @@
     "options": {
       "A": "clearance",
       "B": "delivery",
-      "C": "freight",
-      "D": "customs"
+      "C": "guideline",
+      "D": "baggage"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"clearance\" 表示「通關」。",
@@ -2771,8 +2771,8 @@
     "options": {
       "A": "label",
       "B": "package",
-      "C": "receipt",
-      "D": "packing slip"
+      "C": "policy",
+      "D": "guideline"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"package\" 表示「包裹」。",
@@ -2799,10 +2799,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Scan the ______ on each item before placing it in the outgoing shipment area. (V2-B-84-22)",
     "options": {
-      "A": "package",
+      "A": "warehouse",
       "B": "receipt",
       "C": "label",
-      "D": "packing slip"
+      "D": "delivery"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"label\" 表示「標籤」。",
@@ -2829,8 +2829,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Keep a copy of the delivery ______ on file until the order has been fully processed. (V2-B-84-23)",
     "options": {
-      "A": "package",
-      "B": "label",
+      "A": "customs",
+      "B": "warehouse",
       "C": "packing slip",
       "D": "receipt"
     },
@@ -2861,8 +2861,8 @@
     "options": {
       "A": "packing slip",
       "B": "package",
-      "C": "label",
-      "D": "receipt"
+      "C": "carrier",
+      "D": "requirement"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"packing slip\" 表示「裝箱單」。",
@@ -3491,8 +3491,8 @@
     "options": {
       "A": "assembly line",
       "B": "production",
-      "C": "component",
-      "D": "defect"
+      "C": "shipment",
+      "D": "carrier"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"production\" 表示「生產」。",
@@ -3519,10 +3519,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Workers on the ______ must wear protective gloves and safety glasses at all times. (V2-B-85-22)",
     "options": {
-      "A": "production",
+      "A": "supplier",
       "B": "component",
       "C": "assembly line",
-      "D": "defect"
+      "D": "package"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"assembly line\" 表示「裝配線」。",
@@ -3549,8 +3549,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Every ______ must meet the minimum quality standard before being approved for use. (V2-B-85-23)",
     "options": {
-      "A": "production",
-      "B": "assembly line",
+      "A": "receipt",
+      "B": "supplier",
       "C": "defect",
       "D": "component"
     },
@@ -3581,8 +3581,8 @@
     "options": {
       "A": "defect",
       "B": "production",
-      "C": "assembly line",
-      "D": "component"
+      "C": "stock",
+      "D": "warehouse"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"defect\" 表示「瑕疵」。",
@@ -4211,8 +4211,8 @@
     "options": {
       "A": "repair request",
       "B": "inspection",
-      "C": "technician",
-      "D": "equipment"
+      "C": "inventory",
+      "D": "stock"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"inspection\" 表示「檢查」。",
@@ -4239,10 +4239,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Log a ______ immediately if any office equipment stops functioning correctly. (V2-B-86-22)",
     "options": {
-      "A": "inspection",
+      "A": "clearance",
       "B": "technician",
       "C": "repair request",
-      "D": "equipment"
+      "D": "production"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"repair request\" 表示「維修申請」。",
@@ -4269,8 +4269,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Contact the on-call ______ if any production machinery requires urgent attention. (V2-B-86-23)",
     "options": {
-      "A": "inspection",
-      "B": "repair request",
+      "A": "component",
+      "B": "clearance",
       "C": "equipment",
       "D": "technician"
     },
@@ -4301,8 +4301,8 @@
     "options": {
       "A": "equipment",
       "B": "inspection",
-      "C": "repair request",
-      "D": "technician"
+      "C": "freight",
+      "D": "supplier"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"equipment\" 表示「設備」。",
@@ -4931,8 +4931,8 @@
     "options": {
       "A": "accommodation",
       "B": "boarding pass",
-      "C": "reimbursement",
-      "D": "travel allowance"
+      "C": "delivery",
+      "D": "freight"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"boarding pass\" 表示「登機證」。",
@@ -4959,10 +4959,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Staff on extended business trips may claim ______ expenses up to the daily limit. (V2-B-87-22)",
     "options": {
-      "A": "boarding pass",
+      "A": "packing slip",
       "B": "reimbursement",
       "C": "accommodation",
-      "D": "travel allowance"
+      "D": "inspection"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"accommodation\" 表示「住宿」。",
@@ -4989,8 +4989,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Claims without supporting receipts will not be eligible for ______. (V2-B-87-23)",
     "options": {
-      "A": "boarding pass",
-      "B": "accommodation",
+      "A": "technician",
+      "B": "packing slip",
       "C": "travel allowance",
       "D": "reimbursement"
     },
@@ -5021,8 +5021,8 @@
     "options": {
       "A": "travel allowance",
       "B": "boarding pass",
-      "C": "accommodation",
-      "D": "reimbursement"
+      "C": "label",
+      "D": "clearance"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"travel allowance\" 表示「差旅津貼」。",
@@ -5651,8 +5651,8 @@
     "options": {
       "A": "purchase order",
       "B": "quotation",
-      "C": "contract",
-      "D": "delivery date"
+      "C": "package",
+      "D": "label"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"quotation\" 表示「報價」。",
@@ -5679,10 +5679,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Do not proceed with any order until the ______ has been approved by the finance team. (V2-B-88-22)",
     "options": {
-      "A": "quotation",
+      "A": "defect",
       "B": "contract",
       "C": "purchase order",
-      "D": "delivery date"
+      "D": "boarding pass"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"purchase order\" 表示「採購單」。",
@@ -5709,8 +5709,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Ensure you fully understand the termination clause before signing any service ______. (V2-B-88-23)",
     "options": {
-      "A": "quotation",
-      "B": "purchase order",
+      "A": "reimbursement",
+      "B": "defect",
       "C": "delivery date",
       "D": "contract"
     },
@@ -5741,8 +5741,8 @@
     "options": {
       "A": "delivery date",
       "B": "quotation",
-      "C": "purchase order",
-      "D": "contract"
+      "C": "assembly line",
+      "D": "packing slip"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"delivery date\" 表示「交貨日期」。",
@@ -6371,8 +6371,8 @@
     "options": {
       "A": "cargo",
       "B": "bill of lading",
-      "C": "destination",
-      "D": "delay"
+      "C": "production",
+      "D": "assembly line"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"bill of lading\" 表示「提單」。",
@@ -6399,10 +6399,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Unaccompanied ______ will be held at the port until clearance documents are submitted. (V2-B-89-22)",
     "options": {
-      "A": "bill of lading",
+      "A": "equipment",
       "B": "destination",
       "C": "cargo",
-      "D": "delay"
+      "D": "quotation"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"cargo\" 表示「貨物」。",
@@ -6429,8 +6429,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "The route planner will calculate the most efficient path to each ______ automatically. (V2-B-89-23)",
     "options": {
-      "A": "bill of lading",
-      "B": "cargo",
+      "A": "contract",
+      "B": "equipment",
       "C": "delay",
       "D": "destination"
     },
@@ -6461,8 +6461,8 @@
     "options": {
       "A": "delay",
       "B": "bill of lading",
-      "C": "cargo",
-      "D": "destination"
+      "C": "repair request",
+      "D": "defect"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"delay\" 表示「延誤」。",
@@ -7091,8 +7091,8 @@
     "options": {
       "A": "replacement",
       "B": "return authorization",
-      "C": "refund",
-      "D": "warranty"
+      "C": "inspection",
+      "D": "repair request"
     },
     "correct_answer": "B",
     "explanation_zh": "在 logistics 情境中，\"return authorization\" 表示「退貨授權」。",
@@ -7119,10 +7119,10 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Complete the return form and include the defective item before a ______ can be dispatched. (V2-B-90-22)",
     "options": {
-      "A": "return authorization",
+      "A": "travel allowance",
       "B": "refund",
       "C": "replacement",
-      "D": "warranty"
+      "D": "bill of lading"
     },
     "correct_answer": "C",
     "explanation_zh": "在 logistics 情境中，\"replacement\" 表示「替換品」。",
@@ -7149,8 +7149,8 @@
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
     "question_text": "Ensure the original receipt is included with the returned item to process the ______. (V2-B-90-23)",
     "options": {
-      "A": "return authorization",
-      "B": "replacement",
+      "A": "destination",
+      "B": "travel allowance",
       "C": "warranty",
       "D": "refund"
     },
@@ -7181,8 +7181,8 @@
     "options": {
       "A": "warranty",
       "B": "return authorization",
-      "C": "replacement",
-      "D": "refund"
+      "C": "accommodation",
+      "D": "equipment"
     },
     "correct_answer": "A",
     "explanation_zh": "在 logistics 情境中，\"warranty\" 表示「保固」。",

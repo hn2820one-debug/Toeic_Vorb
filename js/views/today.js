@@ -46,11 +46,12 @@ export function renderToday() {
       ${nextActionBtn}
     </section>
 
-    <section class="tracker-grid">
+    <section class="tracker-grid" style="grid-template-columns: repeat(5, minmax(0, 1fr))">
       <article class="tracker-stat"><span>Today Questions</span><strong>${todayAttempts.length}</strong><small>${todaySessions.length} sessions</small></article>
       <article class="tracker-stat"><span>Accuracy</span><strong>${pct(accuracy)}</strong><small>${wrongAttempts.length} wrong</small></article>
       <article class="tracker-stat"><span>Avg Time</span><strong>${seconds(avgTime)}</strong><small>per attempt</small></article>
       <article class="tracker-stat"><span>Vocab Progress</span><strong>${completed}/${state.lessons.length}</strong><small>${Math.round((completed / (state.lessons.length || 1)) * 100)}%</small></article>
+      <article class="tracker-stat${pendingQueue.length ? " stat-alert" : ""}"><span>Due Review</span><strong>${pendingQueue.length}</strong><small>${pendingQueue.length ? "items due" : "all clear"}</small></article>
     </section>
 
     <section class="tracker-section-grid">
