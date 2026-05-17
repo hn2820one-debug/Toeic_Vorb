@@ -9,7 +9,9 @@ import {
   isWithinLastDays,
   currentLesson,
   topCounts,
-  moduleAccuracy
+  moduleAccuracy,
+  lessonTypeLabel,
+  questionTypeLabel
 } from "../state.js";
 
 export function renderToday() {
@@ -41,7 +43,7 @@ export function renderToday() {
         <h2>${html(lesson?.stage || "V0")} ${html(lesson?.stage_name || "Diagnosis")}</h2>
         <p>${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "No lesson")}</p>
       </div>
-      <button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">Start Lesson</button>
+      ${nextActionBtn}
     </section>
 
     <section class="tracker-grid">
@@ -55,6 +57,7 @@ export function renderToday() {
       <article class="tracker-panel">
         <h3>Next Action</h3>
         <p class="tracker-bigline">${nextActionLabel}</p>
+        ${renderTodayLessonFocus(lesson)}
         <div class="tracker-actions">
           ${nextActionBtn}
           <button class="button secondary" type="button" onclick="VocabTracker.setView('mistakes')">Mistakes</button>
@@ -73,6 +76,23 @@ export function renderToday() {
     </section>
 
     ${renderWeeklyStageSummary()}
+  `;
+}
+
+function renderTodayLessonFocus(lesson) {
+  if (!lesson) return `<p class="muted-note">No lesson is available.</p>`;
+  const ids = new Set([...(lesson.question_ids || []), ...(lesson.review_question_ids || [])]);
+  const questionTypes = topCounts(state.questions.filter((question) => ids.has(question.question_id)), "type", 4);
+  const targetItems = (lesson.target_items || [])
+    .map((itemId) => state.vocabItems.find((item) => item.item_id === itemId))
+    .filter(Boolean);
+
+  return `
+    <div class="today-focus">
+      <span>${html(lessonTypeLabel(lesson.lesson_type))}</span>
+      ${questionTypes.map(([type, count]) => `<span>${html(questionTypeLabel(type))}: ${count}</span>`).join("")}
+      ${targetItems.slice(0, 4).map((item) => `<span>${html(item.base_word || item.item_id)}${item.chinese ? ` / ${html(item.chinese)}` : ""}</span>`).join("")}
+    </div>
   `;
 }
 

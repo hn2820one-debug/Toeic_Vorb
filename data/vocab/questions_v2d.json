@@ -7,7 +7,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the plan for spending money, before you continue with this finance and sales task. (V2-D-101-01)",
+    "question_text": "Notice: Each department must submit its annual ______ proposal by the end of this month. (V2-D-101-01)",
     "options": {
       "A": "expense",
       "B": "revenue",
@@ -37,7 +37,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the cost for goods or services, for today's financial result work. Which term best completes the speaker's meaning? (V2-D-101-02)",
+    "question_text": "Conversation: Can I put the client lunch on my company card as a business ______? (V2-D-101-02)",
     "options": {
       "A": "expense",
       "B": "budget",
@@ -67,7 +67,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the financial result briefing, the manager referred to the ______, the income from business sales, more than once. (V2-D-101-03)",
+    "question_text": "Memo: Please ensure that all ______ has been correctly recorded in the accounting system. (V2-D-101-03)",
     "options": {
       "A": "budget",
       "B": "revenue",
@@ -97,7 +97,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the financial result team should understand the ______, the money earned after expenses, before the meeting begins. (V2-D-101-04)",
+    "question_text": "Announcement: We are pleased to report that ______ for the fiscal year exceeded the original target. (V2-D-101-04)",
     "options": {
       "A": "budget",
       "B": "expense",
@@ -157,7 +157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the cost for goods or services, before you continue with this finance and sales task. (V2-D-101-06)",
+    "question_text": "Notice: Claim all travel ______ within 30 days of the trip using the online portal. (V2-D-101-06)",
     "options": {
       "A": "expense",
       "B": "budget",
@@ -187,7 +187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the income from business sales, for today's financial result work. Which term best completes the speaker's meaning? (V2-D-101-07)",
+    "question_text": "Conversation: The new product line has already increased our ______ by 15% this quarter. (V2-D-101-07)",
     "options": {
       "A": "budget",
       "B": "revenue",
@@ -217,7 +217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the financial result briefing, the manager referred to the ______, the money earned after expenses, more than once. (V2-D-101-08)",
+    "question_text": "Memo: The product line is not generating sufficient ______ and may be discontinued. (V2-D-101-08)",
     "options": {
       "A": "budget",
       "B": "expense",
@@ -247,7 +247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the financial result team should understand the ______, the plan for spending money, before the meeting begins. (V2-D-101-09)",
+    "question_text": "Announcement: The finance team will present the new ______ framework at the all-staff meeting. (V2-D-101-09)",
     "options": {
       "A": "expense",
       "B": "revenue",
@@ -307,7 +307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the income from business sales, before you continue with this finance and sales task. (V2-D-101-11)",
+    "question_text": "Notice: Monthly ______ figures will be presented at next Tuesday's management meeting. (V2-D-101-11)",
     "options": {
       "A": "budget",
       "B": "revenue",
@@ -337,7 +337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money earned after expenses, for today's financial result work. Which term best completes the speaker's meaning? (V2-D-101-12)",
+    "question_text": "Conversation: Despite higher sales, our net ______ has declined due to rising material costs. (V2-D-101-12)",
     "options": {
       "A": "budget",
       "B": "expense",
@@ -367,7 +367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the financial result briefing, the manager referred to the ______, the plan for spending money, more than once. (V2-D-101-13)",
+    "question_text": "Memo: The revised ______ for Q3 has been approved and will take effect from Monday. (V2-D-101-13)",
     "options": {
       "A": "expense",
       "B": "revenue",
@@ -397,7 +397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the financial result team should understand the ______, the cost for goods or services, before the meeting begins. (V2-D-101-14)",
+    "question_text": "Announcement: The ______ claim form has been updated — please use the latest version from the portal. (V2-D-101-14)",
     "options": {
       "A": "expense",
       "B": "budget",
@@ -457,7 +457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money earned after expenses, before you continue with this finance and sales task. (V2-D-101-16)",
+    "question_text": "Notice: The company's quarterly ______ will be announced in the earnings report next Friday. (V2-D-101-16)",
     "options": {
       "A": "budget",
       "B": "expense",
@@ -487,7 +487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the plan for spending money, for today's financial result work. Which term best completes the speaker's meaning? (V2-D-101-17)",
+    "question_text": "Conversation: We're running over ______ on the project — we need to cut some costs. (V2-D-101-17)",
     "options": {
       "A": "expense",
       "B": "revenue",
@@ -517,7 +517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the financial result briefing, the manager referred to the ______, the cost for goods or services, more than once. (V2-D-101-18)",
+    "question_text": "Memo: All ______ above $200 require a receipt and prior manager approval. (V2-D-101-18)",
     "options": {
       "A": "expense",
       "B": "budget",
@@ -547,7 +547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the financial result team should understand the ______, the income from business sales, before the meeting begins. (V2-D-101-19)",
+    "question_text": "Announcement: Annual ______ for the company grew by 22% compared to the previous fiscal year. (V2-D-101-19)",
     "options": {
       "A": "budget",
       "B": "revenue",
@@ -607,7 +607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the plan for spending money, before you continue with this finance and sales task. (V2-D-101-21)",
+    "question_text": "Ensure all planned expenditures are aligned with the approved departmental ______. (V2-D-101-21)",
     "options": {
       "A": "expense",
       "B": "revenue",
@@ -637,7 +637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the cost for goods or services, for today's financial result work. Which term best completes the speaker's meaning? (V2-D-101-22)",
+    "question_text": "Keep all receipts for any business ______ you incur while representing the company. (V2-D-101-22)",
     "options": {
       "A": "expense",
       "B": "budget",
@@ -667,7 +667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the financial result briefing, the manager referred to the ______, the income from business sales, more than once. (V2-D-101-23)",
+    "question_text": "Accurate ______ reporting is critical for evaluating business performance and planning. (V2-D-101-23)",
     "options": {
       "A": "budget",
       "B": "revenue",
@@ -697,7 +697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the financial result team should understand the ______, the money earned after expenses, before the meeting begins. (V2-D-101-24)",
+    "question_text": "The finance team analyzes ______ margins quarterly to evaluate the performance of each division. (V2-D-101-24)",
     "options": {
       "A": "budget",
       "B": "expense",
@@ -727,7 +727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money transferred to recipient, before you continue with this finance and sales task. (V2-D-102-01)",
+    "question_text": "Notice: All outstanding ______ must be cleared before the end of the financial quarter. (V2-D-102-01)",
     "options": {
       "A": "billing address",
       "B": "balance",
@@ -757,7 +757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the location for sending invoice, for today's payment work. Which term best completes the speaker's meaning? (V2-D-102-02)",
+    "question_text": "Conversation: The invoice was rejected because the ______ didn't match what was on record. (V2-D-102-02)",
     "options": {
       "A": "billing address",
       "B": "payment",
@@ -787,7 +787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the payment briefing, the manager referred to the ______, the amount owed or in account, more than once. (V2-D-102-03)",
+    "question_text": "Memo: A statement showing the current ______ on each vendor account will be sent to finance. (V2-D-102-03)",
     "options": {
       "A": "payment",
       "B": "balance",
@@ -817,7 +817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the payment team should understand the ______, the final date payment is required, before the meeting begins. (V2-D-102-04)",
+    "question_text": "Announcement: A grace period of five business days is allowed after the official ______. (V2-D-102-04)",
     "options": {
       "A": "payment",
       "B": "billing address",
@@ -877,7 +877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the location for sending invoice, before you continue with this finance and sales task. (V2-D-102-06)",
+    "question_text": "Notice: Please confirm that the ______ on file matches your registered company address. (V2-D-102-06)",
     "options": {
       "A": "billing address",
       "B": "payment",
@@ -907,7 +907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the amount owed or in account, for today's payment work. Which term best completes the speaker's meaning? (V2-D-102-07)",
+    "question_text": "Conversation: My expense report shows a positive ______ from last quarter — can I roll it over? (V2-D-102-07)",
     "options": {
       "A": "payment",
       "B": "balance",
@@ -937,7 +937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the payment briefing, the manager referred to the ______, the final date payment is required, more than once. (V2-D-102-08)",
+    "question_text": "Memo: Send reminders to all vendors whose invoices are approaching their ______. (V2-D-102-08)",
     "options": {
       "A": "payment",
       "B": "billing address",
@@ -967,7 +967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the payment team should understand the ______, the money transferred to recipient, before the meeting begins. (V2-D-102-09)",
+    "question_text": "Announcement: Online ______ options are now available for all invoices through the vendor portal. (V2-D-102-09)",
     "options": {
       "A": "billing address",
       "B": "balance",
@@ -1027,7 +1027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the amount owed or in account, before you continue with this finance and sales task. (V2-D-102-11)",
+    "question_text": "Notice: Check your account ______ before making any large purchases this month. (V2-D-102-11)",
     "options": {
       "A": "payment",
       "B": "balance",
@@ -1057,7 +1057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the final date payment is required, for today's payment work. Which term best completes the speaker's meaning? (V2-D-102-12)",
+    "question_text": "Conversation: What is the ______ for this month's supplier payments? (V2-D-102-12)",
     "options": {
       "A": "payment",
       "B": "billing address",
@@ -1087,7 +1087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the payment briefing, the manager referred to the ______, the money transferred to recipient, more than once. (V2-D-102-13)",
+    "question_text": "Memo: Confirm with finance that the ______ has been processed and a receipt issued. (V2-D-102-13)",
     "options": {
       "A": "billing address",
       "B": "balance",
@@ -1117,7 +1117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the payment team should understand the ______, the location for sending invoice, before the meeting begins. (V2-D-102-14)",
+    "question_text": "Announcement: Ensure the correct ______ is used for all vendor and client invoices. (V2-D-102-14)",
     "options": {
       "A": "billing address",
       "B": "payment",
@@ -1177,7 +1177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the final date payment is required, before you continue with this finance and sales task. (V2-D-102-16)",
+    "question_text": "Notice: All invoices must be settled by the ______ to avoid late payment charges. (V2-D-102-16)",
     "options": {
       "A": "payment",
       "B": "billing address",
@@ -1207,7 +1207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money transferred to recipient, for today's payment work. Which term best completes the speaker's meaning? (V2-D-102-17)",
+    "question_text": "Conversation: The vendor is asking about the status of their ______ — it's already overdue. (V2-D-102-17)",
     "options": {
       "A": "billing address",
       "B": "balance",
@@ -1237,7 +1237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the payment briefing, the manager referred to the ______, the location for sending invoice, more than once. (V2-D-102-18)",
+    "question_text": "Memo: Notify the finance team immediately if your company's ______ has changed. (V2-D-102-18)",
     "options": {
       "A": "billing address",
       "B": "payment",
@@ -1267,7 +1267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the payment team should understand the ______, the amount owed or in account, before the meeting begins. (V2-D-102-19)",
+    "question_text": "Announcement: Employees may check their leave ______ at any time through the HR portal. (V2-D-102-19)",
     "options": {
       "A": "payment",
       "B": "balance",
@@ -1327,7 +1327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money transferred to recipient, before you continue with this finance and sales task. (V2-D-102-21)",
+    "question_text": "Notify the accounts team if a ______ fails to appear in the system within three business days. (V2-D-102-21)",
     "options": {
       "A": "billing address",
       "B": "balance",
@@ -1357,7 +1357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the location for sending invoice, for today's payment work. Which term best completes the speaker's meaning? (V2-D-102-22)",
+    "question_text": "An incorrect ______ can delay invoice processing and payment by several weeks. (V2-D-102-22)",
     "options": {
       "A": "billing address",
       "B": "payment",
@@ -1387,7 +1387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the payment briefing, the manager referred to the ______, the amount owed or in account, more than once. (V2-D-102-23)",
+    "question_text": "Ensure the invoice ______ is settled before the end of the billing period to avoid penalties. (V2-D-102-23)",
     "options": {
       "A": "payment",
       "B": "balance",
@@ -1417,7 +1417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the payment team should understand the ______, the final date payment is required, before the meeting begins. (V2-D-102-24)",
+    "question_text": "Review the invoice carefully to confirm the ______ before scheduling payment. (V2-D-102-24)",
     "options": {
       "A": "payment",
       "B": "billing address",
@@ -1447,7 +1447,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money placed in account, before you continue with this finance and sales task. (V2-D-103-01)",
+    "question_text": "Notice: A security ______ equivalent to two months' rent is required before the lease begins. (V2-D-103-01)",
     "options": {
       "A": "withdrawal",
       "B": "transaction",
@@ -1477,7 +1477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money taken from account, for today's banking work. Which term best completes the speaker's meaning? (V2-D-103-02)",
+    "question_text": "Conversation: The petty cash ______ last Tuesday exceeds the approved monthly limit. (V2-D-103-02)",
     "options": {
       "A": "withdrawal",
       "B": "deposit",
@@ -1507,7 +1507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the banking briefing, the manager referred to the ______, the exchange of money or funds, more than once. (V2-D-103-03)",
+    "question_text": "Memo: All ______ above $1,000 require a countersignature from the finance director. (V2-D-103-03)",
     "options": {
       "A": "deposit",
       "B": "transaction",
@@ -1537,7 +1537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the banking team should understand the ______, the official record of account activity, before the meeting begins. (V2-D-103-04)",
+    "question_text": "Announcement: Year-end financial ______ for all cost centers will be issued by January 15th. (V2-D-103-04)",
     "options": {
       "A": "deposit",
       "B": "withdrawal",
@@ -1597,7 +1597,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money taken from account, before you continue with this finance and sales task. (V2-D-103-06)",
+    "question_text": "Notice: A ______ of funds for travel must be approved by the department head in advance. (V2-D-103-06)",
     "options": {
       "A": "withdrawal",
       "B": "deposit",
@@ -1627,7 +1627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the exchange of money or funds, for today's banking work. Which term best completes the speaker's meaning? (V2-D-103-07)",
+    "question_text": "Conversation: The suspicious ______ on the company card needs to be investigated immediately. (V2-D-103-07)",
     "options": {
       "A": "deposit",
       "B": "transaction",
@@ -1657,7 +1657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the banking briefing, the manager referred to the ______, the official record of account activity, more than once. (V2-D-103-08)",
+    "question_text": "Memo: Attach the bank ______ to your expense report as supporting documentation. (V2-D-103-08)",
     "options": {
       "A": "deposit",
       "B": "withdrawal",
@@ -1687,7 +1687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the banking team should understand the ______, the money placed in account, before the meeting begins. (V2-D-103-09)",
+    "question_text": "Announcement: A refundable ______ is required when booking the conference room for external events. (V2-D-103-09)",
     "options": {
       "A": "withdrawal",
       "B": "transaction",
@@ -1747,7 +1747,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the exchange of money or funds, before you continue with this finance and sales task. (V2-D-103-11)",
+    "question_text": "Notice: Each ______ must be recorded in the accounting system within 24 hours of completion. (V2-D-103-11)",
     "options": {
       "A": "deposit",
       "B": "transaction",
@@ -1777,7 +1777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official record of account activity, for today's banking work. Which term best completes the speaker's meaning? (V2-D-103-12)",
+    "question_text": "Conversation: Can you email me the ______ for the project expense account so I can reconcile it? (V2-D-103-12)",
     "options": {
       "A": "deposit",
       "B": "withdrawal",
@@ -1807,7 +1807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the banking briefing, the manager referred to the ______, the money placed in account, more than once. (V2-D-103-13)",
+    "question_text": "Memo: Confirm the ______ has been credited before releasing the goods to the customer. (V2-D-103-13)",
     "options": {
       "A": "withdrawal",
       "B": "transaction",
@@ -1837,7 +1837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the banking team should understand the ______, the money taken from account, before the meeting begins. (V2-D-103-14)",
+    "question_text": "Announcement: ATM ______ limits have been adjusted for all corporate cards effective next week. (V2-D-103-14)",
     "options": {
       "A": "withdrawal",
       "B": "deposit",
@@ -1897,7 +1897,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official record of account activity, before you continue with this finance and sales task. (V2-D-103-16)",
+    "question_text": "Notice: Your monthly account ______ is available for download through the online banking portal. (V2-D-103-16)",
     "options": {
       "A": "deposit",
       "B": "withdrawal",
@@ -1927,7 +1927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money placed in account, for today's banking work. Which term best completes the speaker's meaning? (V2-D-103-17)",
+    "question_text": "Conversation: I need to make a ______ into the corporate account to cover next week's expenses. (V2-D-103-17)",
     "options": {
       "A": "withdrawal",
       "B": "transaction",
@@ -1957,7 +1957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the banking briefing, the manager referred to the ______, the money taken from account, more than once. (V2-D-103-18)",
+    "question_text": "Memo: All ______ from the company account must be supported by a valid purchase order. (V2-D-103-18)",
     "options": {
       "A": "withdrawal",
       "B": "deposit",
@@ -1987,7 +1987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the banking team should understand the ______, the exchange of money or funds, before the meeting begins. (V2-D-103-19)",
+    "question_text": "Announcement: Online ______ processing times have been reduced from 3 days to 1 day. (V2-D-103-19)",
     "options": {
       "A": "deposit",
       "B": "transaction",
@@ -2047,7 +2047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money placed in account, before you continue with this finance and sales task. (V2-D-103-21)",
+    "question_text": "The ______ was credited to the account within two business days of the transfer. (V2-D-103-21)",
     "options": {
       "A": "withdrawal",
       "B": "transaction",
@@ -2077,7 +2077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money taken from account, for today's banking work. Which term best completes the speaker's meaning? (V2-D-103-22)",
+    "question_text": "Submit a ______ request form to the finance team with all supporting documentation. (V2-D-103-22)",
     "options": {
       "A": "withdrawal",
       "B": "deposit",
@@ -2107,7 +2107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the banking briefing, the manager referred to the ______, the exchange of money or funds, more than once. (V2-D-103-23)",
+    "question_text": "Print a copy of the ______ confirmation for the file before the end of the business day. (V2-D-103-23)",
     "options": {
       "A": "deposit",
       "B": "transaction",
@@ -2137,7 +2137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the banking team should understand the ______, the official record of account activity, before the meeting begins. (V2-D-103-24)",
+    "question_text": "Review your ______ carefully each month to identify any unauthorized transactions. (V2-D-103-24)",
     "options": {
       "A": "deposit",
       "B": "withdrawal",
@@ -2167,7 +2167,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the accounting record of transactions, before you continue with this finance and sales task. (V2-D-104-01)",
+    "question_text": "Notice: All entries in the accounts ______ must be reviewed before the period closes. (V2-D-104-01)",
     "options": {
       "A": "audit",
       "B": "tax",
@@ -2197,7 +2197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official check of financial records, for today's accounting work. Which term best completes the speaker's meaning? (V2-D-104-02)",
+    "question_text": "Conversation: Is the accounting team ready for the upcoming compliance ______? (V2-D-104-02)",
     "options": {
       "A": "audit",
       "B": "ledger",
@@ -2227,7 +2227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the accounting briefing, the manager referred to the ______, the money paid to government, more than once. (V2-D-104-03)",
+    "question_text": "Memo: The finance team will calculate the corporate ______ liability at the end of the fiscal year. (V2-D-104-03)",
     "options": {
       "A": "ledger",
       "B": "tax",
@@ -2257,7 +2257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the accounting team should understand the ______, the amount subtracted from total, before the meeting begins. (V2-D-104-04)",
+    "question_text": "Announcement: New tax ______ categories have been introduced for remote working costs. (V2-D-104-04)",
     "options": {
       "A": "ledger",
       "B": "audit",
@@ -2317,7 +2317,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official check of financial records, before you continue with this finance and sales task. (V2-D-104-06)",
+    "question_text": "Notice: An external financial ______ will be conducted during the second week of November. (V2-D-104-06)",
     "options": {
       "A": "audit",
       "B": "ledger",
@@ -2347,7 +2347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money paid to government, for today's accounting work. Which term best completes the speaker's meaning? (V2-D-104-07)",
+    "question_text": "Conversation: We need to review our expenses carefully before our ______ filing deadline. (V2-D-104-07)",
     "options": {
       "A": "ledger",
       "B": "tax",
@@ -2377,7 +2377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the accounting briefing, the manager referred to the ______, the amount subtracted from total, more than once. (V2-D-104-08)",
+    "question_text": "Memo: Each eligible business expense should be listed separately as a ______ in the tax filing. (V2-D-104-08)",
     "options": {
       "A": "ledger",
       "B": "audit",
@@ -2407,7 +2407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the accounting team should understand the ______, the accounting record of transactions, before the meeting begins. (V2-D-104-09)",
+    "question_text": "Announcement: The new accounting software automates ______ entries for recurring transactions. (V2-D-104-09)",
     "options": {
       "A": "audit",
       "B": "tax",
@@ -2467,7 +2467,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money paid to government, before you continue with this finance and sales task. (V2-D-104-11)",
+    "question_text": "Notice: All businesses must file their annual ______ return by March 31st. (V2-D-104-11)",
     "options": {
       "A": "ledger",
       "B": "tax",
@@ -2497,7 +2497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the amount subtracted from total, for today's accounting work. Which term best completes the speaker's meaning? (V2-D-104-12)",
+    "question_text": "Conversation: There was an extra ______ from my salary this month — what was it for? (V2-D-104-12)",
     "options": {
       "A": "ledger",
       "B": "audit",
@@ -2527,7 +2527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the accounting briefing, the manager referred to the ______, the accounting record of transactions, more than once. (V2-D-104-13)",
+    "question_text": "Memo: The finance team will reconcile the ______ at the end of each month to ensure accuracy. (V2-D-104-13)",
     "options": {
       "A": "audit",
       "B": "tax",
@@ -2557,7 +2557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the accounting team should understand the ______, the official check of financial records, before the meeting begins. (V2-D-104-14)",
+    "question_text": "Announcement: The internal ______ has identified areas for improvement in the expense approval process. (V2-D-104-14)",
     "options": {
       "A": "audit",
       "B": "ledger",
@@ -2617,7 +2617,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the amount subtracted from total, before you continue with this finance and sales task. (V2-D-104-16)",
+    "question_text": "Notice: Check your payslip carefully to confirm the correct ______ has been applied. (V2-D-104-16)",
     "options": {
       "A": "ledger",
       "B": "audit",
@@ -2647,7 +2647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the accounting record of transactions, for today's accounting work. Which term best completes the speaker's meaning? (V2-D-104-17)",
+    "question_text": "Conversation: I need to cross-check the figures with the general ______ — could you pull it up? (V2-D-104-17)",
     "options": {
       "A": "audit",
       "B": "tax",
@@ -2677,7 +2677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the accounting briefing, the manager referred to the ______, the official check of financial records, more than once. (V2-D-104-18)",
+    "question_text": "Memo: All transaction records must be organized and ready before the ______ team arrives. (V2-D-104-18)",
     "options": {
       "A": "audit",
       "B": "ledger",
@@ -2707,7 +2707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the accounting team should understand the ______, the money paid to government, before the meeting begins. (V2-D-104-19)",
+    "question_text": "Announcement: New ______ regulations affecting overseas income have been published by the authorities. (V2-D-104-19)",
     "options": {
       "A": "ledger",
       "B": "tax",
@@ -2767,7 +2767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the accounting record of transactions, before you continue with this finance and sales task. (V2-D-104-21)",
+    "question_text": "All financial activity should be accurately reflected in the general ______ in real time. (V2-D-104-21)",
     "options": {
       "A": "audit",
       "B": "tax",
@@ -2797,7 +2797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official check of financial records, for today's accounting work. Which term best completes the speaker's meaning? (V2-D-104-22)",
+    "question_text": "Keep all financial records for at least seven years in case of a future ______. (V2-D-104-22)",
     "options": {
       "A": "audit",
       "B": "ledger",
@@ -2827,7 +2827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the accounting briefing, the manager referred to the ______, the money paid to government, more than once. (V2-D-104-23)",
+    "question_text": "Consult with the external accountant to ensure full compliance with ______ obligations. (V2-D-104-23)",
     "options": {
       "A": "ledger",
       "B": "tax",
@@ -2857,7 +2857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the accounting team should understand the ______, the amount subtracted from total, before the meeting begins. (V2-D-104-24)",
+    "question_text": "Employees can claim a ______ for approved professional development expenses. (V2-D-104-24)",
     "options": {
       "A": "ledger",
       "B": "audit",
@@ -2887,7 +2887,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the calculated prediction of cost, before you continue with this finance and sales task. (V2-D-105-01)",
+    "question_text": "Notice: Request a written ______ from all suppliers before approving any expenditure over $500. (V2-D-105-01)",
     "options": {
       "A": "discount",
       "B": "surcharge",
@@ -2917,7 +2917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the reduction in price, for today's pricing work. Which term best completes the speaker's meaning? (V2-D-105-02)",
+    "question_text": "Conversation: Can we negotiate a volume ______ if we commit to a three-year contract? (V2-D-105-02)",
     "options": {
       "A": "discount",
       "B": "estimate",
@@ -2947,7 +2947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the pricing briefing, the manager referred to the ______, the additional fee on bill, more than once. (V2-D-105-03)",
+    "question_text": "Memo: International wire transfers attract a flat ______ of $25 per transaction. (V2-D-105-03)",
     "options": {
       "A": "estimate",
       "B": "surcharge",
@@ -2977,7 +2977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the pricing team should understand the ______, the price per unit measurement, before the meeting begins. (V2-D-105-04)",
+    "question_text": "Announcement: Standard overtime ______ is 1.5 times the regular hourly salary for weekday hours. (V2-D-105-04)",
     "options": {
       "A": "estimate",
       "B": "discount",
@@ -3037,7 +3037,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the reduction in price, before you continue with this finance and sales task. (V2-D-105-06)",
+    "question_text": "Notice: A 10% ______ is available for orders placed before the end of this month. (V2-D-105-06)",
     "options": {
       "A": "discount",
       "B": "estimate",
@@ -3067,7 +3067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the additional fee on bill, for today's pricing work. Which term best completes the speaker's meaning? (V2-D-105-07)",
+    "question_text": "Conversation: There's an unexpected ______ on the invoice — what is it for? (V2-D-105-07)",
     "options": {
       "A": "estimate",
       "B": "surcharge",
@@ -3097,7 +3097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the pricing briefing, the manager referred to the ______, the price per unit measurement, more than once. (V2-D-105-08)",
+    "question_text": "Memo: The revised service ______ schedule has been sent to all accounts for approval. (V2-D-105-08)",
     "options": {
       "A": "estimate",
       "B": "discount",
@@ -3127,7 +3127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the pricing team should understand the ______, the calculated prediction of cost, before the meeting begins. (V2-D-105-09)",
+    "question_text": "Announcement: An independent ______ of the project cost has been commissioned by management. (V2-D-105-09)",
     "options": {
       "A": "discount",
       "B": "surcharge",
@@ -3187,7 +3187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the additional fee on bill, before you continue with this finance and sales task. (V2-D-105-11)",
+    "question_text": "Notice: A fuel ______ will be added to all delivery orders until further notice. (V2-D-105-11)",
     "options": {
       "A": "estimate",
       "B": "surcharge",
@@ -3217,7 +3217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the price per unit measurement, for today's pricing work. Which term best completes the speaker's meaning? (V2-D-105-12)",
+    "question_text": "Conversation: What is the daily billing ______ for the consultant's services? (V2-D-105-12)",
     "options": {
       "A": "estimate",
       "B": "discount",
@@ -3247,7 +3247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the pricing briefing, the manager referred to the ______, the calculated prediction of cost, more than once. (V2-D-105-13)",
+    "question_text": "Memo: Please prepare a cost ______ for the new product launch campaign and share it by Friday. (V2-D-105-13)",
     "options": {
       "A": "discount",
       "B": "surcharge",
@@ -3277,7 +3277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the pricing team should understand the ______, the reduction in price, before the meeting begins. (V2-D-105-14)",
+    "question_text": "Announcement: Members receive an exclusive 15% ______ on all purchases at the company store. (V2-D-105-14)",
     "options": {
       "A": "discount",
       "B": "estimate",
@@ -3337,7 +3337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the price per unit measurement, before you continue with this finance and sales task. (V2-D-105-16)",
+    "question_text": "Notice: The current exchange ______ will be used for all foreign currency expense reimbursements. (V2-D-105-16)",
     "options": {
       "A": "estimate",
       "B": "discount",
@@ -3367,7 +3367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the calculated prediction of cost, for today's pricing work. Which term best completes the speaker's meaning? (V2-D-105-17)",
+    "question_text": "Conversation: The ______ for the renovation came in much higher than we expected. (V2-D-105-17)",
     "options": {
       "A": "discount",
       "B": "surcharge",
@@ -3397,7 +3397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the pricing briefing, the manager referred to the ______, the reduction in price, more than once. (V2-D-105-18)",
+    "question_text": "Memo: The approved vendor ______ schedule is attached for reference when processing orders. (V2-D-105-18)",
     "options": {
       "A": "discount",
       "B": "estimate",
@@ -3427,7 +3427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the pricing team should understand the ______, the additional fee on bill, before the meeting begins. (V2-D-105-19)",
+    "question_text": "Announcement: A credit card ______ of 2% applies to all online payment transactions. (V2-D-105-19)",
     "options": {
       "A": "estimate",
       "B": "surcharge",
@@ -3487,7 +3487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the calculated prediction of cost, before you continue with this finance and sales task. (V2-D-105-21)",
+    "question_text": "Compare the final invoice to the original ______ to verify that no additional charges were added. (V2-D-105-21)",
     "options": {
       "A": "discount",
       "B": "surcharge",
@@ -3517,7 +3517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the reduction in price, for today's pricing work. Which term best completes the speaker's meaning? (V2-D-105-22)",
+    "question_text": "Apply the correct ______ code at checkout to ensure the promotion price is honored. (V2-D-105-22)",
     "options": {
       "A": "discount",
       "B": "estimate",
@@ -3547,7 +3547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the pricing briefing, the manager referred to the ______, the additional fee on bill, more than once. (V2-D-105-23)",
+    "question_text": "Notify the accounts team of any ______ that was not agreed upon in the original contract. (V2-D-105-23)",
     "options": {
       "A": "estimate",
       "B": "surcharge",
@@ -3577,7 +3577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the pricing team should understand the ______, the price per unit measurement, before the meeting begins. (V2-D-105-24)",
+    "question_text": "Review the agreed ______ before approving any additional work beyond the original scope. (V2-D-105-24)",
     "options": {
       "A": "estimate",
       "B": "discount",
@@ -3607,7 +3607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the customer of a business, before you continue with this finance and sales task. (V2-D-106-01)",
+    "question_text": "Notice: All ______ meetings must be logged in the CRM system within 24 hours of the visit. (V2-D-106-01)",
     "options": {
       "A": "prospect",
       "B": "subscription",
@@ -3637,7 +3637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the potential future customer, for today's sales work. Which term best completes the speaker's meaning? (V2-D-106-02)",
+    "question_text": "Conversation: We have a promising new ______ in the healthcare sector — should we schedule a meeting? (V2-D-106-02)",
     "options": {
       "A": "prospect",
       "B": "client",
@@ -3667,7 +3667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the sales briefing, the manager referred to the ______, the recurring payment for service, more than once. (V2-D-106-03)",
+    "question_text": "Memo: Please review all active ______ services and cancel those that are no longer required. (V2-D-106-03)",
     "options": {
       "A": "client",
       "B": "subscription",
@@ -3697,7 +3697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the sales team should understand the ______, the extension of an agreement, before the meeting begins. (V2-D-106-04)",
+    "question_text": "Announcement: Membership ______ for the trade association must be completed before the April deadline. (V2-D-106-04)",
     "options": {
       "A": "client",
       "B": "prospect",
@@ -3757,7 +3757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the potential future customer, before you continue with this finance and sales task. (V2-D-106-06)",
+    "question_text": "Notice: Follow up with every qualified ______ within two business days of the initial inquiry. (V2-D-106-06)",
     "options": {
       "A": "prospect",
       "B": "client",
@@ -3787,7 +3787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the recurring payment for service, for today's sales work. Which term best completes the speaker's meaning? (V2-D-106-07)",
+    "question_text": "Conversation: Should we upgrade our ______ plan to access the premium analytics features? (V2-D-106-07)",
     "options": {
       "A": "client",
       "B": "subscription",
@@ -3817,7 +3817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the sales briefing, the manager referred to the ______, the extension of an agreement, more than once. (V2-D-106-08)",
+    "question_text": "Memo: Send ______ reminders to clients at least 30 days before their subscription expires. (V2-D-106-08)",
     "options": {
       "A": "client",
       "B": "prospect",
@@ -3847,7 +3847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the sales team should understand the ______, the customer of a business, before the meeting begins. (V2-D-106-09)",
+    "question_text": "Announcement: A ______ appreciation event will be held at headquarters on the last Friday of this month. (V2-D-106-09)",
     "options": {
       "A": "prospect",
       "B": "subscription",
@@ -3907,7 +3907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the recurring payment for service, before you continue with this finance and sales task. (V2-D-106-11)",
+    "question_text": "Notice: Your annual ______ to the industry database expires at the end of this quarter. (V2-D-106-11)",
     "options": {
       "A": "client",
       "B": "subscription",
@@ -3937,7 +3937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the extension of an agreement, for today's sales work. Which term best completes the speaker's meaning? (V2-D-106-12)",
+    "question_text": "Conversation: The client has confirmed their contract ______ — good news for the team. (V2-D-106-12)",
     "options": {
       "A": "client",
       "B": "prospect",
@@ -3967,7 +3967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the sales briefing, the manager referred to the ______, the customer of a business, more than once. (V2-D-106-13)",
+    "question_text": "Memo: Please send a thank-you note to the ______ following the successful contract signing. (V2-D-106-13)",
     "options": {
       "A": "prospect",
       "B": "subscription",
@@ -3997,7 +3997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the sales team should understand the ______, the potential future customer, before the meeting begins. (V2-D-106-14)",
+    "question_text": "Announcement: The sales team has identified 15 high-value ______ contacts from last week's conference. (V2-D-106-14)",
     "options": {
       "A": "prospect",
       "B": "client",
@@ -4057,7 +4057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the extension of an agreement, before you continue with this finance and sales task. (V2-D-106-16)",
+    "question_text": "Notice: Your annual software license is due for ______ at the end of this month. (V2-D-106-16)",
     "options": {
       "A": "client",
       "B": "prospect",
@@ -4087,7 +4087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the customer of a business, for today's sales work. Which term best completes the speaker's meaning? (V2-D-106-17)",
+    "question_text": "Conversation: Our key ______ in Tokyo has requested a product demo for next week. (V2-D-106-17)",
     "options": {
       "A": "prospect",
       "B": "subscription",
@@ -4117,7 +4117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the sales briefing, the manager referred to the ______, the potential future customer, more than once. (V2-D-106-18)",
+    "question_text": "Memo: Add the new ______ details to the CRM immediately after the first point of contact. (V2-D-106-18)",
     "options": {
       "A": "prospect",
       "B": "client",
@@ -4147,7 +4147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the sales team should understand the ______, the recurring payment for service, before the meeting begins. (V2-D-106-19)",
+    "question_text": "Announcement: The company's ______ to the market research platform has been renewed for another year. (V2-D-106-19)",
     "options": {
       "A": "client",
       "B": "subscription",
@@ -4207,7 +4207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the customer of a business, before you continue with this finance and sales task. (V2-D-106-21)",
+    "question_text": "Maintain regular communication with each ______ to strengthen the business relationship. (V2-D-106-21)",
     "options": {
       "A": "prospect",
       "B": "subscription",
@@ -4237,7 +4237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the potential future customer, for today's sales work. Which term best completes the speaker's meaning? (V2-D-106-22)",
+    "question_text": "Convert each ______ into a confirmed client by providing tailored proposals. (V2-D-106-22)",
     "options": {
       "A": "prospect",
       "B": "client",
@@ -4267,7 +4267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the sales briefing, the manager referred to the ______, the recurring payment for service, more than once. (V2-D-106-23)",
+    "question_text": "A list of all active ______ and their renewal dates is maintained by the IT department. (V2-D-106-23)",
     "options": {
       "A": "client",
       "B": "subscription",
@@ -4297,7 +4297,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the sales team should understand the ______, the extension of an agreement, before the meeting begins. (V2-D-106-24)",
+    "question_text": "Track upcoming contract ______ dates in the CRM to avoid gaps in service coverage. (V2-D-106-24)",
     "options": {
       "A": "client",
       "B": "prospect",
@@ -4327,7 +4327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the purchasing process for business, before you continue with this finance and sales task. (V2-D-107-01)",
+    "question_text": "Notice: All ______ requests above $1,000 must be forwarded to the purchasing team for processing. (V2-D-107-01)",
     "options": {
       "A": "vendor",
       "B": "requisition",
@@ -4357,7 +4357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the supplier of goods or services, for today's procurement work. Which term best completes the speaker's meaning? (V2-D-107-02)",
+    "question_text": "Conversation: Which ______ do we use for catering services at our corporate events? (V2-D-107-02)",
     "options": {
       "A": "vendor",
       "B": "procurement",
@@ -4387,7 +4387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the procurement briefing, the manager referred to the ______, the formal request for supplies, more than once. (V2-D-107-03)",
+    "question_text": "Memo: All ______ requests must include a cost estimate and be approved by the department head. (V2-D-107-03)",
     "options": {
       "A": "procurement",
       "B": "requisition",
@@ -4417,7 +4417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the procurement team should understand the ______, the competitive price offer, before the meeting begins. (V2-D-107-04)",
+    "question_text": "Announcement: A public ______ will be opened for the construction of the new warehouse facility. (V2-D-107-04)",
     "options": {
       "A": "procurement",
       "B": "vendor",
@@ -4477,7 +4477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the supplier of goods or services, before you continue with this finance and sales task. (V2-D-107-06)",
+    "question_text": "Notice: All new ______ relationships must be registered with the procurement department first. (V2-D-107-06)",
     "options": {
       "A": "vendor",
       "B": "procurement",
@@ -4507,7 +4507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal request for supplies, for today's procurement work. Which term best completes the speaker's meaning? (V2-D-107-07)",
+    "question_text": "Conversation: I've sent the ______ for the new laptops — hopefully it will be approved today. (V2-D-107-07)",
     "options": {
       "A": "procurement",
       "B": "requisition",
@@ -4537,7 +4537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the procurement briefing, the manager referred to the ______, the competitive price offer, more than once. (V2-D-107-08)",
+    "question_text": "Memo: Evaluate each ______ carefully against the technical and financial criteria before recommending. (V2-D-107-08)",
     "options": {
       "A": "procurement",
       "B": "vendor",
@@ -4567,7 +4567,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the procurement team should understand the ______, the purchasing process for business, before the meeting begins. (V2-D-107-09)",
+    "question_text": "Announcement: The ______ department has negotiated improved rates with all major suppliers. (V2-D-107-09)",
     "options": {
       "A": "vendor",
       "B": "requisition",
@@ -4627,7 +4627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal request for supplies, before you continue with this finance and sales task. (V2-D-107-11)",
+    "question_text": "Notice: Submit a ______ form to the purchasing team for any equipment not available in stock. (V2-D-107-11)",
     "options": {
       "A": "procurement",
       "B": "requisition",
@@ -4657,7 +4657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the competitive price offer, for today's procurement work. Which term best completes the speaker's meaning? (V2-D-107-12)",
+    "question_text": "Conversation: We submitted a competitive ______ for the government contract — fingers crossed. (V2-D-107-12)",
     "options": {
       "A": "procurement",
       "B": "vendor",
@@ -4687,7 +4687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the procurement briefing, the manager referred to the ______, the purchasing process for business, more than once. (V2-D-107-13)",
+    "question_text": "Memo: The new ______ policy requires competitive quotes for any purchase exceeding $500. (V2-D-107-13)",
     "options": {
       "A": "vendor",
       "B": "requisition",
@@ -4717,7 +4717,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the procurement team should understand the ______, the supplier of goods or services, before the meeting begins. (V2-D-107-14)",
+    "question_text": "Announcement: A preferred ______ list for all IT services has been approved and is now in effect. (V2-D-107-14)",
     "options": {
       "A": "vendor",
       "B": "procurement",
@@ -4777,7 +4777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the competitive price offer, before you continue with this finance and sales task. (V2-D-107-16)",
+    "question_text": "Notice: All qualified suppliers are invited to submit a ______ by the closing date of the 20th. (V2-D-107-16)",
     "options": {
       "A": "procurement",
       "B": "vendor",
@@ -4807,7 +4807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the purchasing process for business, for today's procurement work. Which term best completes the speaker's meaning? (V2-D-107-17)",
+    "question_text": "Conversation: Who handles ______ for office supplies — is it facilities or the admin team? (V2-D-107-17)",
     "options": {
       "A": "vendor",
       "B": "requisition",
@@ -4837,7 +4837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the procurement briefing, the manager referred to the ______, the supplier of goods or services, more than once. (V2-D-107-18)",
+    "question_text": "Memo: Please assess the performance of each ______ quarterly and flag any service issues. (V2-D-107-18)",
     "options": {
       "A": "vendor",
       "B": "procurement",
@@ -4867,7 +4867,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the procurement team should understand the ______, the formal request for supplies, before the meeting begins. (V2-D-107-19)",
+    "question_text": "Announcement: The online ______ system has been upgraded to include real-time approval tracking. (V2-D-107-19)",
     "options": {
       "A": "procurement",
       "B": "requisition",
@@ -4927,7 +4927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the purchasing process for business, before you continue with this finance and sales task. (V2-D-107-21)",
+    "question_text": "Centralized ______ ensures that the company benefits from bulk discounts across all departments. (V2-D-107-21)",
     "options": {
       "A": "vendor",
       "B": "requisition",
@@ -4957,7 +4957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the supplier of goods or services, for today's procurement work. Which term best completes the speaker's meaning? (V2-D-107-22)",
+    "question_text": "A ______ evaluation form must be completed within 30 days of receiving the first delivery. (V2-D-107-22)",
     "options": {
       "A": "vendor",
       "B": "procurement",
@@ -4987,7 +4987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the procurement briefing, the manager referred to the ______, the formal request for supplies, more than once. (V2-D-107-23)",
+    "question_text": "A ______ must be raised before any non-standard purchase is authorized by the finance team. (V2-D-107-23)",
     "options": {
       "A": "procurement",
       "B": "requisition",
@@ -5017,7 +5017,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the procurement team should understand the ______, the competitive price offer, before the meeting begins. (V2-D-107-24)",
+    "question_text": "The winning ______ will be selected based on price, quality, and delivery timeline. (V2-D-107-24)",
     "options": {
       "A": "procurement",
       "B": "vendor",
@@ -5047,7 +5047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official rule or requirement, before you continue with this finance and sales task. (V2-D-108-01)",
+    "question_text": "Notice: All operations must comply with local safety ______ and industry standards. (V2-D-108-01)",
     "options": {
       "A": "violation",
       "B": "permit",
@@ -5077,7 +5077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the breaking of rule or law, for today's compliance work. Which term best completes the speaker's meaning? (V2-D-108-02)",
+    "question_text": "Conversation: The safety inspector issued a warning for a ______ found during the factory audit. (V2-D-108-02)",
     "options": {
       "A": "violation",
       "B": "regulation",
@@ -5107,7 +5107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the compliance briefing, the manager referred to the ______, the official document granting permission, more than once. (V2-D-108-03)",
+    "question_text": "Memo: Check whether a ______ is required for the planned renovation before hiring a contractor. (V2-D-108-03)",
     "options": {
       "A": "regulation",
       "B": "permit",
@@ -5137,7 +5137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the compliance team should understand the ______, the official document authorizing activity, before the meeting begins. (V2-D-108-04)",
+    "question_text": "Announcement: A trade ______ is required before we can legally operate in the new market. (V2-D-108-04)",
     "options": {
       "A": "regulation",
       "B": "violation",
@@ -5197,7 +5197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the breaking of rule or law, before you continue with this finance and sales task. (V2-D-108-06)",
+    "question_text": "Notice: Any ______ of the company's code of conduct will result in disciplinary action. (V2-D-108-06)",
     "options": {
       "A": "violation",
       "B": "regulation",
@@ -5227,7 +5227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official document granting permission, for today's compliance work. Which term best completes the speaker's meaning? (V2-D-108-07)",
+    "question_text": "Conversation: We need a ______ from the city council before we can set up an outdoor display. (V2-D-108-07)",
     "options": {
       "A": "regulation",
       "B": "permit",
@@ -5257,7 +5257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the compliance briefing, the manager referred to the ______, the official document authorizing activity, more than once. (V2-D-108-08)",
+    "question_text": "Memo: Renew the software ______ before the end of this quarter to avoid a service interruption. (V2-D-108-08)",
     "options": {
       "A": "regulation",
       "B": "violation",
@@ -5287,7 +5287,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the compliance team should understand the ______, the official rule or requirement, before the meeting begins. (V2-D-108-09)",
+    "question_text": "Announcement: Changes to the environmental ______ affecting our industry take effect in July. (V2-D-108-09)",
     "options": {
       "A": "violation",
       "B": "permit",
@@ -5347,7 +5347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official document granting permission, before you continue with this finance and sales task. (V2-D-108-11)",
+    "question_text": "Notice: A construction ______ must be obtained before any building work can begin. (V2-D-108-11)",
     "options": {
       "A": "regulation",
       "B": "permit",
@@ -5377,7 +5377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official document authorizing activity, for today's compliance work. Which term best completes the speaker's meaning? (V2-D-108-12)",
+    "question_text": "Conversation: Does our new business activity require a separate operating ______? (V2-D-108-12)",
     "options": {
       "A": "regulation",
       "B": "violation",
@@ -5407,7 +5407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the compliance briefing, the manager referred to the ______, the official rule or requirement, more than once. (V2-D-108-13)",
+    "question_text": "Memo: Refer to the updated data protection ______ before sharing customer information externally. (V2-D-108-13)",
     "options": {
       "A": "violation",
       "B": "permit",
@@ -5437,7 +5437,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the compliance team should understand the ______, the breaking of rule or law, before the meeting begins. (V2-D-108-14)",
+    "question_text": "Announcement: All ______ of the new parking policy will be documented and actioned accordingly. (V2-D-108-14)",
     "options": {
       "A": "violation",
       "B": "regulation",
@@ -5497,7 +5497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official document authorizing activity, before you continue with this finance and sales task. (V2-D-108-16)",
+    "question_text": "Notice: All staff driving company vehicles must hold a valid driver's ______ on file. (V2-D-108-16)",
     "options": {
       "A": "regulation",
       "B": "violation",
@@ -5527,7 +5527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official rule or requirement, for today's compliance work. Which term best completes the speaker's meaning? (V2-D-108-17)",
+    "question_text": "Conversation: The new import ______ means we need additional documentation for our shipments. (V2-D-108-17)",
     "options": {
       "A": "violation",
       "B": "permit",
@@ -5557,7 +5557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the compliance briefing, the manager referred to the ______, the breaking of rule or law, more than once. (V2-D-108-18)",
+    "question_text": "Memo: Report any suspected ______ of data privacy rules to the compliance team immediately. (V2-D-108-18)",
     "options": {
       "A": "violation",
       "B": "regulation",
@@ -5587,7 +5587,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the compliance team should understand the ______, the official document granting permission, before the meeting begins. (V2-D-108-19)",
+    "question_text": "Announcement: A temporary operating ______ has been approved for the pop-up retail space downtown. (V2-D-108-19)",
     "options": {
       "A": "regulation",
       "B": "permit",
@@ -5647,7 +5647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official rule or requirement, before you continue with this finance and sales task. (V2-D-108-21)",
+    "question_text": "Stay updated on changes to industry ______ to ensure full compliance at all times. (V2-D-108-21)",
     "options": {
       "A": "violation",
       "B": "permit",
@@ -5677,7 +5677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the breaking of rule or law, for today's compliance work. Which term best completes the speaker's meaning? (V2-D-108-22)",
+    "question_text": "A ______ of import regulations was identified and the shipment was temporarily detained. (V2-D-108-22)",
     "options": {
       "A": "violation",
       "B": "regulation",
@@ -5707,7 +5707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the compliance briefing, the manager referred to the ______, the official document granting permission, more than once. (V2-D-108-23)",
+    "question_text": "Operating without the required ______ can result in significant fines and business closure. (V2-D-108-23)",
     "options": {
       "A": "regulation",
       "B": "permit",
@@ -5737,7 +5737,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the compliance team should understand the ______, the official document authorizing activity, before the meeting begins. (V2-D-108-24)",
+    "question_text": "Keep all business ______ documents in a secure file and renew them before their expiry date. (V2-D-108-24)",
     "options": {
       "A": "regulation",
       "B": "violation",
@@ -5767,7 +5767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the extent of insurance protection, before you continue with this finance and sales task. (V2-D-109-01)",
+    "question_text": "Notice: Your health plan ______ includes dental and vision care from the start of next month. (V2-D-109-01)",
     "options": {
       "A": "claim",
       "B": "premium",
@@ -5797,7 +5797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal request for insurance payment, for today's insurance work. Which term best completes the speaker's meaning? (V2-D-109-02)",
+    "question_text": "Conversation: The travel insurance ______ for my lost luggage was approved last week. (V2-D-109-02)",
     "options": {
       "A": "claim",
       "B": "coverage",
@@ -5827,7 +5827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the insurance briefing, the manager referred to the ______, the payment for insurance coverage, more than once. (V2-D-109-03)",
+    "question_text": "Memo: Review whether the insurance ______ justifies the level of cover for the coming year. (V2-D-109-03)",
     "options": {
       "A": "coverage",
       "B": "premium",
@@ -5857,7 +5857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the insurance team should understand the ______, the person insured by a policy, before the meeting begins. (V2-D-109-04)",
+    "question_text": "Announcement: All ______ must review and acknowledge the revised terms and conditions this month. (V2-D-109-04)",
     "options": {
       "A": "coverage",
       "B": "claim",
@@ -5917,7 +5917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal request for insurance payment, before you continue with this finance and sales task. (V2-D-109-06)",
+    "question_text": "Notice: All insurance ______ must be submitted with supporting documentation within 60 days. (V2-D-109-06)",
     "options": {
       "A": "claim",
       "B": "coverage",
@@ -5947,7 +5947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the payment for insurance coverage, for today's insurance work. Which term best completes the speaker's meaning? (V2-D-109-07)",
+    "question_text": "Conversation: The ______ for our group health plan has increased by 8% this year. (V2-D-109-07)",
     "options": {
       "A": "coverage",
       "B": "premium",
@@ -5977,7 +5977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the insurance briefing, the manager referred to the ______, the person insured by a policy, more than once. (V2-D-109-08)",
+    "question_text": "Memo: Each ______ will receive a printed summary of their updated policy terms by post. (V2-D-109-08)",
     "options": {
       "A": "coverage",
       "B": "claim",
@@ -6007,7 +6007,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the insurance team should understand the ______, the extent of insurance protection, before the meeting begins. (V2-D-109-09)",
+    "question_text": "Announcement: Extended medical ______ for overseas assignments will be provided by the HR department. (V2-D-109-09)",
     "options": {
       "A": "claim",
       "B": "premium",
@@ -6067,7 +6067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the payment for insurance coverage, before you continue with this finance and sales task. (V2-D-109-11)",
+    "question_text": "Notice: Your annual insurance ______ is due for payment on the first of next month. (V2-D-109-11)",
     "options": {
       "A": "coverage",
       "B": "premium",
@@ -6097,7 +6097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person insured by a policy, for today's insurance work. Which term best completes the speaker's meaning? (V2-D-109-12)",
+    "question_text": "Conversation: The ______ must sign the renewal form before the policy can be extended. (V2-D-109-12)",
     "options": {
       "A": "coverage",
       "B": "claim",
@@ -6127,7 +6127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the insurance briefing, the manager referred to the ______, the extent of insurance protection, more than once. (V2-D-109-13)",
+    "question_text": "Memo: Review your insurance ______ annually to ensure it meets current business needs. (V2-D-109-13)",
     "options": {
       "A": "claim",
       "B": "premium",
@@ -6157,7 +6157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the insurance team should understand the ______, the formal request for insurance payment, before the meeting begins. (V2-D-109-14)",
+    "question_text": "Announcement: A ______ assessment team will visit the site on Tuesday to inspect the damage. (V2-D-109-14)",
     "options": {
       "A": "claim",
       "B": "coverage",
@@ -6217,7 +6217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person insured by a policy, before you continue with this finance and sales task. (V2-D-109-16)",
+    "question_text": "Notice: As the ______, you are required to notify the insurer of any change in risk within 30 days. (V2-D-109-16)",
     "options": {
       "A": "coverage",
       "B": "claim",
@@ -6247,7 +6247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the extent of insurance protection, for today's insurance work. Which term best completes the speaker's meaning? (V2-D-109-17)",
+    "question_text": "Conversation: Does our liability policy have ______ for overseas business activities? (V2-D-109-17)",
     "options": {
       "A": "claim",
       "B": "premium",
@@ -6277,7 +6277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the insurance briefing, the manager referred to the ______, the formal request for insurance payment, more than once. (V2-D-109-18)",
+    "question_text": "Memo: Please complete the expense ______ form and attach all receipts before submitting. (V2-D-109-18)",
     "options": {
       "A": "claim",
       "B": "coverage",
@@ -6307,7 +6307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the insurance team should understand the ______, the payment for insurance coverage, before the meeting begins. (V2-D-109-19)",
+    "question_text": "Announcement: Staff enrolled in the group plan will receive a 5% reduction in their monthly ______. (V2-D-109-19)",
     "options": {
       "A": "coverage",
       "B": "premium",
@@ -6367,7 +6367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the extent of insurance protection, before you continue with this finance and sales task. (V2-D-109-21)",
+    "question_text": "Confirm the scope of your travel insurance ______ before departing on any business trip. (V2-D-109-21)",
     "options": {
       "A": "claim",
       "B": "premium",
@@ -6397,7 +6397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal request for insurance payment, for today's insurance work. Which term best completes the speaker's meaning? (V2-D-109-22)",
+    "question_text": "Keep all receipts and photographs to support your insurance ______ in case of loss. (V2-D-109-22)",
     "options": {
       "A": "claim",
       "B": "coverage",
@@ -6427,7 +6427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the insurance briefing, the manager referred to the ______, the payment for insurance coverage, more than once. (V2-D-109-23)",
+    "question_text": "Pay the ______ on time to avoid a lapse in coverage or a penalty charge. (V2-D-109-23)",
     "options": {
       "A": "coverage",
       "B": "premium",
@@ -6457,7 +6457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the insurance team should understand the ______, the person insured by a policy, before the meeting begins. (V2-D-109-24)",
+    "question_text": "The ______ is responsible for ensuring that the information on the policy is accurate and current. (V2-D-109-24)",
     "options": {
       "A": "coverage",
       "B": "claim",
@@ -6487,7 +6487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the collection of investments, before you continue with this finance and sales task. (V2-D-110-01)",
+    "question_text": "Notice: Each fund manager is responsible for reviewing their client ______ on a monthly basis. (V2-D-110-01)",
     "options": {
       "A": "dividend",
       "B": "shareholder",
@@ -6517,7 +6517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the payment distributed to shareholders, for today's investment work. Which term best completes the speaker's meaning? (V2-D-110-02)",
+    "question_text": "Conversation: When is the next ______ payment — are the details in the investor report? (V2-D-110-02)",
     "options": {
       "A": "dividend",
       "B": "portfolio",
@@ -6547,7 +6547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the investment briefing, the manager referred to the ______, the owner of company stock, more than once. (V2-D-110-03)",
+    "question_text": "Memo: A ______ report will be distributed at the start of the fourth quarter. (V2-D-110-03)",
     "options": {
       "A": "portfolio",
       "B": "shareholder",
@@ -6577,7 +6577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the investment team should understand the ______, the prediction of future activity, before the meeting begins. (V2-D-110-04)",
+    "question_text": "Announcement: The updated sales ______ will be presented at the board meeting on the 18th. (V2-D-110-04)",
     "options": {
       "A": "portfolio",
       "B": "dividend",
@@ -6637,7 +6637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the payment distributed to shareholders, before you continue with this finance and sales task. (V2-D-110-06)",
+    "question_text": "Notice: An annual ______ of $1.20 per share will be distributed to eligible shareholders. (V2-D-110-06)",
     "options": {
       "A": "dividend",
       "B": "portfolio",
@@ -6667,7 +6667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the owner of company stock, for today's investment work. Which term best completes the speaker's meaning? (V2-D-110-07)",
+    "question_text": "Conversation: The board needs to approve the plan before presenting it to the ______. (V2-D-110-07)",
     "options": {
       "A": "portfolio",
       "B": "shareholder",
@@ -6697,7 +6697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the investment briefing, the manager referred to the ______, the prediction of future activity, more than once. (V2-D-110-08)",
+    "question_text": "Memo: Please submit your department's expense ______ for the upcoming fiscal year by Friday. (V2-D-110-08)",
     "options": {
       "A": "portfolio",
       "B": "dividend",
@@ -6727,7 +6727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the investment team should understand the ______, the collection of investments, before the meeting begins. (V2-D-110-09)",
+    "question_text": "Announcement: The company's service ______ has expanded to include IT consulting from next quarter. (V2-D-110-09)",
     "options": {
       "A": "dividend",
       "B": "shareholder",
@@ -6787,7 +6787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the owner of company stock, before you continue with this finance and sales task. (V2-D-110-11)",
+    "question_text": "Notice: All registered ______ are invited to attend the annual general meeting on the 15th. (V2-D-110-11)",
     "options": {
       "A": "portfolio",
       "B": "shareholder",
@@ -6817,7 +6817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the prediction of future activity, for today's investment work. Which term best completes the speaker's meaning? (V2-D-110-12)",
+    "question_text": "Conversation: The ______ for next year looks cautiously optimistic — growth is expected to slow. (V2-D-110-12)",
     "options": {
       "A": "portfolio",
       "B": "dividend",
@@ -6847,7 +6847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the investment briefing, the manager referred to the ______, the collection of investments, more than once. (V2-D-110-13)",
+    "question_text": "Memo: The new product ______ includes both established items and three newly launched lines. (V2-D-110-13)",
     "options": {
       "A": "dividend",
       "B": "shareholder",
@@ -6877,7 +6877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the investment team should understand the ______, the payment distributed to shareholders, before the meeting begins. (V2-D-110-14)",
+    "question_text": "Announcement: The company will issue a ______ to all registered holders of record as of November 1st. (V2-D-110-14)",
     "options": {
       "A": "dividend",
       "B": "portfolio",
@@ -6937,7 +6937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the prediction of future activity, before you continue with this finance and sales task. (V2-D-110-16)",
+    "question_text": "Notice: The annual revenue ______ has been revised upward following a strong third quarter. (V2-D-110-16)",
     "options": {
       "A": "portfolio",
       "B": "dividend",
@@ -6967,7 +6967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the collection of investments, for today's investment work. Which term best completes the speaker's meaning? (V2-D-110-17)",
+    "question_text": "Conversation: My investment ______ has been underperforming — I need to rebalance it. (V2-D-110-17)",
     "options": {
       "A": "dividend",
       "B": "shareholder",
@@ -6997,7 +6997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the investment briefing, the manager referred to the ______, the payment distributed to shareholders, more than once. (V2-D-110-18)",
+    "question_text": "Memo: The board has approved a special ______ to be paid at the end of Q4. (V2-D-110-18)",
     "options": {
       "A": "dividend",
       "B": "portfolio",
@@ -7027,7 +7027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the investment team should understand the ______, the owner of company stock, before the meeting begins. (V2-D-110-19)",
+    "question_text": "Announcement: The company will hold a ______ briefing to discuss the proposed merger. (V2-D-110-19)",
     "options": {
       "A": "portfolio",
       "B": "shareholder",
@@ -7087,7 +7087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the collection of investments, before you continue with this finance and sales task. (V2-D-110-21)",
+    "question_text": "Diversify your ______ across multiple asset classes to reduce exposure to market risk. (V2-D-110-21)",
     "options": {
       "A": "dividend",
       "B": "shareholder",
@@ -7117,7 +7117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the payment distributed to shareholders, for today's investment work. Which term best completes the speaker's meaning? (V2-D-110-22)",
+    "question_text": "The ______ payout ratio reflects the portion of earnings distributed to shareholders. (V2-D-110-22)",
     "options": {
       "A": "dividend",
       "B": "portfolio",
@@ -7147,7 +7147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the investment briefing, the manager referred to the ______, the owner of company stock, more than once. (V2-D-110-23)",
+    "question_text": "Each ______ is entitled to one vote per share held at the time of the record date. (V2-D-110-23)",
     "options": {
       "A": "portfolio",
       "B": "shareholder",
@@ -7177,7 +7177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "finance_and_sales",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the investment team should understand the ______, the prediction of future activity, before the meeting begins. (V2-D-110-24)",
+    "question_text": "The finance team uses historical data and market trends to build the annual ______. (V2-D-110-24)",
     "options": {
       "A": "portfolio",
       "B": "dividend",

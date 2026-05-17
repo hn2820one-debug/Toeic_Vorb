@@ -119,6 +119,11 @@ export function renderMistakes() {
       <h3>Recent Wrong Attempts</h3>
       ${renderWrongAttemptList()}
     </section>
+    <section class="tracker-panel">
+      <h3>Recent Answer Records</h3>
+      <p class="muted-note">Every submitted answer is saved automatically with the selected answer and per-question time.</p>
+      ${renderAnswerRecordList()}
+    </section>
   `;
 }
 
@@ -136,10 +141,38 @@ export function renderWrongAttemptList() {
     return `
       <article class="wrong-line">
         <strong>${html(attempt.lesson_id)} · ${html(q?.question_text || attempt.question_id)}</strong>
-        <small>Your ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · Correct ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${html(attempt.error_code || attempt.default_error_code)}</small>
+        <small>Your ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · Correct ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(attempt.error_code || attempt.default_error_code)}</small>
       </article>
     `;
   }).join("");
+}
+
+export function renderAnswerRecordList() {
+  const questionMap = byId(state.questions, "question_id");
+  const attempts = state.attempts.slice(-30).reverse();
+  if (!attempts.length) return `<p class="muted-note">No answer records yet. Start a lesson and submit an answer to create the first record.</p>`;
+  return `
+    <div class="answer-record-list">
+      ${attempts.map((attempt) => {
+        const q = questionMap[attempt.question_id];
+        return `
+          <article class="answer-record ${attempt.is_correct ? "is-correct" : "is-wrong"}">
+            <div class="answer-record-head">
+              <strong>${html(attempt.lesson_id)} · ${html(q?.question_text || attempt.question_id)}</strong>
+              <span>${seconds(attempt.response_time_seconds)}</span>
+            </div>
+            <div class="answer-record-meta">
+              <span>${html(attempt.timestamp || "")}</span>
+              <span>${html(attempt.question_type || q?.type || "")}</span>
+              <span>Your ${html(attempt.user_answer)}: ${html(optionText(q, attempt.user_answer))}</span>
+              <span>Correct ${html(attempt.correct_answer)}: ${html(optionText(q, attempt.correct_answer))}</span>
+              <span>${attempt.is_correct ? "Correct" : "Wrong"}</span>
+            </div>
+          </article>
+        `;
+      }).join("")}
+    </div>
+  `;
 }
 
 function renderGrammarLink(grammarLinkId) {
@@ -157,6 +190,7 @@ function renderGrammarLink(grammarLinkId) {
 
 export function renderSessionErrorReview(sessionId) {
   const questionMap = byId(state.questions, "question_id");
+  const itemMap = byId(state.vocabItems, "item_id");
   const attempts = state.attempts.filter((attempt) => attempt.session_id === sessionId && !attempt.is_correct);
   if (!attempts.length) {
     return `
@@ -174,6 +208,7 @@ export function renderSessionErrorReview(sessionId) {
       <div class="error-review-list">
         ${attempts.map((attempt) => {
           const q = questionMap[attempt.question_id];
+          const vocabItem = itemMap[q?.target_item_id];
           return `
             <article class="error-card">
               <div class="question-meta">
@@ -187,6 +222,7 @@ export function renderSessionErrorReview(sessionId) {
                 <span>Correct ${html(attempt.correct_answer)}: ${html(optionText(q, attempt.correct_answer))}</span>
               </div>
               <p class="explanation">${html(q?.explanation_zh || "")}</p>
+              ${vocabItem?.chinese ? `<div class="vocab-card"><p class="vocab-chinese">${html(vocabItem.chinese)}</p>${vocabItem.example ? `<p class="vocab-example">${html(vocabItem.example)}</p>` : ""}</div>` : ""}
               ${renderGrammarLink(q?.grammar_link_id)}
               <label class="field-label">Error code</label>
               <select data-error-attempt="${html(attempt.attempt_id)}">

@@ -2,7 +2,7 @@
   "course_id": "toeic_vocab_v1",
   "course_name": "TOEIC Vocabulary Tracker",
   "schema_version": 1,
-  "seed_version": "toeic_vocab_tracker_v2_v3_quality_2026_05_14",
+  "seed_version": "toeic_vocab_tracker_interference_2026_05_17",
   "generated_at": "2026-05-14T10:30:00+08:00",
   "default_user": {
     "user_id": "Keith",
@@ -27,13 +27,13 @@
     {
       "stage": "V2",
       "stage_name": "TOEIC Scene Vocabulary",
-      "total_lessons": 50,
+      "total_lessons": 60,
       "status": "available"
     },
     {
       "stage": "V3",
       "stage_name": "Collocation",
-      "total_lessons": 60,
+      "total_lessons": 72,
       "status": "available"
     },
     {
@@ -3937,7 +3937,9 @@
         "v2_a_74_q_017",
         "v2_a_74_q_018",
         "v2_a_74_q_019",
-        "v2_a_74_q_020"
+        "v2_a_74_q_020",
+        "v2_a_71_rv_021",
+        "v2_a_71_rv_023"
       ],
       "review_question_ids": [
         "v2_a_74_rv_021",
@@ -3984,7 +3986,9 @@
         "v2_a_75_q_017",
         "v2_a_75_q_018",
         "v2_a_75_q_019",
-        "v2_a_75_q_020"
+        "v2_a_75_q_020",
+        "v2_a_72_rv_021",
+        "v2_a_72_rv_023"
       ],
       "review_question_ids": [
         "v2_a_75_rv_021",
@@ -3992,6 +3996,43 @@
         "v2_a_75_rv_023",
         "v2_a_75_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-01",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10001,
+      "title": "Mixed Review 1: V2-A-71 – V2-A-75",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_a_71_rv_021",
+        "v2_a_71_rv_022",
+        "v2_a_71_rv_023",
+        "v2_a_71_rv_024",
+        "v2_a_72_rv_021",
+        "v2_a_72_rv_022",
+        "v2_a_72_rv_023",
+        "v2_a_72_rv_024",
+        "v2_a_73_rv_021",
+        "v2_a_73_rv_022",
+        "v2_a_73_rv_023",
+        "v2_a_73_rv_024",
+        "v2_a_74_rv_021",
+        "v2_a_74_rv_022",
+        "v2_a_74_rv_023",
+        "v2_a_74_rv_024",
+        "v2_a_75_rv_021",
+        "v2_a_75_rv_022",
+        "v2_a_75_rv_023",
+        "v2_a_75_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -4031,7 +4072,9 @@
         "v2_a_76_q_017",
         "v2_a_76_q_018",
         "v2_a_76_q_019",
-        "v2_a_76_q_020"
+        "v2_a_76_q_020",
+        "v2_a_73_rv_021",
+        "v2_a_73_rv_023"
       ],
       "review_question_ids": [
         "v2_a_76_rv_021",
@@ -4078,7 +4121,9 @@
         "v2_a_77_q_017",
         "v2_a_77_q_018",
         "v2_a_77_q_019",
-        "v2_a_77_q_020"
+        "v2_a_77_q_020",
+        "v2_a_74_rv_021",
+        "v2_a_71_rv_023"
       ],
       "review_question_ids": [
         "v2_a_77_rv_021",
@@ -4125,7 +4170,9 @@
         "v2_a_78_q_017",
         "v2_a_78_q_018",
         "v2_a_78_q_019",
-        "v2_a_78_q_020"
+        "v2_a_78_q_020",
+        "v2_a_75_rv_021",
+        "v2_a_72_rv_023"
       ],
       "review_question_ids": [
         "v2_a_78_rv_021",
@@ -4172,7 +4219,9 @@
         "v2_a_79_q_017",
         "v2_a_79_q_018",
         "v2_a_79_q_019",
-        "v2_a_79_q_020"
+        "v2_a_79_q_020",
+        "v2_a_76_rv_021",
+        "v2_a_73_rv_023"
       ],
       "review_question_ids": [
         "v2_a_79_rv_021",
@@ -4219,7 +4268,9 @@
         "v2_a_80_q_017",
         "v2_a_80_q_018",
         "v2_a_80_q_019",
-        "v2_a_80_q_020"
+        "v2_a_80_q_020",
+        "v2_a_77_rv_021",
+        "v2_a_74_rv_023"
       ],
       "review_question_ids": [
         "v2_a_80_rv_021",
@@ -4227,6 +4278,43 @@
         "v2_a_80_rv_023",
         "v2_a_80_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-02",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10002,
+      "title": "Mixed Review 2: V2-A-76 – V2-A-80",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_a_76_rv_021",
+        "v2_a_76_rv_022",
+        "v2_a_76_rv_023",
+        "v2_a_76_rv_024",
+        "v2_a_77_rv_021",
+        "v2_a_77_rv_022",
+        "v2_a_77_rv_023",
+        "v2_a_77_rv_024",
+        "v2_a_78_rv_021",
+        "v2_a_78_rv_022",
+        "v2_a_78_rv_023",
+        "v2_a_78_rv_024",
+        "v2_a_79_rv_021",
+        "v2_a_79_rv_022",
+        "v2_a_79_rv_023",
+        "v2_a_79_rv_024",
+        "v2_a_80_rv_021",
+        "v2_a_80_rv_022",
+        "v2_a_80_rv_023",
+        "v2_a_80_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -4266,7 +4354,9 @@
         "v2_b_81_q_017",
         "v2_b_81_q_018",
         "v2_b_81_q_019",
-        "v2_b_81_q_020"
+        "v2_b_81_q_020",
+        "v2_a_78_rv_021",
+        "v2_a_75_rv_023"
       ],
       "review_question_ids": [
         "v2_b_81_rv_021",
@@ -4313,7 +4403,9 @@
         "v2_b_82_q_017",
         "v2_b_82_q_018",
         "v2_b_82_q_019",
-        "v2_b_82_q_020"
+        "v2_b_82_q_020",
+        "v2_a_79_rv_021",
+        "v2_a_76_rv_023"
       ],
       "review_question_ids": [
         "v2_b_82_rv_021",
@@ -4360,7 +4452,9 @@
         "v2_b_83_q_017",
         "v2_b_83_q_018",
         "v2_b_83_q_019",
-        "v2_b_83_q_020"
+        "v2_b_83_q_020",
+        "v2_a_80_rv_021",
+        "v2_a_77_rv_023"
       ],
       "review_question_ids": [
         "v2_b_83_rv_021",
@@ -4407,7 +4501,9 @@
         "v2_b_84_q_017",
         "v2_b_84_q_018",
         "v2_b_84_q_019",
-        "v2_b_84_q_020"
+        "v2_b_84_q_020",
+        "v2_b_81_rv_021",
+        "v2_a_78_rv_023"
       ],
       "review_question_ids": [
         "v2_b_84_rv_021",
@@ -4454,7 +4550,9 @@
         "v2_b_85_q_017",
         "v2_b_85_q_018",
         "v2_b_85_q_019",
-        "v2_b_85_q_020"
+        "v2_b_85_q_020",
+        "v2_b_82_rv_021",
+        "v2_a_79_rv_023"
       ],
       "review_question_ids": [
         "v2_b_85_rv_021",
@@ -4462,6 +4560,43 @@
         "v2_b_85_rv_023",
         "v2_b_85_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-03",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10003,
+      "title": "Mixed Review 3: V2-B-81 – V2-B-85",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_b_81_rv_021",
+        "v2_b_81_rv_022",
+        "v2_b_81_rv_023",
+        "v2_b_81_rv_024",
+        "v2_b_82_rv_021",
+        "v2_b_82_rv_022",
+        "v2_b_82_rv_023",
+        "v2_b_82_rv_024",
+        "v2_b_83_rv_021",
+        "v2_b_83_rv_022",
+        "v2_b_83_rv_023",
+        "v2_b_83_rv_024",
+        "v2_b_84_rv_021",
+        "v2_b_84_rv_022",
+        "v2_b_84_rv_023",
+        "v2_b_84_rv_024",
+        "v2_b_85_rv_021",
+        "v2_b_85_rv_022",
+        "v2_b_85_rv_023",
+        "v2_b_85_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -4501,7 +4636,9 @@
         "v2_b_86_q_017",
         "v2_b_86_q_018",
         "v2_b_86_q_019",
-        "v2_b_86_q_020"
+        "v2_b_86_q_020",
+        "v2_b_83_rv_021",
+        "v2_a_80_rv_023"
       ],
       "review_question_ids": [
         "v2_b_86_rv_021",
@@ -4548,7 +4685,9 @@
         "v2_b_87_q_017",
         "v2_b_87_q_018",
         "v2_b_87_q_019",
-        "v2_b_87_q_020"
+        "v2_b_87_q_020",
+        "v2_b_84_rv_021",
+        "v2_b_81_rv_023"
       ],
       "review_question_ids": [
         "v2_b_87_rv_021",
@@ -4595,7 +4734,9 @@
         "v2_b_88_q_017",
         "v2_b_88_q_018",
         "v2_b_88_q_019",
-        "v2_b_88_q_020"
+        "v2_b_88_q_020",
+        "v2_b_85_rv_021",
+        "v2_b_82_rv_023"
       ],
       "review_question_ids": [
         "v2_b_88_rv_021",
@@ -4642,7 +4783,9 @@
         "v2_b_89_q_017",
         "v2_b_89_q_018",
         "v2_b_89_q_019",
-        "v2_b_89_q_020"
+        "v2_b_89_q_020",
+        "v2_b_86_rv_021",
+        "v2_b_83_rv_023"
       ],
       "review_question_ids": [
         "v2_b_89_rv_021",
@@ -4689,7 +4832,9 @@
         "v2_b_90_q_017",
         "v2_b_90_q_018",
         "v2_b_90_q_019",
-        "v2_b_90_q_020"
+        "v2_b_90_q_020",
+        "v2_b_87_rv_021",
+        "v2_b_84_rv_023"
       ],
       "review_question_ids": [
         "v2_b_90_rv_021",
@@ -4697,6 +4842,43 @@
         "v2_b_90_rv_023",
         "v2_b_90_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-04",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10004,
+      "title": "Mixed Review 4: V2-B-86 – V2-B-90",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_b_86_rv_021",
+        "v2_b_86_rv_022",
+        "v2_b_86_rv_023",
+        "v2_b_86_rv_024",
+        "v2_b_87_rv_021",
+        "v2_b_87_rv_022",
+        "v2_b_87_rv_023",
+        "v2_b_87_rv_024",
+        "v2_b_88_rv_021",
+        "v2_b_88_rv_022",
+        "v2_b_88_rv_023",
+        "v2_b_88_rv_024",
+        "v2_b_89_rv_021",
+        "v2_b_89_rv_022",
+        "v2_b_89_rv_023",
+        "v2_b_89_rv_024",
+        "v2_b_90_rv_021",
+        "v2_b_90_rv_022",
+        "v2_b_90_rv_023",
+        "v2_b_90_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -4736,7 +4918,9 @@
         "v2_c_91_q_017",
         "v2_c_91_q_018",
         "v2_c_91_q_019",
-        "v2_c_91_q_020"
+        "v2_c_91_q_020",
+        "v2_b_88_rv_021",
+        "v2_b_85_rv_023"
       ],
       "review_question_ids": [
         "v2_c_91_rv_021",
@@ -4783,7 +4967,9 @@
         "v2_c_92_q_017",
         "v2_c_92_q_018",
         "v2_c_92_q_019",
-        "v2_c_92_q_020"
+        "v2_c_92_q_020",
+        "v2_b_89_rv_021",
+        "v2_b_86_rv_023"
       ],
       "review_question_ids": [
         "v2_c_92_rv_021",
@@ -4830,7 +5016,9 @@
         "v2_c_93_q_017",
         "v2_c_93_q_018",
         "v2_c_93_q_019",
-        "v2_c_93_q_020"
+        "v2_c_93_q_020",
+        "v2_b_90_rv_021",
+        "v2_b_87_rv_023"
       ],
       "review_question_ids": [
         "v2_c_93_rv_021",
@@ -4877,7 +5065,9 @@
         "v2_c_94_q_017",
         "v2_c_94_q_018",
         "v2_c_94_q_019",
-        "v2_c_94_q_020"
+        "v2_c_94_q_020",
+        "v2_c_91_rv_021",
+        "v2_b_88_rv_023"
       ],
       "review_question_ids": [
         "v2_c_94_rv_021",
@@ -4924,7 +5114,9 @@
         "v2_c_95_q_017",
         "v2_c_95_q_018",
         "v2_c_95_q_019",
-        "v2_c_95_q_020"
+        "v2_c_95_q_020",
+        "v2_c_92_rv_021",
+        "v2_b_89_rv_023"
       ],
       "review_question_ids": [
         "v2_c_95_rv_021",
@@ -4932,6 +5124,43 @@
         "v2_c_95_rv_023",
         "v2_c_95_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-05",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10005,
+      "title": "Mixed Review 5: V2-C-91 – V2-C-95",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_c_91_rv_021",
+        "v2_c_91_rv_022",
+        "v2_c_91_rv_023",
+        "v2_c_91_rv_024",
+        "v2_c_92_rv_021",
+        "v2_c_92_rv_022",
+        "v2_c_92_rv_023",
+        "v2_c_92_rv_024",
+        "v2_c_93_rv_021",
+        "v2_c_93_rv_022",
+        "v2_c_93_rv_023",
+        "v2_c_93_rv_024",
+        "v2_c_94_rv_021",
+        "v2_c_94_rv_022",
+        "v2_c_94_rv_023",
+        "v2_c_94_rv_024",
+        "v2_c_95_rv_021",
+        "v2_c_95_rv_022",
+        "v2_c_95_rv_023",
+        "v2_c_95_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -4971,7 +5200,9 @@
         "v2_c_96_q_017",
         "v2_c_96_q_018",
         "v2_c_96_q_019",
-        "v2_c_96_q_020"
+        "v2_c_96_q_020",
+        "v2_c_93_rv_021",
+        "v2_b_90_rv_023"
       ],
       "review_question_ids": [
         "v2_c_96_rv_021",
@@ -5018,7 +5249,9 @@
         "v2_c_97_q_017",
         "v2_c_97_q_018",
         "v2_c_97_q_019",
-        "v2_c_97_q_020"
+        "v2_c_97_q_020",
+        "v2_c_94_rv_021",
+        "v2_c_91_rv_023"
       ],
       "review_question_ids": [
         "v2_c_97_rv_021",
@@ -5065,7 +5298,9 @@
         "v2_c_98_q_017",
         "v2_c_98_q_018",
         "v2_c_98_q_019",
-        "v2_c_98_q_020"
+        "v2_c_98_q_020",
+        "v2_c_95_rv_021",
+        "v2_c_92_rv_023"
       ],
       "review_question_ids": [
         "v2_c_98_rv_021",
@@ -5112,7 +5347,9 @@
         "v2_c_99_q_017",
         "v2_c_99_q_018",
         "v2_c_99_q_019",
-        "v2_c_99_q_020"
+        "v2_c_99_q_020",
+        "v2_c_96_rv_021",
+        "v2_c_93_rv_023"
       ],
       "review_question_ids": [
         "v2_c_99_rv_021",
@@ -5159,7 +5396,9 @@
         "v2_c_100_q_017",
         "v2_c_100_q_018",
         "v2_c_100_q_019",
-        "v2_c_100_q_020"
+        "v2_c_100_q_020",
+        "v2_c_97_rv_021",
+        "v2_c_94_rv_023"
       ],
       "review_question_ids": [
         "v2_c_100_rv_021",
@@ -5167,6 +5406,43 @@
         "v2_c_100_rv_023",
         "v2_c_100_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-06",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10006,
+      "title": "Mixed Review 6: V2-C-96 – V2-C-100",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_c_96_rv_021",
+        "v2_c_96_rv_022",
+        "v2_c_96_rv_023",
+        "v2_c_96_rv_024",
+        "v2_c_97_rv_021",
+        "v2_c_97_rv_022",
+        "v2_c_97_rv_023",
+        "v2_c_97_rv_024",
+        "v2_c_98_rv_021",
+        "v2_c_98_rv_022",
+        "v2_c_98_rv_023",
+        "v2_c_98_rv_024",
+        "v2_c_99_rv_021",
+        "v2_c_99_rv_022",
+        "v2_c_99_rv_023",
+        "v2_c_99_rv_024",
+        "v2_c_100_rv_021",
+        "v2_c_100_rv_022",
+        "v2_c_100_rv_023",
+        "v2_c_100_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -5206,7 +5482,9 @@
         "v2_d_101_q_017",
         "v2_d_101_q_018",
         "v2_d_101_q_019",
-        "v2_d_101_q_020"
+        "v2_d_101_q_020",
+        "v2_c_98_rv_021",
+        "v2_c_95_rv_023"
       ],
       "review_question_ids": [
         "v2_d_101_rv_021",
@@ -5253,7 +5531,9 @@
         "v2_d_102_q_017",
         "v2_d_102_q_018",
         "v2_d_102_q_019",
-        "v2_d_102_q_020"
+        "v2_d_102_q_020",
+        "v2_c_99_rv_021",
+        "v2_c_96_rv_023"
       ],
       "review_question_ids": [
         "v2_d_102_rv_021",
@@ -5300,7 +5580,9 @@
         "v2_d_103_q_017",
         "v2_d_103_q_018",
         "v2_d_103_q_019",
-        "v2_d_103_q_020"
+        "v2_d_103_q_020",
+        "v2_c_100_rv_021",
+        "v2_c_97_rv_023"
       ],
       "review_question_ids": [
         "v2_d_103_rv_021",
@@ -5347,7 +5629,9 @@
         "v2_d_104_q_017",
         "v2_d_104_q_018",
         "v2_d_104_q_019",
-        "v2_d_104_q_020"
+        "v2_d_104_q_020",
+        "v2_d_101_rv_021",
+        "v2_c_98_rv_023"
       ],
       "review_question_ids": [
         "v2_d_104_rv_021",
@@ -5394,7 +5678,9 @@
         "v2_d_105_q_017",
         "v2_d_105_q_018",
         "v2_d_105_q_019",
-        "v2_d_105_q_020"
+        "v2_d_105_q_020",
+        "v2_d_102_rv_021",
+        "v2_c_99_rv_023"
       ],
       "review_question_ids": [
         "v2_d_105_rv_021",
@@ -5402,6 +5688,43 @@
         "v2_d_105_rv_023",
         "v2_d_105_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-07",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10007,
+      "title": "Mixed Review 7: V2-D-101 – V2-D-105",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_d_101_rv_021",
+        "v2_d_101_rv_022",
+        "v2_d_101_rv_023",
+        "v2_d_101_rv_024",
+        "v2_d_102_rv_021",
+        "v2_d_102_rv_022",
+        "v2_d_102_rv_023",
+        "v2_d_102_rv_024",
+        "v2_d_103_rv_021",
+        "v2_d_103_rv_022",
+        "v2_d_103_rv_023",
+        "v2_d_103_rv_024",
+        "v2_d_104_rv_021",
+        "v2_d_104_rv_022",
+        "v2_d_104_rv_023",
+        "v2_d_104_rv_024",
+        "v2_d_105_rv_021",
+        "v2_d_105_rv_022",
+        "v2_d_105_rv_023",
+        "v2_d_105_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -5441,7 +5764,9 @@
         "v2_d_106_q_017",
         "v2_d_106_q_018",
         "v2_d_106_q_019",
-        "v2_d_106_q_020"
+        "v2_d_106_q_020",
+        "v2_d_103_rv_021",
+        "v2_c_100_rv_023"
       ],
       "review_question_ids": [
         "v2_d_106_rv_021",
@@ -5488,7 +5813,9 @@
         "v2_d_107_q_017",
         "v2_d_107_q_018",
         "v2_d_107_q_019",
-        "v2_d_107_q_020"
+        "v2_d_107_q_020",
+        "v2_d_104_rv_021",
+        "v2_d_101_rv_023"
       ],
       "review_question_ids": [
         "v2_d_107_rv_021",
@@ -5535,7 +5862,9 @@
         "v2_d_108_q_017",
         "v2_d_108_q_018",
         "v2_d_108_q_019",
-        "v2_d_108_q_020"
+        "v2_d_108_q_020",
+        "v2_d_105_rv_021",
+        "v2_d_102_rv_023"
       ],
       "review_question_ids": [
         "v2_d_108_rv_021",
@@ -5582,7 +5911,9 @@
         "v2_d_109_q_017",
         "v2_d_109_q_018",
         "v2_d_109_q_019",
-        "v2_d_109_q_020"
+        "v2_d_109_q_020",
+        "v2_d_106_rv_021",
+        "v2_d_103_rv_023"
       ],
       "review_question_ids": [
         "v2_d_109_rv_021",
@@ -5629,7 +5960,9 @@
         "v2_d_110_q_017",
         "v2_d_110_q_018",
         "v2_d_110_q_019",
-        "v2_d_110_q_020"
+        "v2_d_110_q_020",
+        "v2_d_107_rv_021",
+        "v2_d_104_rv_023"
       ],
       "review_question_ids": [
         "v2_d_110_rv_021",
@@ -5637,6 +5970,43 @@
         "v2_d_110_rv_023",
         "v2_d_110_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-08",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10008,
+      "title": "Mixed Review 8: V2-D-106 – V2-D-110",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_d_106_rv_021",
+        "v2_d_106_rv_022",
+        "v2_d_106_rv_023",
+        "v2_d_106_rv_024",
+        "v2_d_107_rv_021",
+        "v2_d_107_rv_022",
+        "v2_d_107_rv_023",
+        "v2_d_107_rv_024",
+        "v2_d_108_rv_021",
+        "v2_d_108_rv_022",
+        "v2_d_108_rv_023",
+        "v2_d_108_rv_024",
+        "v2_d_109_rv_021",
+        "v2_d_109_rv_022",
+        "v2_d_109_rv_023",
+        "v2_d_109_rv_024",
+        "v2_d_110_rv_021",
+        "v2_d_110_rv_022",
+        "v2_d_110_rv_023",
+        "v2_d_110_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -5676,7 +6046,9 @@
         "v2_e_111_q_017",
         "v2_e_111_q_018",
         "v2_e_111_q_019",
-        "v2_e_111_q_020"
+        "v2_e_111_q_020",
+        "v2_d_108_rv_021",
+        "v2_d_105_rv_023"
       ],
       "review_question_ids": [
         "v2_e_111_rv_021",
@@ -5723,7 +6095,9 @@
         "v2_e_112_q_017",
         "v2_e_112_q_018",
         "v2_e_112_q_019",
-        "v2_e_112_q_020"
+        "v2_e_112_q_020",
+        "v2_d_109_rv_021",
+        "v2_d_106_rv_023"
       ],
       "review_question_ids": [
         "v2_e_112_rv_021",
@@ -5770,7 +6144,9 @@
         "v2_e_113_q_017",
         "v2_e_113_q_018",
         "v2_e_113_q_019",
-        "v2_e_113_q_020"
+        "v2_e_113_q_020",
+        "v2_d_110_rv_021",
+        "v2_d_107_rv_023"
       ],
       "review_question_ids": [
         "v2_e_113_rv_021",
@@ -5817,7 +6193,9 @@
         "v2_e_114_q_017",
         "v2_e_114_q_018",
         "v2_e_114_q_019",
-        "v2_e_114_q_020"
+        "v2_e_114_q_020",
+        "v2_e_111_rv_021",
+        "v2_d_108_rv_023"
       ],
       "review_question_ids": [
         "v2_e_114_rv_021",
@@ -5864,7 +6242,9 @@
         "v2_e_115_q_017",
         "v2_e_115_q_018",
         "v2_e_115_q_019",
-        "v2_e_115_q_020"
+        "v2_e_115_q_020",
+        "v2_e_112_rv_021",
+        "v2_d_109_rv_023"
       ],
       "review_question_ids": [
         "v2_e_115_rv_021",
@@ -5872,6 +6252,43 @@
         "v2_e_115_rv_023",
         "v2_e_115_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-09",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10009,
+      "title": "Mixed Review 9: V2-E-111 – V2-E-115",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_e_111_rv_021",
+        "v2_e_111_rv_022",
+        "v2_e_111_rv_023",
+        "v2_e_111_rv_024",
+        "v2_e_112_rv_021",
+        "v2_e_112_rv_022",
+        "v2_e_112_rv_023",
+        "v2_e_112_rv_024",
+        "v2_e_113_rv_021",
+        "v2_e_113_rv_022",
+        "v2_e_113_rv_023",
+        "v2_e_113_rv_024",
+        "v2_e_114_rv_021",
+        "v2_e_114_rv_022",
+        "v2_e_114_rv_023",
+        "v2_e_114_rv_024",
+        "v2_e_115_rv_021",
+        "v2_e_115_rv_022",
+        "v2_e_115_rv_023",
+        "v2_e_115_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -5911,7 +6328,9 @@
         "v2_e_116_q_017",
         "v2_e_116_q_018",
         "v2_e_116_q_019",
-        "v2_e_116_q_020"
+        "v2_e_116_q_020",
+        "v2_e_113_rv_021",
+        "v2_d_110_rv_023"
       ],
       "review_question_ids": [
         "v2_e_116_rv_021",
@@ -5958,7 +6377,9 @@
         "v2_e_117_q_017",
         "v2_e_117_q_018",
         "v2_e_117_q_019",
-        "v2_e_117_q_020"
+        "v2_e_117_q_020",
+        "v2_e_114_rv_021",
+        "v2_e_111_rv_023"
       ],
       "review_question_ids": [
         "v2_e_117_rv_021",
@@ -6005,7 +6426,9 @@
         "v2_e_118_q_017",
         "v2_e_118_q_018",
         "v2_e_118_q_019",
-        "v2_e_118_q_020"
+        "v2_e_118_q_020",
+        "v2_e_115_rv_021",
+        "v2_e_112_rv_023"
       ],
       "review_question_ids": [
         "v2_e_118_rv_021",
@@ -6052,7 +6475,9 @@
         "v2_e_119_q_017",
         "v2_e_119_q_018",
         "v2_e_119_q_019",
-        "v2_e_119_q_020"
+        "v2_e_119_q_020",
+        "v2_e_116_rv_021",
+        "v2_e_113_rv_023"
       ],
       "review_question_ids": [
         "v2_e_119_rv_021",
@@ -6099,7 +6524,9 @@
         "v2_e_120_q_017",
         "v2_e_120_q_018",
         "v2_e_120_q_019",
-        "v2_e_120_q_020"
+        "v2_e_120_q_020",
+        "v2_e_117_rv_021",
+        "v2_e_114_rv_023"
       ],
       "review_question_ids": [
         "v2_e_120_rv_021",
@@ -6107,6 +6534,43 @@
         "v2_e_120_rv_023",
         "v2_e_120_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V2-MIX-10",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 10010,
+      "title": "Mixed Review 10: V2-E-116 – V2-E-120",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v2_e_116_rv_021",
+        "v2_e_116_rv_022",
+        "v2_e_116_rv_023",
+        "v2_e_116_rv_024",
+        "v2_e_117_rv_021",
+        "v2_e_117_rv_022",
+        "v2_e_117_rv_023",
+        "v2_e_117_rv_024",
+        "v2_e_118_rv_021",
+        "v2_e_118_rv_022",
+        "v2_e_118_rv_023",
+        "v2_e_118_rv_024",
+        "v2_e_119_rv_021",
+        "v2_e_119_rv_022",
+        "v2_e_119_rv_023",
+        "v2_e_119_rv_024",
+        "v2_e_120_rv_021",
+        "v2_e_120_rv_022",
+        "v2_e_120_rv_023",
+        "v2_e_120_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "SCENE_VOCAB_CONTEXT",
@@ -6287,7 +6751,9 @@
         "v3_a_124_q_017",
         "v3_a_124_q_018",
         "v3_a_124_q_019",
-        "v3_a_124_q_020"
+        "v3_a_124_q_020",
+        "v3_a_121_rv_021",
+        "v3_a_121_rv_023"
       ],
       "review_question_ids": [
         "v3_a_124_rv_021",
@@ -6334,7 +6800,9 @@
         "v3_a_125_q_017",
         "v3_a_125_q_018",
         "v3_a_125_q_019",
-        "v3_a_125_q_020"
+        "v3_a_125_q_020",
+        "v3_a_122_rv_021",
+        "v3_a_122_rv_023"
       ],
       "review_question_ids": [
         "v3_a_125_rv_021",
@@ -6342,6 +6810,43 @@
         "v3_a_125_rv_023",
         "v3_a_125_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-01",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20001,
+      "title": "Mixed Review 1: V3-A-121 – V3-A-125",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_a_121_rv_021",
+        "v3_a_121_rv_022",
+        "v3_a_121_rv_023",
+        "v3_a_121_rv_024",
+        "v3_a_122_rv_021",
+        "v3_a_122_rv_022",
+        "v3_a_122_rv_023",
+        "v3_a_122_rv_024",
+        "v3_a_123_rv_021",
+        "v3_a_123_rv_022",
+        "v3_a_123_rv_023",
+        "v3_a_123_rv_024",
+        "v3_a_124_rv_021",
+        "v3_a_124_rv_022",
+        "v3_a_124_rv_023",
+        "v3_a_124_rv_024",
+        "v3_a_125_rv_021",
+        "v3_a_125_rv_022",
+        "v3_a_125_rv_023",
+        "v3_a_125_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -6381,7 +6886,9 @@
         "v3_a_126_q_017",
         "v3_a_126_q_018",
         "v3_a_126_q_019",
-        "v3_a_126_q_020"
+        "v3_a_126_q_020",
+        "v3_a_123_rv_021",
+        "v3_a_123_rv_023"
       ],
       "review_question_ids": [
         "v3_a_126_rv_021",
@@ -6428,7 +6935,9 @@
         "v3_a_127_q_017",
         "v3_a_127_q_018",
         "v3_a_127_q_019",
-        "v3_a_127_q_020"
+        "v3_a_127_q_020",
+        "v3_a_124_rv_021",
+        "v3_a_121_rv_023"
       ],
       "review_question_ids": [
         "v3_a_127_rv_021",
@@ -6475,7 +6984,9 @@
         "v3_a_128_q_017",
         "v3_a_128_q_018",
         "v3_a_128_q_019",
-        "v3_a_128_q_020"
+        "v3_a_128_q_020",
+        "v3_a_125_rv_021",
+        "v3_a_122_rv_023"
       ],
       "review_question_ids": [
         "v3_a_128_rv_021",
@@ -6522,7 +7033,9 @@
         "v3_a_129_q_017",
         "v3_a_129_q_018",
         "v3_a_129_q_019",
-        "v3_a_129_q_020"
+        "v3_a_129_q_020",
+        "v3_a_126_rv_021",
+        "v3_a_123_rv_023"
       ],
       "review_question_ids": [
         "v3_a_129_rv_021",
@@ -6569,7 +7082,9 @@
         "v3_a_130_q_017",
         "v3_a_130_q_018",
         "v3_a_130_q_019",
-        "v3_a_130_q_020"
+        "v3_a_130_q_020",
+        "v3_a_127_rv_021",
+        "v3_a_124_rv_023"
       ],
       "review_question_ids": [
         "v3_a_130_rv_021",
@@ -6577,6 +7092,43 @@
         "v3_a_130_rv_023",
         "v3_a_130_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-02",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20002,
+      "title": "Mixed Review 2: V3-A-126 – V3-A-130",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_a_126_rv_021",
+        "v3_a_126_rv_022",
+        "v3_a_126_rv_023",
+        "v3_a_126_rv_024",
+        "v3_a_127_rv_021",
+        "v3_a_127_rv_022",
+        "v3_a_127_rv_023",
+        "v3_a_127_rv_024",
+        "v3_a_128_rv_021",
+        "v3_a_128_rv_022",
+        "v3_a_128_rv_023",
+        "v3_a_128_rv_024",
+        "v3_a_129_rv_021",
+        "v3_a_129_rv_022",
+        "v3_a_129_rv_023",
+        "v3_a_129_rv_024",
+        "v3_a_130_rv_021",
+        "v3_a_130_rv_022",
+        "v3_a_130_rv_023",
+        "v3_a_130_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -6616,7 +7168,9 @@
         "v3_b_131_q_017",
         "v3_b_131_q_018",
         "v3_b_131_q_019",
-        "v3_b_131_q_020"
+        "v3_b_131_q_020",
+        "v3_a_128_rv_021",
+        "v3_a_125_rv_023"
       ],
       "review_question_ids": [
         "v3_b_131_rv_021",
@@ -6663,7 +7217,9 @@
         "v3_b_132_q_017",
         "v3_b_132_q_018",
         "v3_b_132_q_019",
-        "v3_b_132_q_020"
+        "v3_b_132_q_020",
+        "v3_a_129_rv_021",
+        "v3_a_126_rv_023"
       ],
       "review_question_ids": [
         "v3_b_132_rv_021",
@@ -6710,7 +7266,9 @@
         "v3_b_133_q_017",
         "v3_b_133_q_018",
         "v3_b_133_q_019",
-        "v3_b_133_q_020"
+        "v3_b_133_q_020",
+        "v3_a_130_rv_021",
+        "v3_a_127_rv_023"
       ],
       "review_question_ids": [
         "v3_b_133_rv_021",
@@ -6757,7 +7315,9 @@
         "v3_b_134_q_017",
         "v3_b_134_q_018",
         "v3_b_134_q_019",
-        "v3_b_134_q_020"
+        "v3_b_134_q_020",
+        "v3_b_131_rv_021",
+        "v3_a_128_rv_023"
       ],
       "review_question_ids": [
         "v3_b_134_rv_021",
@@ -6804,7 +7364,9 @@
         "v3_b_135_q_017",
         "v3_b_135_q_018",
         "v3_b_135_q_019",
-        "v3_b_135_q_020"
+        "v3_b_135_q_020",
+        "v3_b_132_rv_021",
+        "v3_a_129_rv_023"
       ],
       "review_question_ids": [
         "v3_b_135_rv_021",
@@ -6812,6 +7374,43 @@
         "v3_b_135_rv_023",
         "v3_b_135_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-03",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20003,
+      "title": "Mixed Review 3: V3-B-131 – V3-B-135",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_b_131_rv_021",
+        "v3_b_131_rv_022",
+        "v3_b_131_rv_023",
+        "v3_b_131_rv_024",
+        "v3_b_132_rv_021",
+        "v3_b_132_rv_022",
+        "v3_b_132_rv_023",
+        "v3_b_132_rv_024",
+        "v3_b_133_rv_021",
+        "v3_b_133_rv_022",
+        "v3_b_133_rv_023",
+        "v3_b_133_rv_024",
+        "v3_b_134_rv_021",
+        "v3_b_134_rv_022",
+        "v3_b_134_rv_023",
+        "v3_b_134_rv_024",
+        "v3_b_135_rv_021",
+        "v3_b_135_rv_022",
+        "v3_b_135_rv_023",
+        "v3_b_135_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -6851,7 +7450,9 @@
         "v3_b_136_q_017",
         "v3_b_136_q_018",
         "v3_b_136_q_019",
-        "v3_b_136_q_020"
+        "v3_b_136_q_020",
+        "v3_b_133_rv_021",
+        "v3_a_130_rv_023"
       ],
       "review_question_ids": [
         "v3_b_136_rv_021",
@@ -6898,7 +7499,9 @@
         "v3_b_137_q_017",
         "v3_b_137_q_018",
         "v3_b_137_q_019",
-        "v3_b_137_q_020"
+        "v3_b_137_q_020",
+        "v3_b_134_rv_021",
+        "v3_b_131_rv_023"
       ],
       "review_question_ids": [
         "v3_b_137_rv_021",
@@ -6945,7 +7548,9 @@
         "v3_b_138_q_017",
         "v3_b_138_q_018",
         "v3_b_138_q_019",
-        "v3_b_138_q_020"
+        "v3_b_138_q_020",
+        "v3_b_135_rv_021",
+        "v3_b_132_rv_023"
       ],
       "review_question_ids": [
         "v3_b_138_rv_021",
@@ -6992,7 +7597,9 @@
         "v3_b_139_q_017",
         "v3_b_139_q_018",
         "v3_b_139_q_019",
-        "v3_b_139_q_020"
+        "v3_b_139_q_020",
+        "v3_b_136_rv_021",
+        "v3_b_133_rv_023"
       ],
       "review_question_ids": [
         "v3_b_139_rv_021",
@@ -7039,7 +7646,9 @@
         "v3_b_140_q_017",
         "v3_b_140_q_018",
         "v3_b_140_q_019",
-        "v3_b_140_q_020"
+        "v3_b_140_q_020",
+        "v3_b_137_rv_021",
+        "v3_b_134_rv_023"
       ],
       "review_question_ids": [
         "v3_b_140_rv_021",
@@ -7047,6 +7656,43 @@
         "v3_b_140_rv_023",
         "v3_b_140_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-04",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20004,
+      "title": "Mixed Review 4: V3-B-136 – V3-B-140",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_b_136_rv_021",
+        "v3_b_136_rv_022",
+        "v3_b_136_rv_023",
+        "v3_b_136_rv_024",
+        "v3_b_137_rv_021",
+        "v3_b_137_rv_022",
+        "v3_b_137_rv_023",
+        "v3_b_137_rv_024",
+        "v3_b_138_rv_021",
+        "v3_b_138_rv_022",
+        "v3_b_138_rv_023",
+        "v3_b_138_rv_024",
+        "v3_b_139_rv_021",
+        "v3_b_139_rv_022",
+        "v3_b_139_rv_023",
+        "v3_b_139_rv_024",
+        "v3_b_140_rv_021",
+        "v3_b_140_rv_022",
+        "v3_b_140_rv_023",
+        "v3_b_140_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -7086,7 +7732,9 @@
         "v3_c_141_q_017",
         "v3_c_141_q_018",
         "v3_c_141_q_019",
-        "v3_c_141_q_020"
+        "v3_c_141_q_020",
+        "v3_b_138_rv_021",
+        "v3_b_135_rv_023"
       ],
       "review_question_ids": [
         "v3_c_141_rv_021",
@@ -7133,7 +7781,9 @@
         "v3_c_142_q_017",
         "v3_c_142_q_018",
         "v3_c_142_q_019",
-        "v3_c_142_q_020"
+        "v3_c_142_q_020",
+        "v3_b_139_rv_021",
+        "v3_b_136_rv_023"
       ],
       "review_question_ids": [
         "v3_c_142_rv_021",
@@ -7180,7 +7830,9 @@
         "v3_c_143_q_017",
         "v3_c_143_q_018",
         "v3_c_143_q_019",
-        "v3_c_143_q_020"
+        "v3_c_143_q_020",
+        "v3_b_140_rv_021",
+        "v3_b_137_rv_023"
       ],
       "review_question_ids": [
         "v3_c_143_rv_021",
@@ -7227,7 +7879,9 @@
         "v3_c_144_q_017",
         "v3_c_144_q_018",
         "v3_c_144_q_019",
-        "v3_c_144_q_020"
+        "v3_c_144_q_020",
+        "v3_c_141_rv_021",
+        "v3_b_138_rv_023"
       ],
       "review_question_ids": [
         "v3_c_144_rv_021",
@@ -7274,7 +7928,9 @@
         "v3_c_145_q_017",
         "v3_c_145_q_018",
         "v3_c_145_q_019",
-        "v3_c_145_q_020"
+        "v3_c_145_q_020",
+        "v3_c_142_rv_021",
+        "v3_b_139_rv_023"
       ],
       "review_question_ids": [
         "v3_c_145_rv_021",
@@ -7282,6 +7938,43 @@
         "v3_c_145_rv_023",
         "v3_c_145_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-05",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20005,
+      "title": "Mixed Review 5: V3-C-141 – V3-C-145",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_c_141_rv_021",
+        "v3_c_141_rv_022",
+        "v3_c_141_rv_023",
+        "v3_c_141_rv_024",
+        "v3_c_142_rv_021",
+        "v3_c_142_rv_022",
+        "v3_c_142_rv_023",
+        "v3_c_142_rv_024",
+        "v3_c_143_rv_021",
+        "v3_c_143_rv_022",
+        "v3_c_143_rv_023",
+        "v3_c_143_rv_024",
+        "v3_c_144_rv_021",
+        "v3_c_144_rv_022",
+        "v3_c_144_rv_023",
+        "v3_c_144_rv_024",
+        "v3_c_145_rv_021",
+        "v3_c_145_rv_022",
+        "v3_c_145_rv_023",
+        "v3_c_145_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -7321,7 +8014,9 @@
         "v3_c_146_q_017",
         "v3_c_146_q_018",
         "v3_c_146_q_019",
-        "v3_c_146_q_020"
+        "v3_c_146_q_020",
+        "v3_c_143_rv_021",
+        "v3_b_140_rv_023"
       ],
       "review_question_ids": [
         "v3_c_146_rv_021",
@@ -7368,7 +8063,9 @@
         "v3_c_147_q_017",
         "v3_c_147_q_018",
         "v3_c_147_q_019",
-        "v3_c_147_q_020"
+        "v3_c_147_q_020",
+        "v3_c_144_rv_021",
+        "v3_c_141_rv_023"
       ],
       "review_question_ids": [
         "v3_c_147_rv_021",
@@ -7415,7 +8112,9 @@
         "v3_c_148_q_017",
         "v3_c_148_q_018",
         "v3_c_148_q_019",
-        "v3_c_148_q_020"
+        "v3_c_148_q_020",
+        "v3_c_145_rv_021",
+        "v3_c_142_rv_023"
       ],
       "review_question_ids": [
         "v3_c_148_rv_021",
@@ -7462,7 +8161,9 @@
         "v3_c_149_q_017",
         "v3_c_149_q_018",
         "v3_c_149_q_019",
-        "v3_c_149_q_020"
+        "v3_c_149_q_020",
+        "v3_c_146_rv_021",
+        "v3_c_143_rv_023"
       ],
       "review_question_ids": [
         "v3_c_149_rv_021",
@@ -7509,7 +8210,9 @@
         "v3_c_150_q_017",
         "v3_c_150_q_018",
         "v3_c_150_q_019",
-        "v3_c_150_q_020"
+        "v3_c_150_q_020",
+        "v3_c_147_rv_021",
+        "v3_c_144_rv_023"
       ],
       "review_question_ids": [
         "v3_c_150_rv_021",
@@ -7517,6 +8220,43 @@
         "v3_c_150_rv_023",
         "v3_c_150_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-06",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20006,
+      "title": "Mixed Review 6: V3-C-146 – V3-C-150",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_c_146_rv_021",
+        "v3_c_146_rv_022",
+        "v3_c_146_rv_023",
+        "v3_c_146_rv_024",
+        "v3_c_147_rv_021",
+        "v3_c_147_rv_022",
+        "v3_c_147_rv_023",
+        "v3_c_147_rv_024",
+        "v3_c_148_rv_021",
+        "v3_c_148_rv_022",
+        "v3_c_148_rv_023",
+        "v3_c_148_rv_024",
+        "v3_c_149_rv_021",
+        "v3_c_149_rv_022",
+        "v3_c_149_rv_023",
+        "v3_c_149_rv_024",
+        "v3_c_150_rv_021",
+        "v3_c_150_rv_022",
+        "v3_c_150_rv_023",
+        "v3_c_150_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -7556,7 +8296,9 @@
         "v3_d_151_q_017",
         "v3_d_151_q_018",
         "v3_d_151_q_019",
-        "v3_d_151_q_020"
+        "v3_d_151_q_020",
+        "v3_c_148_rv_021",
+        "v3_c_145_rv_023"
       ],
       "review_question_ids": [
         "v3_d_151_rv_021",
@@ -7603,7 +8345,9 @@
         "v3_d_152_q_017",
         "v3_d_152_q_018",
         "v3_d_152_q_019",
-        "v3_d_152_q_020"
+        "v3_d_152_q_020",
+        "v3_c_149_rv_021",
+        "v3_c_146_rv_023"
       ],
       "review_question_ids": [
         "v3_d_152_rv_021",
@@ -7650,7 +8394,9 @@
         "v3_d_153_q_017",
         "v3_d_153_q_018",
         "v3_d_153_q_019",
-        "v3_d_153_q_020"
+        "v3_d_153_q_020",
+        "v3_c_150_rv_021",
+        "v3_c_147_rv_023"
       ],
       "review_question_ids": [
         "v3_d_153_rv_021",
@@ -7697,7 +8443,9 @@
         "v3_d_154_q_017",
         "v3_d_154_q_018",
         "v3_d_154_q_019",
-        "v3_d_154_q_020"
+        "v3_d_154_q_020",
+        "v3_d_151_rv_021",
+        "v3_c_148_rv_023"
       ],
       "review_question_ids": [
         "v3_d_154_rv_021",
@@ -7744,7 +8492,9 @@
         "v3_d_155_q_017",
         "v3_d_155_q_018",
         "v3_d_155_q_019",
-        "v3_d_155_q_020"
+        "v3_d_155_q_020",
+        "v3_d_152_rv_021",
+        "v3_c_149_rv_023"
       ],
       "review_question_ids": [
         "v3_d_155_rv_021",
@@ -7752,6 +8502,43 @@
         "v3_d_155_rv_023",
         "v3_d_155_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-07",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20007,
+      "title": "Mixed Review 7: V3-D-151 – V3-D-155",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_d_151_rv_021",
+        "v3_d_151_rv_022",
+        "v3_d_151_rv_023",
+        "v3_d_151_rv_024",
+        "v3_d_152_rv_021",
+        "v3_d_152_rv_022",
+        "v3_d_152_rv_023",
+        "v3_d_152_rv_024",
+        "v3_d_153_rv_021",
+        "v3_d_153_rv_022",
+        "v3_d_153_rv_023",
+        "v3_d_153_rv_024",
+        "v3_d_154_rv_021",
+        "v3_d_154_rv_022",
+        "v3_d_154_rv_023",
+        "v3_d_154_rv_024",
+        "v3_d_155_rv_021",
+        "v3_d_155_rv_022",
+        "v3_d_155_rv_023",
+        "v3_d_155_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -7791,7 +8578,9 @@
         "v3_d_156_q_017",
         "v3_d_156_q_018",
         "v3_d_156_q_019",
-        "v3_d_156_q_020"
+        "v3_d_156_q_020",
+        "v3_d_153_rv_021",
+        "v3_c_150_rv_023"
       ],
       "review_question_ids": [
         "v3_d_156_rv_021",
@@ -7838,7 +8627,9 @@
         "v3_d_157_q_017",
         "v3_d_157_q_018",
         "v3_d_157_q_019",
-        "v3_d_157_q_020"
+        "v3_d_157_q_020",
+        "v3_d_154_rv_021",
+        "v3_d_151_rv_023"
       ],
       "review_question_ids": [
         "v3_d_157_rv_021",
@@ -7885,7 +8676,9 @@
         "v3_d_158_q_017",
         "v3_d_158_q_018",
         "v3_d_158_q_019",
-        "v3_d_158_q_020"
+        "v3_d_158_q_020",
+        "v3_d_155_rv_021",
+        "v3_d_152_rv_023"
       ],
       "review_question_ids": [
         "v3_d_158_rv_021",
@@ -7932,7 +8725,9 @@
         "v3_d_159_q_017",
         "v3_d_159_q_018",
         "v3_d_159_q_019",
-        "v3_d_159_q_020"
+        "v3_d_159_q_020",
+        "v3_d_156_rv_021",
+        "v3_d_153_rv_023"
       ],
       "review_question_ids": [
         "v3_d_159_rv_021",
@@ -7979,7 +8774,9 @@
         "v3_d_160_q_017",
         "v3_d_160_q_018",
         "v3_d_160_q_019",
-        "v3_d_160_q_020"
+        "v3_d_160_q_020",
+        "v3_d_157_rv_021",
+        "v3_d_154_rv_023"
       ],
       "review_question_ids": [
         "v3_d_160_rv_021",
@@ -7987,6 +8784,43 @@
         "v3_d_160_rv_023",
         "v3_d_160_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-08",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20008,
+      "title": "Mixed Review 8: V3-D-156 – V3-D-160",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_d_156_rv_021",
+        "v3_d_156_rv_022",
+        "v3_d_156_rv_023",
+        "v3_d_156_rv_024",
+        "v3_d_157_rv_021",
+        "v3_d_157_rv_022",
+        "v3_d_157_rv_023",
+        "v3_d_157_rv_024",
+        "v3_d_158_rv_021",
+        "v3_d_158_rv_022",
+        "v3_d_158_rv_023",
+        "v3_d_158_rv_024",
+        "v3_d_159_rv_021",
+        "v3_d_159_rv_022",
+        "v3_d_159_rv_023",
+        "v3_d_159_rv_024",
+        "v3_d_160_rv_021",
+        "v3_d_160_rv_022",
+        "v3_d_160_rv_023",
+        "v3_d_160_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -8026,7 +8860,9 @@
         "v3_e_161_q_017",
         "v3_e_161_q_018",
         "v3_e_161_q_019",
-        "v3_e_161_q_020"
+        "v3_e_161_q_020",
+        "v3_d_158_rv_021",
+        "v3_d_155_rv_023"
       ],
       "review_question_ids": [
         "v3_e_161_rv_021",
@@ -8073,7 +8909,9 @@
         "v3_e_162_q_017",
         "v3_e_162_q_018",
         "v3_e_162_q_019",
-        "v3_e_162_q_020"
+        "v3_e_162_q_020",
+        "v3_d_159_rv_021",
+        "v3_d_156_rv_023"
       ],
       "review_question_ids": [
         "v3_e_162_rv_021",
@@ -8120,7 +8958,9 @@
         "v3_e_163_q_017",
         "v3_e_163_q_018",
         "v3_e_163_q_019",
-        "v3_e_163_q_020"
+        "v3_e_163_q_020",
+        "v3_d_160_rv_021",
+        "v3_d_157_rv_023"
       ],
       "review_question_ids": [
         "v3_e_163_rv_021",
@@ -8167,7 +9007,9 @@
         "v3_e_164_q_017",
         "v3_e_164_q_018",
         "v3_e_164_q_019",
-        "v3_e_164_q_020"
+        "v3_e_164_q_020",
+        "v3_e_161_rv_021",
+        "v3_d_158_rv_023"
       ],
       "review_question_ids": [
         "v3_e_164_rv_021",
@@ -8214,7 +9056,9 @@
         "v3_e_165_q_017",
         "v3_e_165_q_018",
         "v3_e_165_q_019",
-        "v3_e_165_q_020"
+        "v3_e_165_q_020",
+        "v3_e_162_rv_021",
+        "v3_d_159_rv_023"
       ],
       "review_question_ids": [
         "v3_e_165_rv_021",
@@ -8222,6 +9066,43 @@
         "v3_e_165_rv_023",
         "v3_e_165_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-09",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20009,
+      "title": "Mixed Review 9: V3-E-161 – V3-E-165",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_e_161_rv_021",
+        "v3_e_161_rv_022",
+        "v3_e_161_rv_023",
+        "v3_e_161_rv_024",
+        "v3_e_162_rv_021",
+        "v3_e_162_rv_022",
+        "v3_e_162_rv_023",
+        "v3_e_162_rv_024",
+        "v3_e_163_rv_021",
+        "v3_e_163_rv_022",
+        "v3_e_163_rv_023",
+        "v3_e_163_rv_024",
+        "v3_e_164_rv_021",
+        "v3_e_164_rv_022",
+        "v3_e_164_rv_023",
+        "v3_e_164_rv_024",
+        "v3_e_165_rv_021",
+        "v3_e_165_rv_022",
+        "v3_e_165_rv_023",
+        "v3_e_165_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -8261,7 +9142,9 @@
         "v3_e_166_q_017",
         "v3_e_166_q_018",
         "v3_e_166_q_019",
-        "v3_e_166_q_020"
+        "v3_e_166_q_020",
+        "v3_e_163_rv_021",
+        "v3_d_160_rv_023"
       ],
       "review_question_ids": [
         "v3_e_166_rv_021",
@@ -8308,7 +9191,9 @@
         "v3_e_167_q_017",
         "v3_e_167_q_018",
         "v3_e_167_q_019",
-        "v3_e_167_q_020"
+        "v3_e_167_q_020",
+        "v3_e_164_rv_021",
+        "v3_e_161_rv_023"
       ],
       "review_question_ids": [
         "v3_e_167_rv_021",
@@ -8355,7 +9240,9 @@
         "v3_e_168_q_017",
         "v3_e_168_q_018",
         "v3_e_168_q_019",
-        "v3_e_168_q_020"
+        "v3_e_168_q_020",
+        "v3_e_165_rv_021",
+        "v3_e_162_rv_023"
       ],
       "review_question_ids": [
         "v3_e_168_rv_021",
@@ -8402,7 +9289,9 @@
         "v3_e_169_q_017",
         "v3_e_169_q_018",
         "v3_e_169_q_019",
-        "v3_e_169_q_020"
+        "v3_e_169_q_020",
+        "v3_e_166_rv_021",
+        "v3_e_163_rv_023"
       ],
       "review_question_ids": [
         "v3_e_169_rv_021",
@@ -8449,7 +9338,9 @@
         "v3_e_170_q_017",
         "v3_e_170_q_018",
         "v3_e_170_q_019",
-        "v3_e_170_q_020"
+        "v3_e_170_q_020",
+        "v3_e_167_rv_021",
+        "v3_e_164_rv_023"
       ],
       "review_question_ids": [
         "v3_e_170_rv_021",
@@ -8457,6 +9348,43 @@
         "v3_e_170_rv_023",
         "v3_e_170_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-10",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20010,
+      "title": "Mixed Review 10: V3-E-166 – V3-E-170",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_e_166_rv_021",
+        "v3_e_166_rv_022",
+        "v3_e_166_rv_023",
+        "v3_e_166_rv_024",
+        "v3_e_167_rv_021",
+        "v3_e_167_rv_022",
+        "v3_e_167_rv_023",
+        "v3_e_167_rv_024",
+        "v3_e_168_rv_021",
+        "v3_e_168_rv_022",
+        "v3_e_168_rv_023",
+        "v3_e_168_rv_024",
+        "v3_e_169_rv_021",
+        "v3_e_169_rv_022",
+        "v3_e_169_rv_023",
+        "v3_e_169_rv_024",
+        "v3_e_170_rv_021",
+        "v3_e_170_rv_022",
+        "v3_e_170_rv_023",
+        "v3_e_170_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -8496,7 +9424,9 @@
         "v3_f_171_q_017",
         "v3_f_171_q_018",
         "v3_f_171_q_019",
-        "v3_f_171_q_020"
+        "v3_f_171_q_020",
+        "v3_e_168_rv_021",
+        "v3_e_165_rv_023"
       ],
       "review_question_ids": [
         "v3_f_171_rv_021",
@@ -8543,7 +9473,9 @@
         "v3_f_172_q_017",
         "v3_f_172_q_018",
         "v3_f_172_q_019",
-        "v3_f_172_q_020"
+        "v3_f_172_q_020",
+        "v3_e_169_rv_021",
+        "v3_e_166_rv_023"
       ],
       "review_question_ids": [
         "v3_f_172_rv_021",
@@ -8590,7 +9522,9 @@
         "v3_f_173_q_017",
         "v3_f_173_q_018",
         "v3_f_173_q_019",
-        "v3_f_173_q_020"
+        "v3_f_173_q_020",
+        "v3_e_170_rv_021",
+        "v3_e_167_rv_023"
       ],
       "review_question_ids": [
         "v3_f_173_rv_021",
@@ -8637,7 +9571,9 @@
         "v3_f_174_q_017",
         "v3_f_174_q_018",
         "v3_f_174_q_019",
-        "v3_f_174_q_020"
+        "v3_f_174_q_020",
+        "v3_f_171_rv_021",
+        "v3_e_168_rv_023"
       ],
       "review_question_ids": [
         "v3_f_174_rv_021",
@@ -8684,7 +9620,9 @@
         "v3_f_175_q_017",
         "v3_f_175_q_018",
         "v3_f_175_q_019",
-        "v3_f_175_q_020"
+        "v3_f_175_q_020",
+        "v3_f_172_rv_021",
+        "v3_e_169_rv_023"
       ],
       "review_question_ids": [
         "v3_f_175_rv_021",
@@ -8692,6 +9630,43 @@
         "v3_f_175_rv_023",
         "v3_f_175_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-11",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20011,
+      "title": "Mixed Review 11: V3-F-171 – V3-F-175",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_f_171_rv_021",
+        "v3_f_171_rv_022",
+        "v3_f_171_rv_023",
+        "v3_f_171_rv_024",
+        "v3_f_172_rv_021",
+        "v3_f_172_rv_022",
+        "v3_f_172_rv_023",
+        "v3_f_172_rv_024",
+        "v3_f_173_rv_021",
+        "v3_f_173_rv_022",
+        "v3_f_173_rv_023",
+        "v3_f_173_rv_024",
+        "v3_f_174_rv_021",
+        "v3_f_174_rv_022",
+        "v3_f_174_rv_023",
+        "v3_f_174_rv_024",
+        "v3_f_175_rv_021",
+        "v3_f_175_rv_022",
+        "v3_f_175_rv_023",
+        "v3_f_175_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",
@@ -8731,7 +9706,9 @@
         "v3_f_176_q_017",
         "v3_f_176_q_018",
         "v3_f_176_q_019",
-        "v3_f_176_q_020"
+        "v3_f_176_q_020",
+        "v3_f_173_rv_021",
+        "v3_e_170_rv_023"
       ],
       "review_question_ids": [
         "v3_f_176_rv_021",
@@ -8778,7 +9755,9 @@
         "v3_f_177_q_017",
         "v3_f_177_q_018",
         "v3_f_177_q_019",
-        "v3_f_177_q_020"
+        "v3_f_177_q_020",
+        "v3_f_174_rv_021",
+        "v3_f_171_rv_023"
       ],
       "review_question_ids": [
         "v3_f_177_rv_021",
@@ -8825,7 +9804,9 @@
         "v3_f_178_q_017",
         "v3_f_178_q_018",
         "v3_f_178_q_019",
-        "v3_f_178_q_020"
+        "v3_f_178_q_020",
+        "v3_f_175_rv_021",
+        "v3_f_172_rv_023"
       ],
       "review_question_ids": [
         "v3_f_178_rv_021",
@@ -8872,7 +9853,9 @@
         "v3_f_179_q_017",
         "v3_f_179_q_018",
         "v3_f_179_q_019",
-        "v3_f_179_q_020"
+        "v3_f_179_q_020",
+        "v3_f_176_rv_021",
+        "v3_f_173_rv_023"
       ],
       "review_question_ids": [
         "v3_f_179_rv_021",
@@ -8919,7 +9902,9 @@
         "v3_f_180_q_017",
         "v3_f_180_q_018",
         "v3_f_180_q_019",
-        "v3_f_180_q_020"
+        "v3_f_180_q_020",
+        "v3_f_177_rv_021",
+        "v3_f_174_rv_023"
       ],
       "review_question_ids": [
         "v3_f_180_rv_021",
@@ -8927,6 +9912,43 @@
         "v3_f_180_rv_023",
         "v3_f_180_rv_024"
       ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "COLLOCATION_VERB_NOUN",
+      "status": "not_started"
+    },
+    {
+      "lesson_id": "V3-MIX-12",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 20012,
+      "title": "Mixed Review 12: V3-F-176 – V3-F-180",
+      "estimated_minutes": 15,
+      "lesson_type": "mixed_review",
+      "target_items": [],
+      "question_ids": [
+        "v3_f_176_rv_021",
+        "v3_f_176_rv_022",
+        "v3_f_176_rv_023",
+        "v3_f_176_rv_024",
+        "v3_f_177_rv_021",
+        "v3_f_177_rv_022",
+        "v3_f_177_rv_023",
+        "v3_f_177_rv_024",
+        "v3_f_178_rv_021",
+        "v3_f_178_rv_022",
+        "v3_f_178_rv_023",
+        "v3_f_178_rv_024",
+        "v3_f_179_rv_021",
+        "v3_f_179_rv_022",
+        "v3_f_179_rv_023",
+        "v3_f_179_rv_024",
+        "v3_f_180_rv_021",
+        "v3_f_180_rv_022",
+        "v3_f_180_rv_023",
+        "v3_f_180_rv_024"
+      ],
+      "review_question_ids": [],
       "mastery_threshold": 0.8,
       "seal_threshold": 0.85,
       "grammar_link_id": "COLLOCATION_VERB_NOUN",

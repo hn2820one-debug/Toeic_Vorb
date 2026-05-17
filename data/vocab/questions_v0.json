@@ -9,9 +9,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"shipment\" most nearly mean?",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -121,9 +121,9 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "current",
-      "B": "possible",
-      "C": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
+      "C": "proper and official",
       "D": "real or exact"
     },
     "correct_answer": "D",
@@ -233,9 +233,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"warranty\" most nearly mean?",
     "options": {
-      "A": "agenda",
-      "B": "refund",
-      "C": "policy",
+      "A": "money returned to a customer",
+      "B": "keeping equipment in working order",
+      "C": "a bill requesting payment",
       "D": "a written promise to repair or replace a product"
     },
     "correct_answer": "D",
@@ -345,9 +345,9 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "current",
-      "B": "possible",
-      "C": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
+      "C": "proper and official",
       "D": "real or exact"
     },
     "correct_answer": "D",
@@ -457,9 +457,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"maintenance\" most nearly mean?",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -569,9 +569,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"warranty\".",
     "options": {
-      "A": "agenda",
-      "B": "refund",
-      "C": "policy",
+      "A": "money returned to a customer",
+      "B": "keeping equipment in working order",
+      "C": "a bill requesting payment",
       "D": "a written promise to repair or replace a product"
     },
     "correct_answer": "D",
@@ -596,10 +596,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"budget\".",
     "options": {
-      "A": "shipment",
-      "B": "conference",
+      "A": "a bill requesting payment",
+      "B": "a plan showing times and dates",
       "C": "a plan for spending money",
-      "D": "invoice"
+      "D": "money returned to a customer"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：budget = a plan for spending money。",
@@ -623,10 +623,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"estimate\".",
     "options": {
-      "A": "deadline",
+      "A": "a bill requesting payment",
       "B": "an approximate calculation",
-      "C": "maintenance",
-      "D": "reservation"
+      "C": "a plan for spending money",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：estimate = an approximate calculation。",
@@ -651,9 +651,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"invoice\".",
     "options": {
       "A": "a document requesting payment",
-      "B": "receipt",
-      "C": "agenda",
-      "D": "manual"
+      "B": "money returned to a customer",
+      "C": "an approximate calculated figure",
+      "D": "a guarantee to fix a product"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：invoice = a document requesting payment。",
@@ -677,10 +677,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"venue\" most nearly mean?",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "\"venue\" 在 TOEIC 商務情境中通常指「a place where an event is held」。",
@@ -789,10 +789,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "possible",
-      "B": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
       "C": "real or exact",
-      "D": "current"
+      "D": "proper and official"
     },
     "correct_answer": "C",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -901,10 +901,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"budget\" most nearly mean?",
     "options": {
-      "A": "shipment",
-      "B": "conference",
+      "A": "a bill requesting payment",
+      "B": "a plan showing times and dates",
       "C": "a plan for spending money",
-      "D": "invoice"
+      "D": "money returned to a customer"
     },
     "correct_answer": "C",
     "explanation_zh": "\"budget\" 在 TOEIC 商務情境中通常指「a plan for spending money」。",
@@ -1013,10 +1013,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "possible",
-      "B": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
       "C": "real or exact",
-      "D": "current"
+      "D": "proper and official"
     },
     "correct_answer": "C",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -1125,10 +1125,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"conference\" most nearly mean?",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "\"conference\" 在 TOEIC 商務情境中通常指「a formal meeting for discussion」。",
@@ -1237,10 +1237,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"budget\".",
     "options": {
-      "A": "shipment",
-      "B": "conference",
+      "A": "a bill requesting payment",
+      "B": "a plan showing times and dates",
       "C": "a plan for spending money",
-      "D": "invoice"
+      "D": "money returned to a customer"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：budget = a plan for spending money。",
@@ -1264,10 +1264,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"estimate\".",
     "options": {
-      "A": "deadline",
+      "A": "a bill requesting payment",
       "B": "an approximate calculation",
-      "C": "maintenance",
-      "D": "reservation"
+      "C": "a plan for spending money",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：estimate = an approximate calculation。",
@@ -1292,9 +1292,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"invoice\".",
     "options": {
       "A": "a document requesting payment",
-      "B": "receipt",
-      "C": "agenda",
-      "D": "manual"
+      "B": "money returned to a customer",
+      "C": "an approximate calculated figure",
+      "D": "a guarantee to fix a product"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：invoice = a document requesting payment。",
@@ -1318,9 +1318,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"shipment\".",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -1345,10 +1345,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"refund\" most nearly mean?",
     "options": {
-      "A": "agenda",
+      "A": "a bill requesting payment",
       "B": "money returned to a customer",
-      "C": "deadline",
-      "D": "shipment"
+      "C": "a guarantee to fix a product",
+      "D": "a plan for spending money"
     },
     "correct_answer": "B",
     "explanation_zh": "\"refund\" 在 TOEIC 商務情境中通常指「money returned to a customer」。",
@@ -1457,10 +1457,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "formal",
+      "A": "happening at this time",
       "B": "real or exact",
-      "C": "current",
-      "D": "possible"
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "B",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -1569,10 +1569,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"estimate\" most nearly mean?",
     "options": {
-      "A": "deadline",
+      "A": "a bill requesting payment",
       "B": "an approximate calculation",
-      "C": "maintenance",
-      "D": "reservation"
+      "C": "a plan for spending money",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "B",
     "explanation_zh": "\"estimate\" 在 TOEIC 商務情境中通常指「an approximate calculation」。",
@@ -1681,10 +1681,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "formal",
+      "A": "happening at this time",
       "B": "real or exact",
-      "C": "current",
-      "D": "possible"
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "B",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -1793,10 +1793,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"reservation\" most nearly mean?",
     "options": {
-      "A": "memo",
+      "A": "a place where events are held",
       "B": "an arrangement to keep a room or seat",
-      "C": "estimate",
-      "D": "receipt"
+      "C": "a plan showing times and dates",
+      "D": "money returned to a customer"
     },
     "correct_answer": "B",
     "explanation_zh": "\"reservation\" 在 TOEIC 商務情境中通常指「an arrangement to keep a room or seat」。",
@@ -1905,10 +1905,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"estimate\".",
     "options": {
-      "A": "deadline",
+      "A": "a bill requesting payment",
       "B": "an approximate calculation",
-      "C": "maintenance",
-      "D": "reservation"
+      "C": "a plan for spending money",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：estimate = an approximate calculation。",
@@ -1933,9 +1933,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"invoice\".",
     "options": {
       "A": "a document requesting payment",
-      "B": "receipt",
-      "C": "agenda",
-      "D": "manual"
+      "B": "money returned to a customer",
+      "C": "an approximate calculated figure",
+      "D": "a guarantee to fix a product"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：invoice = a document requesting payment。",
@@ -1959,9 +1959,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"shipment\".",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -1986,10 +1986,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"venue\".",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：venue = a place where an event is held。",
@@ -2014,9 +2014,9 @@
     "question_text": "In a TOEIC business context, what does \"recruitment\" most nearly mean?",
     "options": {
       "A": "the process of hiring workers",
-      "B": "renovation",
-      "C": "delivery",
-      "D": "invoice"
+      "B": "keeping equipment in working order",
+      "C": "a formal meeting for discussion",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "A",
     "explanation_zh": "\"recruitment\" 在 TOEIC 商務情境中通常指「the process of hiring workers」。",
@@ -2126,9 +2126,9 @@
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
       "A": "real or exact",
-      "B": "current",
-      "C": "possible",
-      "D": "formal"
+      "B": "happening at this time",
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "A",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -2238,9 +2238,9 @@
     "question_text": "In a TOEIC business context, what does \"invoice\" most nearly mean?",
     "options": {
       "A": "a document requesting payment",
-      "B": "receipt",
-      "C": "agenda",
-      "D": "manual"
+      "B": "money returned to a customer",
+      "C": "an approximate calculated figure",
+      "D": "a guarantee to fix a product"
     },
     "correct_answer": "A",
     "explanation_zh": "\"invoice\" 在 TOEIC 商務情境中通常指「a document requesting payment」。",
@@ -2350,9 +2350,9 @@
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
       "A": "real or exact",
-      "B": "current",
-      "C": "possible",
-      "D": "formal"
+      "B": "happening at this time",
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "A",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -2462,9 +2462,9 @@
     "question_text": "In a TOEIC business context, what does \"deadline\" most nearly mean?",
     "options": {
       "A": "the latest time something must be finished",
-      "B": "venue",
-      "C": "shipment",
-      "D": "discount"
+      "B": "a plan showing times and dates",
+      "C": "an approximate calculated figure",
+      "D": "a bill requesting payment"
     },
     "correct_answer": "A",
     "explanation_zh": "\"deadline\" 在 TOEIC 商務情境中通常指「the latest time something must be finished」。",
@@ -2574,9 +2574,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"invoice\".",
     "options": {
       "A": "a document requesting payment",
-      "B": "receipt",
-      "C": "agenda",
-      "D": "manual"
+      "B": "money returned to a customer",
+      "C": "an approximate calculated figure",
+      "D": "a guarantee to fix a product"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：invoice = a document requesting payment。",
@@ -2600,9 +2600,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"shipment\".",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -2627,10 +2627,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"venue\".",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：venue = a place where an event is held。",
@@ -2654,10 +2654,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"refund\".",
     "options": {
-      "A": "agenda",
+      "A": "a bill requesting payment",
       "B": "money returned to a customer",
-      "C": "deadline",
-      "D": "shipment"
+      "C": "a guarantee to fix a product",
+      "D": "a plan for spending money"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：refund = money returned to a customer。",
@@ -2681,9 +2681,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"maintenance\" most nearly mean?",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -2793,9 +2793,9 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "current",
-      "B": "possible",
-      "C": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
+      "C": "proper and official",
       "D": "real or exact"
     },
     "correct_answer": "D",
@@ -2905,9 +2905,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"shipment\" most nearly mean?",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -3017,9 +3017,9 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "current",
-      "B": "possible",
-      "C": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
+      "C": "proper and official",
       "D": "real or exact"
     },
     "correct_answer": "D",
@@ -3129,9 +3129,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"warranty\" most nearly mean?",
     "options": {
-      "A": "agenda",
-      "B": "refund",
-      "C": "policy",
+      "A": "money returned to a customer",
+      "B": "keeping equipment in working order",
+      "C": "a bill requesting payment",
       "D": "a written promise to repair or replace a product"
     },
     "correct_answer": "D",
@@ -3241,9 +3241,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"shipment\".",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -3268,10 +3268,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"venue\".",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：venue = a place where an event is held。",
@@ -3295,10 +3295,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"refund\".",
     "options": {
-      "A": "agenda",
+      "A": "a bill requesting payment",
       "B": "money returned to a customer",
-      "C": "deadline",
-      "D": "shipment"
+      "C": "a guarantee to fix a product",
+      "D": "a plan for spending money"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：refund = money returned to a customer。",
@@ -3323,9 +3323,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"recruitment\".",
     "options": {
       "A": "the process of hiring workers",
-      "B": "renovation",
-      "C": "delivery",
-      "D": "invoice"
+      "B": "keeping equipment in working order",
+      "C": "a formal meeting for discussion",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：recruitment = the process of hiring workers。",
@@ -3349,10 +3349,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"conference\" most nearly mean?",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "\"conference\" 在 TOEIC 商務情境中通常指「a formal meeting for discussion」。",
@@ -3461,10 +3461,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "possible",
-      "B": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
       "C": "real or exact",
-      "D": "current"
+      "D": "proper and official"
     },
     "correct_answer": "C",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -3573,10 +3573,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"venue\" most nearly mean?",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "\"venue\" 在 TOEIC 商務情境中通常指「a place where an event is held」。",
@@ -3685,10 +3685,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "possible",
-      "B": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
       "C": "real or exact",
-      "D": "current"
+      "D": "proper and official"
     },
     "correct_answer": "C",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -3797,10 +3797,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"budget\" most nearly mean?",
     "options": {
-      "A": "shipment",
-      "B": "conference",
+      "A": "a bill requesting payment",
+      "B": "a plan showing times and dates",
       "C": "a plan for spending money",
-      "D": "invoice"
+      "D": "money returned to a customer"
     },
     "correct_answer": "C",
     "explanation_zh": "\"budget\" 在 TOEIC 商務情境中通常指「a plan for spending money」。",
@@ -3909,10 +3909,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"venue\".",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：venue = a place where an event is held。",
@@ -3936,10 +3936,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"refund\".",
     "options": {
-      "A": "agenda",
+      "A": "a bill requesting payment",
       "B": "money returned to a customer",
-      "C": "deadline",
-      "D": "shipment"
+      "C": "a guarantee to fix a product",
+      "D": "a plan for spending money"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：refund = money returned to a customer。",
@@ -3964,9 +3964,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"recruitment\".",
     "options": {
       "A": "the process of hiring workers",
-      "B": "renovation",
-      "C": "delivery",
-      "D": "invoice"
+      "B": "keeping equipment in working order",
+      "C": "a formal meeting for discussion",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：recruitment = the process of hiring workers。",
@@ -3990,9 +3990,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"maintenance\".",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -4017,10 +4017,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"reservation\" most nearly mean?",
     "options": {
-      "A": "memo",
+      "A": "a place where events are held",
       "B": "an arrangement to keep a room or seat",
-      "C": "estimate",
-      "D": "receipt"
+      "C": "a plan showing times and dates",
+      "D": "money returned to a customer"
     },
     "correct_answer": "B",
     "explanation_zh": "\"reservation\" 在 TOEIC 商務情境中通常指「an arrangement to keep a room or seat」。",
@@ -4129,10 +4129,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "formal",
+      "A": "happening at this time",
       "B": "real or exact",
-      "C": "current",
-      "D": "possible"
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "B",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -4241,10 +4241,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"refund\" most nearly mean?",
     "options": {
-      "A": "agenda",
+      "A": "a bill requesting payment",
       "B": "money returned to a customer",
-      "C": "deadline",
-      "D": "shipment"
+      "C": "a guarantee to fix a product",
+      "D": "a plan for spending money"
     },
     "correct_answer": "B",
     "explanation_zh": "\"refund\" 在 TOEIC 商務情境中通常指「money returned to a customer」。",
@@ -4353,10 +4353,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "formal",
+      "A": "happening at this time",
       "B": "real or exact",
-      "C": "current",
-      "D": "possible"
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "B",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -4465,10 +4465,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"estimate\" most nearly mean?",
     "options": {
-      "A": "deadline",
+      "A": "a bill requesting payment",
       "B": "an approximate calculation",
-      "C": "maintenance",
-      "D": "reservation"
+      "C": "a plan for spending money",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "B",
     "explanation_zh": "\"estimate\" 在 TOEIC 商務情境中通常指「an approximate calculation」。",
@@ -4577,10 +4577,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"refund\".",
     "options": {
-      "A": "agenda",
+      "A": "a bill requesting payment",
       "B": "money returned to a customer",
-      "C": "deadline",
-      "D": "shipment"
+      "C": "a guarantee to fix a product",
+      "D": "a plan for spending money"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：refund = money returned to a customer。",
@@ -4605,9 +4605,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"recruitment\".",
     "options": {
       "A": "the process of hiring workers",
-      "B": "renovation",
-      "C": "delivery",
-      "D": "invoice"
+      "B": "keeping equipment in working order",
+      "C": "a formal meeting for discussion",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：recruitment = the process of hiring workers。",
@@ -4631,9 +4631,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"maintenance\".",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -4658,10 +4658,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"conference\".",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：conference = a formal meeting for discussion。",
@@ -4686,9 +4686,9 @@
     "question_text": "In a TOEIC business context, what does \"deadline\" most nearly mean?",
     "options": {
       "A": "the latest time something must be finished",
-      "B": "venue",
-      "C": "shipment",
-      "D": "discount"
+      "B": "a plan showing times and dates",
+      "C": "an approximate calculated figure",
+      "D": "a bill requesting payment"
     },
     "correct_answer": "A",
     "explanation_zh": "\"deadline\" 在 TOEIC 商務情境中通常指「the latest time something must be finished」。",
@@ -4798,9 +4798,9 @@
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
       "A": "real or exact",
-      "B": "current",
-      "C": "possible",
-      "D": "formal"
+      "B": "happening at this time",
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "A",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -4910,9 +4910,9 @@
     "question_text": "In a TOEIC business context, what does \"recruitment\" most nearly mean?",
     "options": {
       "A": "the process of hiring workers",
-      "B": "renovation",
-      "C": "delivery",
-      "D": "invoice"
+      "B": "keeping equipment in working order",
+      "C": "a formal meeting for discussion",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "A",
     "explanation_zh": "\"recruitment\" 在 TOEIC 商務情境中通常指「the process of hiring workers」。",
@@ -5022,9 +5022,9 @@
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
       "A": "real or exact",
-      "B": "current",
-      "C": "possible",
-      "D": "formal"
+      "B": "happening at this time",
+      "C": "likely in the near future",
+      "D": "proper and official"
     },
     "correct_answer": "A",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -5134,9 +5134,9 @@
     "question_text": "In a TOEIC business context, what does \"invoice\" most nearly mean?",
     "options": {
       "A": "a document requesting payment",
-      "B": "receipt",
-      "C": "agenda",
-      "D": "manual"
+      "B": "money returned to a customer",
+      "C": "an approximate calculated figure",
+      "D": "a guarantee to fix a product"
     },
     "correct_answer": "A",
     "explanation_zh": "\"invoice\" 在 TOEIC 商務情境中通常指「a document requesting payment」。",
@@ -5246,9 +5246,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"recruitment\".",
     "options": {
       "A": "the process of hiring workers",
-      "B": "renovation",
-      "C": "delivery",
-      "D": "invoice"
+      "B": "keeping equipment in working order",
+      "C": "a formal meeting for discussion",
+      "D": "the last date to finish a task"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：recruitment = the process of hiring workers。",
@@ -5272,9 +5272,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"maintenance\".",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -5299,10 +5299,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"conference\".",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：conference = a formal meeting for discussion。",
@@ -5326,10 +5326,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"reservation\".",
     "options": {
-      "A": "memo",
+      "A": "a place where events are held",
       "B": "an arrangement to keep a room or seat",
-      "C": "estimate",
-      "D": "receipt"
+      "C": "a plan showing times and dates",
+      "D": "money returned to a customer"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：reservation = an arrangement to keep a room or seat。",
@@ -5353,9 +5353,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"warranty\" most nearly mean?",
     "options": {
-      "A": "agenda",
-      "B": "refund",
-      "C": "policy",
+      "A": "money returned to a customer",
+      "B": "keeping equipment in working order",
+      "C": "a bill requesting payment",
       "D": "a written promise to repair or replace a product"
     },
     "correct_answer": "D",
@@ -5465,9 +5465,9 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "current",
-      "B": "possible",
-      "C": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
+      "C": "proper and official",
       "D": "real or exact"
     },
     "correct_answer": "D",
@@ -5577,9 +5577,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"maintenance\" most nearly mean?",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -5689,9 +5689,9 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "current",
-      "B": "possible",
-      "C": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
+      "C": "proper and official",
       "D": "real or exact"
     },
     "correct_answer": "D",
@@ -5801,9 +5801,9 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"shipment\" most nearly mean?",
     "options": {
-      "A": "discount",
-      "B": "venue",
-      "C": "policy",
+      "A": "a bill requesting payment",
+      "B": "money returned to a customer",
+      "C": "a place where events are held",
       "D": "goods sent for delivery"
     },
     "correct_answer": "D",
@@ -5913,9 +5913,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"maintenance\".",
     "options": {
-      "A": "promotion",
-      "B": "venue",
-      "C": "refund",
+      "A": "the process of hiring staff",
+      "B": "a booking to hold a spot",
+      "C": "goods sent to a buyer",
       "D": "work done to keep equipment in good condition"
     },
     "correct_answer": "D",
@@ -5940,10 +5940,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"conference\".",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：conference = a formal meeting for discussion。",
@@ -5967,10 +5967,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"reservation\".",
     "options": {
-      "A": "memo",
+      "A": "a place where events are held",
       "B": "an arrangement to keep a room or seat",
-      "C": "estimate",
-      "D": "receipt"
+      "C": "a plan showing times and dates",
+      "D": "money returned to a customer"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：reservation = an arrangement to keep a room or seat。",
@@ -5995,9 +5995,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"deadline\".",
     "options": {
       "A": "the latest time something must be finished",
-      "B": "venue",
-      "C": "shipment",
-      "D": "discount"
+      "B": "a plan showing times and dates",
+      "C": "an approximate calculated figure",
+      "D": "a bill requesting payment"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：deadline = the latest time something must be finished。",
@@ -6021,10 +6021,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"budget\" most nearly mean?",
     "options": {
-      "A": "shipment",
-      "B": "conference",
+      "A": "a bill requesting payment",
+      "B": "a plan showing times and dates",
       "C": "a plan for spending money",
-      "D": "invoice"
+      "D": "money returned to a customer"
     },
     "correct_answer": "C",
     "explanation_zh": "\"budget\" 在 TOEIC 商務情境中通常指「a plan for spending money」。",
@@ -6133,10 +6133,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "possible",
-      "B": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
       "C": "real or exact",
-      "D": "current"
+      "D": "proper and official"
     },
     "correct_answer": "C",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -6245,10 +6245,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"conference\" most nearly mean?",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "\"conference\" 在 TOEIC 商務情境中通常指「a formal meeting for discussion」。",
@@ -6357,10 +6357,10 @@
     "grammar_link_id": null,
     "question_text": "In TOEIC English, \"actual\" usually means ______.",
     "options": {
-      "A": "possible",
-      "B": "formal",
+      "A": "happening at this time",
+      "B": "likely in the near future",
       "C": "real or exact",
-      "D": "current"
+      "D": "proper and official"
     },
     "correct_answer": "C",
     "explanation_zh": "\"actual\" 容易受中文直覺誤導，正確意思是「real or exact」。",
@@ -6469,10 +6469,10 @@
     "grammar_link_id": null,
     "question_text": "In a TOEIC business context, what does \"venue\" most nearly mean?",
     "options": {
-      "A": "survey",
-      "B": "invoice",
+      "A": "a formal meeting for discussion",
+      "B": "a booking to hold a spot",
       "C": "a place where an event is held",
-      "D": "refund"
+      "D": "a plan showing times and dates"
     },
     "correct_answer": "C",
     "explanation_zh": "\"venue\" 在 TOEIC 商務情境中通常指「a place where an event is held」。",
@@ -6581,10 +6581,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"conference\".",
     "options": {
-      "A": "schedule",
-      "B": "budget",
+      "A": "a place where events are held",
+      "B": "a booking to hold a spot",
       "C": "a formal meeting for discussion",
-      "D": "warranty"
+      "D": "keeping equipment in working order"
     },
     "correct_answer": "C",
     "explanation_zh": "複習題：conference = a formal meeting for discussion。",
@@ -6608,10 +6608,10 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"reservation\".",
     "options": {
-      "A": "memo",
+      "A": "a place where events are held",
       "B": "an arrangement to keep a room or seat",
-      "C": "estimate",
-      "D": "receipt"
+      "C": "a plan showing times and dates",
+      "D": "money returned to a customer"
     },
     "correct_answer": "B",
     "explanation_zh": "複習題：reservation = an arrangement to keep a room or seat。",
@@ -6636,9 +6636,9 @@
     "question_text": "Quick review: choose the best TOEIC meaning for \"deadline\".",
     "options": {
       "A": "the latest time something must be finished",
-      "B": "venue",
-      "C": "shipment",
-      "D": "discount"
+      "B": "a plan showing times and dates",
+      "C": "an approximate calculated figure",
+      "D": "a bill requesting payment"
     },
     "correct_answer": "A",
     "explanation_zh": "複習題：deadline = the latest time something must be finished。",
@@ -6662,9 +6662,9 @@
     "grammar_link_id": null,
     "question_text": "Quick review: choose the best TOEIC meaning for \"warranty\".",
     "options": {
-      "A": "agenda",
-      "B": "refund",
-      "C": "policy",
+      "A": "money returned to a customer",
+      "B": "keeping equipment in working order",
+      "C": "a bill requesting payment",
       "D": "a written promise to repair or replace a product"
     },
     "correct_answer": "D",

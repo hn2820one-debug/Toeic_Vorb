@@ -69,6 +69,9 @@ export async function clearActiveSession() {
   state.activeSession = null;
   state.runtimeQuestions = [];
   state.currentQuestionKey = null;
+  state.questionStartedAt = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   await loadData();
   callRender();
 }

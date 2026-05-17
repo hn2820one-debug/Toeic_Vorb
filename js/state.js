@@ -25,9 +25,16 @@ export const state = {
   runtimeQuestions: [],
   currentQuestionKey: null,
   questionStartedAt: null,
+  pendingAnswer: null,
+  lockedQuestionSeconds: null,
   reviewSessionId: null,
   reviewFilter: "due",
   lastReviewSummary: null,
+  roadmapFilters: {
+    stage: "",
+    status: "",
+    lesson_type: ""
+  },
   selectedQuestionId: null,
   bankFilters: {
     stage: "",
@@ -41,6 +48,47 @@ export const state = {
   masteryFilter: { level: "" },
   grammarLinks: {}
 };
+
+export function questionTypeLabel(type) {
+  return {
+    meaning_choice: "Meaning",
+    word_family: "Word Family",
+    collocation: "Collocation",
+    formal_phrase: "Formal Phrase",
+    false_friend: "False Friend",
+    scene_vocabulary: "Scene Vocabulary",
+    part5_sentence_completion: "Part 5",
+    part6_context_choice: "Part 6 Context",
+    speed_drill: "Speed Drill",
+    review_question: "Review"
+  }[type] || type || "Question";
+}
+
+export function lessonTypeLabel(type) {
+  return {
+    diagnostic: "Diagnostic",
+    word_family: "Word Family",
+    scene_vocabulary: "Scene Vocabulary",
+    collocation: "Collocation",
+    mixed_review: "Mixed Review",
+    speed_reflex: "Speed Reflex"
+  }[type] || type || "Lesson";
+}
+
+export function learningGuidance(question) {
+  return {
+    meaning_choice: "先看空格前後的語意限制，再排除同場景但不合語意的選項。",
+    word_family: "先判斷空格需要的詞性，再用句子功能檢查字尾形式。",
+    collocation: "重點是自然搭配，不是單字各自的中文意思。",
+    formal_phrase: "檢查正式語氣、文件目的，以及商務信件常見固定說法。",
+    false_friend: "先確認題目情境，不要只靠看起來熟悉的字面意思。",
+    scene_vocabulary: "先判斷文件或對話場景，再選能自然完成 TOEIC 情境的詞。",
+    part5_sentence_completion: "先快速定位文法或搭配線索，再回到整句確認語意。",
+    part6_context_choice: "先讀前後句的工作流程，再選能讓段落邏輯連貫的搭配。",
+    speed_drill: "用第一反應作答；慢但答對也要回頭練到穩定快速。",
+    review_question: "這題用來確認舊錯是否真的修正，請優先檢查上次錯因。"
+  }[question?.type] || "先判斷題目要測的能力，再排除看似合理但不自然的選項。";
+}
 
 export function $(id) {
   return document.getElementById(id);

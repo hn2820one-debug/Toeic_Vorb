@@ -39,10 +39,27 @@ test("lesson flow: start lesson, answer every question, and finish into error re
     const firstAnswerButton = answerButtons.first();
     await expect(firstAnswerButton).toBeEnabled({ timeout: STEP_TIMEOUT });
     await firstAnswerButton.click({ timeout: STEP_TIMEOUT });
+    const attemptsBeforeConfirm = await page.evaluate(async () => {
+      const attempts = await window.VocabDB.getAll("attempts");
+      return attempts.length;
+    });
+    expect(attemptsBeforeConfirm).toBe(index);
+
+    const confirmButton = page.getByRole("button", { name: "Confirm Answer" });
+    await expect(confirmButton).toBeEnabled({ timeout: STEP_TIMEOUT });
+    await confirmButton.click({ timeout: STEP_TIMEOUT });
+    const attemptsAfterConfirm = await page.evaluate(async () => {
+      const attempts = await window.VocabDB.getAll("attempts");
+      return attempts.length;
+    });
+    expect(attemptsAfterConfirm).toBe(index + 1);
 
     // Feedback panel appears — wait for the advance button and click it
     const advanceButton = page.getByRole("button", { name: /Next Question|See Summary/ });
     await expect(advanceButton).toBeVisible({ timeout: STEP_TIMEOUT });
+    const lockedQuestionTime = ((await page.locator("#question-elapsed").textContent()) || "").trim();
+    await page.waitForTimeout(1200);
+    await expect(page.locator("#question-elapsed")).toHaveText(lockedQuestionTime, { timeout: STEP_TIMEOUT });
     await advanceButton.click({ timeout: STEP_TIMEOUT });
 
     if (index < trackerSeed.questionIds.length - 1) {
@@ -60,4 +77,11 @@ test("lesson flow: start lesson, answer every question, and finish into error re
 
   const errorReviewHeading = page.locator(".tracker-panel h3", { hasText: "Error Review" });
   await expect(errorReviewHeading).toBeVisible({ timeout: APP_TIMEOUT });
+
+  await page.getByRole("button", { name: "Skip" }).click({ timeout: STEP_TIMEOUT });
+  await page.evaluate(() => window.VocabTracker.setView("mistakes"));
+
+  await expect(page.locator(".tracker-panel h3", { hasText: "Recent Answer Records" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".answer-record").first()).toContainText("Your A", { timeout: STEP_TIMEOUT });
+  await expect(page.locator(".answer-record").first()).toContainText(/\d+\.\d+s/, { timeout: STEP_TIMEOUT });
 });

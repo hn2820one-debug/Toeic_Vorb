@@ -241,6 +241,179 @@ function buildRecommendedActions({ attempts, sessions, weakestLessons, questionT
   return recommendedActions;
 }
 
+function buildContentQualitySummary() {
+  const lessonById = byId(state.lessons, "lesson_id");
+  const itemById = byId(state.vocabItems, "item_id");
+  const questionFiles = state.curriculum?.question_files || [];
+  const stageQuestionCounts = {};
+  const questionTypeCounts = {};
+
+  state.questions.forEach((question) => {
+    stageQuestionCounts[question.stage] = (stageQuestionCounts[question.stage] || 0) + 1;
+    const typeKey = `${question.stage || "UNKNOWN"}:${question.type || "unknown"}`;
+    questionTypeCounts[typeKey] = (questionTypeCounts[typeKey] || 0) + 1;
+  });
+
+  function lessonQuestions(lesson) {
+    const ids = new Set([...(lesson.question_ids || []), ...(lesson.review_question_ids || [])]);
+    return state.questions.filter((question) => ids.has(question.question_id));
+  }
+
+  function normalizeStem(text) {
+    return String(text || "")
+      .replace(/\([^)]*-\d{2}\)\s*$/g, "")
+      .replace(/"[^"]+"/g, "\"__\"")
+      .replace(/\bV[0-9]-[A-Z]-[0-9]+-\d+\b/g, "ID")
+      .replace(/_{2,}/g, "____")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function wordCount(text) {
+    return String(text || "").split(/\s+/).filter(Boolean).length;
+  }
+
+  function sentenceCount(text) {
+    return String(text || "").split(/[.!?]+/).filter((part) => part.trim()).length;
+  }
+
+  const stemCounts = {};
+  state.questions
+    .filter((question) => ["V2", "V3"].includes(question.stage))
+    .forEach((question) => {
+      const key = `${question.stage}:${normalizeStem(question.question_text)}`;
+      stemCounts[key] = (stemCounts[key] || 0) + 1;
+    });
+
+  const repeatedTemplates = Object.entries(stemCounts)
+    .filter(([, count]) => count > 24)
+    .map(([key, count]) => ({ key, count }));
+
+  const targetCoverageIssues = state.lessons
+    .filter((lesson) => ["V2", "V3"].includes(lesson.stage))
+    .map((lesson) => {
+      const coverage = {};
+      lessonQuestions(lesson).forEach((question) => {
+        if (!question.target_item_id) return;
+        coverage[question.target_item_id] = (coverage[question.target_item_id] || 0) + 1;
+      });
+      const counts = Object.values(coverage);
+      const min = counts.length ? Math.min(...counts) : 0;
+      const max = counts.length ? Math.max(...counts) : 0;
+      return {
+        lesson_id: lesson.lesson_id,
+        stage: lesson.stage,
+        targets: counts.length,
+        min,
+        max,
+        spread: max - min
+      };
+    })
+    .filter((row) => row.targets === 0 || row.spread > 2 || row.min < 2);
+
+  const missingOldItemInterference = state.lessons
+    .filter((lesson) => ["V2", "V3"].includes(lesson.stage))
+    .map((lesson) => {
+      const outside = lessonQuestions(lesson).filter((question) => {
+        const item = itemById[question.target_item_id];
+        if (!item) return false;
+        const lessonIds = Array.isArray(item.lesson_ids) ? item.lesson_ids : [item.lesson_id].filter(Boolean);
+        return !lessonIds.includes(lesson.lesson_id);
+      }).length;
+      return { lesson_id: lesson.lesson_id, stage: lesson.stage, outside_items: outside };
+    })
+    .filter((row) => row.outside_items === 0);
+
+  return {
+    generated_at: window.VocabScoring.localIso(),
+    seed_version: window.VocabDB.SEED_VERSION,
+    total_lessons: state.lessons.length,
+    total_questions: state.questions.length,
+    question_files: questionFiles,
+    stages: (state.curriculum?.stages || []).map((stage) => ({
+      stage: stage.stage,
+      stage_name: stage.stage_name,
+      status: stage.status,
+      planned_total_lessons: stage.total_lessons,
+      actual_lessons: state.lessons.filter((lesson) => lesson.stage === stage.stage).length,
+      actual_questions: stageQuestionCounts[stage.stage] || 0,
+      mixed_review_lessons: state.lessons.filter((lesson) => lesson.stage === stage.stage && lesson.lesson_type === "mixed_review").length
+    })),
+    question_type_counts: Object.entries(questionTypeCounts)
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([key, count]) => {
+        const [stage, type] = key.split(":");
+        return { stage, type, count };
+      }),
+    quality_warnings: {
+      repeated_v2_v3_templates_above_24: repeatedTemplates.length,
+      short_v3_part6_context_questions: state.questions.filter((question) => question.stage === "V3" && question.type === "part6_context_choice" && (wordCount(question.question_text) < 24 || sentenceCount(question.question_text) < 2)).length,
+      translation_heavy_v2_questions: state.questions.filter((question) => question.stage === "V2" && /[\u3400-\u9fff]/.test(question.question_text || "")).length,
+      target_coverage_issues: targetCoverageIssues.length,
+      missing_old_item_interference_lessons: missingOldItemInterference.length,
+      speed_drill_non_time_pressure: state.questions.filter((question) => question.type === "speed_drill" && question.default_error_code !== "TIME_PRESSURE").length
+    },
+    samples: {
+      target_coverage_issues: targetCoverageIssues.slice(0, 12),
+      missing_old_item_interference_lessons: missingOldItemInterference.slice(0, 12),
+      repeated_templates: repeatedTemplates.slice(0, 12),
+      first_lesson_by_stage: Object.fromEntries((state.curriculum?.stages || []).map((stage) => [
+        stage.stage,
+        state.lessons.find((lesson) => lesson.stage === stage.stage)?.lesson_id || ""
+      ]))
+    },
+    lesson_lookup_note: Object.keys(lessonById).length
+      ? "lesson_id references are available in question_bank_snapshot.json"
+      : "no lesson rows loaded"
+  };
+}
+
+function buildLessonRecommendationsMarkdown(stageProgress) {
+  const today = window.VocabScoring.localDate();
+  const current = currentLesson();
+  const dueQueue = state.reviewQueue.filter((entry) => entry.status === "pending" && (!entry.due_date || String(entry.due_date) <= today));
+  const pendingQueue = state.reviewQueue.filter((entry) => entry.status === "pending");
+  const latestSessions = latestSessionByLesson();
+  const weakestLessons = Object.values(latestSessions)
+    .sort((a, b) => Number(a.accuracy || 0) - Number(b.accuracy || 0))
+    .slice(0, 5);
+  const targetItems = (current?.target_items || [])
+    .map((itemId) => state.vocabItems.find((item) => item.item_id === itemId))
+    .filter(Boolean)
+    .map((item) => `${item.base_word || item.item_id}${item.chinese ? ` (${item.chinese})` : ""}`);
+
+  const nextAction = dueQueue.length
+    ? `Run Review Mode for ${dueQueue.length} due item(s) before starting new work.`
+    : current
+      ? `Start ${current.lesson_id} - ${current.title}.`
+      : "No available lesson found.";
+
+  const stageLines = stageProgress.map((stage) => (
+    `- ${stage.stage} ${stage.stage_name}: ${exportPercent(stage.stage_progress)} complete, accuracy ${exportPercent(stage.stage_accuracy)}, repeated errors ${stage.stage_repeated_errors}`
+  )).join("\n") || "- insufficient data";
+
+  return `# Lesson Recommendations
+
+Generated: ${window.VocabScoring.localIso()}
+
+## Next Action
+- ${nextAction}
+- Pending review queue: ${pendingQueue.length}
+- Current lesson focus: ${targetItems.length ? targetItems.join(", ") : "mixed review or diagnostic lesson"}
+
+## Weakest Recent Lessons
+${weakestLessons.length ? weakestLessons.map((session) => `- ${session.lesson_id}: ${exportPercent(session.accuracy)} accuracy, ${exportSeconds(session.avg_response_time_seconds)} average, next action ${session.next_action || "review"}`).join("\n") : "- insufficient data"}
+
+## Stage Snapshot
+${stageLines}
+
+## Study Rule
+- Clear due review first.
+- Retake any lesson below 80% before moving forward.
+- Treat V2/V3 mixed review lessons as block checkpoints, not new vocabulary inventory.
+`;
+}
+
 export function buildExportFiles() {
   const date = window.VocabScoring.localDate();
   const attemptsRows = [[
@@ -341,6 +514,7 @@ export function buildExportFiles() {
   });
 
   const stageProgress = buildStageProgress();
+  const contentQualitySummary = buildContentQualitySummary();
   const rawEvents = [
     ...state.sessions.map((record) => ({ event_type: "session", ...record })),
     ...state.attempts.map((record) => ({ event_type: "attempt", ...record })),
@@ -350,11 +524,13 @@ export function buildExportFiles() {
 
   return {
     "summary.md": buildSummaryMarkdown(stageProgress),
+    "lesson_recommendations.md": buildLessonRecommendationsMarkdown(stageProgress),
     "sessions.csv": `\ufeff${window.VocabScoring.toCsv(sessionsRows)}`,
     "attempts.csv": `\ufeff${window.VocabScoring.toCsv(attemptsRows)}`,
     "item_mastery.csv": `\ufeff${window.VocabScoring.toCsv(masteryRows)}`,
     "error_summary.csv": `\ufeff${window.VocabScoring.toCsv(errorSummaryRows)}`,
     "review_effectiveness.csv": `\ufeff${window.VocabScoring.toCsv(reviewEffectivenessRows)}`,
+    "content_quality_summary.json": JSON.stringify(contentQualitySummary, null, 2),
     "stage_progress.json": JSON.stringify(stageProgress, null, 2),
     "question_bank_snapshot.json": JSON.stringify({
       exported_at: window.VocabScoring.localIso(),
@@ -371,11 +547,13 @@ export function buildExportFiles() {
         item_mastery_csv: "item_mastery.csv",
         error_summary_csv: "error_summary.csv",
         review_effectiveness_csv: "review_effectiveness.csv",
+        content_quality_summary_json: "content_quality_summary.json",
+        lesson_recommendations_md: "lesson_recommendations.md",
         stage_progress_json: "stage_progress.json",
         question_bank_snapshot_json: "question_bank_snapshot.json",
         raw_events_jsonl: "raw_events.jsonl"
       },
-      data: { sessions: state.sessions, attempts: state.attempts, item_mastery: state.vocabItems, errors: state.errorLogs, review_queue: state.reviewQueue, review_effectiveness: reviewEffectiveness, stage_progress: stageProgress }
+      data: { sessions: state.sessions, attempts: state.attempts, item_mastery: state.vocabItems, errors: state.errorLogs, review_queue: state.reviewQueue, review_effectiveness: reviewEffectiveness, content_quality_summary: contentQualitySummary, stage_progress: stageProgress }
     }, null, 2)
   };
 }

@@ -9,7 +9,11 @@ import {
   currentLesson
 } from "./state.js";
 import { renderToday } from "./views/today.js";
-import { renderRoadmap } from "./views/roadmap.js";
+import {
+  renderRoadmap,
+  setRoadmapFilter as updateRoadmapFilter,
+  clearRoadmapFilters as resetRoadmapFilters
+} from "./views/roadmap.js";
 import { renderMastery } from "./views/mastery.js";
 import {
   configureLessonView,
@@ -18,6 +22,7 @@ import {
   startLesson,
   startReviewMode,
   answerCurrent,
+  confirmCurrentAnswer,
   advanceAfterFeedback,
   nextQuestion,
   previousQuestion,
@@ -115,6 +120,10 @@ import {
       lessonTimer.textContent = `${mins}:${secs}`;
     }
     if (questionTimer) {
+      if (state.lockedQuestionSeconds !== null && state.lockedQuestionSeconds !== undefined) {
+        questionTimer.textContent = seconds(state.lockedQuestionSeconds);
+        return;
+      }
       const value = state.activeSession.paused || !state.questionStartedAt
         ? 0
         : Math.max(0, (Date.now() - state.questionStartedAt) / 1000);
@@ -140,7 +149,7 @@ import {
 
     if (state.view === "lesson" && state.activeSession) {
       // Reset question clock when entering lesson view so tab-switch idle time is excluded.
-      if (state.currentQuestionKey && !state.activeSession.answers?.[state.currentQuestionKey]) {
+      if (state.currentQuestionKey && !state.activeSession.answers?.[state.currentQuestionKey] && !state.questionStartedAt) {
         state.questionStartedAt = Date.now();
       }
       startTicker();
@@ -151,6 +160,16 @@ import {
   function setView(view) {
     state.view = view;
     if (view !== "mistakes") state.reviewSessionId = null;
+    render();
+  }
+
+  function setRoadmapFilter(key, value) {
+    updateRoadmapFilter(key, value);
+    render();
+  }
+
+  function clearRoadmapFilters() {
+    resetRoadmapFilters();
     render();
   }
 
@@ -165,6 +184,11 @@ import {
     if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLSelectElement) return;
     if (state.showFeedback) {
       if (event.key === "Enter" || event.key === " ") { event.preventDefault(); advanceAfterFeedback(); }
+      return;
+    }
+    if (state.pendingAnswer && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      confirmCurrentAnswer();
       return;
     }
     const keyMap = { a: "A", b: "B", c: "C", d: "D", "1": "A", "2": "B", "3": "C", "4": "D" };
@@ -209,8 +233,10 @@ import {
     answerCurrent,
     changeLessonStatus,
     clearActiveSession,
+    clearRoadmapFilters,
     closeSessionReview,
     confirmSessionErrors,
+    confirmCurrentAnswer,
     deleteSelectedQuestion,
     downloadExportFile,
     downloadSeedJson,
@@ -230,6 +256,7 @@ import {
     selectQuestion,
     setBankFilter,
     setMasteryFilter,
+    setRoadmapFilter,
     setView,
     showValidation,
     startLesson,

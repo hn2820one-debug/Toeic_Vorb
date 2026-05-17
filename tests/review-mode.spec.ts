@@ -34,6 +34,9 @@ async function answerCurrentCorrect(page: Page) {
   const index = "ABCD".indexOf(correctAnswer);
   await expect(page.locator(".answer-button").nth(index)).toBeEnabled({ timeout: STEP_TIMEOUT });
   await page.locator(".answer-button").nth(index).click({ timeout: STEP_TIMEOUT });
+  const confirmButton = page.getByRole("button", { name: "Confirm Answer" });
+  await expect(confirmButton).toBeEnabled({ timeout: STEP_TIMEOUT });
+  await confirmButton.click({ timeout: STEP_TIMEOUT });
   const advanceButton = page.getByRole("button", { name: /Next Question|See Summary/ });
   await expect(advanceButton).toBeVisible({ timeout: STEP_TIMEOUT });
   await advanceButton.click({ timeout: STEP_TIMEOUT });

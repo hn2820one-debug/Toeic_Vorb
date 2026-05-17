@@ -104,7 +104,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -300,7 +300,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -496,7 +496,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -776,7 +776,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -972,7 +972,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -989,10 +989,10 @@
     "grammar_link_id": "ADV_MODIFIES_VERB",
     "question_text": "What does 'efficiency' mean in a TOEIC workplace setting?",
     "options": {
-      "A": "a rigid company policy",
-      "B": "the ability to achieve results without wasting time or resources",
-      "C": "a budget allocation method",
-      "D": "a type of management report"
+      "A": "a formal rule that controls how work is done",
+      "B": "achieving results without wasting time or effort",
+      "C": "a method for allocating the department budget",
+      "D": "a system for tracking management performance"
     },
     "correct_answer": "B",
     "explanation_zh": "efficiency 指以最少資源達成目標的能力。正確答案是 B。",
@@ -1168,7 +1168,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -1448,7 +1448,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -1644,7 +1644,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -1840,7 +1840,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -2120,7 +2120,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -2316,7 +2316,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -2512,7 +2512,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -2792,7 +2792,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -2988,7 +2988,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -3184,7 +3184,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -3464,7 +3464,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -3660,7 +3660,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -3677,10 +3677,10 @@
     "grammar_link_id": "ADJ_BEFORE_NOUN",
     "question_text": "Which definition best fits 'reliability' in a business context?",
     "options": {
-      "A": "a tendency to change plans frequently",
-      "B": "the quality of consistently working as expected and being trustworthy",
-      "C": "a type of financial audit",
-      "D": "a legal requirement for suppliers"
+      "A": "a tendency to adjust plans based on changing needs",
+      "B": "being consistently dependable and working as expected",
+      "C": "a scheduled review of a company's financial records",
+      "D": "a legal compliance standard required of all suppliers"
     },
     "correct_answer": "B",
     "explanation_zh": "reliability 指持續可信、穩定運作的品質。正確答案是 B。",
@@ -3856,7 +3856,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -4136,7 +4136,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -4332,7 +4332,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -4528,7 +4528,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -4808,7 +4808,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -5004,7 +5004,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -5200,7 +5200,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -5480,7 +5480,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -5676,7 +5676,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -5872,7 +5872,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -6152,7 +6152,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -6348,7 +6348,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 2,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",
@@ -6544,7 +6544,7 @@
     "distractor_type": "same_word_family",
     "difficulty": 3,
     "estimated_time_seconds": 8,
-    "default_error_code": "WORD_FAMILY_POS",
+    "default_error_code": "TIME_PRESSURE",
     "tags": [
       "toeic_part5",
       "word_family",

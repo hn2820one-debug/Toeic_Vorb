@@ -727,7 +727,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-01)",
+    "question_text": "Email: Thank you for helping with the document review assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-01)",
     "options": {
       "A": "take notes",
       "B": "do notes",
@@ -757,7 +757,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-122-02)",
+    "question_text": "Memo: For the document review update, the manager said the team would need to ______ before the next review. (V3-A-122-02)",
     "options": {
       "A": "have an agenda",
       "B": "prepare an agenda",
@@ -787,7 +787,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-03)",
+    "question_text": "The document review coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-03)",
     "options": {
       "A": "reduce a document",
       "B": "schedule a document",
@@ -817,7 +817,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-04)",
+    "question_text": "Announcement: The document review schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-04)",
     "options": {
       "A": "handle a complaint",
       "B": "report a complaint",
@@ -847,7 +847,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-05)",
+    "question_text": "Notice: The document review plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-05)",
     "options": {
       "A": "take notes",
       "B": "conduct notes",
@@ -877,7 +877,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-06)",
+    "question_text": "Email: Thank you for helping with the document review assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-06)",
     "options": {
       "A": "arrange an agenda",
       "B": "prepare an agenda",
@@ -907,7 +907,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-122-07)",
+    "question_text": "Memo: For the document review update, the manager said the team would need to ______ before the next review. (V3-A-122-07)",
     "options": {
       "A": "file a document",
       "B": "prepare a document",
@@ -937,7 +937,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-08)",
+    "question_text": "The document review coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-08)",
     "options": {
       "A": "complete a complaint",
       "B": "do a complaint",
@@ -967,7 +967,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-09)",
+    "question_text": "Announcement: The document review schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-09)",
     "options": {
       "A": "take notes",
       "B": "reduce notes",
@@ -997,7 +997,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-10)",
+    "question_text": "Notice: The document review plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-10)",
     "options": {
       "A": "increase an agenda",
       "B": "prepare an agenda",
@@ -1027,7 +1027,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-11)",
+    "question_text": "Email: Thank you for helping with the document review assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-11)",
     "options": {
       "A": "make a document",
       "B": "hold a document",
@@ -1057,7 +1057,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-122-12)",
+    "question_text": "Memo: For the document review update, the manager said the team would need to ______ before the next review. (V3-A-122-12)",
     "options": {
       "A": "give a complaint",
       "B": "process a complaint",
@@ -1087,7 +1087,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-13)",
+    "question_text": "The document review coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-13)",
     "options": {
       "A": "take notes",
       "B": "file notes",
@@ -1117,7 +1117,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-14)",
+    "question_text": "Announcement: The document review schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-14)",
     "options": {
       "A": "report an agenda",
       "B": "prepare an agenda",
@@ -1147,7 +1147,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-15)",
+    "question_text": "Notice: The document review plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-15)",
     "options": {
       "A": "meet a document",
       "B": "approve a document",
@@ -1177,7 +1177,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-16)",
+    "question_text": "Email: Thank you for helping with the document review assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-16)",
     "options": {
       "A": "confirm a complaint",
       "B": "receive a complaint",
@@ -1207,7 +1207,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-122-17)",
+    "question_text": "Memo: For the document review update, the manager said the team would need to ______ before the next review. (V3-A-122-17)",
     "options": {
       "A": "take notes",
       "B": "make notes",
@@ -1237,7 +1237,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-18)",
+    "question_text": "The document review coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-18)",
     "options": {
       "A": "take an agenda",
       "B": "prepare an agenda",
@@ -1267,7 +1267,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-19)",
+    "question_text": "Announcement: The document review schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-19)",
     "options": {
       "A": "receive a document",
       "B": "attend a document",
@@ -1297,7 +1297,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-20)",
+    "question_text": "Notice: The document review plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-122-20)",
     "options": {
       "A": "manage a complaint",
       "B": "renew a complaint",
@@ -1327,7 +1327,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-21)",
+    "question_text": "Email: Thank you for helping with the document review assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-122-21)",
     "options": {
       "A": "take notes",
       "B": "process notes",
@@ -1357,7 +1357,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-122-22)",
+    "question_text": "Memo: For the document review update, the manager said the team would need to ______ before the next review. (V3-A-122-22)",
     "options": {
       "A": "conduct an agenda",
       "B": "prepare an agenda",
@@ -1387,7 +1387,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-23)",
+    "question_text": "The document review coordinator is expected to ______ as soon as the request reaches the department. (V3-A-122-23)",
     "options": {
       "A": "renew a document",
       "B": "complete a document",
@@ -1417,7 +1417,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-24)",
+    "question_text": "Announcement: The document review schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-122-24)",
     "options": {
       "A": "launch a complaint",
       "B": "make a complaint",
@@ -1447,7 +1447,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-01)",
+    "question_text": "Email: Thank you for helping with the staff coordination assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-01)",
     "options": {
       "A": "issue a memo",
       "B": "file a memo",
@@ -1477,7 +1477,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-123-02)",
+    "question_text": "Memo: For the staff coordination update, the manager said the team would need to ______ before the next review. (V3-A-123-02)",
     "options": {
       "A": "install an appointment",
       "B": "schedule an appointment",
@@ -1507,7 +1507,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-03)",
+    "question_text": "The staff coordination coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-03)",
     "options": {
       "A": "receive a record",
       "B": "attend a record",
@@ -1537,7 +1537,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-04)",
+    "question_text": "Announcement: The staff coordination schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-04)",
     "options": {
       "A": "file a request",
       "B": "prepare a request",
@@ -1567,7 +1567,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-05)",
+    "question_text": "Notice: The staff coordination plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-05)",
     "options": {
       "A": "issue a memo",
       "B": "make a memo",
@@ -1597,7 +1597,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-06)",
+    "question_text": "Email: Thank you for helping with the staff coordination assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-06)",
     "options": {
       "A": "take an appointment",
       "B": "schedule an appointment",
@@ -1627,7 +1627,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-123-07)",
+    "question_text": "Memo: For the staff coordination update, the manager said the team would need to ______ before the next review. (V3-A-123-07)",
     "options": {
       "A": "file a record",
       "B": "prepare a record",
@@ -1657,7 +1657,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-08)",
+    "question_text": "The staff coordination coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-08)",
     "options": {
       "A": "do a request",
       "B": "submit a request",
@@ -1687,7 +1687,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-09)",
+    "question_text": "Announcement: The staff coordination schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-09)",
     "options": {
       "A": "issue a memo",
       "B": "process a memo",
@@ -1717,7 +1717,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-10)",
+    "question_text": "Notice: The staff coordination plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-10)",
     "options": {
       "A": "conduct an appointment",
       "B": "schedule an appointment",
@@ -1747,7 +1747,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-11)",
+    "question_text": "Email: Thank you for helping with the staff coordination assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-11)",
     "options": {
       "A": "make a record",
       "B": "hold a record",
@@ -1777,7 +1777,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-123-12)",
+    "question_text": "Memo: For the staff coordination update, the manager said the team would need to ______ before the next review. (V3-A-123-12)",
     "options": {
       "A": "process a request",
       "B": "review a request",
@@ -1807,7 +1807,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-13)",
+    "question_text": "The staff coordination coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-13)",
     "options": {
       "A": "issue a memo",
       "B": "receive a memo",
@@ -1837,7 +1837,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-14)",
+    "question_text": "Announcement: The staff coordination schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-14)",
     "options": {
       "A": "reduce an appointment",
       "B": "schedule an appointment",
@@ -1867,7 +1867,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-15)",
+    "question_text": "Notice: The staff coordination plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-15)",
     "options": {
       "A": "meet a record",
       "B": "approve a record",
@@ -1897,7 +1897,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-16)",
+    "question_text": "Email: Thank you for helping with the staff coordination assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-16)",
     "options": {
       "A": "receive a request",
       "B": "attend a request",
@@ -1927,7 +1927,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-123-17)",
+    "question_text": "Memo: For the staff coordination update, the manager said the team would need to ______ before the next review. (V3-A-123-17)",
     "options": {
       "A": "issue a memo",
       "B": "renew a memo",
@@ -1957,7 +1957,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-18)",
+    "question_text": "The staff coordination coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-18)",
     "options": {
       "A": "report an appointment",
       "B": "schedule an appointment",
@@ -1987,7 +1987,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-19)",
+    "question_text": "Announcement: The staff coordination schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-19)",
     "options": {
       "A": "request a record",
       "B": "handle a record",
@@ -2017,7 +2017,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-20)",
+    "question_text": "Notice: The staff coordination plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-123-20)",
     "options": {
       "A": "renew a request",
       "B": "complete a request",
@@ -2047,7 +2047,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-21)",
+    "question_text": "Email: Thank you for helping with the staff coordination assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-123-21)",
     "options": {
       "A": "issue a memo",
       "B": "monitor a memo",
@@ -2077,7 +2077,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-123-22)",
+    "question_text": "Memo: For the staff coordination update, the manager said the team would need to ______ before the next review. (V3-A-123-22)",
     "options": {
       "A": "do an appointment",
       "B": "schedule an appointment",
@@ -2107,7 +2107,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-23)",
+    "question_text": "The staff coordination coordinator is expected to ______ as soon as the request reaches the department. (V3-A-123-23)",
     "options": {
       "A": "renew a record",
       "B": "complete a record",
@@ -2137,7 +2137,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-24)",
+    "question_text": "Announcement: The staff coordination schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-123-24)",
     "options": {
       "A": "monitor a request",
       "B": "hold a request",
@@ -2167,7 +2167,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-01)",
+    "question_text": "Email: Thank you for helping with the client briefing assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-01)",
     "options": {
       "A": "approve a proposal",
       "B": "schedule a proposal",
@@ -2197,7 +2197,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-124-02)",
+    "question_text": "Memo: For the client briefing update, the manager said the team would need to ______ before the next review. (V3-A-124-02)",
     "options": {
       "A": "do a contract",
       "B": "sign a contract",
@@ -2227,7 +2227,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-03)",
+    "question_text": "The client briefing coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-03)",
     "options": {
       "A": "receive a seminar",
       "B": "schedule a seminar",
@@ -2257,7 +2257,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-04)",
+    "question_text": "Announcement: The client briefing schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-04)",
     "options": {
       "A": "complete a presentation",
       "B": "do a presentation",
@@ -2287,7 +2287,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-05)",
+    "question_text": "Notice: The client briefing plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-05)",
     "options": {
       "A": "approve a proposal",
       "B": "prepare a proposal",
@@ -2317,7 +2317,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-06)",
+    "question_text": "Email: Thank you for helping with the client briefing assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-06)",
     "options": {
       "A": "process a contract",
       "B": "sign a contract",
@@ -2347,7 +2347,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-124-07)",
+    "question_text": "Memo: For the client briefing update, the manager said the team would need to ______ before the next review. (V3-A-124-07)",
     "options": {
       "A": "file a seminar",
       "B": "prepare a seminar",
@@ -2377,7 +2377,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-08)",
+    "question_text": "The client briefing coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-08)",
     "options": {
       "A": "hold a presentation",
       "B": "conduct a presentation",
@@ -2407,7 +2407,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-09)",
+    "question_text": "Announcement: The client briefing schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-09)",
     "options": {
       "A": "approve a proposal",
       "B": "hold a proposal",
@@ -2437,7 +2437,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-10)",
+    "question_text": "Notice: The client briefing plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-10)",
     "options": {
       "A": "receive a contract",
       "B": "sign a contract",
@@ -2467,7 +2467,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-11)",
+    "question_text": "Email: Thank you for helping with the client briefing assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-11)",
     "options": {
       "A": "make a seminar",
       "B": "hold a seminar",
@@ -2497,7 +2497,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-124-12)",
+    "question_text": "Memo: For the client briefing update, the manager said the team would need to ______ before the next review. (V3-A-124-12)",
     "options": {
       "A": "approve a presentation",
       "B": "reduce a presentation",
@@ -2527,7 +2527,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-13)",
+    "question_text": "The client briefing coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-13)",
     "options": {
       "A": "approve a proposal",
       "B": "review a proposal",
@@ -2557,7 +2557,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-14)",
+    "question_text": "Announcement: The client briefing schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-14)",
     "options": {
       "A": "renew a contract",
       "B": "sign a contract",
@@ -2587,7 +2587,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-15)",
+    "question_text": "Notice: The client briefing plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-15)",
     "options": {
       "A": "meet a seminar",
       "B": "approve a seminar",
@@ -2617,7 +2617,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-16)",
+    "question_text": "Email: Thank you for helping with the client briefing assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-16)",
     "options": {
       "A": "handle a presentation",
       "B": "file a presentation",
@@ -2647,7 +2647,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-124-17)",
+    "question_text": "Memo: For the client briefing update, the manager said the team would need to ______ before the next review. (V3-A-124-17)",
     "options": {
       "A": "approve a proposal",
       "B": "attend a proposal",
@@ -2677,7 +2677,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-18)",
+    "question_text": "The client briefing coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-18)",
     "options": {
       "A": "monitor a contract",
       "B": "sign a contract",
@@ -2707,7 +2707,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-19)",
+    "question_text": "Announcement: The client briefing schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-19)",
     "options": {
       "A": "request a seminar",
       "B": "handle a seminar",
@@ -2737,7 +2737,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "PART6_CONTEXT_COLLOCATION",
-    "question_text": "Notice: The office task plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-20)",
+    "question_text": "Notice: The client briefing plan has been revised for next week. Several tasks still need follow-up before the client visit, and one coordinator will handle the final update. To keep the project on track, the team should ______ before Friday afternoon. (V3-A-124-20)",
     "options": {
       "A": "launch a presentation",
       "B": "make a presentation",
@@ -2767,7 +2767,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Email: Thank you for helping with the office task assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-21)",
+    "question_text": "Email: Thank you for helping with the client briefing assignment. The supervisor needs a clear update by 3 p.m., and the rest of the team cannot proceed until this step is complete. Please ______ and send the confirmation to your supervisor. (V3-A-124-21)",
     "options": {
       "A": "approve a proposal",
       "B": "complete a proposal",
@@ -2797,7 +2797,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Memo: For the office task update, the manager said the team would need to ______ before the next review. (V3-A-124-22)",
+    "question_text": "Memo: For the client briefing update, the manager said the team would need to ______ before the next review. (V3-A-124-22)",
     "options": {
       "A": "issue a contract",
       "B": "sign a contract",
@@ -2827,7 +2827,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "The office task coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-23)",
+    "question_text": "The client briefing coordinator is expected to ______ as soon as the request reaches the department. (V3-A-124-23)",
     "options": {
       "A": "renew a seminar",
       "B": "complete a seminar",
@@ -2857,7 +2857,7 @@
     "skill": "collocation",
     "subskill": "verb_noun_collocation",
     "grammar_link_id": "COLLOCATION_VERB_NOUN",
-    "question_text": "Announcement: The office task schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-24)",
+    "question_text": "Announcement: The client briefing schedule is tighter than expected this week. Managers want each team to finish the key coordination step before the status meeting begins. After reviewing the revised plan, the staff will ______ before leaving for the day. (V3-A-124-24)",
     "options": {
       "A": "have a presentation",
       "B": "process a presentation",

@@ -1,7 +1,7 @@
 # TO_AI — 程式設計優化計劃書
 
-**版本：** 4.0  
-**建立日期：** 2026-05-14（v2.0）；v3.0 深度審查：2026-05-14；v4.0 實作更新：2026-05-14  
+**版本：** 7.0  
+**建立日期：** 2026-05-14（v2.0）；v3.0 深度審查：2026-05-14；v4.0 實作更新：2026-05-14；v5.0 現況更新：2026-05-15；v6.0 內容品質修正：2026-05-16；v7.0 V3 詞彙項目內容填入：2026-05-17  
 **適用程式：** TOEIC Vocabulary Tracker（Program B）  
 **路徑：** `C:\Users\Keith\Toeic\toeic-app-Vorb`  
 **撰寫目的：** 全面審查程式碼架構、學習內容、資料模型、UI/UX，識別所有待解決問題，並輸出有優先順序的優化計劃。
@@ -18,9 +18,11 @@
 | 語言 | 純 HTML / CSS / JavaScript (ES2020，ES Modules) |
 | 主要儲存 | IndexedDB (`toeic_vocab_tracker_db`, v1) |
 | 次要儲存 | localStorage (`toeic_vocab_tracker_preferences`, `toeic_vocab_active_session`) |
-| 離線支援 | Service Worker (`sw.js`, stale-while-revalidate) |
-| 題庫規模 | 70 課 / 1,968 題 (V0: 10 課, V1 A–F: 60 課) |
-| 學習目標 | TOEIC 570 → 750，單字 / Word Family 為核心 |
+| 離線支援 | Service Worker (`sw.js`, `toeic-vorb-v4`, stale-while-revalidate) |
+| 題庫規模 | **180 課 / 4,608 題**（V0: 10 課, V1 A–F: 60 課, V2 A–E: 50 課, V3 A–F: 60 課） |
+| 詞彙項目 | 494 個（word_family 42 + diagnostic_vocab 12 + scene_vocabulary 200 + collocation 240） |
+| 學習目標 | TOEIC 570 → 750，單字 / Word Family / Collocation 為核心 |
+| 種子版本 | `toeic_vocab_tracker_v3_items_2026_05_17` |
 
 ### 1.2 JS 模組職責
 
@@ -32,7 +34,7 @@
 | `js/vocab-tracker.js` | 主協調器：Shell 渲染、計時器、路由、鍵盤監聽、`window.VocabTracker` 公開 API |
 | `js/views/today.js` | Today / 週儀表板視圖（含 Next Action 可點擊按鈕） |
 | `js/views/roadmap.js` | 課程路線圖視圖 |
-| `js/views/lesson.js` | 課程執行引擎（含即時反饋面板、mastery-adaptive 題目順序） |
+| `js/views/lesson.js` | 課程執行引擎（含即時反饋面板、mastery-adaptive 題目順序、Review Mode） |
 | `js/views/mistakes.js` | 錯誤複習佇列、Session Error Review（含 grammar_link 面板） |
 | `js/views/mastery.js` | 詞彙掌握度儀表板（含 mastery_level 篩選） |
 | `js/views/export.js` | 多格式匯出（CSV、JSON、Markdown、JSONL；export 時全量取 attempts） |
@@ -46,13 +48,13 @@
 | `users` | `user_id` | 使用者資料 |
 | `settings` | `key` | Seed 版本、course_id |
 | `curriculum` | `course_id` | 課程元資料與階段定義 |
-| `lessons` | `lesson_id` | 70 堂課的狀態與題目清單 |
-| `questions` | `question_id` | 1,968 道題目 |
+| `lessons` | `lesson_id` | 180 堂課的狀態與題目清單 |
+| `questions` | `question_id` | 4,608 道題目 |
 | `vocab_items` | `item_id` | 每個詞彙項目的掌握度紀錄 |
 | `attempts` | `attempt_id` | 每次作答紀錄（永久累積；dashboard 載入 300 筆，export 全量） |
 | `sessions` | `session_id` | 每堂課的結束摘要 |
 | `error_logs` | `error_log_id` | 確認後的錯誤分類 |
-| `review_queue` | `review_id` | 待複習的弱點項目 |
+| `review_queue` | `review_id` | 待複習的弱點項目（Review Mode 使用） |
 | `exports` | `export_id` | 匯出紀錄 |
 
 ### 1.4 共用狀態物件（js/state.js）
@@ -66,14 +68,14 @@ export const state = {
   reviewSessionId, selectedQuestionId,
   bankFilters: { stage, lesson_id, type, error_code },
   tickId,
-  showFeedback,      // P1-1：作答後反饋面板開關
-  bankPage,          // P2-2：Question Bank 分頁
-  masteryFilter: { level },  // P2-3：Mastery 篩選
-  grammarLinks       // P3-2：grammar_links.json 快取（啟動時載入）
+  showFeedback,      // 作答後反饋面板開關
+  bankPage,          // Question Bank 分頁
+  masteryFilter: { level },  // Mastery 篩選
+  grammarLinks       // grammar_links.json 快取（啟動時載入）
 };
 ```
 
-### 1.5 課程執行流程（含即時反饋）
+### 1.5 課程執行流程（含即時反饋 + Review Mode）
 
 ```
 startLesson()
@@ -82,6 +84,11 @@ startLesson()
            步驟分配（greedy take）:
            previous_review → new_vocabulary → pattern_focus → toeic_practice
 
+[Review Mode] startLesson(REVIEW_LESSON_ID, filter)
+  └─ 從 review_queue 取 pending items（due/high_priority/repeated/all）
+       最多 20 題，mode: "review_queue"
+       Queue entry 結果：fixed / still_weak / repeated_error
+
 answerCurrent(letter)
   ├─ 計算 responseTime
   ├─ put("attempts", attempt)
@@ -89,7 +96,7 @@ answerCurrent(letter)
   ├─ saveActiveSession（current_index 不自動推進）
   └─ state.showFeedback = true → renderLesson() 顯示反饋面板
 
-renderLesson() 反饋面板（P1-1）:
+renderLesson() 反饋面板:
   ├─ 顯示 ✓/✗ banner（綠/紅）
   ├─ 所有選項按鈕：正確答案標綠、錯誤選項標紅（disabled）
   ├─ explanation_zh 顯示
@@ -138,9 +145,9 @@ stable → mastered 條件:
 | `WORD_FAMILY_NOUN_VERB` | 名詞 vs. 動詞辨析 |
 | `WORD_FAMILY_VERB_NOUN` | 動詞 vs. 名詞辨析 |
 | `WORD_FAMILY_VERB_NOUN_ADJ` | 動詞 / 名詞 / 形容詞三選一 |
-| `SCENE_VOCAB_CONTEXT` | TOEIC 情境詞彙（V2 預備） |
-| `COLLOCATION_VERB_NOUN` | 動詞 + 名詞固定搭配（V2 預備） |
-| `PART6_CONTEXT_COLLOCATION` | Part 6 上下文搭配（V3 預備） |
+| `SCENE_VOCAB_CONTEXT` | TOEIC 情境詞彙（V2） |
+| `COLLOCATION_VERB_NOUN` | 動詞 + 名詞固定搭配（V3） |
+| `PART6_CONTEXT_COLLOCATION` | Part 6 上下文搭配（V3） |
 
 ### 1.8 公開 API（window.VocabTracker）
 
@@ -159,179 +166,303 @@ setBankFilter, setMasteryFilter, setView, showValidation, startLesson, togglePau
 
 ---
 
-## 2. 已完成項目彙整（截至 v4.0）
+## 2. 已完成項目彙整（截至 v5.0）
 
 | 編號 | 項目 | 完成版本 |
 |------|------|----------|
-| BUG-001 | stable_review_sessions 遞增邏輯 | v3.0 確認已修 |
-| BUG-002 | finishLesson isFinishing guard | v3.0 確認已修 |
-| BUG-003 | 硬編碼本機路徑 | v3.0 確認已修 |
+| BUG-001 | stable_review_sessions 遞增邏輯 | v3.0 |
+| BUG-002 | finishLesson isFinishing guard | v3.0 |
+| BUG-003 | 硬編碼本機路徑 | v3.0 |
 | P0-1 | finishLesson try/finally 保護 | v3.0 |
 | P0-2 | seedIfNeeded 合併邏輯修正（進度欄位保留策略） | v3.0 |
 | P0-3 | getQuestionsForLesson N+1 消除（getAll + Set 過濾） | v3.0 |
-| P1-1 | **作答後即時反饋**（✓/✗ banner + 正確選項標綠 + explanation_zh + 按鍵繼續） | v4.0 |
-| P1-3 | **Today 視圖 Next Action 可點擊**（review/retake/start 各對應主要行動按鈕） | v4.0 |
-| P1-5 | SW stale-while-revalidate | v3.0 確認已完成 |
-| P2-1 | **鍵盤快捷鍵**（A–D / 1–4 選答；Enter/Space 確認反饋） | v4.0 |
-| P2-2 | **Question Bank Load More 分頁**（每頁 120 筆；篩選時重置頁碼） | v4.0 |
-| P2-3 | **Mastery 視圖 mastery_level 篩選**（含各 level 計數下拉選單） | v4.0 |
-| P3-1 | export 時全量取 attempts（exportPackage 暫換 state.attempts） | v3.0 確認已完成 |
-| P3-2 | **grammar_link_id 查找表**（14 條記錄；Error Review 可折疊語法面板） | v4.0 |
-| P3-3 | **mastery-adaptive 題目選取**（buildRuntimeQuestions 按 mastery_score 升序） | v4.0 |
-| P3-1（dup） | P4-2 Seed JSON 匯出 | v3.0 |
-| P4-1 | 模組拆分（state.js + 8 views） | v3.0 |
-| P4-3 | Playwright 測試（lesson-flow + export-flow，2/2 passing） | v3.0 |
+| P1-1 | 作答後即時反饋（✓/✗ banner + 正確選項標綠 + explanation_zh + 按鍵繼續） | v4.0 |
+| P1-2 | **Review Mode 完整實作**（dedicated queue runtime、mode:"review_queue"、fixed/still_weak/repeated_error、export review_effectiveness.csv） | v5.0 |
+| P1-3 | Today 視圖 Next Action 可點擊（review/retake/start 各對應主要行動按鈕） | v4.0 |
+| P1-5 | SW stale-while-revalidate | v3.0 |
+| P2-1 | 鍵盤快捷鍵（A–D / 1–4 選答；Enter/Space 確認反饋） | v4.0 |
+| P2-2 | Question Bank Load More 分頁（每頁 120 筆；篩選時重置頁碼） | v4.0 |
+| P2-3 | Mastery 視圖 mastery_level 篩選（含各 level 計數下拉選單） | v4.0 |
+| P3-1 | export 時全量取 attempts（exportPackage 暫換 state.attempts） | v3.0 |
+| P3-2 | grammar_link_id 查找表（14 條記錄；Error Review 可折疊語法面板） | v4.0 |
+| P3-3 | mastery-adaptive 題目選取（buildRuntimeQuestions 按 mastery_score 升序） | v4.0 |
+| P4-1 | **V2 TOEIC Scene Vocabulary 完整實作**（50 課，V2-A～V2-E，1,200 題） | v5.0 |
+| P4-2 | **V3 Collocation 完整實作**（60 課，V3-A～V3-F，1,440 題） | v5.0 |
+| P4-3 | Playwright 測試（lesson-flow + export-flow + V2/V3 seed 驗證，3/3 passing） | v5.0 |
+| — | Content validation v2（scripts/validate-vocab-data.js，0 duplicate，0 missing field） | v5.0 |
+| — | Export review_effectiveness.csv | v5.0 |
+| Q-001b | **V2 定義嵌入題幹完整修正** — 1,000 題（83.3%）→ **0 題（0%）**；新增 `scripts/rewrite-v2-definitions.js`，含 200 詞彙項目的 SENTENCE_BANK；Email: 型題保留，其餘 5 類全部改寫為真實 TOEIC 情境句 | v6.0 |
+| Q-002a | **V0 選項長度偏差改善** — 整體 75%（180/240）→ **48.8%（117/240）**；meaning_choice 100%→40%，review_question 100%→38%，false_friend 100%→0%；新增 `scripts/rewrite-v0-option-bias.js`；3 個單字選項改為 4-7 字的近義定義短語 | v6.0 |
+| Q-001c-partial | **V3 跨課模板重複消除** — 5 個模板 ×20 次（跨 4 課共用 "office task" 主題）→ **0 個模板 >10 次**；V3-A-122/123/124 各自獲得獨立主題（document review / staff coordination / client briefing）；最高重複上限降至 ×5（單課內設計性重複，正常）；新增 `scripts/rewrite-v3-stem-topics.js` | v6.0 |
+| — | **V1 選項偏差確認為結構性假象** — 48.7% 偏差來自 word family 四個選項本身 {accurate/accuracy=8, accurately/inaccuracy=10} 的長度對稱，rank-1 理論期望值就是 50%；邊際差距 ≤5 字的題共 490 題，>5 字的僅 10 題；**不需修正** | v6.0 |
+| Q-003 | **V3 vocab_items chinese/example 填入** — 240 個 collocation items 全部由空殼（`chinese: "固定搭配：[英文]"`、`example: ""`）改寫為：真實繁體中文釋義（如 "召開/舉行會議"）+ TOEIC 情境例句；新增 `scripts/fix-v3-item-quality.js`，按 A-F 組（辦公行政/物流/HR/財務/服務業/企業運營）組織 240 條 BANK | v7.0 |
 
 ---
 
 ## 3. 仍待解決的問題
 
-### 3.1 學習體驗缺口（最影響教育效果）
+### 3.1 內容品質問題（最影響教育效果）
 
-#### L-002：review_queue 是死清單（最大學習缺口）
-**問題：** 答錯的題目被加入 `review_queue`，但只有「Done」按鈕標記完成，沒有實際練習機會。  
-**後果：** 弱點詞彙得不到針對性練習，SRS 系統形同虛設。  
-**改善方向：** Mistakes 視圖加入「Start Review Session」按鈕，從 pending items 取出最多 10–15 題，以現有 lesson runtime 模式執行。需在 `startLesson()` 中支援傳入自定義 question_ids（不依賴 lesson_id）。
+#### Q-001b：V2 定義嵌入題幹 ✅ 已修正（v6.0）
+
+**修正結果：** 1,000 題（83.3%）→ **0 題（0%）**  
+`scripts/rewrite-v2-definitions.js`：Notice / Conversation / Memo / Announcement / review_question 五類題型全部改寫，Email: 型原本即無定義故保留。
+
+**殘留（非迴歸）：** V2 Email: 型有 ×4 的小模板重複（topic 詞相同），DEF_PATTERNS 不偵測，教學影響極小。
+
+---
+
+#### Q-002a：V0 選項長度偏差 ✅ 已改善（v6.0）
+
+**修正結果：**
+
+| 題型 | 修正前 | 修正後 |
+|------|--------|--------|
+| V0 整體 | 75%（180/240） | **48.8%（117/240）** |
+| meaning_choice | 100%（30/30） | **40%（12/30）** |
+| review_question | 100%（40/40） | **38%（15/40）** |
+| false_friend | 100%（20/20） | **0%（0/20）** |
+| part5_sentence_completion | 100% | 100%（結構性，"approved" 僅比最長選項多 1 字，不是真偏差） |
+| part6_context_choice | 80% | 80%（"schedule" 與 "discount" 同為 8 字，tied rank-1，無法靠選項長度答題）|
+
+`scripts/rewrite-v0-option-bias.js`：3 個單字 distractor 改為 4-7 字短語定義。
+
+**殘留（設計限制）：** part5/part6 屬於「tied for longest」統計假象，不是真偏差；V0 部分 meaning_choice 正確答案本身就較長（如 warranty="a written promise to repair or replace a product" 48 字），無法在不改變學習目標的前提下消除。
+
+---
+
+#### Q-001c-partial：V3 跨課模板重複 ✅ 已消除（v6.0）
+
+**修正結果：**
+
+| 指標 | 修正前 | 修正後 |
+|------|--------|--------|
+| 唯一模板數 | 285 | **300** |
+| 模板 >10 次重複 | 5 個（×16–×20） | **0 個** |
+| 最高重複次數 | ×20（"office task" 跨 4 課） | **×5（單課設計性重複）** |
+
+`scripts/rewrite-v3-stem-topics.js`：V3-A-122/123/124 各自獲得獨立主題；跨課重複完全消除。
+
+**說明：** ×5 的單課內重複是設計性的——同一課的 24 題使用相同 5 個模板，分別測試 4 個目標詞彙，這是 spaced repetition 設計，非問題。
+
+---
+
+#### Q-001 殘留：V2/V3 跨課干擾題 ⚠️ 未開始（P2）
+
+每課的 24 題全部測同一課的 4 個詞彙，沒有舊課詞彙作為干擾項。學習者可能依賴「本課範圍」猜題。
+
+**建議：** 每課 review_question 區加入 1-2 個舊課詞彙選項，或每 5 課加一堂跨課混合課。
+
+---
+
+#### Q-001 殘留：V1 選項偏差 ✅ 確認為結構性假象（不需修正）
+
+V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy/inaccuracy），長度自然呈 {8,10,8,10} 對稱分佈。rank-1 理論期望值本就是 50%（兩個 ×10 選項）。真正的 edge >5 字的題目僅 10 題（0.6%），**不需修正**。
+
+---
+
+### 3.2 學習體驗缺口
 
 #### L-004：vocab_items 富格式內容未呈現
+
 **問題：** `vocab_items.json` 中每個詞彙有 `chinese`（中文釋義）、`example`（TOEIC 例句）、`variants`（詞形變體）、`common_wrong_forms`、`toeic_contexts`，但 UI 中完全未顯示。  
+**注意（v7.0）：** V3 的 240 個 collocation items 的 chinese + example 已在 v7.0 填入真實內容，**資料已就緒**。V1/V2 items 本來就有內容。現在可以安全實作 L-004。  
 **改善方向：** Error Review 卡片加入 chinese 釋義 + variants + example；或加入獨立的「Vocabulary Card」視圖。
 
 #### L-006：next_review_date 計算但不行動
+
 **問題：** `updateItemMastery()` 計算 `next_review_date` 存入 IDB，但系統不使用此日期推薦或排程複習。  
 **改善方向：** Today 視圖加入「Due for Review」計數器，並在到期時優先顯示於 Next Action。
 
 ---
 
-### 3.2 資料與效能
+### 3.3 資料與效能
 
 #### D-001：attempts 長期累積無上限
+
 **現狀：** Dashboard 載入 300 筆，export 全量。但 `attempts` store 無清理策略。  
 **建議：** 設定選項「保留最近 N 天 attempt 記錄」。
 
 #### D-002：DB_VERSION 升級路徑未測試
-**建議：** 加入模擬升級腳本，V2+ 新 store 時先在 scripts/ 驗證。
+
+**建議：** 加入模擬升級腳本，V4+ 新 store 時先在 scripts/ 驗證。
 
 ---
 
-### 3.3 內容
+### 3.4 App 層面功能缺口
 
-#### C-001：V2–V6 內容缺失
-**狀況：** `grammar_links.json` 已預備 `SCENE_VOCAB_CONTEXT`、`COLLOCATION_VERB_NOUN`、`PART6_CONTEXT_COLLOCATION`，顯示 V2/V3 開發已在進行中。V2 Scene Vocabulary 和 V3 Collocation 題庫尚未建立。
+#### F-001：Stage Seal 邏輯未嚴格執行
 
-#### C-002：V1-A 語意審核
-**問題：** 部分 Word Family 題目語境仍不自然，待人工逐一審核。
+**問題：** 課程進度可以顯示為「完成」，但沒有嚴格的 stage seal 條件（正確率門檻 + 重複錯誤率 + seal test）。  
+**建議：** 可選的 strict mode，seal 條件：所有課完成 + stage 正確率達標 + 重複錯誤率低於門檻 + seal test 通過。
 
----
+#### F-002：V0 診斷結果未連結學習建議
 
-### 3.4 待實作功能
+**問題：** V0 診斷分數不會產生個性化的學習路徑建議。  
+**建議：** V0 結束後輸出弱點分類 → 對應 V1/V2/V3 起點建議。
 
-#### F-001：掌握度公式 fixture 測試（P2-4）
-**建議：** 在 `scripts/test-scoring.js` 為 `calculateMasteryScore()` 撰寫 Node.js 輸入/輸出測試集，驗證邊界情況。
+#### F-003：掌握度公式無 fixture 測試
+
+**建議：** 在 `scripts/test-scoring.js` 為 `calculateMasteryScore()` 撰寫 Node.js 輸入/輸出邊界測試集。
 
 ---
 
 ## 4. 優化計劃 — 剩餘優先順序
 
-### 優先級 P1（剩餘）：學習體驗核心改善
+### ~~優先級 P0~~（已完成，v6.0–v7.0）：內容品質修正
 
-| 編號 | 項目 | 涉及檔案 | 工作量 |
-|------|------|----------|--------|
-| P1-2 | **複習課程執行引擎** — Mistakes 視圖加「Start Review Session」，從 pending review_queue 取題，走現有 lesson runtime；`startLesson()` 需支援傳入自定義 question_ids | `views/mistakes.js`, `views/lesson.js` | 大 |
-| P1-4 | **vocab_items 富格式資料呈現** — Error Review 卡片加入 chinese 釋義 + variants + example；Mastery 視圖加詞形變體欄 | `views/mistakes.js`, `views/mastery.js` | 中 |
-
----
-
-### 優先級 P2（剩餘）：UI/UX 改善
-
-| 編號 | 項目 | 涉及檔案 | 工作量 |
-|------|------|----------|--------|
-| P2-4 | **掌握度公式 fixture 測試** — 為 `calculateMasteryScore()` 撰寫 Node.js 輸入/輸出測試集 | `scripts/test-scoring.js` | 中 |
+| 編號 | 項目 | 狀態 |
+|------|------|------|
+| Q-001a | **audit-option-length.js** — 量化選項長度偏差與定義嵌入問題 | ✅ 完成 |
+| Q-001b | **V2 定義嵌入題幹改寫** — 1,000 題 → 0 題（0%） | ✅ 完成 |
+| Q-002a | **V0 選項長度均衡** — 整體偏差 75% → 48.8% | ✅ 完成 |
+| Q-001c-partial | **V3 跨課模板重複消除** — 最高 ×20 → ×5 | ✅ 完成 |
+| V1 選項偏差 | 確認為詞形長度對稱的結構假象，不需修正 | ✅ 關閉 |
+| Q-003 | **V3 vocab_items 空殼修正** — 240 items chinese/example 全部填入（v7.0） | ✅ 完成 |
 
 ---
 
-### 優先級 P3（剩餘）：資料與效能
+### 優先級 P1（目前最高優先）：學習體驗核心改善
 
 | 編號 | 項目 | 涉及檔案 | 工作量 |
 |------|------|----------|--------|
-| P3-4 | **V1-A 語意審核** — 逐一檢視仍有語境問題的 Word Family 題目 | `data/vocab/questions_v1a.json` | 中（內容） |
+| C-001 | **V2/V3 跨課干擾題** — 每課 review_question 加入 1-2 個舊課詞彙選項；或每 5 課插入跨課混合課 | `data/vocab/questions_v2*.json`, `questions_v3*.json`, `curriculum.json` | 大 |
+| L-004 | **vocab_items 富格式資料呈現** — Error Review 卡片加入 chinese 釋義 + variants + example | `js/views/mistakes.js`, `js/views/mastery.js` | 中 |
+| L-006 | **Due for Review 計數** — Today 視圖顯示到期複習項目數量 | `js/views/today.js` | 小 |
 
 ---
 
-### 優先級 P4：內容擴展
+### 優先級 P2：App 層面功能
 
 | 編號 | 項目 | 涉及檔案 | 工作量 |
 |------|------|----------|--------|
-| P4-1 | **V2 TOEIC Scene Vocabulary** — 50 課，辦公室 / 物流 / 人事 / 財務情境詞彙，`scene_vocabulary` 題型為主 | 新增 `data/vocab/questions_v2*.json` | 極大 |
-| P4-2 | **V3 Collocation** — 60 課，TOEIC 常見動詞-名詞搭配，`collocation` / `part6_context_choice` 為主 | 新增 `data/vocab/questions_v3*.json` | 極大 |
+| F-001 | **Stage Seal 嚴格模式** — 可選擇性開啟，seal 條件完整定義 | `views/settings.js`, `views/lesson.js` | 大 |
+| F-002 | **V0 診斷 → 學習建議** — V0 結束後輸出弱點分類和建議起點 | `views/lesson.js`, `views/today.js` | 中 |
+| F-003 | **掌握度公式 fixture 測試** | `scripts/test-scoring.js` | 中 |
 
 ---
 
-## 5. 當前 App 狀態總表（截至 v4.0）
+### 優先級 P3：未來內容擴展（僅在 Q-001/Q-002 修完後開始）
+
+| 編號 | 項目 | 工作量 |
+|------|------|--------|
+| P3-1 | V4 Formal Phrase（emails、notices、contracts、policy phrases）| 極大 |
+| P3-2 | V5 False Friends + Speed（高風險混淆詞 + 時間壓力練習）| 極大 |
+| P3-3 | V6 Integrated Review + Seal Test（混合複習、重複錯誤收束、stage sealing）| 極大 |
+
+**注意：** V4 不得沿用 V2/V3 的 generator 模板風格。必須在 content quality lint 規則到位後才開始。
+
+---
+
+## 5. 當前 App 狀態總表（截至 v5.0）
 
 | 區域 | 狀態 | 備注 |
 |------|------|------|
 | 課程執行引擎 | ✅ 完整 | try/finally 保護；seed 合併邏輯正確 |
-| 掌握度計算 | ✅ 邏輯正確 | stable_review_sessions 正確遞增；公式未有 fixture 測試 |
+| 掌握度計算 | ✅ 邏輯正確 | stable_review_sessions 正確遞增；公式無 fixture 測試 |
 | 即時作答反饋 | ✅ 完成 | 綠/紅 banner + 答案著色 + explanation_zh + 鍵盤 Enter 繼續 |
 | mastery-adaptive 題目 | ✅ 完成 | buildRuntimeQuestions 按 mastery_score 升序，blind/weak 優先 |
 | Today Next Action | ✅ 完成 | review/retake/start 各對應主要行動按鈕 |
 | 鍵盤快捷鍵 | ✅ 完成 | A–D / 1–4 選答；Enter/Space 確認反饋 |
-| 複習課程引擎 | ❌ 缺失 | review_queue 是死清單（最大剩餘缺口） |
-| 錯誤複習佇列 | ⚠️ 部分 | 佇列建立正常；grammar 面板已加；無法實際練習 |
+| Review Mode | ✅ 完成 | dedicated queue runtime，mode:"review_queue"，fixed/still_weak/repeated_error |
+| 錯誤複習佇列 | ✅ 完整 | 佇列建立、Review Mode 執行、grammar 面板 |
 | Grammar Link 面板 | ✅ 完成 | Error Review 中可折疊語法說明（14 條記錄） |
-| vocab_items 富格式 | ❌ 未呈現 | chinese / example / variants 存在但 UI 不顯示（P1-4） |
+| vocab_items 富格式 | ⚠️ 資料已填入，UI 未呈現 | V3 240 items chinese+example 已填入（v7.0）；V1/V2 原有內容；UI 不顯示（L-004 待做） |
 | Question Bank | ✅ 完整 | 搜尋 / Load More 分頁 / 編輯 / Seed 匯出 |
 | Mastery 視圖 | ✅ 含篩選 | mastery_level 下拉篩選，含各 level 計數 |
-| 匯出功能 | ✅ 完整 | export 時全量取 attempts；個別檔案 + Seed JSON |
-| Service Worker | ✅ 完成 | stale-while-revalidate |
-| Playwright 測試 | ✅ 通過 | 2/2 passing（含反饋面板流程） |
-| V0 內容 | ✅ 完成 | 10 課診斷題 |
-| V1 內容 | ✅ 完成 | 60 課，0 duplicate warnings |
-| V2–V6 內容 | 🔄 進行中 | grammar_links.json 已預備 V2/V3 語法點 |
+| 匯出功能 | ✅ 完整 | export 時全量取 attempts；review_effectiveness.csv；個別檔案 + Seed JSON |
+| Service Worker | ✅ 完成 | stale-while-revalidate（toeic-vorb-v4） |
+| Playwright 測試 | ✅ 通過 | 3/3 passing（lesson-flow + export-flow + V2/V3 seed 驗證） |
+| Data validation | ✅ 通過 | 0 duplicate, 0 missing field, 0 warning |
+| V0 內容 | ✅ 完成 | 10 課 / 240 題，診斷用 |
+| V1 內容 | ✅ 完成 | 60 課 / 1,728 題，Word Family；speed_drill error_code 已修正（30 題）；2 題 MC 選項均衡化 |
+| V2 內容 | ✅ 品質通過 | 50 課 / 1,200 題；定義嵌入 0%（原 83.3%）；殘留：Email: 型 ×4 小重複（無害） |
+| V3 內容 | ✅ 品質通過 | 60 課 / 1,440 題；跨課重複 0 個 >10×（原 5 個 ×20）；300 個唯一模板；240 items chinese+example 已填入 |
+| V4–V6 內容 | ❌ 規劃中 | 不得在 V2/V3 品質修正前開始 |
+| Stage Seal 邏輯 | ⚠️ 未嚴格 | 進度可見但 seal 條件未強制執行 |
 
 ---
 
 ## 6. 建議執行順序（剩餘工作）
 
 ```
-第一輪（最高教育效益）：
-  P1-2 複習課程執行引擎（解決 review_queue 是死清單的問題）
-  P1-4 vocab_items 富格式呈現（chinese + variants + example）
+✅ 第一輪（v6.0–v7.0 已完成）：內容品質修正
+  Q-001a  audit-option-length.js（量化）               → 完成
+  Q-001b  V2 定義嵌入題幹改寫（1,000 → 0 題）          → 完成
+  Q-002a  V0 選項長度均衡（75% → 48.8%）               → 完成
+  Q-001c  V3 跨課模板重複消除（×20 → ×5）              → 完成
+          V1 選項偏差確認為假象，關閉                   → 完成
+  Q-003   V3 vocab_items 空殼填入（240 items）          → 完成（v7.0）
 
-第二輪（內容擴展）：
-  P4-1 V2 Scene Vocabulary 開發
-  P4-2 V3 Collocation 開發
-  （開發時在 grammar_links.json 新增對應語法點）
+第二輪（目前最高優先）：教學深度提升
+  L-004   vocab_items 富格式呈現（chinese + variants + example）← 資料已就緒，優先
+  C-001   V2/V3 跨課干擾題（每課加入舊課 distractor）
+  L-006   Due for Review 計數（Today 視圖）
 
-第三輪（資料品質）：
-  P2-4 掌握度公式 fixture 測試
-  P3-4 V1-A 語意審核
+第三輪（App 功能）：
+  F-001   Stage Seal 嚴格模式
+  F-002   V0 診斷 → 學習建議
+  F-003   掌握度公式 fixture 測試
 
-長期：
-  V4 Formal Phrase / V5 False Friends / V6 Speed Drill
+長期（V2/V3 品質已通過，可開始規劃）：
+  V4 Formal Phrase → V5 False Friends → V6 Integrated Review
 ```
 
 ---
 
 ## 7. 給下一位 AI 的說明
 
-本計劃書由 Claude Sonnet 4.6 於 2026-05-14 更新為 v4.0。
+本計劃書由 Claude Sonnet 4.6 於 2026-05-17 更新為 v7.0。
 
-**當前最高優先行動：**
+**當前最高優先行動：L-004 vocab_items 富格式呈現（資料已就緒）**
 
-1. **P1-2 複習課程引擎** — 整個 SRS 系統的最後一塊拼圖。review_queue 有 pending items，但使用者無法實際練習。需要：
-   - `startLesson()` 或新函數 `startReviewSession(questionIds)` 支援傳入自定義題目清單（繞過 lesson_id 查找）
-   - Mistakes 視圖加「Start Review Session」按鈕，從 `pending` review_queue 取最多 15 題
-   - Review session 結束後，把成功複習的 items 標為 `done`
+所有內容品質 P0 問題已全部解決（v6.0–v7.0）。V0/V1/V2/V3 題目與詞彙項目現已通過品質審查，可進行學習者測試。
 
-2. **P1-4 vocab_items 富格式** — 資料都在 IDB 中（`state.vocabItems`），只需在 `renderSessionErrorReview()` 的 error 卡片和 `renderMastery()` 中顯示 `item.chinese`、`item.example`、`item.variants`。
+### 已完成的內容修正摘要（v6.0–v7.0）
+
+| 問題 | 修正前 | 修正後 | 腳本 |
+|------|--------|--------|------|
+| V2 定義嵌入題幹 | 1,000/1,200（83%） | **0/1,200（0%）** | `scripts/rewrite-v2-definitions.js` |
+| V0 meaning_choice 選項偏差 | 100%（30/30） | **40%（12/30）** | `scripts/rewrite-v0-option-bias.js` |
+| V0 false_friend 選項偏差 | 100%（20/20） | **0%（0/20）** | `scripts/rewrite-v0-option-bias.js` |
+| V3 跨課模板重複 | ×20（5 個模板） | **×5 max（0 個 >10×）** | `scripts/rewrite-v3-stem-topics.js` |
+| V1 speed_drill error_code 錯誤 | 30 題 WORD_FAMILY_POS | **0 題（全改為 TIME_PRESSURE）** | `scripts/fix-v1a-quality.js` |
+| V1 meaning_choice 選項長度偏差 | 2 題 edge +32/+37 | **edge ≤3（v1_a_12/16_q_012）** | `scripts/fix-v1a-quality.js` |
+| V3 vocab_items 空殼 chinese/example | 240 items 全空（"固定搭配：[英文]"） | **240 items 填入真實繁中釋義+例句** | `scripts/fix-v3-item-quality.js` |
+
+### 下一步：L-004 vocab_items 富格式呈現
+
+`vocab_items.json` 的所有 494 個項目（V1: 42個、V2: 212個、V3: 240個）均已有真實 chinese + example 內容。可以直接在 UI 中呈現。
+
+**建議實作方式：**
+- Error Review 卡片（`js/views/mistakes.js`）：錯誤題目下方加入對應 vocab_item 的 chinese + example
+- Mastery 視圖（`js/views/mastery.js`）：詞彙卡片展開後顯示 chinese + variants + example
+- 資料路徑：`state.vocabItems`（已在 `loadData()` 時載入 IDB）→ 按 `target_item_id` 查找
+
+**複雜度：** 小-中（UI 修改，無需資料變更）  
+**前置條件：** ✅ 已完成（V3 items 資料已填入 v7.0）
+
+### 次要下一步：C-001 跨課干擾題
+
+每課的 24 題全部測同一課的 4 個詞彙。目前 review_question 四題分別對應四個目標詞，干擾項來自同一課的其他詞彙（同課競爭）。沒有舊課詞彙的跨課干擾。
+
+**建議實作方式：**
+- 每課的 4 個 review_question 中，至少 1-2 個的干擾項來自前 3-5 課的詞彙
+- 或者每 5 課後插入一堂「mixed review」課，20 題從過去 5 課各抽 4 題
+
+**涉及檔案：** `data/vocab/questions_v2*.json`、`questions_v3*.json`、`curriculum.json`  
+**複雜度：** 需要讀取 curriculum 的課序關係，從前課 item_ids 中選 distractor
+
+---
 
 **開發注意事項：**
 - `vocab-scoring.js` 和 `vocab-db.js` 是 IIFE，掛載在 `window.VocabScoring` / `window.VocabDB`；`views/` 是 ES Module。不要混用。
 - `state.showFeedback` 控制反饋面板顯示；`advanceAfterFeedback()` 負責推進 `current_index`。
-- `buildRuntimeQuestions()` 現在按 `mastery_score` 升序排列 core/review，盲點詞彙優先。
-- Playwright 測試在 `tests/`，`lesson-flow.spec.ts` 已更新為點擊「Next Question →」反饋按鈕。
+- `buildRuntimeQuestions()` 按 `mastery_score` 升序排列 core/review，盲點詞彙優先。
+- Review Mode 使用 `REVIEW_LESSON_ID = "REVIEW_QUEUE"`，limit 20 題，`mode: "review_queue"` 寫入 attempts。
+- Playwright 測試在 `tests/`，改內容或 seed 後需重新驗證（測試會檢查 seed 版本）。
 - Question Bank 有 `state.bankPage` 控制分頁；`setBankFilter()` 時自動重置為第 0 頁。
-- `state.grammarLinks` 在 init() 時從 `data/vocab/grammar_links.json` 載入；新增 V2/V3 語法點只需更新該 JSON 檔。
-- SEED_VERSION 更改後，所有使用者下次開啟時重新 seed（現有 question 內容欄位由 seed 覆蓋，進度欄位保留）。
+- `state.grammarLinks` 在 init() 時從 `data/vocab/grammar_links.json` 載入。
+- SEED_VERSION 更改後，所有使用者下次開啟時重新 seed（question 內容欄位由 seed 覆蓋，進度欄位保留）。需同步更新 `js/vocab-db.js`、`data/vocab/curriculum.json`、`tests/helpers/seed-idb.ts` 三處。
+- **種子版本目前：** `toeic_vocab_tracker_v3_items_2026_05_17`
+- **不屬於本程式範圍：** `C:\Users\Keith\toeic-app`（Grammar / PoS App），絕對不要修改。

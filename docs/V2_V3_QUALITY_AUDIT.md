@@ -2,7 +2,7 @@
 
 Status: GENERATED CONTENT QUALITY REVIEW
 
-Generated at: 2026-05-14T04:32:00.263Z
+Generated at: 2026-05-16T17:14:58.325Z
 
 This report is a learning-quality audit. It does not replace `scripts/validate-vocab-data.js`, which remains the structural pass/fail validator.
 
@@ -10,15 +10,15 @@ This report is a learning-quality audit. It does not replace `scripts/validate-v
 
 | Metric | Count |
 | --- | --- |
-| Total lessons | 180 |
+| Total lessons | 202 |
 | Total questions | 4608 |
 | Repeated V2/V3 stem templates above threshold | 0 |
 | Short Part 6 context questions | 0 |
 | Translation-heavy V2 questions | 0 |
 | Overused V3 distractor words | 0 |
 | Target coverage issues | 0 |
-| Lessons missing old-item interference | 110 |
-| Speed drills not using TIME_PRESSURE | 30 |
+| Lessons missing old-item interference | 6 |
+| Speed drills not using TIME_PRESSURE | 0 |
 
 ## Question Type Summary
 
@@ -36,7 +36,6 @@ This report is a learning-quality audit. It does not replace `scripts/validate-v
 3. V3 distractor verbs are now distributed below the audit's overuse threshold.
 4. No repeated V2/V3 stem template remains above the current warning threshold.
 5. V2/V3 lessons still lack old-item interference; each lesson mostly drills its own four target items.
-6. V1 still has speed drills using non-TIME_PRESSURE error codes; this is separate from the V2/V3 content batch.
 
 ## Repeated Template Hotspots
 
@@ -58,27 +57,26 @@ No translation-heavy V2 question is currently flagged.
 
 | Stage | Lesson count | Sample lessons |
 | --- | --- | --- |
-| V2 | 50 | V2-A-71, V2-A-72, V2-A-73, V2-A-74, V2-A-75, V2-A-76, V2-A-77, V2-A-78, V2-A-79, V2-A-80 |
-| V3 | 60 | V3-A-121, V3-A-122, V3-A-123, V3-A-124, V3-A-125, V3-A-126, V3-A-127, V3-A-128, V3-A-129, V3-A-130 |
+| V2 | 3 | V2-A-71, V2-A-72, V2-A-73 |
+| V3 | 3 | V3-A-121, V3-A-122, V3-A-123 |
 
 ## Speed Drill Error-Code Findings
 
 | Count | Sample |
 | --- | --- |
-| 30 | v1_a_11_q_004:WORD_FAMILY_POS, v1_a_11_q_011:WORD_FAMILY_POS, v1_a_11_q_018:WORD_FAMILY_POS, v1_a_12_q_004:WORD_FAMILY_POS, v1_a_12_q_011:WORD_FAMILY_POS, v1_a_12_q_018:WORD_FAMILY_POS, v1_a_13_q_004:WORD_FAMILY_POS, v1_a_13_q_011:WORD_FAMILY_POS, v1_a_13_q_018:WORD_FAMILY_POS, v1_a_14_q_004:WORD_FAMILY_POS, v1_a_14_q_011:WORD_FAMILY_POS, v1_a_14_q_018:WORD_FAMILY_POS |
+| 0 |  |
 
 ## Recommended Fix Order
 
 1. Add old-item interference questions every lesson or every block.
-2. Fix V1 speed drills so they consistently use TIME_PRESSURE.
-3. Keep structural validation separate from this quality audit.
+2. Keep structural validation separate from this quality audit.
 
 ## Machine Summary
 
 ```json
 {
-  "generated_at": "2026-05-14T04:32:00.263Z",
-  "total_lessons": 180,
+  "generated_at": "2026-05-16T17:14:58.325Z",
+  "total_lessons": 202,
   "total_questions": 4608,
   "warnings": {
     "repeated_templates": 0,
@@ -86,8 +84,8 @@ No translation-heavy V2 question is currently flagged.
     "translation_heavy_v2_questions": 0,
     "overused_v3_distractor_words": 0,
     "target_coverage_issues": 0,
-    "missing_old_item_interference_lessons": 110,
-    "speed_drill_non_time_pressure": 30
+    "missing_old_item_interference_lessons": 6,
+    "speed_drill_non_time_pressure": 0
   }
 }
 ```

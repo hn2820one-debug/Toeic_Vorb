@@ -24,6 +24,7 @@ export function renderMastery() {
         <div>
           <strong>${html(item.base_word || item.item_id)}</strong>
           <small>${html((item.variants || []).join(", "))}</small>
+          ${item.chinese ? `<small class="item-chinese">${html(item.chinese)}</small>` : ""}
         </div>
         <div class="mastery-meta">
           <span>${item.mastery_score || 0}</span>
@@ -36,6 +37,7 @@ export function renderMastery() {
           <span>Avg ${seconds(item.avg_response_time_seconds)}</span>
           <span>Next ${html(item.next_review_date || "-")}</span>
         </div>
+        ${item.example ? `<details class="item-example"><summary>Example</summary><p>${html(item.example)}</p></details>` : ""}
       </article>
     `).join("");
 

@@ -7,7 +7,10 @@ import {
   currentLesson,
   topCounts,
   loadData,
-  setNotice
+  setNotice,
+  optionText,
+  questionTypeLabel,
+  learningGuidance
 } from "../state.js";
 
 export const REVIEW_LESSON_ID = "REVIEW_QUEUE";
@@ -160,10 +163,85 @@ function renderFeedback(question, userAnswer, isCorrect, hasMore) {
       <p class="question-text">${html(question.question_text)}</p>
       <div class="answer-grid">${buttons}</div>
       ${question.explanation_zh ? `<p class="feedback-explanation">${html(question.explanation_zh)}</p>` : ""}
+      ${renderPostAnswerLearningCard(question, userAnswer, isCorrect)}
       <div class="tracker-actions">
         <button class="button primary" type="button" onclick="VocabTracker.advanceAfterFeedback()">${hasMore ? "Next Question →" : "See Summary →"}</button>
       </div>
     </article>
+  `;
+}
+
+function targetItemForQuestion(question) {
+  return state.vocabItems.find((item) => item.item_id === question?.target_item_id);
+}
+
+function renderQuestionGuidance(question) {
+  return `
+    <div class="question-guidance">
+      <strong>${html(questionTypeLabel(question.type))}</strong>
+      <span>${html(learningGuidance(question))}</span>
+    </div>
+  `;
+}
+
+function renderPostAnswerLearningCard(question, userAnswer, isCorrect) {
+  const item = targetItemForQuestion(question);
+  const grammarLink = question.grammar_link_id ? state.grammarLinks?.[question.grammar_link_id] : null;
+  const correctText = optionText(question, question.correct_answer);
+  return `
+    <aside class="learning-card ${isCorrect ? "correct" : "review"}">
+      <div>
+        <span class="learning-card-label">${isCorrect ? "Locked In" : "Review Point"}</span>
+        <strong>${html(correctText || item?.base_word || question.target_item_id || "Target item")}</strong>
+        ${item?.chinese ? `<small>${html(item.chinese)}</small>` : ""}
+      </div>
+      <div class="learning-card-detail">
+        ${item?.example ? `<p>${html(item.example)}</p>` : ""}
+        ${!isCorrect ? `<p>Your answer: ${html(userAnswer)} ${html(optionText(question, userAnswer))}</p>` : ""}
+        ${grammarLink ? `<p>${html(grammarLink.title_zh || question.grammar_link_id)}: ${html(grammarLink.rule_zh || "")}</p>` : ""}
+      </div>
+    </aside>
+  `;
+}
+
+function renderLessonPreview(lesson) {
+  if (!lesson) return "";
+  if (lesson.lesson_type === "mixed_review") {
+    return `
+      <div class="lesson-preview">
+        <strong>Mixed Review</strong>
+        <span>This lesson recycles ${lesson.question_ids?.length || 0} review questions from earlier ${html(lesson.stage)} lessons.</span>
+      </div>
+    `;
+  }
+
+  const targetItems = (lesson.target_items || [])
+    .map((itemId) => state.vocabItems.find((item) => item.item_id === itemId))
+    .filter(Boolean);
+  if (!targetItems.length) {
+    const ids = new Set([...(lesson.question_ids || []), ...(lesson.review_question_ids || [])]);
+    const typeCounts = topCounts(state.questions.filter((question) => ids.has(question.question_id)), "type", 4);
+    return `
+      <div class="lesson-preview">
+        <strong>Lesson Focus</strong>
+        <div class="lesson-focus-grid">
+          ${typeCounts.length
+            ? typeCounts.map(([type, count]) => `<span><b>${html(questionTypeLabel(type))}</b> ${count}</span>`).join("")
+            : `<span>${html(lesson.stage_name || lesson.lesson_type || "General lesson")}</span>`}
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="lesson-preview">
+      <strong>Lesson Focus</strong>
+      <div class="lesson-focus-grid">
+        ${targetItems.slice(0, 8).map((item) => `
+          <span><b>${html(item.base_word || item.item_id)}</b>${item.chinese ? ` ${html(item.chinese)}` : ""}</span>
+        `).join("")}
+      </div>
+    </div>
   `;
 }
 
@@ -179,6 +257,7 @@ export function renderLesson() {
       <section class="tracker-panel">
         <h3>Lesson Start</h3>
         <p class="tracker-bigline">${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "")}</p>
+        ${renderLessonPreview(lesson)}
         <div class="step-plan">
           ${LESSON_STEPS.map((step) => `<div><strong>${html(step.label)}</strong><span>${step.minutes} min</span></div>`).join("")}
         </div>
@@ -248,27 +327,32 @@ export function renderLesson() {
   if (!row) return `<section class="tracker-panel"><p class="muted-note">No question is available for this lesson.</p></section>`;
   const question = row.question;
   ensureQuestionClock(question.question_id);
-  const selected = session.answers?.[question.question_id]?.user_answer || null;
+  const savedAnswer = session.answers?.[question.question_id]?.user_answer || null;
+  const selected = savedAnswer || state.pendingAnswer;
 
   return `
     <section class="runtime-shell">
       ${renderRuntimeHeader(lesson, row.step)}
       <article class="question-panel">
         <div class="question-meta">
-          <span>${html(question.type)}</span>
+          <span>${html(questionTypeLabel(question.type))}</span>
           <span>Q ${progress.index + 1} / ${progress.total}</span>
           <span>Target ${window.VocabScoring.targetTime(question.type)}s</span>
         </div>
+        ${renderQuestionGuidance(question)}
         <p class="question-text">${html(question.question_text)}</p>
         <div class="answer-grid">
           ${["A", "B", "C", "D"].map((letter) => `
-            <button class="answer-button ${selected === letter ? "selected" : ""}" type="button" ${selected || session.paused ? "disabled" : ""} onclick="VocabTracker.answerCurrent('${letter}')">
+            <button class="answer-button ${selected === letter ? "selected" : ""}" type="button" ${savedAnswer || session.paused ? "disabled" : ""} onclick="VocabTracker.answerCurrent('${letter}')">
               <strong>${letter}</strong>
               <span>${html(question.options?.[letter] || "")}</span>
             </button>
           `).join("")}
         </div>
-        <p class="muted-note">${selected ? "Answer locked and saved. Correctness is hidden until review." : "Choose one answer. The attempt is saved immediately."}</p>
+        <div class="confirm-answer-row">
+          <p class="muted-note">${savedAnswer ? "Answer locked and saved. Correctness is hidden until review." : selected ? `Selected ${html(selected)}. Press Confirm Answer to save.` : "Choose one answer, then press Confirm Answer. Nothing is saved until you confirm."}</p>
+          <button class="button primary" type="button" onclick="VocabTracker.confirmCurrentAnswer()" ${!selected || savedAnswer || session.paused ? "disabled" : ""}>Confirm Answer</button>
+        </div>
       </article>
       <div class="runtime-actions">
         <button class="button secondary" type="button" onclick="VocabTracker.previousQuestion()" ${progress.index <= 0 ? "disabled" : ""}>Previous</button>
@@ -354,6 +438,8 @@ export function ensureQuestionClock(questionId) {
   if (state.currentQuestionKey !== questionId) {
     state.currentQuestionKey = questionId;
     state.questionStartedAt = Date.now();
+    state.pendingAnswer = null;
+    state.lockedQuestionSeconds = null;
   }
 }
 
@@ -425,6 +511,9 @@ export async function startLesson(lessonId) {
 
   state.activeSession = session;
   state.currentQuestionKey = null;
+  state.questionStartedAt = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   window.VocabDB.saveActiveSession(session);
   window.VocabDB.savePrefs({ last_opened_lesson: lesson.lesson_id, current_stage: lesson.stage });
   await window.VocabDB.put("lessons", { ...lesson, status: "in_progress" });
@@ -479,19 +568,35 @@ export async function startReviewMode(filter = "due") {
   state.activeSession = session;
   state.runtimeQuestions = review.rows;
   state.currentQuestionKey = null;
+  state.questionStartedAt = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   state.lastReviewSummary = null;
   window.VocabDB.saveActiveSession(session);
   window.VocabDB.savePrefs({ current_stage: "REVIEW" });
   callSetView("lesson");
 }
 
-export async function answerCurrent(letter) {
+export function answerCurrent(letter) {
   const session = state.activeSession;
   const progress = runtimeProgress();
   const row = progress.current;
   if (!session || !row || session.paused) return;
   const question = row.question;
   if (session.answers?.[question.question_id]) return;
+  state.pendingAnswer = letter;
+  callRender();
+}
+
+export async function confirmCurrentAnswer() {
+  const session = state.activeSession;
+  const progress = runtimeProgress();
+  const row = progress.current;
+  if (!session || !row || session.paused) return;
+  const question = row.question;
+  if (session.answers?.[question.question_id]) return;
+  const letter = state.pendingAnswer;
+  if (!letter) return;
 
   const responseTime = Math.max(0.2, (Date.now() - (state.questionStartedAt || Date.now())) / 1000);
   const vocabItem = state.vocabItems.find((item) => item.item_id === question.target_item_id);
@@ -539,7 +644,10 @@ export async function answerCurrent(letter) {
   window.VocabDB.saveActiveSession(session);
   state.attempts.push(attempt);
   state.showFeedback = true;
-  state.currentQuestionKey = null;
+  state.currentQuestionKey = question.question_id;
+  state.pendingAnswer = null;
+  state.questionStartedAt = null;
+  state.lockedQuestionSeconds = attempt.response_time_seconds;
   callRender();
 }
 
@@ -606,6 +714,8 @@ export function advanceAfterFeedback() {
   session.current_index = next >= 0 ? next : state.runtimeQuestions.length;
   window.VocabDB.saveActiveSession(session);
   state.currentQuestionKey = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   callRender();
 }
 
@@ -613,6 +723,8 @@ export function nextQuestion() {
   if (!state.activeSession) return;
   state.activeSession.current_index = Math.min(state.runtimeQuestions.length, (state.activeSession.current_index || 0) + 1);
   state.currentQuestionKey = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   window.VocabDB.saveActiveSession(state.activeSession);
   callRender();
 }
@@ -621,6 +733,8 @@ export function previousQuestion() {
   if (!state.activeSession) return;
   state.activeSession.current_index = Math.max(0, (state.activeSession.current_index || 0) - 1);
   state.currentQuestionKey = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   window.VocabDB.saveActiveSession(state.activeSession);
   callRender();
 }

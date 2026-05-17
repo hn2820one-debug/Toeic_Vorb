@@ -7,7 +7,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of hiring new staff, before you continue with this human resources task. (V2-C-91-01)",
+    "question_text": "Notice: The ______ campaign for seasonal staff will begin at the start of next month. (V2-C-91-01)",
     "options": {
       "A": "applicant",
       "B": "resume",
@@ -37,7 +37,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person applying for job, for today's recruitment work. Which term best completes the speaker's meaning? (V2-C-91-02)",
+    "question_text": "Conversation: We've received over 80 ______ for the open position — it will take time to review them. (V2-C-91-02)",
     "options": {
       "A": "recruitment",
       "B": "resume",
@@ -67,7 +67,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the recruitment briefing, the manager referred to the ______, the document listing work experience, more than once. (V2-C-91-03)",
+    "question_text": "Memo: All candidates are required to attach a current ______ to their application form. (V2-C-91-03)",
     "options": {
       "A": "resume",
       "B": "recruitment",
@@ -97,7 +97,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the recruitment team should understand the ______, the person who recommends candidate, before the meeting begins. (V2-C-91-04)",
+    "question_text": "Announcement: Applications without a ______ from a current or previous employer may not be considered. (V2-C-91-04)",
     "options": {
       "A": "recruitment",
       "B": "reference",
@@ -157,7 +157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person applying for job, before you continue with this human resources task. (V2-C-91-06)",
+    "question_text": "Notice: Each ______ must submit a completed application form by the posted deadline. (V2-C-91-06)",
     "options": {
       "A": "recruitment",
       "B": "resume",
@@ -187,7 +187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document listing work experience, for today's recruitment work. Which term best completes the speaker's meaning? (V2-C-91-07)",
+    "question_text": "Conversation: Could you update your ______ before we forward it to the hiring manager? (V2-C-91-07)",
     "options": {
       "A": "resume",
       "B": "recruitment",
@@ -217,7 +217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the recruitment briefing, the manager referred to the ______, the person who recommends candidate, more than once. (V2-C-91-08)",
+    "question_text": "Memo: HR will contact each ______ by phone to complete a background verification. (V2-C-91-08)",
     "options": {
       "A": "recruitment",
       "B": "reference",
@@ -247,7 +247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the recruitment team should understand the ______, the process of hiring new staff, before the meeting begins. (V2-C-91-09)",
+    "question_text": "Announcement: The company's ______ drive for graduate positions will be launched in September. (V2-C-91-09)",
     "options": {
       "A": "applicant",
       "B": "resume",
@@ -307,7 +307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document listing work experience, before you continue with this human resources task. (V2-C-91-11)",
+    "question_text": "Notice: Please submit your ______ and cover letter via the online application portal. (V2-C-91-11)",
     "options": {
       "A": "resume",
       "B": "recruitment",
@@ -337,7 +337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person who recommends candidate, for today's recruitment work. Which term best completes the speaker's meaning? (V2-C-91-12)",
+    "question_text": "Conversation: I'd like to use you as a ______ for the position I'm applying for — is that all right? (V2-C-91-12)",
     "options": {
       "A": "recruitment",
       "B": "reference",
@@ -367,7 +367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the recruitment briefing, the manager referred to the ______, the process of hiring new staff, more than once. (V2-C-91-13)",
+    "question_text": "Memo: The ______ process for the new regional branch will be handled by an external agency. (V2-C-91-13)",
     "options": {
       "A": "applicant",
       "B": "resume",
@@ -397,7 +397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the recruitment team should understand the ______, the person applying for job, before the meeting begins. (V2-C-91-14)",
+    "question_text": "Announcement: Qualified ______ are encouraged to apply before the closing date of the 31st. (V2-C-91-14)",
     "options": {
       "A": "recruitment",
       "B": "resume",
@@ -457,7 +457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person who recommends candidate, before you continue with this human resources task. (V2-C-91-16)",
+    "question_text": "Notice: Please provide the contact details of two professional ______ when submitting your application. (V2-C-91-16)",
     "options": {
       "A": "recruitment",
       "B": "reference",
@@ -487,7 +487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the process of hiring new staff, for today's recruitment work. Which term best completes the speaker's meaning? (V2-C-91-17)",
+    "question_text": "Conversation: Our ______ team is currently running interviews for the finance manager role. (V2-C-91-17)",
     "options": {
       "A": "applicant",
       "B": "resume",
@@ -517,7 +517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the recruitment briefing, the manager referred to the ______, the person applying for job, more than once. (V2-C-91-18)",
+    "question_text": "Memo: Shortlisted ______ will be contacted by phone for an initial interview. (V2-C-91-18)",
     "options": {
       "A": "recruitment",
       "B": "resume",
@@ -547,7 +547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the recruitment team should understand the ______, the document listing work experience, before the meeting begins. (V2-C-91-19)",
+    "question_text": "Announcement: Drop-in ______ review sessions are available at the career center every Tuesday. (V2-C-91-19)",
     "options": {
       "A": "resume",
       "B": "recruitment",
@@ -607,7 +607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of hiring new staff, before you continue with this human resources task. (V2-C-91-21)",
+    "question_text": "All ______ activities must comply with the company's equal opportunity employment policy. (V2-C-91-21)",
     "options": {
       "A": "applicant",
       "B": "resume",
@@ -637,7 +637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person applying for job, for today's recruitment work. Which term best completes the speaker's meaning? (V2-C-91-22)",
+    "question_text": "Every ______ is required to provide two professional references at the time of application. (V2-C-91-22)",
     "options": {
       "A": "recruitment",
       "B": "resume",
@@ -667,7 +667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the recruitment briefing, the manager referred to the ______, the document listing work experience, more than once. (V2-C-91-23)",
+    "question_text": "Your ______ should be no longer than two pages and tailored to the position applied for. (V2-C-91-23)",
     "options": {
       "A": "resume",
       "B": "recruitment",
@@ -697,7 +697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the recruitment team should understand the ______, the person who recommends candidate, before the meeting begins. (V2-C-91-24)",
+    "question_text": "A strong ______ from a senior manager significantly improves your application. (V2-C-91-24)",
     "options": {
       "A": "recruitment",
       "B": "reference",
@@ -727,7 +727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal meeting to assess candidate, before you continue with this human resources task. (V2-C-92-01)",
+    "question_text": "Notice: Your ______ is scheduled for Thursday at 10:00 a.m. in Conference Room A. (V2-C-92-01)",
     "options": {
       "A": "orientation",
       "B": "probation",
@@ -757,7 +757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the introduction training for new employee, for today's interview work. Which term best completes the speaker's meaning? (V2-C-92-02)",
+    "question_text": "Conversation: The ______ for new staff covers everything from IT access to company procedures. (V2-C-92-02)",
     "options": {
       "A": "interview",
       "B": "probation",
@@ -787,7 +787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the interview briefing, the manager referred to the ______, the testing period for new worker, more than once. (V2-C-92-03)",
+    "question_text": "Memo: Performance during the ______ period will be assessed against the agreed key objectives. (V2-C-92-03)",
     "options": {
       "A": "probation",
       "B": "interview",
@@ -817,7 +817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the interview team should understand the ______, the job title or role, before the meeting begins. (V2-C-92-04)",
+    "question_text": "Announcement: We are pleased to announce that the open ______ has been filled internally. (V2-C-92-04)",
     "options": {
       "A": "interview",
       "B": "position",
@@ -877,7 +877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the introduction training for new employee, before you continue with this human resources task. (V2-C-92-06)",
+    "question_text": "Notice: The new employee ______ program will begin at 9:00 a.m. on Monday morning. (V2-C-92-06)",
     "options": {
       "A": "interview",
       "B": "probation",
@@ -907,7 +907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the testing period for new worker, for today's interview work. Which term best completes the speaker's meaning? (V2-C-92-07)",
+    "question_text": "Conversation: She's still in her ______ period — a formal review will take place next month. (V2-C-92-07)",
     "options": {
       "A": "probation",
       "B": "interview",
@@ -937,7 +937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the interview briefing, the manager referred to the ______, the job title or role, more than once. (V2-C-92-08)",
+    "question_text": "Memo: The ______ has been reclassified as a Grade 4 role following the HR review. (V2-C-92-08)",
     "options": {
       "A": "interview",
       "B": "position",
@@ -967,7 +967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the interview team should understand the ______, the formal meeting to assess candidate, before the meeting begins. (V2-C-92-09)",
+    "question_text": "Announcement: A panel ______ will be conducted for all final candidates on the 18th. (V2-C-92-09)",
     "options": {
       "A": "orientation",
       "B": "probation",
@@ -1027,7 +1027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the testing period for new worker, before you continue with this human resources task. (V2-C-92-11)",
+    "question_text": "Notice: New employees are subject to a three-month ______ period before confirmation. (V2-C-92-11)",
     "options": {
       "A": "probation",
       "B": "interview",
@@ -1057,7 +1057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the job title or role, for today's interview work. Which term best completes the speaker's meaning? (V2-C-92-12)",
+    "question_text": "Conversation: Is the analyst ______ full-time, or will it start as a contract role? (V2-C-92-12)",
     "options": {
       "A": "interview",
       "B": "position",
@@ -1087,7 +1087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the interview briefing, the manager referred to the ______, the formal meeting to assess candidate, more than once. (V2-C-92-13)",
+    "question_text": "Memo: Candidates selected for the second round ______ will be notified by email. (V2-C-92-13)",
     "options": {
       "A": "orientation",
       "B": "probation",
@@ -1117,7 +1117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the interview team should understand the ______, the introduction training for new employee, before the meeting begins. (V2-C-92-14)",
+    "question_text": "Announcement: The online ______ modules have been updated and are now available on the training portal. (V2-C-92-14)",
     "options": {
       "A": "interview",
       "B": "probation",
@@ -1177,7 +1177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the job title or role, before you continue with this human resources task. (V2-C-92-16)",
+    "question_text": "Notice: Applications are now open for the senior project manager ______ in the operations division. (V2-C-92-16)",
     "options": {
       "A": "interview",
       "B": "position",
@@ -1207,7 +1207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal meeting to assess candidate, for today's interview work. Which term best completes the speaker's meaning? (V2-C-92-17)",
+    "question_text": "Conversation: How did the ______ go? Do you think you made a good impression? (V2-C-92-17)",
     "options": {
       "A": "orientation",
       "B": "probation",
@@ -1237,7 +1237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the interview briefing, the manager referred to the ______, the introduction training for new employee, more than once. (V2-C-92-18)",
+    "question_text": "Memo: Please ensure all new hires attend the ______ session on their first day of employment. (V2-C-92-18)",
     "options": {
       "A": "interview",
       "B": "probation",
@@ -1267,7 +1267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the interview team should understand the ______, the testing period for new worker, before the meeting begins. (V2-C-92-19)",
+    "question_text": "Announcement: Staff who successfully complete their ______ will be offered a permanent contract. (V2-C-92-19)",
     "options": {
       "A": "probation",
       "B": "interview",
@@ -1327,7 +1327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal meeting to assess candidate, before you continue with this human resources task. (V2-C-92-21)",
+    "question_text": "Prepare specific examples for the behavioral questions during your ______. (V2-C-92-21)",
     "options": {
       "A": "orientation",
       "B": "probation",
@@ -1357,7 +1357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the introduction training for new employee, for today's interview work. Which term best completes the speaker's meaning? (V2-C-92-22)",
+    "question_text": "New staff who miss the scheduled ______ must complete the online self-paced version. (V2-C-92-22)",
     "options": {
       "A": "interview",
       "B": "probation",
@@ -1387,7 +1387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the interview briefing, the manager referred to the ______, the testing period for new worker, more than once. (V2-C-92-23)",
+    "question_text": "Any conduct issues during the ______ period must be documented and reported to HR. (V2-C-92-23)",
     "options": {
       "A": "probation",
       "B": "interview",
@@ -1417,7 +1417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the interview team should understand the ______, the job title or role, before the meeting begins. (V2-C-92-24)",
+    "question_text": "A detailed job description for each ______ is available on the careers page. (V2-C-92-24)",
     "options": {
       "A": "interview",
       "B": "position",
@@ -1447,7 +1447,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the employee perks like insurance, before you continue with this human resources task. (V2-C-93-01)",
+    "question_text": "Notice: A summary of your employment ______ package is available in the staff handbook. (V2-C-93-01)",
     "options": {
       "A": "payroll",
       "B": "overtime",
@@ -1477,7 +1477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the system for paying salaries, for today's employee benefit work. Which term best completes the speaker's meaning? (V2-C-93-02)",
+    "question_text": "Conversation: There was an error in this month's ______ — my tax deduction seems too high. (V2-C-93-02)",
     "options": {
       "A": "benefits",
       "B": "overtime",
@@ -1507,7 +1507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee benefit briefing, the manager referred to the ______, the working hours beyond normal, more than once. (V2-C-93-03)",
+    "question_text": "Memo: Employees who work approved ______ will receive payment at 1.5 times their base hourly rate. (V2-C-93-03)",
     "options": {
       "A": "overtime",
       "B": "benefits",
@@ -1537,7 +1537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee benefit team should understand the ______, the approved time off work, before the meeting begins. (V2-C-93-04)",
+    "question_text": "Announcement: Unused ______ for this fiscal year may not be carried over after December 31st. (V2-C-93-04)",
     "options": {
       "A": "benefits",
       "B": "vacation leave",
@@ -1597,7 +1597,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the system for paying salaries, before you continue with this human resources task. (V2-C-93-06)",
+    "question_text": "Notice: Please verify your bank details with HR to ensure accurate ______ deposits. (V2-C-93-06)",
     "options": {
       "A": "benefits",
       "B": "overtime",
@@ -1627,7 +1627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the working hours beyond normal, for today's employee benefit work. Which term best completes the speaker's meaning? (V2-C-93-07)",
+    "question_text": "Conversation: I've been working ______ every day this week — the deadline is really tight. (V2-C-93-07)",
     "options": {
       "A": "overtime",
       "B": "benefits",
@@ -1657,7 +1657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee benefit briefing, the manager referred to the ______, the approved time off work, more than once. (V2-C-93-08)",
+    "question_text": "Memo: Requests for ______ during the peak period must be submitted for manager approval. (V2-C-93-08)",
     "options": {
       "A": "benefits",
       "B": "vacation leave",
@@ -1687,7 +1687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee benefit team should understand the ______, the employee perks like insurance, before the meeting begins. (V2-C-93-09)",
+    "question_text": "Announcement: Updates to the company ______ scheme will take effect at the start of the new fiscal year. (V2-C-93-09)",
     "options": {
       "A": "payroll",
       "B": "overtime",
@@ -1747,7 +1747,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the working hours beyond normal, before you continue with this human resources task. (V2-C-93-11)",
+    "question_text": "Notice: All ______ must be pre-approved by your line manager before working additional hours. (V2-C-93-11)",
     "options": {
       "A": "overtime",
       "B": "benefits",
@@ -1777,7 +1777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the approved time off work, for today's employee benefit work. Which term best completes the speaker's meaning? (V2-C-93-12)",
+    "question_text": "Conversation: I've accumulated 12 days of ______ — I'd like to take a week off in August. (V2-C-93-12)",
     "options": {
       "A": "benefits",
       "B": "vacation leave",
@@ -1807,7 +1807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee benefit briefing, the manager referred to the ______, the employee perks like insurance, more than once. (V2-C-93-13)",
+    "question_text": "Memo: The revised ______ plan for next year will be communicated to all staff by October. (V2-C-93-13)",
     "options": {
       "A": "payroll",
       "B": "overtime",
@@ -1837,7 +1837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee benefit team should understand the ______, the system for paying salaries, before the meeting begins. (V2-C-93-14)",
+    "question_text": "Announcement: The ______ system will be undergoing maintenance on Saturday from 8 p.m. to midnight. (V2-C-93-14)",
     "options": {
       "A": "benefits",
       "B": "overtime",
@@ -1897,7 +1897,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the approved time off work, before you continue with this human resources task. (V2-C-93-16)",
+    "question_text": "Notice: Submit your ______ application at least two weeks before your intended start date. (V2-C-93-16)",
     "options": {
       "A": "benefits",
       "B": "vacation leave",
@@ -1927,7 +1927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the employee perks like insurance, for today's employee benefit work. Which term best completes the speaker's meaning? (V2-C-93-17)",
+    "question_text": "Conversation: Does the company offer health insurance as part of the ______ package? (V2-C-93-17)",
     "options": {
       "A": "payroll",
       "B": "overtime",
@@ -1957,7 +1957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee benefit briefing, the manager referred to the ______, the system for paying salaries, more than once. (V2-C-93-18)",
+    "question_text": "Memo: All timesheet submissions for the current month must reach ______ by Thursday noon. (V2-C-93-18)",
     "options": {
       "A": "benefits",
       "B": "overtime",
@@ -1987,7 +1987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee benefit team should understand the ______, the working hours beyond normal, before the meeting begins. (V2-C-93-19)",
+    "question_text": "Announcement: The ______ log for last month has been reviewed and discrepancies corrected. (V2-C-93-19)",
     "options": {
       "A": "overtime",
       "B": "benefits",
@@ -2047,7 +2047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the employee perks like insurance, before you continue with this human resources task. (V2-C-93-21)",
+    "question_text": "New employees will be enrolled in the standard ______ program from their first working day. (V2-C-93-21)",
     "options": {
       "A": "payroll",
       "B": "overtime",
@@ -2077,7 +2077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the system for paying salaries, for today's employee benefit work. Which term best completes the speaker's meaning? (V2-C-93-22)",
+    "question_text": "Contact the HR department immediately if you notice any discrepancy in your ______ statement. (V2-C-93-22)",
     "options": {
       "A": "benefits",
       "B": "overtime",
@@ -2107,7 +2107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee benefit briefing, the manager referred to the ______, the working hours beyond normal, more than once. (V2-C-93-23)",
+    "question_text": "Submit your ______ claim form to HR within five business days of the additional hours worked. (V2-C-93-23)",
     "options": {
       "A": "overtime",
       "B": "benefits",
@@ -2137,7 +2137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee benefit team should understand the ______, the approved time off work, before the meeting begins. (V2-C-93-24)",
+    "question_text": "Employees are entitled to 14 days of paid ______ per year under the standard contract. (V2-C-93-24)",
     "options": {
       "A": "benefits",
       "B": "vacation leave",
@@ -2167,7 +2167,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal evaluation of performance, before you continue with this human resources task. (V2-C-94-01)",
+    "question_text": "Notice: Annual performance ______ reviews will be conducted during the month of November. (V2-C-94-01)",
     "options": {
       "A": "promotion",
       "B": "transfer",
@@ -2197,7 +2197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the advancement to a higher role, for today's performance work. Which term best completes the speaker's meaning? (V2-C-94-02)",
+    "question_text": "Conversation: I heard that three members of our team are being considered for ______. (V2-C-94-02)",
     "options": {
       "A": "appraisal",
       "B": "transfer",
@@ -2227,7 +2227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the performance briefing, the manager referred to the ______, the move to a different job, more than once. (V2-C-94-03)",
+    "question_text": "Memo: The inter-departmental ______ must be approved by both current and receiving managers. (V2-C-94-03)",
     "options": {
       "A": "transfer",
       "B": "appraisal",
@@ -2257,7 +2257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the performance team should understand the ______, the formal notice of leaving, before the meeting begins. (V2-C-94-04)",
+    "question_text": "Announcement: Following the team manager's ______, the department will be led by the deputy temporarily. (V2-C-94-04)",
     "options": {
       "A": "appraisal",
       "B": "resignation",
@@ -2317,7 +2317,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the advancement to a higher role, before you continue with this human resources task. (V2-C-94-06)",
+    "question_text": "Notice: Employees eligible for ______ will be notified by HR following the annual review. (V2-C-94-06)",
     "options": {
       "A": "appraisal",
       "B": "transfer",
@@ -2347,7 +2347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the move to a different job, for today's performance work. Which term best completes the speaker's meaning? (V2-C-94-07)",
+    "question_text": "Conversation: I've applied for an internal ______ to the product development team. (V2-C-94-07)",
     "options": {
       "A": "transfer",
       "B": "appraisal",
@@ -2377,7 +2377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the performance briefing, the manager referred to the ______, the formal notice of leaving, more than once. (V2-C-94-08)",
+    "question_text": "Memo: Upon ______, the employee is required to complete a formal handover process. (V2-C-94-08)",
     "options": {
       "A": "appraisal",
       "B": "resignation",
@@ -2407,7 +2407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the performance team should understand the ______, the formal evaluation of performance, before the meeting begins. (V2-C-94-09)",
+    "question_text": "Announcement: The mid-year ______ process will begin next week — please prepare your self-assessment. (V2-C-94-09)",
     "options": {
       "A": "promotion",
       "B": "transfer",
@@ -2467,7 +2467,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the move to a different job, before you continue with this human resources task. (V2-C-94-11)",
+    "question_text": "Notice: The approved ______ to the Singapore office will take effect on the first of next month. (V2-C-94-11)",
     "options": {
       "A": "transfer",
       "B": "appraisal",
@@ -2497,7 +2497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal notice of leaving, for today's performance work. Which term best completes the speaker's meaning? (V2-C-94-12)",
+    "question_text": "Conversation: Did you hear that the marketing director handed in her ______ last Friday? (V2-C-94-12)",
     "options": {
       "A": "appraisal",
       "B": "resignation",
@@ -2527,7 +2527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the performance briefing, the manager referred to the ______, the formal evaluation of performance, more than once. (V2-C-94-13)",
+    "question_text": "Memo: Managers must complete all staff ______ forms and submit them by the due date. (V2-C-94-13)",
     "options": {
       "A": "promotion",
       "B": "transfer",
@@ -2557,7 +2557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the performance team should understand the ______, the advancement to a higher role, before the meeting begins. (V2-C-94-14)",
+    "question_text": "Announcement: We are pleased to announce the ______ of Ms. Lin to the role of Senior Manager. (V2-C-94-14)",
     "options": {
       "A": "appraisal",
       "B": "transfer",
@@ -2617,7 +2617,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal notice of leaving, before you continue with this human resources task. (V2-C-94-16)",
+    "question_text": "Notice: Staff intending to leave must submit a written ______ letter to their direct manager. (V2-C-94-16)",
     "options": {
       "A": "appraisal",
       "B": "resignation",
@@ -2647,7 +2647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal evaluation of performance, for today's performance work. Which term best completes the speaker's meaning? (V2-C-94-17)",
+    "question_text": "Conversation: My ______ meeting with the department head is tomorrow morning. (V2-C-94-17)",
     "options": {
       "A": "promotion",
       "B": "transfer",
@@ -2677,7 +2677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the performance briefing, the manager referred to the ______, the advancement to a higher role, more than once. (V2-C-94-18)",
+    "question_text": "Memo: Any ______ recommendation must be supported by documented performance records. (V2-C-94-18)",
     "options": {
       "A": "appraisal",
       "B": "transfer",
@@ -2707,7 +2707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the performance team should understand the ______, the move to a different job, before the meeting begins. (V2-C-94-19)",
+    "question_text": "Announcement: Two senior staff members have accepted ______ to the newly established Asia Pacific hub. (V2-C-94-19)",
     "options": {
       "A": "transfer",
       "B": "appraisal",
@@ -2767,7 +2767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal evaluation of performance, before you continue with this human resources task. (V2-C-94-21)",
+    "question_text": "Your ______ score will influence eligibility for a salary increase and promotion. (V2-C-94-21)",
     "options": {
       "A": "promotion",
       "B": "transfer",
@@ -2797,7 +2797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the advancement to a higher role, for today's performance work. Which term best completes the speaker's meaning? (V2-C-94-22)",
+    "question_text": "The committee will review all ______ nominations at the end of the quarterly cycle. (V2-C-94-22)",
     "options": {
       "A": "appraisal",
       "B": "transfer",
@@ -2827,7 +2827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the performance briefing, the manager referred to the ______, the move to a different job, more than once. (V2-C-94-23)",
+    "question_text": "All personal belongings and access credentials must be updated upon completing the ______. (V2-C-94-23)",
     "options": {
       "A": "transfer",
       "B": "appraisal",
@@ -2857,7 +2857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the performance team should understand the ______, the formal notice of leaving, before the meeting begins. (V2-C-94-24)",
+    "question_text": "A copy of the ______ letter should be forwarded to HR for recording purposes. (V2-C-94-24)",
     "options": {
       "A": "appraisal",
       "B": "resignation",
@@ -2887,7 +2887,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the hands-on training session, before you continue with this human resources task. (V2-C-95-01)",
+    "question_text": "Notice: The communication skills ______ will be held in Room 3B on the 22nd from 9 a.m. to 1 p.m. (V2-C-95-01)",
     "options": {
       "A": "certificate",
       "B": "instructor",
@@ -2917,7 +2917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official document confirming completion, for today's training work. Which term best completes the speaker's meaning? (V2-C-95-02)",
+    "question_text": "Conversation: I need to renew my safety ______ before I can work on site. (V2-C-95-02)",
     "options": {
       "A": "workshop",
       "B": "instructor",
@@ -2947,7 +2947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the training briefing, the manager referred to the ______, the person who teaches or trains, more than once. (V2-C-95-03)",
+    "question_text": "Memo: Each workshop ______ should submit course materials to HR at least one week in advance. (V2-C-95-03)",
     "options": {
       "A": "instructor",
       "B": "workshop",
@@ -2977,7 +2977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the training team should understand the ______, the process of registering for course, before the meeting begins. (V2-C-95-04)",
+    "question_text": "Announcement: Early ______ is recommended as class sizes are limited to 15 participants. (V2-C-95-04)",
     "options": {
       "A": "workshop",
       "B": "enrollment",
@@ -3037,7 +3037,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official document confirming completion, before you continue with this human resources task. (V2-C-95-06)",
+    "question_text": "Notice: A completion ______ will be awarded to all participants who pass the final assessment. (V2-C-95-06)",
     "options": {
       "A": "workshop",
       "B": "instructor",
@@ -3067,7 +3067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person who teaches or trains, for today's training work. Which term best completes the speaker's meaning? (V2-C-95-07)",
+    "question_text": "Conversation: The ______ was excellent — the course was well-structured and very practical. (V2-C-95-07)",
     "options": {
       "A": "instructor",
       "B": "workshop",
@@ -3097,7 +3097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the training briefing, the manager referred to the ______, the process of registering for course, more than once. (V2-C-95-08)",
+    "question_text": "Memo: Please confirm your ______ in the mandatory compliance training before the deadline. (V2-C-95-08)",
     "options": {
       "A": "workshop",
       "B": "enrollment",
@@ -3127,7 +3127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the training team should understand the ______, the hands-on training session, before the meeting begins. (V2-C-95-09)",
+    "question_text": "Announcement: A free stress management ______ is available to all staff on a first-come basis. (V2-C-95-09)",
     "options": {
       "A": "certificate",
       "B": "instructor",
@@ -3187,7 +3187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person who teaches or trains, before you continue with this human resources task. (V2-C-95-11)",
+    "question_text": "Notice: The ______ for the afternoon session has been changed — please check the updated schedule. (V2-C-95-11)",
     "options": {
       "A": "instructor",
       "B": "workshop",
@@ -3217,7 +3217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the process of registering for course, for today's training work. Which term best completes the speaker's meaning? (V2-C-95-12)",
+    "question_text": "Conversation: Is ______ for the Excel training course still open? I'd like to sign up. (V2-C-95-12)",
     "options": {
       "A": "workshop",
       "B": "enrollment",
@@ -3247,7 +3247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the training briefing, the manager referred to the ______, the hands-on training session, more than once. (V2-C-95-13)",
+    "question_text": "Memo: Sign up for the upcoming Excel ______ via the training portal before Friday. (V2-C-95-13)",
     "options": {
       "A": "certificate",
       "B": "instructor",
@@ -3277,7 +3277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the training team should understand the ______, the official document confirming completion, before the meeting begins. (V2-C-95-14)",
+    "question_text": "Announcement: Participants who complete the course will receive a recognized industry ______. (V2-C-95-14)",
     "options": {
       "A": "workshop",
       "B": "instructor",
@@ -3337,7 +3337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of registering for course, before you continue with this human resources task. (V2-C-95-16)",
+    "question_text": "Notice: Online ______ for the upcoming leadership program closes this Friday. (V2-C-95-16)",
     "options": {
       "A": "workshop",
       "B": "enrollment",
@@ -3367,7 +3367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the hands-on training session, for today's training work. Which term best completes the speaker's meaning? (V2-C-95-17)",
+    "question_text": "Conversation: Did you attend the project management ______ last Thursday? It was very helpful. (V2-C-95-17)",
     "options": {
       "A": "certificate",
       "B": "instructor",
@@ -3397,7 +3397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the training briefing, the manager referred to the ______, the official document confirming completion, more than once. (V2-C-95-18)",
+    "question_text": "Memo: Please submit a copy of your professional ______ to HR for inclusion in your personnel file. (V2-C-95-18)",
     "options": {
       "A": "workshop",
       "B": "instructor",
@@ -3427,7 +3427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the training team should understand the ______, the person who teaches or trains, before the meeting begins. (V2-C-95-19)",
+    "question_text": "Announcement: A guest ______ from the finance sector will lead Tuesday's investment seminar. (V2-C-95-19)",
     "options": {
       "A": "instructor",
       "B": "workshop",
@@ -3487,7 +3487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the hands-on training session, before you continue with this human resources task. (V2-C-95-21)",
+    "question_text": "Employees who complete the ______ will receive two hours of professional development credit. (V2-C-95-21)",
     "options": {
       "A": "certificate",
       "B": "instructor",
@@ -3517,7 +3517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official document confirming completion, for today's training work. Which term best completes the speaker's meaning? (V2-C-95-22)",
+    "question_text": "Display your ______ in your workspace as confirmation of your completed training. (V2-C-95-22)",
     "options": {
       "A": "workshop",
       "B": "instructor",
@@ -3547,7 +3547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the training briefing, the manager referred to the ______, the person who teaches or trains, more than once. (V2-C-95-23)",
+    "question_text": "Participants are encouraged to ask the ______ any questions at the end of each module. (V2-C-95-23)",
     "options": {
       "A": "instructor",
       "B": "workshop",
@@ -3577,7 +3577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the training team should understand the ______, the process of registering for course, before the meeting begins. (V2-C-95-24)",
+    "question_text": "You will receive a confirmation email within 24 hours of completing your ______. (V2-C-95-24)",
     "options": {
       "A": "workshop",
       "B": "enrollment",
@@ -3607,7 +3607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the presence at work or class, before you continue with this human resources task. (V2-C-96-01)",
+    "question_text": "Notice: Please swipe your access card at the entrance to record your ______ each day. (V2-C-96-01)",
     "options": {
       "A": "dress code",
       "B": "supervisor",
@@ -3637,7 +3637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the rules about workplace clothing, for today's workplace conduct work. Which term best completes the speaker's meaning? (V2-C-96-02)",
+    "question_text": "Conversation: What is the ______ for the conference tomorrow — formal or smart casual? (V2-C-96-02)",
     "options": {
       "A": "attendance",
       "B": "supervisor",
@@ -3667,7 +3667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace conduct briefing, the manager referred to the ______, the manager overseeing employees, more than once. (V2-C-96-03)",
+    "question_text": "Memo: Please copy your ______ on all communications related to the ongoing client project. (V2-C-96-03)",
     "options": {
       "A": "supervisor",
       "B": "attendance",
@@ -3697,7 +3697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace conduct team should understand the ______, the coworker in same organization, before the meeting begins. (V2-C-96-04)",
+    "question_text": "Announcement: A farewell event for our departing ______ will be held in the break room on Friday. (V2-C-96-04)",
     "options": {
       "A": "attendance",
       "B": "colleague",
@@ -3757,7 +3757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the rules about workplace clothing, before you continue with this human resources task. (V2-C-96-06)",
+    "question_text": "Notice: A reminder that business casual ______ applies on all days except formal client meeting days. (V2-C-96-06)",
     "options": {
       "A": "attendance",
       "B": "supervisor",
@@ -3787,7 +3787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the manager overseeing employees, for today's workplace conduct work. Which term best completes the speaker's meaning? (V2-C-96-07)",
+    "question_text": "Conversation: My ______ asked me to prepare a summary report by Thursday afternoon. (V2-C-96-07)",
     "options": {
       "A": "supervisor",
       "B": "attendance",
@@ -3817,7 +3817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace conduct briefing, the manager referred to the ______, the coworker in same organization, more than once. (V2-C-96-08)",
+    "question_text": "Memo: Thank your ______ in writing if they contributed significantly to a team project. (V2-C-96-08)",
     "options": {
       "A": "attendance",
       "B": "colleague",
@@ -3847,7 +3847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace conduct team should understand the ______, the presence at work or class, before the meeting begins. (V2-C-96-09)",
+    "question_text": "Announcement: All staff are reminded that ______ at the quarterly review meeting is mandatory. (V2-C-96-09)",
     "options": {
       "A": "dress code",
       "B": "supervisor",
@@ -3907,7 +3907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the manager overseeing employees, before you continue with this human resources task. (V2-C-96-11)",
+    "question_text": "Notice: All leave requests must be submitted and approved by your direct ______ in advance. (V2-C-96-11)",
     "options": {
       "A": "supervisor",
       "B": "attendance",
@@ -3937,7 +3937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the coworker in same organization, for today's workplace conduct work. Which term best completes the speaker's meaning? (V2-C-96-12)",
+    "question_text": "Conversation: My ______ from the accounts team offered to cover my shift while I'm away. (V2-C-96-12)",
     "options": {
       "A": "attendance",
       "B": "colleague",
@@ -3967,7 +3967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace conduct briefing, the manager referred to the ______, the presence at work or class, more than once. (V2-C-96-13)",
+    "question_text": "Memo: The ______ record for last month has been reviewed and sent to payroll for processing. (V2-C-96-13)",
     "options": {
       "A": "dress code",
       "B": "supervisor",
@@ -3997,7 +3997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace conduct team should understand the ______, the rules about workplace clothing, before the meeting begins. (V2-C-96-14)",
+    "question_text": "Announcement: Staff attending the client dinner are required to follow formal ______ guidelines. (V2-C-96-14)",
     "options": {
       "A": "attendance",
       "B": "supervisor",
@@ -4057,7 +4057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the coworker in same organization, before you continue with this human resources task. (V2-C-96-16)",
+    "question_text": "Notice: Please direct any staffing concerns to your manager rather than your ______ directly. (V2-C-96-16)",
     "options": {
       "A": "attendance",
       "B": "colleague",
@@ -4087,7 +4087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the presence at work or class, for today's workplace conduct work. Which term best completes the speaker's meaning? (V2-C-96-17)",
+    "question_text": "Conversation: Three people missed the meeting — we'll note their ______ as absent. (V2-C-96-17)",
     "options": {
       "A": "dress code",
       "B": "supervisor",
@@ -4117,7 +4117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace conduct briefing, the manager referred to the ______, the rules about workplace clothing, more than once. (V2-C-96-18)",
+    "question_text": "Memo: The updated ______ policy is now available in the employee handbook on the intranet. (V2-C-96-18)",
     "options": {
       "A": "attendance",
       "B": "supervisor",
@@ -4147,7 +4147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace conduct team should understand the ______, the manager overseeing employees, before the meeting begins. (V2-C-96-19)",
+    "question_text": "Announcement: Staff with performance concerns should schedule a meeting with their ______ promptly. (V2-C-96-19)",
     "options": {
       "A": "supervisor",
       "B": "attendance",
@@ -4207,7 +4207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the presence at work or class, before you continue with this human resources task. (V2-C-96-21)",
+    "question_text": "Repeated unexplained absences may affect your ______ record and performance review. (V2-C-96-21)",
     "options": {
       "A": "dress code",
       "B": "supervisor",
@@ -4237,7 +4237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the rules about workplace clothing, for today's workplace conduct work. Which term best completes the speaker's meaning? (V2-C-96-22)",
+    "question_text": "Any questions about appropriate attire should be directed to HR using the published ______ guide. (V2-C-96-22)",
     "options": {
       "A": "attendance",
       "B": "supervisor",
@@ -4267,7 +4267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace conduct briefing, the manager referred to the ______, the manager overseeing employees, more than once. (V2-C-96-23)",
+    "question_text": "Report any workplace safety issues to your ______ or the facilities management team. (V2-C-96-23)",
     "options": {
       "A": "supervisor",
       "B": "attendance",
@@ -4297,7 +4297,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace conduct team should understand the ______, the coworker in same organization, before the meeting begins. (V2-C-96-24)",
+    "question_text": "If a ______ is struggling with workload, speak to your supervisor for support options. (V2-C-96-24)",
     "options": {
       "A": "attendance",
       "B": "colleague",
@@ -4327,7 +4327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the open job position still unfilled, before you continue with this human resources task. (V2-C-97-01)",
+    "question_text": "Notice: A ______ for a project coordinator has been posted on the company intranet. (V2-C-97-01)",
     "options": {
       "A": "candidate",
       "B": "department",
@@ -4357,7 +4357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person considered for job, for today's staffing work. Which term best completes the speaker's meaning? (V2-C-97-02)",
+    "question_text": "Conversation: We have three strong ______ for the senior analyst role — the final decision is tough. (V2-C-97-02)",
     "options": {
       "A": "vacancy",
       "B": "department",
@@ -4387,7 +4387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the staffing briefing, the manager referred to the ______, the division of organization, more than once. (V2-C-97-03)",
+    "question_text": "Memo: A meeting with all ______ heads has been scheduled for Monday at 9 a.m. (V2-C-97-03)",
     "options": {
       "A": "department",
       "B": "vacancy",
@@ -4417,7 +4417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the staffing team should understand the ______, the separate location of company, before the meeting begins. (V2-C-97-04)",
+    "question_text": "Announcement: A new ______ is opening in the southern district to serve the growing customer base. (V2-C-97-04)",
     "options": {
       "A": "vacancy",
       "B": "branch",
@@ -4477,7 +4477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person considered for job, before you continue with this human resources task. (V2-C-97-06)",
+    "question_text": "Notice: All shortlisted ______ will be contacted within five business days for an interview. (V2-C-97-06)",
     "options": {
       "A": "vacancy",
       "B": "department",
@@ -4507,7 +4507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the division of organization, for today's staffing work. Which term best completes the speaker's meaning? (V2-C-97-07)",
+    "question_text": "Conversation: Which ______ is responsible for handling overseas client accounts? (V2-C-97-07)",
     "options": {
       "A": "department",
       "B": "vacancy",
@@ -4537,7 +4537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the staffing briefing, the manager referred to the ______, the separate location of company, more than once. (V2-C-97-08)",
+    "question_text": "Memo: Please coordinate with the regional ______ manager before finalizing delivery arrangements. (V2-C-97-08)",
     "options": {
       "A": "vacancy",
       "B": "branch",
@@ -4567,7 +4567,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the staffing team should understand the ______, the open job position still unfilled, before the meeting begins. (V2-C-97-09)",
+    "question_text": "Announcement: Two ______ positions for senior engineers have been advertised on our careers page. (V2-C-97-09)",
     "options": {
       "A": "candidate",
       "B": "department",
@@ -4627,7 +4627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the division of organization, before you continue with this human resources task. (V2-C-97-11)",
+    "question_text": "Notice: The new budget allocation for each ______ will be communicated next week. (V2-C-97-11)",
     "options": {
       "A": "department",
       "B": "vacancy",
@@ -4657,7 +4657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the separate location of company, for today's staffing work. Which term best completes the speaker's meaning? (V2-C-97-12)",
+    "question_text": "Conversation: Which ______ will you be based at after the transfer — Hong Kong or Singapore? (V2-C-97-12)",
     "options": {
       "A": "vacancy",
       "B": "branch",
@@ -4687,7 +4687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the staffing briefing, the manager referred to the ______, the open job position still unfilled, more than once. (V2-C-97-13)",
+    "question_text": "Memo: Report any ______ in your team to HR as soon as it is anticipated. (V2-C-97-13)",
     "options": {
       "A": "candidate",
       "B": "department",
@@ -4717,7 +4717,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the staffing team should understand the ______, the person considered for job, before the meeting begins. (V2-C-97-14)",
+    "question_text": "Announcement: The successful ______ will be selected based on technical skills and cultural fit. (V2-C-97-14)",
     "options": {
       "A": "vacancy",
       "B": "department",
@@ -4777,7 +4777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the separate location of company, before you continue with this human resources task. (V2-C-97-16)",
+    "question_text": "Notice: The Taipei ______ will relocate to its new address on the first of next month. (V2-C-97-16)",
     "options": {
       "A": "vacancy",
       "B": "branch",
@@ -4807,7 +4807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the open job position still unfilled, for today's staffing work. Which term best completes the speaker's meaning? (V2-C-97-17)",
+    "question_text": "Conversation: Is there still a ______ in the finance team, or has it been filled? (V2-C-97-17)",
     "options": {
       "A": "candidate",
       "B": "department",
@@ -4837,7 +4837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the staffing briefing, the manager referred to the ______, the person considered for job, more than once. (V2-C-97-18)",
+    "question_text": "Memo: Please ensure each ______ receives a confirmation email after their interview is scheduled. (V2-C-97-18)",
     "options": {
       "A": "vacancy",
       "B": "department",
@@ -4867,7 +4867,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the staffing team should understand the ______, the division of organization, before the meeting begins. (V2-C-97-19)",
+    "question_text": "Announcement: The IT ______ will be implementing system upgrades over the coming weekend. (V2-C-97-19)",
     "options": {
       "A": "department",
       "B": "vacancy",
@@ -4927,7 +4927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the open job position still unfilled, before you continue with this human resources task. (V2-C-97-21)",
+    "question_text": "Applicants can apply for any current ______ through the online HR portal. (V2-C-97-21)",
     "options": {
       "A": "candidate",
       "B": "department",
@@ -4957,7 +4957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person considered for job, for today's staffing work. Which term best completes the speaker's meaning? (V2-C-97-22)",
+    "question_text": "Each ______ must complete a written test before advancing to the panel interview stage. (V2-C-97-22)",
     "options": {
       "A": "vacancy",
       "B": "department",
@@ -4987,7 +4987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the staffing briefing, the manager referred to the ______, the division of organization, more than once. (V2-C-97-23)",
+    "question_text": "Check with your ______ manager before committing to any additional project responsibilities. (V2-C-97-23)",
     "options": {
       "A": "department",
       "B": "vacancy",
@@ -5017,7 +5017,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the staffing team should understand the ______, the separate location of company, before the meeting begins. (V2-C-97-24)",
+    "question_text": "Staff at each ______ are required to submit monthly performance reports to head office. (V2-C-97-24)",
     "options": {
       "A": "vacancy",
       "B": "branch",
@@ -5047,7 +5047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the guide with company information, before you continue with this human resources task. (V2-C-98-01)",
+    "question_text": "Notice: Please read the employee ______ carefully before your first day of work. (V2-C-98-01)",
     "options": {
       "A": "badge",
       "B": "access card",
@@ -5077,7 +5077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the identification card worn at work, for today's onboarding work. Which term best completes the speaker's meaning? (V2-C-98-02)",
+    "question_text": "Conversation: I've misplaced my security ______ — should I report it to reception immediately? (V2-C-98-02)",
     "options": {
       "A": "handbook",
       "B": "access card",
@@ -5107,7 +5107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the onboarding briefing, the manager referred to the ______, the card for entering secured areas, more than once. (V2-C-98-03)",
+    "question_text": "Memo: Replacement ______ requests should be submitted to the facilities team with a valid reason. (V2-C-98-03)",
     "options": {
       "A": "access card",
       "B": "handbook",
@@ -5137,7 +5137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the onboarding team should understand the ______, the area where person works, before the meeting begins. (V2-C-98-04)",
+    "question_text": "Announcement: The new open-plan ______ design will be introduced on Floor 7 starting next quarter. (V2-C-98-04)",
     "options": {
       "A": "handbook",
       "B": "workspace",
@@ -5197,7 +5197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the identification card worn at work, before you continue with this human resources task. (V2-C-98-06)",
+    "question_text": "Notice: All staff must wear their ID ______ visibly while on company premises. (V2-C-98-06)",
     "options": {
       "A": "handbook",
       "B": "access card",
@@ -5227,7 +5227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the card for entering secured areas, for today's onboarding work. Which term best completes the speaker's meaning? (V2-C-98-07)",
+    "question_text": "Conversation: I forgot my ______ at home — how do I get into the building? (V2-C-98-07)",
     "options": {
       "A": "access card",
       "B": "handbook",
@@ -5257,7 +5257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the onboarding briefing, the manager referred to the ______, the area where person works, more than once. (V2-C-98-08)",
+    "question_text": "Memo: Hot-desking ______ must be booked in advance through the facilities management system. (V2-C-98-08)",
     "options": {
       "A": "handbook",
       "B": "workspace",
@@ -5287,7 +5287,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the onboarding team should understand the ______, the guide with company information, before the meeting begins. (V2-C-98-09)",
+    "question_text": "Announcement: A revised employee ______ will be distributed at the all-staff briefing next Monday. (V2-C-98-09)",
     "options": {
       "A": "badge",
       "B": "access card",
@@ -5347,7 +5347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the card for entering secured areas, before you continue with this human resources task. (V2-C-98-11)",
+    "question_text": "Notice: Your ______ must be returned to HR on your last working day. (V2-C-98-11)",
     "options": {
       "A": "access card",
       "B": "handbook",
@@ -5377,7 +5377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the area where person works, for today's onboarding work. Which term best completes the speaker's meaning? (V2-C-98-12)",
+    "question_text": "Conversation: The shared ______ on the third floor is available for project teams during busy periods. (V2-C-98-12)",
     "options": {
       "A": "handbook",
       "B": "workspace",
@@ -5407,7 +5407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the onboarding briefing, the manager referred to the ______, the guide with company information, more than once. (V2-C-98-13)",
+    "question_text": "Memo: The updated ______ has been uploaded to the intranet — all staff must acknowledge receipt. (V2-C-98-13)",
     "options": {
       "A": "badge",
       "B": "access card",
@@ -5437,7 +5437,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the onboarding team should understand the ______, the identification card worn at work, before the meeting begins. (V2-C-98-14)",
+    "question_text": "Announcement: New employee photo ______ will be issued during the first week of onboarding. (V2-C-98-14)",
     "options": {
       "A": "handbook",
       "B": "access card",
@@ -5497,7 +5497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the area where person works, before you continue with this human resources task. (V2-C-98-16)",
+    "question_text": "Notice: Staff are responsible for keeping their ______ clean and organized at all times. (V2-C-98-16)",
     "options": {
       "A": "handbook",
       "B": "workspace",
@@ -5527,7 +5527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the guide with company information, for today's onboarding work. Which term best completes the speaker's meaning? (V2-C-98-17)",
+    "question_text": "Conversation: Is the information about the expense policy in the staff ______? (V2-C-98-17)",
     "options": {
       "A": "badge",
       "B": "access card",
@@ -5557,7 +5557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the onboarding briefing, the manager referred to the ______, the identification card worn at work, more than once. (V2-C-98-18)",
+    "question_text": "Memo: Temporary visitor ______ must be collected from reception and returned upon departure. (V2-C-98-18)",
     "options": {
       "A": "handbook",
       "B": "access card",
@@ -5587,7 +5587,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the onboarding team should understand the ______, the card for entering secured areas, before the meeting begins. (V2-C-98-19)",
+    "question_text": "Announcement: All ______ will need to be reprogrammed following the system upgrade next weekend. (V2-C-98-19)",
     "options": {
       "A": "access card",
       "B": "handbook",
@@ -5647,7 +5647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the guide with company information, before you continue with this human resources task. (V2-C-98-21)",
+    "question_text": "The ______ outlines all company policies, procedures, and employee responsibilities. (V2-C-98-21)",
     "options": {
       "A": "badge",
       "B": "access card",
@@ -5677,7 +5677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the identification card worn at work, for today's onboarding work. Which term best completes the speaker's meaning? (V2-C-98-22)",
+    "question_text": "Wearing your ______ ensures that security personnel can quickly identify authorized staff. (V2-C-98-22)",
     "options": {
       "A": "handbook",
       "B": "access card",
@@ -5707,7 +5707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the onboarding briefing, the manager referred to the ______, the card for entering secured areas, more than once. (V2-C-98-23)",
+    "question_text": "Do not lend your ______ to anyone — each one is registered to an individual employee. (V2-C-98-23)",
     "options": {
       "A": "access card",
       "B": "handbook",
@@ -5737,7 +5737,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the onboarding team should understand the ______, the area where person works, before the meeting begins. (V2-C-98-24)",
+    "question_text": "Employees should not leave personal items in shared ______ areas at the end of the day. (V2-C-98-24)",
     "options": {
       "A": "handbook",
       "B": "workspace",
@@ -5767,7 +5767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document record of employee details, before you continue with this human resources task. (V2-C-99-01)",
+    "question_text": "Notice: Your ______ will be maintained by HR throughout your employment and for seven years after. (V2-C-99-01)",
     "options": {
       "A": "emergency contact",
       "B": "tax form",
@@ -5797,7 +5797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person to call in crisis, for today's employee record work. Which term best completes the speaker's meaning? (V2-C-99-02)",
+    "question_text": "Conversation: HR is asking all staff to update their ______ details in the employee portal. (V2-C-99-02)",
     "options": {
       "A": "personnel file",
       "B": "tax form",
@@ -5827,7 +5827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee record briefing, the manager referred to the ______, the document used for income tax, more than once. (V2-C-99-03)",
+    "question_text": "Memo: All staff must review and sign their updated ______ before the end of this fiscal quarter. (V2-C-99-03)",
     "options": {
       "A": "tax form",
       "B": "personnel file",
@@ -5857,7 +5857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee record team should understand the ______, the automatic salary payment method, before the meeting begins. (V2-C-99-04)",
+    "question_text": "Announcement: The company will process all salaries through ______ starting from next month. (V2-C-99-04)",
     "options": {
       "A": "personnel file",
       "B": "direct deposit",
@@ -5917,7 +5917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person to call in crisis, before you continue with this human resources task. (V2-C-99-06)",
+    "question_text": "Notice: Please ensure that your ______ information in HR's system is current and accurate. (V2-C-99-06)",
     "options": {
       "A": "personnel file",
       "B": "tax form",
@@ -5947,7 +5947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document used for income tax, for today's employee record work. Which term best completes the speaker's meaning? (V2-C-99-07)",
+    "question_text": "Conversation: Where do I get the ______ for the new employees who started this month? (V2-C-99-07)",
     "options": {
       "A": "tax form",
       "B": "personnel file",
@@ -5977,7 +5977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee record briefing, the manager referred to the ______, the automatic salary payment method, more than once. (V2-C-99-08)",
+    "question_text": "Memo: All employees must enroll in ______ to receive their monthly salary electronically. (V2-C-99-08)",
     "options": {
       "A": "personnel file",
       "B": "direct deposit",
@@ -6007,7 +6007,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee record team should understand the ______, the document record of employee details, before the meeting begins. (V2-C-99-09)",
+    "question_text": "Announcement: Employees may request to review their own ______ with 48 hours' written notice. (V2-C-99-09)",
     "options": {
       "A": "emergency contact",
       "B": "tax form",
@@ -6067,7 +6067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document used for income tax, before you continue with this human resources task. (V2-C-99-11)",
+    "question_text": "Notice: Please complete and submit your annual ______ to the finance department by March 31st. (V2-C-99-11)",
     "options": {
       "A": "tax form",
       "B": "personnel file",
@@ -6097,7 +6097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the automatic salary payment method, for today's employee record work. Which term best completes the speaker's meaning? (V2-C-99-12)",
+    "question_text": "Conversation: Has my ______ been set up yet? I haven't seen my salary in my account. (V2-C-99-12)",
     "options": {
       "A": "personnel file",
       "B": "direct deposit",
@@ -6127,7 +6127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee record briefing, the manager referred to the ______, the document record of employee details, more than once. (V2-C-99-13)",
+    "question_text": "Memo: Please forward any certifications or updated qualifications for inclusion in your ______. (V2-C-99-13)",
     "options": {
       "A": "emergency contact",
       "B": "tax form",
@@ -6157,7 +6157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee record team should understand the ______, the person to call in crisis, before the meeting begins. (V2-C-99-14)",
+    "question_text": "Announcement: All new staff must submit their ______ information as part of their onboarding documents. (V2-C-99-14)",
     "options": {
       "A": "personnel file",
       "B": "tax form",
@@ -6217,7 +6217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the automatic salary payment method, before you continue with this human resources task. (V2-C-99-16)",
+    "question_text": "Notice: Please verify your bank account number on file to ensure accurate ______ payments. (V2-C-99-16)",
     "options": {
       "A": "personnel file",
       "B": "direct deposit",
@@ -6247,7 +6247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document record of employee details, for today's employee record work. Which term best completes the speaker's meaning? (V2-C-99-17)",
+    "question_text": "Conversation: Is my training certificate included in my ______? I may need it for a reference. (V2-C-99-17)",
     "options": {
       "A": "emergency contact",
       "B": "tax form",
@@ -6277,7 +6277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee record briefing, the manager referred to the ______, the person to call in crisis, more than once. (V2-C-99-18)",
+    "question_text": "Memo: Verify and update your ______ record annually or whenever there is a change. (V2-C-99-18)",
     "options": {
       "A": "personnel file",
       "B": "tax form",
@@ -6307,7 +6307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee record team should understand the ______, the document used for income tax, before the meeting begins. (V2-C-99-19)",
+    "question_text": "Announcement: New ______ templates for the upcoming fiscal year are now available on the HR portal. (V2-C-99-19)",
     "options": {
       "A": "tax form",
       "B": "personnel file",
@@ -6367,7 +6367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document record of employee details, before you continue with this human resources task. (V2-C-99-21)",
+    "question_text": "Ensure all performance appraisal records are accurately documented in the employee's ______. (V2-C-99-21)",
     "options": {
       "A": "emergency contact",
       "B": "tax form",
@@ -6397,7 +6397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person to call in crisis, for today's employee record work. Which term best completes the speaker's meaning? (V2-C-99-22)",
+    "question_text": "An accurate ______ record ensures that the right person is notified in an emergency. (V2-C-99-22)",
     "options": {
       "A": "personnel file",
       "B": "tax form",
@@ -6427,7 +6427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee record briefing, the manager referred to the ______, the document used for income tax, more than once. (V2-C-99-23)",
+    "question_text": "Contact the payroll team if you have questions about completing your ______. (V2-C-99-23)",
     "options": {
       "A": "tax form",
       "B": "personnel file",
@@ -6457,7 +6457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee record team should understand the ______, the automatic salary payment method, before the meeting begins. (V2-C-99-24)",
+    "question_text": "To update your ______ details, submit the bank account change form to the HR department. (V2-C-99-24)",
     "options": {
       "A": "personnel file",
       "B": "direct deposit",
@@ -6487,7 +6487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the rapid departure from dangerous area, before you continue with this human resources task. (V2-C-100-01)",
+    "question_text": "Notice: An ______ drill will be conducted at 10:00 a.m. on Thursday — proceed to your assigned exit. (V2-C-100-01)",
     "options": {
       "A": "hazard",
       "B": "incident report",
@@ -6517,7 +6517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the dangerous condition or substance, for today's workplace safety work. Which term best completes the speaker's meaning? (V2-C-100-02)",
+    "question_text": "Conversation: There's a wet floor near the break room entrance — it's a serious slip ______. (V2-C-100-02)",
     "options": {
       "A": "evacuation",
       "B": "incident report",
@@ -6547,7 +6547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace safety briefing, the manager referred to the ______, the official record of accident, more than once. (V2-C-100-03)",
+    "question_text": "Memo: All supervisors must ensure that the ______ is completed accurately and submitted to HR. (V2-C-100-03)",
     "options": {
       "A": "incident report",
       "B": "evacuation",
@@ -6577,7 +6577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace safety team should understand the ______, the emergency medical supplies, before the meeting begins. (V2-C-100-04)",
+    "question_text": "Announcement: Newly installed ______ stations are located in the kitchen, print room, and gym. (V2-C-100-04)",
     "options": {
       "A": "evacuation",
       "B": "first aid kit",
@@ -6637,7 +6637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the dangerous condition or substance, before you continue with this human resources task. (V2-C-100-06)",
+    "question_text": "Notice: Report any workplace ______ to the safety officer immediately using the online form. (V2-C-100-06)",
     "options": {
       "A": "evacuation",
       "B": "incident report",
@@ -6667,7 +6667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official record of accident, for today's workplace safety work. Which term best completes the speaker's meaning? (V2-C-100-07)",
+    "question_text": "Conversation: I slipped in the corridor — do I need to fill out an ______? (V2-C-100-07)",
     "options": {
       "A": "incident report",
       "B": "evacuation",
@@ -6697,7 +6697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace safety briefing, the manager referred to the ______, the emergency medical supplies, more than once. (V2-C-100-08)",
+    "question_text": "Memo: Check the contents of each ______ monthly and restock any missing or expired items. (V2-C-100-08)",
     "options": {
       "A": "evacuation",
       "B": "first aid kit",
@@ -6727,7 +6727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace safety team should understand the ______, the rapid departure from dangerous area, before the meeting begins. (V2-C-100-09)",
+    "question_text": "Announcement: A mandatory fire ______ exercise will take place across all floors on Friday morning. (V2-C-100-09)",
     "options": {
       "A": "hazard",
       "B": "incident report",
@@ -6787,7 +6787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official record of accident, before you continue with this human resources task. (V2-C-100-11)",
+    "question_text": "Notice: Submit an ______ within 24 hours of any workplace accident, no matter how minor. (V2-C-100-11)",
     "options": {
       "A": "incident report",
       "B": "evacuation",
@@ -6817,7 +6817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the emergency medical supplies, for today's workplace safety work. Which term best completes the speaker's meaning? (V2-C-100-12)",
+    "question_text": "Conversation: Where is the nearest ______ in this office? One of my team members cut their hand. (V2-C-100-12)",
     "options": {
       "A": "evacuation",
       "B": "first aid kit",
@@ -6847,7 +6847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace safety briefing, the manager referred to the ______, the rapid departure from dangerous area, more than once. (V2-C-100-13)",
+    "question_text": "Memo: Review the ______ route map posted beside each emergency exit in your work area. (V2-C-100-13)",
     "options": {
       "A": "hazard",
       "B": "incident report",
@@ -6877,7 +6877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace safety team should understand the ______, the dangerous condition or substance, before the meeting begins. (V2-C-100-14)",
+    "question_text": "Announcement: A ______ assessment will be carried out in the production area next Wednesday. (V2-C-100-14)",
     "options": {
       "A": "evacuation",
       "B": "incident report",
@@ -6937,7 +6937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the emergency medical supplies, before you continue with this human resources task. (V2-C-100-16)",
+    "question_text": "Notice: A ______ is mounted on the wall near the main entrance of each floor. (V2-C-100-16)",
     "options": {
       "A": "evacuation",
       "B": "first aid kit",
@@ -6967,7 +6967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the rapid departure from dangerous area, for today's workplace safety work. Which term best completes the speaker's meaning? (V2-C-100-17)",
+    "question_text": "Conversation: During the ______, all staff should leave immediately and not use the elevators. (V2-C-100-17)",
     "options": {
       "A": "hazard",
       "B": "incident report",
@@ -6997,7 +6997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace safety briefing, the manager referred to the ______, the dangerous condition or substance, more than once. (V2-C-100-18)",
+    "question_text": "Memo: All identified ______ must be logged in the safety management system within 24 hours. (V2-C-100-18)",
     "options": {
       "A": "evacuation",
       "B": "incident report",
@@ -7027,7 +7027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace safety team should understand the ______, the official record of accident, before the meeting begins. (V2-C-100-19)",
+    "question_text": "Announcement: The updated ______ form is now available in both digital and printed formats. (V2-C-100-19)",
     "options": {
       "A": "incident report",
       "B": "evacuation",
@@ -7087,7 +7087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the rapid departure from dangerous area, before you continue with this human resources task. (V2-C-100-21)",
+    "question_text": "All staff must be familiar with the nearest ______ route from their workspace. (V2-C-100-21)",
     "options": {
       "A": "hazard",
       "B": "incident report",
@@ -7117,7 +7117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the dangerous condition or substance, for today's workplace safety work. Which term best completes the speaker's meaning? (V2-C-100-22)",
+    "question_text": "Employees who identify a ______ on site should place a warning sign and report it promptly. (V2-C-100-22)",
     "options": {
       "A": "evacuation",
       "B": "incident report",
@@ -7147,7 +7147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace safety briefing, the manager referred to the ______, the official record of accident, more than once. (V2-C-100-23)",
+    "question_text": "An accurate ______ helps identify patterns and prevent future workplace accidents. (V2-C-100-23)",
     "options": {
       "A": "incident report",
       "B": "evacuation",
@@ -7177,7 +7177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "human_resources",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace safety team should understand the ______, the emergency medical supplies, before the meeting begins. (V2-C-100-24)",
+    "question_text": "Report to the trained first aider and locate the ______ in the event of a minor injury. (V2-C-100-24)",
     "options": {
       "A": "evacuation",
       "B": "first aid kit",

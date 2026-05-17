@@ -3,7 +3,7 @@ import { test as base, expect, type Page } from "@playwright/test";
 const DB_NAME = "toeic_vocab_tracker_db";
 const DB_VERSION = 1;
 const COURSE_ID = "toeic_vocab_v1";
-const APP_SEED_VERSION = "toeic_vocab_tracker_v2_v3_quality_2026_05_14";
+const APP_SEED_VERSION = "toeic_vocab_tracker_interference_2026_05_17";
 const PREF_KEY = "toeic_vocab_tracker_preferences";
 const ACTIVE_SESSION_KEY = "toeic_vocab_active_session";
 const HELPER_TIMEOUT = 15_000;

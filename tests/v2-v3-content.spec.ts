@@ -18,6 +18,9 @@ async function answerQuestions(page, lessonId: string, count: number) {
   for (let index = 0; index < count; index += 1) {
     await expect(answerButtons.first()).toBeEnabled({ timeout: STEP_TIMEOUT });
     await answerButtons.first().click({ timeout: STEP_TIMEOUT });
+    const confirmButton = page.getByRole("button", { name: "Confirm Answer" });
+    await expect(confirmButton).toBeEnabled({ timeout: STEP_TIMEOUT });
+    await confirmButton.click({ timeout: STEP_TIMEOUT });
     const advanceButton = page.getByRole("button", { name: /Next Question|See Summary/ });
     await expect(advanceButton).toBeVisible({ timeout: STEP_TIMEOUT });
     await advanceButton.click({ timeout: STEP_TIMEOUT });
@@ -82,8 +85,8 @@ test("production content: V2 and V3 seed and runtime record attempts", async ({ 
     return { lessonsByStage, questionsByStage };
   });
 
-  expect(summary.lessonsByStage.V2).toBe(50);
-  expect(summary.lessonsByStage.V3).toBe(60);
+  expect(summary.lessonsByStage.V2).toBe(60);  // 50 core + 10 mixed review
+  expect(summary.lessonsByStage.V3).toBe(72);  // 60 core + 12 mixed review
   expect(summary.questionsByStage.V2).toBe(1200);
   expect(summary.questionsByStage.V3).toBe(1440);
 

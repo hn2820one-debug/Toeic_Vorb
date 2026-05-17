@@ -7,7 +7,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the desk-and-computer setup for work, before you continue with this office administration task. (V2-A-71-01)",
+    "question_text": "Notice: Please ensure your ______ is locked and the screen is off before leaving. (V2-A-71-01)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -37,7 +37,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the internal phone number within office, for today's office equipment work. Which term best completes the speaker's meaning? (V2-A-71-02)",
+    "question_text": "Conversation: I'll transfer your call to the HR department — what ______ should I dial? (V2-A-71-02)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -67,7 +67,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office equipment briefing, the manager referred to the ______, the machine making paper copies, more than once. (V2-A-71-03)",
+    "question_text": "Memo: Large batch print jobs should be sent to the ______ in Room 202. (V2-A-71-03)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -97,7 +97,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office equipment team should understand the ______, the office paper supplies and materials, before the meeting begins. (V2-A-71-04)",
+    "question_text": "Announcement: Beginning next month, all ______ orders will be placed through the new vendor. (V2-A-71-04)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -157,7 +157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the internal phone number within office, before you continue with this office administration task. (V2-A-71-06)",
+    "question_text": "Notice: Please use ______ 2045 to reach the facilities management team directly. (V2-A-71-06)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -187,7 +187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the machine making paper copies, for today's office equipment work. Which term best completes the speaker's meaning? (V2-A-71-07)",
+    "question_text": "Conversation: Is the ______ near the break room available, or is it still jammed? (V2-A-71-07)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -217,7 +217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office equipment briefing, the manager referred to the ______, the office paper supplies and materials, more than once. (V2-A-71-08)",
+    "question_text": "Memo: The supply room has been restocked with ______, including notepads and pens. (V2-A-71-08)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -247,7 +247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office equipment team should understand the ______, the desk-and-computer setup for work, before the meeting begins. (V2-A-71-09)",
+    "question_text": "Announcement: Staff assigned to temporary ______ units should report any technical issues to IT. (V2-A-71-09)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -307,7 +307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the machine making paper copies, before you continue with this office administration task. (V2-A-71-11)",
+    "question_text": "Notice: The ______ on the third floor is currently out of service until further notice. (V2-A-71-11)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -337,7 +337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the office paper supplies and materials, for today's office equipment work. Which term best completes the speaker's meaning? (V2-A-71-12)",
+    "question_text": "Conversation: Could you check whether we have enough ______ for the new team members? (V2-A-71-12)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -367,7 +367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office equipment briefing, the manager referred to the ______, the desk-and-computer setup for work, more than once. (V2-A-71-13)",
+    "question_text": "Memo: IT will run security checks on every ______ in the office this Friday afternoon. (V2-A-71-13)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -397,7 +397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office equipment team should understand the ______, the internal phone number within office, before the meeting begins. (V2-A-71-14)",
+    "question_text": "Announcement: The IT support ______ number has been updated to 5500 starting Monday. (V2-A-71-14)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -457,7 +457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the office paper supplies and materials, before you continue with this office administration task. (V2-A-71-16)",
+    "question_text": "Notice: All ______ requests must be submitted via the online form by Thursday. (V2-A-71-16)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -487,7 +487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the desk-and-computer setup for work, for today's office equipment work. Which term best completes the speaker's meaning? (V2-A-71-17)",
+    "question_text": "Conversation: The new hire starts Monday — has her ______ been set up yet? (V2-A-71-17)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -517,7 +517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office equipment briefing, the manager referred to the ______, the internal phone number within office, more than once. (V2-A-71-18)",
+    "question_text": "Memo: Staff can contact the payroll team at internal ______ 218 during business hours. (V2-A-71-18)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -547,7 +547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office equipment team should understand the ______, the machine making paper copies, before the meeting begins. (V2-A-71-19)",
+    "question_text": "Announcement: A new high-speed ______ has been installed in the main print room on Floor 4. (V2-A-71-19)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -607,7 +607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the desk-and-computer setup for work, before you continue with this office administration task. (V2-A-71-21)",
+    "question_text": "Each employee is responsible for keeping their ______ clean and properly maintained. (V2-A-71-21)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -637,7 +637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the internal phone number within office, for today's office equipment work. Which term best completes the speaker's meaning? (V2-A-71-22)",
+    "question_text": "Each department's ______ number is listed in the internal company directory. (V2-A-71-22)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -667,7 +667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office equipment briefing, the manager referred to the ______, the machine making paper copies, more than once. (V2-A-71-23)",
+    "question_text": "Please clear any remaining documents from the ______ tray after use. (V2-A-71-23)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -697,7 +697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office equipment team should understand the ______, the office paper supplies and materials, before the meeting begins. (V2-A-71-24)",
+    "question_text": "Departments should consolidate their ______ needs into a single monthly order. (V2-A-71-24)",
     "options": {
       "A": "workstation",
       "B": "extension",
@@ -727,7 +727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the list of meeting discussion topics, before you continue with this office administration task. (V2-A-72-01)",
+    "question_text": "Notice: A copy of the meeting ______ will be distributed one hour before the session. (V2-A-72-01)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -757,7 +757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official written record of meeting, for today's meeting work. Which term best completes the speaker's meaning? (V2-A-72-02)",
+    "question_text": "Conversation: Could you send me the ______ from yesterday's budget review meeting? (V2-A-72-02)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -787,7 +787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the meeting briefing, the manager referred to the ______, the person present at meeting event, more than once. (V2-A-72-03)",
+    "question_text": "Memo: The seminar is limited to 30 ______ — please register your name by Friday. (V2-A-72-03)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -817,7 +817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the meeting team should understand the ______, the location where event is held, before the meeting begins. (V2-A-72-04)",
+    "question_text": "Announcement: Due to renovations, the event ______ has been relocated to the adjacent building. (V2-A-72-04)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -877,7 +877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official written record of meeting, before you continue with this office administration task. (V2-A-72-06)",
+    "question_text": "Notice: The ______ from last week's meeting are available on the shared drive. (V2-A-72-06)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -907,7 +907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person present at meeting event, for today's meeting work. Which term best completes the speaker's meaning? (V2-A-72-07)",
+    "question_text": "Conversation: How many ______ are we expecting at the product launch event? (V2-A-72-07)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -937,7 +937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the meeting briefing, the manager referred to the ______, the location where event is held, more than once. (V2-A-72-08)",
+    "question_text": "Memo: Please book a suitable ______ for the client presentation scheduled for next Tuesday. (V2-A-72-08)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -967,7 +967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the meeting team should understand the ______, the list of meeting discussion topics, before the meeting begins. (V2-A-72-09)",
+    "question_text": "Announcement: The updated conference ______ is now available on the company intranet. (V2-A-72-09)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1027,7 +1027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person present at meeting event, before you continue with this office administration task. (V2-A-72-11)",
+    "question_text": "Notice: Each ______ is required to sign in at the registration desk upon arrival. (V2-A-72-11)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1057,7 +1057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the location where event is held, for today's meeting work. Which term best completes the speaker's meaning? (V2-A-72-12)",
+    "question_text": "Conversation: Have we confirmed the ______ for the annual staff dinner yet? (V2-A-72-12)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1087,7 +1087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the meeting briefing, the manager referred to the ______, the list of meeting discussion topics, more than once. (V2-A-72-13)",
+    "question_text": "Memo: Please review the attached ______ and confirm your availability by end of day. (V2-A-72-13)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1117,7 +1117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the meeting team should understand the ______, the official written record of meeting, before the meeting begins. (V2-A-72-14)",
+    "question_text": "Announcement: Meeting ______ will be posted to the team portal within two business days. (V2-A-72-14)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1177,7 +1177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the location where event is held, before you continue with this office administration task. (V2-A-72-16)",
+    "question_text": "Notice: The training session ______ has been changed to Conference Room B on the fourth floor. (V2-A-72-16)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1207,7 +1207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the list of meeting discussion topics, for today's meeting work. Which term best completes the speaker's meaning? (V2-A-72-17)",
+    "question_text": "Conversation: Has the ______ for Thursday's board meeting been finalized yet? (V2-A-72-17)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1237,7 +1237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the meeting briefing, the manager referred to the ______, the official written record of meeting, more than once. (V2-A-72-18)",
+    "question_text": "Memo: Please ensure the ______ are circulated to all participants within 24 hours. (V2-A-72-18)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1267,7 +1267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the meeting team should understand the ______, the person present at meeting event, before the meeting begins. (V2-A-72-19)",
+    "question_text": "Announcement: All ______ are asked to remain seated until the session officially ends. (V2-A-72-19)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1327,7 +1327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the list of meeting discussion topics, before you continue with this office administration task. (V2-A-72-21)",
+    "question_text": "Items not on the ______ will be deferred to the next scheduled meeting. (V2-A-72-21)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1357,7 +1357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official written record of meeting, for today's meeting work. Which term best completes the speaker's meaning? (V2-A-72-22)",
+    "question_text": "The secretary is responsible for preparing and distributing the ______ after each session. (V2-A-72-22)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1387,7 +1387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the meeting briefing, the manager referred to the ______, the person present at meeting event, more than once. (V2-A-72-23)",
+    "question_text": "An evaluation form will be sent to each ______ after the workshop concludes. (V2-A-72-23)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1417,7 +1417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the meeting team should understand the ______, the location where event is held, before the meeting begins. (V2-A-72-24)",
+    "question_text": "All participants should arrive at the ______ at least 15 minutes before the session begins. (V2-A-72-24)",
     "options": {
       "A": "agenda",
       "B": "minutes",
@@ -1447,7 +1447,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the scheduled meeting with specific person, before you continue with this office administration task. (V2-A-73-01)",
+    "question_text": "Notice: Please cancel or reschedule your ______ at least 24 hours in advance. (V2-A-73-01)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1477,7 +1477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the final date for task completion, for today's scheduling work. Which term best completes the speaker's meaning? (V2-A-73-02)",
+    "question_text": "Conversation: The client moved the project ______ up by two weeks — can we still meet it? (V2-A-73-02)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1507,7 +1507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the scheduling briefing, the manager referred to the ______, the detailed travel schedule and plan, more than once. (V2-A-73-03)",
+    "question_text": "Memo: The attached ______ outlines all flight, hotel, and meeting details for the conference. (V2-A-73-03)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1537,7 +1537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the scheduling team should understand the ______, the times when person is free, before the meeting begins. (V2-A-73-04)",
+    "question_text": "Announcement: Limited ______ remains for Friday's advanced training session — register now. (V2-A-73-04)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1597,7 +1597,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the final date for task completion, before you continue with this office administration task. (V2-A-73-06)",
+    "question_text": "Notice: All applications must be submitted before the ______ of 5:00 p.m. on Friday. (V2-A-73-06)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1627,7 +1627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the detailed travel schedule and plan, for today's scheduling work. Which term best completes the speaker's meaning? (V2-A-73-07)",
+    "question_text": "Conversation: Can you send me the final ______ for the Tokyo business trip? (V2-A-73-07)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1657,7 +1657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the scheduling briefing, the manager referred to the ______, the times when person is free, more than once. (V2-A-73-08)",
+    "question_text": "Memo: The project team's ______ during the holiday week has been noted for planning purposes. (V2-A-73-08)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1687,7 +1687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the scheduling team should understand the ______, the scheduled meeting with specific person, before the meeting begins. (V2-A-73-09)",
+    "question_text": "Announcement: The registration desk will accept walk-in ______ requests from 9 a.m. to noon. (V2-A-73-09)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1747,7 +1747,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the detailed travel schedule and plan, before you continue with this office administration task. (V2-A-73-11)",
+    "question_text": "Notice: A copy of your travel ______ has been sent to your company email address. (V2-A-73-11)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1777,7 +1777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the times when person is free, for today's scheduling work. Which term best completes the speaker's meaning? (V2-A-73-12)",
+    "question_text": "Conversation: Before we schedule the meeting, could you check everyone's ______? (V2-A-73-12)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1807,7 +1807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the scheduling briefing, the manager referred to the ______, the scheduled meeting with specific person, more than once. (V2-A-73-13)",
+    "question_text": "Memo: Your ______ with the client has been confirmed for 2:00 p.m. on Thursday. (V2-A-73-13)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1837,7 +1837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the scheduling team should understand the ______, the final date for task completion, before the meeting begins. (V2-A-73-14)",
+    "question_text": "Announcement: The registration ______ for the annual conference is this coming Thursday. (V2-A-73-14)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1897,7 +1897,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the times when person is free, before you continue with this office administration task. (V2-A-73-16)",
+    "question_text": "Notice: Please update your calendar to reflect your current ______ for next week. (V2-A-73-16)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1927,7 +1927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the scheduled meeting with specific person, for today's scheduling work. Which term best completes the speaker's meaning? (V2-A-73-17)",
+    "question_text": "Conversation: I'd like to make an ______ with the department head for next Wednesday. (V2-A-73-17)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1957,7 +1957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the scheduling briefing, the manager referred to the ______, the final date for task completion, more than once. (V2-A-73-18)",
+    "question_text": "Memo: Please note that the report ______ has been extended to next Monday at noon. (V2-A-73-18)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -1987,7 +1987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the scheduling team should understand the ______, the detailed travel schedule and plan, before the meeting begins. (V2-A-73-19)",
+    "question_text": "Announcement: Changes to the event ______ will be posted on the conference website. (V2-A-73-19)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -2047,7 +2047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the scheduled meeting with specific person, before you continue with this office administration task. (V2-A-73-21)",
+    "question_text": "Staff must confirm their ______ by phone or email at least one day in advance. (V2-A-73-21)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -2077,7 +2077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the final date for task completion, for today's scheduling work. Which term best completes the speaker's meaning? (V2-A-73-22)",
+    "question_text": "Late submissions after the ______ will not be considered for this round. (V2-A-73-22)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -2107,7 +2107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the scheduling briefing, the manager referred to the ______, the detailed travel schedule and plan, more than once. (V2-A-73-23)",
+    "question_text": "Review your ______ carefully and contact the travel desk if any adjustments are needed. (V2-A-73-23)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -2137,7 +2137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the scheduling team should understand the ______, the times when person is free, before the meeting begins. (V2-A-73-24)",
+    "question_text": "Please confirm your ______ for the client call before the coordinator sends an invite. (V2-A-73-24)",
     "options": {
       "A": "appointment",
       "B": "deadline",
@@ -2167,7 +2167,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the brief written office communication, before you continue with this office administration task. (V2-A-74-01)",
+    "question_text": "Notice: A ______ regarding the new office hours policy has been distributed to all staff. (V2-A-74-01)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2197,7 +2197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the bill for goods or services, for today's office document work. Which term best completes the speaker's meaning? (V2-A-74-02)",
+    "question_text": "Conversation: The client is asking why the ______ amount differs from the original quote. (V2-A-74-02)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2227,7 +2227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office document briefing, the manager referred to the ______, the document sent with email message, more than once. (V2-A-74-03)",
+    "question_text": "Memo: The signed contract is included as an ______ to this email for your records. (V2-A-74-03)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2257,7 +2257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office document team should understand the ______, the list of names and contact details, before the meeting begins. (V2-A-74-04)",
+    "question_text": "Announcement: The new vendor ______ listing approved suppliers will be shared by end of week. (V2-A-74-04)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2317,7 +2317,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the bill for goods or services, before you continue with this office administration task. (V2-A-74-06)",
+    "question_text": "Notice: All ______ must be approved by the department head before submission to finance. (V2-A-74-06)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2347,7 +2347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document sent with email message, for today's office document work. Which term best completes the speaker's meaning? (V2-A-74-07)",
+    "question_text": "Conversation: I sent you an email with an ______ — could you check if you received it? (V2-A-74-07)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2377,7 +2377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office document briefing, the manager referred to the ______, the list of names and contact details, more than once. (V2-A-74-08)",
+    "question_text": "Memo: Please verify that your contact details are correct in the employee ______. (V2-A-74-08)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2407,7 +2407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office document team should understand the ______, the brief written office communication, before the meeting begins. (V2-A-74-09)",
+    "question_text": "Announcement: An internal ______ will be issued to all departments following the board meeting. (V2-A-74-09)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2467,7 +2467,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document sent with email message, before you continue with this office administration task. (V2-A-74-11)",
+    "question_text": "Notice: Please open the ______ for the latest project guidelines before starting. (V2-A-74-11)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2497,7 +2497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the list of names and contact details, for today's office document work. Which term best completes the speaker's meaning? (V2-A-74-12)",
+    "question_text": "Conversation: Do you have the office ______ handy? I need the HR manager's extension. (V2-A-74-12)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2527,7 +2527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office document briefing, the manager referred to the ______, the brief written office communication, more than once. (V2-A-74-13)",
+    "question_text": "Memo: Please circulate this ______ to your team and confirm receipt by Wednesday. (V2-A-74-13)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2557,7 +2557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office document team should understand the ______, the bill for goods or services, before the meeting begins. (V2-A-74-14)",
+    "question_text": "Announcement: From next month, all ______ submissions must include the project reference number. (V2-A-74-14)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2617,7 +2617,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the list of names and contact details, before you continue with this office administration task. (V2-A-74-16)",
+    "question_text": "Notice: The updated staff ______ is available on the company intranet under Resources. (V2-A-74-16)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2647,7 +2647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the brief written office communication, for today's office document work. Which term best completes the speaker's meaning? (V2-A-74-17)",
+    "question_text": "Conversation: Did you get the ______ about the changes to the expense submission process? (V2-A-74-17)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2677,7 +2677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office document briefing, the manager referred to the ______, the bill for goods or services, more than once. (V2-A-74-18)",
+    "question_text": "Memo: Please process the attached ______ for payment within 30 days of receipt. (V2-A-74-18)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2707,7 +2707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office document team should understand the ______, the document sent with email message, before the meeting begins. (V2-A-74-19)",
+    "question_text": "Announcement: Reference documents are available as an ______ in the follow-up email. (V2-A-74-19)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2767,7 +2767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the brief written office communication, before you continue with this office administration task. (V2-A-74-21)",
+    "question_text": "The policy changes are outlined in the ______ sent by the operations director last week. (V2-A-74-21)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2797,7 +2797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the bill for goods or services, for today's office document work. Which term best completes the speaker's meaning? (V2-A-74-22)",
+    "question_text": "Finance will not process any ______ that is missing a valid purchase order number. (V2-A-74-22)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2827,7 +2827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office document briefing, the manager referred to the ______, the document sent with email message, more than once. (V2-A-74-23)",
+    "question_text": "If the ______ fails to open, please contact the IT helpdesk for assistance. (V2-A-74-23)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2857,7 +2857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office document team should understand the ______, the list of names and contact details, before the meeting begins. (V2-A-74-24)",
+    "question_text": "Refer to the branch ______ for contact information for all regional offices. (V2-A-74-24)",
     "options": {
       "A": "memo",
       "B": "invoice",
@@ -2887,7 +2887,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the exchange of written messages, before you continue with this office administration task. (V2-A-75-01)",
+    "question_text": "Notice: All external ______ must be copied to the department head for record-keeping. (V2-A-75-01)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -2917,7 +2917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official announcement or alert, for today's office communication work. Which term best completes the speaker's meaning? (V2-A-75-02)",
+    "question_text": "Conversation: Did you get the system ______ about the scheduled maintenance tonight? (V2-A-75-02)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -2947,7 +2947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office communication briefing, the manager referred to the ______, the formal question or request, more than once. (V2-A-75-03)",
+    "question_text": "Memo: Please follow up on the ______ from PTA Ltd. and provide a quote by Thursday. (V2-A-75-03)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -2977,7 +2977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office communication team should understand the ______, the person receiving the communication, before the meeting begins. (V2-A-75-04)",
+    "question_text": "Announcement: The ______ of this year's employee excellence award will be announced at the ceremony. (V2-A-75-04)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3037,7 +3037,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official announcement or alert, before you continue with this office administration task. (V2-A-75-06)",
+    "question_text": "Notice: You will receive a ______ by email once your application has been reviewed. (V2-A-75-06)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3067,7 +3067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal question or request, for today's office communication work. Which term best completes the speaker's meaning? (V2-A-75-07)",
+    "question_text": "Conversation: We received an ______ from a potential client interested in our services. (V2-A-75-07)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3097,7 +3097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office communication briefing, the manager referred to the ______, the person receiving the communication, more than once. (V2-A-75-08)",
+    "question_text": "Memo: Each ______ of this circular is asked to confirm receipt by replying to this email. (V2-A-75-08)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3127,7 +3127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office communication team should understand the ______, the exchange of written messages, before the meeting begins. (V2-A-75-09)",
+    "question_text": "Announcement: Any formal ______ regarding the contract must go through the legal department. (V2-A-75-09)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3187,7 +3187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal question or request, before you continue with this office administration task. (V2-A-75-11)",
+    "question_text": "Notice: Direct all product ______ to the customer service team at ext. 400. (V2-A-75-11)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3217,7 +3217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the person receiving the communication, for today's office communication work. Which term best completes the speaker's meaning? (V2-A-75-12)",
+    "question_text": "Conversation: Who is the intended ______ for this package? The label is unclear. (V2-A-75-12)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3247,7 +3247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office communication briefing, the manager referred to the ______, the exchange of written messages, more than once. (V2-A-75-13)",
+    "question_text": "Memo: A record of all vendor ______ should be stored in the shared project folder. (V2-A-75-13)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3277,7 +3277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office communication team should understand the ______, the official announcement or alert, before the meeting begins. (V2-A-75-14)",
+    "question_text": "Announcement: An official ______ regarding parking arrangements will be issued next week. (V2-A-75-14)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3337,7 +3337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the person receiving the communication, before you continue with this office administration task. (V2-A-75-16)",
+    "question_text": "Notice: Please verify the ______ address before sending any sensitive documents. (V2-A-75-16)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3367,7 +3367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the exchange of written messages, for today's office communication work. Which term best completes the speaker's meaning? (V2-A-75-17)",
+    "question_text": "Conversation: Please keep a copy of all ______ with the client on file for reference. (V2-A-75-17)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3397,7 +3397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office communication briefing, the manager referred to the ______, the official announcement or alert, more than once. (V2-A-75-18)",
+    "question_text": "Memo: A ______ will be sent to all affected staff at least 48 hours before changes take effect. (V2-A-75-18)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3427,7 +3427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office communication team should understand the ______, the formal question or request, before the meeting begins. (V2-A-75-19)",
+    "question_text": "Announcement: For media ______, please contact the public relations department directly. (V2-A-75-19)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3487,7 +3487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the exchange of written messages, before you continue with this office administration task. (V2-A-75-21)",
+    "question_text": "Staff should respond to client ______ within two business days. (V2-A-75-21)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3517,7 +3517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official announcement or alert, for today's office communication work. Which term best completes the speaker's meaning? (V2-A-75-22)",
+    "question_text": "Please ensure that all team members receive the ______ before the end of the day. (V2-A-75-22)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3547,7 +3547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office communication briefing, the manager referred to the ______, the formal question or request, more than once. (V2-A-75-23)",
+    "question_text": "All ______ about the job posting should be directed to the HR department. (V2-A-75-23)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3577,7 +3577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office communication team should understand the ______, the person receiving the communication, before the meeting begins. (V2-A-75-24)",
+    "question_text": "The email was delivered to the wrong ______ due to a typo in the address. (V2-A-75-24)",
     "options": {
       "A": "correspondence",
       "B": "notification",
@@ -3607,7 +3607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the entrance hall of building, before you continue with this office administration task. (V2-A-76-01)",
+    "question_text": "Notice: All visitors must check in at the security desk in the main ______. (V2-A-76-01)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3637,7 +3637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the moving platform between floors, for today's office facility work. Which term best completes the speaker's meaning? (V2-A-76-02)",
+    "question_text": "Conversation: Take the ______ to the 12th floor — the meeting room is on the left. (V2-A-76-02)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3667,7 +3667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office facility briefing, the manager referred to the ______, the dining hall for employees, more than once. (V2-A-76-03)",
+    "question_text": "Memo: Meal vouchers for the staff ______ will be distributed at the end of this week. (V2-A-76-03)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3697,7 +3697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office facility team should understand the ______, the lot for storing vehicles, before the meeting begins. (V2-A-76-04)",
+    "question_text": "Announcement: Designated ______ spaces for company vehicles are marked on Level B2. (V2-A-76-04)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3757,7 +3757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the moving platform between floors, before you continue with this office administration task. (V2-A-76-06)",
+    "question_text": "Notice: The east ______ will be out of service from Monday through Wednesday for repairs. (V2-A-76-06)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3787,7 +3787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the dining hall for employees, for today's office facility work. Which term best completes the speaker's meaning? (V2-A-76-07)",
+    "question_text": "Conversation: Should we grab lunch in the ______, or would you prefer to go out? (V2-A-76-07)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3817,7 +3817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office facility briefing, the manager referred to the ______, the lot for storing vehicles, more than once. (V2-A-76-08)",
+    "question_text": "Memo: Staff applying for a ______ permit should submit the form to the facilities office. (V2-A-76-08)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3847,7 +3847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office facility team should understand the ______, the entrance hall of building, before the meeting begins. (V2-A-76-09)",
+    "question_text": "Announcement: The company's annual exhibit will be displayed in the main ______ throughout June. (V2-A-76-09)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3907,7 +3907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the dining hall for employees, before you continue with this office administration task. (V2-A-76-11)",
+    "question_text": "Notice: The ______ on the second floor will be closed for maintenance on Wednesday. (V2-A-76-11)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3937,7 +3937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the lot for storing vehicles, for today's office facility work. Which term best completes the speaker's meaning? (V2-A-76-12)",
+    "question_text": "Conversation: Is there visitor ______ available near the main entrance? (V2-A-76-12)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3967,7 +3967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office facility briefing, the manager referred to the ______, the entrance hall of building, more than once. (V2-A-76-13)",
+    "question_text": "Memo: Delivery personnel should wait in the ground-floor ______ until escorted to the relevant floor. (V2-A-76-13)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -3997,7 +3997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office facility team should understand the ______, the moving platform between floors, before the meeting begins. (V2-A-76-14)",
+    "question_text": "Announcement: The ______ inspection has been rescheduled to next Thursday morning. (V2-A-76-14)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4057,7 +4057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the lot for storing vehicles, before you continue with this office administration task. (V2-A-76-16)",
+    "question_text": "Notice: The underground ______ lot will be closed for repaving next Monday. (V2-A-76-16)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4087,7 +4087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the entrance hall of building, for today's office facility work. Which term best completes the speaker's meaning? (V2-A-76-17)",
+    "question_text": "Conversation: I'll meet you in the ______ downstairs at 3 o'clock. (V2-A-76-17)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4117,7 +4117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office facility briefing, the manager referred to the ______, the moving platform between floors, more than once. (V2-A-76-18)",
+    "question_text": "Memo: Staff are reminded not to use the ______ during fire drills or evacuations. (V2-A-76-18)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4147,7 +4147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office facility team should understand the ______, the dining hall for employees, before the meeting begins. (V2-A-76-19)",
+    "question_text": "Announcement: The ______ will offer extended hours during the annual conference. (V2-A-76-19)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4207,7 +4207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the entrance hall of building, before you continue with this office administration task. (V2-A-76-21)",
+    "question_text": "Please ensure guests are met in the ______ and issued a visitor badge before proceeding. (V2-A-76-21)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4237,7 +4237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the moving platform between floors, for today's office facility work. Which term best completes the speaker's meaning? (V2-A-76-22)",
+    "question_text": "Visitors should use the main ______ near reception to access the upper floors. (V2-A-76-22)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4267,7 +4267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office facility briefing, the manager referred to the ______, the dining hall for employees, more than once. (V2-A-76-23)",
+    "question_text": "Hot meals in the ______ are available from 11:30 a.m. to 2:00 p.m. on weekdays. (V2-A-76-23)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4297,7 +4297,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office facility team should understand the ______, the lot for storing vehicles, before the meeting begins. (V2-A-76-24)",
+    "question_text": "Employees without a registered ______ permit should use the nearby public lot. (V2-A-76-24)",
     "options": {
       "A": "lobby",
       "B": "elevator",
@@ -4327,7 +4327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official permission to proceed, before you continue with this office administration task. (V2-A-77-01)",
+    "question_text": "Notice: Staff require written ______ before accessing restricted storage areas. (V2-A-77-01)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4357,7 +4357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document asking for something, for today's office procedure work. Which term best completes the speaker's meaning? (V2-A-77-02)",
+    "question_text": "Conversation: Where can I download the ______ for office equipment repairs? (V2-A-77-02)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4387,7 +4387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office procedure briefing, the manager referred to the ______, the official agreement or consent, more than once. (V2-A-77-03)",
+    "question_text": "Memo: The project cannot proceed until we receive written ______ from the director. (V2-A-77-03)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4417,7 +4417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office procedure team should understand the ______, the act of sending something formal, before the meeting begins. (V2-A-77-04)",
+    "question_text": "Announcement: Online ______ of conference abstracts is now open until the end of the month. (V2-A-77-04)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4477,7 +4477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document asking for something, before you continue with this office administration task. (V2-A-77-06)",
+    "question_text": "Notice: Please complete the ______ in full and submit it to the HR office by noon. (V2-A-77-06)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4507,7 +4507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official agreement or consent, for today's office procedure work. Which term best completes the speaker's meaning? (V2-A-77-07)",
+    "question_text": "Conversation: Has the budget plan received ______ from the finance department yet? (V2-A-77-07)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4537,7 +4537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office procedure briefing, the manager referred to the ______, the act of sending something formal, more than once. (V2-A-77-08)",
+    "question_text": "Memo: Late ______ will not be accepted after the official closing time. (V2-A-77-08)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4567,7 +4567,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office procedure team should understand the ______, the official permission to proceed, before the meeting begins. (V2-A-77-09)",
+    "question_text": "Announcement: System ______ for the new software will be issued to team leaders by Friday. (V2-A-77-09)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4627,7 +4627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official agreement or consent, before you continue with this office administration task. (V2-A-77-11)",
+    "question_text": "Notice: All travel expenses over $200 require manager ______ before reimbursement. (V2-A-77-11)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4657,7 +4657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the act of sending something formal, for today's office procedure work. Which term best completes the speaker's meaning? (V2-A-77-12)",
+    "question_text": "Conversation: When is the final ______ date for the quarterly sales report? (V2-A-77-12)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4687,7 +4687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office procedure briefing, the manager referred to the ______, the official permission to proceed, more than once. (V2-A-77-13)",
+    "question_text": "Memo: Provide written ______ from your department head when submitting this request. (V2-A-77-13)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4717,7 +4717,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office procedure team should understand the ______, the document asking for something, before the meeting begins. (V2-A-77-14)",
+    "question_text": "Announcement: The updated leave ______ is now available on the employee self-service portal. (V2-A-77-14)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4777,7 +4777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the act of sending something formal, before you continue with this office administration task. (V2-A-77-16)",
+    "question_text": "Notice: The ______ portal will close at midnight on the application deadline. (V2-A-77-16)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4807,7 +4807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official permission to proceed, for today's office procedure work. Which term best completes the speaker's meaning? (V2-A-77-17)",
+    "question_text": "Conversation: Do I need ______ from the compliance team before sharing this report? (V2-A-77-17)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4837,7 +4837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office procedure briefing, the manager referred to the ______, the document asking for something, more than once. (V2-A-77-18)",
+    "question_text": "Memo: Attach the signed ______ to your email when contacting the facilities team. (V2-A-77-18)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4867,7 +4867,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office procedure team should understand the ______, the official agreement or consent, before the meeting begins. (V2-A-77-19)",
+    "question_text": "Announcement: Final ______ for the new office layout has been granted by senior management. (V2-A-77-19)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4927,7 +4927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official permission to proceed, before you continue with this office administration task. (V2-A-77-21)",
+    "question_text": "Employees must carry their ______ letter when entering the server room. (V2-A-77-21)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4957,7 +4957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document asking for something, for today's office procedure work. Which term best completes the speaker's meaning? (V2-A-77-22)",
+    "question_text": "All supply orders must be accompanied by an approved ______. (V2-A-77-22)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -4987,7 +4987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the office procedure briefing, the manager referred to the ______, the official agreement or consent, more than once. (V2-A-77-23)",
+    "question_text": "Purchases above the department threshold must have prior ______ from a senior manager. (V2-A-77-23)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -5017,7 +5017,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the office procedure team should understand the ______, the act of sending something formal, before the meeting begins. (V2-A-77-24)",
+    "question_text": "Confirm your ______ by checking the confirmation email sent to your registered address. (V2-A-77-24)",
     "options": {
       "A": "authorization",
       "B": "request form",
@@ -5047,7 +5047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of signing up, before you continue with this office administration task. (V2-A-78-01)",
+    "question_text": "Notice: Online ______ for the training session closes on Thursday at 5 p.m. (V2-A-78-01)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5077,7 +5077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal dinner event for group, for today's business event work. Which term best completes the speaker's meaning? (V2-A-78-02)",
+    "question_text": "Conversation: The client dinner has been moved to the ______ hall on the ground floor. (V2-A-78-02)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5107,7 +5107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business event briefing, the manager referred to the ______, the temporary enclosed sales area, more than once. (V2-A-78-03)",
+    "question_text": "Memo: Staff working at the exhibition ______ should arrive by 8 a.m. to assist with setup. (V2-A-78-03)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5137,7 +5137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business event team should understand the ______, the small educational training session, before the meeting begins. (V2-A-78-04)",
+    "question_text": "Announcement: The free online ______ on data security is open to all staff members. (V2-A-78-04)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5197,7 +5197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal dinner event for group, before you continue with this office administration task. (V2-A-78-06)",
+    "question_text": "Notice: Tickets for the annual staff ______ are available at the front desk. (V2-A-78-06)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5227,7 +5227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the temporary enclosed sales area, for today's business event work. Which term best completes the speaker's meaning? (V2-A-78-07)",
+    "question_text": "Conversation: Our company ______ at the trade fair is in Hall B, near the main entrance. (V2-A-78-07)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5257,7 +5257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business event briefing, the manager referred to the ______, the small educational training session, more than once. (V2-A-78-08)",
+    "question_text": "Memo: Employees are encouraged to attend the compliance ______ scheduled for Tuesday. (V2-A-78-08)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5287,7 +5287,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business event team should understand the ______, the process of signing up, before the meeting begins. (V2-A-78-09)",
+    "question_text": "Announcement: Walk-in ______ will be accepted at the venue on the day of the event. (V2-A-78-09)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5347,7 +5347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the temporary enclosed sales area, before you continue with this office administration task. (V2-A-78-11)",
+    "question_text": "Notice: Each exhibitor will be assigned a ______ location prior to the event setup. (V2-A-78-11)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5377,7 +5377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the small educational training session, for today's business event work. Which term best completes the speaker's meaning? (V2-A-78-12)",
+    "question_text": "Conversation: Are you planning to attend the marketing ______ at headquarters next month? (V2-A-78-12)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5407,7 +5407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business event briefing, the manager referred to the ______, the process of signing up, more than once. (V2-A-78-13)",
+    "question_text": "Memo: Please forward this link to team members who wish to submit their ______. (V2-A-78-13)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5437,7 +5437,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business event team should understand the ______, the formal dinner event for group, before the meeting begins. (V2-A-78-14)",
+    "question_text": "Announcement: The awards ______ will be held at the Grand Hotel on December 5th. (V2-A-78-14)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5497,7 +5497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the small educational training session, before you continue with this office administration task. (V2-A-78-16)",
+    "question_text": "Notice: A professional development ______ on project management will be held next Friday. (V2-A-78-16)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5527,7 +5527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the process of signing up, for today's business event work. Which term best completes the speaker's meaning? (V2-A-78-17)",
+    "question_text": "Conversation: Have you completed your event ______ for the regional conference? (V2-A-78-17)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5557,7 +5557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business event briefing, the manager referred to the ______, the formal dinner event for group, more than once. (V2-A-78-18)",
+    "question_text": "Memo: Menu choices for the charity ______ must be selected by this Friday. (V2-A-78-18)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5587,7 +5587,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business event team should understand the ______, the temporary enclosed sales area, before the meeting begins. (V2-A-78-19)",
+    "question_text": "Announcement: Visitors can collect promotional materials at our ______ throughout the two-day event. (V2-A-78-19)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5647,7 +5647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of signing up, before you continue with this office administration task. (V2-A-78-21)",
+    "question_text": "Provide your ______ number at the check-in desk to collect your name badge. (V2-A-78-21)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5677,7 +5677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal dinner event for group, for today's business event work. Which term best completes the speaker's meaning? (V2-A-78-22)",
+    "question_text": "All ______ arrangements including seating and catering have been confirmed. (V2-A-78-22)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5707,7 +5707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business event briefing, the manager referred to the ______, the temporary enclosed sales area, more than once. (V2-A-78-23)",
+    "question_text": "Assemble the display materials at your designated ______ before the doors open. (V2-A-78-23)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5737,7 +5737,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business event team should understand the ______, the small educational training session, before the meeting begins. (V2-A-78-24)",
+    "question_text": "Participants who complete the ______ will receive a certificate of attendance. (V2-A-78-24)",
     "options": {
       "A": "registration",
       "B": "banquet",
@@ -5767,7 +5767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the advance booking or hold, before you continue with this office administration task. (V2-A-79-01)",
+    "question_text": "Notice: All hotel ______ must be made through the corporate travel desk. (V2-A-79-01)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -5797,7 +5797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the verification that a booking is final, for today's business travel work. Which term best completes the speaker's meaning? (V2-A-79-02)",
+    "question_text": "Conversation: I haven't received a ______ for my hotel reservation — could you check? (V2-A-79-02)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -5827,7 +5827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business travel briefing, the manager referred to the ______, the leaving on a journey, more than once. (V2-A-79-03)",
+    "question_text": "Memo: Staff should arrange airport transportation at least two hours before scheduled ______. (V2-A-79-03)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -5857,7 +5857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business travel team should understand the ______, the luggage and personal items, before the meeting begins. (V2-A-79-04)",
+    "question_text": "Announcement: Please report any lost or damaged ______ to the airline counter immediately. (V2-A-79-04)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -5917,7 +5917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the verification that a booking is final, before you continue with this office administration task. (V2-A-79-06)",
+    "question_text": "Notice: A booking ______ will be sent to your email address within 24 hours. (V2-A-79-06)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -5947,7 +5947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the leaving on a journey, for today's business travel work. Which term best completes the speaker's meaning? (V2-A-79-07)",
+    "question_text": "Conversation: What is our ______ time from the hotel on the final day of the conference? (V2-A-79-07)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -5977,7 +5977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business travel briefing, the manager referred to the ______, the luggage and personal items, more than once. (V2-A-79-08)",
+    "question_text": "Memo: The airline allows two pieces of checked ______ per business-class traveler. (V2-A-79-08)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6007,7 +6007,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business travel team should understand the ______, the advance booking or hold, before the meeting begins. (V2-A-79-09)",
+    "question_text": "Announcement: For dinner ______ at the venue, please contact the hotel concierge directly. (V2-A-79-09)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6067,7 +6067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the leaving on a journey, before you continue with this office administration task. (V2-A-79-11)",
+    "question_text": "Notice: Please arrive at the boarding gate at least 30 minutes before your ______ time. (V2-A-79-11)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6097,7 +6097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the luggage and personal items, for today's business travel work. Which term best completes the speaker's meaning? (V2-A-79-12)",
+    "question_text": "Conversation: My ______ claim took over 40 minutes — the airport was very busy. (V2-A-79-12)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6127,7 +6127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business travel briefing, the manager referred to the ______, the advance booking or hold, more than once. (V2-A-79-13)",
+    "question_text": "Memo: Submit your travel ______ details to the finance team at least one week in advance. (V2-A-79-13)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6157,7 +6157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business travel team should understand the ______, the verification that a booking is final, before the meeting begins. (V2-A-79-14)",
+    "question_text": "Announcement: Order ______ emails will be sent automatically once payment is processed. (V2-A-79-14)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6217,7 +6217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the luggage and personal items, before you continue with this office administration task. (V2-A-79-16)",
+    "question_text": "Notice: Passengers are advised to attach a name tag to every piece of checked ______. (V2-A-79-16)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6247,7 +6247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the advance booking or hold, for today's business travel work. Which term best completes the speaker's meaning? (V2-A-79-17)",
+    "question_text": "Conversation: Can you check whether a ______ has been made for four people at the restaurant? (V2-A-79-17)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6277,7 +6277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business travel briefing, the manager referred to the ______, the verification that a booking is final, more than once. (V2-A-79-18)",
+    "question_text": "Memo: Please keep a copy of your flight ______ for expense reimbursement purposes. (V2-A-79-18)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6307,7 +6307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business travel team should understand the ______, the leaving on a journey, before the meeting begins. (V2-A-79-19)",
+    "question_text": "Announcement: The ______ lounge on Level 3 is exclusively for business-class passengers. (V2-A-79-19)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6367,7 +6367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the advance booking or hold, before you continue with this office administration task. (V2-A-79-21)",
+    "question_text": "Changes to your ______ must be requested at least 48 hours before arrival. (V2-A-79-21)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6397,7 +6397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the verification that a booking is final, for today's business travel work. Which term best completes the speaker's meaning? (V2-A-79-22)",
+    "question_text": "Present your registration ______ at the venue entrance to collect your badge. (V2-A-79-22)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6427,7 +6427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the business travel briefing, the manager referred to the ______, the leaving on a journey, more than once. (V2-A-79-23)",
+    "question_text": "The bus for the ______ terminal will leave the hotel at 6:00 a.m. sharp. (V2-A-79-23)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6457,7 +6457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the business travel team should understand the ______, the luggage and personal items, before the meeting begins. (V2-A-79-24)",
+    "question_text": "Checked ______ allowances are outlined in your travel policy document. (V2-A-79-24)",
     "options": {
       "A": "reservation",
       "B": "confirmation",
@@ -6487,7 +6487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this office administration task. (V2-A-80-01)",
+    "question_text": "Notice: A revised expense reimbursement ______ will take effect on the first of next month. (V2-A-80-01)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6517,7 +6517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's workplace policy work. Which term best completes the speaker's meaning? (V2-A-80-02)",
+    "question_text": "Conversation: Has the HR team issued a ______ on the new remote work arrangements? (V2-A-80-02)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6547,7 +6547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace policy briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-A-80-03)",
+    "question_text": "Memo: The legal team will review the contract for ______ with local labor regulations. (V2-A-80-03)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6577,7 +6577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace policy team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-A-80-04)",
+    "question_text": "Announcement: All new vendors must fulfill the company's insurance ______ before signing. (V2-A-80-04)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6637,7 +6637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this office administration task. (V2-A-80-06)",
+    "question_text": "Notice: Please follow the updated safety ______ when working in the server room. (V2-A-80-06)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6667,7 +6667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's workplace policy work. Which term best completes the speaker's meaning? (V2-A-80-07)",
+    "question_text": "Conversation: We need to check our procedures for ______ with the new data protection rules. (V2-A-80-07)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6697,7 +6697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace policy briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-A-80-08)",
+    "question_text": "Memo: Review the technical ______ carefully before submitting your system upgrade proposal. (V2-A-80-08)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6727,7 +6727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace policy team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-A-80-09)",
+    "question_text": "Announcement: The new remote work ______ has been approved by the board of directors. (V2-A-80-09)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6787,7 +6787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this office administration task. (V2-A-80-11)",
+    "question_text": "Notice: All staff must complete the annual ______ training by the end of this quarter. (V2-A-80-11)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6817,7 +6817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's workplace policy work. Which term best completes the speaker's meaning? (V2-A-80-12)",
+    "question_text": "Conversation: Are there any special language ______ for the position you are hiring for? (V2-A-80-12)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6847,7 +6847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace policy briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-A-80-13)",
+    "question_text": "Memo: Please ensure that all team members are aware of the updated leave ______. (V2-A-80-13)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6877,7 +6877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace policy team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-A-80-14)",
+    "question_text": "Announcement: New design ______ for all external communications will take effect next month. (V2-A-80-14)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6937,7 +6937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this office administration task. (V2-A-80-16)",
+    "question_text": "Notice: Meeting the minimum documentation ______ is mandatory for all grant applications. (V2-A-80-16)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6967,7 +6967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's workplace policy work. Which term best completes the speaker's meaning? (V2-A-80-17)",
+    "question_text": "Conversation: What is the company's ______ on using personal devices for work purposes? (V2-A-80-17)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -6997,7 +6997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace policy briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-A-80-18)",
+    "question_text": "Memo: The attached ______ explains the correct procedure for submitting expense claims. (V2-A-80-18)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -7027,7 +7027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace policy team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-A-80-19)",
+    "question_text": "Announcement: A ______ audit will be conducted across all departments in October. (V2-A-80-19)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -7087,7 +7087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this office administration task. (V2-A-80-21)",
+    "question_text": "Any exception to standard ______ must be approved in writing by a senior manager. (V2-A-80-21)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -7117,7 +7117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's workplace policy work. Which term best completes the speaker's meaning? (V2-A-80-22)",
+    "question_text": "Refer to the departmental ______ before submitting your quarterly progress report. (V2-A-80-22)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -7147,7 +7147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the workplace policy briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-A-80-23)",
+    "question_text": "Employees found in violation of ______ standards may face disciplinary action. (V2-A-80-23)",
     "options": {
       "A": "policy",
       "B": "guideline",
@@ -7177,7 +7177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "office_administration",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the workplace policy team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-A-80-24)",
+    "question_text": "Failure to meet the certification ______ will result in the application being rejected. (V2-A-80-24)",
     "options": {
       "A": "policy",
       "B": "guideline",

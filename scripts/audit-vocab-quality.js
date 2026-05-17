@@ -140,9 +140,16 @@ function distractorWarnings() {
 
 function targetCoverageWarnings() {
   return lessons
-    .filter((lesson) => ["V2", "V3"].includes(lesson.stage))
+    .filter((lesson) => ["V2", "V3"].includes(lesson.stage) && lesson.lesson_type !== "mixed_review")
     .map((lesson) => {
-      const rows = lessonQuestions(lesson);
+      // Only count questions targeting this lesson's own items; interference questions
+      // (targeting prior-lesson items) are intentional and excluded from coverage math.
+      const rows = lessonQuestions(lesson).filter((question) => {
+        const item = itemById.get(question.target_item_id);
+        if (!item) return false;
+        const ids = Array.isArray(item.lesson_ids) ? item.lesson_ids : [item.lesson_id].filter(Boolean);
+        return ids.includes(lesson.lesson_id);
+      });
       const coverage = countBy(rows, (question) => question.target_item_id);
       const counts = Object.values(coverage);
       const min = Math.min(...counts);
@@ -161,6 +168,7 @@ function targetCoverageWarnings() {
 
 function oldItemInterferenceWarnings() {
   return stageLessons("V2").concat(stageLessons("V3"))
+    .filter((lesson) => lesson.lesson_type !== "mixed_review")
     .map((lesson) => {
       const rows = lessonQuestions(lesson);
       const outside = rows.filter((question) => {

@@ -160,6 +160,23 @@
   font-size: 16px;
 }
 
+.panel-head-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.panel-head-row h3,
+.panel-head-row p {
+  margin: 0;
+}
+
+.panel-head-row p {
+  margin-top: 4px;
+}
+
 .tracker-bigline {
   margin: 0 0 12px;
   font-size: 17px;
@@ -171,6 +188,21 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 12px;
+}
+
+.today-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 10px;
+}
+
+.today-focus span {
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #f3f4f6;
+  color: #334155;
+  font-size: 12px;
 }
 
 .tracker-list {
@@ -221,6 +253,24 @@
   margin-bottom: 12px;
 }
 
+.roadmap-filters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.roadmap-filters label {
+  display: grid;
+  gap: 4px;
+}
+
+.roadmap-filters span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
 .stage-card {
   padding: 12px;
 }
@@ -255,7 +305,8 @@
 .queue-list,
 .mastery-list,
 .error-review-list,
-.question-list {
+.question-list,
+.answer-record-list {
   display: grid;
   gap: 8px;
 }
@@ -318,6 +369,19 @@
   background: #2563eb;
 }
 
+.type-mixed-review {
+  background: #f0f4ff;
+  border-left: 3px solid #6366f1;
+}
+
+.type-mixed-review .lesson-dot {
+  background: #6366f1;
+}
+
+.type-mixed-review .lesson-main strong {
+  color: #4338ca;
+}
+
 .lesson-tools {
   display: flex;
   align-items: center;
@@ -353,6 +417,32 @@ textarea {
   border-radius: 8px;
   padding: 10px;
   background: #f8fafc;
+}
+
+.lesson-preview {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+  border: 1px solid #dbeafe;
+  border-radius: 8px;
+  padding: 10px;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-size: 13px;
+}
+
+.lesson-focus-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lesson-focus-grid span {
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #fff;
+  color: #1f2937;
 }
 
 .step-plan strong,
@@ -448,6 +538,23 @@ textarea {
   line-height: 1.55;
 }
 
+.question-guidance {
+  display: grid;
+  gap: 3px;
+  margin: -4px 0 12px;
+  border-left: 3px solid #2563eb;
+  padding: 8px 10px;
+  background: #f8fbff;
+  color: #334155;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.question-guidance strong {
+  color: #1d4ed8;
+  font-size: 12px;
+}
+
 .question-text.small {
   font-size: 15px;
 }
@@ -493,6 +600,18 @@ textarea {
   background: #eff6ff;
 }
 
+.confirm-answer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.confirm-answer-row p {
+  margin: 0;
+}
+
 .answer-button:disabled {
   opacity: 0.72;
   cursor: not-allowed;
@@ -511,11 +630,61 @@ textarea {
 .queue-card,
 .wrong-line,
 .mastery-row,
-.error-card {
+.error-card,
+.answer-record {
   border: 1px solid var(--border-light);
   border-radius: 8px;
   padding: 10px;
   background: #fff;
+}
+
+.answer-record {
+  display: grid;
+  gap: 7px;
+}
+
+.answer-record.is-correct {
+  border-left: 3px solid #16a34a;
+}
+
+.answer-record.is-wrong {
+  border-left: 3px solid #dc2626;
+}
+
+.answer-record-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.answer-record-head strong {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.answer-record-head span {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #1e3a8a;
+  background: #eff6ff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.answer-record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.answer-record-meta span {
+  border-radius: 999px;
+  padding: 3px 8px;
+  color: var(--text-secondary);
+  background: #f3f4f6;
+  font-size: 11px;
 }
 
 .queue-card {
@@ -763,6 +932,7 @@ textarea {
   .tracker-section-grid,
   .bank-layout,
   .bank-filters,
+  .roadmap-filters,
   .settings-grid,
   .step-plan {
     grid-template-columns: 1fr;
@@ -786,6 +956,24 @@ textarea {
 
   .runtime-actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .learning-card {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-head-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .answer-record-head {
+    flex-direction: column;
+  }
+
+  .confirm-answer-row {
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 
@@ -840,6 +1028,47 @@ textarea {
   line-height: 1.55;
 }
 
+.learning-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  gap: 10px;
+  margin: 10px 0 12px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #eff6ff;
+}
+
+.learning-card.correct {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.learning-card-label,
+.learning-card small {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.learning-card strong {
+  display: block;
+  margin: 3px 0;
+  font-size: 17px;
+}
+
+.learning-card-detail {
+  display: grid;
+  gap: 5px;
+}
+
+.learning-card-detail p {
+  margin: 0;
+  color: #374151;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .grammar-link-panel {
   margin: 8px 0;
   border: 1px solid #c7d2fe;
@@ -869,6 +1098,64 @@ textarea {
   font-weight: 400;
   color: var(--text-secondary);
   margin-left: 6px;
+}
+
+/* Vocab item: chinese + example (Mastery view & Error Review) */
+.item-chinese {
+  color: #1e40af;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 3px !important;
+}
+
+.item-example {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  border: 1px solid #e0e7ff;
+  border-radius: 6px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.item-example summary {
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6366f1;
+  list-style: none;
+}
+
+.item-example summary::-webkit-details-marker { display: none; }
+
+.item-example p {
+  margin: 0 0 6px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.vocab-card {
+  margin: 6px 0 8px;
+  padding: 8px 10px;
+  background: #eef2ff;
+  border-radius: 6px;
+  border-left: 3px solid #6366f1;
+}
+
+.vocab-chinese {
+  margin: 0 0 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.vocab-example {
+  margin: 0;
+  font-size: 12px;
+  color: #4b5563;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 @media (max-width: 520px) {

@@ -7,7 +7,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the delivery of goods by transport, before you continue with this logistics task. (V2-B-81-01)",
+    "question_text": "Notice: Your ______ is scheduled to arrive at the distribution center on Thursday. (V2-B-81-01)",
     "options": {
       "A": "carrier",
       "B": "shipment",
@@ -37,7 +37,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the company transporting goods, for today's shipping status work. Which term best completes the speaker's meaning? (V2-B-81-02)",
+    "question_text": "Conversation: Which ______ did we use for the last international delivery? Was it reliable? (V2-B-81-02)",
     "options": {
       "A": "shipment",
       "B": "tracking number",
@@ -67,7 +67,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the shipping status briefing, the manager referred to the ______, the reference used to follow package status, more than once. (V2-B-81-03)",
+    "question_text": "Memo: Record the ______ in the shipping log for every outgoing parcel. (V2-B-81-03)",
     "options": {
       "A": "shipment",
       "B": "carrier",
@@ -97,7 +97,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the shipping status team should understand the ______, the large storage building for goods, before the meeting begins. (V2-B-81-04)",
+    "question_text": "Announcement: Effective next month, all bulk orders will be fulfilled from the new regional ______. (V2-B-81-04)",
     "options": {
       "A": "warehouse",
       "B": "shipment",
@@ -157,7 +157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the company transporting goods, before you continue with this logistics task. (V2-B-81-06)",
+    "question_text": "Notice: Please confirm the name of the approved ______ before booking any freight services. (V2-B-81-06)",
     "options": {
       "A": "shipment",
       "B": "tracking number",
@@ -187,7 +187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the reference used to follow package status, for today's shipping status work. Which term best completes the speaker's meaning? (V2-B-81-07)",
+    "question_text": "Conversation: I'll email you the ______ as soon as the courier confirms pickup. (V2-B-81-07)",
     "options": {
       "A": "shipment",
       "B": "carrier",
@@ -217,7 +217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the shipping status briefing, the manager referred to the ______, the large storage building for goods, more than once. (V2-B-81-08)",
+    "question_text": "Memo: The ______ will be closed for the annual stocktake from Friday to Sunday. (V2-B-81-08)",
     "options": {
       "A": "warehouse",
       "B": "shipment",
@@ -247,7 +247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the shipping status team should understand the ______, the delivery of goods by transport, before the meeting begins. (V2-B-81-09)",
+    "question_text": "Announcement: The delayed ______ from the supplier is now expected by end of next week. (V2-B-81-09)",
     "options": {
       "A": "carrier",
       "B": "shipment",
@@ -307,7 +307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the reference used to follow package status, before you continue with this logistics task. (V2-B-81-11)",
+    "question_text": "Notice: Please provide your ______ to the customer service team to locate your parcel. (V2-B-81-11)",
     "options": {
       "A": "shipment",
       "B": "carrier",
@@ -337,7 +337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the large storage building for goods, for today's shipping status work. Which term best completes the speaker's meaning? (V2-B-81-12)",
+    "question_text": "Conversation: Has the new inventory arrived at the ______? We need it before Friday. (V2-B-81-12)",
     "options": {
       "A": "warehouse",
       "B": "shipment",
@@ -367,7 +367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the shipping status briefing, the manager referred to the ______, the delivery of goods by transport, more than once. (V2-B-81-13)",
+    "question_text": "Memo: All international ______ must include a commercial invoice and customs declaration. (V2-B-81-13)",
     "options": {
       "A": "carrier",
       "B": "shipment",
@@ -397,7 +397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the shipping status team should understand the ______, the company transporting goods, before the meeting begins. (V2-B-81-14)",
+    "question_text": "Announcement: Our logistics ______ partner has been updated — please refer to the new vendor list. (V2-B-81-14)",
     "options": {
       "A": "shipment",
       "B": "tracking number",
@@ -457,7 +457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the large storage building for goods, before you continue with this logistics task. (V2-B-81-16)",
+    "question_text": "Notice: All incoming goods must be inspected before being stored in the ______. (V2-B-81-16)",
     "options": {
       "A": "warehouse",
       "B": "shipment",
@@ -487,7 +487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the delivery of goods by transport, for today's shipping status work. Which term best completes the speaker's meaning? (V2-B-81-17)",
+    "question_text": "Conversation: Can you check on the status of the ______ we sent to the Osaka branch? (V2-B-81-17)",
     "options": {
       "A": "carrier",
       "B": "shipment",
@@ -517,7 +517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the shipping status briefing, the manager referred to the ______, the company transporting goods, more than once. (V2-B-81-18)",
+    "question_text": "Memo: All outbound parcels must be processed through our contracted ______. (V2-B-81-18)",
     "options": {
       "A": "shipment",
       "B": "tracking number",
@@ -547,7 +547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the shipping status team should understand the ______, the reference used to follow package status, before the meeting begins. (V2-B-81-19)",
+    "question_text": "Announcement: Customers will receive a ______ by SMS once their order has been dispatched. (V2-B-81-19)",
     "options": {
       "A": "shipment",
       "B": "carrier",
@@ -607,7 +607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the delivery of goods by transport, before you continue with this logistics task. (V2-B-81-21)",
+    "question_text": "Track the status of each ______ using the reference number provided at dispatch. (V2-B-81-21)",
     "options": {
       "A": "carrier",
       "B": "shipment",
@@ -637,7 +637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the company transporting goods, for today's shipping status work. Which term best completes the speaker's meaning? (V2-B-81-22)",
+    "question_text": "Contact the ______ directly if the package has not arrived within the estimated window. (V2-B-81-22)",
     "options": {
       "A": "shipment",
       "B": "tracking number",
@@ -667,7 +667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the shipping status briefing, the manager referred to the ______, the reference used to follow package status, more than once. (V2-B-81-23)",
+    "question_text": "If the ______ is invalid, contact the logistics department for a corrected reference. (V2-B-81-23)",
     "options": {
       "A": "shipment",
       "B": "carrier",
@@ -697,7 +697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the shipping status team should understand the ______, the large storage building for goods, before the meeting begins. (V2-B-81-24)",
+    "question_text": "Staff working in the ______ are required to wear appropriate safety gear at all times. (V2-B-81-24)",
     "options": {
       "A": "warehouse",
       "B": "shipment",
@@ -727,7 +727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the count of goods in stock, before you continue with this logistics task. (V2-B-82-01)",
+    "question_text": "Notice: The monthly ______ count is scheduled for the last Friday of this month. (V2-B-82-01)",
     "options": {
       "A": "stock",
       "B": "inventory",
@@ -757,7 +757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the items available for sale, for today's inventory work. Which term best completes the speaker's meaning? (V2-B-82-02)",
+    "question_text": "Conversation: Do we have enough ______ to fulfill the orders coming in this week? (V2-B-82-02)",
     "options": {
       "A": "inventory",
       "B": "reorder",
@@ -787,7 +787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the inventory briefing, the manager referred to the ______, the placing a new purchase request, more than once. (V2-B-82-03)",
+    "question_text": "Memo: Please submit a ______ request for any items that have reached their threshold level. (V2-B-82-03)",
     "options": {
       "A": "inventory",
       "B": "stock",
@@ -817,7 +817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the inventory team should understand the ______, the business providing goods, before the meeting begins. (V2-B-82-04)",
+    "question_text": "Announcement: A new preferred ______ for office equipment has been approved by management. (V2-B-82-04)",
     "options": {
       "A": "supplier",
       "B": "inventory",
@@ -877,7 +877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the items available for sale, before you continue with this logistics task. (V2-B-82-06)",
+    "question_text": "Notice: Several items are currently out of ______ due to increased seasonal demand. (V2-B-82-06)",
     "options": {
       "A": "inventory",
       "B": "reorder",
@@ -907,7 +907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the placing a new purchase request, for today's inventory work. Which term best completes the speaker's meaning? (V2-B-82-07)",
+    "question_text": "Conversation: We need to ______ the blue folders — we're almost out of them. (V2-B-82-07)",
     "options": {
       "A": "inventory",
       "B": "stock",
@@ -937,7 +937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the inventory briefing, the manager referred to the ______, the business providing goods, more than once. (V2-B-82-08)",
+    "question_text": "Memo: Please send the updated specifications to the ______ before the production run begins. (V2-B-82-08)",
     "options": {
       "A": "supplier",
       "B": "inventory",
@@ -967,7 +967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the inventory team should understand the ______, the count of goods in stock, before the meeting begins. (V2-B-82-09)",
+    "question_text": "Announcement: A full ______ audit will be conducted at the end of the fiscal quarter. (V2-B-82-09)",
     "options": {
       "A": "stock",
       "B": "inventory",
@@ -1027,7 +1027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the placing a new purchase request, before you continue with this logistics task. (V2-B-82-11)",
+    "question_text": "Notice: The system will automatically trigger a ______ when stock falls below the minimum level. (V2-B-82-11)",
     "options": {
       "A": "inventory",
       "B": "stock",
@@ -1057,7 +1057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the business providing goods, for today's inventory work. Which term best completes the speaker's meaning? (V2-B-82-12)",
+    "question_text": "Conversation: Which ______ did we use for the last batch of packaging materials? (V2-B-82-12)",
     "options": {
       "A": "supplier",
       "B": "inventory",
@@ -1087,7 +1087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the inventory briefing, the manager referred to the ______, the count of goods in stock, more than once. (V2-B-82-13)",
+    "question_text": "Memo: All discrepancies found during the ______ check must be reported to the operations manager. (V2-B-82-13)",
     "options": {
       "A": "stock",
       "B": "inventory",
@@ -1117,7 +1117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the inventory team should understand the ______, the items available for sale, before the meeting begins. (V2-B-82-14)",
+    "question_text": "Announcement: A limited edition product will be available while ______ lasts at all branches. (V2-B-82-14)",
     "options": {
       "A": "inventory",
       "B": "reorder",
@@ -1177,7 +1177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the business providing goods, before you continue with this logistics task. (V2-B-82-16)",
+    "question_text": "Notice: All new ______ applications must be reviewed by the procurement department. (V2-B-82-16)",
     "options": {
       "A": "supplier",
       "B": "inventory",
@@ -1207,7 +1207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the count of goods in stock, for today's inventory work. Which term best completes the speaker's meaning? (V2-B-82-17)",
+    "question_text": "Conversation: Can you check the ______ system to see how many units we have left? (V2-B-82-17)",
     "options": {
       "A": "stock",
       "B": "inventory",
@@ -1237,7 +1237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the inventory briefing, the manager referred to the ______, the items available for sale, more than once. (V2-B-82-18)",
+    "question_text": "Memo: The warehouse team has confirmed that ______ levels are sufficient for the next two weeks. (V2-B-82-18)",
     "options": {
       "A": "inventory",
       "B": "reorder",
@@ -1267,7 +1267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the inventory team should understand the ______, the placing a new purchase request, before the meeting begins. (V2-B-82-19)",
+    "question_text": "Announcement: The ______ process for standard supplies has been simplified using the new portal. (V2-B-82-19)",
     "options": {
       "A": "inventory",
       "B": "stock",
@@ -1327,7 +1327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the count of goods in stock, before you continue with this logistics task. (V2-B-82-21)",
+    "question_text": "Accurate ______ records are essential for preventing shortages and overstock situations. (V2-B-82-21)",
     "options": {
       "A": "stock",
       "B": "inventory",
@@ -1357,7 +1357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the items available for sale, for today's inventory work. Which term best completes the speaker's meaning? (V2-B-82-22)",
+    "question_text": "Check the ______ status on the inventory portal before confirming any customer orders. (V2-B-82-22)",
     "options": {
       "A": "inventory",
       "B": "reorder",
@@ -1387,7 +1387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the inventory briefing, the manager referred to the ______, the placing a new purchase request, more than once. (V2-B-82-23)",
+    "question_text": "Review the current stock levels and initiate a ______ for any items below safety stock. (V2-B-82-23)",
     "options": {
       "A": "inventory",
       "B": "stock",
@@ -1417,7 +1417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the inventory team should understand the ______, the business providing goods, before the meeting begins. (V2-B-82-24)",
+    "question_text": "Contact your assigned ______ directly if delivery schedules change unexpectedly. (V2-B-82-24)",
     "options": {
       "A": "supplier",
       "B": "inventory",
@@ -1447,7 +1447,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the bringing goods to destination, before you continue with this logistics task. (V2-B-83-01)",
+    "question_text": "Notice: The expected ______ date for your order is Thursday between 9 a.m. and 5 p.m. (V2-B-83-01)",
     "options": {
       "A": "freight",
       "B": "delivery",
@@ -1477,7 +1477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the cargo transported by vehicle, for today's international delivery work. Which term best completes the speaker's meaning? (V2-B-83-02)",
+    "question_text": "Conversation: What is the estimated ______ cost to ship this order to the Singapore branch? (V2-B-83-02)",
     "options": {
       "A": "delivery",
       "B": "customs",
@@ -1507,7 +1507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the international delivery briefing, the manager referred to the ______, the government border inspection point, more than once. (V2-B-83-03)",
+    "question_text": "Memo: Submit the commercial invoice and packing list to ______ at least 48 hours before arrival. (V2-B-83-03)",
     "options": {
       "A": "delivery",
       "B": "freight",
@@ -1537,7 +1537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the international delivery team should understand the ______, the official permission to proceed, before the meeting begins. (V2-B-83-04)",
+    "question_text": "Announcement: A certificate of origin is required for ______ of all agricultural products. (V2-B-83-04)",
     "options": {
       "A": "clearance",
       "B": "delivery",
@@ -1597,7 +1597,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the cargo transported by vehicle, before you continue with this logistics task. (V2-B-83-06)",
+    "question_text": "Notice: All international shipments are subject to a ______ charge based on weight and distance. (V2-B-83-06)",
     "options": {
       "A": "delivery",
       "B": "customs",
@@ -1627,7 +1627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the government border inspection point, for today's international delivery work. Which term best completes the speaker's meaning? (V2-B-83-07)",
+    "question_text": "Conversation: Our shipment is stuck at ______ — the inspector requested additional paperwork. (V2-B-83-07)",
     "options": {
       "A": "delivery",
       "B": "freight",
@@ -1657,7 +1657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the international delivery briefing, the manager referred to the ______, the official permission to proceed, more than once. (V2-B-83-08)",
+    "question_text": "Memo: Ensure all required documents are attached to avoid delays at ______. (V2-B-83-08)",
     "options": {
       "A": "clearance",
       "B": "delivery",
@@ -1687,7 +1687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the international delivery team should understand the ______, the bringing goods to destination, before the meeting begins. (V2-B-83-09)",
+    "question_text": "Announcement: Same-day ______ is available for orders placed before noon on weekdays. (V2-B-83-09)",
     "options": {
       "A": "freight",
       "B": "delivery",
@@ -1747,7 +1747,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the government border inspection point, before you continue with this logistics task. (V2-B-83-11)",
+    "question_text": "Notice: All imported goods must clear ______ before being transferred to the warehouse. (V2-B-83-11)",
     "options": {
       "A": "delivery",
       "B": "freight",
@@ -1777,7 +1777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the official permission to proceed, for today's international delivery work. Which term best completes the speaker's meaning? (V2-B-83-12)",
+    "question_text": "Conversation: The shipment is held up waiting for ______ — it could take two more days. (V2-B-83-12)",
     "options": {
       "A": "clearance",
       "B": "delivery",
@@ -1807,7 +1807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the international delivery briefing, the manager referred to the ______, the bringing goods to destination, more than once. (V2-B-83-13)",
+    "question_text": "Memo: Please sign the ______ receipt and forward a copy to the purchasing team. (V2-B-83-13)",
     "options": {
       "A": "freight",
       "B": "delivery",
@@ -1837,7 +1837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the international delivery team should understand the ______, the cargo transported by vehicle, before the meeting begins. (V2-B-83-14)",
+    "question_text": "Announcement: Air ______ rates have increased — consider sea shipping for non-urgent consignments. (V2-B-83-14)",
     "options": {
       "A": "delivery",
       "B": "customs",
@@ -1897,7 +1897,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the official permission to proceed, before you continue with this logistics task. (V2-B-83-16)",
+    "question_text": "Notice: Goods cannot be released until full ______ from the border authority is received. (V2-B-83-16)",
     "options": {
       "A": "clearance",
       "B": "delivery",
@@ -1927,7 +1927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the bringing goods to destination, for today's international delivery work. Which term best completes the speaker's meaning? (V2-B-83-17)",
+    "question_text": "Conversation: Is the ______ from our supplier confirmed for tomorrow morning? (V2-B-83-17)",
     "options": {
       "A": "freight",
       "B": "delivery",
@@ -1957,7 +1957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the international delivery briefing, the manager referred to the ______, the cargo transported by vehicle, more than once. (V2-B-83-18)",
+    "question_text": "Memo: The ______ invoice from the carrier is attached and requires your approval. (V2-B-83-18)",
     "options": {
       "A": "delivery",
       "B": "customs",
@@ -1987,7 +1987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the international delivery team should understand the ______, the government border inspection point, before the meeting begins. (V2-B-83-19)",
+    "question_text": "Announcement: New ______ regulations on electronic goods take effect at the start of next month. (V2-B-83-19)",
     "options": {
       "A": "delivery",
       "B": "freight",
@@ -2047,7 +2047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the bringing goods to destination, before you continue with this logistics task. (V2-B-83-21)",
+    "question_text": "Contact the logistics team immediately if the ______ does not arrive as scheduled. (V2-B-83-21)",
     "options": {
       "A": "freight",
       "B": "delivery",
@@ -2077,7 +2077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the cargo transported by vehicle, for today's international delivery work. Which term best completes the speaker's meaning? (V2-B-83-22)",
+    "question_text": "The ______ cost is calculated based on actual weight or dimensional weight, whichever is higher. (V2-B-83-22)",
     "options": {
       "A": "delivery",
       "B": "customs",
@@ -2107,7 +2107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the international delivery briefing, the manager referred to the ______, the government border inspection point, more than once. (V2-B-83-23)",
+    "question_text": "Failure to declare items correctly at ______ can result in significant fines. (V2-B-83-23)",
     "options": {
       "A": "delivery",
       "B": "freight",
@@ -2137,7 +2137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the international delivery team should understand the ______, the official permission to proceed, before the meeting begins. (V2-B-83-24)",
+    "question_text": "The shipment was held at the port pending ______ by the local trade authority. (V2-B-83-24)",
     "options": {
       "A": "clearance",
       "B": "delivery",
@@ -2167,7 +2167,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the wrapped item ready for shipping, before you continue with this logistics task. (V2-B-84-01)",
+    "question_text": "Notice: All employees are reminded not to accept suspicious ______ from unknown senders. (V2-B-84-01)",
     "options": {
       "A": "label",
       "B": "package",
@@ -2197,7 +2197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the tag with information on item, for today's package document work. Which term best completes the speaker's meaning? (V2-B-84-02)",
+    "question_text": "Conversation: The barcode on the ______ is damaged — can you issue a replacement? (V2-B-84-02)",
     "options": {
       "A": "package",
       "B": "receipt",
@@ -2227,7 +2227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the package document briefing, the manager referred to the ______, the proof of purchase or delivery, more than once. (V2-B-84-03)",
+    "question_text": "Memo: Submit original ______ for all business expenses over $50 when filing your claim. (V2-B-84-03)",
     "options": {
       "A": "package",
       "B": "label",
@@ -2257,7 +2257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the package document team should understand the ______, the document included inside shipment, before the meeting begins. (V2-B-84-04)",
+    "question_text": "Announcement: All ______ must now include the purchase order number for faster processing. (V2-B-84-04)",
     "options": {
       "A": "packing slip",
       "B": "package",
@@ -2317,7 +2317,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the tag with information on item, before you continue with this logistics task. (V2-B-84-06)",
+    "question_text": "Notice: Ensure that the shipping ______ is clearly printed and securely attached to each box. (V2-B-84-06)",
     "options": {
       "A": "package",
       "B": "receipt",
@@ -2347,7 +2347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the proof of purchase or delivery, for today's package document work. Which term best completes the speaker's meaning? (V2-B-84-07)",
+    "question_text": "Conversation: Can you email me the ______ for the office supplies I ordered last week? (V2-B-84-07)",
     "options": {
       "A": "package",
       "B": "label",
@@ -2377,7 +2377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the package document briefing, the manager referred to the ______, the document included inside shipment, more than once. (V2-B-84-08)",
+    "question_text": "Memo: Attach the printed ______ to the inside of the carton lid before sealing. (V2-B-84-08)",
     "options": {
       "A": "packing slip",
       "B": "package",
@@ -2407,7 +2407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the package document team should understand the ______, the wrapped item ready for shipping, before the meeting begins. (V2-B-84-09)",
+    "question_text": "Announcement: Customers may track their ______ online using the tracking number in their confirmation email. (V2-B-84-09)",
     "options": {
       "A": "label",
       "B": "package",
@@ -2467,7 +2467,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the proof of purchase or delivery, before you continue with this logistics task. (V2-B-84-11)",
+    "question_text": "Notice: Retain your payment ______ as proof of purchase for warranty purposes. (V2-B-84-11)",
     "options": {
       "A": "package",
       "B": "label",
@@ -2497,7 +2497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the document included inside shipment, for today's package document work. Which term best completes the speaker's meaning? (V2-B-84-12)",
+    "question_text": "Conversation: The ______ shows three items, but only two were delivered — there may be an error. (V2-B-84-12)",
     "options": {
       "A": "packing slip",
       "B": "package",
@@ -2527,7 +2527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the package document briefing, the manager referred to the ______, the wrapped item ready for shipping, more than once. (V2-B-84-13)",
+    "question_text": "Memo: Please ensure every ______ is properly sealed and labeled before handover to the courier. (V2-B-84-13)",
     "options": {
       "A": "label",
       "B": "package",
@@ -2557,7 +2557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the package document team should understand the ______, the tag with information on item, before the meeting begins. (V2-B-84-14)",
+    "question_text": "Announcement: New product ______ designs will be introduced in the next packaging update. (V2-B-84-14)",
     "options": {
       "A": "package",
       "B": "receipt",
@@ -2617,7 +2617,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the document included inside shipment, before you continue with this logistics task. (V2-B-84-16)",
+    "question_text": "Notice: Include a ______ with every outgoing order to help the recipient verify contents. (V2-B-84-16)",
     "options": {
       "A": "packing slip",
       "B": "package",
@@ -2647,7 +2647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the wrapped item ready for shipping, for today's package document work. Which term best completes the speaker's meaning? (V2-B-84-17)",
+    "question_text": "Conversation: The ______ I ordered has arrived but the box is damaged — what should I do? (V2-B-84-17)",
     "options": {
       "A": "label",
       "B": "package",
@@ -2677,7 +2677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the package document briefing, the manager referred to the ______, the tag with information on item, more than once. (V2-B-84-18)",
+    "question_text": "Memo: All hazardous materials must have an approved warning ______ applied before shipping. (V2-B-84-18)",
     "options": {
       "A": "package",
       "B": "receipt",
@@ -2707,7 +2707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the package document team should understand the ______, the proof of purchase or delivery, before the meeting begins. (V2-B-84-19)",
+    "question_text": "Announcement: Electronic ______ will now be issued for all in-store purchases at our branches. (V2-B-84-19)",
     "options": {
       "A": "package",
       "B": "label",
@@ -2767,7 +2767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the wrapped item ready for shipping, before you continue with this logistics task. (V2-B-84-21)",
+    "question_text": "If a ______ is missing from a delivery, notify the logistics team within 24 hours. (V2-B-84-21)",
     "options": {
       "A": "label",
       "B": "package",
@@ -2797,7 +2797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the tag with information on item, for today's package document work. Which term best completes the speaker's meaning? (V2-B-84-22)",
+    "question_text": "Scan the ______ on each item before placing it in the outgoing shipment area. (V2-B-84-22)",
     "options": {
       "A": "package",
       "B": "receipt",
@@ -2827,7 +2827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the package document briefing, the manager referred to the ______, the proof of purchase or delivery, more than once. (V2-B-84-23)",
+    "question_text": "Keep a copy of the delivery ______ on file until the order has been fully processed. (V2-B-84-23)",
     "options": {
       "A": "package",
       "B": "label",
@@ -2857,7 +2857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the package document team should understand the ______, the document included inside shipment, before the meeting begins. (V2-B-84-24)",
+    "question_text": "Compare the ______ against the physical contents before signing the delivery receipt. (V2-B-84-24)",
     "options": {
       "A": "packing slip",
       "B": "package",
@@ -2887,7 +2887,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of manufacturing goods, before you continue with this logistics task. (V2-B-85-01)",
+    "question_text": "Notice: The ______ schedule for this month has been revised due to supply delays. (V2-B-85-01)",
     "options": {
       "A": "assembly line",
       "B": "production",
@@ -2917,7 +2917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the automated manufacturing process, for today's manufacturing work. Which term best completes the speaker's meaning? (V2-B-85-02)",
+    "question_text": "Conversation: How many units per hour can the ______ produce at full capacity? (V2-B-85-02)",
     "options": {
       "A": "production",
       "B": "component",
@@ -2947,7 +2947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the manufacturing briefing, the manager referred to the ______, the single part in larger product, more than once. (V2-B-85-03)",
+    "question_text": "Memo: The quality team will test each ______ before it reaches the assembly stage. (V2-B-85-03)",
     "options": {
       "A": "production",
       "B": "assembly line",
@@ -2977,7 +2977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the manufacturing team should understand the ______, the flaw or malfunction in product, before the meeting begins. (V2-B-85-04)",
+    "question_text": "Announcement: The ______ rate in last month's batch was below the target threshold of 0.5%. (V2-B-85-04)",
     "options": {
       "A": "defect",
       "B": "production",
@@ -3037,7 +3037,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the automated manufacturing process, before you continue with this logistics task. (V2-B-85-06)",
+    "question_text": "Notice: The ______ will be shut down for maintenance during the third shift on Friday. (V2-B-85-06)",
     "options": {
       "A": "production",
       "B": "component",
@@ -3067,7 +3067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the single part in larger product, for today's manufacturing work. Which term best completes the speaker's meaning? (V2-B-85-07)",
+    "question_text": "Conversation: A key ______ for the motor is on backorder — this could delay our schedule. (V2-B-85-07)",
     "options": {
       "A": "production",
       "B": "assembly line",
@@ -3097,7 +3097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the manufacturing briefing, the manager referred to the ______, the flaw or malfunction in product, more than once. (V2-B-85-08)",
+    "question_text": "Memo: Report any ______ found during inspection immediately to the quality assurance team. (V2-B-85-08)",
     "options": {
       "A": "defect",
       "B": "production",
@@ -3127,7 +3127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the manufacturing team should understand the ______, the process of manufacturing goods, before the meeting begins. (V2-B-85-09)",
+    "question_text": "Announcement: Monthly ______ targets will be shared with all shift supervisors by Monday. (V2-B-85-09)",
     "options": {
       "A": "assembly line",
       "B": "production",
@@ -3187,7 +3187,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the single part in larger product, before you continue with this logistics task. (V2-B-85-11)",
+    "question_text": "Notice: Inspect each ______ for damage before it is used in the manufacturing process. (V2-B-85-11)",
     "options": {
       "A": "production",
       "B": "assembly line",
@@ -3217,7 +3217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the flaw or malfunction in product, for today's manufacturing work. Which term best completes the speaker's meaning? (V2-B-85-12)",
+    "question_text": "Conversation: The customer returned the unit claiming there was a manufacturing ______ in the casing. (V2-B-85-12)",
     "options": {
       "A": "defect",
       "B": "production",
@@ -3247,7 +3247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the manufacturing briefing, the manager referred to the ______, the process of manufacturing goods, more than once. (V2-B-85-13)",
+    "question_text": "Memo: The ______ team has requested additional staff to meet the increased order volume. (V2-B-85-13)",
     "options": {
       "A": "assembly line",
       "B": "production",
@@ -3277,7 +3277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the manufacturing team should understand the ______, the automated manufacturing process, before the meeting begins. (V2-B-85-14)",
+    "question_text": "Announcement: A new automated ______ has been installed to improve output and reduce errors. (V2-B-85-14)",
     "options": {
       "A": "production",
       "B": "component",
@@ -3337,7 +3337,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the flaw or malfunction in product, before you continue with this logistics task. (V2-B-85-16)",
+    "question_text": "Notice: Any product with a visible ______ must be set aside for quality inspection. (V2-B-85-16)",
     "options": {
       "A": "defect",
       "B": "production",
@@ -3367,7 +3367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the process of manufacturing goods, for today's manufacturing work. Which term best completes the speaker's meaning? (V2-B-85-17)",
+    "question_text": "Conversation: When will the factory return to full ______ after the maintenance shutdown? (V2-B-85-17)",
     "options": {
       "A": "assembly line",
       "B": "production",
@@ -3397,7 +3397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the manufacturing briefing, the manager referred to the ______, the automated manufacturing process, more than once. (V2-B-85-18)",
+    "question_text": "Memo: Retooling the ______ for the new product model will take approximately three days. (V2-B-85-18)",
     "options": {
       "A": "production",
       "B": "component",
@@ -3427,7 +3427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the manufacturing team should understand the ______, the single part in larger product, before the meeting begins. (V2-B-85-19)",
+    "question_text": "Announcement: A supplier recall affects one ______ in the current production batch. (V2-B-85-19)",
     "options": {
       "A": "production",
       "B": "assembly line",
@@ -3487,7 +3487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the process of manufacturing goods, before you continue with this logistics task. (V2-B-85-21)",
+    "question_text": "Delays in raw material delivery have affected this week's ______ output. (V2-B-85-21)",
     "options": {
       "A": "assembly line",
       "B": "production",
@@ -3517,7 +3517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the automated manufacturing process, for today's manufacturing work. Which term best completes the speaker's meaning? (V2-B-85-22)",
+    "question_text": "Workers on the ______ must wear protective gloves and safety glasses at all times. (V2-B-85-22)",
     "options": {
       "A": "production",
       "B": "component",
@@ -3547,7 +3547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the manufacturing briefing, the manager referred to the ______, the single part in larger product, more than once. (V2-B-85-23)",
+    "question_text": "Every ______ must meet the minimum quality standard before being approved for use. (V2-B-85-23)",
     "options": {
       "A": "production",
       "B": "assembly line",
@@ -3577,7 +3577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the manufacturing team should understand the ______, the flaw or malfunction in product, before the meeting begins. (V2-B-85-24)",
+    "question_text": "All items flagged with a ______ will be quarantined until the issue is investigated. (V2-B-85-24)",
     "options": {
       "A": "defect",
       "B": "production",
@@ -3607,7 +3607,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the detailed examination for quality, before you continue with this logistics task. (V2-B-86-01)",
+    "question_text": "Notice: A fire safety ______ will be carried out in all offices on the 14th of this month. (V2-B-86-01)",
     "options": {
       "A": "repair request",
       "B": "inspection",
@@ -3637,7 +3637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal request for fixing equipment, for today's maintenance request work. Which term best completes the speaker's meaning? (V2-B-86-02)",
+    "question_text": "Conversation: I filed a ______ for the broken air conditioning unit — any update on the fix? (V2-B-86-02)",
     "options": {
       "A": "inspection",
       "B": "technician",
@@ -3667,7 +3667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the maintenance request briefing, the manager referred to the ______, the skilled person doing repairs, more than once. (V2-B-86-03)",
+    "question_text": "Memo: A certified ______ will inspect all HVAC units in the building next week. (V2-B-86-03)",
     "options": {
       "A": "inspection",
       "B": "repair request",
@@ -3697,7 +3697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the maintenance request team should understand the ______, the tools and machinery for work, before the meeting begins. (V2-B-86-04)",
+    "question_text": "Announcement: New laboratory ______ will be delivered and installed during the upcoming holiday period. (V2-B-86-04)",
     "options": {
       "A": "equipment",
       "B": "inspection",
@@ -3757,7 +3757,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the formal request for fixing equipment, before you continue with this logistics task. (V2-B-86-06)",
+    "question_text": "Notice: Submit a ______ for any faulty equipment using the online maintenance portal. (V2-B-86-06)",
     "options": {
       "A": "inspection",
       "B": "technician",
@@ -3787,7 +3787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the skilled person doing repairs, for today's maintenance request work. Which term best completes the speaker's meaning? (V2-B-86-07)",
+    "question_text": "Conversation: The ______ said the printer needs a part replacement — it won't be ready until Monday. (V2-B-86-07)",
     "options": {
       "A": "inspection",
       "B": "repair request",
@@ -3817,7 +3817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the maintenance request briefing, the manager referred to the ______, the tools and machinery for work, more than once. (V2-B-86-08)",
+    "question_text": "Memo: Faulty ______ should be reported to the maintenance team and taken out of service. (V2-B-86-08)",
     "options": {
       "A": "equipment",
       "B": "inspection",
@@ -3847,7 +3847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the maintenance request team should understand the ______, the detailed examination for quality, before the meeting begins. (V2-B-86-09)",
+    "question_text": "Announcement: The building's electrical ______ has been cleared — all systems are operating normally. (V2-B-86-09)",
     "options": {
       "A": "repair request",
       "B": "inspection",
@@ -3907,7 +3907,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the skilled person doing repairs, before you continue with this logistics task. (V2-B-86-11)",
+    "question_text": "Notice: A qualified ______ will be on site to install the new server equipment on Thursday. (V2-B-86-11)",
     "options": {
       "A": "inspection",
       "B": "repair request",
@@ -3937,7 +3937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the tools and machinery for work, for today's maintenance request work. Which term best completes the speaker's meaning? (V2-B-86-12)",
+    "question_text": "Conversation: The testing ______ needs to be calibrated before we start the quality check. (V2-B-86-12)",
     "options": {
       "A": "equipment",
       "B": "inspection",
@@ -3967,7 +3967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the maintenance request briefing, the manager referred to the ______, the detailed examination for quality, more than once. (V2-B-86-13)",
+    "question_text": "Memo: Prepare all documentation for the scheduled compliance ______ next Tuesday. (V2-B-86-13)",
     "options": {
       "A": "repair request",
       "B": "inspection",
@@ -3997,7 +3997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the maintenance request team should understand the ______, the formal request for fixing equipment, before the meeting begins. (V2-B-86-14)",
+    "question_text": "Announcement: Pending ______ items will be reviewed at the weekly facilities meeting. (V2-B-86-14)",
     "options": {
       "A": "inspection",
       "B": "technician",
@@ -4057,7 +4057,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the tools and machinery for work, before you continue with this logistics task. (V2-B-86-16)",
+    "question_text": "Notice: All staff must complete a safety briefing before operating heavy ______. (V2-B-86-16)",
     "options": {
       "A": "equipment",
       "B": "inspection",
@@ -4087,7 +4087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the detailed examination for quality, for today's maintenance request work. Which term best completes the speaker's meaning? (V2-B-86-17)",
+    "question_text": "Conversation: Did the vehicle pass its annual ______ at the service center? (V2-B-86-17)",
     "options": {
       "A": "repair request",
       "B": "inspection",
@@ -4117,7 +4117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the maintenance request briefing, the manager referred to the ______, the formal request for fixing equipment, more than once. (V2-B-86-18)",
+    "question_text": "Memo: All ______ submissions must include the asset number and a description of the fault. (V2-B-86-18)",
     "options": {
       "A": "inspection",
       "B": "technician",
@@ -4147,7 +4147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the maintenance request team should understand the ______, the skilled person doing repairs, before the meeting begins. (V2-B-86-19)",
+    "question_text": "Announcement: A service ______ from our equipment provider will conduct a routine check on Friday. (V2-B-86-19)",
     "options": {
       "A": "inspection",
       "B": "repair request",
@@ -4207,7 +4207,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the detailed examination for quality, before you continue with this logistics task. (V2-B-86-21)",
+    "question_text": "Ensure that all safety records are up to date before the regulatory ______. (V2-B-86-21)",
     "options": {
       "A": "repair request",
       "B": "inspection",
@@ -4237,7 +4237,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the formal request for fixing equipment, for today's maintenance request work. Which term best completes the speaker's meaning? (V2-B-86-22)",
+    "question_text": "Log a ______ immediately if any office equipment stops functioning correctly. (V2-B-86-22)",
     "options": {
       "A": "inspection",
       "B": "technician",
@@ -4267,7 +4267,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the maintenance request briefing, the manager referred to the ______, the skilled person doing repairs, more than once. (V2-B-86-23)",
+    "question_text": "Contact the on-call ______ if any production machinery requires urgent attention. (V2-B-86-23)",
     "options": {
       "A": "inspection",
       "B": "repair request",
@@ -4297,7 +4297,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the maintenance request team should understand the ______, the tools and machinery for work, before the meeting begins. (V2-B-86-24)",
+    "question_text": "Staff must sign the usage log when borrowing shared ______ from the storage room. (V2-B-86-24)",
     "options": {
       "A": "equipment",
       "B": "inspection",
@@ -4327,7 +4327,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the ticket for airplane travel, before you continue with this logistics task. (V2-B-87-01)",
+    "question_text": "Notice: Print or download your ______ at least two hours before the scheduled departure. (V2-B-87-01)",
     "options": {
       "A": "accommodation",
       "B": "boarding pass",
@@ -4357,7 +4357,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the lodging or hotel arrangement, for today's employee travel work. Which term best completes the speaker's meaning? (V2-B-87-02)",
+    "question_text": "Conversation: Has the ______ for the visiting delegates been arranged at a nearby hotel? (V2-B-87-02)",
     "options": {
       "A": "boarding pass",
       "B": "reimbursement",
@@ -4387,7 +4387,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee travel briefing, the manager referred to the ______, the repayment of spent money, more than once. (V2-B-87-03)",
+    "question_text": "Memo: The updated ______ policy allows meals up to $60 per day during business travel. (V2-B-87-03)",
     "options": {
       "A": "boarding pass",
       "B": "accommodation",
@@ -4417,7 +4417,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee travel team should understand the ______, the budget for a business trip, before the meeting begins. (V2-B-87-04)",
+    "question_text": "Announcement: Revised ______ rates for domestic and international travel take effect next month. (V2-B-87-04)",
     "options": {
       "A": "travel allowance",
       "B": "boarding pass",
@@ -4477,7 +4477,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the lodging or hotel arrangement, before you continue with this logistics task. (V2-B-87-06)",
+    "question_text": "Notice: Please book your ______ through the corporate travel portal to qualify for the company rate. (V2-B-87-06)",
     "options": {
       "A": "boarding pass",
       "B": "reimbursement",
@@ -4507,7 +4507,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the repayment of spent money, for today's employee travel work. Which term best completes the speaker's meaning? (V2-B-87-07)",
+    "question_text": "Conversation: When will I receive ______ for the hotel expenses I paid out of pocket? (V2-B-87-07)",
     "options": {
       "A": "boarding pass",
       "B": "accommodation",
@@ -4537,7 +4537,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee travel briefing, the manager referred to the ______, the budget for a business trip, more than once. (V2-B-87-08)",
+    "question_text": "Memo: The quarterly ______ rates have been updated to reflect current market costs. (V2-B-87-08)",
     "options": {
       "A": "travel allowance",
       "B": "boarding pass",
@@ -4567,7 +4567,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee travel team should understand the ______, the ticket for airplane travel, before the meeting begins. (V2-B-87-09)",
+    "question_text": "Announcement: Mobile ______ scanning is now available at all international departure gates. (V2-B-87-09)",
     "options": {
       "A": "accommodation",
       "B": "boarding pass",
@@ -4627,7 +4627,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the repayment of spent money, before you continue with this logistics task. (V2-B-87-11)",
+    "question_text": "Notice: Submit all expense receipts within 30 days to qualify for ______. (V2-B-87-11)",
     "options": {
       "A": "boarding pass",
       "B": "accommodation",
@@ -4657,7 +4657,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the budget for a business trip, for today's employee travel work. Which term best completes the speaker's meaning? (V2-B-87-12)",
+    "question_text": "Conversation: What is the current ______ for business trips to Europe? (V2-B-87-12)",
     "options": {
       "A": "travel allowance",
       "B": "boarding pass",
@@ -4687,7 +4687,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee travel briefing, the manager referred to the ______, the ticket for airplane travel, more than once. (V2-B-87-13)",
+    "question_text": "Memo: Attach a copy of your ______ to your travel expense claim for verification purposes. (V2-B-87-13)",
     "options": {
       "A": "accommodation",
       "B": "boarding pass",
@@ -4717,7 +4717,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee travel team should understand the ______, the lodging or hotel arrangement, before the meeting begins. (V2-B-87-14)",
+    "question_text": "Announcement: Preferred ______ partners have been updated — please refer to the new approved hotel list. (V2-B-87-14)",
     "options": {
       "A": "boarding pass",
       "B": "reimbursement",
@@ -4777,7 +4777,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the budget for a business trip, before you continue with this logistics task. (V2-B-87-16)",
+    "question_text": "Notice: Staff traveling to overseas branches will receive a daily ______ to cover meals and incidentals. (V2-B-87-16)",
     "options": {
       "A": "travel allowance",
       "B": "boarding pass",
@@ -4807,7 +4807,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the ticket for airplane travel, for today's employee travel work. Which term best completes the speaker's meaning? (V2-B-87-17)",
+    "question_text": "Conversation: Could you check in online and send me the ______ as soon as it is available? (V2-B-87-17)",
     "options": {
       "A": "accommodation",
       "B": "boarding pass",
@@ -4837,7 +4837,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee travel briefing, the manager referred to the ______, the lodging or hotel arrangement, more than once. (V2-B-87-18)",
+    "question_text": "Memo: Receipts for ______ expenses must be submitted within 10 days of returning from travel. (V2-B-87-18)",
     "options": {
       "A": "boarding pass",
       "B": "reimbursement",
@@ -4867,7 +4867,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee travel team should understand the ______, the repayment of spent money, before the meeting begins. (V2-B-87-19)",
+    "question_text": "Announcement: Travel ______ requests can now be submitted through the new HR self-service portal. (V2-B-87-19)",
     "options": {
       "A": "boarding pass",
       "B": "accommodation",
@@ -4927,7 +4927,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the ticket for airplane travel, before you continue with this logistics task. (V2-B-87-21)",
+    "question_text": "Present your ______ and passport at the gate counter before boarding the aircraft. (V2-B-87-21)",
     "options": {
       "A": "accommodation",
       "B": "boarding pass",
@@ -4957,7 +4957,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the lodging or hotel arrangement, for today's employee travel work. Which term best completes the speaker's meaning? (V2-B-87-22)",
+    "question_text": "Staff on extended business trips may claim ______ expenses up to the daily limit. (V2-B-87-22)",
     "options": {
       "A": "boarding pass",
       "B": "reimbursement",
@@ -4987,7 +4987,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the employee travel briefing, the manager referred to the ______, the repayment of spent money, more than once. (V2-B-87-23)",
+    "question_text": "Claims without supporting receipts will not be eligible for ______. (V2-B-87-23)",
     "options": {
       "A": "boarding pass",
       "B": "accommodation",
@@ -5017,7 +5017,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the employee travel team should understand the ______, the budget for a business trip, before the meeting begins. (V2-B-87-24)",
+    "question_text": "The ______ is a fixed daily amount and does not require receipts to be submitted. (V2-B-87-24)",
     "options": {
       "A": "travel allowance",
       "B": "boarding pass",
@@ -5047,7 +5047,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this logistics task. (V2-B-88-01)",
+    "question_text": "Notice: Please request a formal ______ from at least three vendors before selecting a supplier. (V2-B-88-01)",
     "options": {
       "A": "purchase order",
       "B": "quotation",
@@ -5077,7 +5077,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's vendor purchase work. Which term best completes the speaker's meaning? (V2-B-88-02)",
+    "question_text": "Conversation: Can you generate a ______ for the new office chairs we discussed? (V2-B-88-02)",
     "options": {
       "A": "quotation",
       "B": "contract",
@@ -5107,7 +5107,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the vendor purchase briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-B-88-03)",
+    "question_text": "Memo: A copy of the signed ______ has been filed in the shared legal documents folder. (V2-B-88-03)",
     "options": {
       "A": "quotation",
       "B": "purchase order",
@@ -5137,7 +5137,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the vendor purchase team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-B-88-04)",
+    "question_text": "Announcement: Customers will be notified by email if the expected ______ changes for any reason. (V2-B-88-04)",
     "options": {
       "A": "delivery date",
       "B": "quotation",
@@ -5197,7 +5197,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this logistics task. (V2-B-88-06)",
+    "question_text": "Notice: All orders above $500 must be accompanied by an approved ______. (V2-B-88-06)",
     "options": {
       "A": "quotation",
       "B": "contract",
@@ -5227,7 +5227,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's vendor purchase work. Which term best completes the speaker's meaning? (V2-B-88-07)",
+    "question_text": "Conversation: Has the supplier returned the signed ______ yet? We need it before we can proceed. (V2-B-88-07)",
     "options": {
       "A": "quotation",
       "B": "purchase order",
@@ -5257,7 +5257,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the vendor purchase briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-B-88-08)",
+    "question_text": "Memo: The vendor has confirmed a revised ______ of the 18th due to production delays. (V2-B-88-08)",
     "options": {
       "A": "delivery date",
       "B": "quotation",
@@ -5287,7 +5287,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the vendor purchase team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-B-88-09)",
+    "question_text": "Announcement: Submit your ______ for the upcoming tender by the closing date of the 25th. (V2-B-88-09)",
     "options": {
       "A": "purchase order",
       "B": "quotation",
@@ -5347,7 +5347,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this logistics task. (V2-B-88-11)",
+    "question_text": "Notice: All vendor agreements must be reviewed by the legal team before the ______ is signed. (V2-B-88-11)",
     "options": {
       "A": "quotation",
       "B": "purchase order",
@@ -5377,7 +5377,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's vendor purchase work. Which term best completes the speaker's meaning? (V2-B-88-12)",
+    "question_text": "Conversation: Can we negotiate an earlier ______ with the supplier? We need the parts by next week. (V2-B-88-12)",
     "options": {
       "A": "delivery date",
       "B": "quotation",
@@ -5407,7 +5407,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the vendor purchase briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-B-88-13)",
+    "question_text": "Memo: A ______ for the IT upgrade has been received and is currently under review. (V2-B-88-13)",
     "options": {
       "A": "purchase order",
       "B": "quotation",
@@ -5437,7 +5437,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the vendor purchase team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-B-88-14)",
+    "question_text": "Announcement: From next quarter, all ______ requests must be submitted through the new ERP system. (V2-B-88-14)",
     "options": {
       "A": "quotation",
       "B": "contract",
@@ -5497,7 +5497,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this logistics task. (V2-B-88-16)",
+    "question_text": "Notice: The confirmed ______ for this order is the 20th — please plan accordingly. (V2-B-88-16)",
     "options": {
       "A": "delivery date",
       "B": "quotation",
@@ -5527,7 +5527,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's vendor purchase work. Which term best completes the speaker's meaning? (V2-B-88-17)",
+    "question_text": "Conversation: The ______ from the new vendor is lower — should we switch for the next order? (V2-B-88-17)",
     "options": {
       "A": "purchase order",
       "B": "quotation",
@@ -5557,7 +5557,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the vendor purchase briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-B-88-18)",
+    "question_text": "Memo: The ______ has been approved — please forward it to the supplier to confirm the order. (V2-B-88-18)",
     "options": {
       "A": "quotation",
       "B": "contract",
@@ -5587,7 +5587,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the vendor purchase team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-B-88-19)",
+    "question_text": "Announcement: The ______ with our new software provider was finalized and signed this morning. (V2-B-88-19)",
     "options": {
       "A": "quotation",
       "B": "purchase order",
@@ -5647,7 +5647,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the key TOEIC business term, before you continue with this logistics task. (V2-B-88-21)",
+    "question_text": "Compare each ______ carefully for hidden fees before making a final recommendation. (V2-B-88-21)",
     "options": {
       "A": "purchase order",
       "B": "quotation",
@@ -5677,7 +5677,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the key TOEIC business term, for today's vendor purchase work. Which term best completes the speaker's meaning? (V2-B-88-22)",
+    "question_text": "Do not proceed with any order until the ______ has been approved by the finance team. (V2-B-88-22)",
     "options": {
       "A": "quotation",
       "B": "contract",
@@ -5707,7 +5707,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the vendor purchase briefing, the manager referred to the ______, the key TOEIC business term, more than once. (V2-B-88-23)",
+    "question_text": "Ensure you fully understand the termination clause before signing any service ______. (V2-B-88-23)",
     "options": {
       "A": "quotation",
       "B": "purchase order",
@@ -5737,7 +5737,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the vendor purchase team should understand the ______, the key TOEIC business term, before the meeting begins. (V2-B-88-24)",
+    "question_text": "Always confirm the ______ in writing before processing a purchase order. (V2-B-88-24)",
     "options": {
       "A": "delivery date",
       "B": "quotation",
@@ -5767,7 +5767,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the shipping document listing cargo, before you continue with this logistics task. (V2-B-89-01)",
+    "question_text": "Notice: The ______ must accompany all shipments and be signed by the carrier upon pickup. (V2-B-89-01)",
     "options": {
       "A": "cargo",
       "B": "bill of lading",
@@ -5797,7 +5797,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the goods transported by vehicle, for today's cargo document work. Which term best completes the speaker's meaning? (V2-B-89-02)",
+    "question_text": "Conversation: Is the ______ from the Shanghai factory ready for dispatch this week? (V2-B-89-02)",
     "options": {
       "A": "bill of lading",
       "B": "destination",
@@ -5827,7 +5827,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the cargo document briefing, the manager referred to the ______, the final location for shipment, more than once. (V2-B-89-03)",
+    "question_text": "Memo: All packages should be clearly labeled with both the origin and ______ details. (V2-B-89-03)",
     "options": {
       "A": "bill of lading",
       "B": "cargo",
@@ -5857,7 +5857,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the cargo document team should understand the ______, the postponement from original schedule, before the meeting begins. (V2-B-89-04)",
+    "question_text": "Announcement: Passengers are advised that the flight is experiencing a two-hour ______. (V2-B-89-04)",
     "options": {
       "A": "delay",
       "B": "bill of lading",
@@ -5917,7 +5917,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the goods transported by vehicle, before you continue with this logistics task. (V2-B-89-06)",
+    "question_text": "Notice: All ______ must be declared and documented before being loaded onto the vessel. (V2-B-89-06)",
     "options": {
       "A": "bill of lading",
       "B": "destination",
@@ -5947,7 +5947,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the final location for shipment, for today's cargo document work. Which term best completes the speaker's meaning? (V2-B-89-07)",
+    "question_text": "Conversation: What is the final ______ for this shipment — Singapore or the regional hub? (V2-B-89-07)",
     "options": {
       "A": "bill of lading",
       "B": "cargo",
@@ -5977,7 +5977,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the cargo document briefing, the manager referred to the ______, the postponement from original schedule, more than once. (V2-B-89-08)",
+    "question_text": "Memo: The project is facing a potential ______ if the components are not received by Friday. (V2-B-89-08)",
     "options": {
       "A": "delay",
       "B": "bill of lading",
@@ -6007,7 +6007,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the cargo document team should understand the ______, the shipping document listing cargo, before the meeting begins. (V2-B-89-09)",
+    "question_text": "Announcement: All international freight must include a complete and accurate ______ to avoid customs delays. (V2-B-89-09)",
     "options": {
       "A": "cargo",
       "B": "bill of lading",
@@ -6067,7 +6067,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the final location for shipment, before you continue with this logistics task. (V2-B-89-11)",
+    "question_text": "Notice: Check the ______ address on every package before handing it to the courier. (V2-B-89-11)",
     "options": {
       "A": "bill of lading",
       "B": "cargo",
@@ -6097,7 +6097,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the postponement from original schedule, for today's cargo document work. Which term best completes the speaker's meaning? (V2-B-89-12)",
+    "question_text": "Conversation: There's a ______ at customs — the package won't arrive until the end of the week. (V2-B-89-12)",
     "options": {
       "A": "delay",
       "B": "bill of lading",
@@ -6127,7 +6127,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the cargo document briefing, the manager referred to the ______, the shipping document listing cargo, more than once. (V2-B-89-13)",
+    "question_text": "Memo: Retain the original ______ until the shipment has been confirmed as received. (V2-B-89-13)",
     "options": {
       "A": "cargo",
       "B": "bill of lading",
@@ -6157,7 +6157,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the cargo document team should understand the ______, the goods transported by vehicle, before the meeting begins. (V2-B-89-14)",
+    "question_text": "Announcement: Temperature-sensitive ______ must be labeled and stored in the refrigerated section. (V2-B-89-14)",
     "options": {
       "A": "bill of lading",
       "B": "destination",
@@ -6217,7 +6217,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the postponement from original schedule, before you continue with this logistics task. (V2-B-89-16)",
+    "question_text": "Notice: A shipping ______ due to weather conditions has pushed the arrival back by three days. (V2-B-89-16)",
     "options": {
       "A": "delay",
       "B": "bill of lading",
@@ -6247,7 +6247,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the shipping document listing cargo, for today's cargo document work. Which term best completes the speaker's meaning? (V2-B-89-17)",
+    "question_text": "Conversation: Could you send the ______ for the last shipment? The customs office is asking for it. (V2-B-89-17)",
     "options": {
       "A": "cargo",
       "B": "bill of lading",
@@ -6277,7 +6277,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the cargo document briefing, the manager referred to the ______, the goods transported by vehicle, more than once. (V2-B-89-18)",
+    "question_text": "Memo: The ______ hold was full, so the remaining goods are rescheduled for the next vessel. (V2-B-89-18)",
     "options": {
       "A": "bill of lading",
       "B": "destination",
@@ -6307,7 +6307,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the cargo document team should understand the ______, the final location for shipment, before the meeting begins. (V2-B-89-19)",
+    "question_text": "Announcement: Goods shipped to the wrong ______ will be returned at the sender's expense. (V2-B-89-19)",
     "options": {
       "A": "bill of lading",
       "B": "cargo",
@@ -6367,7 +6367,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the shipping document listing cargo, before you continue with this logistics task. (V2-B-89-21)",
+    "question_text": "The ______ serves as a contract between the shipper and the carrier for the goods transported. (V2-B-89-21)",
     "options": {
       "A": "cargo",
       "B": "bill of lading",
@@ -6397,7 +6397,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the goods transported by vehicle, for today's cargo document work. Which term best completes the speaker's meaning? (V2-B-89-22)",
+    "question_text": "Unaccompanied ______ will be held at the port until clearance documents are submitted. (V2-B-89-22)",
     "options": {
       "A": "bill of lading",
       "B": "destination",
@@ -6427,7 +6427,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the cargo document briefing, the manager referred to the ______, the final location for shipment, more than once. (V2-B-89-23)",
+    "question_text": "The route planner will calculate the most efficient path to each ______ automatically. (V2-B-89-23)",
     "options": {
       "A": "bill of lading",
       "B": "cargo",
@@ -6457,7 +6457,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the cargo document team should understand the ______, the postponement from original schedule, before the meeting begins. (V2-B-89-24)",
+    "question_text": "Notify the client immediately if there is any ______ to the agreed delivery schedule. (V2-B-89-24)",
     "options": {
       "A": "delay",
       "B": "bill of lading",
@@ -6487,7 +6487,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the permission to send item back, before you continue with this logistics task. (V2-B-90-01)",
+    "question_text": "Notice: You must obtain a ______ number before sending any goods back to the supplier. (V2-B-90-01)",
     "options": {
       "A": "replacement",
       "B": "return authorization",
@@ -6517,7 +6517,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the new item replacing defective one, for today's return process work. Which term best completes the speaker's meaning? (V2-B-90-02)",
+    "question_text": "Conversation: The unit is faulty — should we send a ______ or offer a refund instead? (V2-B-90-02)",
     "options": {
       "A": "return authorization",
       "B": "refund",
@@ -6547,7 +6547,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the return process briefing, the manager referred to the ______, the money returned to buyer, more than once. (V2-B-90-03)",
+    "question_text": "Memo: Partial ______ requests must be reviewed and approved by the customer service manager. (V2-B-90-03)",
     "options": {
       "A": "return authorization",
       "B": "replacement",
@@ -6577,7 +6577,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the return process team should understand the ______, the guarantee for product quality, before the meeting begins. (V2-B-90-04)",
+    "question_text": "Announcement: Extended ______ packages are available for purchase at the time of your order. (V2-B-90-04)",
     "options": {
       "A": "warranty",
       "B": "return authorization",
@@ -6637,7 +6637,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the new item replacing defective one, before you continue with this logistics task. (V2-B-90-06)",
+    "question_text": "Notice: A free ______ will be shipped within 48 hours if the item is found to be defective. (V2-B-90-06)",
     "options": {
       "A": "return authorization",
       "B": "refund",
@@ -6667,7 +6667,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the money returned to buyer, for today's return process work. Which term best completes the speaker's meaning? (V2-B-90-07)",
+    "question_text": "Conversation: The customer is asking for a ______ because the product arrived damaged. (V2-B-90-07)",
     "options": {
       "A": "return authorization",
       "B": "replacement",
@@ -6697,7 +6697,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the return process briefing, the manager referred to the ______, the guarantee for product quality, more than once. (V2-B-90-08)",
+    "question_text": "Memo: The ______ period for all equipment purchased this quarter expires in March of next year. (V2-B-90-08)",
     "options": {
       "A": "warranty",
       "B": "return authorization",
@@ -6727,7 +6727,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the return process team should understand the ______, the permission to send item back, before the meeting begins. (V2-B-90-09)",
+    "question_text": "Announcement: All returns must include a valid ______ number printed on the outer packaging. (V2-B-90-09)",
     "options": {
       "A": "replacement",
       "B": "return authorization",
@@ -6787,7 +6787,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the money returned to buyer, before you continue with this logistics task. (V2-B-90-11)",
+    "question_text": "Notice: A full ______ will be issued within 7 business days of receiving the returned item. (V2-B-90-11)",
     "options": {
       "A": "return authorization",
       "B": "replacement",
@@ -6817,7 +6817,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the guarantee for product quality, for today's return process work. Which term best completes the speaker's meaning? (V2-B-90-12)",
+    "question_text": "Conversation: Is the laptop still under ______, or do we need to pay for the repair? (V2-B-90-12)",
     "options": {
       "A": "warranty",
       "B": "return authorization",
@@ -6847,7 +6847,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the return process briefing, the manager referred to the ______, the permission to send item back, more than once. (V2-B-90-13)",
+    "question_text": "Memo: The ______ process has been updated — please refer to the new policy on the intranet. (V2-B-90-13)",
     "options": {
       "A": "replacement",
       "B": "return authorization",
@@ -6877,7 +6877,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the return process team should understand the ______, the new item replacing defective one, before the meeting begins. (V2-B-90-14)",
+    "question_text": "Announcement: We apologize for the inconvenience and will arrange a ______ at no additional cost. (V2-B-90-14)",
     "options": {
       "A": "return authorization",
       "B": "refund",
@@ -6937,7 +6937,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the guarantee for product quality, before you continue with this logistics task. (V2-B-90-16)",
+    "question_text": "Notice: This product is covered by a two-year ______ against manufacturing defects. (V2-B-90-16)",
     "options": {
       "A": "warranty",
       "B": "return authorization",
@@ -6967,7 +6967,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the permission to send item back, for today's return process work. Which term best completes the speaker's meaning? (V2-B-90-17)",
+    "question_text": "Conversation: I need to send this back — can you issue a ______ for the damaged unit? (V2-B-90-17)",
     "options": {
       "A": "replacement",
       "B": "return authorization",
@@ -6997,7 +6997,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the return process briefing, the manager referred to the ______, the new item replacing defective one, more than once. (V2-B-90-18)",
+    "question_text": "Memo: The approved ______ for the discontinued model is listed on the product page. (V2-B-90-18)",
     "options": {
       "A": "return authorization",
       "B": "refund",
@@ -7027,7 +7027,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the return process team should understand the ______, the money returned to buyer, before the meeting begins. (V2-B-90-19)",
+    "question_text": "Announcement: ______ requests must be submitted within 30 days of the original purchase date. (V2-B-90-19)",
     "options": {
       "A": "return authorization",
       "B": "replacement",
@@ -7087,7 +7087,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Notice: Please review the ______, the permission to send item back, before you continue with this logistics task. (V2-B-90-21)",
+    "question_text": "Contact the customer service team to request a ______ for any defective or incorrect item. (V2-B-90-21)",
     "options": {
       "A": "replacement",
       "B": "return authorization",
@@ -7117,7 +7117,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Conversation: We still need the ______, the new item replacing defective one, for today's return process work. Which term best completes the speaker's meaning? (V2-B-90-22)",
+    "question_text": "Complete the return form and include the defective item before a ______ can be dispatched. (V2-B-90-22)",
     "options": {
       "A": "return authorization",
       "B": "refund",
@@ -7147,7 +7147,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Memo: During the return process briefing, the manager referred to the ______, the money returned to buyer, more than once. (V2-B-90-23)",
+    "question_text": "Ensure the original receipt is included with the returned item to process the ______. (V2-B-90-23)",
     "options": {
       "A": "return authorization",
       "B": "replacement",
@@ -7177,7 +7177,7 @@
     "skill": "scene_vocabulary",
     "subskill": "logistics",
     "grammar_link_id": "SCENE_VOCAB_CONTEXT",
-    "question_text": "Announcement: Everyone on the return process team should understand the ______, the guarantee for product quality, before the meeting begins. (V2-B-90-24)",
+    "question_text": "Keep your proof of purchase safe, as it is required for all ______ claims. (V2-B-90-24)",
     "options": {
       "A": "warranty",
       "B": "return authorization",
