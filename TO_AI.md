@@ -1,7 +1,7 @@
 # TO_AI — 程式設計優化計劃書
 
-**版本：** 7.0  
-**建立日期：** 2026-05-14（v2.0）；v3.0 深度審查：2026-05-14；v4.0 實作更新：2026-05-14；v5.0 現況更新：2026-05-15；v6.0 內容品質修正：2026-05-16；v7.0 V3 詞彙項目內容填入：2026-05-17  
+**版本：** 8.0  
+**建立日期：** 2026-05-14（v2.0）；v3.0 深度審查：2026-05-14；v4.0 實作更新：2026-05-14；v5.0 現況更新：2026-05-15；v6.0 內容品質修正：2026-05-16；v7.0 V3 詞彙項目內容填入：2026-05-17；**v8.0 全題庫品質大整改 + 規格文件化：2026-05-17**  
 **適用程式：** TOEIC Vocabulary Tracker（Program B）  
 **路徑：** `C:\Users\Keith\Toeic\toeic-app-Vorb`  
 **撰寫目的：** 全面審查程式碼架構、學習內容、資料模型、UI/UX，識別所有待解決問題，並輸出有優先順序的優化計劃。
@@ -19,10 +19,12 @@
 | 主要儲存 | IndexedDB (`toeic_vocab_tracker_db`, v1) |
 | 次要儲存 | localStorage (`toeic_vocab_tracker_preferences`, `toeic_vocab_active_session`) |
 | 離線支援 | Service Worker (`sw.js`, `toeic-vorb-v4`, stale-while-revalidate) |
-| 題庫規模 | **180 課 / 4,608 題**（V0: 10 課, V1 A–F: 60 課, V2 A–E: 50 課, V3 A–F: 60 課） |
+| 題庫規模 | **193 課 / 4,399 題**（V0: 1 課 31 題, V1 A–F: 60 課 1,728 題, V2 A–E+MR: 60 課 1,200 題, V3 A–F+MR: 72 課 1,440 題） |
 | 詞彙項目 | 494 個（word_family 42 + diagnostic_vocab 12 + scene_vocabulary 200 + collocation 240） |
 | 學習目標 | TOEIC 570 → 750，單字 / Word Family / Collocation 為核心 |
-| 種子版本 | `toeic_vocab_tracker_v3_items_2026_05_17` |
+| 種子版本 | `toeic_vocab_tracker_quality_fixed_2026_05_17` |
+| 重複題數 | **0**（v8.0 全清；原有 826 個重複 stem） |
+| 品質審核 | `node scripts/audit-quality-full.js` → `✅ PASSED`（0 issues） |
 
 ### 1.2 JS 模組職責
 
@@ -48,8 +50,8 @@
 | `users` | `user_id` | 使用者資料 |
 | `settings` | `key` | Seed 版本、course_id |
 | `curriculum` | `course_id` | 課程元資料與階段定義 |
-| `lessons` | `lesson_id` | 180 堂課的狀態與題目清單 |
-| `questions` | `question_id` | 4,608 道題目 |
+| `lessons` | `lesson_id` | 193 堂課的狀態與題目清單 |
+| `questions` | `question_id` | 4,399 道題目 |
 | `vocab_items` | `item_id` | 每個詞彙項目的掌握度紀錄 |
 | `attempts` | `attempt_id` | 每次作答紀錄（永久累積；dashboard 載入 300 筆，export 全量） |
 | `sessions` | `session_id` | 每堂課的結束摘要 |
@@ -196,6 +198,16 @@ setBankFilter, setMasteryFilter, setView, showValidation, startLesson, togglePau
 | Q-001c-partial | **V3 跨課模板重複消除** — 5 個模板 ×20 次（跨 4 課共用 "office task" 主題）→ **0 個模板 >10 次**；V3-A-122/123/124 各自獲得獨立主題（document review / staff coordination / client briefing）；最高重複上限降至 ×5（單課內設計性重複，正常）；新增 `scripts/rewrite-v3-stem-topics.js` | v6.0 |
 | — | **V1 選項偏差確認為結構性假象** — 48.7% 偏差來自 word family 四個選項本身 {accurate/accuracy=8, accurately/inaccuracy=10} 的長度對稱，rank-1 理論期望值就是 50%；邊際差距 ≤5 字的題共 490 題，>5 字的僅 10 題；**不需修正** | v6.0 |
 | Q-003 | **V3 vocab_items chinese/example 填入** — 240 個 collocation items 全部由空殼（`chinese: "固定搭配：[英文]"`、`example: ""`）改寫為：真實繁體中文釋義（如 "召開/舉行會議"）+ TOEIC 情境例句；新增 `scripts/fix-v3-item-quality.js`，按 A-F 組（辦公行政/物流/HR/財務/服務業/企業運營）組織 240 條 BANK | v7.0 |
+| Q-004 | **V0 整合（10 課 240 題 → 1 課 31 題）** — 31 個唯一 stem 保留；19 題入 `question_ids`，12 個 `_rv_` 移至 `review_question_ids`；`scripts/consolidate-v0.js` | v8.0 |
+| Q-005 | **V1 826 個重複 stem 全部消除** — substitution system（PREFIX_SUBS / SUBJECT_SUBS / TAIL_SUBS）+ lesson-number fallback；`scripts/fix-v1-duplicates.js` + `scripts/fix-v1-remaining.js` | v8.0 |
+| Q-006 | **V2 200 題 type 錯誤修正** — 200 道 V2 fill-in 題被標記為 `meaning_choice`，全部改為 `scene_vocabulary`，同步更新 `skill`、`tags`；涉及 questions_v2a–e.json | v8.0 |
+| Q-007 | **V2 14 個 article giveaway 修正** — "an ______" 前唯一母音開頭選項洩題；改為 "the ______" 或插入形容詞；涉及 questions_v2a/v2c/v2e.json | v8.0 |
+| Q-008 | **V0 blank 格式修正** — 4 題 `____`（4 底線）改為 `______`（6 底線）；`scripts/fix-audit-bugs.js` | v8.0 |
+| Q-009 | **v1_c_35_q_008 缺少 blank 修正** — question_text 無空格，補入 "The ______ clearly stated..." | v8.0 |
+| — | **全題庫品質審核工具** — `scripts/audit-quality-full.js`；涵蓋 §1.1 唯一性、§1.2 必填欄位、§1.3 blank 數量/article giveaway、§1.4 explanation_zh 長度、§2 課程結構、§3 題型格式；結果 `✅ PASSED（0 issues）` | v8.0 |
+| — | **出題規格文件** — `docs/question-creation-spec.md`；含 10 種題型標準、5 個 stage 規則、AI prompt 模板、§8 已知違規歷史 | v8.0 |
+| — | **CLAUDE.md 建立** — 專案根目錄 AI 上下文速覽文件；Claude Code 每次啟動自動讀取 | v8.0 |
+| — | **Playwright 第 4 個測試** — `tests/review-mode.spec.ts` 加入後共 4/4 passing | v8.0 |
 
 ---
 
@@ -309,7 +321,7 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 
 ## 4. 優化計劃 — 剩餘優先順序
 
-### ~~優先級 P0~~（已完成，v6.0–v7.0）：內容品質修正
+### ~~優先級 P0~~（已完成，v6.0–v8.0）：內容品質修正
 
 | 編號 | 項目 | 狀態 |
 |------|------|------|
@@ -319,6 +331,13 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 | Q-001c-partial | **V3 跨課模板重複消除** — 最高 ×20 → ×5 | ✅ 完成 |
 | V1 選項偏差 | 確認為詞形長度對稱的結構假象，不需修正 | ✅ 關閉 |
 | Q-003 | **V3 vocab_items 空殼修正** — 240 items chinese/example 全部填入（v7.0） | ✅ 完成 |
+| Q-004 | **V0 整合** — 10 課 240 題 → 1 課 31 題，0 重複 stem（v8.0） | ✅ 完成 |
+| Q-005 | **V1 826 重複 stem 全清** — substitution + lesson-number fallback（v8.0） | ✅ 完成 |
+| Q-006 | **V2 200 題 type 錯誤修正** — meaning_choice → scene_vocabulary（v8.0） | ✅ 完成 |
+| Q-007 | **V2 14 個 article giveaway 修正**（v8.0） | ✅ 完成 |
+| Q-008/009 | **V0 blank 格式 + v1_c_35_q_008 blank 缺失修正**（v8.0） | ✅ 完成 |
+| — | **全題庫品質審核 `audit-quality-full.js`** → `✅ PASSED（0 issues）`（v8.0） | ✅ 完成 |
+| — | **`docs/question-creation-spec.md`** 出題規格文件建立（v8.0） | ✅ 完成 |
 
 ---
 
@@ -354,12 +373,12 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 
 ---
 
-## 5. 當前 App 狀態總表（截至 v5.0）
+## 5. 當前 App 狀態總表（截至 v8.0，2026-05-17）
 
 | 區域 | 狀態 | 備注 |
 |------|------|------|
 | 課程執行引擎 | ✅ 完整 | try/finally 保護；seed 合併邏輯正確 |
-| 掌握度計算 | ✅ 邏輯正確 | stable_review_sessions 正確遞增；公式無 fixture 測試 |
+| 掌握度計算 | ✅ 邏輯正確 | stable_review_sessions 正確遞增；公式無 fixture 測試（F-003 待做） |
 | 即時作答反饋 | ✅ 完成 | 綠/紅 banner + 答案著色 + explanation_zh + 鍵盤 Enter 繼續 |
 | mastery-adaptive 題目 | ✅ 完成 | buildRuntimeQuestions 按 mastery_score 升序，blind/weak 優先 |
 | Today Next Action | ✅ 完成 | review/retake/start 各對應主要行動按鈕 |
@@ -367,18 +386,21 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 | Review Mode | ✅ 完成 | dedicated queue runtime，mode:"review_queue"，fixed/still_weak/repeated_error |
 | 錯誤複習佇列 | ✅ 完整 | 佇列建立、Review Mode 執行、grammar 面板 |
 | Grammar Link 面板 | ✅ 完成 | Error Review 中可折疊語法說明（14 條記錄） |
-| vocab_items 富格式 | ⚠️ 資料已填入，UI 未呈現 | V3 240 items chinese+example 已填入（v7.0）；V1/V2 原有內容；UI 不顯示（L-004 待做） |
+| vocab_items 富格式 | ⚠️ 資料已填入，UI 未呈現 | 494 items 全部有 chinese + example；UI 不顯示（L-004 待做） |
 | Question Bank | ✅ 完整 | 搜尋 / Load More 分頁 / 編輯 / Seed 匯出 |
 | Mastery 視圖 | ✅ 含篩選 | mastery_level 下拉篩選，含各 level 計數 |
 | 匯出功能 | ✅ 完整 | export 時全量取 attempts；review_effectiveness.csv；個別檔案 + Seed JSON |
 | Service Worker | ✅ 完成 | stale-while-revalidate（toeic-vorb-v4） |
-| Playwright 測試 | ✅ 通過 | 3/3 passing（lesson-flow + export-flow + V2/V3 seed 驗證） |
-| Data validation | ✅ 通過 | 0 duplicate, 0 missing field, 0 warning |
-| V0 內容 | ✅ 完成 | 10 課 / 240 題，診斷用 |
-| V1 內容 | ✅ 完成 | 60 課 / 1,728 題，Word Family；speed_drill error_code 已修正（30 題）；2 題 MC 選項均衡化 |
-| V2 內容 | ✅ 品質通過 | 50 課 / 1,200 題；定義嵌入 0%（原 83.3%）；殘留：Email: 型 ×4 小重複（無害） |
-| V3 內容 | ✅ 品質通過 | 60 課 / 1,440 題；跨課重複 0 個 >10×（原 5 個 ×20）；300 個唯一模板；240 items chinese+example 已填入 |
-| V4–V6 內容 | ❌ 規劃中 | 不得在 V2/V3 品質修正前開始 |
+| Playwright 測試 | ✅ 通過 | **4/4 passing**（lesson-flow + review-mode + export-flow + V2/V3 seed 驗證） |
+| 全題庫品質審核 | ✅ 通過 | `node scripts/audit-quality-full.js` → `✅ PASSED（0 issues）` |
+| 重複題目 | ✅ 清零 | **0 重複**（原 826；全部替換） |
+| 出題規格 | ✅ 文件化 | `docs/question-creation-spec.md` v1.0（含 AI prompt 模板） |
+| CLAUDE.md | ✅ 建立 | 專案根目錄 AI 上下文文件，自動載入 |
+| V0 內容 | ✅ 完成 | **1 課 / 31 題**（原 10 課 240 題，整合為單一診斷課） |
+| V1 內容 | ✅ 品質通過 | 60 課 / 1,728 題；826 重複 stem 全清；speed_drill error_code 修正 |
+| V2 內容 | ✅ 品質通過 | 60 課 / 1,200 題；200 題 type 修正；14 個 article giveaway 修正；定義嵌入 0% |
+| V3 內容 | ✅ 品質通過 | 72 課 / 1,440 題；跨課重複 ×5 max；240 items chinese+example 已填入 |
+| V4–V6 內容 | ❌ 規劃中 | 現在品質已達標，可以規劃 V4 |
 | Stage Seal 邏輯 | ⚠️ 未嚴格 | 進度可見但 seal 條件未強制執行 |
 
 ---
@@ -386,13 +408,19 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 ## 6. 建議執行順序（剩餘工作）
 
 ```
-✅ 第一輪（v6.0–v7.0 已完成）：內容品質修正
+✅ 第一輪（v6.0–v8.0 已完成）：內容品質修正
   Q-001a  audit-option-length.js（量化）               → 完成
   Q-001b  V2 定義嵌入題幹改寫（1,000 → 0 題）          → 完成
   Q-002a  V0 選項長度均衡（75% → 48.8%）               → 完成
   Q-001c  V3 跨課模板重複消除（×20 → ×5）              → 完成
           V1 選項偏差確認為假象，關閉                   → 完成
   Q-003   V3 vocab_items 空殼填入（240 items）          → 完成（v7.0）
+  Q-004   V0 整合（240 → 31 題，10 → 1 課）            → 完成（v8.0）
+  Q-005   V1 826 重複 stem 全清                         → 完成（v8.0）
+  Q-006   V2 200 題 type 修正                           → 完成（v8.0）
+  Q-007   V2 14 個 article giveaway 修正               → 完成（v8.0）
+          audit-quality-full.js → ✅ PASSED             → 完成（v8.0）
+          docs/question-creation-spec.md 建立           → 完成（v8.0）
 
 第二輪（目前最高優先）：教學深度提升
   L-004   vocab_items 富格式呈現（chinese + variants + example）← 資料已就緒，優先
@@ -404,7 +432,7 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
   F-002   V0 診斷 → 學習建議
   F-003   掌握度公式 fixture 測試
 
-長期（V2/V3 品質已通過，可開始規劃）：
+長期（品質已全面通過，可開始規劃）：
   V4 Formal Phrase → V5 False Friends → V6 Integrated Review
 ```
 
@@ -412,57 +440,59 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 
 ## 7. 給下一位 AI 的說明
 
-本計劃書由 Claude Sonnet 4.6 於 2026-05-17 更新為 v7.0。
+本計劃書由 Claude Sonnet 4.6 於 2026-05-17 更新為 v8.0。
 
-**當前最高優先行動：L-004 vocab_items 富格式呈現（資料已就緒）**
+**當前最高優先行動：L-004 vocab_items 富格式呈現（資料已就緒，UI 待做）**
 
-所有內容品質 P0 問題已全部解決（v6.0–v7.0）。V0/V1/V2/V3 題目與詞彙項目現已通過品質審查，可進行學習者測試。
+所有內容品質 P0 問題已全部解決（v6.0–v8.0）。V0/V1/V2/V3 共 4,399 題，0 重複，品質審核 ✅ PASSED。可進行學習者測試，亦可開始 V4 規劃。
 
-### 已完成的內容修正摘要（v6.0–v7.0）
+### 完整修正歷史摘要（v6.0–v8.0）
 
 | 問題 | 修正前 | 修正後 | 腳本 |
 |------|--------|--------|------|
-| V2 定義嵌入題幹 | 1,000/1,200（83%） | **0/1,200（0%）** | `scripts/rewrite-v2-definitions.js` |
-| V0 meaning_choice 選項偏差 | 100%（30/30） | **40%（12/30）** | `scripts/rewrite-v0-option-bias.js` |
-| V0 false_friend 選項偏差 | 100%（20/20） | **0%（0/20）** | `scripts/rewrite-v0-option-bias.js` |
-| V3 跨課模板重複 | ×20（5 個模板） | **×5 max（0 個 >10×）** | `scripts/rewrite-v3-stem-topics.js` |
-| V1 speed_drill error_code 錯誤 | 30 題 WORD_FAMILY_POS | **0 題（全改為 TIME_PRESSURE）** | `scripts/fix-v1a-quality.js` |
-| V1 meaning_choice 選項長度偏差 | 2 題 edge +32/+37 | **edge ≤3（v1_a_12/16_q_012）** | `scripts/fix-v1a-quality.js` |
-| V3 vocab_items 空殼 chinese/example | 240 items 全空（"固定搭配：[英文]"） | **240 items 填入真實繁中釋義+例句** | `scripts/fix-v3-item-quality.js` |
+| V2 定義嵌入題幹 | 1,000/1,200（83%） | **0/1,200（0%）** | `rewrite-v2-definitions.js` |
+| V0 meaning_choice 選項偏差 | 100%（30/30） | **40%（12/30）** | `rewrite-v0-option-bias.js` |
+| V0 false_friend 選項偏差 | 100%（20/20） | **0%（0/20）** | `rewrite-v0-option-bias.js` |
+| V3 跨課模板重複 | ×20（5 個模板） | **×5 max（0 個 >10×）** | `rewrite-v3-stem-topics.js` |
+| V1 speed_drill error_code | 30 題 WORD_FAMILY_POS | **0 題（TIME_PRESSURE）** | `fix-v1a-quality.js` |
+| V3 vocab_items 空殼 | 240 items 全空 | **240 items 真實繁中釋義+例句** | `fix-v3-item-quality.js` |
+| V0 整合 | 10 課 / 240 題 | **1 課 / 31 題（0 重複）** | `consolidate-v0.js` |
+| V1 重複 stem | 826 個 | **0 個** | `fix-v1-duplicates.js` + `fix-v1-remaining.js` |
+| V2 type 錯誤 | 200 題 meaning_choice | **200 題 scene_vocabulary** | 直接修正 questions_v2*.json |
+| V2 article giveaway | 14 個 "an ______" 洩題 | **14 個句子重組** | `fix-audit-bugs.js` |
+| V0 blank 格式 | 4 題 `____` | **`______`** | `fix-audit-bugs.js` |
+| 全題庫品質 | 無系統化審核 | **`audit-quality-full.js` ✅ 0 issues** | `audit-quality-full.js` |
 
 ### 下一步：L-004 vocab_items 富格式呈現
 
-`vocab_items.json` 的所有 494 個項目（V1: 42個、V2: 212個、V3: 240個）均已有真實 chinese + example 內容。可以直接在 UI 中呈現。
+494 個詞彙項目（V1: 42、V2: 212、V3: 240）均已有 `chinese` + `example`。
 
 **建議實作方式：**
-- Error Review 卡片（`js/views/mistakes.js`）：錯誤題目下方加入對應 vocab_item 的 chinese + example
-- Mastery 視圖（`js/views/mastery.js`）：詞彙卡片展開後顯示 chinese + variants + example
-- 資料路徑：`state.vocabItems`（已在 `loadData()` 時載入 IDB）→ 按 `target_item_id` 查找
+- `js/views/mistakes.js`：錯誤題目下方加入對應 vocab_item 的 `chinese` + `example`
+- `js/views/mastery.js`：詞彙卡片展開後顯示 `chinese` + `variants` + `example`
+- 資料路徑：`state.vocabItems`（已在 `loadData()` 時載入）→ 按 `target_item_id` 查找
 
-**複雜度：** 小-中（UI 修改，無需資料變更）  
-**前置條件：** ✅ 已完成（V3 items 資料已填入 v7.0）
+**複雜度：** 小-中（純 UI 修改，無資料變更，無需 bump seed）
 
 ### 次要下一步：C-001 跨課干擾題
 
-每課的 24 題全部測同一課的 4 個詞彙。目前 review_question 四題分別對應四個目標詞，干擾項來自同一課的其他詞彙（同課競爭）。沒有舊課詞彙的跨課干擾。
+每課的 review_question 干擾項目前來自同課（同課競爭）。缺乏跨課舊詞彙干擾。
 
-**建議實作方式：**
-- 每課的 4 個 review_question 中，至少 1-2 個的干擾項來自前 3-5 課的詞彙
-- 或者每 5 課後插入一堂「mixed review」課，20 題從過去 5 課各抽 4 題
-
-**涉及檔案：** `data/vocab/questions_v2*.json`、`questions_v3*.json`、`curriculum.json`  
-**複雜度：** 需要讀取 curriculum 的課序關係，從前課 item_ids 中選 distractor
+**建議：** 每課 4 個 review_question 中，至少 1-2 個干擾項來自前 3-5 課詞彙。  
+**涉及：** `data/vocab/questions_v2*.json`、`questions_v3*.json`、`curriculum.json`（需 bump seed）
 
 ---
 
-**開發注意事項：**
-- `vocab-scoring.js` 和 `vocab-db.js` 是 IIFE，掛載在 `window.VocabScoring` / `window.VocabDB`；`views/` 是 ES Module。不要混用。
-- `state.showFeedback` 控制反饋面板顯示；`advanceAfterFeedback()` 負責推進 `current_index`。
-- `buildRuntimeQuestions()` 按 `mastery_score` 升序排列 core/review，盲點詞彙優先。
-- Review Mode 使用 `REVIEW_LESSON_ID = "REVIEW_QUEUE"`，limit 20 題，`mode: "review_queue"` 寫入 attempts。
-- Playwright 測試在 `tests/`，改內容或 seed 後需重新驗證（測試會檢查 seed 版本）。
-- Question Bank 有 `state.bankPage` 控制分頁；`setBankFilter()` 時自動重置為第 0 頁。
-- `state.grammarLinks` 在 init() 時從 `data/vocab/grammar_links.json` 載入。
-- SEED_VERSION 更改後，所有使用者下次開啟時重新 seed（question 內容欄位由 seed 覆蓋，進度欄位保留）。需同步更新 `js/vocab-db.js`、`data/vocab/curriculum.json`、`tests/helpers/seed-idb.ts` 三處。
-- **種子版本目前：** `toeic_vocab_tracker_v3_items_2026_05_17`
+**開發注意事項（v8.0 更新）：**
+- `vocab-scoring.js` 和 `vocab-db.js` 是 IIFE → `window.VocabScoring` / `window.VocabDB`；`views/` 是 ES Module。不要混用。
+- `state.showFeedback` 控制反饋面板；`advanceAfterFeedback()` 推進 `current_index`。
+- `buildRuntimeQuestions()` 按 `mastery_score` 升序，blind/weak 優先。
+- Review Mode：`REVIEW_LESSON_ID = "REVIEW_QUEUE"`，limit 20，`mode: "review_queue"`。
+- **seed 版本同步規則（最重要）：** 任何題目/課程資料異動都必須同步修改以下三個檔案：
+  - `js/vocab-db.js` → `const SEED_VERSION`
+  - `data/vocab/curriculum.json` → `"seed_version"`
+  - `tests/helpers/seed-idb.ts` → `const APP_SEED_VERSION`
+- **種子版本目前：** `toeic_vocab_tracker_quality_fixed_2026_05_17`
+- 內容變更後必須執行：`node scripts/audit-quality-full.js`（0 issues）+ `npx playwright test`（4/4）
+- 出題規格全文：`docs/question-creation-spec.md`（含 AI prompt 模板）
 - **不屬於本程式範圍：** `C:\Users\Keith\toeic-app`（Grammar / PoS App），絕對不要修改。
