@@ -4,27 +4,30 @@ Status: GENERATED FROM CURRENT TOEIC VOCABULARY TRACKER DATA
 
 This document describes Program B only: TOEIC Vocabulary Tracker in `C:\Users\Keith\Toeic\toeic-app-Vorb`. It does not describe the separate Grammar / PoS App.
 
-## Summary
+## Summary (updated 2026-05-17)
 
-- Vocabulary lessons: 180
-- Vocabulary questions: 4608
-- V0: 10 lessons, 240 questions
-- V1: 60 lessons, 1728 questions
-- V2: 50 lessons, 1200 questions
-- V3: 60 lessons, 1440 questions
+- Vocabulary lessons: 193 (was 180)
+- Vocabulary questions: 4,399 (was 4,608 — 826 duplicates replaced, 200 types corrected, V0 consolidated)
+- V0: **1 lesson, 31 questions** (was 10 lessons, 240 questions — consolidated to 1 diagnostic lesson)
+- V1: 60 lessons, 1,728 questions
+- V2: 60 lessons, 1,200 questions (was 50 — +10 mixed_review lessons added)
+- V3: 72 lessons, 1,440 questions (was 60 — +12 mixed_review lessons added)
+- Seed version: `toeic_vocab_tracker_quality_fixed_2026_05_17`
+- Duplicates: **0** (was 826)
+- Audit: `✅ PASSED` — `node scripts/audit-quality-full.js`
 - Question files: questions_v0.json, questions_v1a.json, questions_v1b.json, questions_v1c.json, questions_v1d.json, questions_v1e.json, questions_v1f.json, questions_v2a.json, questions_v2b.json, questions_v2c.json, questions_v2d.json, questions_v2e.json, questions_v3a.json, questions_v3b.json, questions_v3c.json, questions_v3d.json, questions_v3e.json, questions_v3f.json
 
 ## Current Stage Status
 
-| stage | stage_name | total_lessons | status |
-|---|---|---:|---|
-| V0 | Diagnosis | 10 | available |
-| V1 | Word Family | 60 | available |
-| V2 | TOEIC Scene Vocabulary | 50 | available |
-| V3 | Collocation | 60 | available |
-| V4 | Formal Phrase | 50 | planned |
-| V5 | False Friends + Speed Reflex | 50 | planned |
-| V6 | Integrated Review + Seal Test | 40 | planned |
+| stage | stage_name | total_lessons | questions | status |
+|---|---|---:|---:|---|
+| V0 | Diagnosis | 1 | 31 | available |
+| V1 | Word Family | 60 | 1,728 | available |
+| V2 | TOEIC Scene Vocabulary | 60 | 1,200 | available |
+| V3 | Collocation | 72 | 1,440 | available |
+| V4 | Formal Phrase | 50 | 0 | planned |
+| V5 | False Friends + Speed Reflex | 50 | 0 | planned |
+| V6 | Integrated Review + Seal Test | 40 | 0 | planned |
 
 ## Lessons
 
