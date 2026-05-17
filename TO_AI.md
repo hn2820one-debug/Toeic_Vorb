@@ -343,11 +343,11 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 
 ### 優先級 P1（目前最高優先）：學習體驗核心改善
 
-| 編號 | 項目 | 涉及檔案 | 工作量 |
-|------|------|----------|--------|
-| C-001 | **V2/V3 跨課干擾題** — 每課 review_question 加入 1-2 個舊課詞彙選項；或每 5 課插入跨課混合課 | `data/vocab/questions_v2*.json`, `questions_v3*.json`, `curriculum.json` | 大 |
-| L-004 | **vocab_items 富格式資料呈現** — Error Review 卡片加入 chinese 釋義 + variants + example | `js/views/mistakes.js`, `js/views/mastery.js` | 中 |
-| L-006 | **Due for Review 計數** — Today 視圖顯示到期複習項目數量 | `js/views/today.js` | 小 |
+| 編號 | 項目 | 涉及檔案 | 工作量 | 前置條件 |
+|------|------|----------|--------|----------|
+| L-004 | **vocab_items 富格式資料呈現** — Error Review 卡片加入 chinese 釋義 + variants + example；Mastery 視圖詞彙卡片展開後顯示完整內容 | `js/views/mistakes.js`, `js/views/mastery.js` | 中 | ✅ 資料已就緒（494 items 均有內容） |
+| L-006 | **Due for Review 計數** — Today 視圖顯示到期複習項目數量；`next_review_date` 已計算存 IDB，僅缺 UI 顯示 | `js/views/today.js` | 小 | ✅ 無前置條件 |
+| C-001 | **V2/V3 跨課干擾題** — 每課 review_question 加入 1-2 個舊課詞彙干擾項；需讀取課序關係、從前課 item_ids 選 distractor | `data/vocab/questions_v2*.json`, `questions_v3*.json`, `curriculum.json` | 大 | 需 bump seed + 重跑 audit |
 
 ---
 
@@ -355,21 +355,23 @@ V1 四個選項為同一詞根的四種詞形（如 accurate/accurately/accuracy
 
 | 編號 | 項目 | 涉及檔案 | 工作量 |
 |------|------|----------|--------|
-| F-001 | **Stage Seal 嚴格模式** — 可選擇性開啟，seal 條件完整定義 | `views/settings.js`, `views/lesson.js` | 大 |
-| F-002 | **V0 診斷 → 學習建議** — V0 結束後輸出弱點分類和建議起點 | `views/lesson.js`, `views/today.js` | 中 |
-| F-003 | **掌握度公式 fixture 測試** | `scripts/test-scoring.js` | 中 |
+| F-001 | **Stage Seal 嚴格模式** — 可選擇性開啟，seal 條件完整定義（正確率門檻 + 重複錯誤率 + seal test） | `js/views/settings.js`, `js/views/lesson.js` | 大 |
+| F-002 | **V0 診斷 → 學習建議** — V0 結束後輸出弱點分類和建議起點（對應 V1/V2/V3 入口課） | `js/views/lesson.js`, `js/views/today.js` | 中 |
+| F-003 | **掌握度公式 fixture 測試** — 為 `calculateMasteryScore()` 撰寫 Node.js 邊界測試集 | `scripts/test-scoring.js` | 中 |
 
 ---
 
-### 優先級 P3：未來內容擴展（僅在 Q-001/Q-002 修完後開始）
+### 優先級 P3：未來內容擴展 ✅ 現在可以開始規劃
+
+> **前置條件已全部完成（v8.0）：** Q-001/Q-002 修正完畢、`audit-quality-full.js` ✅ PASSED、`docs/question-creation-spec.md` 出題規格已制定。V4 可以開始。
 
 | 編號 | 項目 | 工作量 |
 |------|------|--------|
-| P3-1 | V4 Formal Phrase（emails、notices、contracts、policy phrases）| 極大 |
-| P3-2 | V5 False Friends + Speed（高風險混淆詞 + 時間壓力練習）| 極大 |
-| P3-3 | V6 Integrated Review + Seal Test（混合複習、重複錯誤收束、stage sealing）| 極大 |
+| P3-1 | V4 Formal Phrase（emails、notices、contracts、policy phrases；50 課）| 極大 |
+| P3-2 | V5 False Friends + Speed（高風險混淆詞 + 時間壓力練習；50 課）| 極大 |
+| P3-3 | V6 Integrated Review + Seal Test（混合複習、重複錯誤收束、stage sealing；40 課）| 極大 |
 
-**注意：** V4 不得沿用 V2/V3 的 generator 模板風格。必須在 content quality lint 規則到位後才開始。
+**V4 開始前必讀：** `docs/question-creation-spec.md`（含 AI prompt 模板、§8 已知違規歷史）。新題生成後必須跑 `audit-quality-full.js` → 0 issues 才可匯入。
 
 ---
 
