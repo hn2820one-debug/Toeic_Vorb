@@ -9,6 +9,83 @@ import {
   currentLesson,
   topCounts
 } from "../state.js";
+import { buildStageSealReadiness } from "./today.js";
+
+// Maps flat file names to the subdirectory they belong to when saving as a folder.
+// Files not listed here are saved at the root of the export folder.
+const FILE_SUBDIRS = {
+  "report.md": "summary",
+  "diagnostic_recommendation.json": "summary",
+  "stage_progress.json": "summary",
+  "content_quality_summary.json": "summary",
+  "attempts.csv": "data",
+  "attempts.json": "data",
+  "attempts.jsonl": "data",
+  "sessions.csv": "data",
+  "sessions.json": "data",
+  "item_mastery.csv": "data",
+  "mastery.json": "data",
+  "review_queue.json": "data",
+  "error_logs.json": "data",
+  "error_summary.json": "analytics",
+  "error_summary.csv": "analytics",
+  "speed_summary.json": "analytics",
+  "review_effectiveness.json": "analytics",
+  "review_effectiveness.csv": "analytics",
+  "stage_seal_readiness.json": "analytics"
+};
+
+// Controls which files appear in each UI category group.
+const EXPORT_CATEGORIES = [
+  {
+    key: "summary",
+    label: "Summary / Reports",
+    files: [
+      "report.md",
+      "summary.md",
+      "lesson_recommendations.md",
+      "diagnostic_recommendation.json",
+      "stage_progress.json",
+      "content_quality_summary.json"
+    ]
+  },
+  {
+    key: "data",
+    label: "Data",
+    files: [
+      "attempts.csv",
+      "attempts.json",
+      "attempts.jsonl",
+      "sessions.csv",
+      "sessions.json",
+      "item_mastery.csv",
+      "mastery.json",
+      "review_queue.json",
+      "error_logs.json"
+    ]
+  },
+  {
+    key: "analytics",
+    label: "Analytics",
+    files: [
+      "error_summary.json",
+      "error_summary.csv",
+      "speed_summary.json",
+      "review_effectiveness.json",
+      "review_effectiveness.csv",
+      "stage_seal_readiness.json"
+    ]
+  },
+  {
+    key: "package",
+    label: "Full Package",
+    files: [
+      "question_bank_snapshot.json",
+      "raw_events.jsonl"
+    ]
+    // toeic_vocab_export_DATE.json is added dynamically in renderExport()
+  }
+];
 
 const exportRuntime = {
   render: null
@@ -26,7 +103,41 @@ function callRender() {
 }
 
 export function renderExport() {
+  const date = window.VocabScoring.localDate();
   const files = buildExportFiles();
+  const fileNames = Object.keys(files);
+  const dateKey = `toeic_vocab_export_${date}.json`;
+  const hasDirectoryPicker = typeof window.showDirectoryPicker === "function";
+  const modeNote = hasDirectoryPicker
+    ? `Folder save available — package will be organized into <strong>summary/</strong>, <strong>data/</strong>, and <strong>analytics/</strong> subdirectories when you click Export.`
+    : `Individual download mode — ${fileNames.length} files will download separately. Zip packaging is not available in this static build.`;
+
+  const warnings = [];
+  if (!state.attempts.length) warnings.push("No attempt data recorded yet — analytics files will show empty values.");
+  if (!state.sessions.length) warnings.push("No session data recorded yet — session files will be empty.");
+  if (!state.reviewQueue.length) warnings.push("Review queue is empty — review_queue.json will be an empty array.");
+
+  const warningHtml = warnings.length
+    ? `<div class="export-warnings">${warnings.map((w) => `<p class="muted-note">⚠ ${html(w)}</p>`).join("")}</div>`
+    : "";
+
+  // Build category sections for the inventory, injecting the dynamic date-keyed file into "Full Package"
+  const categoryHtml = EXPORT_CATEGORIES.map((cat) => {
+    const catFiles = cat.key === "package"
+      ? [...cat.files, dateKey]
+      : cat.files;
+    const visibleFiles = catFiles.filter((name) => fileNames.includes(name));
+    if (!visibleFiles.length) return "";
+    return `
+      <div class="export-category">
+        <h4>${html(cat.label)}</h4>
+        <div class="export-category-files">
+          ${visibleFiles.map((name) => `<button class="button secondary small" type="button" onclick="VocabTracker.downloadExportFile('${html(name)}')">${html(name)}</button>`).join("")}
+        </div>
+      </div>
+    `;
+  }).join("");
+
   return `
     <section class="tracker-panel">
       <h3>Export Dashboard</h3>
@@ -36,11 +147,25 @@ export function renderExport() {
         <article class="tracker-stat"><span>Items</span><strong>${state.vocabItems.length}</strong><small>mastery rows</small></article>
         <article class="tracker-stat"><span>Questions</span><strong>${state.questions.length}</strong><small>bank snapshot</small></article>
       </div>
+      <p class="export-mode-note">${modeNote}</p>
       <div class="tracker-actions">
         <button class="button primary" type="button" onclick="VocabTracker.exportPackage()">Export for ChatGPT Analysis</button>
-        ${Object.keys(files).map((name) => `<button class="button secondary" type="button" onclick="VocabTracker.downloadExportFile('${html(name)}')">${html(name)}</button>`).join("")}
       </div>
     </section>
+
+    <section class="tracker-panel">
+      <div class="panel-head-row">
+        <div>
+          <h3>Export Inventory — ${fileNames.length} files</h3>
+          <p class="muted-note">Click any file to download it individually.</p>
+        </div>
+      </div>
+      ${warningHtml}
+      <div class="export-inventory" data-testid="export-file-inventory">
+        ${categoryHtml}
+      </div>
+    </section>
+
     <section class="tracker-panel">
       <h3>summary.md Preview</h3>
       <pre class="export-preview">${html(files["summary.md"])}</pre>
@@ -348,7 +473,7 @@ function buildContentQualitySummary() {
     quality_warnings: {
       repeated_v2_v3_templates_above_24: repeatedTemplates.length,
       short_v3_part6_context_questions: state.questions.filter((question) => question.stage === "V3" && question.type === "part6_context_choice" && (wordCount(question.question_text) < 24 || sentenceCount(question.question_text) < 2)).length,
-      translation_heavy_v2_questions: state.questions.filter((question) => question.stage === "V2" && /[\u3400-\u9fff]/.test(question.question_text || "")).length,
+      translation_heavy_v2_questions: state.questions.filter((question) => question.stage === "V2" && /[㐀-鿿]/.test(question.question_text || "")).length,
       target_coverage_issues: targetCoverageIssues.length,
       missing_old_item_interference_lessons: missingOldItemInterference.length,
       speed_drill_non_time_pressure: state.questions.filter((question) => question.type === "speed_drill" && question.default_error_code !== "TIME_PRESSURE").length
@@ -414,10 +539,183 @@ ${stageLines}
 `;
 }
 
+function buildDiagnosticRecommendationForExport() {
+  const v0Attempts = state.attempts.filter((attempt) => attempt.stage === "V0");
+  if (!v0Attempts.length) return {
+    status: "not_available",
+    message: "No V0 diagnostic attempts found."
+  };
+  const groups = {};
+  v0Attempts.forEach((attempt) => {
+    const type = attempt.question_type || "unknown";
+    if (!groups[type]) groups[type] = [];
+    groups[type].push(attempt);
+  });
+  const rows = Object.entries(groups).map(([type, attempts]) => ({
+    question_type: type,
+    attempts: attempts.length,
+    accuracy: average(attempts.map((attempt) => attempt.is_correct ? 1 : 0)),
+    avg_response_time_seconds: average(attempts.map((attempt) => attempt.response_time_seconds))
+  })).sort((a, b) => Number(a.accuracy) - Number(b.accuracy));
+  const overallAccuracy = average(v0Attempts.map((attempt) => attempt.is_correct ? 1 : 0));
+  const weakest = rows[0];
+  const recommendedStage = overallAccuracy < 0.6
+    ? "V1"
+    : ["meaning_choice", "scene_vocabulary"].includes(weakest?.question_type) ? "V2"
+    : ["collocation", "part6_context_choice"].includes(weakest?.question_type) ? "V3"
+    : ["formal_phrase", "false_friend"].includes(weakest?.question_type) ? "V4"
+    : "V1";
+  return {
+    status: "available",
+    overall_accuracy: overallAccuracy,
+    recommended_stage: recommendedStage,
+    weakest_question_type: weakest?.question_type || "",
+    rows
+  };
+}
+
+// --- New analytics builders ---
+
+function buildErrorSummaryJson() {
+  const attempts = state.attempts;
+  const wrongAttempts = attempts.filter((attempt) => !attempt.is_correct);
+
+  const errorCodeCounts = {};
+  const defaultErrorCodeCounts = {};
+  wrongAttempts.forEach((attempt) => {
+    if (attempt.error_code) errorCodeCounts[attempt.error_code] = (errorCodeCounts[attempt.error_code] || 0) + 1;
+    if (attempt.default_error_code) defaultErrorCodeCounts[attempt.default_error_code] = (defaultErrorCodeCounts[attempt.default_error_code] || 0) + 1;
+  });
+
+  const itemWrongCounts = {};
+  wrongAttempts.forEach((attempt) => {
+    if (attempt.target_item_id) itemWrongCounts[attempt.target_item_id] = (itemWrongCounts[attempt.target_item_id] || 0) + 1;
+  });
+  const topWeakItems = Object.entries(itemWrongCounts)
+    .sort((a, b) => b[1] - a[1]).slice(0, 10)
+    .map(([item_id, wrong_count]) => {
+      const item = state.vocabItems.find((i) => i.item_id === item_id);
+      return { item_id, base_word: item?.base_word || "", wrong_count };
+    });
+
+  const lessonWrongCounts = {};
+  wrongAttempts.forEach((attempt) => {
+    if (attempt.lesson_id) lessonWrongCounts[attempt.lesson_id] = (lessonWrongCounts[attempt.lesson_id] || 0) + 1;
+  });
+  const topWeakLessons = Object.entries(lessonWrongCounts)
+    .sort((a, b) => b[1] - a[1]).slice(0, 10)
+    .map(([lesson_id, wrong_count]) => ({ lesson_id, wrong_count }));
+
+  const stageWrongCounts = {};
+  wrongAttempts.forEach((attempt) => {
+    if (attempt.stage) stageWrongCounts[attempt.stage] = (stageWrongCounts[attempt.stage] || 0) + 1;
+  });
+  const topWeakStages = Object.entries(stageWrongCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([stage, wrong_count]) => ({ stage, wrong_count }));
+
+  return {
+    generated_at: window.VocabScoring.localIso(),
+    total_attempts: attempts.length,
+    total_incorrect: wrongAttempts.length,
+    incorrect_rate: attempts.length ? Number((wrongAttempts.length / attempts.length).toFixed(4)) : 0,
+    error_code_counts: errorCodeCounts,
+    default_error_code_counts: defaultErrorCodeCounts,
+    repeated_error_count: attempts.filter((attempt) => attempt.is_repeated_error).length,
+    top_weak_vocab_items: topWeakItems,
+    top_weak_lessons: topWeakLessons,
+    top_weak_stages: topWeakStages
+  };
+}
+
+function buildSpeedSummary() {
+  const attempts = state.attempts;
+  const timed = attempts.filter((attempt) => Number.isFinite(attempt.response_time_seconds));
+  const dataAvailable = timed.length > 0;
+
+  let avgTime = null;
+  let medianTime = null;
+  if (dataAvailable) {
+    avgTime = average(timed.map((attempt) => attempt.response_time_seconds));
+    const sorted = timed.map((attempt) => attempt.response_time_seconds).sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+    medianTime = sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+  }
+
+  const speedBuckets = { fast_correct: 0, slow_correct: 0, fast_wrong: 0, slow_wrong: 0 };
+  attempts.forEach((attempt) => {
+    if (speedBuckets[attempt.speed_bucket] !== undefined) speedBuckets[attempt.speed_bucket] += 1;
+  });
+
+  const itemTimes = {};
+  timed.forEach((attempt) => {
+    if (!attempt.target_item_id) return;
+    if (!itemTimes[attempt.target_item_id]) itemTimes[attempt.target_item_id] = [];
+    itemTimes[attempt.target_item_id].push(attempt.response_time_seconds);
+  });
+  const slowestItems = Object.entries(itemTimes)
+    .filter(([, times]) => times.length >= 2)
+    .map(([item_id, times]) => {
+      const item = state.vocabItems.find((i) => i.item_id === item_id);
+      return {
+        item_id,
+        base_word: item?.base_word || "",
+        avg_seconds: Number(average(times).toFixed(2)),
+        attempt_count: times.length
+      };
+    })
+    .sort((a, b) => b.avg_seconds - a.avg_seconds)
+    .slice(0, 10);
+
+  const lessonTimes = {};
+  timed.forEach((attempt) => {
+    if (!attempt.lesson_id) return;
+    if (!lessonTimes[attempt.lesson_id]) lessonTimes[attempt.lesson_id] = [];
+    lessonTimes[attempt.lesson_id].push(attempt.response_time_seconds);
+  });
+  const slowestLessons = Object.entries(lessonTimes)
+    .filter(([, times]) => times.length >= 2)
+    .map(([lesson_id, times]) => ({
+      lesson_id,
+      avg_seconds: Number(average(times).toFixed(2)),
+      attempt_count: times.length
+    }))
+    .sort((a, b) => b.avg_seconds - a.avg_seconds)
+    .slice(0, 10);
+
+  const overTargetCount = timed.filter((attempt) => {
+    const target = window.VocabScoring.targetTime(attempt.question_type);
+    return target && attempt.response_time_seconds > target * 2;
+  }).length;
+
+  return {
+    generated_at: window.VocabScoring.localIso(),
+    data_available: dataAvailable,
+    total_timed_attempts: timed.length,
+    avg_response_time_seconds: avgTime !== null ? Number(avgTime.toFixed(2)) : null,
+    median_response_time_seconds: medianTime !== null ? Number(medianTime.toFixed(2)) : null,
+    speed_bucket_distribution: speedBuckets,
+    over_target_time_count: overTargetCount,
+    timeout_count: "not_available",
+    slowest_items: slowestItems,
+    slowest_lessons: slowestLessons
+  };
+}
+
+function buildStageSealReadinessExport() {
+  return {
+    generated_at: window.VocabScoring.localIso(),
+    stages: (state.curriculum?.stages || []).map((stage) => buildStageSealReadiness(stage))
+  };
+}
+
+// --- Core export builder ---
+
 export function buildExportFiles() {
   const date = window.VocabScoring.localDate();
+
   const attemptsRows = [[
-    "attempt_id", "timestamp", "user_id", "course_id", "stage", "lesson_id", "session_id", "step", "question_id", "question_type", "target_item_id", "grammar_link_id", "correct_answer", "user_answer", "is_correct", "response_time_seconds", "speed_bucket", "error_code", "default_error_code", "is_repeated_error", "review_priority", "mode", "review_filter", "review_ids"
+    "attempt_id", "timestamp", "user_id", "course_id", "stage", "lesson_id", "session_id", "step", "question_id", "question_type", "target_item_id", "grammar_link_id", "correct_answer", "user_answer", "is_correct", "response_time_seconds", "speed_bucket", "error_code", "default_error_code", "is_repeated_error", "review_priority", "mode", "review_filter", "review_ids", "lesson_runtime", "timeout"
   ]];
   state.attempts.forEach((attempt) => {
     attemptsRows.push([
@@ -444,7 +742,9 @@ export function buildExportFiles() {
       exportValue(attempt.review_priority),
       exportValue(attempt.mode),
       exportValue(attempt.review_filter),
-      (attempt.review_ids || []).join("|")
+      (attempt.review_ids || []).join("|"),
+      exportValue(attempt.lesson_runtime || "normal"),
+      exportValue(attempt.timeout || false)
     ]);
   });
 
@@ -515,6 +815,11 @@ export function buildExportFiles() {
 
   const stageProgress = buildStageProgress();
   const contentQualitySummary = buildContentQualitySummary();
+  const diagnosticRecommendation = buildDiagnosticRecommendationForExport();
+  const errorSummaryJson = buildErrorSummaryJson();
+  const speedSummary = buildSpeedSummary();
+  const stageSealReadiness = buildStageSealReadinessExport();
+
   const rawEvents = [
     ...state.sessions.map((record) => ({ event_type: "session", ...record })),
     ...state.attempts.map((record) => ({ event_type: "attempt", ...record })),
@@ -522,16 +827,61 @@ export function buildExportFiles() {
     ...state.reviewQueue.map((record) => ({ event_type: "review_queue", ...record }))
   ].map((record) => JSON.stringify(record)).join("\n");
 
+  const summaryMd = buildSummaryMarkdown(stageProgress);
+
   return {
-    "summary.md": buildSummaryMarkdown(stageProgress),
+    // --- Summary / Reports ---
+    "summary.md": summaryMd,
+    "report.md": summaryMd,
     "lesson_recommendations.md": buildLessonRecommendationsMarkdown(stageProgress),
-    "sessions.csv": `\ufeff${window.VocabScoring.toCsv(sessionsRows)}`,
-    "attempts.csv": `\ufeff${window.VocabScoring.toCsv(attemptsRows)}`,
-    "item_mastery.csv": `\ufeff${window.VocabScoring.toCsv(masteryRows)}`,
-    "error_summary.csv": `\ufeff${window.VocabScoring.toCsv(errorSummaryRows)}`,
-    "review_effectiveness.csv": `\ufeff${window.VocabScoring.toCsv(reviewEffectivenessRows)}`,
-    "content_quality_summary.json": JSON.stringify(contentQualitySummary, null, 2),
+    "diagnostic_recommendation.json": JSON.stringify(diagnosticRecommendation, null, 2),
     "stage_progress.json": JSON.stringify(stageProgress, null, 2),
+    "content_quality_summary.json": JSON.stringify(contentQualitySummary, null, 2),
+
+    // --- Data (CSV + JSON) ---
+    "attempts.csv": `﻿${window.VocabScoring.toCsv(attemptsRows)}`,
+    "attempts.json": JSON.stringify({
+      exported_at: window.VocabScoring.localIso(),
+      count: state.attempts.length,
+      attempts: state.attempts
+    }, null, 2),
+    "attempts.jsonl": state.attempts.map((attempt) => JSON.stringify(attempt)).join("\n") + "\n",
+    "sessions.csv": `﻿${window.VocabScoring.toCsv(sessionsRows)}`,
+    "sessions.json": JSON.stringify({
+      exported_at: window.VocabScoring.localIso(),
+      count: state.sessions.length,
+      sessions: state.sessions
+    }, null, 2),
+    "item_mastery.csv": `﻿${window.VocabScoring.toCsv(masteryRows)}`,
+    "mastery.json": JSON.stringify({
+      exported_at: window.VocabScoring.localIso(),
+      count: state.vocabItems.length,
+      items: state.vocabItems
+    }, null, 2),
+    "review_queue.json": JSON.stringify({
+      exported_at: window.VocabScoring.localIso(),
+      count: state.reviewQueue.length,
+      review_queue: state.reviewQueue
+    }, null, 2),
+    "error_logs.json": JSON.stringify({
+      exported_at: window.VocabScoring.localIso(),
+      count: state.errorLogs.length,
+      error_logs: state.errorLogs
+    }, null, 2),
+
+    // --- Analytics ---
+    "error_summary.csv": `﻿${window.VocabScoring.toCsv(errorSummaryRows)}`,
+    "error_summary.json": JSON.stringify(errorSummaryJson, null, 2),
+    "speed_summary.json": JSON.stringify(speedSummary, null, 2),
+    "review_effectiveness.csv": `﻿${window.VocabScoring.toCsv(reviewEffectivenessRows)}`,
+    "review_effectiveness.json": JSON.stringify({
+      generated_at: window.VocabScoring.localIso(),
+      overall: reviewEffectiveness.overall,
+      rows: reviewEffectiveness.rows
+    }, null, 2),
+    "stage_seal_readiness.json": JSON.stringify(stageSealReadiness, null, 2),
+
+    // --- Full Package ---
     "question_bank_snapshot.json": JSON.stringify({
       exported_at: window.VocabScoring.localIso(),
       question_count: state.questions.length,
@@ -541,19 +891,44 @@ export function buildExportFiles() {
     [`toeic_vocab_export_${date}.json`]: JSON.stringify({
       exported_at: window.VocabScoring.localIso(),
       files: {
+        report_md: "report.md",
         summary_md: "summary.md",
         sessions_csv: "sessions.csv",
+        sessions_json: "sessions.json",
         attempts_csv: "attempts.csv",
+        attempts_json: "attempts.json",
+        attempts_jsonl: "attempts.jsonl",
         item_mastery_csv: "item_mastery.csv",
+        mastery_json: "mastery.json",
+        review_queue_json: "review_queue.json",
+        error_logs_json: "error_logs.json",
         error_summary_csv: "error_summary.csv",
+        error_summary_json: "error_summary.json",
+        speed_summary_json: "speed_summary.json",
         review_effectiveness_csv: "review_effectiveness.csv",
+        review_effectiveness_json: "review_effectiveness.json",
+        stage_seal_readiness_json: "stage_seal_readiness.json",
         content_quality_summary_json: "content_quality_summary.json",
+        diagnostic_recommendation_json: "diagnostic_recommendation.json",
         lesson_recommendations_md: "lesson_recommendations.md",
         stage_progress_json: "stage_progress.json",
         question_bank_snapshot_json: "question_bank_snapshot.json",
         raw_events_jsonl: "raw_events.jsonl"
       },
-      data: { sessions: state.sessions, attempts: state.attempts, item_mastery: state.vocabItems, errors: state.errorLogs, review_queue: state.reviewQueue, review_effectiveness: reviewEffectiveness, content_quality_summary: contentQualitySummary, stage_progress: stageProgress }
+      data: {
+        sessions: state.sessions,
+        attempts: state.attempts,
+        item_mastery: state.vocabItems,
+        review_queue: state.reviewQueue,
+        errors: state.errorLogs,
+        review_effectiveness: reviewEffectiveness,
+        content_quality_summary: contentQualitySummary,
+        diagnostic_recommendation: diagnosticRecommendation,
+        stage_progress: stageProgress,
+        error_summary: errorSummaryJson,
+        speed_summary: speedSummary,
+        stage_seal_readiness: stageSealReadiness
+      }
     }, null, 2)
   };
 }
@@ -825,14 +1200,23 @@ export async function exportPackage() {
   if (window.showDirectoryPicker) {
     try {
       const root = await window.showDirectoryPicker({ mode: "readwrite" });
-      const dir = await root.getDirectoryHandle(folderName, { create: true });
+      const mainDir = await root.getDirectoryHandle(folderName, { create: true });
+      const subdirHandles = {};
       for (const [name, content] of Object.entries(files)) {
-        const handle = await dir.getFileHandle(name, { create: true });
+        const subdir = FILE_SUBDIRS[name] || "";
+        let targetDir = mainDir;
+        if (subdir) {
+          if (!subdirHandles[subdir]) {
+            subdirHandles[subdir] = await mainDir.getDirectoryHandle(subdir, { create: true });
+          }
+          targetDir = subdirHandles[subdir];
+        }
+        const handle = await targetDir.getFileHandle(name, { create: true });
         const writable = await handle.createWritable();
         await writable.write(content);
         await writable.close();
       }
-      setNotice(`Export package saved to ${folderName}.`, "ok");
+      setNotice(`Export package saved to ${folderName}/ with summary/, data/, and analytics/ subdirectories.`, "ok");
       await loadData();
       callRender();
       return;
@@ -850,7 +1234,7 @@ export async function exportPackage() {
       window.VocabScoring.downloadText(`${folderName}_${name}`, content, mime);
     }, index * 160);
   });
-  setNotice("Browser does not expose folder save access here, so files were downloaded individually.", "warn");
+  setNotice(`Downloading ${Object.keys(files).length} files individually — folder save not available and zip is not supported in this static build.`, "warn");
   await loadData();
   callRender();
 }
@@ -866,5 +1250,9 @@ export async function downloadExportFile(name) {
     state.attempts = savedAttempts;
   }
   if (!files[name]) return;
-  window.VocabScoring.downloadText(name, files[name], "text/plain;charset=utf-8");
+  const mime = name.endsWith(".json") ? "application/json;charset=utf-8"
+    : name.endsWith(".csv") ? "text/csv;charset=utf-8"
+    : name.endsWith(".md") ? "text/markdown;charset=utf-8"
+    : "application/x-ndjson;charset=utf-8";
+  window.VocabScoring.downloadText(name, files[name], mime);
 }

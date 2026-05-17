@@ -4,6 +4,8 @@ Status: GENERATED CONTENT QUALITY REVIEW
 
 Generated at: 2026-05-16T17:14:58.325Z
 
+Historical-count warning: this generated report predates the current V0 consolidation and mixed-review seed. Its counts are obsolete; use root `TO_AI.md` for current production counts and priorities.
+
 This report is a learning-quality audit. It does not replace `scripts/validate-vocab-data.js`, which remains the structural pass/fail validator.
 
 ## Summary
@@ -89,4 +91,3 @@ No translation-heavy V2 question is currently flagged.
   }
 }
 ```
-

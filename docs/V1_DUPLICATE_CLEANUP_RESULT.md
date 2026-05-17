@@ -1,6 +1,6 @@
 # V1 Duplicate Cleanup Result
 
-Historical note: this is a V1-only cleanup record from before the V2/V3 content expansion. Current overall content counts are maintained in `README.md`, `docs/CURRICULUM_MAP.md`, and `docs/CHATGPT_ANALYSIS_PACKAGE.md`.
+Historical note: this is a V1-only cleanup record from before the V2/V3 content expansion. Use root `TO_AI.md` for current production counts and next priorities; old counts below are obsolete historical results.
 
 ## 1. Summary
 
@@ -139,7 +139,7 @@ Historical note: this is a V1-only cleanup record from before the V2/V3 content 
 
 | command | result | notes |
 | --- | --- | --- |
-| `node scripts\validate-vocab-data.js` | PASS | 70 lessons, 1968 questions, 352 warnings, 0 missing fields, 0 duplicate `question_id`. |
+| `node scripts\validate-vocab-data.js` | PASS | Obsolete historical result: 70 lessons, 1968 questions, 352 warnings, 0 missing fields, 0 duplicate `question_id`. |
 | `node --check js\vocab-db.js` | PASS | No syntax error output. |
 | `node --check js\vocab-scoring.js` | PASS | No syntax error output. |
 | `node --check js\vocab-tracker.js` | PASS | No syntax error output. |

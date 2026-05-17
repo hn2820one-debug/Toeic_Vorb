@@ -3,23 +3,28 @@ import {
   state,
   html,
   statusLabel,
-  lessonTypeLabel
+  lessonTypeLabel,
+  currentLesson
 } from "../state.js";
 
 export function renderRoadmap() {
   const filters = state.roadmapFilters || { stage: "", status: "", lesson_type: "" };
+  const activeLessonId = currentLesson()?.lesson_id;
   const stageCards = (state.curriculum?.stages || []).map((stage) => {
     const lessons = state.lessons.filter((lesson) => lesson.stage === stage.stage);
+    const isLocked = stage.status === "planned" || stage.status === "draft" || !lessons.length;
     const done = lessons.filter((lesson) => PASS_STATUSES.has(lesson.status)).length;
     const denom = lessons.length || stage.total_lessons || 1;
     return `
-      <article class="stage-card">
+      <article class="stage-card${isLocked ? " stage-locked" : ""}">
         <div class="stage-card-head">
           <strong>${html(stage.stage)} ${html(stage.stage_name)}</strong>
           <span>${html(stage.status)}</span>
         </div>
-        <div class="tracker-progress"><div style="width:${Math.round((done / denom) * 100)}%"></div></div>
-        <small>${done}/${denom} lessons</small>
+        ${isLocked
+          ? `<div class="locked-stage-badge">即將開放</div>`
+          : `<div class="tracker-progress"><div style="width:${Math.round((done / denom) * 100)}%"></div></div>
+             <small>${done}/${denom} lessons</small>`}
       </article>
     `;
   }).join("");
@@ -39,8 +44,9 @@ export function renderRoadmap() {
     const metaLine = isMixed
       ? `Cross-lesson review · ${lesson.question_ids?.length || 0} questions`
       : `${html(lesson.stage_name)} · ${lessonTypeLabel(lesson.lesson_type)} · ${lesson.estimated_minutes} min · ${lesson.question_ids?.length || 0} questions + ${lesson.review_question_ids?.length || 0} review`;
+    const isCurrent = lesson.lesson_id === activeLessonId;
     return `
-      <article class="lesson-line status-${html(lesson.status || "not_started")}${isMixed ? " type-mixed-review" : ""}">
+      <article class="lesson-line status-${html(lesson.status || "not_started")}${isMixed ? " type-mixed-review" : ""}${isCurrent ? " is-current" : ""}"${isCurrent ? ` id="current-lesson"` : ""} data-testid="roadmap-lesson-row">
         <div class="lesson-main">
           <span class="lesson-dot"></span>
           <div>
@@ -64,16 +70,19 @@ export function renderRoadmap() {
       <div class="panel-head-row">
         <div>
           <h3>Curriculum Roadmap</h3>
-          <p class="muted-note">${visibleLessons.length}/${state.lessons.length} lessons shown. Mixed review lessons are block-level checks, not new question-bank rows.</p>
+          <p class="muted-note" data-testid="roadmap-summary">${visibleLessons.length}/${state.lessons.length} lessons shown. Mixed review lessons are block-level checks, not new question-bank rows.</p>
         </div>
-        <button class="button secondary small" type="button" onclick="VocabTracker.clearRoadmapFilters()">Clear Filters</button>
+        <div style="display:flex;gap:8px">
+          <a class="button secondary small" href="#current-lesson">▶ 跳到目前進度</a>
+          <button class="button secondary small" type="button" onclick="VocabTracker.clearRoadmapFilters()">Clear Filters</button>
+        </div>
       </div>
-      <div class="roadmap-filters">
+      <div class="roadmap-filters" data-testid="roadmap-filters">
         ${renderRoadmapSelect("stage", "Stage", stages, filters.stage, (value) => value)}
         ${renderRoadmapSelect("status", "Status", statuses, filters.status, statusLabel)}
         ${renderRoadmapSelect("lesson_type", "Type", lessonTypes, filters.lesson_type, lessonTypeLabel)}
       </div>
-      <div class="lesson-list">${rows || `<p class="muted-note">No lessons match the current filters.</p>`}</div>
+      <div class="lesson-list" data-testid="roadmap-lesson-list">${rows || `<p class="muted-note">No lessons match the current filters.</p>`}</div>
     </section>
   `;
 }
@@ -82,7 +91,7 @@ function renderRoadmapSelect(key, label, values, selected, labelFn) {
   return `
     <label>
       <span>${html(label)}</span>
-      <select onchange="VocabTracker.setRoadmapFilter('${key}', this.value)">
+      <select data-testid="roadmap-filter-${html(key)}" onchange="VocabTracker.setRoadmapFilter('${key}', this.value)">
         <option value="">All</option>
         ${values.map((value) => `<option value="${html(value)}" ${selected === value ? "selected" : ""}>${html(labelFn(value))}</option>`).join("")}
       </select>

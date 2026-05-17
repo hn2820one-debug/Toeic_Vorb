@@ -6,6 +6,8 @@ Date: 2026-05-14
 
 Scope: TOEIC Vocabulary Tracker Program B only.
 
+Historical-count warning: this is a dated stabilization record, not the current production handoff. Use root `TO_AI.md` for current counts and priorities.
+
 ## What Changed
 
 - Added content quality validation v2: `scripts/audit-vocab-quality.js`.
@@ -44,9 +46,9 @@ Latest `node scripts\audit-vocab-quality.js` result:
 
 These are quality warnings, not structural data failures.
 
-## Validation Result
+## Historical Validation Result
 
-Latest `node scripts\validate-vocab-data.js` result:
+Historical `node scripts\validate-vocab-data.js` result from this 2026-05-14 stabilization pass:
 
 - total vocab lessons: 180
 - total vocab questions: 4,608

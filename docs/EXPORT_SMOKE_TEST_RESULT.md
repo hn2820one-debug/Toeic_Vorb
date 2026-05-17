@@ -1,6 +1,6 @@
 # EXPORT_SMOKE_TEST_RESULT
 
-Historical note: this smoke test result predates the V2/V3 content expansion. Current overall content counts are maintained in `README.md`, `docs/CURRICULUM_MAP.md`, and `docs/CHATGPT_ANALYSIS_PACKAGE.md`.
+Historical note: this smoke test result predates the V2/V3 content expansion. Use root `TO_AI.md` for current production counts and priorities.
 
 ## 1. Test Date
 

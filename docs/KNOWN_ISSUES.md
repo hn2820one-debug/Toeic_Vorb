@@ -2,14 +2,16 @@
 
 Status: CURRENT REVIEW DOCUMENT
 
-## ISSUE-001｜Two apps share one static repo
+Scope note: this document covers Program B only (`C:\Users\Keith\Toeic\toeic-app-Vorb`). Program A lives separately at `C:\Users\Keith\toeic-app` and must not be modified. Root `TO_AI.md` is the current source of truth for counts, seed status, and priorities.
+
+## ISSUE-001｜Program A / Program B boundary must remain explicit
 
 Status: Open
 Severity: High
-Affected files: `index.html`, `tracker.html`, `data/index.json`, `data/vocab/*`, `js/*.js`, `sw.js`
-Problem: Program A and Program B are separate official apps, but they still live in one static repo and share cache/base assets.
-Evidence: Program A uses `grammar-index.html`; Program B uses `tracker.html`; both are listed in `sw.js`.
-Recommended fix: Keep `docs/TWO_APP_BOUNDARY.md` current and run the two-app regression checklist after shared-file changes.
+Affected files: root guidance docs, AI handoff docs, generated status docs
+Problem: Program A and Program B are separate folders, but historical docs may still imply a shared repo or shared cache.
+Evidence: Program B path is `C:\Users\Keith\Toeic\toeic-app-Vorb`; Program A path is `C:\Users\Keith\toeic-app`.
+Recommended fix: Keep root `README.md`, `AGENTS.md`, `CLAUDE.md`, and `TO_AI.md` aligned. Do not modify Program A.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-002｜Documentation can drift toward one-app framing
@@ -17,9 +19,9 @@ Do not fix now unless it is documentation-only.
 Status: Documented
 Severity: High
 Affected files: `README.md`
-Problem: The repo must describe two official apps, not just Program A or Program B.
-Evidence: Earlier docs were single-app oriented; README is now rewritten for two apps.
-Recommended fix: Keep README aligned with `docs/TWO_APP_BOUNDARY.md`.
+Problem: Root Program B docs must not drift into Program A scope or old two-app-in-one-repo framing.
+Evidence: `TO_AI.md` is now the single active AI handoff for Program B.
+Recommended fix: Keep README aligned with `TO_AI.md`.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-003｜Program A docs described grammar app as main system
@@ -32,13 +34,13 @@ Evidence: `Background/TOEIC_App_Program_Plan.md` describes Claude grammar teachi
 Recommended fix: Keep Background files as Program A references and keep Program B documentation separate.
 Do not fix now unless it is documentation-only.
 
-## ISSUE-004｜Root route is now a launcher but shared cache can mask it
+## ISSUE-004｜Root route is now a launcher but PWA cache can mask it
 
 Status: Open
 Severity: High
 Affected files: `index.html`, `tracker.html`
-Problem: Root `index.html` has been changed to a launcher, but a stale service worker may still serve an older Program A homepage.
-Evidence: `sw.js` caches `index.html`; cache reset is needed after route changes.
+Problem: Root `index.html` is the Program B launcher, but a stale service worker may still serve older Program B assets.
+Evidence: `sw.js` caches Program B files with cache `toeic-vorb-v8`; cache reset is needed after route changes.
 Recommended fix: Use `clear-sw.html` or unregister the service worker before regression testing.
 Do not fix now unless it is documentation-only.
 
@@ -67,8 +69,8 @@ Do not fix now unless it is documentation-only.
 Status: Open
 Severity: High
 Affected files: `data/vocab/curriculum.json`, `data/vocab/questions_v*.json`
-Problem: V0, V1, V2, and V3 are implemented, but V4-V6 vocabulary content is still not present.
-Evidence: Current vocabulary curriculum has 180 lessons and 4,608 questions: V0 has 10/240, V1 has 60/1,728, V2 has 50/1,200, and V3 has 60/1,440. V4-V6 remain `planned`.
+Problem: V0, V1, V2, and V3 are implemented, but V4-V6 vocabulary content is not active in the production seed.
+Evidence: Current vocabulary curriculum has 193 runnable lessons and 4,399 production questions: V0 has 1/31, V1 has 60/1,728, V2 has 60/1,200, and V3 has 72/1,440. V4-A has a draft under `drafts/v4/`, but V4-V6 remain inactive.
 Recommended fix: Review V2/V3 seed quality with real learner sessions before starting V4 Formal Phrase.
 Do not fix now unless it is documentation-only.
 
@@ -107,8 +109,8 @@ Do not fix now unless it is documentation-only.
 Status: Open
 Severity: Medium
 Affected files: `js/vocab-scoring.js`, `js/vocab-tracker.js`
-Problem: Mastery formula exists but has not been validated with long-term real learner data.
-Evidence: Current score uses accuracy, speed, stability, recency; no tests verify expected long-term transitions.
+Problem: Mastery formula has fixture tests, but has not been validated with long-term real learner data.
+Evidence: Current score uses accuracy, speed, stability, recency; `scripts/test-scoring.js` covers boundary and fixture behavior, but exported real learner sessions still need review.
 Recommended fix: Add fixture-based tests and compare against real review sessions.
 Do not fix now unless it is documentation-only.
 
@@ -137,19 +139,19 @@ Do not fix now unless it is documentation-only.
 Status: Open
 Severity: Medium
 Affected files: `sw.js`, `clear-sw.html`
-Problem: Service worker caches both Program A and vocabulary files; stale cache can hide changes.
-Evidence: README warns users to unregister service worker/hard refresh.
+Problem: Service worker caches Program B assets; stale cache can hide changes.
+Evidence: `sw.js` explicitly caches Vocabulary Tracker files only.
 Recommended fix: Keep cache version updated and provide a clear cache-reset path.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-015｜No automated browser test suite
 
-Status: Open
+Status: Documented
 Severity: Medium
 Affected files: project-wide
-Problem: Runtime was manually/headlessly checked, but there is no committed test harness for lesson completion/export.
-Evidence: No `package.json`, no Playwright config, no automated test command.
-Recommended fix: Add a small non-cloud local browser test suite after documentation cleanup.
+Problem: Browser coverage exists but should be expanded for newer dashboard/export surfaces.
+Evidence: `package.json`, Playwright config, and 4 E2E tests exist; focused checks for Roadmap filters, Stage Seal Readiness, and export inventory are still recommended.
+Recommended fix: Extend the local Playwright suite before larger content changes.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-016｜No `src/` or `public/` directories despite earlier plans
@@ -158,8 +160,8 @@ Status: Open
 Severity: Low
 Affected files: repo root
 Problem: Earlier plans mention React/Vite-style structure, but current project is static root HTML.
-Evidence: No `src/`, `public/`, or `package.json` exists.
-Recommended fix: Document actual static structure; do not migrate unless explicitly planned.
+Evidence: No `src/` or `public/` app structure exists; `package.json` is for tests/dev tooling, not a build step.
+Recommended fix: Document actual static structure; do not migrate or add a build step unless explicitly planned.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-017｜Program A file names and user names are inconsistent

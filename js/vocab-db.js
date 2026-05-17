@@ -1,8 +1,8 @@
 (function () {
   const DB_NAME = "toeic_vocab_tracker_db";
-  const DB_VERSION = 1;
+  const DB_VERSION = 2;
   const COURSE_ID = "toeic_vocab_v1";
-  const SEED_VERSION = "toeic_vocab_tracker_c001_cross_lesson_2026_05_17";
+  const SEED_VERSION = "toeic_vocab_tracker_c002_old_item_interference_2026_05_18";
   const PREF_KEY = "toeic_vocab_tracker_preferences";
   const ACTIVE_SESSION_KEY = "toeic_vocab_active_session";
 
@@ -12,6 +12,7 @@
     curriculum: { keyPath: "course_id" },
     lessons: { keyPath: "lesson_id", indexes: ["stage", "status", "lesson_type"] },
     questions: { keyPath: "question_id", indexes: ["lesson_id", "stage", "type", "default_error_code", "target_item_id"] },
+    question_edits: { keyPath: "question_id", indexes: ["edited_at", "source_seed_version", "change_type"] },
     vocab_items: { keyPath: "item_id", indexes: ["item_type", "mastery_level", "next_review_date"] },
     attempts: { keyPath: "attempt_id", indexes: ["session_id", "lesson_id", "question_id", "stage", "timestamp", "error_code", "target_item_id"] },
     sessions: { keyPath: "session_id", indexes: ["date", "lesson_id", "stage", "mastery_status"] },

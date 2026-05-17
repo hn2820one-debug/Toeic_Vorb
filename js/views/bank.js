@@ -9,6 +9,7 @@ import {
 } from "../state.js";
 
 let renderApp = null;
+let seedQuestionMapPromise = null;
 
 export function configureBankView({ render }) {
   renderApp = render;
@@ -21,8 +22,125 @@ function callRender() {
   renderApp();
 }
 
+function cloneJson(value) {
+  return value === undefined ? undefined : JSON.parse(JSON.stringify(value));
+}
+
+function canonicalize(value) {
+  if (Array.isArray(value)) return value.map(canonicalize);
+  if (value && typeof value === "object") {
+    return Object.keys(value).sort().reduce((out, key) => {
+      out[key] = canonicalize(value[key]);
+      return out;
+    }, {});
+  }
+  return value;
+}
+
+function stableStringify(value) {
+  return JSON.stringify(canonicalize(value));
+}
+
+async function sha256(value) {
+  const payload = stableStringify(value ?? null);
+  if (!window.crypto?.subtle) return `sha256:unavailable:${payload.length}`;
+  const bytes = new TextEncoder().encode(payload);
+  const digest = await window.crypto.subtle.digest("SHA-256", bytes);
+  return `sha256:${[...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("")}`;
+}
+
+function changedFields(before, after) {
+  const keys = new Set([...Object.keys(before || {}), ...Object.keys(after || {})]);
+  return [...keys].filter((key) => stableStringify(before?.[key]) !== stableStringify(after?.[key])).sort();
+}
+
+function pickFields(record, fields) {
+  if (!record) return null;
+  return fields.reduce((out, field) => {
+    out[field] = cloneJson(record[field]);
+    return out;
+  }, {});
+}
+
+async function getSeedQuestionMap() {
+  if (seedQuestionMapPromise) return seedQuestionMapPromise;
+  seedQuestionMapPromise = (async () => {
+    const files = state.curriculum?.question_files || [];
+    const map = new Map();
+    await Promise.all(files.map(async (fileName) => {
+      const questions = await window.VocabDB.fetchJSON(`./data/vocab/${fileName}`);
+      questions.forEach((question) => {
+        map.set(question.question_id, { file: fileName, question: cloneJson(question) });
+      });
+    }));
+    return map;
+  })();
+  return seedQuestionMapPromise;
+}
+
+async function seedInfoForQuestion(questionId) {
+  if (!questionId) return null;
+  const seedMap = await getSeedQuestionMap();
+  return seedMap.get(questionId) || null;
+}
+
+async function trackQuestionEdit(question, previousQuestion, changeType = "update") {
+  const questionId = question?.question_id || previousQuestion?.question_id;
+  if (!questionId) return;
+
+  const [existingEdit, seedInfo] = await Promise.all([
+    window.VocabDB.get("question_edits", questionId).catch(() => null),
+    seedInfoForQuestion(questionId)
+  ]);
+
+  const beforeSnapshot = cloneJson(existingEdit?.before_snapshot || seedInfo?.question || previousQuestion || null);
+  const afterSnapshot = changeType === "delete" ? null : cloneJson(question);
+
+  if (seedInfo?.question && afterSnapshot && stableStringify(seedInfo.question) === stableStringify(afterSnapshot)) {
+    await window.VocabDB.remove("question_edits", questionId);
+    return;
+  }
+
+  const fields = changeType === "delete"
+    ? Object.keys(beforeSnapshot || {}).sort()
+    : changedFields(beforeSnapshot || {}, afterSnapshot || {});
+
+  if (changeType === "update" && fields.length === 0) return;
+
+  const record = {
+    question_id: questionId,
+    file_hint: seedInfo?.file || existingEdit?.file_hint || seedFilenameForQuestion(question || previousQuestion || {}),
+    change_type: changeType,
+    source_seed_version: existingEdit?.source_seed_version || window.VocabDB.SEED_VERSION,
+    edited_at: window.VocabScoring.localIso(),
+    fields_changed: fields,
+    before_hash: beforeSnapshot ? await sha256(beforeSnapshot) : null,
+    after_hash: afterSnapshot ? await sha256(afterSnapshot) : null,
+    before_snapshot: beforeSnapshot,
+    after_snapshot: afterSnapshot,
+    reason: existingEdit?.reason || ""
+  };
+
+  await window.VocabDB.put("question_edits", record);
+}
+
 export function filteredQuestions() {
   return state.questions.filter((question) => {
+    const search = String(state.bankFilters.search || "").trim().toLowerCase();
+    if (search) {
+      const haystack = [
+        question.question_id,
+        question.lesson_id,
+        question.stage,
+        question.type,
+        question.question_text,
+        question.target_item_id,
+        question.default_error_code,
+        question.explanation_zh,
+        ...Object.values(question.options || {})
+      ].join(" ").toLowerCase();
+      if (!haystack.includes(search)) return false;
+    }
     if (state.bankFilters.stage && question.stage !== state.bankFilters.stage) return false;
     if (state.bankFilters.lesson_id && question.lesson_id !== state.bankFilters.lesson_id) return false;
     if (state.bankFilters.type && question.type !== state.bankFilters.type) return false;
@@ -90,21 +208,30 @@ export function renderQuestionBank() {
     <section class="tracker-panel">
       <h3>Question Bank Manager</h3>
       <div class="bank-filters">
+        <label>
+          <span>Search</span>
+          <input data-testid="question-bank-search" type="search" value="${html(state.bankFilters.search || "")}" oninput="VocabTracker.setBankFilter('search', this.value)" placeholder="Question, item, text">
+        </label>
         ${renderSelect("stage", "Stage", stages, state.bankFilters.stage)}
         ${renderSelect("lesson_id", "Lesson", lessons, state.bankFilters.lesson_id)}
         ${renderSelect("type", "Type", types, state.bankFilters.type)}
         ${renderSelect("error_code", "Error", window.VocabScoring.ERROR_CODES, state.bankFilters.error_code)}
       </div>
       <div class="bank-summary">
-        <span>Question Count: <strong>${questions.length}</strong></span>
+        <span data-testid="question-bank-count">Question Count: <strong>${questions.length}</strong></span>
+        <span>Local Edits: <strong>${state.questionEdits.length}</strong></span>
         <span>A:${validation.dist.A} / B:${validation.dist.B} / C:${validation.dist.C} / D:${validation.dist.D}</span>
         <span>Errors: ${validation.errors.length}</span>
         <span>Warnings: ${validation.warnings.length}</span>
       </div>
+      <div class="tracker-alert warn" data-testid="question-bank-local-warning">
+        Browser edits are local IndexedDB edits. They are not production seed changes until exported and applied to seed JSON.
+      </div>
       <div class="tracker-actions">
         <button class="button secondary" type="button" onclick="VocabTracker.newQuestionTemplate()">Add Question</button>
         <button class="button secondary" type="button" onclick="VocabTracker.exportQuestions()">Export JSON</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.downloadSeedJson()">Download Seed JSON</button>
+        <button class="button secondary" data-testid="question-bank-patch-export" type="button" onclick="VocabTracker.exportLocalEditsPatch()">Export Local Edits Patch</button>
+        <button class="button secondary" data-testid="question-bank-seed-export" type="button" onclick="VocabTracker.downloadSeedJson()">Download Edited Seed JSON Snapshot</button>
         <small class="muted-note">${state.questions.length} questions across ${seedFileCount} seed files</small>
         <label class="button secondary file-button">Import JSON<input type="file" accept="application/json,.json" onchange="VocabTracker.importQuestions(this.files[0])"></label>
         <button class="button secondary" type="button" onclick="VocabTracker.showValidation()">Validate Bank</button>
@@ -113,18 +240,18 @@ export function renderQuestionBank() {
     <section class="bank-layout">
       <article class="tracker-panel question-list-panel">
         <h3>Questions</h3>
-        <div class="question-list">
+        <div class="question-list" data-testid="question-bank-list">
           ${(() => {
             const PAGE_SIZE = 120;
             const visibleCount = ((state.bankPage || 0) + 1) * PAGE_SIZE;
             const visible = questions.slice(0, visibleCount);
             const hasMore = questions.length > visibleCount;
             return visible.map((question) => `
-              <button class="question-row ${state.selectedQuestionId === question.question_id ? "active" : ""}" type="button" onclick="VocabTracker.selectQuestion('${html(question.question_id)}')">
+              <button class="question-row ${state.selectedQuestionId === question.question_id ? "active" : ""}" data-testid="question-bank-row" type="button" onclick="VocabTracker.selectQuestion('${html(question.question_id)}')">
                 <strong>${html(question.question_id)}</strong>
                 <small>${html(question.lesson_id)} · ${html(question.type)} · ${html(question.default_error_code)}</small>
               </button>
-            `).join("") + (hasMore ? `<button class="button secondary" type="button" onclick="VocabTracker.loadMoreBankQuestions()" style="width:100%;margin-top:6px">Load More (${questions.length - visibleCount} remaining)</button>` : "");
+            `).join("") + (hasMore ? `<button class="button secondary" data-testid="question-bank-load-more" type="button" onclick="VocabTracker.loadMoreBankQuestions()" style="width:100%;margin-top:6px">Load More (${questions.length - visibleCount} remaining)</button>` : "");
           })()}
         </div>
       </article>
@@ -212,10 +339,12 @@ export async function saveQuestionFromEditor() {
     return;
   }
 
+  const previous = await window.VocabDB.get("questions", question.question_id).catch(() => null);
   await window.VocabDB.put("questions", question);
+  await trackQuestionEdit(question, previous, previous ? "update" : "add");
   state.selectedQuestionId = question.question_id;
   await loadData();
-  setNotice("Question saved.", "ok");
+  setNotice("Question saved locally in IndexedDB. Export a patch before applying to production seed JSON.", "ok");
   callRender();
 }
 
@@ -223,6 +352,8 @@ export async function deleteSelectedQuestion() {
   if (!state.selectedQuestionId) return;
   if (!window.confirm(`Delete ${state.selectedQuestionId}?`)) return;
 
+  const previous = await window.VocabDB.get("questions", state.selectedQuestionId).catch(() => null);
+  if (previous) await trackQuestionEdit(null, previous, "delete");
   await window.VocabDB.remove("questions", state.selectedQuestionId);
   state.selectedQuestionId = null;
   await loadData();
@@ -254,15 +385,66 @@ export async function importQuestions(file) {
     return;
   }
 
+  const previousRows = await Promise.all(questions.map((question) => window.VocabDB.get("questions", question.question_id).catch(() => null)));
   await window.VocabDB.putAll("questions", questions);
+  for (const [index, question] of questions.entries()) {
+    await trackQuestionEdit(question, previousRows[index], previousRows[index] ? "update" : "add");
+  }
   await loadData();
-  setNotice(`${questions.length} questions imported.`, "ok");
+  setNotice(`${questions.length} questions imported locally. Export a patch before applying to production seed JSON.`, "ok");
   callRender();
 }
 
 export function exportQuestions() {
   const questions = filteredQuestions();
   window.VocabScoring.downloadText("toeic_vocab_questions_export.json", JSON.stringify(questions, null, 2), "application/json;charset=utf-8");
+}
+
+export async function exportLocalEditsPatch() {
+  const edits = await window.VocabDB.getAll("question_edits");
+  if (!edits.length) {
+    setNotice("No local Question Bank edits are tracked in this browser.", "warn");
+    return;
+  }
+
+  const changes = [];
+  for (const edit of edits.sort((a, b) => String(a.question_id).localeCompare(String(b.question_id)))) {
+    const current = await window.VocabDB.get("questions", edit.question_id).catch(() => null);
+    const before = cloneJson(edit.before_snapshot || null);
+    const after = edit.change_type === "delete" ? null : cloneJson(current || edit.after_snapshot || null);
+    const fields = edit.change_type === "delete"
+      ? edit.fields_changed || Object.keys(before || {}).sort()
+      : changedFields(before || {}, after || {});
+
+    changes.push({
+      question_id: edit.question_id,
+      file_hint: edit.file_hint,
+      change_type: edit.change_type,
+      before_hash: before ? await sha256(before) : null,
+      after_hash: after ? await sha256(after) : null,
+      before: pickFields(before, fields),
+      after: pickFields(after, fields),
+      fields_changed: fields,
+      reason: edit.reason || "",
+      edited_at: edit.edited_at
+    });
+  }
+
+  const patch = {
+    patch_version: "1.0",
+    app: "toeic-vocab-tracker",
+    program: "Program B",
+    program_path: "C:\\Users\\Keith\\Toeic\\toeic-app-Vorb",
+    source_seed_version: window.VocabDB.SEED_VERSION,
+    created_at: window.VocabScoring.localIso(),
+    created_by: "question-bank-local-editor",
+    base_manifest: state.curriculum?.question_files || [],
+    changes
+  };
+
+  const stamp = window.VocabScoring.localDate();
+  window.VocabScoring.downloadText(`questionbank_edits_patch_${stamp}.json`, JSON.stringify(patch, null, 2), "application/json;charset=utf-8");
+  setNotice(`Exported ${changes.length} local edit patch row(s). Review before applying to production JSON.`, "ok");
 }
 
 function seedFilenameForQuestion(question) {

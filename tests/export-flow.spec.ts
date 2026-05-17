@@ -77,7 +77,7 @@ test("export flow: completed session appears on dashboard and download fallbacks
   page.on("download", onExportDownload);
   await exportPackageButton.click({ timeout: STEP_TIMEOUT });
   await page.waitForEvent("download", { timeout: APP_TIMEOUT });
-  await expect.poll(() => exportDownloads.length, { timeout: APP_TIMEOUT }).toBeGreaterThanOrEqual(9);
+  await expect.poll(() => exportDownloads.length, { timeout: APP_TIMEOUT }).toBeGreaterThanOrEqual(12);
   page.off("download", onExportDownload);
 
   const summaryButton = page.getByRole("button", { name: "summary.md" });
@@ -95,7 +95,7 @@ test("export flow: completed session appears on dashboard and download fallbacks
   const bankHeading = page.locator(".tracker-panel h3", { hasText: "Question Bank Manager" });
   await expect(bankHeading).toBeVisible({ timeout: STEP_TIMEOUT });
 
-  const seedDownloadButton = page.getByRole("button", { name: "Download Seed JSON" });
+  const seedDownloadButton = page.getByRole("button", { name: "Download Edited Seed JSON Snapshot" });
   await expect(seedDownloadButton).toBeVisible({ timeout: STEP_TIMEOUT });
   const seedDownload = page.waitForEvent("download", {
     predicate: (download) => /questions_.*\.json$/.test(download.suggestedFilename()),

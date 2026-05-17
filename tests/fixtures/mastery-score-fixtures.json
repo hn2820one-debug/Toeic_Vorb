@@ -1,0 +1,72 @@
+[
+  {
+    "label": "perfect meaning_choice item",
+    "item": {
+      "seen_count": 4,
+      "correct_count": 4,
+      "wrong_count": 0,
+      "avg_response_time_seconds": 10,
+      "consecutive_fast_correct": 3,
+      "last_question_type": "meaning_choice",
+      "last_seen_days_ago": 0
+    },
+    "expected_score": 100,
+    "expected_level": "mastered"
+  },
+  {
+    "label": "half accuracy fast item",
+    "item": {
+      "seen_count": 4,
+      "correct_count": 2,
+      "wrong_count": 0,
+      "avg_response_time_seconds": 5,
+      "consecutive_fast_correct": 0,
+      "last_question_type": "meaning_choice",
+      "last_seen_days_ago": 0
+    },
+    "expected_score": 60,
+    "expected_level": "unstable"
+  },
+  {
+    "label": "zero accuracy repeated wrong item",
+    "item": {
+      "seen_count": 3,
+      "correct_count": 0,
+      "wrong_count": 3,
+      "avg_response_time_seconds": 10,
+      "consecutive_fast_correct": 0,
+      "last_question_type": "meaning_choice",
+      "last_seen_days_ago": 0
+    },
+    "expected_score": 35,
+    "expected_level": "blind"
+  },
+  {
+    "label": "stale perfect item keeps base mastery without recency",
+    "item": {
+      "seen_count": 4,
+      "correct_count": 4,
+      "wrong_count": 0,
+      "avg_response_time_seconds": 10,
+      "consecutive_fast_correct": 3,
+      "last_question_type": "meaning_choice",
+      "last_seen_days_ago": 31
+    },
+    "expected_score": 90,
+    "expected_level": "mastered"
+  },
+  {
+    "label": "slow part6 correct item loses speed points",
+    "item": {
+      "seen_count": 4,
+      "correct_count": 4,
+      "wrong_count": 0,
+      "avg_response_time_seconds": 90,
+      "consecutive_fast_correct": 1,
+      "last_question_type": "part6_context_choice",
+      "last_seen_days_ago": 4
+    },
+    "expected_score": 76,
+    "expected_level": "stable"
+  }
+]

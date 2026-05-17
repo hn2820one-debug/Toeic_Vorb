@@ -132,11 +132,38 @@
     URL.revokeObjectURL(url);
   }
 
+  // Review priority: 1 (lowest) to 10 (highest), using item stats and entry repeated_error_count.
+  function calculateReviewPriority(item, entry) {
+    let score = 0;
+    const wrongCount = Number(item.wrong_count || 0);
+    score += Math.min(wrongCount * 8, 30);
+    const repeatedCount = Number((entry && entry.repeated_error_count) || 0);
+    if (repeatedCount >= 3) score += 25;
+    else if (repeatedCount >= 2) score += 20;
+    else if (repeatedCount >= 1) score += 12;
+    const masteryScore = Number(item.mastery_score || 0);
+    if (masteryScore < 40) score += 20;
+    else if (masteryScore < 60) score += 12;
+    else if (masteryScore < 75) score += 6;
+    const avgTime = Number(item.avg_response_time_seconds || 0);
+    if (avgTime > 0) {
+      const target = targetTime(item.last_question_type || item.item_type);
+      if (avgTime > target * 2.5) score += 15;
+      else if (avgTime > target * 1.5) score += 8;
+    }
+    const gap = daysSince(item.last_seen);
+    if (gap <= 1) score += 10;
+    else if (gap <= 3) score += 7;
+    else if (gap <= 7) score += 4;
+    return Math.min(10, Math.max(1, Math.round(score / 10)));
+  }
+
   window.VocabScoring = {
     ERROR_CODES,
     TARGET_TIMES,
     addDays,
     calculateMasteryScore,
+    calculateReviewPriority,
     downloadText,
     localDate,
     localIso,

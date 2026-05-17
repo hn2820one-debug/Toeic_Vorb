@@ -7,7 +7,8 @@ const STEP_TIMEOUT = 10_000;
 
 async function answerQuestions(page, lessonId: string, count: number) {
   await page.evaluate(async (id) => {
-    await window.VocabTracker.startLesson(id);
+    // force: true bypasses the stage-seal soft gate so V2/V3 content tests are not blocked
+    await window.VocabTracker.startLesson(id, { force: true });
   }, lessonId);
 
   const questionText = page.locator(".question-text");

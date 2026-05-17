@@ -28,7 +28,14 @@ import {
   previousQuestion,
   togglePause,
   exitLesson,
-  finishLesson
+  finishLesson,
+  confirmStartLesson,
+  cancelStageSeal,
+  speedAnswerCurrent,
+  speedTimeoutCurrent,
+  SPEED_TIME_LIMIT,
+  isSpeedSession,
+  addItemToReview
 } from "./views/lesson.js";
 import {
   configureMistakesView,
@@ -54,6 +61,7 @@ import {
   deleteSelectedQuestion,
   importQuestions,
   exportQuestions,
+  exportLocalEditsPatch,
   downloadSeedJson,
   showValidation,
   loadMoreBankQuestions
@@ -67,6 +75,11 @@ import {
 } from "./views/settings.js";
 
 (function () {
+  let deferredInstallPrompt = null;
+  window.addEventListener("beforeinstallprompt", (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+  });
 
   function renderShell() {
     const completed = state.lessons.filter((lesson) => PASS_STATUSES.has(lesson.status)).length;
@@ -78,10 +91,8 @@ import {
       ["today", "Today"],
       ["roadmap", "Roadmap"],
       ["lesson", "Lesson"],
-      ["mistakes", "Mistakes"],
+      ["mistakes", "Review"],
       ["mastery", "Mastery"],
-      ["export", "Export"],
-      ["bank", "Question Bank"],
       ["settings", "Settings"]
     ];
     $("tracker-tabs").innerHTML = tabs.map(([id, label]) => (
@@ -129,6 +140,21 @@ import {
         : Math.max(0, (Date.now() - state.questionStartedAt) / 1000);
       questionTimer.textContent = seconds(value);
     }
+    if (isSpeedSession(state.activeSession) && !state.activeSession.paused && state.questionStartedAt) {
+      const currentQId = state.currentQuestionKey;
+      if (currentQId && !state.activeSession.answers?.[currentQId]) {
+        const elapsed = (Date.now() - state.questionStartedAt) / 1000;
+        const remaining = Math.max(0, SPEED_TIME_LIMIT - elapsed);
+        const countdownEl = document.getElementById("speed-countdown");
+        if (countdownEl) {
+          countdownEl.textContent = String(Math.ceil(remaining));
+          countdownEl.className = `speed-countdown${remaining <= 3 ? " danger" : remaining <= 6 ? " warn" : ""}`;
+        }
+        if (remaining <= 0 && !state.speedTimerFired) {
+          speedTimeoutCurrent();
+        }
+      }
+    }
   }
 
   function render() {
@@ -160,6 +186,7 @@ import {
   function setView(view) {
     state.view = view;
     if (view !== "mistakes") state.reviewSessionId = null;
+    if (view !== "lesson") state.stageSealPending = null;
     render();
   }
 
@@ -228,20 +255,43 @@ import {
     }
   }
 
+  function triggerInstall() {
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then(() => { deferredInstallPrompt = null; });
+    window.VocabDB.savePrefs({ ...window.VocabDB.loadPrefs(), install_dismissed: true });
+  }
+
+  function dismissInstall() {
+    deferredInstallPrompt = null;
+    window.VocabDB.savePrefs({ ...window.VocabDB.loadPrefs(), install_dismissed: true });
+    render();
+  }
+
+  function hasInstallPrompt() {
+    return !!deferredInstallPrompt;
+  }
+
   window.VocabTracker = {
+    addItemToReview,
     advanceAfterFeedback,
     answerCurrent,
+    cancelStageSeal,
+    speedAnswerCurrent,
+    speedTimeoutCurrent,
     changeLessonStatus,
     clearActiveSession,
     clearRoadmapFilters,
     closeSessionReview,
     confirmSessionErrors,
     confirmCurrentAnswer,
+    confirmStartLesson,
     deleteSelectedQuestion,
     downloadExportFile,
     downloadSeedJson,
     exitLesson,
     exportPackage,
+    exportLocalEditsPatch,
     exportQuestions,
     finishLesson,
     importQuestions,
@@ -262,6 +312,9 @@ import {
     startLesson,
     startReviewMode,
     setReviewFilter,
-    togglePause
+    togglePause,
+    triggerInstall,
+    dismissInstall,
+    hasInstallPrompt
   };
 })();

@@ -16,6 +16,7 @@ const src = fs.readFileSync(path.join(__dirname, "../js/vocab-scoring.js"), "utf
 const window = {};
 eval(src); // eslint-disable-line no-eval
 const { calculateMasteryScore, masteryLevel, speedBucket, targetTime, addDays, localDate } = window.VocabScoring;
+const masteryFixtures = JSON.parse(fs.readFileSync(path.join(__dirname, "../tests/fixtures/mastery-score-fixtures.json"), "utf8"));
 
 let passed = 0;
 let failed = 0;
@@ -41,6 +42,15 @@ function assertRange(label, actual, min, max) {
 }
 
 const today = localDate();
+
+function expandFixtureItem(item) {
+  const out = { ...item };
+  if (out.last_seen_days_ago !== undefined) {
+    out.last_seen = addDays(today, -Number(out.last_seen_days_ago));
+    delete out.last_seen_days_ago;
+  }
+  return out;
+}
 
 // ── masteryLevel thresholds ──────────────────────────────────────────────────
 console.log("\n[masteryLevel — boundary values]");
@@ -126,6 +136,13 @@ assert("F7 masteryLevel → blind", masteryLevel(35), "blind");
 
 // F8: unseen item always 0
 assert("F8 unseen → 0", calculateMasteryScore({ seen_count: 0 }), 0);
+
+console.log("\n[calculateMasteryScore — external fixture file]");
+masteryFixtures.forEach((fixture) => {
+  const score = calculateMasteryScore(expandFixtureItem(fixture.item));
+  assert(`${fixture.label} → score ${fixture.expected_score}`, score, fixture.expected_score);
+  assert(`${fixture.label} → level ${fixture.expected_level}`, masteryLevel(score), fixture.expected_level);
+});
 
 // F9: speed clamping — avg much faster than target still gives max speedScore
 //   speed_drill target=8s, avg=1s → clamp(8/1=8, 0,1)=1 → same as avg=8s

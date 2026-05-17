@@ -11,9 +11,14 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const dataDir = join(root, "data/vocab");
+const curriculum = JSON.parse(readFileSync(join(dataDir, "curriculum.json"), "utf8"));
 
-const files = readdirSync(dataDir).filter(f => f.startsWith("questions_") && f.endsWith(".json"));
-files.sort();
+const files = Array.isArray(curriculum.question_files) && curriculum.question_files.length
+  ? [...curriculum.question_files]
+  : readdirSync(dataDir).filter(f => f.startsWith("questions_") && f.endsWith(".json")).sort();
+
+console.log(`Production manifest question files: ${files.length}`);
+console.log("Draft files outside data/vocab are not loaded by this duplicate audit.\n");
 
 let allQuestions = [];
 for (const file of files) {

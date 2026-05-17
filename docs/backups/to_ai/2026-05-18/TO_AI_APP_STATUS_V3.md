@@ -15,20 +15,20 @@ The current seed is newer than `TO_AI_APP_STATUS_V2.md`.
 
 | Area | Current value |
 |---|---:|
-| Total runnable lessons | 202 |
-| Total question-bank rows | 4,608 |
-| V0 Diagnosis | 10 lessons / 240 questions |
+| Total runnable lessons | 193 |
+| Total question-bank rows | 4,399 |
+| V0 Diagnosis | 1 lesson / 31 questions |
 | V1 Word Family + Speed | 60 lessons / 1,728 questions |
 | V2 Scene Vocabulary | 60 lessons / 1,200 questions |
 | V3 Collocation | 72 lessons / 1,440 questions |
 | V2/V3 mixed review lessons | 22 lessons |
-| Seed version | `toeic_vocab_tracker_c001_mixed_review_2026_05_17` |
+| Seed version | `toeic_vocab_tracker_c001_cross_lesson_2026_05_17` |
 
 Important count interpretation:
 
 - V2 has 50 core lessons plus 10 mixed review lessons.
 - V3 has 60 core lessons plus 12 mixed review lessons.
-- Mixed review lessons reuse existing review questions, so lesson count increased to 202 while question count remains 4,608.
+- Mixed review lessons reuse existing review questions; V4 draft content is not part of the runnable seed.
 
 ## 2. Review Coverage
 
@@ -38,7 +38,7 @@ Reviewed areas:
 - App shell and shared state: `js/vocab-tracker.js`, `js/state.js`, `js/vocab-db.js`, `js/vocab-scoring.js`
 - Main views: Today, Roadmap, Lesson, Mistakes, Mastery, Export, Question Bank, Settings
 - Content data shape: `data/vocab/curriculum.json`, question-file manifest, V2/V3 mixed review lesson rows
-- Validation and audits: `scripts/validate-vocab-data.js`, `scripts/audit-vocab-quality.js`
+- Validation and audits: `scripts/validate-vocab-data.js`, `scripts/audit-quality-full.js`, `scripts/audit-duplicates.js`
 - Regression tests: Playwright lesson/review/export/content tests
 
 ## 3. Validation Snapshot
@@ -49,8 +49,8 @@ Latest data validation:
 - Missing required fields: 0
 - Duplicate `question_id`: 0
 - Validation warnings: 0
-- Current lesson count by stage: V0 10, V1 60, V2 60, V3 72
-- Current question count by stage: V0 240, V1 1,728, V2 1,200, V3 1,440
+- Current lesson count by stage: V0 1, V1 60, V2 60, V3 72
+- Current question count by stage: V0 31, V1 1,728, V2 1,200, V3 1,440
 
 Latest content-quality audit:
 
@@ -67,19 +67,20 @@ Latest content-quality audit:
 Regression verification completed in this pass:
 
 - `node scripts\validate-vocab-data.js` PASS
-- `node scripts\audit-vocab-quality.js` PASS, report regenerated
-- `node scripts\test-scoring.js` PASS, 19/19 checks
+- `node scripts\audit-quality-full.js` PASS, 0 issues
+- `node scripts\audit-duplicates.js` PASS, 0 duplicates
+- `node scripts\test-scoring.js` PASS, 71/71 checks
 - `npm test -- --reporter=list` PASS, 4/4 Playwright tests
 - Quick UI smoke check PASS for Roadmap V3 filter, Lesson preview, and new export file inventory
 
 ## 4. Optimizations Completed In V3 Pass
 
 1. Corrected visible curriculum count on the launcher.
-   - `index.html` now shows 202 lessons / 4,608 questions and explains the 22 mixed review lessons.
+   - `index.html` now shows 193 lessons / 4,399 questions and explains the 22 mixed review lessons.
 
 2. Added Roadmap filtering.
    - `Roadmap` can now filter by stage, lesson status, and lesson type.
-   - This reduces scanning cost now that the course has 202 lesson rows.
+   - This reduces scanning cost now that the course has 193 lesson rows.
 
 3. Made mixed review lessons clearer in Roadmap.
    - Mixed review rows are visually marked and described as cross-lesson review checkpoints.
@@ -116,6 +117,37 @@ Regression verification completed in this pass:
    - The feedback/continue screen locks the question timer to the saved response time instead of continuing to count.
    - `sw.js` cache changed to `toeic-vorb-v7` for this runtime fix.
 
+11. Completed F-003 scoring fixture protection.
+   - Added external mastery-score fixture cases in `tests/fixtures/mastery-score-fixtures.json`.
+   - `scripts/test-scoring.js` now validates the mastery formula against fixture data as well as boundary cases.
+   - Added `npm run test:scoring`, `npm run test:data`, and `npm run test:all`.
+
+12. Completed F-002 V0 diagnostic recommendations.
+   - Today dashboard now shows `V0 Diagnostic Recommendation` after V0 attempts exist.
+   - The recommendation maps weak V0 question types to V1/V2/V3/V4 direction and gives a start button for the next available lesson.
+   - Export now includes `diagnostic_recommendation.json`.
+   - `sw.js` cache changed to `toeic-vorb-v8`.
+
+13. Completed F-001 stage-seal readiness display.
+   - Today dashboard now shows `Stage Seal Readiness` for each stage.
+   - Readiness checks are display-only: lesson completion, due review clear, repeated-error rate under 5%, and recent accuracy at 85%+.
+   - This does not lock lessons or force `sealed` status.
+
+14. Isolated V4 draft content from production validation.
+   - V4-A draft questions and the V4 item helper script live under `drafts/v4/`.
+   - Formal-phrase V4 items are not present in production `data/vocab/vocab_items.json`.
+   - `node scripts/audit-quality-full.js` returns to `✅ PASSED` against the V0-V3 seed.
+
+## V4 Formal Phrase Status
+
+V4 is not promoted to available yet.
+
+- Existing draft: `drafts/v4/questions_v4a.json`
+- Draft size: 100 questions across `V4-A-181` to `V4-A-185`
+- Existing V4 item helper: `drafts/v4/add-v4-items.js` can regenerate 40 formal phrase items when V4 is intentionally activated.
+- Current blockers: V4 lessons are not in `curriculum.json`, `questions_v4a.json` is not in the manifest, V4 draft `distractor_type` policy must be finalized, and answer slots must be balanced.
+- Required before activation: validate against `docs/question-creation-spec.md`, add V4 curriculum lessons, add the question file to the manifest, bump seed versions, and run full regression.
+
 ## 5. Recommended Next Optimization Measures
 
 1. Add old-item interference to V2/V3 core lessons.
@@ -130,17 +162,11 @@ Regression verification completed in this pass:
    - Speed drills currently use the normal lesson shell.
    - A compact speed layout with pace bands would better match the teaching objective.
 
-4. Add stage-seal readiness.
-   - V1/V2/V3 should show whether all lessons are complete, repeated errors are under threshold, and review queue is clear.
-
-5. Add diagnostic result routing for V0.
-   - V0 can already run, but it should recommend whether the learner should start with V1, V2, V3, or review mode.
-
-6. Add a source-of-truth workflow for Question Bank edits.
+4. Add a source-of-truth workflow for Question Bank edits.
    - Browser edits update IndexedDB only.
    - Keep the warning label and add a maintenance script later if seed JSON round-trip editing becomes routine.
 
-7. Add focused Playwright checks for Roadmap filters and export-file inventory.
+5. Add focused Playwright checks for Roadmap filters, stage-seal readiness, and export-file inventory.
    - Current tests cover lesson flow, review mode, export behavior, and V2/V3 runtime.
    - The new UI/export files should get direct regression checks in the next test pass.
 
@@ -148,7 +174,7 @@ Regression verification completed in this pass:
 
 The app is structurally healthy for controlled V0-V3 learning. The biggest improvement is no longer raw content volume. The priority is now learning workflow quality:
 
-- Make 202 lessons easier to navigate.
+- Make 193 lessons easier to navigate.
 - Convert every answer into immediate learning feedback.
 - Keep mixed review lessons clearly separated from new-learning lessons.
 - Use export files to support both performance analysis and content-quality review.

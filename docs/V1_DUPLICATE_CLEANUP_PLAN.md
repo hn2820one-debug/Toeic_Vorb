@@ -1,6 +1,6 @@
 # V1 Duplicate Cleanup Plan
 
-Historical note: this plan is scoped to V1 cleanup before the V2/V3 content expansion. Current overall content counts and next priorities are maintained in `TO_AI_APP_STATUS_V2.md`.
+Historical note: this plan is scoped to V1 cleanup before the V2/V3 content expansion. Use root `TO_AI.md` for current production counts and next priorities; old `TO_AI_APP_STATUS*.md` files are archived history only.
 
 ## 1. Cleanup Scope
 

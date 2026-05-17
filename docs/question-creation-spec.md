@@ -5,19 +5,24 @@ This document defines all rules for creating questions for this question bank.
 **Every rule here exists because a violation has already caused a real problem.**
 When asking an AI to generate questions, paste the relevant sections as instructions.
 
+Current production scope is V0-V3 only. V4 remains draft-only under `drafts/v4/` and must not be added to `data/vocab/` or the production manifest until a future V4 activation task explicitly updates the spec, curriculum, seed version, data, and tests. For current counts and priorities, use root `TO_AI.md` as the source of truth.
+
+The default production audit is manifest-driven: it loads only files listed in `data/vocab/curriculum.json -> question_files`. Files under `drafts/v4/` are skipped by default. A V4 file under `data/vocab/` or in the production manifest is treated as production leakage.
+
 ---
 
 ## 1. Global Rules (apply to every question in every stage)
 
 ### 1.1 Uniqueness — the most important rule
 
-**Every `question_text` must be unique across the entire question bank.**
+**Every production question row's `question_text` must be unique across the entire question bank.**
 
 This means:
 - Two questions cannot share the same sentence, even if they test different words
 - Two questions cannot share the same sentence with only a prefix changed (`"Reports: The manager..."` vs `"Emails: The manager..."`)
 - Two questions in different lessons, different stages, or different types cannot share a stem
 - Template sentences that are reused across lessons are **forbidden**
+- `mixed_review` lessons are the only exception to the "new row" assumption: they intentionally reuse existing `review_question` IDs from core lessons and do not create new question rows
 
 Verification: run `node scripts/audit-duplicates.js` after generation. Zero duplicates required before import.
 
@@ -27,7 +32,7 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 |-------|------|------|
 | `question_id` | string | Unique across entire bank. Format: `{stage_lower}_{lesson_slug}_q_{NNN}` or `_rv_{NNN}` for review questions |
 | `lesson_id` | string | Must match a lesson in `curriculum.json` |
-| `stage` | string | V0 / V1 / V2 / V3 |
+| `stage` | string | V0 / V1 / V2 / V3 for production data |
 | `type` | string | One of the 10 defined types (§3) |
 | `skill` | string | The lesson's **pedagogical skill**, not necessarily equal to `type`. V1=`word_family`, V2=`scene_vocabulary`, V3=`collocation` for all questions in the lesson regardless of question format |
 | `subskill` | string | The grammatical sub-category tested (e.g. `noun`, `adjective`, `adverb`, or the scene name) |
@@ -72,13 +77,12 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 
 ### V0 — Diagnostic (1 lesson, 31 questions)
 
-**Purpose:** Establish a baseline before V1 starts. Each target word appears once.
+**Purpose:** Establish a compact baseline before V1 starts.
 
-- Primary type: `meaning_choice` (one per unique target word)
-- Secondary types: `scene_vocabulary`, `collocation`, `formal_phrase`, `false_friend`, `part5_sentence_completion`, `part6_context_choice`, `speed_drill` (one each, as variety)
-- One question per target word — no word appears in two questions
+- Current production distribution: 19 `question_ids` + 12 `review_question_ids`
+- Current type mix: 12 `meaning_choice`, 1 each of `scene_vocabulary`, `collocation`, `formal_phrase`, `false_friend`, `part5_sentence_completion`, `part6_context_choice`, `speed_drill`, plus 12 `review_question`
+- Keep stems globally unique and avoid expanding V0 unless it is an intentional production seed change
 - Difficulty: 1–2 only
-- No `review_question_ids`
 
 ### V1 — Word Family (60 lessons across A–F groups)
 
@@ -111,52 +115,65 @@ V1-B through V1-E (lessons 21–52): **20 question_ids + 4 review_question_ids**
 
 ### V2 — TOEIC Scene Vocabulary (50 core + 10 mixed_review = 60 lessons)
 
-**Purpose:** Teach 10 scene-specific words per lesson through in-context fill-in-the-blank.
+**Purpose:** Teach four scene-specific target items per core lesson through in-context fill-in-the-blank.
 
 **Lesson structure:**
-- `question_ids`: 20 questions (18 core + 2 old-item interference from prior lessons)
+- `question_ids`: 20-22 session questions
+  - first same-stage core lesson: 20 same-lesson questions because no prior same-stage items exist
+  - second same-stage core lesson: typically 20 same-lesson questions + 1 prior review-pressure row
+  - later core lessons: typically 20 same-lesson questions + 2 prior review-pressure rows
 - `review_question_ids`: 4 questions per lesson
 
-**Per-lesson type distribution (18 core questions):**
+**Per-lesson base type distribution (20 same-lesson questions, before old-item review pressure):**
 
 | Type | Count | Role |
 |------|-------|------|
-| `scene_vocabulary` | 12 | Core — scene-based fill-in |
-| `meaning_choice` | 4 | Explicit meaning recall |
-| `part5_sentence_completion` | 2 | Extended sentence context |
+| `scene_vocabulary` | 20 | Core — scene-based fill-in |
+| prior `review_question` rows | 0-2 | Old-item review pressure from earlier same-stage core lessons |
 
 **V2-specific rules:**
 - Every `scene_vocabulary` question must include a **scene label prefix** followed by a colon: `"Office: ..."`, `"Finance: ..."`, `"HR: ..."`
 - The scene label must match the lesson's thematic scene
 - The blank (`______`) must be placed where **only the target word** fits given the full sentence context — no other word in the options should be grammatically and semantically acceptable
 - `default_error_code`: `SCENE_VOCAB_GAP`
+- Old-item pressure must use earlier same-stage items only. Do not use V4 items, future items, or mixed-review lessons as sources.
+- `V2-A-71` is a first-core policy exception because no earlier V2 core lesson exists.
 
 ### V3 — Collocation (60 core + 12 mixed_review = 72 lessons)
 
-**Purpose:** Teach which words co-occur naturally with the target vocabulary.
+**Purpose:** Teach four target collocations per core lesson.
 
 **Lesson structure:**
-- `question_ids`: 20 questions (18 core + 2 old-item interference)
+- `question_ids`: 20-22 session questions
+  - first same-stage core lesson: 20 same-lesson questions because no prior same-stage items exist
+  - second same-stage core lesson: typically 20 same-lesson questions + 1 prior review-pressure row
+  - later core lessons: typically 20 same-lesson questions + 2 prior review-pressure rows
 - `review_question_ids`: 4 questions per lesson
 
-**Per-lesson type distribution (18 core questions):**
+**Per-lesson base type distribution (20 same-lesson questions, before old-item review pressure):**
 
 | Type | Count | Role |
 |------|-------|------|
-| `part6_context_choice` | 8 | Multi-sentence context |
-| `collocation` | 5 | Direct collocation test |
-| `part5_sentence_completion` | 5 | Single-sentence TOEIC Part 5 |
+| `part6_context_choice` | 12 | Multi-sentence context |
+| `collocation` | 4 | Direct collocation test |
+| `part5_sentence_completion` | 4 | Single-sentence TOEIC Part 5 |
+| prior `review_question` rows | 0-2 | Old-item review pressure from earlier same-stage core lessons |
 
 **V3-specific rules:**
 - The question must test **collocational knowledge**, not word meaning — a test-taker who knows the word's meaning but not its collocations should still find it challenging
 - Distractors must be words that would be **grammatically legal** but collocationally wrong (`make a decision` vs `do a decision` — both grammatically possible, only one is correct)
 - `part6_context_choice` requires a 2–4 sentence mini-passage before the question
 - `default_error_code`: `COLLOCATION_GAP`
+- Old-item pressure must use earlier same-stage items only. Do not use V4 items, future items, or mixed-review lessons as sources.
+- `V3-A-121` is a first-core policy exception because no earlier V3 core lesson exists.
 
 ### mixed_review lessons (22 lessons: 10 for V2, 12 for V3)
 
 - `question_ids`: taken entirely from the `review_question_ids` of the preceding 5 core lessons (20 questions total = 4 per lesson × 5 lessons)
 - No new questions are written for mixed_review lessons — they are assembled automatically by `scripts/add-mixed-review-lessons.js`
+- Reuse is intentional only when the curriculum lesson has `"lesson_type": "mixed_review"` and the referenced IDs are valid existing `review_question` rows from earlier same-stage core lessons
+- Invalid references, non-review question references, future references, or cross-stage references still fail the full audit
+- Mixed-review reuse must not be counted as duplicate core question stems because no duplicate production question rows are created
 
 ---
 
@@ -311,8 +328,11 @@ Lesson:       [V2-C-91]
 Lesson type:  [scene_vocabulary]
 Scene:        [Office Administration]
 Target words: [list each as: item_id | English word | Chinese meaning]
-Questions needed: [18 core + 4 review_question]
-Type distribution: [12 scene_vocabulary, 4 meaning_choice, 2 part5_sentence_completion, 4 review_question]
+Questions needed: [20 same-lesson core rows + 4 review_question rows]
+Type distribution:
+- V2 example: [20 scene_vocabulary, 4 review_question]
+- V3 example: [12 part6_context_choice, 4 collocation, 4 part5_sentence_completion, 4 review_question]
+Old-item pressure: [0-2 prior same-stage review_question IDs are added in curriculum question_ids when prior same-stage core lessons exist; do not create duplicate rows for mixed_review]
 
 ══ MANDATORY RULES ══
 1. UNIQUENESS: Every question_text must be globally unique.
@@ -336,7 +356,7 @@ JSON array. Each object must have:
 question_id, lesson_id, stage, type, skill, subskill,
 grammar_link_id (null unless grammar-specific),
 question_text, options {A,B,C,D}, correct_answer, explanation_zh,
-target_item_id, distractor_type ("toeic_realistic"),
+target_item_id, distractor_type (stage-appropriate value, e.g. "same_scene_vocabulary" for V2),
 difficulty (1/2/3), estimated_time_seconds,
 default_error_code, tags (array)
 ```
@@ -358,8 +378,9 @@ After receiving generated questions and before adding them to the question bank:
 
 3. **Check lesson question counts:**
    - V1 lesson: 18 `question_ids` + 6 `review_question_ids`
-   - V2 lesson: 20 `question_ids` + 4 `review_question_ids` (before interference is added by script)
-   - V3 lesson: 20 `question_ids` + 4 `review_question_ids`
+   - V2 core lesson: 20-22 final `question_ids` + 4 `review_question_ids`
+   - V3 core lesson: 20-22 final `question_ids` + 4 `review_question_ids`
+   - V2/V3 mixed-review lesson: `question_ids` should be valid reused `review_question` IDs from earlier same-stage core lessons; no `review_question_ids`
 
 4. **Bump `seed_version`** in three files simultaneously:
    - `data/vocab/curriculum.json` → `seed_version`
@@ -371,7 +392,19 @@ After receiving generated questions and before adding them to the question bank:
    ```
    npx playwright test
    ```
-   All 4 tests must pass before the content is considered ready.
+   All Playwright tests must pass before the content is considered ready.
+
+Full validation for production changes:
+
+```powershell
+node scripts/validate-vocab-data.js
+node scripts/audit-quality-full.js
+node scripts/audit-duplicates.js
+npm run test:scoring
+npm run test:audit
+npx playwright test
+npm run test:all
+```
 
 ---
 
@@ -399,7 +432,7 @@ These are real problems that occurred and are now fixed. The rules above were wr
 
 | Issue | Root cause | Rule that prevents it |
 |-------|-----------|----------------------|
-| V0: 31 unique stems for 240 questions (×30 reuse) | No uniqueness constraint in generation prompt | §1.1 |
+| Historical V0 pre-consolidation draft: 31 unique stems repeated across an obsolete 240-question draft. Current production V0 is 31 questions. | No uniqueness constraint in generation prompt | §1.1 |
 | V1: 762 duplicate stems across lessons | `speed_drill` lessons copied `word_family` sentences; `word_family` shared 17 template sentences across 10 lessons | §1.1, §2 V1 |
 | V3 vocab_items: empty `chinese` and `example` | Item data was generated without requiring those fields | (Vocab item spec, not question spec) |
 | Audit script missed duplicates | Audit checked coverage and interference but not text uniqueness | §6 post-generation checklist |

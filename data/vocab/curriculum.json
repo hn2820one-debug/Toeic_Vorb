@@ -2,7 +2,7 @@
   "course_id": "toeic_vocab_v1",
   "course_name": "TOEIC Vocabulary Tracker",
   "schema_version": 1,
-  "seed_version": "toeic_vocab_tracker_c001_cross_lesson_2026_05_17",
+  "seed_version": "toeic_vocab_tracker_c002_old_item_interference_2026_05_18",
   "generated_at": "2026-05-14T10:30:00+08:00",
   "default_user": {
     "user_id": "Keith",
@@ -3437,7 +3437,8 @@
         "v2_a_72_q_017",
         "v2_a_72_q_018",
         "v2_a_72_q_019",
-        "v2_a_72_q_020"
+        "v2_a_72_q_020",
+        "v2_a_71_rv_022"
       ],
       "review_question_ids": [
         "v2_a_72_rv_021",
@@ -3484,7 +3485,9 @@
         "v2_a_73_q_017",
         "v2_a_73_q_018",
         "v2_a_73_q_019",
-        "v2_a_73_q_020"
+        "v2_a_73_q_020",
+        "v2_a_72_rv_021",
+        "v2_a_71_rv_022"
       ],
       "review_question_ids": [
         "v2_a_73_rv_021",
@@ -6251,7 +6254,8 @@
         "v3_a_122_q_017",
         "v3_a_122_q_018",
         "v3_a_122_q_019",
-        "v3_a_122_q_020"
+        "v3_a_122_q_020",
+        "v3_a_121_rv_024"
       ],
       "review_question_ids": [
         "v3_a_122_rv_021",
@@ -6298,7 +6302,9 @@
         "v3_a_123_q_017",
         "v3_a_123_q_018",
         "v3_a_123_q_019",
-        "v3_a_123_q_020"
+        "v3_a_123_q_020",
+        "v3_a_122_rv_024",
+        "v3_a_121_rv_024"
       ],
       "review_question_ids": [
         "v3_a_123_rv_021",

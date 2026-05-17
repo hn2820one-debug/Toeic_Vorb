@@ -2,7 +2,7 @@
 // This SW only caches Vocabulary Tracker assets.
 // It does NOT cache Grammar / PoS App files.
 
-const CACHE_NAME = "toeic-vorb-v7";
+const CACHE_NAME = "toeic-vorb-v8";
 const STATIC_ASSETS = [
   "./",
   "./index.html",

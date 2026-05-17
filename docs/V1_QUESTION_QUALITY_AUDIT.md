@@ -1,6 +1,6 @@
 # V1 Question Quality Audit
 
-Historical note: this audit is scoped to V1 only and was written before the V2/V3 content expansion. Current overall content counts are maintained in `README.md`, `docs/CURRICULUM_MAP.md`, and `docs/CHATGPT_ANALYSIS_PACKAGE.md`.
+Historical note: this audit is scoped to V1 only and was written before the V2/V3 content expansion. Use root `TO_AI.md` for current production counts and priorities.
 
 ## 1. Scope
 

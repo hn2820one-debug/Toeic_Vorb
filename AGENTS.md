@@ -1,6 +1,6 @@
-# CLAUDE.md — TOEIC Vocabulary Tracker (Program B)
+# AGENTS.md — TOEIC Vocabulary Tracker (Program B)
 
-> This file is read automatically by Claude Code at the start of every session.
+> This file is read automatically by Codex at the start of every session.
 > It describes Program B only. Do NOT touch Program A.
 
 `TO_AI.md` is the single active AI handoff and source of truth. Old `TO_AI_APP_STATUS*.md` files under `docs/backups/to_ai/` are historical only and must not be used as current facts.

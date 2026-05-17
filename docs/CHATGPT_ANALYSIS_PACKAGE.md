@@ -1,6 +1,8 @@
 # ChatGPT Analysis Package
 
-Status: CURRENT AFTER P1 REVIEW MODE
+Status: HISTORICAL AFTER P1 REVIEW MODE
+
+Obsolete-count warning: this document is retained as an analysis package snapshot. Use root `TO_AI.md` as the single current source of truth for production counts, seed status, and next priorities.
 
 ## 1. Project Summary
 
@@ -12,13 +14,16 @@ TOEIC Vocabulary Tracker: a mobile-first local PWA for recording every lesson, q
 
 ## 3. Current Content
 
-- Total lessons: 180
-- Total questions: 4608
-- V0: 10 lessons, 240 questions
+- Total lessons: 193
+- Total questions: 4,399
+- Vocab items: 494
+- Question files in manifest: 18
+- V0: 1 lesson, 31 questions
 - V1: 60 lessons, 1728 questions
-- V2: 50 lessons, 1200 questions
-- V3: 60 lessons, 1440 questions
-- V4-V6: planned only
+- V2: 60 lessons, 1200 questions
+- V3: 72 lessons, 1440 questions
+- V4: draft-only outside production seed
+- V5-V6: planned only
 
 ## 4. Current File Tree
 

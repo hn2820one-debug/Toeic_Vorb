@@ -5,7 +5,9 @@ import {
   byId,
   optionText,
   setNotice,
-  loadData
+  loadData,
+  errorCodeLabel,
+  ERROR_CODE_LABELS
 } from "../state.js";
 import { getReviewCandidates, upsertReviewQueue } from "./lesson.js";
 
@@ -57,18 +59,30 @@ export function renderMistakes() {
     ? pending
     : pending.filter((entry) => visibleReviewIds.has(entry.review_id));
   const items = byId(state.vocabItems, "item_id");
-  const rows = visibleQueue.map((entry) => `
+  const rows = visibleQueue.map((entry) => {
+    const reviewState = entry.review_state || "";
+    const whyDue = reviewState === "repeated_error" ? "Repeated error"
+      : reviewState === "still_weak" ? "Still weak"
+      : reviewState === "new_error" ? "New error"
+      : reviewState === "fixed" ? "Fixed · due review"
+      : reviewState === "stable" ? "Stable · due review"
+      : entry.reason || "Pending review";
+    const nextAt = entry.next_review_at ? `next ${entry.next_review_at}` : `due ${html(entry.due_date)}`;
+    const repCount = entry.repeated_error_count ? ` · ${entry.repeated_error_count}× repeated` : "";
+    return `
     <article class="queue-card priority-${entry.priority}">
       <div>
         <strong>${html(items[entry.item_id]?.base_word || entry.item_id)}</strong>
-        <p>${html(entry.reason)} · ${html(entry.review_status || "pending")} · due ${html(entry.due_date)} · ${entry.question_ids?.length || 0} questions</p>
+        <p class="queue-why">${html(whyDue)}${repCount}</p>
+        <p class="queue-meta">${nextAt} · ${entry.question_ids?.length || 0} questions</p>
       </div>
       <div class="queue-actions">
         <span class="priority-pill">P${entry.priority}</span>
         <button class="button small" type="button" onclick="VocabTracker.markQueueDone('${html(entry.review_id)}')">Done</button>
       </div>
     </article>
-  `).join("");
+  `;
+  }).join("");
   const recentOutcomes = state.reviewQueue
     .filter((entry) => entry.last_review_session_id)
     .sort((a, b) => String(b.last_reviewed_at || "").localeCompare(String(a.last_reviewed_at || "")))
@@ -105,15 +119,20 @@ export function renderMistakes() {
     </section>
     <section class="tracker-panel">
       <h3>Recent Review Outcomes</h3>
-      ${recentOutcomes.length ? `<div class="queue-list">${recentOutcomes.map((entry) => `
+      ${recentOutcomes.length ? `<div class="queue-list">${recentOutcomes.map((entry) => {
+        const stateLabel = entry.review_state || entry.review_status || "reviewed";
+        const consec = entry.consecutive_review_correct ? ` · ${entry.consecutive_review_correct} consec` : "";
+        return `
         <article class="queue-card">
           <div>
             <strong>${html(items[entry.item_id]?.base_word || entry.item_id)}</strong>
-            <p>${html(entry.review_status || "reviewed")} · ${html(entry.review_correct_count || 0)}/${html(entry.review_attempt_count || 0)} review correct · ${html(entry.last_reviewed_at || "")}</p>
+            <p class="queue-why">${html(stateLabel)}${consec}</p>
+            <p class="queue-meta">${html(entry.review_correct_count || 0)}/${html(entry.review_attempt_count || 0)} correct · ${html(entry.last_reviewed_at || "")}</p>
           </div>
-          <span class="priority-pill status-${html(entry.review_status || "pending")}">${html(entry.review_status || "pending")}</span>
+          <span class="priority-pill status-${html(stateLabel)}">${html(stateLabel)}</span>
         </article>
-      `).join("")}</div>` : `<p class="muted-note">No review outcomes yet.</p>`}
+      `;
+      }).join("")}</div>` : `<p class="muted-note">No review outcomes yet.</p>`}
     </section>
     <section class="tracker-panel">
       <h3>Recent Wrong Attempts</h3>
@@ -143,7 +162,7 @@ export function renderWrongAttemptList() {
     return `
       <article class="wrong-line">
         <strong>${html(attempt.lesson_id)} · ${html(q?.question_text || attempt.question_id)}</strong>
-        <small>Your ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · Correct ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(attempt.error_code || attempt.default_error_code)}</small>
+        <small>Your ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · Correct ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(errorCodeLabel(attempt.error_code || attempt.default_error_code))}</small>
         ${vocabItem?.chinese ? `<div class="vocab-card"><p class="vocab-chinese">${html(vocabItem.chinese)}</p>${vocabItem.example ? `<p class="vocab-example">${html(vocabItem.example)}</p>` : ""}</div>` : ""}
       </article>
     `;
@@ -204,20 +223,25 @@ function renderV0Diagnostic(sessionId) {
     wrongByCode[code] = (wrongByCode[code] || 0) + 1;
   });
 
-  const codeInfo = {
-    VOCAB_UNKNOWN:      { label: "核心詞義不熟",   rec: "V1 Word Family 詞族基礎" },
-    VOCAB_WEAK_RECALL:  { label: "記憶鞏固不足",   rec: "V1 Review Sessions 間隔複習" },
-    SCENE_VOCAB_GAP:    { label: "商業情境詞彙",   rec: "V2 Business Context 商業情境" },
-    FORMAL_PHRASE:      { label: "正式用語欠缺",   rec: "V4 Formal Phrases（規劃中）" },
-    FALSE_FRIEND:       { label: "近義詞混淆",     rec: "V1 False Friends 題型" },
-    TIME_PRESSURE:      { label: "反應速度不足",   rec: "各階段 Speed Drill 練習" }
+  const codeRec = {
+    VOCAB_UNKNOWN:     "V1 Word Family 詞族基礎",
+    VOCAB_WEAK_RECALL: "V1 Review Sessions 間隔複習",
+    SCENE_VOCAB_GAP:   "V2 Business Context 商業情境",
+    FORMAL_PHRASE:     "V4 Formal Phrases（規劃中）",
+    FALSE_FRIEND:      "V1 False Friends 題型",
+    TIME_PRESSURE:     "各階段 Speed Drill 練習",
+    WORD_FAMILY_POS:   "V1 Word Family 詞族練習",
+    COLLOCATION_PREP:  "V3 Collocation 搭配詞練習",
+    CARELESS:          "放慢作答速度，仔細閱讀選項",
+    REPEATED_ERROR:    "加入複習佇列，集中練習弱點"
   };
 
   const weakItems = Object.entries(wrongByCode)
     .sort((a, b) => b[1] - a[1])
     .map(([code, count]) => {
-      const info = codeInfo[code] || { label: code, rec: "General Practice" };
-      return `<li><strong>${html(info.label)}</strong>（${count} 題）→ 建議加強：${html(info.rec)}</li>`;
+      const label = errorCodeLabel(code);
+      const rec = codeRec[code] || "General Practice";
+      return `<li><strong>${html(label)}</strong>（${count} 題）→ 建議加強：${html(rec)}</li>`;
     }).join("");
 
   const advice = accuracy >= 0.8
@@ -248,7 +272,7 @@ export function renderSessionErrorReview(sessionId) {
       <section class="tracker-panel">
         <h3>Error Review + Scheduling</h3>
         <p class="tracker-bigline">No incorrect answers in this session.</p>
-        <button class="button primary" type="button" onclick="VocabTracker.closeSessionReview()">Back to Dashboard</button>
+        <button class="button primary" type="button" onclick="VocabTracker.closeSessionReview()">開始下一課</button>
       </section>
     `;
   }
@@ -278,7 +302,7 @@ export function renderSessionErrorReview(sessionId) {
               ${renderGrammarLink(q?.grammar_link_id)}
               <label class="field-label">Error code</label>
               <select data-error-attempt="${html(attempt.attempt_id)}">
-                ${window.VocabScoring.ERROR_CODES.map((code) => `<option value="${code}" ${(attempt.error_code || attempt.default_error_code) === code ? "selected" : ""}>${code}</option>`).join("")}
+                ${window.VocabScoring.ERROR_CODES.map((code) => `<option value="${code}" ${(attempt.error_code || attempt.default_error_code) === code ? "selected" : ""}>${ERROR_CODE_LABELS[code] || code}</option>`).join("")}
               </select>
             </article>
           `;
@@ -300,7 +324,7 @@ export async function confirmSessionErrors() {
   state.reviewSessionId = null;
   await loadData();
   setNotice("Error codes saved and review queue updated.", "ok");
-  callSetView("today");
+  callSetView("lesson");
 }
 
 export async function confirmError(attemptId, errorCode) {
@@ -344,7 +368,7 @@ export async function confirmError(attemptId, errorCode) {
 
 export function closeSessionReview() {
   state.reviewSessionId = null;
-  callSetView("today");
+  callSetView("lesson");
 }
 
 export async function markQueueDone(reviewId) {

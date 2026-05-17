@@ -2,6 +2,8 @@ import {
   LESSON_STEPS,
   state,
   html,
+  pct,
+  seconds,
   average,
   byId,
   currentLesson,
@@ -10,11 +12,56 @@ import {
   setNotice,
   optionText,
   questionTypeLabel,
-  learningGuidance
+  learningGuidance,
+  renderQuestionText
 } from "../state.js";
+import { buildStageSealReadiness } from "./today.js";
 
 export const REVIEW_LESSON_ID = "REVIEW_QUEUE";
 const REVIEW_QUESTION_LIMIT = 20;
+export const SPEED_TIME_LIMIT = 12; // seconds per question in speed mode
+
+const STAGE_ORDER = ["V0", "V1", "V2", "V3"];
+
+function findPreviousStageId(stageId) {
+  const idx = STAGE_ORDER.indexOf(stageId);
+  return idx > 0 ? STAGE_ORDER[idx - 1] : null;
+}
+
+function checkStageSealGate(lessonId) {
+  const lesson = state.lessons.find((l) => l.lesson_id === lessonId);
+  if (!lesson) return null;
+  const prevStageId = findPreviousStageId(lesson.stage);
+  if (!prevStageId) return null;
+  const prevStageMeta = (state.curriculum?.stages || []).find((s) => s.stage === prevStageId);
+  if (!prevStageMeta) return null;
+  const readiness = buildStageSealReadiness(prevStageMeta);
+  if (readiness.ready || readiness.allSealed) return null;
+  return readiness;
+}
+
+function renderStageSealWarning({ lessonId, warning }) {
+  const lesson = state.lessons.find((l) => l.lesson_id === lessonId);
+  const reasons = warning.reasons || [];
+  return `
+    <section class="tracker-panel stage-gate-warning" data-testid="stage-gate-warning">
+      <h3>Stage Readiness Check</h3>
+      <p class="tracker-bigline">${html(warning.stage)} ${html(warning.stageName)} — not yet ready</p>
+      <p class="muted-note">You are starting <strong>${html(lessonId)}</strong> (Stage ${html(lesson?.stage || "")}), but the previous stage has not met readiness criteria.</p>
+      ${reasons.length ? `
+        <div class="stage-gate-reasons" data-testid="stage-gate-reasons">
+          <strong>Not ready because:</strong>
+          <ul>${reasons.map((r) => `<li>${html(r)}</li>`).join("")}</ul>
+        </div>
+      ` : ""}
+      <div class="tracker-actions">
+        <button class="button secondary" type="button" onclick="VocabTracker.startReviewMode('due')">Go to Review Mode</button>
+        <button class="button primary" type="button" data-testid="stage-gate-continue" onclick="VocabTracker.confirmStartLesson()">Continue Anyway</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.cancelStageSeal()">Cancel</button>
+      </div>
+    </section>
+  `;
+}
 
 const lessonRuntime = {
   render: null,
@@ -55,6 +102,10 @@ function isReviewSession(session) {
   return session?.mode === "review_queue";
 }
 
+export function isSpeedSession(session) {
+  return session?.mode === "speed_drill";
+}
+
 function reviewFilterLabel(filter) {
   return {
     due: "Due Today",
@@ -71,7 +122,7 @@ function isDue(entry, today) {
 function reviewEntryMatchesFilter(entry, filter, today) {
   if (entry.status !== "pending") return false;
   if (filter === "high_priority") return Number(entry.priority || 0) >= 5;
-  if (filter === "repeated") return entry.reason === "repeated_error" || entry.review_status === "repeated_error" || Number(entry.priority || 0) >= 5;
+  if (filter === "repeated") return entry.reason === "repeated_error" || entry.review_status === "repeated_error" || entry.review_state === "repeated_error" || Number(entry.priority || 0) >= 5;
   if (filter === "all") return true;
   return isDue(entry, today);
 }
@@ -160,7 +211,7 @@ function renderFeedback(question, userAnswer, isCorrect, hasMore) {
       <div class="feedback-banner ${isCorrect ? "correct" : "wrong"}">
         ${isCorrect ? "✓ Correct" : "✗ Wrong — correct answer highlighted"}
       </div>
-      <p class="question-text">${html(question.question_text)}</p>
+      <p class="question-text">${renderQuestionText(question.question_text)}</p>
       <div class="answer-grid">${buttons}</div>
       ${question.explanation_zh ? `<p class="feedback-explanation">${html(question.explanation_zh)}</p>` : ""}
       ${renderPostAnswerLearningCard(question, userAnswer, isCorrect)}
@@ -201,6 +252,11 @@ function renderPostAnswerLearningCard(question, userAnswer, isCorrect) {
         ${grammarLink ? `<p>${html(grammarLink.title_zh || question.grammar_link_id)}: ${html(grammarLink.rule_zh || "")}</p>` : ""}
       </div>
     </aside>
+    ${!isCorrect && item?.chinese ? `
+    <div class="vocab-card feedback-vocab">
+      <p class="vocab-chinese">${html(item.chinese)}</p>
+      ${item.example ? `<p class="vocab-example">${html(item.example)}</p>` : ""}
+    </div>` : ""}
   `;
 }
 
@@ -211,6 +267,15 @@ function renderLessonPreview(lesson) {
       <div class="lesson-preview">
         <strong>Mixed Review</strong>
         <span>This lesson recycles ${lesson.question_ids?.length || 0} review questions from earlier ${html(lesson.stage)} lessons.</span>
+      </div>
+    `;
+  }
+
+  if (lesson.lesson_type === "speed_drill") {
+    return `
+      <div class="lesson-preview speed-preview">
+        <strong>Speed Reflex Drill</strong>
+        <span>${lesson.question_ids?.length || 0} speed questions · ${SPEED_TIME_LIMIT}s per question · click to answer · no confirm step</span>
       </div>
     `;
   }
@@ -245,22 +310,155 @@ function renderLessonPreview(lesson) {
   `;
 }
 
+// --- Speed Mode rendering ---
+
+function renderSpeedLesson(lesson, row, progress) {
+  const session = state.activeSession;
+  const question = row.question;
+  const answeredList = Object.values(session.answers || {});
+  const correctSoFar = answeredList.filter((a) => a.is_correct).length;
+  const wrongSoFar = answeredList.length - correctSoFar;
+  const width = Math.round((progress.answered / Math.max(progress.total, 1)) * 100);
+
+  return `
+    <section class="runtime-shell speed-mode">
+      <div class="speed-header">
+        <div class="speed-progress-info">
+          <span>Q <strong>${progress.index + 1}</strong> / ${progress.total}</span>
+          <span class="speed-score">✓ ${correctSoFar} &nbsp; ✗ ${wrongSoFar}</span>
+        </div>
+        <div class="speed-countdown-wrapper">
+          <span id="speed-countdown" class="speed-countdown">${SPEED_TIME_LIMIT}</span>
+          <small>sec</small>
+        </div>
+        <div class="speed-lesson-label">${html(lesson?.lesson_id || session.lesson_id)}</div>
+      </div>
+      <div class="tracker-progress runtime-progress"><div style="width:${width}%"></div></div>
+      <article class="question-panel speed-question">
+        <div class="question-meta">
+          <span>${html(questionTypeLabel(question.type))}</span>
+          <span>Target ${window.VocabScoring.targetTime(question.type)}s</span>
+        </div>
+        <p class="question-text">${renderQuestionText(question.question_text)}</p>
+        <div class="answer-grid">
+          ${["A", "B", "C", "D"].map((letter) => `
+            <button class="answer-button" type="button" onclick="VocabTracker.speedAnswerCurrent('${letter}')">
+              <strong>${letter}</strong>
+              <span>${html(question.options?.[letter] || "")}</span>
+            </button>
+          `).join("")}
+        </div>
+      </article>
+      <div class="runtime-actions">
+        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">Exit</button>
+      </div>
+    </section>
+  `;
+}
+
+function renderSpeedSummary(session) {
+  const answers = session.answers || {};
+  const rows = state.runtimeQuestions;
+  const total = rows.length;
+  const answeredList = Object.values(answers);
+  const correct = answeredList.filter((a) => a.is_correct).length;
+  const timeouts = answeredList.filter((a) => a.timeout).length;
+  const accuracy = total ? correct / total : 0;
+  const totalTime = answeredList.reduce((s, a) => s + (Number(a.response_time_seconds) || 0), 0);
+  const avgTime = answeredList.length ? totalTime / answeredList.length : 0;
+  const targetSec = window.VocabScoring.targetTime("speed_drill");
+  const fastCorrect = answeredList.filter((a) => a.is_correct && Number(a.response_time_seconds) <= targetSec).length;
+  const slowCorrect = answeredList.filter((a) => a.is_correct && Number(a.response_time_seconds) > targetSec).length;
+  const wrong = answeredList.length - correct;
+
+  const wrongRows = rows
+    .filter((row) => {
+      const a = answers[row.question.question_id];
+      return a && !a.is_correct;
+    })
+    .map((row) => {
+      const q = row.question;
+      const a = answers[q.question_id];
+      const item = state.vocabItems.find((i) => i.item_id === q.target_item_id);
+      return `
+        <article class="speed-review-row ${a.timeout ? "timeout" : "wrong"}">
+          <p class="question-text small">${renderQuestionText(q.question_text)}</p>
+          <div class="speed-review-meta">
+            <span>Your: ${html(a.user_answer)} ${html(q.options?.[a.user_answer] || "(timeout)")}</span>
+            <span>Correct: ${html(q.correct_answer)} ${html(q.options?.[q.correct_answer] || "")}</span>
+            <span>${seconds(a.response_time_seconds)}${a.timeout ? " ⏱ timeout" : ""}</span>
+            ${item?.chinese ? `<span>${html(item.chinese)}</span>` : ""}
+          </div>
+        </article>
+      `;
+    }).join("");
+
+  return `
+    <section class="runtime-shell speed-mode">
+      <article class="tracker-panel">
+        <h3>Speed Session Complete</h3>
+        <div class="tracker-grid speed-summary-grid">
+          <article class="tracker-stat ${accuracy >= 0.8 ? "" : "stat-warn"}">
+            <span>Accuracy</span><strong>${pct(accuracy)}</strong><small>${correct}/${total}</small>
+          </article>
+          <article class="tracker-stat">
+            <span>Avg Time</span><strong>${seconds(avgTime)}</strong><small>per question</small>
+          </article>
+          <article class="tracker-stat">
+            <span>Fast Correct</span><strong>${fastCorrect}</strong><small>≤ ${targetSec}s</small>
+          </article>
+          <article class="tracker-stat ${timeouts ? "stat-warn" : ""}">
+            <span>Timeouts</span><strong>${timeouts}</strong><small>missed</small>
+          </article>
+        </div>
+        <div class="speed-bucket-breakdown">
+          <span class="speed-stat ok">Fast correct: ${fastCorrect}</span>
+          <span class="speed-stat slow">Slow correct: ${slowCorrect}</span>
+          <span class="speed-stat bad">Timeouts: ${timeouts}</span>
+        </div>
+        <div class="tracker-actions">
+          <button class="button primary" type="button" onclick="VocabTracker.finishLesson()">Finish &amp; Save</button>
+          <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">Exit Without Saving</button>
+        </div>
+      </article>
+      ${wrong > 0 ? `
+        <article class="tracker-panel">
+          <h3>Items to Review (${wrong})</h3>
+          <div class="speed-review-list">${wrongRows}</div>
+        </article>
+      ` : `<article class="tracker-panel"><p class="tracker-bigline">No errors — perfect run!</p></article>`}
+    </section>
+  `;
+}
+
+// --- Main lesson renderer ---
+
 export function renderLesson() {
   const active = window.VocabDB.loadActiveSession();
   if (!state.activeSession && active) {
     state.activeSession = active;
   }
 
+  if (!state.activeSession && state.stageSealPending) {
+    return renderStageSealWarning(state.stageSealPending);
+  }
+
   if (!state.activeSession) {
     const lesson = currentLesson();
+    const isSpeed = lesson?.lesson_type === "speed_drill";
     return `
       <section class="tracker-panel">
         <h3>Lesson Start</h3>
         <p class="tracker-bigline">${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "")}</p>
         ${renderLessonPreview(lesson)}
-        <div class="step-plan">
-          ${LESSON_STEPS.map((step) => `<div><strong>${html(step.label)}</strong><span>${step.minutes} min</span></div>`).join("")}
-        </div>
+        ${!isSpeed ? `
+        <p class="lesson-quick-meta">本課 ${(lesson?.question_ids?.length || 0) + (lesson?.review_question_ids?.length || 0)} 題 · 約 ${lesson?.estimated_minutes || 20} 分鐘</p>
+        <details class="step-plan-details">
+          <summary>查看學習步驟</summary>
+          <div class="step-plan">
+            ${LESSON_STEPS.map((step) => `<div><strong>${html(step.label)}</strong><span>${step.minutes} min</span></div>`).join("")}
+          </div>
+        </details>` : ""}
         <div class="tracker-actions">
           <button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">Start Current Lesson</button>
           <button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">Choose Lesson</button>
@@ -280,7 +478,12 @@ export function renderLesson() {
     }
     : state.lessons.find((row) => row.lesson_id === session.lesson_id);
 
-  if (state.showFeedback) {
+  // Speed mode: all-answered → show speed summary
+  if (isSpeedSession(session) && progress.answered >= progress.total && progress.total > 0) {
+    return renderSpeedSummary(session);
+  }
+
+  if (state.showFeedback && !isSpeedSession(session)) {
     const row = progress.current;
     if (row) {
       const question = row.question;
@@ -327,6 +530,12 @@ export function renderLesson() {
   if (!row) return `<section class="tracker-panel"><p class="muted-note">No question is available for this lesson.</p></section>`;
   const question = row.question;
   ensureQuestionClock(question.question_id);
+
+  // Speed mode: click-to-answer, no confirm button
+  if (isSpeedSession(session)) {
+    return renderSpeedLesson(lesson, row, progress);
+  }
+
   const savedAnswer = session.answers?.[question.question_id]?.user_answer || null;
   const selected = savedAnswer || state.pendingAnswer;
 
@@ -340,7 +549,7 @@ export function renderLesson() {
           <span>Target ${window.VocabScoring.targetTime(question.type)}s</span>
         </div>
         ${renderQuestionGuidance(question)}
-        <p class="question-text">${html(question.question_text)}</p>
+        <p class="question-text">${renderQuestionText(question.question_text)}</p>
         <div class="answer-grid">
           ${["A", "B", "C", "D"].map((letter) => `
             <button class="answer-button ${selected === letter ? "selected" : ""}" type="button" ${savedAnswer || session.paused ? "disabled" : ""} onclick="VocabTracker.answerCurrent('${letter}')">
@@ -349,6 +558,7 @@ export function renderLesson() {
             </button>
           `).join("")}
         </div>
+        <p class="keyboard-hint">快捷鍵：A / B / C / D 選擇 · Enter 確認</p>
         <div class="confirm-answer-row">
           <p class="muted-note">${savedAnswer ? "Answer locked and saved. Correctness is hidden until review." : selected ? `Selected ${html(selected)}. Press Confirm Answer to save.` : "Choose one answer, then press Confirm Answer. Nothing is saved until you confirm."}</p>
           <button class="button primary" type="button" onclick="VocabTracker.confirmCurrentAnswer()" ${!selected || savedAnswer || session.paused ? "disabled" : ""}>Confirm Answer</button>
@@ -392,6 +602,20 @@ export function renderRuntimeHeader(lesson, currentStepId) {
     <div class="tracker-progress runtime-progress"><div style="width:${width}%"></div></div>
     ${session.paused ? `<div class="tracker-alert warn">Lesson paused. Resume to continue recording response time.</div>` : ""}
   `;
+}
+
+function buildSpeedRuntimeQuestions(lesson, allLessonQuestions, session) {
+  const questionMap = byId(allLessonQuestions, "question_id");
+  if (session?.question_ids?.length) {
+    return session.question_ids.map((id) => ({
+      question: questionMap[id],
+      step: "toeic_practice"
+    })).filter((row) => row.question);
+  }
+  return (lesson.question_ids || [])
+    .map((id) => questionMap[id])
+    .filter(Boolean)
+    .map((q) => ({ question: q, step: "toeic_practice" }));
 }
 
 export function buildRuntimeQuestions(lesson, allLessonQuestions, session) {
@@ -440,6 +664,7 @@ export function ensureQuestionClock(questionId) {
     state.questionStartedAt = Date.now();
     state.pendingAnswer = null;
     state.lockedQuestionSeconds = null;
+    state.speedTimerFired = false;
   }
 }
 
@@ -472,12 +697,16 @@ export async function prepareRuntime(lessonId, existingSession) {
   const lesson = state.lessons.find((row) => row.lesson_id === lessonId);
   if (!lesson) throw new Error(`Lesson not found: ${lessonId}`);
   const allLessonQuestions = await window.VocabDB.getQuestionsForLesson(lesson);
-  const runtime = buildRuntimeQuestions(lesson, allLessonQuestions, existingSession);
+
+  const runtime = lesson.lesson_type === "speed_drill"
+    ? buildSpeedRuntimeQuestions(lesson, allLessonQuestions, existingSession)
+    : buildRuntimeQuestions(lesson, allLessonQuestions, existingSession);
+
   state.runtimeQuestions = runtime;
   return { lesson, runtime };
 }
 
-export async function startLesson(lessonId) {
+export async function startLesson(lessonId, opts = {}) {
   if (!lessonId) return;
   const active = window.VocabDB.loadActiveSession();
   if (active && active.lesson_id === lessonId) {
@@ -487,7 +716,18 @@ export async function startLesson(lessonId) {
     return;
   }
 
+  if (!opts.force) {
+    const gateFailure = checkStageSealGate(lessonId);
+    if (gateFailure) {
+      state.stageSealPending = { lessonId, warning: gateFailure };
+      callSetView("lesson");
+      return;
+    }
+  }
+
+  state.stageSealPending = null;
   const { lesson, runtime } = await prepareRuntime(lessonId, null);
+  const isSpeed = lesson.lesson_type === "speed_drill";
   const now = new Date();
   const session = {
     session_id: window.VocabDB.createId("ses"),
@@ -504,6 +744,7 @@ export async function startLesson(lessonId) {
     paused: false,
     pause_started_at_ms: null,
     current_index: 0,
+    mode: isSpeed ? "speed_drill" : undefined,
     question_ids: runtime.map((row) => row.question.question_id),
     step_by_question: Object.fromEntries(runtime.map((row) => [row.question.question_id, row.step])),
     answers: {}
@@ -514,6 +755,7 @@ export async function startLesson(lessonId) {
   state.questionStartedAt = null;
   state.pendingAnswer = null;
   state.lockedQuestionSeconds = null;
+  state.speedTimerFired = false;
   window.VocabDB.saveActiveSession(session);
   window.VocabDB.savePrefs({ last_opened_lesson: lesson.lesson_id, current_stage: lesson.stage });
   await window.VocabDB.put("lessons", { ...lesson, status: "in_progress" });
@@ -521,6 +763,18 @@ export async function startLesson(lessonId) {
   state.activeSession = session;
   await prepareRuntime(lessonId, session);
   callSetView("lesson");
+}
+
+export async function confirmStartLesson() {
+  const pending = state.stageSealPending;
+  if (!pending) return;
+  state.stageSealPending = null;
+  await startLesson(pending.lessonId, { force: true });
+}
+
+export function cancelStageSeal() {
+  state.stageSealPending = null;
+  callSetView("today");
 }
 
 export async function startReviewMode(filter = "due") {
@@ -572,6 +826,7 @@ export async function startReviewMode(filter = "due") {
   state.pendingAnswer = null;
   state.lockedQuestionSeconds = null;
   state.lastReviewSummary = null;
+  state.speedTimerFired = false;
   window.VocabDB.saveActiveSession(session);
   window.VocabDB.savePrefs({ current_stage: "REVIEW" });
   callSetView("lesson");
@@ -629,7 +884,82 @@ export async function confirmCurrentAnswer() {
     review_ids: reviewIds,
     review_filter: reviewMode ? session.review_filter : null,
     target_item_id: question.target_item_id,
-    grammar_link_id: question.grammar_link_id || null
+    grammar_link_id: question.grammar_link_id || null,
+    lesson_runtime: "normal",
+    timeout: false
+  };
+
+  await window.VocabDB.put("attempts", attempt);
+  await updateItemMastery(question, attempt);
+
+  // Immediate review queue update: wrong → new error; slow correct → low priority review
+  if (!isCorrect && !reviewMode) {
+    await upsertReviewQueue(attempt, attempt.is_repeated_error ? "repeated_error" : "new_error", attempt.review_priority);
+  }
+  if (isCorrect && speedBucket === "slow_correct" && !reviewMode) {
+    await upsertReviewQueue(attempt, "slow_correct", 2);
+  }
+
+  session.answers[question.question_id] = {
+    attempt_id: attempt.attempt_id,
+    user_answer: letter,
+    is_correct: isCorrect,
+    response_time_seconds: attempt.response_time_seconds,
+    timeout: false
+  };
+  window.VocabDB.saveActiveSession(session);
+  state.attempts.push(attempt);
+  state.showFeedback = true;
+  state.currentQuestionKey = question.question_id;
+  state.pendingAnswer = null;
+  state.questionStartedAt = null;
+  state.lockedQuestionSeconds = attempt.response_time_seconds;
+  callRender();
+}
+
+// Speed mode: click-to-answer with auto-advance (no confirm button, no feedback screen)
+export async function speedAnswerCurrent(letter) {
+  const session = state.activeSession;
+  const progress = runtimeProgress();
+  const row = progress.current;
+  if (!session || !row || session.paused) return;
+  const question = row.question;
+  if (session.answers?.[question.question_id]) return;
+
+  state.speedTimerFired = false;
+  const responseTime = Math.max(0.2, (Date.now() - (state.questionStartedAt || Date.now())) / 1000);
+  const vocabItem = state.vocabItems.find((item) => item.item_id === question.target_item_id);
+  const previousWrongCount = Number(vocabItem?.wrong_count || 0);
+  const isCorrect = letter === question.correct_answer;
+  const bucket = window.VocabScoring.speedBucket(isCorrect, responseTime, question.type);
+
+  const attempt = {
+    attempt_id: window.VocabDB.createId("att"),
+    timestamp: window.VocabScoring.localIso(),
+    user_id: session.user_id,
+    course_id: session.course_id,
+    stage: session.stage,
+    lesson_id: session.lesson_id,
+    step: "toeic_practice",
+    session_id: session.session_id,
+    question_id: question.question_id,
+    question_type: question.type,
+    correct_answer: question.correct_answer,
+    user_answer: letter,
+    is_correct: isCorrect,
+    response_time_seconds: Number(responseTime.toFixed(2)),
+    speed_bucket: bucket,
+    error_code: isCorrect ? null : (question.default_error_code || "TIME_PRESSURE"),
+    default_error_code: question.default_error_code,
+    is_repeated_error: !isCorrect && previousWrongCount >= 1,
+    review_priority: !isCorrect && previousWrongCount >= 2 ? 5 : !isCorrect ? 3 : 0,
+    mode: "speed_drill",
+    review_ids: [],
+    review_filter: null,
+    target_item_id: question.target_item_id,
+    grammar_link_id: question.grammar_link_id || null,
+    lesson_runtime: "speed",
+    timeout: false
   };
 
   await window.VocabDB.put("attempts", attempt);
@@ -639,15 +969,87 @@ export async function confirmCurrentAnswer() {
     attempt_id: attempt.attempt_id,
     user_answer: letter,
     is_correct: isCorrect,
-    response_time_seconds: attempt.response_time_seconds
+    response_time_seconds: attempt.response_time_seconds,
+    timeout: false
   };
+
+  // Auto-advance to next question
+  state.showFeedback = false;
+  const next = nextUnansweredIndex(progress.index + 1);
+  session.current_index = next >= 0 ? next : state.runtimeQuestions.length;
+  state.currentQuestionKey = null;
+  state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
+  state.questionStartedAt = null;
+  state.speedTimerFired = false;
   window.VocabDB.saveActiveSession(session);
   state.attempts.push(attempt);
-  state.showFeedback = true;
-  state.currentQuestionKey = question.question_id;
+  callRender();
+}
+
+// Speed mode: auto-submit as timeout when countdown expires
+export async function speedTimeoutCurrent() {
+  const session = state.activeSession;
+  const progress = runtimeProgress();
+  const row = progress.current;
+  if (!session || !row) return;
+  const question = row.question;
+  if (session.answers?.[question.question_id]) return;
+  if (state.speedTimerFired) return;
+  state.speedTimerFired = true;
+
+  const vocabItem = state.vocabItems.find((item) => item.item_id === question.target_item_id);
+  const previousWrongCount = Number(vocabItem?.wrong_count || 0);
+
+  const attempt = {
+    attempt_id: window.VocabDB.createId("att"),
+    timestamp: window.VocabScoring.localIso(),
+    user_id: session.user_id,
+    course_id: session.course_id,
+    stage: session.stage,
+    lesson_id: session.lesson_id,
+    step: "toeic_practice",
+    session_id: session.session_id,
+    question_id: question.question_id,
+    question_type: question.type,
+    correct_answer: question.correct_answer,
+    user_answer: "(timeout)",
+    is_correct: false,
+    response_time_seconds: SPEED_TIME_LIMIT,
+    speed_bucket: "slow_wrong",
+    error_code: "TIME_PRESSURE",
+    default_error_code: question.default_error_code || "TIME_PRESSURE",
+    is_repeated_error: previousWrongCount >= 1,
+    review_priority: 4,
+    mode: "speed_drill",
+    review_ids: [],
+    review_filter: null,
+    target_item_id: question.target_item_id,
+    grammar_link_id: question.grammar_link_id || null,
+    lesson_runtime: "speed",
+    timeout: true
+  };
+
+  await window.VocabDB.put("attempts", attempt);
+  await updateItemMastery(question, attempt);
+
+  session.answers[question.question_id] = {
+    attempt_id: attempt.attempt_id,
+    user_answer: "(timeout)",
+    is_correct: false,
+    response_time_seconds: SPEED_TIME_LIMIT,
+    timeout: true
+  };
+
+  const next = nextUnansweredIndex(progress.index + 1);
+  session.current_index = next >= 0 ? next : state.runtimeQuestions.length;
+  state.currentQuestionKey = null;
   state.pendingAnswer = null;
+  state.lockedQuestionSeconds = null;
   state.questionStartedAt = null;
-  state.lockedQuestionSeconds = attempt.response_time_seconds;
+  state.speedTimerFired = false;
+  window.VocabDB.saveActiveSession(session);
+  state.attempts.push(attempt);
   callRender();
 }
 
@@ -761,6 +1163,8 @@ export function exitLesson() {
   callSetView("today");
 }
 
+// --- Review outcome with SRS intervals ---
+
 function reviewOutcomeForEntry(entry, attempts) {
   const itemAttempts = attempts.filter((attempt) => (
     attempt.target_item_id === entry.item_id || (entry.question_ids || []).includes(attempt.question_id)
@@ -770,63 +1174,71 @@ function reviewOutcomeForEntry(entry, attempts) {
   const wrong = total - correct;
   const fastCorrect = itemAttempts.filter((attempt) => attempt.speed_bucket === "fast_correct").length;
   const accuracy = total ? correct / total : 0;
+  const today = window.VocabScoring.localDate();
+
+  const prevConsecutive = Number(entry.consecutive_review_correct || 0);
+  const prevRepeatedCount = Number(entry.repeated_error_count || 0);
 
   if (!total) {
     return {
+      review_state: entry.review_state || entry.reason || "new_error",
       review_status: entry.review_status || "pending",
       status: entry.status,
       priority: entry.priority || 3,
       due_date: entry.due_date,
-      reason: entry.reason,
-      total,
-      correct,
-      wrong,
-      fastCorrect,
-      accuracy
+      next_review_at: entry.next_review_at || entry.due_date,
+      consecutive_review_correct: prevConsecutive,
+      repeated_error_count: prevRepeatedCount,
+      total, correct, wrong, fastCorrect, accuracy
     };
   }
 
+  // All correct AND all fast → strong fix signal
   if (wrong === 0 && fastCorrect === total) {
+    const newConsecutive = prevConsecutive + 1;
+    const reviewState = newConsecutive >= 2 ? "stable" : "fixed";
+    const daysOut = newConsecutive >= 2 ? 7 : 3;
     return {
-      review_status: "fixed",
+      review_state: reviewState,
+      review_status: reviewState,
       status: "done",
       priority: Math.max(1, Number(entry.priority || 3) - 2),
-      due_date: entry.due_date,
-      reason: "fixed",
-      total,
-      correct,
-      wrong,
-      fastCorrect,
-      accuracy
+      due_date: window.VocabScoring.addDays(today, daysOut),
+      next_review_at: window.VocabScoring.addDays(today, daysOut),
+      consecutive_review_correct: newConsecutive,
+      repeated_error_count: prevRepeatedCount,
+      total, correct, wrong, fastCorrect, accuracy
     };
   }
 
+  // All correct but not all fast → still_weak
   if (wrong === 0) {
     return {
+      review_state: "still_weak",
       review_status: "still_weak",
       status: "pending",
       priority: Math.max(2, Number(entry.priority || 3) - 1),
-      due_date: window.VocabScoring.addDays(window.VocabScoring.localDate(), 2),
-      reason: "slow_correct_review",
-      total,
-      correct,
-      wrong,
-      fastCorrect,
-      accuracy
+      due_date: window.VocabScoring.addDays(today, 2),
+      next_review_at: window.VocabScoring.addDays(today, 2),
+      consecutive_review_correct: prevConsecutive + 1,
+      repeated_error_count: prevRepeatedCount,
+      total, correct, wrong, fastCorrect, accuracy
     };
   }
 
+  // Wrong answers → repeated_error or still_weak
+  const newRepeatedCount = prevRepeatedCount + wrong;
+  const isRepeated = newRepeatedCount >= 2 || entry.reason === "repeated_error" || entry.review_state === "repeated_error";
   return {
-    review_status: wrong >= 2 || entry.reason === "repeated_error" ? "repeated_error" : "still_weak",
+    review_state: isRepeated ? "repeated_error" : "still_weak",
+    review_status: isRepeated ? "repeated_error" : "still_weak",
     status: "pending",
-    priority: wrong >= 2 || entry.reason === "repeated_error" ? 5 : Math.max(4, Number(entry.priority || 3)),
-    due_date: window.VocabScoring.addDays(window.VocabScoring.localDate(), 1),
-    reason: wrong >= 2 || entry.reason === "repeated_error" ? "repeated_error" : "still_weak",
-    total,
-    correct,
-    wrong,
-    fastCorrect,
-    accuracy
+    priority: isRepeated ? Math.min(10, Number(entry.priority || 3) + 2) : Math.max(4, Number(entry.priority || 3)),
+    due_date: window.VocabScoring.addDays(today, 1),
+    next_review_at: window.VocabScoring.addDays(today, 1),
+    consecutive_review_correct: 0,
+    repeated_error_count: newRepeatedCount,
+    total, correct, wrong, fastCorrect, accuracy
   };
 }
 
@@ -875,9 +1287,13 @@ async function finishReviewSession(session) {
     const updatedEntry = {
       ...entry,
       status: outcome.status,
-      reason: outcome.reason,
+      reason: outcome.review_state,
+      review_state: outcome.review_state,
       priority: outcome.priority,
       due_date: outcome.due_date,
+      next_review_at: outcome.next_review_at,
+      consecutive_review_correct: outcome.consecutive_review_correct,
+      repeated_error_count: outcome.repeated_error_count,
       review_status: outcome.review_status,
       last_review_session_id: session.session_id,
       last_reviewed_at: window.VocabScoring.localIso(now),
@@ -900,7 +1316,8 @@ async function finishReviewSession(session) {
     accuracy,
     fixed_items: outcomes.filter((row) => row.review_status === "fixed").length,
     still_weak_items: outcomes.filter((row) => row.review_status === "still_weak").length,
-    repeated_error_items: outcomes.filter((row) => row.review_status === "repeated_error").length
+    repeated_error_items: outcomes.filter((row) => row.review_status === "repeated_error").length,
+    stable_items: outcomes.filter((row) => row.review_status === "stable").length
   };
 
   window.VocabDB.saveActiveSession(null);
@@ -911,6 +1328,62 @@ async function finishReviewSession(session) {
   callSetView("mistakes");
 }
 
+async function finishSpeedSession(session) {
+  const attempts = await window.VocabDB.getByIndex("attempts", "session_id", session.session_id);
+  const total = attempts.length;
+  const correct = attempts.filter((a) => a.is_correct).length;
+  const wrong = total - correct;
+  const timeouts = attempts.filter((a) => a.timeout).length;
+  const accuracy = total ? correct / total : 0;
+  const avgTime = average(attempts.map((a) => a.response_time_seconds));
+  const topErrors = topCounts(attempts.filter((a) => !a.is_correct), "error_code", 5).map(([code]) => code);
+  const status = accuracy >= 0.8 ? "completed" : accuracy >= 0.6 ? "completed_with_reinforcement" : "needs_retake";
+  const now = new Date();
+
+  const sessionRecord = {
+    session_id: session.session_id,
+    date: window.VocabScoring.localDate(now),
+    user_id: session.user_id,
+    course_id: session.course_id,
+    stage: session.stage,
+    lesson_id: session.lesson_id,
+    lesson_title: session.lesson_title,
+    planned_minutes: session.planned_minutes,
+    actual_minutes: Number((callLessonElapsedSeconds() / 60).toFixed(1)),
+    started_at: session.started_at,
+    ended_at: window.VocabScoring.localIso(now),
+    total_questions: total,
+    correct_questions: correct,
+    wrong_questions: wrong,
+    timeout_count: timeouts,
+    accuracy,
+    avg_response_time_seconds: Number(avgTime.toFixed(2)),
+    fast_correct_count: attempts.filter((a) => a.speed_bucket === "fast_correct").length,
+    slow_correct_count: attempts.filter((a) => a.speed_bucket === "slow_correct").length,
+    top_error_codes: topErrors,
+    mastery_status: accuracy >= 0.85 ? "stable" : accuracy >= 0.8 ? "passed" : accuracy >= 0.6 ? "unstable" : "needs_retake",
+    next_action: accuracy >= 0.8 ? "unlock_next_lesson" : "retake_lesson",
+    mode: "speed_drill"
+  };
+
+  await window.VocabDB.put("sessions", sessionRecord);
+  const lesson = state.lessons.find((row) => row.lesson_id === session.lesson_id);
+  if (lesson) await window.VocabDB.put("lessons", { ...lesson, status });
+
+  // Add wrong + timeout attempts to review queue
+  for (const attempt of attempts.filter((a) => !a.is_correct)) {
+    await upsertReviewQueue(attempt, attempt.timeout ? "timeout_error" : "speed_error", attempt.timeout ? 4 : 3);
+  }
+
+  window.VocabDB.saveActiveSession(null);
+  state.activeSession = null;
+  state.currentQuestionKey = null;
+  state.speedTimerFired = false;
+  await loadData();
+  setNotice(`Speed session saved: ${correct}/${total} correct, ${timeouts} timeouts.`, wrong ? "warn" : "ok");
+  callSetView("today");
+}
+
 export async function finishLesson() {
   const session = state.activeSession;
   if (!session || state.isFinishing) return;
@@ -918,6 +1391,11 @@ export async function finishLesson() {
   try {
     if (isReviewSession(session)) {
       await finishReviewSession(session);
+      return;
+    }
+
+    if (isSpeedSession(session)) {
+      await finishSpeedSession(session);
       return;
     }
 
@@ -982,23 +1460,71 @@ export async function finishLesson() {
   }
 }
 
+export async function addItemToReview(itemId) {
+  const item = await window.VocabDB.get("vocab_items", itemId);
+  if (!item) return;
+  const fakeAttempt = {
+    target_item_id: itemId,
+    lesson_id: item.lesson_id || "manual",
+    question_id: null,
+    question_type: item.item_type || "review_question",
+    is_correct: false,
+    is_repeated_error: false,
+    response_time_seconds: 0,
+    stage: item.stage,
+    user_id: state.user?.user_id || "Keith"
+  };
+  await upsertReviewQueue(fakeAttempt, "manual_add", 3);
+  await loadData();
+  setNotice(`已加入複習：${item.base_word || itemId}`, "ok");
+}
+
+// SRS-based review queue: one canonical entry per item (review_${item_id}) with priority and interval calculation.
 export async function upsertReviewQueue(attempt, reason, priority) {
   if (!attempt.target_item_id) return;
   const today = window.VocabScoring.localDate();
-  const dueDate = window.VocabScoring.addDays(today, priority >= 5 ? 1 : 2);
-  const id = `review_${attempt.target_item_id}_${dueDate}`;
+  const id = `review_${attempt.target_item_id}`;
   const existing = await window.VocabDB.get("review_queue", id);
-  const questionIds = new Set([...(existing?.question_ids || []), attempt.question_id]);
-  const record = {
+
+  // Compute updated repeated_error_count
+  const prevRepeatedCount = Number(existing?.repeated_error_count || 0);
+  const repeatedErrorCount = (attempt.is_repeated_error || reason === "repeated_error") ? prevRepeatedCount + 1 : prevRepeatedCount;
+
+  // Compute priority using mastery data
+  const item = await window.VocabDB.get("vocab_items", attempt.target_item_id);
+  const computedPriority = item
+    ? window.VocabScoring.calculateReviewPriority(item, { repeated_error_count: repeatedErrorCount })
+    : Math.max(priority || 3, existing?.priority || 0);
+
+  // SRS interval based on review state
+  const reviewState = repeatedErrorCount >= 2 || reason === "repeated_error" || existing?.review_state === "repeated_error"
+    ? "repeated_error"
+    : existing?.review_state && existing.review_state !== "done" ? existing.review_state
+    : "new_error";
+  const daysOut = reviewState === "repeated_error" ? 1 : (computedPriority >= 7 ? 1 : 2);
+  const dueDate = window.VocabScoring.addDays(today, daysOut);
+
+  const questionIds = new Set([...(existing?.question_ids || []), attempt.question_id].filter(Boolean));
+
+  await window.VocabDB.put("review_queue", {
     review_id: id,
     item_id: attempt.target_item_id,
     question_ids: [...questionIds],
     reason,
-    priority: Math.max(priority || 3, existing?.priority || 0),
+    review_state: reviewState,
+    priority: computedPriority,
     due_date: dueDate,
-    status: existing?.status || "pending",
+    next_review_at: dueDate,
+    repeated_error_count: repeatedErrorCount,
+    consecutive_review_correct: 0,
+    status: existing?.status === "done" ? "pending" : (existing?.status || "pending"),
     created_at: existing?.created_at || window.VocabScoring.localIso(),
-    updated_at: window.VocabScoring.localIso()
-  };
-  await window.VocabDB.put("review_queue", record);
+    updated_at: window.VocabScoring.localIso(),
+    last_reviewed_at: existing?.last_reviewed_at || null,
+    review_attempt_count: existing?.review_attempt_count || 0,
+    review_correct_count: existing?.review_correct_count || 0,
+    review_wrong_count: existing?.review_wrong_count || 0,
+    review_status: existing?.review_status || "pending",
+    last_review_session_id: existing?.last_review_session_id || null
+  });
 }

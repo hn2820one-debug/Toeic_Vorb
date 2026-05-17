@@ -8,12 +8,31 @@ export const LESSON_STEPS = [
 
 export const PASS_STATUSES = new Set(["completed", "completed_with_reinforcement", "sealed"]);
 
+export const ERROR_CODE_LABELS = {
+  VOCAB_UNKNOWN:     "核心詞義不熟",
+  VOCAB_WEAK_RECALL: "記憶鞏固不足",
+  WORD_FAMILY_POS:   "詞性混淆",
+  COLLOCATION_PREP:  "搭配詞錯誤",
+  PHRASE_MEANING:    "詞組語意不明",
+  FORMAL_PHRASE:     "正式用語欠缺",
+  FALSE_FRIEND:      "近義詞混淆",
+  SCENE_VOCAB_GAP:   "商業情境詞彙",
+  TIME_PRESSURE:     "反應速度不足",
+  CARELESS:          "粗心失誤",
+  REPEATED_ERROR:    "反覆出錯"
+};
+
+export function errorCodeLabel(code) {
+  return ERROR_CODE_LABELS[code] || code || "未知";
+}
+
 export const state = {
   view: "today",
   curriculum: null,
   user: null,
   lessons: [],
   questions: [],
+  questionEdits: [],
   vocabItems: [],
   attempts: [],
   sessions: [],
@@ -37,6 +56,7 @@ export const state = {
   },
   selectedQuestionId: null,
   bankFilters: {
+    search: "",
     stage: "",
     lesson_id: "",
     type: "",
@@ -45,8 +65,10 @@ export const state = {
   tickId: null,
   showFeedback: false,
   bankPage: 0,
-  masteryFilter: { level: "" },
-  grammarLinks: {}
+  masteryFilter: { level: "", search: "" },
+  grammarLinks: {},
+  stageSealPending: null,
+  speedTimerFired: false
 };
 
 export function questionTypeLabel(type) {
@@ -102,6 +124,10 @@ export function html(value) {
     '"': "&quot;",
     "'": "&#39;"
   }[char]));
+}
+
+export function renderQuestionText(text) {
+  return html(text).replace(/_{4,}/g, (m) => `<span class="blank-token">${m}</span>`);
 }
 
 export function pct(value) {
@@ -185,6 +211,7 @@ export async function loadData() {
     users,
     lessons,
     questions,
+    questionEdits,
     vocabItems,
     attempts,
     sessions,
@@ -195,6 +222,7 @@ export async function loadData() {
     window.VocabDB.getAll("users"),
     window.VocabDB.getAll("lessons"),
     window.VocabDB.getAll("questions"),
+    window.VocabDB.getAll("question_edits"),
     window.VocabDB.getAll("vocab_items"),
     window.VocabDB.getRecentAttempts(300),
     window.VocabDB.getAll("sessions"),
@@ -206,6 +234,7 @@ export async function loadData() {
   state.user = users[0] || { user_id: "Keith", display_name: "Keith", baseline_score: 570, target_score: 750 };
   state.lessons = lessons.sort((a, b) => (a.lesson_number || 0) - (b.lesson_number || 0));
   state.questions = questions;
+  state.questionEdits = questionEdits.sort((a, b) => String(b.edited_at || "").localeCompare(String(a.edited_at || "")));
   state.vocabItems = vocabItems.sort((a, b) => String(a.item_id).localeCompare(String(b.item_id)));
   state.attempts = attempts.sort((a, b) => String(a.timestamp).localeCompare(String(b.timestamp)));
   state.sessions = sessions.sort((a, b) => String(a.date).localeCompare(String(b.date)));
