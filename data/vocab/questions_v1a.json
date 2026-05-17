@@ -679,7 +679,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the summary seems ______ after the final review.",
     "options": {
       "A": "efficient",
       "B": "efficiency",
@@ -707,7 +707,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (training).",
     "options": {
       "A": "efficiency",
       "B": "efficient",
@@ -735,7 +735,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the coordinator questioned the ______ of the monthly data.",
     "options": {
       "A": "efficiently",
       "B": "inefficiency",
@@ -763,7 +763,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (training).",
     "options": {
       "A": "efficiently",
       "B": "inefficiency",
@@ -819,7 +819,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: the organization wants to improve operational ______.",
     "options": {
       "A": "efficient",
       "B": "efficiently",
@@ -847,7 +847,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "the initiative depends on the ______ of the supplier.",
     "options": {
       "A": "efficiently",
       "B": "inefficiency",
@@ -875,7 +875,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (training).",
     "options": {
       "A": "efficiently",
       "B": "inefficiency",
@@ -1043,7 +1043,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (training).",
     "options": {
       "A": "efficiency",
       "B": "efficient",
@@ -1211,7 +1211,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (training).",
     "options": {
       "A": "inefficiency",
       "B": "efficiency",
@@ -1239,7 +1239,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "the division needs a more ______ tracking system.",
     "options": {
       "A": "efficient",
       "B": "efficiency",
@@ -1351,7 +1351,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the analysis seems ______ after the final review.",
     "options": {
       "A": "responsibility",
       "B": "responsibly",
@@ -1379,7 +1379,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (audit).",
     "options": {
       "A": "responsible",
       "B": "irresponsible",
@@ -1407,7 +1407,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the director questioned the ______ of the monthly data.",
     "options": {
       "A": "irresponsible",
       "B": "responsibility",
@@ -1435,7 +1435,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (audit).",
     "options": {
       "A": "irresponsible",
       "B": "responsibility",
@@ -1491,7 +1491,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: the department wants to improve operational ______.",
     "options": {
       "A": "responsibly",
       "B": "irresponsible",
@@ -1519,7 +1519,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "the program depends on the ______ of the supplier.",
     "options": {
       "A": "irresponsible",
       "B": "responsibility",
@@ -1547,7 +1547,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (audit).",
     "options": {
       "A": "irresponsible",
       "B": "responsibility",
@@ -1715,7 +1715,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (audit).",
     "options": {
       "A": "responsible",
       "B": "irresponsible",
@@ -1883,7 +1883,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (audit).",
     "options": {
       "A": "responsibility",
       "B": "responsible",
@@ -1911,7 +1911,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "the crew needs a more ______ tracking system.",
     "options": {
       "A": "responsibility",
       "B": "responsibly",
@@ -2023,7 +2023,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the statement seems ______ after the final review.",
     "options": {
       "A": "unavailable",
       "B": "availably",
@@ -2051,7 +2051,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (inspection).",
     "options": {
       "A": "availably",
       "B": "unavailable",
@@ -2079,7 +2079,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the team leader questioned the ______ of the monthly data.",
     "options": {
       "A": "availability",
       "B": "available",
@@ -2107,7 +2107,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (inspection).",
     "options": {
       "A": "availability",
       "B": "available",
@@ -2163,7 +2163,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: the branch wants to improve operational ______.",
     "options": {
       "A": "availably",
       "B": "availability",
@@ -2191,7 +2191,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "the plan depends on the ______ of the supplier.",
     "options": {
       "A": "availability",
       "B": "available",
@@ -2219,7 +2219,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (inspection).",
     "options": {
       "A": "availability",
       "B": "available",
@@ -2387,7 +2387,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (inspection).",
     "options": {
       "A": "availably",
       "B": "unavailable",
@@ -2555,7 +2555,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (inspection).",
     "options": {
       "A": "available",
       "B": "unavailable",
@@ -2583,7 +2583,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "the unit needs a more ______ tracking system.",
     "options": {
       "A": "unavailable",
       "B": "availably",
@@ -2695,7 +2695,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the estimate seems ______ after the final review.",
     "options": {
       "A": "unsuccessful",
       "B": "successful",
@@ -2723,7 +2723,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (policy update).",
     "options": {
       "A": "successfully",
       "B": "success",
@@ -2751,7 +2751,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the department head questioned the ______ of the monthly data.",
     "options": {
       "A": "successful",
       "B": "successfully",
@@ -2779,7 +2779,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (policy update).",
     "options": {
       "A": "successful",
       "B": "successfully",
@@ -2835,7 +2835,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: the division wants to improve operational ______.",
     "options": {
       "A": "success",
       "B": "successful",
@@ -2863,7 +2863,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "the task depends on the ______ of the supplier.",
     "options": {
       "A": "successful",
       "B": "successfully",
@@ -2891,7 +2891,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (policy update).",
     "options": {
       "A": "successful",
       "B": "successfully",
@@ -3059,7 +3059,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (policy update).",
     "options": {
       "A": "successfully",
       "B": "success",
@@ -3227,7 +3227,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (policy update).",
     "options": {
       "A": "successfully",
       "B": "unsuccessful",
@@ -3255,7 +3255,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADV_MODIFIES_VERB",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "the group needs a more ______ tracking system.",
     "options": {
       "A": "unsuccessful",
       "B": "successful",
@@ -3367,7 +3367,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the forecast seems ______ after the final review.",
     "options": {
       "A": "reliable",
       "B": "reliability",
@@ -3395,7 +3395,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (review).",
     "options": {
       "A": "reliability",
       "B": "reliable",
@@ -3423,7 +3423,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the branch manager questioned the ______ of the monthly data.",
     "options": {
       "A": "reliably",
       "B": "unreliable",
@@ -3451,7 +3451,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (review).",
     "options": {
       "A": "reliably",
       "B": "unreliable",
@@ -3507,7 +3507,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: the agency wants to improve operational ______.",
     "options": {
       "A": "reliable",
       "B": "reliably",
@@ -3535,7 +3535,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "the campaign depends on the ______ of the supplier.",
     "options": {
       "A": "reliably",
       "B": "unreliable",
@@ -3563,7 +3563,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (review).",
     "options": {
       "A": "reliably",
       "B": "unreliable",
@@ -3731,7 +3731,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (review).",
     "options": {
       "A": "reliability",
       "B": "reliable",
@@ -3899,7 +3899,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (review).",
     "options": {
       "A": "unreliable",
       "B": "reliability",
@@ -3927,7 +3927,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "the committee needs a more ______ tracking system.",
     "options": {
       "A": "reliable",
       "B": "reliability",
@@ -4039,7 +4039,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the memo seems ______ after the final review.",
     "options": {
       "A": "productivity",
       "B": "productively",
@@ -4067,7 +4067,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (lesson 17).",
     "options": {
       "A": "productive",
       "B": "unproductive",
@@ -4095,7 +4095,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the project lead questioned the ______ of the monthly data.",
     "options": {
       "A": "unproductive",
       "B": "productivity",
@@ -4123,7 +4123,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (lesson 17).",
     "options": {
       "A": "unproductive",
       "B": "productivity",
@@ -4179,7 +4179,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: the firm wants to improve operational ______.",
     "options": {
       "A": "productively",
       "B": "unproductive",
@@ -4207,7 +4207,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "the assignment depends on the ______ of the supplier.",
     "options": {
       "A": "unproductive",
       "B": "productivity",
@@ -4235,7 +4235,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (lesson 17).",
     "options": {
       "A": "unproductive",
       "B": "productivity",
@@ -4403,7 +4403,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (lesson 17).",
     "options": {
       "A": "productive",
       "B": "unproductive",
@@ -4571,7 +4571,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (lesson 17).",
     "options": {
       "A": "productivity",
       "B": "productive",
@@ -4599,7 +4599,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "the department needs a more ______ tracking system.",
     "options": {
       "A": "productivity",
       "B": "productively",
@@ -4711,7 +4711,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the assessment seems ______ after the final review.",
     "options": {
       "A": "competitively",
       "B": "competitiveness",
@@ -4739,7 +4739,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (lesson 18).",
     "options": {
       "A": "competitiveness",
       "B": "competitively",
@@ -4767,7 +4767,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the senior officer questioned the ______ of the monthly data.",
     "options": {
       "A": "competition",
       "B": "competitive",
@@ -4795,7 +4795,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (lesson 18).",
     "options": {
       "A": "competition",
       "B": "competitive",
@@ -4851,7 +4851,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: The company wants to improve operational ______ (audit).",
     "options": {
       "A": "competitiveness",
       "B": "competition",
@@ -4879,7 +4879,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "The project depends on the ______ of the partner.",
     "options": {
       "A": "competition",
       "B": "competitive",
@@ -4907,7 +4907,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (lesson 18).",
     "options": {
       "A": "competition",
       "B": "competitive",
@@ -5075,7 +5075,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (lesson 18).",
     "options": {
       "A": "competitiveness",
       "B": "competitively",
@@ -5243,7 +5243,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (lesson 18).",
     "options": {
       "A": "competitive",
       "B": "competitively",
@@ -5271,7 +5271,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_BEFORE_NOUN",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "The team needs a more ______ tracking system (audit).",
     "options": {
       "A": "competitively",
       "B": "competitiveness",
@@ -5383,7 +5383,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "the proposal seems ______ after the final review.",
     "options": {
       "A": "profit",
       "B": "profitable",
@@ -5411,7 +5411,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (lesson 19).",
     "options": {
       "A": "profitably",
       "B": "profitability",
@@ -5439,7 +5439,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "the supervisor questioned the ______ of the monthly data.",
     "options": {
       "A": "profitable",
       "B": "profitably",
@@ -5467,7 +5467,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (lesson 19).",
     "options": {
       "A": "profitable",
       "B": "profitably",
@@ -5523,7 +5523,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: The company wants to improve operational ______ (inspection).",
     "options": {
       "A": "profitability",
       "B": "profitable",
@@ -5551,7 +5551,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "The project depends on the ______ of the vendor.",
     "options": {
       "A": "profitable",
       "B": "profitably",
@@ -5579,7 +5579,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (lesson 19).",
     "options": {
       "A": "profitable",
       "B": "profitably",
@@ -5747,7 +5747,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (lesson 19).",
     "options": {
       "A": "profitably",
       "B": "profitability",
@@ -5915,7 +5915,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (lesson 19).",
     "options": {
       "A": "profitably",
       "B": "profit",
@@ -5943,7 +5943,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_AFTER_LINKING_VERB",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "The team needs a more ______ tracking system (inspection).",
     "options": {
       "A": "profit",
       "B": "profitable",
@@ -6055,7 +6055,7 @@
     "skill": "word_family",
     "subskill": "adjective_after_linking_verb",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The report seems ______ after the final review.",
+    "question_text": "The report seems ______ after the final review (policy update).",
     "options": {
       "A": "secure",
       "B": "security",
@@ -6083,7 +6083,7 @@
     "skill": "word_family",
     "subskill": "adverb_modifies_verb",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The analyst checked the figures ______ before sending them.",
+    "question_text": "The analyst checked the figures ______ before sending them (lesson 20).",
     "options": {
       "A": "security",
       "B": "secure",
@@ -6111,7 +6111,7 @@
     "skill": "word_family",
     "subskill": "noun_after_article",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The manager questioned the ______ of the monthly data.",
+    "question_text": "The manager questioned the ______ of the monthly data (policy update).",
     "options": {
       "A": "securely",
       "B": "insecure",
@@ -6139,7 +6139,7 @@
     "skill": "word_family",
     "subskill": "negative_family_form",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Any ______ in the invoice must be corrected immediately.",
+    "question_text": "Any ______ in the invoice must be corrected immediately (lesson 20).",
     "options": {
       "A": "securely",
       "B": "insecure",
@@ -6195,7 +6195,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Choose the best phrase: The company wants to improve operational ______.",
+    "question_text": "Choose the best phrase: The company wants to improve operational ______ (policy update).",
     "options": {
       "A": "secure",
       "B": "securely",
@@ -6223,7 +6223,7 @@
     "skill": "word_family",
     "subskill": "noun_of_phrase",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The project depends on the ______ of the supplier.",
+    "question_text": "The project depends on the ______ of the contractor.",
     "options": {
       "A": "securely",
       "B": "insecure",
@@ -6251,7 +6251,7 @@
     "skill": "word_family",
     "subskill": "negative_adjective",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The old process was considered ______ by the audit team.",
+    "question_text": "The old process was considered ______ by the audit team (lesson 20).",
     "options": {
       "A": "securely",
       "B": "insecure",
@@ -6419,7 +6419,7 @@
     "skill": "word_family",
     "subskill": "adverb_passive",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The changes were implemented ______ across all branches.",
+    "question_text": "The changes were implemented ______ across all branches (lesson 20).",
     "options": {
       "A": "security",
       "B": "secure",
@@ -6587,7 +6587,7 @@
     "skill": "word_family",
     "subskill": "collocation_pattern",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "Choose the best phrase: Managers want to strengthen overall ______.",
+    "question_text": "Choose the best phrase: Managers want to strengthen overall ______ (lesson 20).",
     "options": {
       "A": "insecure",
       "B": "security",
@@ -6615,7 +6615,7 @@
     "skill": "word_family",
     "subskill": "adjective_before_noun",
     "grammar_link_id": "ADJ_AFTER_BE",
-    "question_text": "The team needs a more ______ tracking system.",
+    "question_text": "The team needs a more ______ tracking system (policy update).",
     "options": {
       "A": "secure",
       "B": "security",

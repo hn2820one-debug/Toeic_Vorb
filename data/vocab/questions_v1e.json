@@ -442,7 +442,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 45).",
     "options": {
       "A": "proposal",
       "B": "propose",
@@ -472,7 +472,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 45).",
     "options": {
       "A": "confirm",
       "B": "confirmed",
@@ -502,7 +502,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 45).",
     "options": {
       "A": "notice",
       "B": "notifying",
@@ -532,7 +532,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "Documents: the proofreader requested one final ______ before printing.",
     "options": {
       "A": "revising",
       "B": "revision",
@@ -562,7 +562,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: the storage facility improved product ______ to regional stores.",
     "options": {
       "A": "distribution",
       "B": "distributor",
@@ -1143,7 +1143,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 46).",
     "options": {
       "A": "propose",
       "B": "proposed",
@@ -1173,7 +1173,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 46).",
     "options": {
       "A": "confirmed",
       "B": "confirming",
@@ -1203,7 +1203,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 46).",
     "options": {
       "A": "notifying",
       "B": "notify",
@@ -1233,7 +1233,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "Documents: the writer requested one final ______ before printing.",
     "options": {
       "A": "revision",
       "B": "revise",
@@ -1263,7 +1263,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (review).",
     "options": {
       "A": "distributor",
       "B": "distribute",
@@ -1844,7 +1844,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 47).",
     "options": {
       "A": "proposed",
       "B": "proposing",
@@ -1874,7 +1874,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 47).",
     "options": {
       "A": "confirming",
       "B": "confirmation",
@@ -1904,7 +1904,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 47).",
     "options": {
       "A": "notify",
       "B": "notification",
@@ -1934,7 +1934,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "files: the author requested one final ______ before printing.",
     "options": {
       "A": "revise",
       "B": "revised",
@@ -1964,7 +1964,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (training).",
     "options": {
       "A": "distribute",
       "B": "distributing",
@@ -2545,7 +2545,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 48).",
     "options": {
       "A": "proposing",
       "B": "proposal",
@@ -2575,7 +2575,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 48).",
     "options": {
       "A": "confirmation",
       "B": "confirm",
@@ -2605,7 +2605,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 48).",
     "options": {
       "A": "notification",
       "B": "notice",
@@ -2635,7 +2635,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "files: the reviewer requested one final ______ before printing.",
     "options": {
       "A": "revised",
       "B": "revising",
@@ -2665,7 +2665,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (audit).",
     "options": {
       "A": "distributing",
       "B": "distribution",
@@ -3246,7 +3246,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 49).",
     "options": {
       "A": "proposal",
       "B": "propose",
@@ -3276,7 +3276,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 49).",
     "options": {
       "A": "confirm",
       "B": "confirmed",
@@ -3306,7 +3306,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 49).",
     "options": {
       "A": "notice",
       "B": "notifying",
@@ -3336,7 +3336,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "files: the proofreader requested one final ______ before printing.",
     "options": {
       "A": "revising",
       "B": "revision",
@@ -3366,7 +3366,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (inspection).",
     "options": {
       "A": "distribution",
       "B": "distributor",
@@ -3947,7 +3947,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 50).",
     "options": {
       "A": "propose",
       "B": "proposed",
@@ -3977,7 +3977,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 50).",
     "options": {
       "A": "confirmed",
       "B": "confirming",
@@ -4007,7 +4007,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 50).",
     "options": {
       "A": "notifying",
       "B": "notify",
@@ -4037,7 +4037,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "files: the writer requested one final ______ before printing.",
     "options": {
       "A": "revision",
       "B": "revise",
@@ -4067,7 +4067,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (policy update).",
     "options": {
       "A": "distributor",
       "B": "distribute",
@@ -4648,7 +4648,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 51).",
     "options": {
       "A": "proposed",
       "B": "proposing",
@@ -4678,7 +4678,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 51).",
     "options": {
       "A": "confirming",
       "B": "confirmation",
@@ -4708,7 +4708,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 51).",
     "options": {
       "A": "notify",
       "B": "notification",
@@ -4738,7 +4738,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "Documents: The editor requested one final ______ before printing (training).",
     "options": {
       "A": "revise",
       "B": "revised",
@@ -4768,7 +4768,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (lesson 51).",
     "options": {
       "A": "distribute",
       "B": "distributing",
@@ -5349,7 +5349,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Projects: The committee reviewed the marketing ______ before lunch.",
+    "question_text": "Projects: The committee reviewed the marketing ______ before lunch (lesson 52).",
     "options": {
       "A": "proposing",
       "B": "proposal",
@@ -5379,7 +5379,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Hotels: Guests will receive a booking ______ by email.",
+    "question_text": "Hotels: Guests will receive a booking ______ by email (lesson 52).",
     "options": {
       "A": "confirmation",
       "B": "confirm",
@@ -5409,7 +5409,7 @@
     "skill": "word_family",
     "subskill": "verb",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Airlines: The airline must ______ passengers about the delay.",
+    "question_text": "Airlines: The airline must ______ passengers about the delay (lesson 52).",
     "options": {
       "A": "notification",
       "B": "notice",
@@ -5439,7 +5439,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN_ADJ",
-    "question_text": "Documents: The editor requested one final ______ before printing.",
+    "question_text": "Documents: The editor requested one final ______ before printing (audit).",
     "options": {
       "A": "revised",
       "B": "revising",
@@ -5469,7 +5469,7 @@
     "skill": "word_family",
     "subskill": "noun",
     "grammar_link_id": "WORD_FAMILY_VERB_NOUN",
-    "question_text": "Retail: The warehouse improved product ______ to regional stores.",
+    "question_text": "Retail: The warehouse improved product ______ to regional stores (lesson 52).",
     "options": {
       "A": "distributing",
       "B": "distribution",
