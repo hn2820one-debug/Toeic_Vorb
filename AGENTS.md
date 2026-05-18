@@ -45,18 +45,18 @@ Static local-first PWA for TOEIC vocabulary learning (target: 570 → 750).
 
 | Stage | Stage Name | Lessons | Questions | Status |
 |-------|-----------|---------|-----------|--------|
-| V0 | Diagnosis | 1 | 31 | ✅ Active |
-| V1 | Word Family | 60 | 1,728 | ✅ Active |
-| V2 | TOEIC Scene Vocabulary | 60 | 1,200 | ✅ Active |
-| V3 | Collocation | 72 | 1,440 | ✅ Active |
+| V0 | Diagnosis | 0 | 0 | Cleared |
+| V1 | Word Family | 0 | 0 | Cleared |
+| V2 | TOEIC Scene Vocabulary | 0 | 0 | Cleared |
+| V3 | Collocation | 0 | 0 | Cleared |
 | V4 | Formal Phrase | 0 active / 50 planned | 0 active / 100 draft | Draft isolated in `drafts/v4/` |
 | V5 | False Friends + Speed Reflex | 50 | 0 | 🔲 Planned |
 | V6 | Integrated Review + Seal Test | 40 | 0 | 🔲 Planned |
 
-**Total: 193 runnable lessons, 4,399 question-bank rows, 494 vocab items, 18 manifest question files, 0 duplicate stems, 0 full-audit issues**
+**Total: 0 runnable lessons, 0 question-bank rows, 494 vocab items, 18 manifest question files, 0 duplicate stems, 0 full-audit issues**
 Audit tool: `node scripts/audit-quality-full.js` → must output `✅ PASSED`
 
-Production seed is V0-V3 only. V4 is draft-only in `drafts/v4/` and must not be promoted without a future explicit V4 activation task.
+Production seed manifest remains V0-V3 only, but all production V0-V3 lesson rows and question rows are intentionally cleared. V4 is draft-only in `drafts/v4/` and must not be promoted without a future explicit V4 activation task.
 
 ---
 
@@ -71,7 +71,7 @@ tests/helpers/seed-idb.ts         → const APP_SEED_VERSION = "..."
 ```
 
 Format: `toeic_vocab_tracker_{description}_{YYYY_MM_DD}`
-Current: `toeic_vocab_tracker_c001_cross_lesson_2026_05_17`
+Current: `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18`
 
 ---
 
@@ -98,10 +98,10 @@ js/views/settings.js  — Settings, clear session, lesson status override
 
 ```
 data/vocab/curriculum.json          — course structure, lesson list, default user
-data/vocab/questions_v0.json        — V0: 31 diagnostic questions
-data/vocab/questions_v1a–f.json     — V1: 1,728 word-family questions (6 files)
-data/vocab/questions_v2a–e.json     — V2: 1,200 scene-vocabulary questions (5 files)
-data/vocab/questions_v3a–f.json     — V3: 1,440 collocation questions (6 files)
+data/vocab/questions_v0.json        — V0 manifest file; currently empty after full-bank clear
+data/vocab/questions_v1a–f.json     — V1 manifest files; currently empty after full-bank clear
+data/vocab/questions_v2a–e.json     — V2 manifest files; currently empty after full-bank clear
+data/vocab/questions_v3a–f.json     — V3 manifest files; currently empty after full-bank clear
 data/vocab/vocab_items.json         — 494 vocabulary items with metadata
 data/vocab/grammar_links.json       — grammar pattern references (optional metadata)
 drafts/v4/questions_v4a.json        — V4 draft only, not production seed
@@ -164,7 +164,7 @@ node scripts/validate-vocab-data.js      — structural vocab validation
 node scripts/audit-quality-full.js       — full production quality audit (must pass)
 node scripts/audit-duplicates.js         — duplicate question_text audit (must be 0)
 npm run test:scoring                     — mastery scoring fixture tests
-npx playwright test                      — run all 4 Playwright tests
+npx playwright test                      — run current Playwright suite
 npm run test:all                      — scoring + data validation + Playwright
 tests/lesson-flow.spec.ts             — full lesson run
 tests/review-mode.spec.ts             — review queue
@@ -192,8 +192,8 @@ Full spec: `docs/question-creation-spec.md`
 
 ## IndexedDB Stores
 
-`toeic_vocab_tracker_db` (version 1):
-`users`, `settings`, `curriculum`, `lessons`, `questions`, `vocab_items`, `attempts`, `sessions`, `error_logs`, `review_queue`, `exports`
+`toeic_vocab_tracker_db` (version 2):
+`users`, `settings`, `curriculum`, `lessons`, `questions`, `question_edits`, `vocab_items`, `attempts`, `sessions`, `error_logs`, `review_queue`, `exports`
 
 LocalStorage keys: `toeic_vocab_tracker_preferences`, `toeic_vocab_active_session`
 
@@ -228,3 +228,5 @@ Full list: `docs/KNOWN_ISSUES.md`
 - Today dashboard added display-only Stage Seal Readiness.
 - V0 Diagnostic Recommendation and `diagnostic_recommendation.json` export added.
 - Mastery scoring fixture tests added.
+- Strict question-bank prune removed 25 production direct-definition rows that violated the new semantic-meaning policy; production audit now passes with warnings only.
+- Full production bank clear removed the remaining V0-V3 lesson rows and production question rows after the strict warning-level review; production audit now passes with zero questions and zero lessons.

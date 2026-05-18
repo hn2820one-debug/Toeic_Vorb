@@ -1,0 +1,319 @@
+{
+  "generated_at": "2026-05-18T00:13:06.191Z",
+  "artifact": "master_lesson_manifest",
+  "artifact_version": "1.0",
+  "phase": 8,
+  "step": 40,
+  "status": "planning_frozen",
+  "reference_role": "planning_reference",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "related_docs": [
+    "docs/plans/question-rebuild-phase07-stage-blueprints.md",
+    "docs/plans/question-rebuild-phase08-future-reference-packs.md"
+  ],
+  "production_baseline": {
+    "seed_version": "toeic_vocab_tracker_c004_full_bank_clear_2026_05_18",
+    "curriculum_lesson_rows": 0,
+    "production_question_files": 18,
+    "note": "Manifest describes target structure; production merge is a later Phase 9/10 task."
+  },
+  "v0_v3_target": {
+    "source_artifact": "drafts/v0-v3-rebuild/stage_map_v0_v3.json",
+    "total_lessons": 193,
+    "total_unique_question_rows": 4399,
+    "total_question_files": 18,
+    "production_merge_order": [
+      "V1",
+      "V0",
+      "V2",
+      "V3"
+    ]
+  },
+  "wave1_production_id_map": [
+    {
+      "draft_lesson_id": "V3-W1-01",
+      "production_lesson_id": "V3-A-121",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-01_Q",
+      "draft_review_id_prefix": "V3-W1-01_R",
+      "production_question_id_prefix": "v3_v3_a_121_q_",
+      "production_review_id_prefix": "v3_v3_a_121_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-02",
+      "production_lesson_id": "V3-A-122",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-02_Q",
+      "draft_review_id_prefix": "V3-W1-02_R",
+      "production_question_id_prefix": "v3_v3_a_122_q_",
+      "production_review_id_prefix": "v3_v3_a_122_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-03",
+      "production_lesson_id": "V3-A-123",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-03_Q",
+      "draft_review_id_prefix": "V3-W1-03_R",
+      "production_question_id_prefix": "v3_v3_a_123_q_",
+      "production_review_id_prefix": "v3_v3_a_123_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-04",
+      "production_lesson_id": "V3-A-124",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-04_Q",
+      "draft_review_id_prefix": "V3-W1-04_R",
+      "production_question_id_prefix": "v3_v3_a_124_q_",
+      "production_review_id_prefix": "v3_v3_a_124_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-05",
+      "production_lesson_id": "V3-A-125",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-05_Q",
+      "draft_review_id_prefix": "V3-W1-05_R",
+      "production_question_id_prefix": "v3_v3_a_125_q_",
+      "production_review_id_prefix": "v3_v3_a_125_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-06",
+      "production_lesson_id": "V3-A-126",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-06_Q",
+      "draft_review_id_prefix": "V3-W1-06_R",
+      "production_question_id_prefix": "v3_v3_a_126_q_",
+      "production_review_id_prefix": "v3_v3_a_126_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-07",
+      "production_lesson_id": "V3-A-127",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-07_Q",
+      "draft_review_id_prefix": "V3-W1-07_R",
+      "production_question_id_prefix": "v3_v3_a_127_q_",
+      "production_review_id_prefix": "v3_v3_a_127_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-08",
+      "production_lesson_id": "V3-A-128",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-08_Q",
+      "draft_review_id_prefix": "V3-W1-08_R",
+      "production_question_id_prefix": "v3_v3_a_128_q_",
+      "production_review_id_prefix": "v3_v3_a_128_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-09",
+      "production_lesson_id": "V3-A-129",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-09_Q",
+      "draft_review_id_prefix": "V3-W1-09_R",
+      "production_question_id_prefix": "v3_v3_a_129_q_",
+      "production_review_id_prefix": "v3_v3_a_129_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-10",
+      "production_lesson_id": "V3-A-130",
+      "question_file": "questions_v3a.json",
+      "draft_question_id_prefix": "V3-W1-10_Q",
+      "draft_review_id_prefix": "V3-W1-10_R",
+      "production_question_id_prefix": "v3_v3_a_130_q_",
+      "production_review_id_prefix": "v3_v3_a_130_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-11",
+      "production_lesson_id": "V3-B-131",
+      "question_file": "questions_v3b.json",
+      "draft_question_id_prefix": "V3-W1-11_Q",
+      "draft_review_id_prefix": "V3-W1-11_R",
+      "production_question_id_prefix": "v3_v3_b_131_q_",
+      "production_review_id_prefix": "v3_v3_b_131_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-12",
+      "production_lesson_id": "V3-B-132",
+      "question_file": "questions_v3b.json",
+      "draft_question_id_prefix": "V3-W1-12_Q",
+      "draft_review_id_prefix": "V3-W1-12_R",
+      "production_question_id_prefix": "v3_v3_b_132_q_",
+      "production_review_id_prefix": "v3_v3_b_132_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-13",
+      "production_lesson_id": "V3-B-133",
+      "question_file": "questions_v3b.json",
+      "draft_question_id_prefix": "V3-W1-13_Q",
+      "draft_review_id_prefix": "V3-W1-13_R",
+      "production_question_id_prefix": "v3_v3_b_133_q_",
+      "production_review_id_prefix": "v3_v3_b_133_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-14",
+      "production_lesson_id": "V3-B-134",
+      "question_file": "questions_v3b.json",
+      "draft_question_id_prefix": "V3-W1-14_Q",
+      "draft_review_id_prefix": "V3-W1-14_R",
+      "production_question_id_prefix": "v3_v3_b_134_q_",
+      "production_review_id_prefix": "v3_v3_b_134_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-15",
+      "production_lesson_id": "V3-B-135",
+      "question_file": "questions_v3b.json",
+      "draft_question_id_prefix": "V3-W1-15_Q",
+      "draft_review_id_prefix": "V3-W1-15_R",
+      "production_question_id_prefix": "v3_v3_b_135_q_",
+      "production_review_id_prefix": "v3_v3_b_135_rv_"
+    },
+    {
+      "draft_lesson_id": "V3-W1-16",
+      "production_lesson_id": "V3-B-136",
+      "question_file": "questions_v3b.json",
+      "draft_question_id_prefix": "V3-W1-16_Q",
+      "draft_review_id_prefix": "V3-W1-16_R",
+      "production_question_id_prefix": "v3_v3_b_136_q_",
+      "production_review_id_prefix": "v3_v3_b_136_rv_"
+    }
+  ],
+  "v0_v3_question_files": [
+    "questions_v0.json",
+    "questions_v1a.json",
+    "questions_v1b.json",
+    "questions_v1c.json",
+    "questions_v1d.json",
+    "questions_v1e.json",
+    "questions_v1f.json",
+    "questions_v2a.json",
+    "questions_v2b.json",
+    "questions_v2c.json",
+    "questions_v2d.json",
+    "questions_v2e.json",
+    "questions_v3a.json",
+    "questions_v3b.json",
+    "questions_v3c.json",
+    "questions_v3d.json",
+    "questions_v3e.json",
+    "questions_v3f.json"
+  ],
+  "mixed_review": {
+    "architecture_artifact": "drafts/v0-v3-rebuild/mixed_review_architecture.json",
+    "applies_to": [
+      "V2",
+      "V3"
+    ],
+    "canonical_id_format": "{stage}-MR-{NN}"
+  },
+  "future_stages": {
+    "V4": {
+      "reference_pack": "drafts/v4-rebuild/v4_reference_pack.json",
+      "planned_lessons": 50,
+      "in_production_manifest": false
+    },
+    "V5": {
+      "reference_pack": "drafts/v5-rebuild/v5_reference_pack.json",
+      "planned_lessons": 50,
+      "in_production_manifest": false
+    },
+    "V6": {
+      "reference_pack": "drafts/v6-rebuild/v6_reference_pack.json",
+      "planned_lessons": 40,
+      "in_production_manifest": false
+    }
+  },
+  "file_splitting_rules": {
+    "rule": "One manifest question file per V1-V3 letter group listed in stage_map; mixed_review lessons create no new question file rows.",
+    "v0_v3_files": [
+      "questions_v0.json",
+      "questions_v1a.json",
+      "questions_v1b.json",
+      "questions_v1c.json",
+      "questions_v1d.json",
+      "questions_v1e.json",
+      "questions_v1f.json",
+      "questions_v2a.json",
+      "questions_v2b.json",
+      "questions_v2c.json",
+      "questions_v2d.json",
+      "questions_v2e.json",
+      "questions_v3a.json",
+      "questions_v3b.json",
+      "questions_v3c.json",
+      "questions_v3d.json",
+      "questions_v3e.json",
+      "questions_v3f.json"
+    ],
+    "v4_plus_files_planned": [
+      "questions_v4a.json",
+      "questions_v4b.json",
+      "questions_v4c.json",
+      "questions_v4d.json",
+      "questions_v5a.json",
+      "questions_v5b.json",
+      "questions_v5c.json",
+      "questions_v5d.json",
+      "questions_v5e.json",
+      "questions_v6a.json",
+      "questions_v6b.json"
+    ],
+    "dedupe_note": "Future V4 file list may collapse to fewer physical files until activation split is decided."
+  },
+  "curriculum_merge_checklist": [
+    "Populate curriculum.lessons from this manifest during production merge",
+    "Run scripts/add-mixed-review-lessons.js after V2/V3 core lessons exist",
+    "Map draft V3-W1-* IDs through wave1_production_id_map before writing question rows",
+    "Bump seed_version in curriculum.json, js/vocab-db.js, tests/helpers/seed-idb.ts",
+    "Run full release gate from docs/plans/questions plan.md"
+  ],
+  "consistency_checks": {
+    "status": "passed",
+    "checks": [
+      {
+        "id": "v4_draft_slice_present",
+        "pass": true,
+        "detail": "V4 draft has 100 questions across 5 lessons."
+      },
+      {
+        "id": "v5_planned_lessons",
+        "pass": true,
+        "detail": "V5 planned lesson count matches curriculum.json."
+      },
+      {
+        "id": "v6_planned_lessons",
+        "pass": true,
+        "detail": "V6 planned lesson count matches curriculum.json."
+      },
+      {
+        "id": "wave1_map_count",
+        "pass": true,
+        "detail": "wave1_production_id_map rows = 16"
+      },
+      {
+        "id": "wave1_map_first_last",
+        "pass": true,
+        "detail": "Wave 1 maps V3-W1-01..16 to V3-A-121..130 and V3-B-131..136."
+      },
+      {
+        "id": "mixed_review_v2_sources",
+        "pass": true,
+        "detail": "V2 mixed-review source map has 10 lessons."
+      },
+      {
+        "id": "mixed_review_v3_sources",
+        "pass": true,
+        "detail": "V3 mixed-review source map has 12 lessons."
+      },
+      {
+        "id": "manifest_matches_stage_map",
+        "pass": true,
+        "detail": "Master manifest grand lesson total matches stage_map."
+      },
+      {
+        "id": "mixed_review_script_uses_mr",
+        "pass": true,
+        "detail": "add-mixed-review-lessons.js emits canonical MR IDs."
+      }
+    ]
+  },
+  "last_verified_at": "2026-05-18T00:13:56.352Z"
+}

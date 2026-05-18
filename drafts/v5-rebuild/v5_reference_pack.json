@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-05-18T00:13:06.191Z",
+  "pack_version": "v5_reference_pack_v1",
+  "reference_role": "future_stage_planning",
+  "status": "planning_only",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "scope": {
+    "stage": "V5",
+    "stage_name": "False Friends + Speed Reflex",
+    "planned_total_lessons": 50,
+    "planned_total_question_rows": 1000
+  },
+  "boundary_rules": [
+    "V5 is not in the production seed manifest.",
+    "Do not author production rows until V0-V4 rebuild slices are stable."
+  ],
+  "lesson_id_policy": {
+    "global_range": {
+      "from": "V5-A-231",
+      "to": "V5-E-280",
+      "count": 50
+    },
+    "numbering_note": "V5 global IDs continue after planned V4 range 181-230."
+  },
+  "lesson_groups": [
+    {
+      "group": "A",
+      "lesson_id_range": {
+        "from": "V5-A-231",
+        "to": "V5-A-240"
+      },
+      "planned_question_file": "questions_v5a.json",
+      "lesson_count": 10,
+      "lesson_type": "false_friend_speed_reflex",
+      "question_rows_per_lesson_planned": 20
+    },
+    {
+      "group": "B",
+      "lesson_id_range": {
+        "from": "V5-B-241",
+        "to": "V5-B-250"
+      },
+      "planned_question_file": "questions_v5b.json",
+      "lesson_count": 10,
+      "lesson_type": "false_friend_speed_reflex",
+      "question_rows_per_lesson_planned": 20
+    },
+    {
+      "group": "C",
+      "lesson_id_range": {
+        "from": "V5-C-251",
+        "to": "V5-C-260"
+      },
+      "planned_question_file": "questions_v5c.json",
+      "lesson_count": 10,
+      "lesson_type": "false_friend_speed_reflex",
+      "question_rows_per_lesson_planned": 20
+    },
+    {
+      "group": "D",
+      "lesson_id_range": {
+        "from": "V5-D-261",
+        "to": "V5-D-270"
+      },
+      "planned_question_file": "questions_v5d.json",
+      "lesson_count": 10,
+      "lesson_type": "false_friend_speed_reflex",
+      "question_rows_per_lesson_planned": 20
+    },
+    {
+      "group": "E",
+      "lesson_id_range": {
+        "from": "V5-E-271",
+        "to": "V5-E-280"
+      },
+      "planned_question_file": "questions_v5e.json",
+      "lesson_count": 10,
+      "lesson_type": "false_friend_speed_reflex",
+      "question_rows_per_lesson_planned": 20
+    }
+  ],
+  "question_type_mix_per_lesson_planned": {
+    "false_friend": 10,
+    "speed_drill": 10
+  },
+  "authoring_policy": {
+    "false_friend": {
+      "distractor_type": "toeic_false_friend",
+      "default_error_code": "FALSE_FRIEND",
+      "estimated_time_seconds": 8,
+      "blank_required": false
+    },
+    "speed_drill": {
+      "distractor_type": "same_word_family",
+      "default_error_code": "TIME_PRESSURE",
+      "estimated_time_seconds": 8,
+      "blank_required": true,
+      "sentence_uniqueness": "All speed_drill sentences must be newly written for V5."
+    }
+  },
+  "planned_question_files": [
+    "questions_v5a.json",
+    "questions_v5b.json",
+    "questions_v5c.json",
+    "questions_v5d.json",
+    "questions_v5e.json"
+  ],
+  "activation_blockers": [
+    "No draft question file exists yet",
+    "Requires V5 authoring spec section in question-creation-spec.md",
+    "Requires curriculum stage activation task with seed-version bump"
+  ],
+  "last_verified_at": "2026-05-18T00:13:56.352Z"
+}

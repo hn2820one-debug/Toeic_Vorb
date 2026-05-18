@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TOEIC Vocabulary Tracker</title>
+  <title>TOEIC 單字追蹤器</title>
   <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="./icons/icon-192.svg">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/tracker.css">
 </head>
@@ -14,15 +15,15 @@
     <header class="tracker-head">
       <div class="tracker-head-row">
         <div>
-          <h1 class="page-title">TOEIC Vocabulary Tracker</h1>
-          <p class="page-subtitle">Local-first vocabulary progress, error analysis, mastery, and export.</p>
+          <h1 class="page-title">TOEIC 單字追蹤器</h1>
+          <p class="page-subtitle">以本機資料保存你的單字進度、錯因分析、精熟度與匯出紀錄。</p>
         </div>
-        <button class="button secondary" type="button" onclick="location.href='./index.html'">Back to Launcher</button>
+        <button class="button secondary" type="button" onclick="location.href='./index.html'">返回首頁</button>
       </div>
-      <nav id="tracker-tabs" class="tracker-tabs" aria-label="Tracker navigation"></nav>
+      <nav id="tracker-tabs" class="tracker-tabs" aria-label="單字追蹤導覽"></nav>
     </header>
 
-    <div id="tracker-notice" class="section" style="padding-bottom:0"></div>
+    <div id="tracker-notice" class="section tracker-notice-shell"></div>
     <section id="tracker-view" class="tracker-view"></section>
   </main>
 

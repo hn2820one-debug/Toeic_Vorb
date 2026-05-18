@@ -159,35 +159,35 @@ export function validateQuestionBank(questions) {
   questions.forEach((question) => {
     required.forEach((field) => {
       if (question[field] === undefined || question[field] === null || question[field] === "") {
-        errors.push(`${question.question_id || "(unknown)"} missing ${field}`);
+        errors.push(`${question.question_id || "(未知)"} 缺少欄位 ${field}`);
       }
     });
 
     if (!["A", "B", "C", "D"].includes(question.correct_answer)) {
-      errors.push(`${question.question_id} correct_answer must be A/B/C/D`);
+      errors.push(`${question.question_id} 的 correct_answer 必須是 A/B/C/D`);
     }
 
     ["A", "B", "C", "D"].forEach((letter) => {
       if (!question.options || !question.options[letter]) {
-        errors.push(`${question.question_id} missing option ${letter}`);
+        errors.push(`${question.question_id} 缺少選項 ${letter}`);
       }
     });
 
-    if (ids.has(question.question_id)) errors.push(`duplicate question_id ${question.question_id}`);
+    if (ids.has(question.question_id)) errors.push(`重複的 question_id：${question.question_id}`);
     ids.add(question.question_id);
 
     const normalizedText = String(question.question_text || "").trim().toLowerCase();
-    if (texts.has(normalizedText)) warnings.push(`duplicate question text: ${question.question_id}`);
+    if (texts.has(normalizedText)) warnings.push(`題幹重複：${question.question_id}`);
     if (normalizedText) texts.add(normalizedText);
-    if (!question.grammar_link_id) warnings.push(`${question.question_id} has no grammar_link_id`);
-    if (!Array.isArray(question.tags) || !question.tags.length) warnings.push(`${question.question_id} has no tags`);
-    if (!question.estimated_time_seconds) warnings.push(`${question.question_id} has no estimated_time_seconds`);
+    if (!question.grammar_link_id) warnings.push(`${question.question_id} 沒有 grammar_link_id`);
+    if (!Array.isArray(question.tags) || !question.tags.length) warnings.push(`${question.question_id} 沒有 tags`);
+    if (!question.estimated_time_seconds) warnings.push(`${question.question_id} 沒有 estimated_time_seconds`);
   });
 
   const dist = answerDistribution(questions);
   const total = questions.length || 1;
   Object.entries(dist).forEach(([letter, count]) => {
-    if (count / total > 0.4) warnings.push(`answer ${letter} is ${count}/${total}, over 40%`);
+    if (count / total > 0.4) warnings.push(`答案 ${letter} 佔 ${count}/${total}，超過 40%`);
   });
 
   return { errors, warnings, dist };
@@ -206,40 +206,40 @@ export function renderQuestionBank() {
 
   return `
     <section class="tracker-panel">
-      <h3>Question Bank Manager</h3>
+      <h3>題庫管理</h3>
       <div class="bank-filters">
         <label>
-          <span>Search</span>
-          <input data-testid="question-bank-search" type="search" value="${html(state.bankFilters.search || "")}" oninput="VocabTracker.setBankFilter('search', this.value)" placeholder="Question, item, text">
+          <span>搜尋</span>
+          <input data-testid="question-bank-search" type="search" value="${html(state.bankFilters.search || "")}" oninput="VocabTracker.setBankFilter('search', this.value)" placeholder="題號、單字、題幹文字">
         </label>
-        ${renderSelect("stage", "Stage", stages, state.bankFilters.stage)}
-        ${renderSelect("lesson_id", "Lesson", lessons, state.bankFilters.lesson_id)}
-        ${renderSelect("type", "Type", types, state.bankFilters.type)}
-        ${renderSelect("error_code", "Error", window.VocabScoring.ERROR_CODES, state.bankFilters.error_code)}
+        ${renderSelect("stage", "階段", stages, state.bankFilters.stage)}
+        ${renderSelect("lesson_id", "課程", lessons, state.bankFilters.lesson_id)}
+        ${renderSelect("type", "題型", types, state.bankFilters.type)}
+        ${renderSelect("error_code", "錯因", window.VocabScoring.ERROR_CODES, state.bankFilters.error_code)}
       </div>
       <div class="bank-summary">
-        <span data-testid="question-bank-count">Question Count: <strong>${questions.length}</strong></span>
-        <span>Local Edits: <strong>${state.questionEdits.length}</strong></span>
+        <span data-testid="question-bank-count">題目數量：<strong>${questions.length}</strong></span>
+        <span>本機編輯：<strong>${state.questionEdits.length}</strong></span>
         <span>A:${validation.dist.A} / B:${validation.dist.B} / C:${validation.dist.C} / D:${validation.dist.D}</span>
-        <span>Errors: ${validation.errors.length}</span>
-        <span>Warnings: ${validation.warnings.length}</span>
+        <span>錯誤：${validation.errors.length}</span>
+        <span>警告：${validation.warnings.length}</span>
       </div>
       <div class="tracker-alert warn" data-testid="question-bank-local-warning">
-        Browser edits are local IndexedDB edits. They are not production seed changes until exported and applied to seed JSON.
+        瀏覽器內的編輯只會寫進本機 IndexedDB。只有在匯出並套用回 seed JSON 後，才算正式資料變更。
       </div>
       <div class="tracker-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.newQuestionTemplate()">Add Question</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.exportQuestions()">Export JSON</button>
-        <button class="button secondary" data-testid="question-bank-patch-export" type="button" onclick="VocabTracker.exportLocalEditsPatch()">Export Local Edits Patch</button>
-        <button class="button secondary" data-testid="question-bank-seed-export" type="button" onclick="VocabTracker.downloadSeedJson()">Download Edited Seed JSON Snapshot</button>
-        <small class="muted-note">${state.questions.length} questions across ${seedFileCount} seed files</small>
-        <label class="button secondary file-button">Import JSON<input type="file" accept="application/json,.json" onchange="VocabTracker.importQuestions(this.files[0])"></label>
-        <button class="button secondary" type="button" onclick="VocabTracker.showValidation()">Validate Bank</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.newQuestionTemplate()">新增題目</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.exportQuestions()">匯出 JSON</button>
+        <button class="button secondary" data-testid="question-bank-patch-export" type="button" onclick="VocabTracker.exportLocalEditsPatch()">匯出本機編輯 Patch</button>
+        <button class="button secondary" data-testid="question-bank-seed-export" type="button" onclick="VocabTracker.downloadSeedJson()">下載已編輯 Seed JSON 快照</button>
+        <small class="muted-note">共 ${state.questions.length} 題，分布在 ${seedFileCount} 個 seed 檔</small>
+        <label class="button secondary file-button">匯入 JSON<input type="file" accept="application/json,.json" onchange="VocabTracker.importQuestions(this.files[0])"></label>
+        <button class="button secondary" type="button" onclick="VocabTracker.showValidation()">驗證題庫</button>
       </div>
     </section>
     <section class="bank-layout">
       <article class="tracker-panel question-list-panel">
-        <h3>Questions</h3>
+        <h3>題目列表</h3>
         <div class="question-list" data-testid="question-bank-list">
           ${(() => {
             const PAGE_SIZE = 120;
@@ -251,16 +251,16 @@ export function renderQuestionBank() {
                 <strong>${html(question.question_id)}</strong>
                 <small>${html(question.lesson_id)} · ${html(question.type)} · ${html(question.default_error_code)}</small>
               </button>
-            `).join("") + (hasMore ? `<button class="button secondary" data-testid="question-bank-load-more" type="button" onclick="VocabTracker.loadMoreBankQuestions()" style="width:100%;margin-top:6px">Load More (${questions.length - visibleCount} remaining)</button>` : "");
+            `).join("") + (hasMore ? `<button class="button secondary" data-testid="question-bank-load-more" type="button" onclick="VocabTracker.loadMoreBankQuestions()" style="width:100%;margin-top:6px">載入更多（剩餘 ${questions.length - visibleCount} 題）</button>` : "");
           })()}
         </div>
       </article>
       <article class="tracker-panel editor-panel">
-        <h3>Editor</h3>
+        <h3>編輯器</h3>
         <textarea id="question-json-editor" spellcheck="false">${html(selected ? JSON.stringify(selected, null, 2) : "")}</textarea>
         <div class="tracker-actions">
-          <button class="button primary" type="button" onclick="VocabTracker.saveQuestionFromEditor()">Save Question JSON</button>
-          <button class="button secondary" type="button" onclick="VocabTracker.deleteSelectedQuestion()" ${selected ? "" : "disabled"}>Delete</button>
+          <button class="button primary" type="button" onclick="VocabTracker.saveQuestionFromEditor()">儲存題目 JSON</button>
+          <button class="button secondary" type="button" onclick="VocabTracker.deleteSelectedQuestion()" ${selected ? "" : "disabled"}>刪除</button>
         </div>
       </article>
     </section>
@@ -272,7 +272,7 @@ export function renderSelect(key, label, values, selected) {
     <label>
       <span>${html(label)}</span>
       <select onchange="VocabTracker.setBankFilter('${key}', this.value)">
-        <option value="">All</option>
+        <option value="">全部</option>
         ${values.map((value) => `<option value="${html(value)}" ${selected === value ? "selected" : ""}>${html(value)}</option>`).join("")}
       </select>
     </label>
@@ -329,7 +329,7 @@ export async function saveQuestionFromEditor() {
   try {
     question = JSON.parse(raw);
   } catch (err) {
-    setNotice(`Question JSON parse failed: ${err.message}`, "danger");
+    setNotice(`題目 JSON 解析失敗：${err.message}`, "danger");
     return;
   }
 
@@ -344,13 +344,13 @@ export async function saveQuestionFromEditor() {
   await trackQuestionEdit(question, previous, previous ? "update" : "add");
   state.selectedQuestionId = question.question_id;
   await loadData();
-  setNotice("Question saved locally in IndexedDB. Export a patch before applying to production seed JSON.", "ok");
+  setNotice("題目已儲存在本機 IndexedDB。若要套用到正式 seed JSON，請先匯出 patch。", "ok");
   callRender();
 }
 
 export async function deleteSelectedQuestion() {
   if (!state.selectedQuestionId) return;
-  if (!window.confirm(`Delete ${state.selectedQuestionId}?`)) return;
+  if (!window.confirm(`要刪除 ${state.selectedQuestionId} 嗎？`)) return;
 
   const previous = await window.VocabDB.get("questions", state.selectedQuestionId).catch(() => null);
   if (previous) await trackQuestionEdit(null, previous, "delete");
@@ -369,13 +369,13 @@ export async function importQuestions(file) {
   try {
     parsed = JSON.parse(text);
   } catch (err) {
-    setNotice(`Import JSON parse failed: ${err.message}`, "danger");
+    setNotice(`匯入 JSON 解析失敗：${err.message}`, "danger");
     return;
   }
 
   const questions = Array.isArray(parsed) ? parsed : parsed.questions;
   if (!Array.isArray(questions)) {
-    setNotice("Import file must be a question array or an object with questions[].", "danger");
+    setNotice("匯入檔案必須是題目陣列，或是帶有 questions[] 的物件。", "danger");
     return;
   }
 
@@ -391,7 +391,7 @@ export async function importQuestions(file) {
     await trackQuestionEdit(question, previousRows[index], previousRows[index] ? "update" : "add");
   }
   await loadData();
-  setNotice(`${questions.length} questions imported locally. Export a patch before applying to production seed JSON.`, "ok");
+  setNotice(`已匯入 ${questions.length} 題到本機。若要套用到正式 seed JSON，請先匯出 patch。`, "ok");
   callRender();
 }
 
@@ -403,7 +403,7 @@ export function exportQuestions() {
 export async function exportLocalEditsPatch() {
   const edits = await window.VocabDB.getAll("question_edits");
   if (!edits.length) {
-    setNotice("No local Question Bank edits are tracked in this browser.", "warn");
+    setNotice("這個瀏覽器目前沒有追蹤到任何本機題庫編輯。", "warn");
     return;
   }
 
@@ -444,7 +444,7 @@ export async function exportLocalEditsPatch() {
 
   const stamp = window.VocabScoring.localDate();
   window.VocabScoring.downloadText(`questionbank_edits_patch_${stamp}.json`, JSON.stringify(patch, null, 2), "application/json;charset=utf-8");
-  setNotice(`Exported ${changes.length} local edit patch row(s). Review before applying to production JSON.`, "ok");
+  setNotice(`已匯出 ${changes.length} 筆本機編輯 patch。套用到正式 JSON 前請先檢查。`, "ok");
 }
 
 function seedFilenameForQuestion(question) {
@@ -465,12 +465,12 @@ export async function downloadSeedJson() {
   const allQuestions = await window.VocabDB.getAll("questions");
   const validation = validateQuestionBank(allQuestions);
   if (validation.errors.length) {
-    setNotice(`Seed export blocked — ${validation.errors.length} error(s): ${validation.errors.slice(0, 5).join(" | ")}`, "danger");
+    setNotice(`Seed 匯出已阻擋：${validation.errors.length} 個錯誤：${validation.errors.slice(0, 5).join(" | ")}`, "danger");
     return;
   }
 
   if (validation.warnings.length) {
-    setNotice(`${validation.warnings.length} warning(s): ${validation.warnings.slice(0, 3).join(" | ")} — export will proceed.`, "warn");
+    setNotice(`${validation.warnings.length} 個警告：${validation.warnings.slice(0, 3).join(" | ")}；仍會繼續匯出。`, "warn");
   }
 
   const groups = {};
@@ -494,7 +494,7 @@ export async function downloadSeedJson() {
         await writable.write(JSON.stringify(questions, null, 2));
         await writable.close();
       }
-      setNotice(`Exported ${totalCount} questions to ${fileCount} files. Re-import to verify.`, "ok");
+      setNotice(`已匯出 ${totalCount} 題到 ${fileCount} 個檔案。建議再重新匯入檢查。`, "ok");
       return;
     } catch (err) {
       if (err?.name !== "AbortError") throw err;
@@ -507,15 +507,15 @@ export async function downloadSeedJson() {
     }, index * 160);
   });
 
-  setNotice(`Exported ${totalCount} questions to ${fileCount} files. Re-import to verify.`, "ok");
+  setNotice(`已匯出 ${totalCount} 題到 ${fileCount} 個檔案。建議再重新匯入檢查。`, "ok");
 }
 
 export function showValidation() {
   const validation = validateQuestionBank(filteredQuestions());
   const lines = [
-    `Errors: ${validation.errors.length}`,
+    `錯誤：${validation.errors.length}`,
     ...validation.errors.slice(0, 8),
-    `Warnings: ${validation.warnings.length}`,
+    `警告：${validation.warnings.length}`,
     ...validation.warnings.slice(0, 8)
   ];
 

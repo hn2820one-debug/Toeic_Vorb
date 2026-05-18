@@ -25,25 +25,25 @@ Program B is the TOEIC Vocabulary Tracker only. Do not modify Program A.
 
 The runnable production seed is V0-V3 only. V4 is draft-only and is not loaded by the app.
 
-目前正式可執行 seed 只包含 V0-V3。V4 只是草稿，不會被 app 載入。
+目前正式 production seed manifest 仍指向 V0-V3 題檔，但所有 production lesson rows 與 question rows 已在嚴格清理後清空。V4 仍然只是草稿，不會被 app 載入。
 
 | Area / 區域 | Current value / 目前值 |
 |---|---:|
-| Runnable lessons / 可執行課程 | 193 |
-| Question-bank rows / 題庫題數 | 4,399 |
+| Runnable lessons / 可執行課程 | 0 |
+| Question-bank rows / 題庫題數 | 0 |
 | Vocab items / 詞彙項目 | 494 |
 | Question files in manifest / manifest 題檔 | 18 |
 | Duplicate stems / 重複題幹 | 0 |
 | Full quality audit issues / 全題庫品質問題 | 0 |
-| Seed version / 種子版本 | `toeic_vocab_tracker_c002_old_item_interference_2026_05_18` |
-| Service worker cache / SW 快取 | `toeic-vorb-v8` |
+| Seed version / 種子版本 | `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` |
+| Service worker cache / SW 快取 | `toeic-vorb-v9` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
-| V0 Diagnosis | 1 | 31 | Active |
-| V1 Word Family + Speed | 60 | 1,728 | Active |
-| V2 TOEIC Scene Vocabulary | 60 | 1,200 | Active |
-| V3 Collocation | 72 | 1,440 | Active |
+| V0 Diagnosis | 0 | 0 | Cleared |
+| V1 Word Family + Speed | 0 | 0 | Cleared |
+| V2 TOEIC Scene Vocabulary | 0 | 0 | Cleared |
+| V3 Collocation | 0 | 0 | Cleared |
 | V4 Formal Phrase | 0 active | 0 active | Draft only |
 | V5 False Friends + Speed Reflex | 0 | 0 | Planned |
 | V6 Integrated Review + Seal Test | 0 | 0 | Planned |
@@ -125,6 +125,8 @@ Content quality and seed cleanup:
 - V3 collocation item Chinese meanings and examples were filled.
 - `docs/question-creation-spec.md` defines current authoring and audit rules.
 - `scripts/audit-quality-full.js` now separates Core Lesson Audit, Mixed Review Audit, and Draft Audit; production audit skips `drafts/v4/` by default.
+- Strict production prune removed 25 direct-definition rows that violated the semantic-meaning uniqueness policy; full audit now passes with warnings only.
+- Full production bank clear removed the remaining V0-V3 production lesson rows and question rows after the warning-level review; current production seed is intentionally empty pending a future rebuild.
 
 Learning workflow:
 

@@ -1,0 +1,126 @@
+{
+  "generated_at": "2026-05-18T00:13:06.191Z",
+  "pack_version": "v6_reference_pack_v1",
+  "reference_role": "future_stage_planning",
+  "status": "planning_only",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "scope": {
+    "stage": "V6",
+    "stage_name": "Integrated Review + Seal Test",
+    "planned_total_lessons": 40,
+    "planned_new_question_rows": 200,
+    "planned_reused_review_slots": 600
+  },
+  "boundary_rules": [
+    "V6 is not in the production seed manifest.",
+    "Integrated-review lessons must not create duplicate question rows when reusing prior review_question IDs."
+  ],
+  "lesson_id_policy": {
+    "integrated_review_range": {
+      "from": "V6-A-281",
+      "to": "V6-C-310",
+      "count": 30
+    },
+    "seal_test_range": {
+      "from": "V6-ST-01",
+      "to": "V6-ST-08",
+      "count": 8
+    },
+    "capstone_range": {
+      "from": "V6-CAP-01",
+      "to": "V6-CAP-02",
+      "count": 2
+    },
+    "numbering_note": "V6 uses integrated groups A-C for cross-stage review plus ST seal-test lessons and CAP capstones."
+  },
+  "lesson_groups": [
+    {
+      "group": "A",
+      "lesson_id_range": {
+        "from": "V6-A-281",
+        "to": "V6-A-290"
+      },
+      "lesson_count": 10,
+      "lesson_type": "integrated_review"
+    },
+    {
+      "group": "B",
+      "lesson_id_range": {
+        "from": "V6-B-291",
+        "to": "V6-B-300"
+      },
+      "lesson_count": 10,
+      "lesson_type": "integrated_review"
+    },
+    {
+      "group": "C",
+      "lesson_id_range": {
+        "from": "V6-C-301",
+        "to": "V6-C-310"
+      },
+      "lesson_count": 10,
+      "lesson_type": "integrated_review"
+    },
+    {
+      "group": "ST",
+      "lesson_id_range": {
+        "from": "V6-ST-01",
+        "to": "V6-ST-08"
+      },
+      "lesson_count": 8,
+      "lesson_type": "seal_test",
+      "question_rows_per_lesson_planned": 25,
+      "covers_stages": [
+        "V0",
+        "V1",
+        "V2",
+        "V3"
+      ]
+    },
+    {
+      "group": "CAP",
+      "lesson_id_range": {
+        "from": "V6-CAP-01",
+        "to": "V6-CAP-02"
+      },
+      "lesson_count": 2,
+      "lesson_type": "integrated_capstone",
+      "question_ids_per_lesson_planned": 30,
+      "covers_stages": [
+        "V0",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5"
+      ]
+    }
+  ],
+  "integrated_review_policy": {
+    "question_ids_per_lesson": 20,
+    "question_rows_created": 0,
+    "source_policy": "Draw review_question rows from V0-V5 prior lessons; weighted toward weak mastery items.",
+    "assembly_script_planned": "scripts/build-v6-integrated-review-lessons.js"
+  },
+  "seal_test_policy": {
+    "question_rows_per_lesson": 25,
+    "question_types": [
+      "review_question",
+      "part5_sentence_completion",
+      "scene_vocabulary",
+      "collocation"
+    ],
+    "purpose": "Stage-seal readiness checks aligned with Today dashboard Stage Seal Readiness (display-only until activated)."
+  },
+  "planned_question_files": [
+    "questions_v6a.json",
+    "questions_v6b.json"
+  ],
+  "activation_blockers": [
+    "Requires V0-V5 content to exist before integrated review has sources",
+    "Seal-test authoring spec not yet added to question-creation-spec.md",
+    "No draft question files yet"
+  ],
+  "last_verified_at": "2026-05-18T00:13:56.352Z"
+}

@@ -33,7 +33,7 @@ function makeMixedLessons(stage, stageName, grammarLinkId, coreLessons) {
     mixed.push({
       insertAfterId: group[4].lesson_id,
       lesson: {
-        lesson_id: `${stage}-MIX-${padded}`,
+        lesson_id: `${stage}-MR-${padded}`,
         stage,
         stage_name: stageName,
         lesson_number: (stage === "V2" ? 10000 : 20000) + mixCount,

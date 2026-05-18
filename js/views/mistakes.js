@@ -7,7 +7,8 @@ import {
   setNotice,
   loadData,
   errorCodeLabel,
-  ERROR_CODE_LABELS
+  ERROR_CODE_LABELS,
+  questionTypeLabel
 } from "../state.js";
 import { getReviewCandidates, upsertReviewQueue } from "./lesson.js";
 
@@ -37,16 +38,34 @@ function callSetView(view) {
   callRender();
 }
 
+function reviewStateLabel(value) {
+  return {
+    repeated_error: "反覆錯誤",
+    still_weak: "仍不穩定",
+    new_error: "新錯誤",
+    fixed: "已修正，待複習",
+    stable: "已穩定，待複習",
+    reviewed: "已複習",
+    pending: "待複習",
+    lesson_error: "課程錯誤",
+    manual_add: "手動加入",
+    timeout_error: "超時錯誤",
+    speed_error: "速度錯誤",
+    reinforcement: "補強練習",
+    needs_retake: "需要重跑"
+  }[value] || value || "待複習";
+}
+
 export function renderMistakes() {
   if (state.reviewSessionId) return renderSessionErrorReview(state.reviewSessionId);
   const pending = state.reviewQueue.filter((item) => item.status === "pending");
   const filter = state.reviewFilter || "due";
   const candidates = getReviewCandidates(filter);
   const filterTabs = [
-    ["due", "Due Today"],
-    ["high_priority", "High Priority"],
-    ["repeated", "Repeated"],
-    ["all", "All Pending"]
+    ["due", "今日到期"],
+    ["high_priority", "高優先"],
+    ["repeated", "反覆錯誤"],
+    ["all", "全部待處理"]
   ];
   const counts = {
     due: getReviewCandidates("due").rows.length,
@@ -61,24 +80,19 @@ export function renderMistakes() {
   const items = byId(state.vocabItems, "item_id");
   const rows = visibleQueue.map((entry) => {
     const reviewState = entry.review_state || "";
-    const whyDue = reviewState === "repeated_error" ? "Repeated error"
-      : reviewState === "still_weak" ? "Still weak"
-      : reviewState === "new_error" ? "New error"
-      : reviewState === "fixed" ? "Fixed · due review"
-      : reviewState === "stable" ? "Stable · due review"
-      : entry.reason || "Pending review";
-    const nextAt = entry.next_review_at ? `next ${entry.next_review_at}` : `due ${html(entry.due_date)}`;
-    const repCount = entry.repeated_error_count ? ` · ${entry.repeated_error_count}× repeated` : "";
+    const whyDue = reviewStateLabel(reviewState || entry.reason || "pending");
+    const nextAt = entry.next_review_at ? `下次 ${html(entry.next_review_at)}` : `到期 ${html(entry.due_date)}`;
+    const repCount = entry.repeated_error_count ? ` · 反覆 ${entry.repeated_error_count} 次` : "";
     return `
     <article class="queue-card priority-${entry.priority}">
       <div>
         <strong>${html(items[entry.item_id]?.base_word || entry.item_id)}</strong>
         <p class="queue-why">${html(whyDue)}${repCount}</p>
-        <p class="queue-meta">${nextAt} · ${entry.question_ids?.length || 0} questions</p>
+        <p class="queue-meta">${nextAt} · ${entry.question_ids?.length || 0} 題</p>
       </div>
       <div class="queue-actions">
         <span class="priority-pill">P${entry.priority}</span>
-        <button class="button small" type="button" onclick="VocabTracker.markQueueDone('${html(entry.review_id)}')">Done</button>
+        <button class="button small" type="button" onclick="VocabTracker.markQueueDone('${html(entry.review_id)}')">完成</button>
       </div>
     </article>
   `;
@@ -90,12 +104,12 @@ export function renderMistakes() {
 
   return `
     <section class="tracker-panel">
-      <h3>Review Mode</h3>
+      <h3>複習模式</h3>
       <div class="tracker-grid review-grid">
-        <article class="tracker-stat"><span>Due</span><strong>${counts.due}</strong><small>questions</small></article>
-        <article class="tracker-stat"><span>High P</span><strong>${counts.high_priority}</strong><small>questions</small></article>
-        <article class="tracker-stat"><span>Repeated</span><strong>${counts.repeated}</strong><small>questions</small></article>
-        <article class="tracker-stat"><span>All Pending</span><strong>${counts.all}</strong><small>questions</small></article>
+        <article class="tracker-stat"><span>到期</span><strong>${counts.due}</strong><small>題</small></article>
+        <article class="tracker-stat"><span>高優先</span><strong>${counts.high_priority}</strong><small>題</small></article>
+        <article class="tracker-stat"><span>反覆錯</span><strong>${counts.repeated}</strong><small>題</small></article>
+        <article class="tracker-stat"><span>待處理</span><strong>${counts.all}</strong><small>題</small></article>
       </div>
       <div class="review-filter-tabs">
         ${filterTabs.map(([id, label]) => `
@@ -103,44 +117,44 @@ export function renderMistakes() {
         `).join("")}
       </div>
       <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.startReviewMode('${html(filter)}')" ${candidates.rows.length ? "" : "disabled"}>Start Review (${candidates.rows.length})</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.setView('lesson')">Normal Lesson</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">Export</button>
+        <button class="button primary" type="button" onclick="VocabTracker.startReviewMode('${html(filter)}')" ${candidates.rows.length ? "" : "disabled"}>開始複習 (${candidates.rows.length})</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.setView('lesson')">一般課程</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">資料匯出</button>
       </div>
       ${state.lastReviewSummary ? `
         <div class="tracker-alert ${state.lastReviewSummary.wrong_questions ? "warn" : "ok"}">
-          Last review: ${state.lastReviewSummary.correct_questions}/${state.lastReviewSummary.total_questions} correct · ${state.lastReviewSummary.fixed_items} fixed · ${state.lastReviewSummary.still_weak_items} still weak · ${state.lastReviewSummary.repeated_error_items} repeated
+          上次複習：${state.lastReviewSummary.correct_questions}/${state.lastReviewSummary.total_questions} 題答對 · ${state.lastReviewSummary.fixed_items} 項已修正 · ${state.lastReviewSummary.still_weak_items} 項仍不穩 · ${state.lastReviewSummary.repeated_error_items} 項反覆錯誤
         </div>
       ` : ""}
     </section>
     <section class="tracker-panel">
-      <h3>Mistake Review Queue</h3>
-      ${visibleQueue.length ? `<div class="queue-list">${rows}</div>` : `<p class="muted-note">${pending.length ? "No queue item matches this review mode." : "No pending review items."}</p>`}
+      <h3>錯題複習佇列</h3>
+      ${visibleQueue.length ? `<div class="queue-list">${rows}</div>` : `<p class="muted-note">${pending.length ? "目前這個複習模式下沒有符合項目。" : "目前沒有待複習項目。"}</p>`}
     </section>
     <section class="tracker-panel">
-      <h3>Recent Review Outcomes</h3>
+      <h3>最近複習結果</h3>
       ${recentOutcomes.length ? `<div class="queue-list">${recentOutcomes.map((entry) => {
-        const stateLabel = entry.review_state || entry.review_status || "reviewed";
-        const consec = entry.consecutive_review_correct ? ` · ${entry.consecutive_review_correct} consec` : "";
+        const stateLabel = reviewStateLabel(entry.review_state || entry.review_status || "reviewed");
+        const consec = entry.consecutive_review_correct ? ` · 連續 ${entry.consecutive_review_correct} 次` : "";
         return `
         <article class="queue-card">
           <div>
             <strong>${html(items[entry.item_id]?.base_word || entry.item_id)}</strong>
             <p class="queue-why">${html(stateLabel)}${consec}</p>
-            <p class="queue-meta">${html(entry.review_correct_count || 0)}/${html(entry.review_attempt_count || 0)} correct · ${html(entry.last_reviewed_at || "")}</p>
+            <p class="queue-meta">${html(entry.review_correct_count || 0)}/${html(entry.review_attempt_count || 0)} 題答對 · ${html(entry.last_reviewed_at || "")}</p>
           </div>
           <span class="priority-pill status-${html(stateLabel)}">${html(stateLabel)}</span>
         </article>
       `;
-      }).join("")}</div>` : `<p class="muted-note">No review outcomes yet.</p>`}
+      }).join("")}</div>` : `<p class="muted-note">目前還沒有複習結果。</p>`}
     </section>
     <section class="tracker-panel">
-      <h3>Recent Wrong Attempts</h3>
+      <h3>最近錯題</h3>
       ${renderWrongAttemptList()}
     </section>
     <section class="tracker-panel">
-      <h3>Recent Answer Records</h3>
-      <p class="muted-note">Every submitted answer is saved automatically with the selected answer and per-question time.</p>
+      <h3>最近作答紀錄</h3>
+      <p class="muted-note">每次送出答案後，系統都會自動保存你選的選項與作答時間。</p>
       ${renderAnswerRecordList()}
     </section>
   `;
@@ -155,14 +169,14 @@ export function renderWrongAttemptList() {
   const questionMap = byId(state.questions, "question_id");
   const itemMap = byId(state.vocabItems, "item_id");
   const wrong = state.attempts.filter((attempt) => !attempt.is_correct).slice(-20).reverse();
-  if (!wrong.length) return `<p class="muted-note">No wrong attempts yet.</p>`;
+  if (!wrong.length) return `<p class="muted-note">目前還沒有錯題紀錄。</p>`;
   return wrong.map((attempt) => {
     const q = questionMap[attempt.question_id];
     const vocabItem = itemMap[q?.target_item_id];
     return `
       <article class="wrong-line">
         <strong>${html(attempt.lesson_id)} · ${html(q?.question_text || attempt.question_id)}</strong>
-        <small>Your ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · Correct ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(errorCodeLabel(attempt.error_code || attempt.default_error_code))}</small>
+        <small>你的 ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · 正解 ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(errorCodeLabel(attempt.error_code || attempt.default_error_code))}</small>
         ${vocabItem?.chinese ? `<div class="vocab-card"><p class="vocab-chinese">${html(vocabItem.chinese)}</p>${vocabItem.example ? `<p class="vocab-example">${html(vocabItem.example)}</p>` : ""}</div>` : ""}
       </article>
     `;
@@ -172,7 +186,7 @@ export function renderWrongAttemptList() {
 export function renderAnswerRecordList() {
   const questionMap = byId(state.questions, "question_id");
   const attempts = state.attempts.slice(-30).reverse();
-  if (!attempts.length) return `<p class="muted-note">No answer records yet. Start a lesson and submit an answer to create the first record.</p>`;
+  if (!attempts.length) return `<p class="muted-note">目前還沒有作答紀錄。先開始一課並送出答案，就會出現第一筆紀錄。</p>`;
   return `
     <div class="answer-record-list">
       ${attempts.map((attempt) => {
@@ -185,10 +199,10 @@ export function renderAnswerRecordList() {
             </div>
             <div class="answer-record-meta">
               <span>${html(attempt.timestamp || "")}</span>
-              <span>${html(attempt.question_type || q?.type || "")}</span>
-              <span>Your ${html(attempt.user_answer)}: ${html(optionText(q, attempt.user_answer))}</span>
-              <span>Correct ${html(attempt.correct_answer)}: ${html(optionText(q, attempt.correct_answer))}</span>
-              <span>${attempt.is_correct ? "Correct" : "Wrong"}</span>
+              <span>${html(questionTypeLabel(attempt.question_type || q?.type || ""))}</span>
+              <span>你的 ${html(attempt.user_answer)}：${html(optionText(q, attempt.user_answer))}</span>
+              <span>正解 ${html(attempt.correct_answer)}：${html(optionText(q, attempt.correct_answer))}</span>
+              <span>${attempt.is_correct ? "答對" : "答錯"}</span>
             </div>
           </article>
         `;
@@ -224,14 +238,14 @@ function renderV0Diagnostic(sessionId) {
   });
 
   const codeRec = {
-    VOCAB_UNKNOWN:     "V1 Word Family 詞族基礎",
-    VOCAB_WEAK_RECALL: "V1 Review Sessions 間隔複習",
-    SCENE_VOCAB_GAP:   "V2 Business Context 商業情境",
-    FORMAL_PHRASE:     "V4 Formal Phrases（規劃中）",
-    FALSE_FRIEND:      "V1 False Friends 題型",
-    TIME_PRESSURE:     "各階段 Speed Drill 練習",
-    WORD_FAMILY_POS:   "V1 Word Family 詞族練習",
-    COLLOCATION_PREP:  "V3 Collocation 搭配詞練習",
+    VOCAB_UNKNOWN:     "V1 詞族基礎",
+    VOCAB_WEAK_RECALL: "V1 間隔複習課",
+    SCENE_VOCAB_GAP:   "V2 商務情境字彙",
+    FORMAL_PHRASE:     "V4 正式片語（規劃中）",
+    FALSE_FRIEND:      "V1 易混字題型",
+    TIME_PRESSURE:     "各階段速度練習",
+    WORD_FAMILY_POS:   "V1 詞族練習",
+    COLLOCATION_PREP:  "V3 搭配詞練習",
     CARELESS:          "放慢作答速度，仔細閱讀選項",
     REPEATED_ERROR:    "加入複習佇列，集中練習弱點"
   };
@@ -240,7 +254,7 @@ function renderV0Diagnostic(sessionId) {
     .sort((a, b) => b[1] - a[1])
     .map(([code, count]) => {
       const label = errorCodeLabel(code);
-      const rec = codeRec[code] || "General Practice";
+      const rec = codeRec[code] || "一般練習";
       return `<li><strong>${html(label)}</strong>（${count} 題）→ 建議加強：${html(rec)}</li>`;
     }).join("");
 
@@ -270,8 +284,8 @@ export function renderSessionErrorReview(sessionId) {
     return `
       ${isV0 ? renderV0Diagnostic(sessionId) : ""}
       <section class="tracker-panel">
-        <h3>Error Review + Scheduling</h3>
-        <p class="tracker-bigline">No incorrect answers in this session.</p>
+        <h3>錯題回顧與安排</h3>
+        <p class="tracker-bigline">本次沒有答錯題目。</p>
         <button class="button primary" type="button" onclick="VocabTracker.closeSessionReview()">開始下一課</button>
       </section>
     `;
@@ -279,8 +293,8 @@ export function renderSessionErrorReview(sessionId) {
   return `
     ${isV0 ? renderV0Diagnostic(sessionId) : ""}
     <section class="tracker-panel">
-      <h3>Error Review + Scheduling</h3>
-      <p class="muted-note">Confirm or change the actual cause. Confirmed errors update attempts, error logs, item mastery, and review queue.</p>
+      <h3>錯題回顧與安排</h3>
+      <p class="muted-note">請確認或調整實際錯因。確認後會同步更新作答紀錄、錯誤日誌、精熟度與複習佇列。</p>
       <div class="error-review-list">
         ${attempts.map((attempt) => {
           const q = questionMap[attempt.question_id];
@@ -294,13 +308,13 @@ export function renderSessionErrorReview(sessionId) {
               </div>
               <p class="question-text small">${html(q?.question_text || attempt.question_id)}</p>
               <div class="answer-compare">
-                <span>Your ${html(attempt.user_answer)}: ${html(optionText(q, attempt.user_answer))}</span>
-                <span>Correct ${html(attempt.correct_answer)}: ${html(optionText(q, attempt.correct_answer))}</span>
+                <span>你的 ${html(attempt.user_answer)}：${html(optionText(q, attempt.user_answer))}</span>
+                <span>正解 ${html(attempt.correct_answer)}：${html(optionText(q, attempt.correct_answer))}</span>
               </div>
               <p class="explanation">${html(q?.explanation_zh || "")}</p>
               ${vocabItem?.chinese ? `<div class="vocab-card"><p class="vocab-chinese">${html(vocabItem.chinese)}</p>${vocabItem.example ? `<p class="vocab-example">${html(vocabItem.example)}</p>` : ""}</div>` : ""}
               ${renderGrammarLink(q?.grammar_link_id)}
-              <label class="field-label">Error code</label>
+              <label class="field-label">錯因代碼</label>
               <select data-error-attempt="${html(attempt.attempt_id)}">
                 ${window.VocabScoring.ERROR_CODES.map((code) => `<option value="${code}" ${(attempt.error_code || attempt.default_error_code) === code ? "selected" : ""}>${ERROR_CODE_LABELS[code] || code}</option>`).join("")}
               </select>
@@ -309,8 +323,8 @@ export function renderSessionErrorReview(sessionId) {
         }).join("")}
       </div>
       <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.confirmSessionErrors()">Save Confirmed Error Codes</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.closeSessionReview()">Skip</button>
+        <button class="button primary" type="button" onclick="VocabTracker.confirmSessionErrors()">儲存確認後錯因</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.closeSessionReview()">先跳過</button>
       </div>
     </section>
   `;
@@ -323,7 +337,7 @@ export async function confirmSessionErrors() {
   }
   state.reviewSessionId = null;
   await loadData();
-  setNotice("Error codes saved and review queue updated.", "ok");
+  setNotice("錯因已儲存，複習佇列也已更新。", "ok");
   callSetView("lesson");
 }
 

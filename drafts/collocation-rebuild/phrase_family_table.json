@@ -1,0 +1,5304 @@
+{
+  "generated_at": "2026-05-17T22:36:07.160Z",
+  "source_files": [
+    "drafts/collocation-rebuild/phrase_411_inventory.json"
+  ],
+  "reference_role": "ability_signal_only",
+  "content_generation_note": "Phrase-family table for near-related collocation planning. Families are not production lessons and are not automatic distractor sets.",
+  "family_policy": {
+    "grouping_rule": "Group phrases by first English token when at least two reference phrases share that token.",
+    "usage_rule": "Treat groups as contrast candidates. A same-family phrase is not automatically a valid distractor.",
+    "ambiguity_rule": "Before authoring, verify that only the correct phrase can complete the sentence."
+  },
+  "totals": {
+    "family_count": 83,
+    "member_rows_in_families": 268,
+    "largest_family_size": 9
+  },
+  "families": [
+    {
+      "family_id": "family_come",
+      "family_type": "same_head_token",
+      "head_token": "come",
+      "member_count": 9,
+      "status_counts": {
+        "unknown": 8,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 5,
+        "A": 2,
+        "C": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        },
+        {
+          "topic_id": "topic_19",
+          "topic": "傳播媒體"
+        },
+        {
+          "topic_id": "topic_29",
+          "topic": "醫療與健康"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 28,
+          "phrase": "come up with",
+          "phrase_slug": "come_up_with",
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "想出；提出",
+          "candidate_item_id": "item_coll_come_up_with"
+        },
+        {
+          "formal_index": 56,
+          "phrase": "come across",
+          "phrase_slug": "come_across",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "偶然遇到；給人印象",
+          "candidate_item_id": "item_coll_come_across"
+        },
+        {
+          "formal_index": 268,
+          "phrase": "come by",
+          "phrase_slug": "come_by",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "順道來；得到",
+          "candidate_item_id": "item_coll_come_by"
+        },
+        {
+          "formal_index": 279,
+          "phrase": "come before",
+          "phrase_slug": "come_before",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "先於；提交審議",
+          "candidate_item_id": "item_coll_come_before"
+        },
+        {
+          "formal_index": 316,
+          "phrase": "come under",
+          "phrase_slug": "come_under",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "歸入；受到",
+          "candidate_item_id": "item_coll_come_under"
+        },
+        {
+          "formal_index": 324,
+          "phrase": "come through",
+          "phrase_slug": "come_through",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "兌現承諾；順利度過",
+          "candidate_item_id": "item_coll_come_through"
+        },
+        {
+          "formal_index": 336,
+          "phrase": "come out",
+          "phrase_slug": "come_out",
+          "topic_id": "topic_19",
+          "topic": "傳播媒體",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "上市；出版；結果顯現",
+          "candidate_item_id": "item_coll_come_out"
+        },
+        {
+          "formal_index": 350,
+          "phrase": "come across as",
+          "phrase_slug": "come_across_as",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "給人…印象",
+          "candidate_item_id": "item_coll_come_across_as"
+        },
+        {
+          "formal_index": 355,
+          "phrase": "come around",
+          "phrase_slug": "come_around",
+          "topic_id": "topic_29",
+          "topic": "醫療與健康",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "改變想法；恢復知覺",
+          "candidate_item_id": "item_coll_come_around"
+        }
+      ]
+    },
+    {
+      "family_id": "family_take",
+      "family_type": "same_head_token",
+      "head_token": "take",
+      "member_count": 9,
+      "status_counts": {
+        "unknown": 6,
+        "known": 3
+      },
+      "difficulty_counts": {
+        "B": 6,
+        "C": 1,
+        "A": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_23",
+          "topic": "演講與宴會"
+        },
+        {
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 1,
+          "phrase": "take over",
+          "phrase_slug": "take_over",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "接管；接手",
+          "candidate_item_id": "item_coll_take_over"
+        },
+        {
+          "formal_index": 43,
+          "phrase": "take advantage of",
+          "phrase_slug": "take_advantage_of",
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "利用",
+          "candidate_item_id": "item_coll_take_advantage_of"
+        },
+        {
+          "formal_index": 86,
+          "phrase": "take into account",
+          "phrase_slug": "take_into_account",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "納入考量",
+          "candidate_item_id": "item_coll_take_into_account"
+        },
+        {
+          "formal_index": 91,
+          "phrase": "take on",
+          "phrase_slug": "take_on",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "承擔；聘用",
+          "candidate_item_id": "item_coll_take_on"
+        },
+        {
+          "formal_index": 206,
+          "phrase": "take up",
+          "phrase_slug": "take_up",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "開始從事；占用",
+          "candidate_item_id": "item_coll_take_up"
+        },
+        {
+          "formal_index": 230,
+          "phrase": "take part in",
+          "phrase_slug": "take_part_in",
+          "topic_id": "topic_23",
+          "topic": "演講與宴會",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "參與",
+          "candidate_item_id": "item_coll_take_part_in"
+        },
+        {
+          "formal_index": 303,
+          "phrase": "take after",
+          "phrase_slug": "take_after",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "像（家人）",
+          "candidate_item_id": "item_coll_take_after"
+        },
+        {
+          "formal_index": 333,
+          "phrase": "take back",
+          "phrase_slug": "take_back",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "收回；撤回",
+          "candidate_item_id": "item_coll_take_back"
+        },
+        {
+          "formal_index": 366,
+          "phrase": "take away",
+          "phrase_slug": "take_away",
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "拿走；外帶",
+          "candidate_item_id": "item_coll_take_away"
+        }
+      ]
+    },
+    {
+      "family_id": "family_break",
+      "family_type": "same_head_token",
+      "head_token": "break",
+      "member_count": 8,
+      "status_counts": {
+        "unknown": 8
+      },
+      "difficulty_counts": {
+        "B": 6,
+        "C": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_11",
+          "topic": "社會經濟"
+        },
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 25,
+          "phrase": "break down",
+          "phrase_slug": "break_down",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "故障；分解說明",
+          "candidate_item_id": "item_coll_break_down"
+        },
+        {
+          "formal_index": 161,
+          "phrase": "break into",
+          "phrase_slug": "break_into",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "打入（市場）；闖入",
+          "candidate_item_id": "item_coll_break_into"
+        },
+        {
+          "formal_index": 224,
+          "phrase": "break even",
+          "phrase_slug": "break_even",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "損益兩平",
+          "candidate_item_id": "item_coll_break_even"
+        },
+        {
+          "formal_index": 323,
+          "phrase": "break through",
+          "phrase_slug": "break_through",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "突破",
+          "candidate_item_id": "item_coll_break_through"
+        },
+        {
+          "formal_index": 351,
+          "phrase": "break away from",
+          "phrase_slug": "break_away_from",
+          "topic_id": "topic_11",
+          "topic": "社會經濟",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "脫離；分裂出去",
+          "candidate_item_id": "item_coll_break_away_from"
+        },
+        {
+          "formal_index": 359,
+          "phrase": "break off",
+          "phrase_slug": "break_off",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "中斷；終止",
+          "candidate_item_id": "item_coll_break_off"
+        },
+        {
+          "formal_index": 369,
+          "phrase": "break up",
+          "phrase_slug": "break_up",
+          "topic_id": "topic_11",
+          "topic": "社會經濟",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "解散；分手；分裂",
+          "candidate_item_id": "item_coll_break_up"
+        },
+        {
+          "formal_index": 411,
+          "phrase": "break out of",
+          "phrase_slug": "break_out_of",
+          "topic_id": "topic_11",
+          "topic": "社會經濟",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "擺脫；逃出",
+          "candidate_item_id": "item_coll_break_out_of"
+        }
+      ]
+    },
+    {
+      "family_id": "family_go",
+      "family_type": "same_head_token",
+      "head_token": "go",
+      "member_count": 8,
+      "status_counts": {
+        "unknown": 7,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "A": 3,
+        "B": 4,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 66,
+          "phrase": "go ahead",
+          "phrase_slug": "go_ahead",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "開始做；繼續進行",
+          "candidate_item_id": "item_coll_go_ahead"
+        },
+        {
+          "formal_index": 67,
+          "phrase": "go over",
+          "phrase_slug": "go_over",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "檢查；覆核",
+          "candidate_item_id": "item_coll_go_over"
+        },
+        {
+          "formal_index": 202,
+          "phrase": "go through",
+          "phrase_slug": "go_through",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "檢查；經歷；逐項說明",
+          "candidate_item_id": "item_coll_go_through"
+        },
+        {
+          "formal_index": 266,
+          "phrase": "go by",
+          "phrase_slug": "go_by",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "過去；依照",
+          "candidate_item_id": "item_coll_go_by"
+        },
+        {
+          "formal_index": 280,
+          "phrase": "go before",
+          "phrase_slug": "go_before",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "提交審議；先於",
+          "candidate_item_id": "item_coll_go_before"
+        },
+        {
+          "formal_index": 304,
+          "phrase": "go after",
+          "phrase_slug": "go_after",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "追求；追趕",
+          "candidate_item_id": "item_coll_go_after"
+        },
+        {
+          "formal_index": 328,
+          "phrase": "go back",
+          "phrase_slug": "go_back",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "返回；回到",
+          "candidate_item_id": "item_coll_go_back"
+        },
+        {
+          "formal_index": 341,
+          "phrase": "go ahead with",
+          "phrase_slug": "go_ahead_with",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "著手進行",
+          "candidate_item_id": "item_coll_go_ahead_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_put",
+      "family_type": "same_head_token",
+      "head_token": "put",
+      "member_count": 8,
+      "status_counts": {
+        "unknown": 8
+      },
+      "difficulty_counts": {
+        "C": 4,
+        "B": 3,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        },
+        {
+          "topic_id": "topic_10",
+          "topic": "房屋與修繕"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 39,
+          "phrase": "put off",
+          "phrase_slug": "put_off",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "延後；推遲",
+          "candidate_item_id": "item_coll_put_off"
+        },
+        {
+          "formal_index": 79,
+          "phrase": "put forward",
+          "phrase_slug": "put_forward",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "提出",
+          "candidate_item_id": "item_coll_put_forward"
+        },
+        {
+          "formal_index": 80,
+          "phrase": "put up with",
+          "phrase_slug": "put_up_with",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "忍受",
+          "candidate_item_id": "item_coll_put_up_with"
+        },
+        {
+          "formal_index": 160,
+          "phrase": "put aside",
+          "phrase_slug": "put_aside",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "撥開；保留",
+          "candidate_item_id": "item_coll_put_aside"
+        },
+        {
+          "formal_index": 205,
+          "phrase": "put through",
+          "phrase_slug": "put_through",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "接通；使通過",
+          "candidate_item_id": "item_coll_put_through"
+        },
+        {
+          "formal_index": 319,
+          "phrase": "put under",
+          "phrase_slug": "put_under",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "使處於…之下",
+          "candidate_item_id": "item_coll_put_under"
+        },
+        {
+          "formal_index": 365,
+          "phrase": "put away",
+          "phrase_slug": "put_away",
+          "topic_id": "topic_10",
+          "topic": "房屋與修繕",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "收起來；存放",
+          "candidate_item_id": "item_coll_put_away"
+        },
+        {
+          "formal_index": 404,
+          "phrase": "put across",
+          "phrase_slug": "put_across",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "表達清楚；使被理解",
+          "candidate_item_id": "item_coll_put_across"
+        }
+      ]
+    },
+    {
+      "family_id": "family_keep",
+      "family_type": "same_head_token",
+      "head_token": "keep",
+      "member_count": 7,
+      "status_counts": {
+        "known": 2,
+        "unknown": 5
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "C": 2,
+        "B": 3
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 21,
+          "phrase": "keep track of",
+          "phrase_slug": "keep_track_of",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "追蹤；掌握進度",
+          "candidate_item_id": "item_coll_keep_track_of"
+        },
+        {
+          "formal_index": 70,
+          "phrase": "keep up with",
+          "phrase_slug": "keep_up_with",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "跟上；持續掌握",
+          "candidate_item_id": "item_coll_keep_up_with"
+        },
+        {
+          "formal_index": 312,
+          "phrase": "keep with",
+          "phrase_slug": "keep_with",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "跟上；保持一致",
+          "candidate_item_id": "item_coll_keep_with"
+        },
+        {
+          "formal_index": 330,
+          "phrase": "keep back",
+          "phrase_slug": "keep_back",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "保留；隱瞞",
+          "candidate_item_id": "item_coll_keep_back"
+        },
+        {
+          "formal_index": 342,
+          "phrase": "keep ahead of",
+          "phrase_slug": "keep_ahead_of",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "領先於",
+          "candidate_item_id": "item_coll_keep_ahead_of"
+        },
+        {
+          "formal_index": 345,
+          "phrase": "keep pace with",
+          "phrase_slug": "keep_pace_with",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "與…同步；跟上",
+          "candidate_item_id": "item_coll_keep_pace_with"
+        },
+        {
+          "formal_index": 402,
+          "phrase": "keep in mind",
+          "phrase_slug": "keep_in_mind",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "記住",
+          "candidate_item_id": "item_coll_keep_in_mind"
+        }
+      ]
+    },
+    {
+      "family_id": "family_look",
+      "family_type": "same_head_token",
+      "head_token": "look",
+      "member_count": 7,
+      "status_counts": {
+        "unknown": 3,
+        "known": 4
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "A": 6
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通"
+        },
+        {
+          "topic_id": "topic_29",
+          "topic": "醫療與健康"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 3,
+          "phrase": "look forward to",
+          "phrase_slug": "look_forward_to",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "期待",
+          "candidate_item_id": "item_coll_look_forward_to"
+        },
+        {
+          "formal_index": 36,
+          "phrase": "look into",
+          "phrase_slug": "look_into",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "調查；了解",
+          "candidate_item_id": "item_coll_look_into"
+        },
+        {
+          "formal_index": 72,
+          "phrase": "look over",
+          "phrase_slug": "look_over",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "快速查看；審閱",
+          "candidate_item_id": "item_coll_look_over"
+        },
+        {
+          "formal_index": 217,
+          "phrase": "look through",
+          "phrase_slug": "look_through",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "瀏覽；翻閱",
+          "candidate_item_id": "item_coll_look_through"
+        },
+        {
+          "formal_index": 248,
+          "phrase": "look for",
+          "phrase_slug": "look_for",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "尋找",
+          "candidate_item_id": "item_coll_look_for"
+        },
+        {
+          "formal_index": 302,
+          "phrase": "look after",
+          "phrase_slug": "look_after",
+          "topic_id": "topic_29",
+          "topic": "醫療與健康",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "照顧",
+          "candidate_item_id": "item_coll_look_after"
+        },
+        {
+          "formal_index": 356,
+          "phrase": "look around",
+          "phrase_slug": "look_around",
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "四處看看",
+          "candidate_item_id": "item_coll_look_around"
+        }
+      ]
+    },
+    {
+      "family_id": "family_turn",
+      "family_type": "same_head_token",
+      "head_token": "turn",
+      "member_count": 7,
+      "status_counts": {
+        "unknown": 6,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "A": 3,
+        "B": 4
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_24",
+          "topic": "製造與品管"
+        },
+        {
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 44,
+          "phrase": "turn down",
+          "phrase_slug": "turn_down",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "拒絕",
+          "candidate_item_id": "item_coll_turn_down"
+        },
+        {
+          "formal_index": 95,
+          "phrase": "turn in",
+          "phrase_slug": "turn_in",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "繳交",
+          "candidate_item_id": "item_coll_turn_in"
+        },
+        {
+          "formal_index": 96,
+          "phrase": "turn out",
+          "phrase_slug": "turn_out",
+          "topic_id": "topic_24",
+          "topic": "製造與品管",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "結果是；生產出",
+          "candidate_item_id": "item_coll_turn_out"
+        },
+        {
+          "formal_index": 150,
+          "phrase": "turn over",
+          "phrase_slug": "turn_over",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "翻轉；移交；周轉",
+          "candidate_item_id": "item_coll_turn_over"
+        },
+        {
+          "formal_index": 309,
+          "phrase": "turn to",
+          "phrase_slug": "turn_to",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "轉向；求助於",
+          "candidate_item_id": "item_coll_turn_to"
+        },
+        {
+          "formal_index": 334,
+          "phrase": "turn back",
+          "phrase_slug": "turn_back",
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "折返",
+          "candidate_item_id": "item_coll_turn_back"
+        },
+        {
+          "formal_index": 357,
+          "phrase": "turn around",
+          "phrase_slug": "turn_around",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "扭轉局面；轉身",
+          "candidate_item_id": "item_coll_turn_around"
+        }
+      ]
+    },
+    {
+      "family_id": "family_bring",
+      "family_type": "same_head_token",
+      "head_token": "bring",
+      "member_count": 6,
+      "status_counts": {
+        "unknown": 6
+      },
+      "difficulty_counts": {
+        "B": 5,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 26,
+          "phrase": "bring up",
+          "phrase_slug": "bring_up",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "提出（話題）",
+          "candidate_item_id": "item_coll_bring_up"
+        },
+        {
+          "formal_index": 167,
+          "phrase": "bring about",
+          "phrase_slug": "bring_about",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "導致；帶來",
+          "candidate_item_id": "item_coll_bring_about"
+        },
+        {
+          "formal_index": 200,
+          "phrase": "bring in",
+          "phrase_slug": "bring_in",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "引進；帶來收入",
+          "candidate_item_id": "item_coll_bring_in"
+        },
+        {
+          "formal_index": 326,
+          "phrase": "bring back",
+          "phrase_slug": "bring_back",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "帶回；使想起",
+          "candidate_item_id": "item_coll_bring_back"
+        },
+        {
+          "formal_index": 370,
+          "phrase": "bring down",
+          "phrase_slug": "bring_down",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "降低；打倒",
+          "candidate_item_id": "item_coll_bring_down"
+        },
+        {
+          "formal_index": 388,
+          "phrase": "bring forward",
+          "phrase_slug": "bring_forward",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "提前；提出",
+          "candidate_item_id": "item_coll_bring_forward"
+        }
+      ]
+    },
+    {
+      "family_id": "family_cut",
+      "family_type": "same_head_token",
+      "head_token": "cut",
+      "member_count": 6,
+      "status_counts": {
+        "unknown": 6
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 4
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通"
+        },
+        {
+          "topic_id": "topic_28",
+          "topic": "環境保育"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 29,
+          "phrase": "cut down on",
+          "phrase_slug": "cut_down_on",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "削減；減少",
+          "candidate_item_id": "item_coll_cut_down_on"
+        },
+        {
+          "formal_index": 156,
+          "phrase": "cut back on",
+          "phrase_slug": "cut_back_on",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "削減",
+          "candidate_item_id": "item_coll_cut_back_on"
+        },
+        {
+          "formal_index": 219,
+          "phrase": "cut out",
+          "phrase_slug": "cut_out",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "刪除；剪下",
+          "candidate_item_id": "item_coll_cut_out"
+        },
+        {
+          "formal_index": 278,
+          "phrase": "cut across",
+          "phrase_slug": "cut_across",
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "跨越；抄近路；違背",
+          "candidate_item_id": "item_coll_cut_across"
+        },
+        {
+          "formal_index": 327,
+          "phrase": "cut back",
+          "phrase_slug": "cut_back",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "削減",
+          "candidate_item_id": "item_coll_cut_back"
+        },
+        {
+          "formal_index": 371,
+          "phrase": "cut down",
+          "phrase_slug": "cut_down",
+          "topic_id": "topic_28",
+          "topic": "環境保育",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "削減",
+          "candidate_item_id": "item_coll_cut_down"
+        }
+      ]
+    },
+    {
+      "family_id": "family_in",
+      "family_type": "same_head_token",
+      "head_token": "in",
+      "member_count": 6,
+      "status_counts": {
+        "known": 1,
+        "unknown": 5
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "C": 5
+      },
+      "topics": [
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 2,
+          "phrase": "in charge of",
+          "phrase_slug": "in_charge_of",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "負責；主管",
+          "candidate_item_id": "item_coll_in_charge_of"
+        },
+        {
+          "formal_index": 17,
+          "phrase": "in light of",
+          "phrase_slug": "in_light_of",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "鑑於；考量到",
+          "candidate_item_id": "item_coll_in_light_of"
+        },
+        {
+          "formal_index": 48,
+          "phrase": "in accordance with",
+          "phrase_slug": "in_accordance_with",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "依照；按照",
+          "candidate_item_id": "item_coll_in_accordance_with"
+        },
+        {
+          "formal_index": 78,
+          "phrase": "in the event of",
+          "phrase_slug": "in_the_event_of",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "如果發生；萬一",
+          "candidate_item_id": "item_coll_in_the_event_of"
+        },
+        {
+          "formal_index": 90,
+          "phrase": "in terms of",
+          "phrase_slug": "in_terms_of",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "就…而言",
+          "candidate_item_id": "item_coll_in_terms_of"
+        },
+        {
+          "formal_index": 100,
+          "phrase": "in comparison with",
+          "phrase_slug": "in_comparison_with",
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "與…相比",
+          "candidate_item_id": "item_coll_in_comparison_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_sign",
+      "family_type": "same_head_token",
+      "head_token": "sign",
+      "member_count": 6,
+      "status_counts": {
+        "unknown": 4,
+        "known": 2
+      },
+      "difficulty_counts": {
+        "B": 3,
+        "A": 3
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        },
+        {
+          "topic_id": "topic_23",
+          "topic": "演講與宴會"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 22,
+          "phrase": "sign up for",
+          "phrase_slug": "sign_up_for",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "報名；登記參加",
+          "candidate_item_id": "item_coll_sign_up_for"
+        },
+        {
+          "formal_index": 208,
+          "phrase": "sign off",
+          "phrase_slug": "sign_off",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "簽核；批准結案",
+          "candidate_item_id": "item_coll_sign_off"
+        },
+        {
+          "formal_index": 209,
+          "phrase": "sign on",
+          "phrase_slug": "sign_on",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "簽約加入",
+          "candidate_item_id": "item_coll_sign_on"
+        },
+        {
+          "formal_index": 377,
+          "phrase": "sign in",
+          "phrase_slug": "sign_in",
+          "topic_id": "topic_23",
+          "topic": "演講與宴會",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "簽到；登入",
+          "candidate_item_id": "item_coll_sign_in"
+        },
+        {
+          "formal_index": 378,
+          "phrase": "sign out",
+          "phrase_slug": "sign_out",
+          "topic_id": "topic_23",
+          "topic": "演講與宴會",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "簽退；登出",
+          "candidate_item_id": "item_coll_sign_out"
+        },
+        {
+          "formal_index": 410,
+          "phrase": "sign up with",
+          "phrase_slug": "sign_up_with",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "向…註冊；加入",
+          "candidate_item_id": "item_coll_sign_up_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_fall",
+      "family_type": "same_head_token",
+      "head_token": "fall",
+      "member_count": 5,
+      "status_counts": {
+        "unknown": 5
+      },
+      "difficulty_counts": {
+        "C": 3,
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_24",
+          "topic": "製造與品管"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 62,
+          "phrase": "fall behind",
+          "phrase_slug": "fall_behind",
+          "topic_id": "topic_24",
+          "topic": "製造與品管",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "落後",
+          "candidate_item_id": "item_coll_fall_behind"
+        },
+        {
+          "formal_index": 317,
+          "phrase": "fall under",
+          "phrase_slug": "fall_under",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "屬於；歸入",
+          "candidate_item_id": "item_coll_fall_under"
+        },
+        {
+          "formal_index": 344,
+          "phrase": "fall behind in",
+          "phrase_slug": "fall_behind_in",
+          "topic_id": "topic_24",
+          "topic": "製造與品管",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "在…方面落後",
+          "candidate_item_id": "item_coll_fall_behind_in"
+        },
+        {
+          "formal_index": 347,
+          "phrase": "fall through",
+          "phrase_slug": "fall_through",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "落空；失敗",
+          "candidate_item_id": "item_coll_fall_through"
+        },
+        {
+          "formal_index": 401,
+          "phrase": "fall in with",
+          "phrase_slug": "fall_in_with",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "同意；偶然加入",
+          "candidate_item_id": "item_coll_fall_in_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_get",
+      "family_type": "same_head_token",
+      "head_token": "get",
+      "member_count": 5,
+      "status_counts": {
+        "known": 1,
+        "unknown": 4
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 3
+      },
+      "topics": [
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通"
+        },
+        {
+          "topic_id": "topic_29",
+          "topic": "醫療與健康"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 32,
+          "phrase": "get along with",
+          "phrase_slug": "get_along_with",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "與…相處融洽",
+          "candidate_item_id": "item_coll_get_along_with"
+        },
+        {
+          "formal_index": 64,
+          "phrase": "get back to",
+          "phrase_slug": "get_back_to",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "回覆；再聯絡",
+          "candidate_item_id": "item_coll_get_back_to"
+        },
+        {
+          "formal_index": 65,
+          "phrase": "get over",
+          "phrase_slug": "get_over",
+          "topic_id": "topic_29",
+          "topic": "醫療與健康",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "恢復；克服",
+          "candidate_item_id": "item_coll_get_over"
+        },
+        {
+          "formal_index": 320,
+          "phrase": "get through",
+          "phrase_slug": "get_through",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "完成；接通；撐過",
+          "candidate_item_id": "item_coll_get_through"
+        },
+        {
+          "formal_index": 354,
+          "phrase": "get around",
+          "phrase_slug": "get_around",
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "四處走動；規避",
+          "candidate_item_id": "item_coll_get_around"
+        }
+      ]
+    },
+    {
+      "family_id": "family_run",
+      "family_type": "same_head_token",
+      "head_token": "run",
+      "member_count": 5,
+      "status_counts": {
+        "unknown": 5
+      },
+      "difficulty_counts": {
+        "A": 3,
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 40,
+          "phrase": "run out of",
+          "phrase_slug": "run_out_of",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "用完；耗盡",
+          "candidate_item_id": "item_coll_run_out_of"
+        },
+        {
+          "formal_index": 83,
+          "phrase": "run into",
+          "phrase_slug": "run_into",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "碰到；遭遇",
+          "candidate_item_id": "item_coll_run_into"
+        },
+        {
+          "formal_index": 123,
+          "phrase": "run through",
+          "phrase_slug": "run_through",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "快速演練；過一遍",
+          "candidate_item_id": "item_coll_run_through"
+        },
+        {
+          "formal_index": 349,
+          "phrase": "run across",
+          "phrase_slug": "run_across",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "偶然遇見",
+          "candidate_item_id": "item_coll_run_across"
+        },
+        {
+          "formal_index": 385,
+          "phrase": "run by",
+          "phrase_slug": "run_by",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "先給…過目；匆匆經過",
+          "candidate_item_id": "item_coll_run_by"
+        }
+      ]
+    },
+    {
+      "family_id": "family_call",
+      "family_type": "same_head_token",
+      "head_token": "call",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 4
+      },
+      "difficulty_counts": {
+        "B": 3,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        },
+        {
+          "topic_id": "topic_25",
+          "topic": "銷售服務"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 27,
+          "phrase": "call off",
+          "phrase_slug": "call_off",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "取消",
+          "candidate_item_id": "item_coll_call_off"
+        },
+        {
+          "formal_index": 196,
+          "phrase": "call on",
+          "phrase_slug": "call_on",
+          "topic_id": "topic_25",
+          "topic": "銷售服務",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "拜訪；要求",
+          "candidate_item_id": "item_coll_call_on"
+        },
+        {
+          "formal_index": 295,
+          "phrase": "call for",
+          "phrase_slug": "call_for",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "要求；需要",
+          "candidate_item_id": "item_coll_call_for"
+        },
+        {
+          "formal_index": 325,
+          "phrase": "call back",
+          "phrase_slug": "call_back",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "回電",
+          "candidate_item_id": "item_coll_call_back"
+        }
+      ]
+    },
+    {
+      "family_id": "family_carry",
+      "family_type": "same_head_token",
+      "head_token": "carry",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 4
+      },
+      "difficulty_counts": {
+        "B": 2,
+        "A": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 52,
+          "phrase": "carry out",
+          "phrase_slug": "carry_out",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "執行",
+          "candidate_item_id": "item_coll_carry_out"
+        },
+        {
+          "formal_index": 148,
+          "phrase": "carry on",
+          "phrase_slug": "carry_on",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "繼續進行",
+          "candidate_item_id": "item_coll_carry_on"
+        },
+        {
+          "formal_index": 201,
+          "phrase": "carry over",
+          "phrase_slug": "carry_over",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "延續到；結轉",
+          "candidate_item_id": "item_coll_carry_over"
+        },
+        {
+          "formal_index": 387,
+          "phrase": "carry back",
+          "phrase_slug": "carry_back",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "帶回；使回想起",
+          "candidate_item_id": "item_coll_carry_back"
+        }
+      ]
+    },
+    {
+      "family_id": "family_check",
+      "family_type": "same_head_token",
+      "head_token": "check",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 2,
+        "known": 2
+      },
+      "difficulty_counts": {
+        "A": 3,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 54,
+          "phrase": "check in",
+          "phrase_slug": "check_in",
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "辦理入住；報到",
+          "candidate_item_id": "item_coll_check_in"
+        },
+        {
+          "formal_index": 126,
+          "phrase": "check out",
+          "phrase_slug": "check_out",
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "退房；查看",
+          "candidate_item_id": "item_coll_check_out"
+        },
+        {
+          "formal_index": 163,
+          "phrase": "check over",
+          "phrase_slug": "check_over",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "仔細檢查",
+          "candidate_item_id": "item_coll_check_over"
+        },
+        {
+          "formal_index": 216,
+          "phrase": "check through",
+          "phrase_slug": "check_through",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "全面檢查",
+          "candidate_item_id": "item_coll_check_through"
+        }
+      ]
+    },
+    {
+      "family_id": "family_hand",
+      "family_type": "same_head_token",
+      "head_token": "hand",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 4
+      },
+      "difficulty_counts": {
+        "A": 3,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_23",
+          "topic": "演講與宴會"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 33,
+          "phrase": "hand in",
+          "phrase_slug": "hand_in",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "提交",
+          "candidate_item_id": "item_coll_hand_in"
+        },
+        {
+          "formal_index": 68,
+          "phrase": "hand over",
+          "phrase_slug": "hand_over",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "交出；移交",
+          "candidate_item_id": "item_coll_hand_over"
+        },
+        {
+          "formal_index": 149,
+          "phrase": "hand out",
+          "phrase_slug": "hand_out",
+          "topic_id": "topic_23",
+          "topic": "演講與宴會",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "分發",
+          "candidate_item_id": "item_coll_hand_out"
+        },
+        {
+          "formal_index": 165,
+          "phrase": "hand back",
+          "phrase_slug": "hand_back",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "歸還",
+          "candidate_item_id": "item_coll_hand_back"
+        }
+      ]
+    },
+    {
+      "family_id": "family_hold",
+      "family_type": "same_head_token",
+      "head_token": "hold",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 2,
+        "known": 2
+      },
+      "difficulty_counts": {
+        "C": 1,
+        "B": 2,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_10",
+          "topic": "房屋與修繕"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 34,
+          "phrase": "hold off on",
+          "phrase_slug": "hold_off_on",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "暫緩；延期處理",
+          "candidate_item_id": "item_coll_hold_off_on"
+        },
+        {
+          "formal_index": 69,
+          "phrase": "hold on",
+          "phrase_slug": "hold_on",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "稍等；別掛斷",
+          "candidate_item_id": "item_coll_hold_on"
+        },
+        {
+          "formal_index": 329,
+          "phrase": "hold back",
+          "phrase_slug": "hold_back",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "抑制；拖延",
+          "candidate_item_id": "item_coll_hold_back"
+        },
+        {
+          "formal_index": 398,
+          "phrase": "hold together",
+          "phrase_slug": "hold_together",
+          "topic_id": "topic_10",
+          "topic": "房屋與修繕",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "維持不散；保持完整",
+          "candidate_item_id": "item_coll_hold_together"
+        }
+      ]
+    },
+    {
+      "family_id": "family_move",
+      "family_type": "same_head_token",
+      "head_token": "move",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 2,
+        "known": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 3
+      },
+      "topics": [
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_28",
+          "topic": "環境保育"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 157,
+          "phrase": "move up",
+          "phrase_slug": "move_up",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "晉升；上移",
+          "candidate_item_id": "item_coll_move_up"
+        },
+        {
+          "formal_index": 340,
+          "phrase": "move ahead",
+          "phrase_slug": "move_ahead",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "向前推進",
+          "candidate_item_id": "item_coll_move_ahead"
+        },
+        {
+          "formal_index": 352,
+          "phrase": "move away from",
+          "phrase_slug": "move_away_from",
+          "topic_id": "topic_28",
+          "topic": "環境保育",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "遠離；轉離",
+          "candidate_item_id": "item_coll_move_away_from"
+        },
+        {
+          "formal_index": 389,
+          "phrase": "move forward with",
+          "phrase_slug": "move_forward_with",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "推進；繼續進行",
+          "candidate_item_id": "item_coll_move_forward_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_pass",
+      "family_type": "same_head_token",
+      "head_token": "pass",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 4
+      },
+      "difficulty_counts": {
+        "B": 3,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 37,
+          "phrase": "pass up",
+          "phrase_slug": "pass_up",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "放棄（機會）",
+          "candidate_item_id": "item_coll_pass_up"
+        },
+        {
+          "formal_index": 164,
+          "phrase": "pass on",
+          "phrase_slug": "pass_on",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "轉交；傳達",
+          "candidate_item_id": "item_coll_pass_on"
+        },
+        {
+          "formal_index": 267,
+          "phrase": "pass by",
+          "phrase_slug": "pass_by",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "經過",
+          "candidate_item_id": "item_coll_pass_by"
+        },
+        {
+          "formal_index": 339,
+          "phrase": "pass along",
+          "phrase_slug": "pass_along",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "轉達；轉交",
+          "candidate_item_id": "item_coll_pass_along"
+        }
+      ]
+    },
+    {
+      "family_id": "family_set",
+      "family_type": "same_head_token",
+      "head_token": "set",
+      "member_count": 4,
+      "status_counts": {
+        "unknown": 4
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 2,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        },
+        {
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 41,
+          "phrase": "set up",
+          "phrase_slug": "set_up",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "設立；安排",
+          "candidate_item_id": "item_coll_set_up"
+        },
+        {
+          "formal_index": 84,
+          "phrase": "set aside",
+          "phrase_slug": "set_aside",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "撥出；保留",
+          "candidate_item_id": "item_coll_set_aside"
+        },
+        {
+          "formal_index": 151,
+          "phrase": "set forth",
+          "phrase_slug": "set_forth",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "陳述；列明",
+          "candidate_item_id": "item_coll_set_forth"
+        },
+        {
+          "formal_index": 360,
+          "phrase": "set off",
+          "phrase_slug": "set_off",
+          "topic_id": "topic_15",
+          "topic": "旅遊與交通",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "出發；引發",
+          "candidate_item_id": "item_coll_set_off"
+        }
+      ]
+    },
+    {
+      "family_id": "family_stand",
+      "family_type": "same_head_token",
+      "head_token": "stand",
+      "member_count": 4,
+      "status_counts": {
+        "known": 1,
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "B": 3,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        },
+        {
+          "topic_id": "topic_19",
+          "topic": "傳播媒體"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 42,
+          "phrase": "stand out",
+          "phrase_slug": "stand_out",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "脫穎而出",
+          "candidate_item_id": "item_coll_stand_out"
+        },
+        {
+          "formal_index": 265,
+          "phrase": "stand by",
+          "phrase_slug": "stand_by",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "待命；支持",
+          "candidate_item_id": "item_coll_stand_by"
+        },
+        {
+          "formal_index": 294,
+          "phrase": "stand for",
+          "phrase_slug": "stand_for",
+          "topic_id": "topic_19",
+          "topic": "傳播媒體",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "代表；主張",
+          "candidate_item_id": "item_coll_stand_for"
+        },
+        {
+          "formal_index": 358,
+          "phrase": "stand around",
+          "phrase_slug": "stand_around",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "站著閒著",
+          "candidate_item_id": "item_coll_stand_around"
+        }
+      ]
+    },
+    {
+      "family_id": "family_add",
+      "family_type": "same_head_token",
+      "head_token": "add",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_25",
+          "topic": "銷售服務"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 220,
+          "phrase": "add up",
+          "phrase_slug": "add_up",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "加總；說得通",
+          "candidate_item_id": "item_coll_add_up"
+        },
+        {
+          "formal_index": 221,
+          "phrase": "add to",
+          "phrase_slug": "add_to",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "增加",
+          "candidate_item_id": "item_coll_add_to"
+        },
+        {
+          "formal_index": 409,
+          "phrase": "add on",
+          "phrase_slug": "add_on",
+          "topic_id": "topic_25",
+          "topic": "銷售服務",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "附加；加購",
+          "candidate_item_id": "item_coll_add_on"
+        }
+      ]
+    },
+    {
+      "family_id": "family_ask",
+      "family_type": "same_head_token",
+      "head_token": "ask",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 2,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_25",
+          "topic": "銷售服務"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 191,
+          "phrase": "ask for",
+          "phrase_slug": "ask_for",
+          "topic_id": "topic_25",
+          "topic": "銷售服務",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "要求；索取",
+          "candidate_item_id": "item_coll_ask_for"
+        },
+        {
+          "formal_index": 249,
+          "phrase": "ask about",
+          "phrase_slug": "ask_about",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "詢問關於",
+          "candidate_item_id": "item_coll_ask_about"
+        },
+        {
+          "formal_index": 305,
+          "phrase": "ask after",
+          "phrase_slug": "ask_after",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "問候近況",
+          "candidate_item_id": "item_coll_ask_after"
+        }
+      ]
+    },
+    {
+      "family_id": "family_draw",
+      "family_type": "same_head_token",
+      "head_token": "draw",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 11,
+          "phrase": "draw up",
+          "phrase_slug": "draw_up",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "起草；擬定",
+          "candidate_item_id": "item_coll_draw_up"
+        },
+        {
+          "formal_index": 60,
+          "phrase": "draw on",
+          "phrase_slug": "draw_on",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "動用；利用",
+          "candidate_item_id": "item_coll_draw_on"
+        },
+        {
+          "formal_index": 274,
+          "phrase": "draw from",
+          "phrase_slug": "draw_from",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "從…取得；得出",
+          "candidate_item_id": "item_coll_draw_from"
+        }
+      ]
+    },
+    {
+      "family_id": "family_fill",
+      "family_type": "same_head_token",
+      "head_token": "fill",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 2,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 10,
+          "phrase": "fill out",
+          "phrase_slug": "fill_out",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "填寫（表格）",
+          "candidate_item_id": "item_coll_fill_out"
+        },
+        {
+          "formal_index": 63,
+          "phrase": "fill in for",
+          "phrase_slug": "fill_in_for",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "代班；代替出勤",
+          "candidate_item_id": "item_coll_fill_in_for"
+        },
+        {
+          "formal_index": 211,
+          "phrase": "fill in",
+          "phrase_slug": "fill_in",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "填寫；暫代",
+          "candidate_item_id": "item_coll_fill_in"
+        }
+      ]
+    },
+    {
+      "family_id": "family_lay",
+      "family_type": "same_head_token",
+      "head_token": "lay",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 2,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 2,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_02",
+          "topic": "人事與組織"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 8,
+          "phrase": "lay off",
+          "phrase_slug": "lay_off",
+          "topic_id": "topic_02",
+          "topic": "人事與組織",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "裁員",
+          "candidate_item_id": "item_coll_lay_off"
+        },
+        {
+          "formal_index": 71,
+          "phrase": "lay down",
+          "phrase_slug": "lay_down",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "訂定；規定",
+          "candidate_item_id": "item_coll_lay_down"
+        },
+        {
+          "formal_index": 121,
+          "phrase": "lay out",
+          "phrase_slug": "lay_out",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "安排；陳列；說明",
+          "candidate_item_id": "item_coll_lay_out"
+        }
+      ]
+    },
+    {
+      "family_id": "family_make",
+      "family_type": "same_head_token",
+      "head_token": "make",
+      "member_count": 3,
+      "status_counts": {
+        "known": 1,
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_11",
+          "topic": "社會經濟"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 73,
+          "phrase": "make up for",
+          "phrase_slug": "make_up_for",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "彌補",
+          "candidate_item_id": "item_coll_make_up_for"
+        },
+        {
+          "formal_index": 87,
+          "phrase": "make a living",
+          "phrase_slug": "make_a_living",
+          "topic_id": "topic_11",
+          "topic": "社會經濟",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "謀生",
+          "candidate_item_id": "item_coll_make_a_living"
+        },
+        {
+          "formal_index": 293,
+          "phrase": "make for",
+          "phrase_slug": "make_for",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "促成；朝…前進",
+          "candidate_item_id": "item_coll_make_for"
+        }
+      ]
+    },
+    {
+      "family_id": "family_on",
+      "family_type": "same_head_token",
+      "head_token": "on",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "C": 2,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 4,
+          "phrase": "on behalf of",
+          "phrase_slug": "on_behalf_of",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "代表；代替",
+          "candidate_item_id": "item_coll_on_behalf_of"
+        },
+        {
+          "formal_index": 49,
+          "phrase": "on the verge of",
+          "phrase_slug": "on_the_verge_of",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "瀕臨；快要",
+          "candidate_item_id": "item_coll_on_the_verge_of"
+        },
+        {
+          "formal_index": 88,
+          "phrase": "on the contrary",
+          "phrase_slug": "on_the_contrary",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "相反地",
+          "candidate_item_id": "item_coll_on_the_contrary"
+        }
+      ]
+    },
+    {
+      "family_id": "family_pay",
+      "family_type": "same_head_token",
+      "head_token": "pay",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_25",
+          "topic": "銷售服務"
+        },
+        {
+          "topic_id": "topic_13",
+          "topic": "金融與投資"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 76,
+          "phrase": "pay off",
+          "phrase_slug": "pay_off",
+          "topic_id": "topic_13",
+          "topic": "金融與投資",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "獲得回報；還清",
+          "candidate_item_id": "item_coll_pay_off"
+        },
+        {
+          "formal_index": 182,
+          "phrase": "pay for",
+          "phrase_slug": "pay_for",
+          "topic_id": "topic_25",
+          "topic": "銷售服務",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "支付；付出代價",
+          "candidate_item_id": "item_coll_pay_for"
+        },
+        {
+          "formal_index": 225,
+          "phrase": "pay back",
+          "phrase_slug": "pay_back",
+          "topic_id": "topic_13",
+          "topic": "金融與投資",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "償還",
+          "candidate_item_id": "item_coll_pay_back"
+        }
+      ]
+    },
+    {
+      "family_id": "family_send",
+      "family_type": "same_head_token",
+      "head_token": "send",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 2,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_18",
+          "topic": "貿易與物流"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 210,
+          "phrase": "send in",
+          "phrase_slug": "send_in",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "寄送；提交",
+          "candidate_item_id": "item_coll_send_in"
+        },
+        {
+          "formal_index": 331,
+          "phrase": "send back",
+          "phrase_slug": "send_back",
+          "topic_id": "topic_18",
+          "topic": "貿易與物流",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "退回；寄回",
+          "candidate_item_id": "item_coll_send_back"
+        },
+        {
+          "formal_index": 364,
+          "phrase": "send off",
+          "phrase_slug": "send_off",
+          "topic_id": "topic_18",
+          "topic": "貿易與物流",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "寄出；送行",
+          "candidate_item_id": "item_coll_send_off"
+        }
+      ]
+    },
+    {
+      "family_id": "family_step",
+      "family_type": "same_head_token",
+      "head_token": "step",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 2,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 3
+      },
+      "topics": [
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 9,
+          "phrase": "step down",
+          "phrase_slug": "step_down",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "下台；辭職",
+          "candidate_item_id": "item_coll_step_down"
+        },
+        {
+          "formal_index": 119,
+          "phrase": "step up",
+          "phrase_slug": "step_up",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "加強；提升",
+          "candidate_item_id": "item_coll_step_up"
+        },
+        {
+          "formal_index": 332,
+          "phrase": "step back",
+          "phrase_slug": "step_back",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "退一步；暫停介入",
+          "candidate_item_id": "item_coll_step_back"
+        }
+      ]
+    },
+    {
+      "family_id": "family_work",
+      "family_type": "same_head_token",
+      "head_token": "work",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "A": 2,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 99,
+          "phrase": "work out",
+          "phrase_slug": "work_out",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "解決；算出",
+          "candidate_item_id": "item_coll_work_out"
+        },
+        {
+          "formal_index": 154,
+          "phrase": "work on",
+          "phrase_slug": "work_on",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "著手處理；從事",
+          "candidate_item_id": "item_coll_work_on"
+        },
+        {
+          "formal_index": 166,
+          "phrase": "work toward",
+          "phrase_slug": "work_toward",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "朝…努力",
+          "candidate_item_id": "item_coll_work_toward"
+        }
+      ]
+    },
+    {
+      "family_id": "family_write",
+      "family_type": "same_head_token",
+      "head_token": "write",
+      "member_count": 3,
+      "status_counts": {
+        "unknown": 3
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "A": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 207,
+          "phrase": "write up",
+          "phrase_slug": "write_up",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "寫成正式報告",
+          "candidate_item_id": "item_coll_write_up"
+        },
+        {
+          "formal_index": 226,
+          "phrase": "write off",
+          "phrase_slug": "write_off",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "沖銷；認列報廢",
+          "candidate_item_id": "item_coll_write_off"
+        },
+        {
+          "formal_index": 335,
+          "phrase": "write back",
+          "phrase_slug": "write_back",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "回信",
+          "candidate_item_id": "item_coll_write_back"
+        }
+      ]
+    },
+    {
+      "family_id": "family_act",
+      "family_type": "same_head_token",
+      "head_token": "act",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 1,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 257,
+          "phrase": "act on",
+          "phrase_slug": "act_on",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "根據…採取行動",
+          "candidate_item_id": "item_coll_act_on"
+        },
+        {
+          "formal_index": 282,
+          "phrase": "act as",
+          "phrase_slug": "act_as",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "充當；擔任",
+          "candidate_item_id": "item_coll_act_as"
+        }
+      ]
+    },
+    {
+      "family_id": "family_agree",
+      "family_type": "same_head_token",
+      "head_token": "agree",
+      "member_count": 2,
+      "status_counts": {
+        "known": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 194,
+          "phrase": "agree on",
+          "phrase_slug": "agree_on",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "就…達成一致",
+          "candidate_item_id": "item_coll_agree_on"
+        },
+        {
+          "formal_index": 263,
+          "phrase": "agree with",
+          "phrase_slug": "agree_with",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "同意；與…一致",
+          "candidate_item_id": "item_coll_agree_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_apply",
+      "family_type": "same_head_token",
+      "head_token": "apply",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 170,
+          "phrase": "apply for",
+          "phrase_slug": "apply_for",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "申請",
+          "candidate_item_id": "item_coll_apply_for"
+        },
+        {
+          "formal_index": 236,
+          "phrase": "apply to",
+          "phrase_slug": "apply_to",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "適用於；申請到",
+          "candidate_item_id": "item_coll_apply_to"
+        }
+      ]
+    },
+    {
+      "family_id": "family_as",
+      "family_type": "same_head_token",
+      "head_token": "as",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 1,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "C": 1,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 46,
+          "phrase": "as to",
+          "phrase_slug": "as_to",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "關於；至於",
+          "candidate_item_id": "item_coll_as_to"
+        },
+        {
+          "formal_index": 97,
+          "phrase": "as a result of",
+          "phrase_slug": "as_a_result_of",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "由於",
+          "candidate_item_id": "item_coll_as_a_result_of"
+        }
+      ]
+    },
+    {
+      "family_id": "family_back",
+      "family_type": "same_head_token",
+      "head_token": "back",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 24,
+          "phrase": "back up",
+          "phrase_slug": "back_up",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "備份",
+          "candidate_item_id": "item_coll_back_up"
+        },
+        {
+          "formal_index": 118,
+          "phrase": "back out",
+          "phrase_slug": "back_out",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "退出；反悔",
+          "candidate_item_id": "item_coll_back_out"
+        }
+      ]
+    },
+    {
+      "family_id": "family_bear",
+      "family_type": "same_head_token",
+      "head_token": "bear",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 85,
+          "phrase": "bear in mind",
+          "phrase_slug": "bear_in_mind",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "記住；牢記",
+          "candidate_item_id": "item_coll_bear_in_mind"
+        },
+        {
+          "formal_index": 403,
+          "phrase": "bear with",
+          "phrase_slug": "bear_with",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "請耐心等候；包涵",
+          "candidate_item_id": "item_coll_bear_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_branch",
+      "family_type": "same_head_token",
+      "head_token": "branch",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 109,
+          "phrase": "branch out",
+          "phrase_slug": "branch_out",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "拓展業務",
+          "candidate_item_id": "item_coll_branch_out"
+        },
+        {
+          "formal_index": 162,
+          "phrase": "branch into",
+          "phrase_slug": "branch_into",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "擴展到",
+          "candidate_item_id": "item_coll_branch_into"
+        }
+      ]
+    },
+    {
+      "family_id": "family_build",
+      "family_type": "same_head_token",
+      "head_token": "build",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 1,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 114,
+          "phrase": "build up",
+          "phrase_slug": "build_up",
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "建立；累積",
+          "candidate_item_id": "item_coll_build_up"
+        },
+        {
+          "formal_index": 271,
+          "phrase": "build on",
+          "phrase_slug": "build_on",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "建立在…之上",
+          "candidate_item_id": "item_coll_build_on"
+        }
+      ]
+    },
+    {
+      "family_id": "family_catch",
+      "family_type": "same_head_token",
+      "head_token": "catch",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 53,
+          "phrase": "catch up on",
+          "phrase_slug": "catch_up_on",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "補上；補做",
+          "candidate_item_id": "item_coll_catch_up_on"
+        },
+        {
+          "formal_index": 343,
+          "phrase": "catch up with",
+          "phrase_slug": "catch_up_with",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "趕上",
+          "candidate_item_id": "item_coll_catch_up_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_cater",
+      "family_type": "same_head_token",
+      "head_token": "cater",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 14,
+          "phrase": "cater to",
+          "phrase_slug": "cater_to",
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "迎合；滿足需求",
+          "candidate_item_id": "item_coll_cater_to"
+        },
+        {
+          "formal_index": 245,
+          "phrase": "cater for",
+          "phrase_slug": "cater_for",
+          "topic_id": "topic_27",
+          "topic": "餐飲與住宿",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "滿足需求；供應餐食",
+          "candidate_item_id": "item_coll_cater_for"
+        }
+      ]
+    },
+    {
+      "family_id": "family_close",
+      "family_type": "same_head_token",
+      "head_token": "close",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        },
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 55,
+          "phrase": "close down",
+          "phrase_slug": "close_down",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "停業；關閉",
+          "candidate_item_id": "item_coll_close_down"
+        },
+        {
+          "formal_index": 227,
+          "phrase": "close out",
+          "phrase_slug": "close_out",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "結清；結束處理",
+          "candidate_item_id": "item_coll_close_out"
+        }
+      ]
+    },
+    {
+      "family_id": "family_comment",
+      "family_type": "same_head_token",
+      "head_token": "comment",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 1,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 129,
+          "phrase": "comment on",
+          "phrase_slug": "comment_on",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "評論；就…發表意見",
+          "candidate_item_id": "item_coll_comment_on"
+        },
+        {
+          "formal_index": 262,
+          "phrase": "comment upon",
+          "phrase_slug": "comment_upon",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "C",
+          "gloss_zh": "評論",
+          "candidate_item_id": "item_coll_comment_upon"
+        }
+      ]
+    },
+    {
+      "family_id": "family_count",
+      "family_type": "same_head_token",
+      "head_token": "count",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_16",
+          "topic": "財務會計"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 57,
+          "phrase": "count on",
+          "phrase_slug": "count_on",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "依靠；指望",
+          "candidate_item_id": "item_coll_count_on"
+        },
+        {
+          "formal_index": 223,
+          "phrase": "count toward",
+          "phrase_slug": "count_toward",
+          "topic_id": "topic_16",
+          "topic": "財務會計",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "算入",
+          "candidate_item_id": "item_coll_count_toward"
+        }
+      ]
+    },
+    {
+      "family_id": "family_deal",
+      "family_type": "same_head_token",
+      "head_token": "deal",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_18",
+          "topic": "貿易與物流"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 58,
+          "phrase": "deal with",
+          "phrase_slug": "deal_with",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "處理；應對",
+          "candidate_item_id": "item_coll_deal_with"
+        },
+        {
+          "formal_index": 233,
+          "phrase": "deal in",
+          "phrase_slug": "deal_in",
+          "topic_id": "topic_18",
+          "topic": "貿易與物流",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "經營；買賣",
+          "candidate_item_id": "item_coll_deal_in"
+        }
+      ]
+    },
+    {
+      "family_id": "family_depend",
+      "family_type": "same_head_token",
+      "head_token": "depend",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 144,
+          "phrase": "depend on",
+          "phrase_slug": "depend_on",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "取決於；依靠",
+          "candidate_item_id": "item_coll_depend_on"
+        },
+        {
+          "formal_index": 255,
+          "phrase": "depend upon",
+          "phrase_slug": "depend_upon",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "取決於；依賴",
+          "candidate_item_id": "item_coll_depend_upon"
+        }
+      ]
+    },
+    {
+      "family_id": "family_drop",
+      "family_type": "same_head_token",
+      "head_token": "drop",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_18",
+          "topic": "貿易與物流"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 30,
+          "phrase": "drop off",
+          "phrase_slug": "drop_off",
+          "topic_id": "topic_18",
+          "topic": "貿易與物流",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "送到；下降",
+          "candidate_item_id": "item_coll_drop_off"
+        },
+        {
+          "formal_index": 61,
+          "phrase": "drop by",
+          "phrase_slug": "drop_by",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "順道拜訪",
+          "candidate_item_id": "item_coll_drop_by"
+        }
+      ]
+    },
+    {
+      "family_id": "family_focus",
+      "family_type": "same_head_token",
+      "head_token": "focus",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 140,
+          "phrase": "focus on",
+          "phrase_slug": "focus_on",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "專注於",
+          "candidate_item_id": "item_coll_focus_on"
+        },
+        {
+          "formal_index": 273,
+          "phrase": "focus upon",
+          "phrase_slug": "focus_upon",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "著重於",
+          "candidate_item_id": "item_coll_focus_upon"
+        }
+      ]
+    },
+    {
+      "family_id": "family_follow",
+      "family_type": "same_head_token",
+      "head_token": "follow",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 159,
+          "phrase": "follow up on",
+          "phrase_slug": "follow_up_on",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "跟進",
+          "candidate_item_id": "item_coll_follow_up_on"
+        },
+        {
+          "formal_index": 348,
+          "phrase": "follow through",
+          "phrase_slug": "follow_through",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "貫徹到底",
+          "candidate_item_id": "item_coll_follow_through"
+        }
+      ]
+    },
+    {
+      "family_id": "family_give",
+      "family_type": "same_head_token",
+      "head_token": "give",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        },
+        {
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 111,
+          "phrase": "give out",
+          "phrase_slug": "give_out",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "分發；耗盡",
+          "candidate_item_id": "item_coll_give_out"
+        },
+        {
+          "formal_index": 367,
+          "phrase": "give away",
+          "phrase_slug": "give_away",
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "贈送；洩露",
+          "candidate_item_id": "item_coll_give_away"
+        }
+      ]
+    },
+    {
+      "family_id": "family_glance",
+      "family_type": "same_head_token",
+      "head_token": "glance",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_06",
+          "topic": "日常生活"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 300,
+          "phrase": "glance at",
+          "phrase_slug": "glance_at",
+          "topic_id": "topic_06",
+          "topic": "日常生活",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "瞥一眼",
+          "candidate_item_id": "item_coll_glance_at"
+        },
+        {
+          "formal_index": 394,
+          "phrase": "glance through",
+          "phrase_slug": "glance_through",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "快速瀏覽",
+          "candidate_item_id": "item_coll_glance_through"
+        }
+      ]
+    },
+    {
+      "family_id": "family_hear",
+      "family_type": "same_head_token",
+      "head_token": "hear",
+      "member_count": 2,
+      "status_counts": {
+        "known": 2
+      },
+      "difficulty_counts": {
+        "A": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_19",
+          "topic": "傳播媒體"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 250,
+          "phrase": "hear about",
+          "phrase_slug": "hear_about",
+          "topic_id": "topic_19",
+          "topic": "傳播媒體",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "聽說",
+          "candidate_item_id": "item_coll_hear_about"
+        },
+        {
+          "formal_index": 289,
+          "phrase": "hear of",
+          "phrase_slug": "hear_of",
+          "topic_id": "topic_19",
+          "topic": "傳播媒體",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "聽過",
+          "candidate_item_id": "item_coll_hear_of"
+        }
+      ]
+    },
+    {
+      "family_id": "family_insist",
+      "family_type": "same_head_token",
+      "head_token": "insist",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 141,
+          "phrase": "insist on",
+          "phrase_slug": "insist_on",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "堅持",
+          "candidate_item_id": "item_coll_insist_on"
+        },
+        {
+          "formal_index": 261,
+          "phrase": "insist upon",
+          "phrase_slug": "insist_upon",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "堅持要求",
+          "candidate_item_id": "item_coll_insist_upon"
+        }
+      ]
+    },
+    {
+      "family_id": "family_interfere",
+      "family_type": "same_head_token",
+      "head_token": "interfere",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "C": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 193,
+          "phrase": "interfere with",
+          "phrase_slug": "interfere_with",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "妨礙；干擾",
+          "candidate_item_id": "item_coll_interfere_with"
+        },
+        {
+          "formal_index": 264,
+          "phrase": "interfere in",
+          "phrase_slug": "interfere_in",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "干涉",
+          "candidate_item_id": "item_coll_interfere_in"
+        }
+      ]
+    },
+    {
+      "family_id": "family_leave",
+      "family_type": "same_head_token",
+      "head_token": "leave",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        },
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 203,
+          "phrase": "leave out",
+          "phrase_slug": "leave_out",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "漏掉；省略",
+          "candidate_item_id": "item_coll_leave_out"
+        },
+        {
+          "formal_index": 229,
+          "phrase": "leave to",
+          "phrase_slug": "leave_to",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "交由…處理",
+          "candidate_item_id": "item_coll_leave_to"
+        }
+      ]
+    },
+    {
+      "family_id": "family_log",
+      "family_type": "same_head_token",
+      "head_token": "log",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 375,
+          "phrase": "log on",
+          "phrase_slug": "log_on",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "登入",
+          "candidate_item_id": "item_coll_log_on"
+        },
+        {
+          "formal_index": 376,
+          "phrase": "log off",
+          "phrase_slug": "log_off",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "登出",
+          "candidate_item_id": "item_coll_log_off"
+        }
+      ]
+    },
+    {
+      "family_id": "family_mark",
+      "family_type": "same_head_token",
+      "head_token": "mark",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_22",
+          "topic": "零售購物"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 20,
+          "phrase": "mark down",
+          "phrase_slug": "mark_down",
+          "topic_id": "topic_22",
+          "topic": "零售購物",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "降價",
+          "candidate_item_id": "item_coll_mark_down"
+        },
+        {
+          "formal_index": 204,
+          "phrase": "mark up",
+          "phrase_slug": "mark_up",
+          "topic_id": "topic_22",
+          "topic": "零售購物",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "加價",
+          "candidate_item_id": "item_coll_mark_up"
+        }
+      ]
+    },
+    {
+      "family_id": "family_narrow",
+      "family_type": "same_head_token",
+      "head_token": "narrow",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 74,
+          "phrase": "narrow down",
+          "phrase_slug": "narrow_down",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "縮小範圍；篩選",
+          "candidate_item_id": "item_coll_narrow_down"
+        },
+        {
+          "formal_index": 407,
+          "phrase": "narrow down to",
+          "phrase_slug": "narrow_down_to",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "縮小到",
+          "candidate_item_id": "item_coll_narrow_down_to"
+        }
+      ]
+    },
+    {
+      "family_id": "family_phase",
+      "family_type": "same_head_token",
+      "head_token": "phase",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "C": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_24",
+          "topic": "製造與品管"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 19,
+          "phrase": "phase out",
+          "phrase_slug": "phase_out",
+          "topic_id": "topic_24",
+          "topic": "製造與品管",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "逐步淘汰",
+          "candidate_item_id": "item_coll_phase_out"
+        },
+        {
+          "formal_index": 338,
+          "phrase": "phase in",
+          "phrase_slug": "phase_in",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "逐步導入",
+          "candidate_item_id": "item_coll_phase_in"
+        }
+      ]
+    },
+    {
+      "family_id": "family_plug",
+      "family_type": "same_head_token",
+      "head_token": "plug",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 1,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 117,
+          "phrase": "plug in",
+          "phrase_slug": "plug_in",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "插上電源",
+          "candidate_item_id": "item_coll_plug_in"
+        },
+        {
+          "formal_index": 381,
+          "phrase": "plug into",
+          "phrase_slug": "plug_into",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "接入；連接到",
+          "candidate_item_id": "item_coll_plug_into"
+        }
+      ]
+    },
+    {
+      "family_id": "family_point",
+      "family_type": "same_head_token",
+      "head_token": "point",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 38,
+          "phrase": "point out",
+          "phrase_slug": "point_out",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "指出",
+          "candidate_item_id": "item_coll_point_out"
+        },
+        {
+          "formal_index": 122,
+          "phrase": "point to",
+          "phrase_slug": "point_to",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "顯示；指出",
+          "candidate_item_id": "item_coll_point_to"
+        }
+      ]
+    },
+    {
+      "family_id": "family_pull",
+      "family_type": "same_head_token",
+      "head_token": "pull",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_29",
+          "topic": "醫療與健康"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 321,
+          "phrase": "pull through",
+          "phrase_slug": "pull_through",
+          "topic_id": "topic_29",
+          "topic": "醫療與健康",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "恢復；渡過難關",
+          "candidate_item_id": "item_coll_pull_through"
+        },
+        {
+          "formal_index": 397,
+          "phrase": "pull together",
+          "phrase_slug": "pull_together",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "整合起來；齊心完成",
+          "candidate_item_id": "item_coll_pull_together"
+        }
+      ]
+    },
+    {
+      "family_id": "family_qualify",
+      "family_type": "same_head_token",
+      "head_token": "qualify",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_01",
+          "topic": "人才招募"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 189,
+          "phrase": "qualify for",
+          "phrase_slug": "qualify_for",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "有資格取得",
+          "candidate_item_id": "item_coll_qualify_for"
+        },
+        {
+          "formal_index": 285,
+          "phrase": "qualify as",
+          "phrase_slug": "qualify_as",
+          "topic_id": "topic_01",
+          "topic": "人才招募",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "算作；符合資格成為",
+          "candidate_item_id": "item_coll_qualify_as"
+        }
+      ]
+    },
+    {
+      "family_id": "family_refer",
+      "family_type": "same_head_token",
+      "head_token": "refer",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_05",
+          "topic": "文書作業"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 128,
+          "phrase": "refer to",
+          "phrase_slug": "refer_to",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "提到；參考",
+          "candidate_item_id": "item_coll_refer_to"
+        },
+        {
+          "formal_index": 239,
+          "phrase": "refer back to",
+          "phrase_slug": "refer_back_to",
+          "topic_id": "topic_05",
+          "topic": "文書作業",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "回頭參照",
+          "candidate_item_id": "item_coll_refer_back_to"
+        }
+      ]
+    },
+    {
+      "family_id": "family_rely",
+      "family_type": "same_head_token",
+      "head_token": "rely",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 81,
+          "phrase": "rely on",
+          "phrase_slug": "rely_on",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "依賴",
+          "candidate_item_id": "item_coll_rely_on"
+        },
+        {
+          "formal_index": 256,
+          "phrase": "rely upon",
+          "phrase_slug": "rely_upon",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "依靠",
+          "candidate_item_id": "item_coll_rely_upon"
+        }
+      ]
+    },
+    {
+      "family_id": "family_result",
+      "family_type": "same_head_token",
+      "head_token": "result",
+      "member_count": 2,
+      "status_counts": {
+        "known": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_24",
+          "topic": "製造與品管"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 82,
+          "phrase": "result in",
+          "phrase_slug": "result_in",
+          "topic_id": "topic_24",
+          "topic": "製造與品管",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "導致",
+          "candidate_item_id": "item_coll_result_in"
+        },
+        {
+          "formal_index": 232,
+          "phrase": "result from",
+          "phrase_slug": "result_from",
+          "topic_id": "topic_24",
+          "topic": "製造與品管",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "起因於",
+          "candidate_item_id": "item_coll_result_from"
+        }
+      ]
+    },
+    {
+      "family_id": "family_rule",
+      "family_type": "same_head_token",
+      "head_token": "rule",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "C": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_03",
+          "topic": "公告訊息"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 15,
+          "phrase": "rule out",
+          "phrase_slug": "rule_out",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "排除",
+          "candidate_item_id": "item_coll_rule_out"
+        },
+        {
+          "formal_index": 152,
+          "phrase": "rule on",
+          "phrase_slug": "rule_on",
+          "topic_id": "topic_03",
+          "topic": "公告訊息",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "對…作出裁定",
+          "candidate_item_id": "item_coll_rule_on"
+        }
+      ]
+    },
+    {
+      "family_id": "family_search",
+      "family_type": "same_head_token",
+      "head_token": "search",
+      "member_count": 2,
+      "status_counts": {
+        "known": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 192,
+          "phrase": "search for",
+          "phrase_slug": "search_for",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "搜尋；尋找",
+          "candidate_item_id": "item_coll_search_for"
+        },
+        {
+          "formal_index": 393,
+          "phrase": "search through",
+          "phrase_slug": "search_through",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "known",
+          "difficulty": "B",
+          "gloss_zh": "翻找；全面搜尋",
+          "candidate_item_id": "item_coll_search_through"
+        }
+      ]
+    },
+    {
+      "family_id": "family_see",
+      "family_type": "same_head_token",
+      "head_token": "see",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 153,
+          "phrase": "see to",
+          "phrase_slug": "see_to",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "負責處理；照料",
+          "candidate_item_id": "item_coll_see_to"
+        },
+        {
+          "formal_index": 322,
+          "phrase": "see through",
+          "phrase_slug": "see_through",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "看穿；堅持完成",
+          "candidate_item_id": "item_coll_see_through"
+        }
+      ]
+    },
+    {
+      "family_id": "family_settle",
+      "family_type": "same_head_token",
+      "head_token": "settle",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_25",
+          "topic": "銷售服務"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 158,
+          "phrase": "settle on",
+          "phrase_slug": "settle_on",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "決定採用",
+          "candidate_item_id": "item_coll_settle_on"
+        },
+        {
+          "formal_index": 306,
+          "phrase": "settle for",
+          "phrase_slug": "settle_for",
+          "topic_id": "topic_25",
+          "topic": "銷售服務",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "勉強接受",
+          "candidate_item_id": "item_coll_settle_for"
+        }
+      ]
+    },
+    {
+      "family_id": "family_shut",
+      "family_type": "same_head_token",
+      "head_token": "shut",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_10",
+          "topic": "房屋與修繕"
+        },
+        {
+          "topic_id": "topic_14",
+          "topic": "科技與研發"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 155,
+          "phrase": "shut down",
+          "phrase_slug": "shut_down",
+          "topic_id": "topic_14",
+          "topic": "科技與研發",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "關閉；停機",
+          "candidate_item_id": "item_coll_shut_down"
+        },
+        {
+          "formal_index": 373,
+          "phrase": "shut off",
+          "phrase_slug": "shut_off",
+          "topic_id": "topic_10",
+          "topic": "房屋與修繕",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "關閉（電源/水）",
+          "candidate_item_id": "item_coll_shut_off"
+        }
+      ]
+    },
+    {
+      "family_id": "family_sort",
+      "family_type": "same_head_token",
+      "head_token": "sort",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_26",
+          "topic": "辦公室"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 112,
+          "phrase": "sort out",
+          "phrase_slug": "sort_out",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "A",
+          "gloss_zh": "整理；解決",
+          "candidate_item_id": "item_coll_sort_out"
+        },
+        {
+          "formal_index": 215,
+          "phrase": "sort through",
+          "phrase_slug": "sort_through",
+          "topic_id": "topic_26",
+          "topic": "辦公室",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "逐一整理",
+          "candidate_item_id": "item_coll_sort_through"
+        }
+      ]
+    },
+    {
+      "family_id": "family_speak",
+      "family_type": "same_head_token",
+      "head_token": "speak",
+      "member_count": 2,
+      "status_counts": {
+        "known": 1,
+        "unknown": 1
+      },
+      "difficulty_counts": {
+        "A": 1,
+        "B": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 198,
+          "phrase": "speak with",
+          "phrase_slug": "speak_with",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "與…交談",
+          "candidate_item_id": "item_coll_speak_with"
+        },
+        {
+          "formal_index": 288,
+          "phrase": "speak of",
+          "phrase_slug": "speak_of",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "提到",
+          "candidate_item_id": "item_coll_speak_of"
+        }
+      ]
+    },
+    {
+      "family_id": "family_stay",
+      "family_type": "same_head_token",
+      "head_token": "stay",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 1,
+        "known": 1
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "A": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_08",
+          "topic": "企業經營"
+        },
+        {
+          "topic_id": "topic_29",
+          "topic": "醫療與健康"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 346,
+          "phrase": "stay ahead of",
+          "phrase_slug": "stay_ahead_of",
+          "topic_id": "topic_08",
+          "topic": "企業經營",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "保持領先",
+          "candidate_item_id": "item_coll_stay_ahead_of"
+        },
+        {
+          "formal_index": 353,
+          "phrase": "stay away from",
+          "phrase_slug": "stay_away_from",
+          "topic_id": "topic_29",
+          "topic": "醫療與健康",
+          "status": "known",
+          "difficulty": "A",
+          "gloss_zh": "遠離；避免接觸",
+          "candidate_item_id": "item_coll_stay_away_from"
+        }
+      ]
+    },
+    {
+      "family_id": "family_stick",
+      "family_type": "same_head_token",
+      "head_token": "stick",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 228,
+          "phrase": "stick to",
+          "phrase_slug": "stick_to",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "堅持；遵守",
+          "candidate_item_id": "item_coll_stick_to"
+        },
+        {
+          "formal_index": 310,
+          "phrase": "stick with",
+          "phrase_slug": "stick_with",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "持續採用；不離開",
+          "candidate_item_id": "item_coll_stick_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_tie",
+      "family_type": "same_head_token",
+      "head_token": "tie",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_20",
+          "topic": "業務協調"
+        },
+        {
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 107,
+          "phrase": "tie up",
+          "phrase_slug": "tie_up",
+          "topic_id": "topic_20",
+          "topic": "業務協調",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "占用；使受阻",
+          "candidate_item_id": "item_coll_tie_up"
+        },
+        {
+          "formal_index": 399,
+          "phrase": "tie in with",
+          "phrase_slug": "tie_in_with",
+          "topic_id": "topic_09",
+          "topic": "行銷與宣傳",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "與…相符；配合",
+          "candidate_item_id": "item_coll_tie_in_with"
+        }
+      ]
+    },
+    {
+      "family_id": "family_touch",
+      "family_type": "same_head_token",
+      "head_token": "touch",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 1,
+        "C": 1
+      },
+      "topics": [
+        {
+          "topic_id": "topic_17",
+          "topic": "商務會議"
+        },
+        {
+          "topic_id": "topic_21",
+          "topic": "溝通表達"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 93,
+          "phrase": "touch on",
+          "phrase_slug": "touch_on",
+          "topic_id": "topic_17",
+          "topic": "商務會議",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "略提；談到",
+          "candidate_item_id": "item_coll_touch_on"
+        },
+        {
+          "formal_index": 272,
+          "phrase": "touch upon",
+          "phrase_slug": "touch_upon",
+          "topic_id": "topic_21",
+          "topic": "溝通表達",
+          "status": "unknown",
+          "difficulty": "C",
+          "gloss_zh": "提及",
+          "candidate_item_id": "item_coll_touch_upon"
+        }
+      ]
+    },
+    {
+      "family_id": "family_tune",
+      "family_type": "same_head_token",
+      "head_token": "tune",
+      "member_count": 2,
+      "status_counts": {
+        "unknown": 2
+      },
+      "difficulty_counts": {
+        "B": 2
+      },
+      "topics": [
+        {
+          "topic_id": "topic_19",
+          "topic": "傳播媒體"
+        }
+      ],
+      "authoring_use": "Use as a reference for semantic contrast and distractor planning only; manually check ambiguity before authoring.",
+      "members": [
+        {
+          "formal_index": 379,
+          "phrase": "tune in",
+          "phrase_slug": "tune_in",
+          "topic_id": "topic_19",
+          "topic": "傳播媒體",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "收看收聽；關注",
+          "candidate_item_id": "item_coll_tune_in"
+        },
+        {
+          "formal_index": 380,
+          "phrase": "tune out",
+          "phrase_slug": "tune_out",
+          "topic_id": "topic_19",
+          "topic": "傳播媒體",
+          "status": "unknown",
+          "difficulty": "B",
+          "gloss_zh": "不再注意；轉台",
+          "candidate_item_id": "item_coll_tune_out"
+        }
+      ]
+    }
+  ]
+}

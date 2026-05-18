@@ -19,10 +19,10 @@ async function answerQuestions(page, lessonId: string, count: number) {
   for (let index = 0; index < count; index += 1) {
     await expect(answerButtons.first()).toBeEnabled({ timeout: STEP_TIMEOUT });
     await answerButtons.first().click({ timeout: STEP_TIMEOUT });
-    const confirmButton = page.getByRole("button", { name: "Confirm Answer" });
+    const confirmButton = page.getByRole("button", { name: "確認答案" });
     await expect(confirmButton).toBeEnabled({ timeout: STEP_TIMEOUT });
     await confirmButton.click({ timeout: STEP_TIMEOUT });
-    const advanceButton = page.getByRole("button", { name: /Next Question|See Summary/ });
+    const advanceButton = page.getByRole("button", { name: /下一題|查看摘要/ });
     await expect(advanceButton).toBeVisible({ timeout: STEP_TIMEOUT });
     await advanceButton.click({ timeout: STEP_TIMEOUT });
   }
@@ -111,7 +111,7 @@ test("production content: V2 and V3 seed and runtime record attempts", async ({ 
   expect(totalAttempts).toBeGreaterThanOrEqual(36);
 
   await page.evaluate(() => window.VocabTracker.setView("export"));
-  const exportPackageButton = page.getByRole("button", { name: "Export for ChatGPT Analysis" });
+  const exportPackageButton = page.getByRole("button", { name: "匯出給 ChatGPT 分析" });
   await expect(exportPackageButton).toBeVisible({ timeout: STEP_TIMEOUT });
 
   const downloads: Download[] = [];

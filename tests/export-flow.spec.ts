@@ -63,13 +63,13 @@ test("export flow: completed session appears on dashboard and download fallbacks
 
   await page.evaluate(() => window.VocabTracker.setView("export"));
 
-  const exportHeading = page.locator(".tracker-panel h3", { hasText: "Export Dashboard" });
+  const exportHeading = page.locator(".tracker-panel h3", { hasText: "匯出總覽" });
   await expect(exportHeading).toBeVisible({ timeout: STEP_TIMEOUT });
 
-  const sessionsStat = page.locator(".tracker-stat").filter({ has: page.locator("span", { hasText: "Sessions" }) });
+  const sessionsStat = page.locator(".tracker-stat").filter({ has: page.locator("span", { hasText: "課程紀錄" }) });
   await expect(sessionsStat.locator("strong")).toHaveText(/^[1-9]\d*$/, { timeout: STEP_TIMEOUT });
 
-  const exportPackageButton = page.getByRole("button", { name: "Export for ChatGPT Analysis" });
+  const exportPackageButton = page.getByRole("button", { name: "匯出給 ChatGPT 分析" });
   await expect(exportPackageButton).toBeVisible({ timeout: STEP_TIMEOUT });
 
   const exportDownloads = [];
@@ -92,10 +92,10 @@ test("export flow: completed session appears on dashboard and download fallbacks
   await expect(exportPreview).toContainText("# TOEIC Vocabulary Tracker Export Summary", { timeout: STEP_TIMEOUT });
 
   await page.evaluate(() => window.VocabTracker.setView("bank"));
-  const bankHeading = page.locator(".tracker-panel h3", { hasText: "Question Bank Manager" });
+  const bankHeading = page.locator(".tracker-panel h3", { hasText: "題庫管理" });
   await expect(bankHeading).toBeVisible({ timeout: STEP_TIMEOUT });
 
-  const seedDownloadButton = page.getByRole("button", { name: "Download Edited Seed JSON Snapshot" });
+  const seedDownloadButton = page.getByRole("button", { name: "下載已編輯 Seed JSON 快照" });
   await expect(seedDownloadButton).toBeVisible({ timeout: STEP_TIMEOUT });
   const seedDownload = page.waitForEvent("download", {
     predicate: (download) => /questions_.*\.json$/.test(download.suggestedFilename()),

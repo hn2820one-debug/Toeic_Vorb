@@ -1,0 +1,625 @@
+{
+  "generated_at": "2026-05-17T22:36:07.151Z",
+  "source_files": [
+    "drafts/collocation-rebuild/phrase_411_inventory.json",
+    "drafts/collocation-rebuild/wave1_lesson_blueprint.json"
+  ],
+  "reference_role": "ability_signal_only",
+  "content_generation_note": "Topic normalization table for rebuild planning only. It does not define production curriculum rows.",
+  "totals": {
+    "topic_count": 29,
+    "wave1_topic_count": 5,
+    "zero_entry_topics": 1
+  },
+  "topics": [
+    {
+      "topic_id": "topic_01",
+      "canonical_topic_zh": "人才招募",
+      "aliases": [
+        "人才招募"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 16,
+      "known_entries": 2,
+      "unknown_entries": 14,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 13,
+        "C": 1
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 22,
+      "last_formal_index": 410,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_02",
+      "canonical_topic_zh": "人事與組織",
+      "aliases": [
+        "人事與組織"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 15,
+      "known_entries": 6,
+      "unknown_entries": 9,
+      "difficulty_breakdown": {
+        "A": 6,
+        "B": 8,
+        "C": 1
+      },
+      "wave1_selected": true,
+      "wave1_sequence": 5,
+      "first_formal_index": 2,
+      "last_formal_index": 401,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_03",
+      "canonical_topic_zh": "公告訊息",
+      "aliases": [
+        "公告訊息"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 20,
+      "known_entries": 1,
+      "unknown_entries": 19,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 5,
+        "C": 15
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 7,
+      "last_formal_index": 390,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_04",
+      "canonical_topic_zh": "公益慈善",
+      "aliases": [
+        "公益慈善"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 3,
+      "known_entries": 0,
+      "unknown_entries": 3,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 1,
+        "C": 2
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 135,
+      "last_formal_index": 137,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_05",
+      "canonical_topic_zh": "文書作業",
+      "aliases": [
+        "文書作業"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 34,
+      "known_entries": 7,
+      "unknown_entries": 27,
+      "difficulty_breakdown": {
+        "A": 22,
+        "B": 9,
+        "C": 3
+      },
+      "wave1_selected": true,
+      "wave1_sequence": 2,
+      "first_formal_index": 3,
+      "last_formal_index": 395,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_06",
+      "canonical_topic_zh": "日常生活",
+      "aliases": [
+        "日常生活"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 20,
+      "known_entries": 6,
+      "unknown_entries": 14,
+      "difficulty_breakdown": {
+        "A": 14,
+        "B": 5,
+        "C": 1
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 56,
+      "last_formal_index": 387,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_07",
+      "canonical_topic_zh": "生活休閒",
+      "aliases": [
+        "生活休閒"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 0,
+      "known_entries": 0,
+      "unknown_entries": 0,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": null,
+      "last_formal_index": null,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_08",
+      "canonical_topic_zh": "企業經營",
+      "aliases": [
+        "企業經營"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 36,
+      "known_entries": 6,
+      "unknown_entries": 30,
+      "difficulty_breakdown": {
+        "A": 6,
+        "B": 23,
+        "C": 7
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 1,
+      "last_formal_index": 397,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_09",
+      "canonical_topic_zh": "行銷與宣傳",
+      "aliases": [
+        "行銷與宣傳"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 11,
+      "known_entries": 0,
+      "unknown_entries": 11,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 7,
+        "C": 3
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 12,
+      "last_formal_index": 399,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_10",
+      "canonical_topic_zh": "房屋與修繕",
+      "aliases": [
+        "房屋與修繕"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 5,
+      "known_entries": 1,
+      "unknown_entries": 4,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 3,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 115,
+      "last_formal_index": 398,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_11",
+      "canonical_topic_zh": "社會經濟",
+      "aliases": [
+        "社會經濟"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 7,
+      "known_entries": 0,
+      "unknown_entries": 7,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 3,
+        "C": 3
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 87,
+      "last_formal_index": 411,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_12",
+      "canonical_topic_zh": "表演與展覽",
+      "aliases": [
+        "表演與展覽"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 2,
+      "known_entries": 1,
+      "unknown_entries": 1,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 1,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 337,
+      "last_formal_index": 361,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_13",
+      "canonical_topic_zh": "金融與投資",
+      "aliases": [
+        "金融與投資"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 6,
+      "known_entries": 3,
+      "unknown_entries": 3,
+      "difficulty_breakdown": {
+        "A": 3,
+        "B": 3,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 76,
+      "last_formal_index": 392,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_14",
+      "canonical_topic_zh": "科技與研發",
+      "aliases": [
+        "科技與研發"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 17,
+      "known_entries": 5,
+      "unknown_entries": 12,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 9,
+        "C": 1
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 24,
+      "last_formal_index": 406,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_15",
+      "canonical_topic_zh": "旅遊與交通",
+      "aliases": [
+        "旅遊與交通"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 7,
+      "known_entries": 3,
+      "unknown_entries": 4,
+      "difficulty_breakdown": {
+        "A": 4,
+        "B": 3,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 278,
+      "last_formal_index": 360,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_16",
+      "canonical_topic_zh": "財務會計",
+      "aliases": [
+        "財務會計"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 21,
+      "known_entries": 1,
+      "unknown_entries": 20,
+      "difficulty_breakdown": {
+        "A": 3,
+        "B": 11,
+        "C": 7
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 18,
+      "last_formal_index": 370,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_17",
+      "canonical_topic_zh": "商務會議",
+      "aliases": [
+        "商務會議"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 20,
+      "known_entries": 3,
+      "unknown_entries": 17,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 15,
+        "C": 3
+      },
+      "wave1_selected": true,
+      "wave1_sequence": 3,
+      "first_formal_index": 4,
+      "last_formal_index": 396,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_18",
+      "canonical_topic_zh": "貿易與物流",
+      "aliases": [
+        "貿易與物流"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 9,
+      "known_entries": 4,
+      "unknown_entries": 5,
+      "difficulty_breakdown": {
+        "A": 5,
+        "B": 4,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 6,
+      "last_formal_index": 364,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_19",
+      "canonical_topic_zh": "傳播媒體",
+      "aliases": [
+        "傳播媒體"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 7,
+      "known_entries": 2,
+      "unknown_entries": 5,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 5,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 250,
+      "last_formal_index": 384,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_20",
+      "canonical_topic_zh": "業務協調",
+      "aliases": [
+        "業務協調"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 32,
+      "known_entries": 6,
+      "unknown_entries": 26,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 20,
+        "C": 5
+      },
+      "wave1_selected": true,
+      "wave1_sequence": 4,
+      "first_formal_index": 27,
+      "last_formal_index": 359,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_21",
+      "canonical_topic_zh": "溝通表達",
+      "aliases": [
+        "溝通表達"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 47,
+      "known_entries": 12,
+      "unknown_entries": 35,
+      "difficulty_breakdown": {
+        "A": 13,
+        "B": 17,
+        "C": 17
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 38,
+      "last_formal_index": 408,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_22",
+      "canonical_topic_zh": "零售購物",
+      "aliases": [
+        "零售購物"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 5,
+      "known_entries": 1,
+      "unknown_entries": 4,
+      "difficulty_breakdown": {
+        "A": 3,
+        "B": 2,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 13,
+      "last_formal_index": 204,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_23",
+      "canonical_topic_zh": "演講與宴會",
+      "aliases": [
+        "演講與宴會"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 9,
+      "known_entries": 5,
+      "unknown_entries": 4,
+      "difficulty_breakdown": {
+        "A": 8,
+        "B": 1,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 149,
+      "last_formal_index": 378,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_24",
+      "canonical_topic_zh": "製造與品管",
+      "aliases": [
+        "製造與品管"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 9,
+      "known_entries": 2,
+      "unknown_entries": 7,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 7,
+        "C": 1
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 5,
+      "last_formal_index": 344,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_25",
+      "canonical_topic_zh": "銷售服務",
+      "aliases": [
+        "銷售服務"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 10,
+      "known_entries": 1,
+      "unknown_entries": 9,
+      "difficulty_breakdown": {
+        "A": 4,
+        "B": 5,
+        "C": 1
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 181,
+      "last_formal_index": 409,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_26",
+      "canonical_topic_zh": "辦公室",
+      "aliases": [
+        "辦公室"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 24,
+      "known_entries": 3,
+      "unknown_entries": 21,
+      "difficulty_breakdown": {
+        "A": 15,
+        "B": 8,
+        "C": 1
+      },
+      "wave1_selected": true,
+      "wave1_sequence": 1,
+      "first_formal_index": 11,
+      "last_formal_index": 386,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_27",
+      "canonical_topic_zh": "餐飲與住宿",
+      "aliases": [
+        "餐飲與住宿"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 5,
+      "known_entries": 2,
+      "unknown_entries": 3,
+      "difficulty_breakdown": {
+        "A": 3,
+        "B": 2,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 14,
+      "last_formal_index": 366,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_28",
+      "canonical_topic_zh": "環境保育",
+      "aliases": [
+        "環境保育"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 4,
+      "known_entries": 1,
+      "unknown_entries": 3,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 2,
+        "C": 1
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 146,
+      "last_formal_index": 371,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    },
+    {
+      "topic_id": "topic_29",
+      "canonical_topic_zh": "醫療與健康",
+      "aliases": [
+        "醫療與健康"
+      ],
+      "reference_role": "ability_signal_only",
+      "total_entries": 10,
+      "known_entries": 4,
+      "unknown_entries": 6,
+      "difficulty_breakdown": {
+        "A": 6,
+        "B": 4,
+        "C": 0
+      },
+      "wave1_selected": false,
+      "wave1_sequence": null,
+      "first_formal_index": 65,
+      "last_formal_index": 355,
+      "source_note": "Generated from the Background phrase inventory; topic labels are normalized for planning only."
+    }
+  ]
+}

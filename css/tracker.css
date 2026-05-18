@@ -3,7 +3,7 @@
 }
 
 .tracker-head {
-  padding: 18px;
+  padding: 22px 22px 18px;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -18,7 +18,7 @@
   display: flex;
   gap: 6px;
   overflow-x: auto;
-  padding: 12px 0 2px;
+  padding: 14px 0 2px;
 }
 
 .review-filter-tabs {
@@ -31,31 +31,48 @@
 .tracker-tab {
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 9px 14px;
   color: var(--text-secondary);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.82);
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.tracker-tab:hover {
+  transform: translateY(-1px);
+  border-color: rgba(79, 143, 118, 0.38);
+  color: var(--text-primary);
+}
+
+.tracker-tab:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
 }
 
 .tracker-tab.active {
   color: #fff;
-  border-color: #2563eb;
-  background: #2563eb;
+  border-color: var(--accent-strong);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  box-shadow: 0 10px 22px rgba(79, 143, 118, 0.24);
 }
 
 .tracker-view {
-  padding: 14px 18px 22px;
+  padding: 16px 22px 24px;
+}
+
+.tracker-notice-shell {
+  padding-bottom: 0;
 }
 
 .tracker-alert {
   margin: 0 0 12px;
-  border: 1px solid #bfdbfe;
-  border-radius: 8px;
-  padding: 10px 12px;
-  color: #1e3a8a;
-  background: #eff6ff;
+  border: 1px solid #d4e2d8;
+  border-radius: 16px;
+  padding: 11px 14px;
+  color: #3e6251;
+  background: #f3f9f4;
   font-size: 13px;
 }
 
@@ -83,10 +100,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  border: 1px solid #c7d2fe;
-  border-radius: 8px;
-  padding: 14px;
-  background: #eef2ff;
+  border: 1px solid #d7e4db;
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(180deg, #f3f8f4 0%, #fbfcfa 100%);
 }
 
 .tracker-hero h2,
@@ -103,7 +120,7 @@
 }
 
 .tracker-kicker {
-  color: #1d4ed8;
+  color: var(--accent-strong);
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.04em;
@@ -117,13 +134,17 @@
   margin-top: 12px;
 }
 
+.tracker-grid--five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .tracker-stat,
 .stage-card,
 .tracker-panel,
 .question-panel {
   border: 1px solid var(--border);
-  border-radius: 8px;
-  background: #fff;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .tracker-stat {
@@ -145,7 +166,7 @@
 
 .tracker-stat.stat-alert {
   border-color: var(--warn);
-  background: #fffbf0;
+  background: #fff9ef;
 }
 
 .tracker-stat.stat-alert strong {
@@ -161,7 +182,7 @@
 }
 
 .tracker-panel {
-  padding: 14px;
+  padding: 16px;
 }
 
 .tracker-panel h3 {
@@ -180,6 +201,11 @@
 .panel-head-row h3,
 .panel-head-row p {
   margin: 0;
+}
+
+.panel-head-actions {
+  display: flex;
+  gap: 8px;
 }
 
 .panel-head-row p {
@@ -208,16 +234,31 @@
 
 .today-focus span {
   border-radius: 999px;
-  padding: 4px 8px;
-  background: #f3f4f6;
-  color: #334155;
+  padding: 5px 9px;
+  background: #f3f5f1;
+  color: #425148;
   font-size: 12px;
+}
+
+.install-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.install-banner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.error-code-tag {
+  font-size: 10px;
 }
 
 .diagnostic-panel {
   margin-top: 12px;
-  border-color: #bfdbfe;
-  background: #f8fbff;
+  border-color: #d5e4d8;
+  background: #f8fbf8;
 }
 
 .diagnostic-summary,
@@ -234,8 +275,8 @@
 .diagnostic-summary span {
   border-radius: 999px;
   padding: 5px 9px;
-  background: #eff6ff;
-  color: #1e3a8a;
+  background: #eef5ef;
+  color: #446756;
   font-size: 12px;
   font-weight: 800;
 }
@@ -638,7 +679,7 @@ textarea {
   border-radius: 8px;
   padding: 7px 9px;
   background: #fff;
-  color: var(--text-secondary);
+  color: #435349;
   font-size: 12px;
 }
 
@@ -657,7 +698,7 @@ textarea {
   border-radius: 999px;
   padding: 6px 9px;
   background: #fff;
-  color: var(--text-secondary);
+  color: #435349;
   font-size: 12px;
   font-weight: 800;
   white-space: nowrap;
@@ -675,6 +716,7 @@ textarea {
 
 .question-panel {
   padding: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.97) 0%, rgba(248, 245, 238, 0.97) 100%);
 }
 
 .question-meta {
@@ -695,6 +737,7 @@ textarea {
 
 .question-text {
   margin: 0 0 14px;
+  color: var(--text-primary);
   font-size: 19px;
   line-height: 1.55;
 }
@@ -753,6 +796,8 @@ textarea {
 }
 
 .answer-button span {
+  color: var(--text-primary);
+  font-weight: 600;
   line-height: 1.35;
 }
 
@@ -1634,36 +1679,3 @@ textarea {
   padding-top: 4px;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-secondary: #9ca3af;
-    --border-light: #374151;
-    --bg-page: #111827;
-    --bg-card: #1f2937;
-  }
-  body { background: #111827; color: #f9fafb; }
-  .tracker-shell { background: #1f2937; border-color: #374151; }
-  .tracker-panel { background: #1f2937; border-color: #374151; }
-  .tracker-stat { background: #111827; }
-  .stage-card { background: #1f2937; border-color: #374151; }
-  .answer-button { background: #1f2937; border-color: #374151; color: #f9fafb; }
-  .answer-button:hover { background: #374151; }
-  .answer-button.selected { border-color: #3b82f6; background: #1e3a5f; }
-  .answer-button.correct { background: #14532d; border-color: #16a34a; }
-  .answer-button.wrong { background: #450a0a; border-color: #dc2626; }
-  .question-text { color: #f9fafb; }
-  .tracker-tab { color: #9ca3af; }
-  .tracker-tab.active { background: #2563eb; color: #fff; }
-  .mastery-row,
-  .queue-card,
-  .wrong-line,
-  .error-card,
-  .lesson-line { background: #1f2937; border-color: #374151; }
-  .lesson-line.is-current { background: #1e3a5f; }
-  input, select, textarea { background: #1f2937; color: #f9fafb; border-color: #374151; }
-  .tracker-hero { background: #1f2937; border-color: #374151; }
-  .daily-goal-bar { background: #374151; }
-  .step-plan { background: #111827; }
-  .vocab-card { background: #111827; border-color: #374151; }
-}

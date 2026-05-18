@@ -1,0 +1,3712 @@
+{
+  "generated_at": "2026-05-18T00:18:50.033Z",
+  "source_blueprint": "drafts/collocation-rebuild/wave1_lesson_blueprint.json",
+  "reference_role": "ability_signal_only",
+  "totals": {
+    "missing_or_ambiguous_items": 100,
+    "missing_items": 100,
+    "ambiguous_phrase_matches": 0
+  },
+  "items": [
+    {
+      "candidate_item_id": "item_coll_carry_on",
+      "target_item_id": "item_coll_carry_on",
+      "phrase": "carry on",
+      "gloss_zh": "繼續進行",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_carry_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "carry on",
+        "variants": [
+          "carry on"
+        ],
+        "chinese": "繼續進行",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_check_over",
+      "target_item_id": "item_coll_check_over",
+      "phrase": "check over",
+      "gloss_zh": "仔細檢查",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_check_over",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "check over",
+        "variants": [
+          "check over"
+        ],
+        "chinese": "仔細檢查",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_clock_in",
+      "target_item_id": "item_coll_clock_in",
+      "phrase": "clock in",
+      "gloss_zh": "打卡上班",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_15"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_clock_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-15",
+        "lesson_ids": [
+          "V3-W1-15"
+        ],
+        "base_word": "clock in",
+        "variants": [
+          "clock in"
+        ],
+        "chinese": "打卡上班",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_concentrate_on",
+      "target_item_id": "item_coll_concentrate_on",
+      "phrase": "concentrate on",
+      "gloss_zh": "集中於",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_concentrate_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "concentrate on",
+        "variants": [
+          "concentrate on"
+        ],
+        "chinese": "集中於",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_cross_out",
+      "target_item_id": "item_coll_cross_out",
+      "phrase": "cross out",
+      "gloss_zh": "劃掉",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_cross_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "cross out",
+        "variants": [
+          "cross out"
+        ],
+        "chinese": "劃掉",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_cut_out",
+      "target_item_id": "item_coll_cut_out",
+      "phrase": "cut out",
+      "gloss_zh": "刪除；剪下",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_cut_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "cut out",
+        "variants": [
+          "cut out"
+        ],
+        "chinese": "刪除；剪下",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_depend_on",
+      "target_item_id": "item_coll_depend_on",
+      "phrase": "depend on",
+      "gloss_zh": "取決於；依靠",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_depend_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "depend on",
+        "variants": [
+          "depend on"
+        ],
+        "chinese": "取決於；依靠",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_divide_into",
+      "target_item_id": "item_coll_divide_into",
+      "phrase": "divide into",
+      "gloss_zh": "分成",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_divide_into",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "divide into",
+        "variants": [
+          "divide into"
+        ],
+        "chinese": "分成",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_drop_by",
+      "target_item_id": "item_coll_drop_by",
+      "phrase": "drop by",
+      "gloss_zh": "順道拜訪",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_drop_by",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "drop by",
+        "variants": [
+          "drop by"
+        ],
+        "chinese": "順道拜訪",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_file_away",
+      "target_item_id": "item_coll_file_away",
+      "phrase": "file away",
+      "gloss_zh": "歸檔",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_file_away",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "file away",
+        "variants": [
+          "file away"
+        ],
+        "chinese": "歸檔",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_fill_out",
+      "target_item_id": "item_coll_fill_out",
+      "phrase": "fill out",
+      "gloss_zh": "填寫（表格）",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_fill_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "fill out",
+        "variants": [
+          "fill out"
+        ],
+        "chinese": "填寫（表格）",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_focus_on",
+      "target_item_id": "item_coll_focus_on",
+      "phrase": "focus on",
+      "gloss_zh": "專注於",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_focus_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "focus on",
+        "variants": [
+          "focus on"
+        ],
+        "chinese": "專注於",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_give_out",
+      "target_item_id": "item_coll_give_out",
+      "phrase": "give out",
+      "gloss_zh": "分發；耗盡",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_give_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "give out",
+        "variants": [
+          "give out"
+        ],
+        "chinese": "分發；耗盡",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_glance_through",
+      "target_item_id": "item_coll_glance_through",
+      "phrase": "glance through",
+      "gloss_zh": "快速瀏覽",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_glance_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "glance through",
+        "variants": [
+          "glance through"
+        ],
+        "chinese": "快速瀏覽",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_go_ahead",
+      "target_item_id": "item_coll_go_ahead",
+      "phrase": "go ahead",
+      "gloss_zh": "開始做；繼續進行",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_go_ahead",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "go ahead",
+        "variants": [
+          "go ahead"
+        ],
+        "chinese": "開始做；繼續進行",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_go_over",
+      "target_item_id": "item_coll_go_over",
+      "phrase": "go over",
+      "gloss_zh": "檢查；覆核",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_go_over",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "go over",
+        "variants": [
+          "go over"
+        ],
+        "chinese": "檢查；覆核",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_hand_back",
+      "target_item_id": "item_coll_hand_back",
+      "phrase": "hand back",
+      "gloss_zh": "歸還",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_hand_back",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "hand back",
+        "variants": [
+          "hand back"
+        ],
+        "chinese": "歸還",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_hand_in",
+      "target_item_id": "item_coll_hand_in",
+      "phrase": "hand in",
+      "gloss_zh": "提交",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_hand_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "hand in",
+        "variants": [
+          "hand in"
+        ],
+        "chinese": "提交",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_key_in",
+      "target_item_id": "item_coll_key_in",
+      "phrase": "key in",
+      "gloss_zh": "鍵入",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_key_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "key in",
+        "variants": [
+          "key in"
+        ],
+        "chinese": "鍵入",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_line_up",
+      "target_item_id": "item_coll_line_up",
+      "phrase": "line up",
+      "gloss_zh": "安排好；排隊",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_line_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "line up",
+        "variants": [
+          "line up"
+        ],
+        "chinese": "安排好；排隊",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_look_over",
+      "target_item_id": "item_coll_look_over",
+      "phrase": "look over",
+      "gloss_zh": "快速查看；審閱",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_look_over",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "look over",
+        "variants": [
+          "look over"
+        ],
+        "chinese": "快速查看；審閱",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_move_up",
+      "target_item_id": "item_coll_move_up",
+      "phrase": "move up",
+      "gloss_zh": "晉升；上移",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_15"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_move_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-15",
+        "lesson_ids": [
+          "V3-W1-15"
+        ],
+        "base_word": "move up",
+        "variants": [
+          "move up"
+        ],
+        "chinese": "晉升；上移",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_pick_up",
+      "target_item_id": "item_coll_pick_up",
+      "phrase": "pick up",
+      "gloss_zh": "接收；拿取；恢復",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_pick_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "pick up",
+        "variants": [
+          "pick up"
+        ],
+        "chinese": "接收；拿取；恢復",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_read_over",
+      "target_item_id": "item_coll_read_over",
+      "phrase": "read over",
+      "gloss_zh": "再讀一遍；審閱",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_read_over",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "read over",
+        "variants": [
+          "read over"
+        ],
+        "chinese": "再讀一遍；審閱",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_refer_to",
+      "target_item_id": "item_coll_refer_to",
+      "phrase": "refer to",
+      "gloss_zh": "提到；參考",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_refer_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "refer to",
+        "variants": [
+          "refer to"
+        ],
+        "chinese": "提到；參考",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_run_into",
+      "target_item_id": "item_coll_run_into",
+      "phrase": "run into",
+      "gloss_zh": "碰到；遭遇",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_run_into",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "run into",
+        "variants": [
+          "run into"
+        ],
+        "chinese": "碰到；遭遇",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_run_out_of",
+      "target_item_id": "item_coll_run_out_of",
+      "phrase": "run out of",
+      "gloss_zh": "用完；耗盡",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_run_out_of",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "run out of",
+        "variants": [
+          "run out of"
+        ],
+        "chinese": "用完；耗盡",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_send_in",
+      "target_item_id": "item_coll_send_in",
+      "phrase": "send in",
+      "gloss_zh": "寄送；提交",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_send_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "send in",
+        "variants": [
+          "send in"
+        ],
+        "chinese": "寄送；提交",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_set_up",
+      "target_item_id": "item_coll_set_up",
+      "phrase": "set up",
+      "gloss_zh": "設立；安排",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_01"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_set_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-01",
+        "lesson_ids": [
+          "V3-W1-01"
+        ],
+        "base_word": "set up",
+        "variants": [
+          "set up"
+        ],
+        "chinese": "設立；安排",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_skim_through",
+      "target_item_id": "item_coll_skim_through",
+      "phrase": "skim through",
+      "gloss_zh": "略讀",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_skim_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "skim through",
+        "variants": [
+          "skim through"
+        ],
+        "chinese": "略讀",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_sort_out",
+      "target_item_id": "item_coll_sort_out",
+      "phrase": "sort out",
+      "gloss_zh": "整理；解決",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_sort_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "sort out",
+        "variants": [
+          "sort out"
+        ],
+        "chinese": "整理；解決",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_stop_by",
+      "target_item_id": "item_coll_stop_by",
+      "phrase": "stop by",
+      "gloss_zh": "順道拜訪",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_stop_by",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "stop by",
+        "variants": [
+          "stop by"
+        ],
+        "chinese": "順道拜訪",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_turn_down",
+      "target_item_id": "item_coll_turn_down",
+      "phrase": "turn down",
+      "gloss_zh": "拒絕",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_turn_down",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "turn down",
+        "variants": [
+          "turn down"
+        ],
+        "chinese": "拒絕",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_turn_in",
+      "target_item_id": "item_coll_turn_in",
+      "phrase": "turn in",
+      "gloss_zh": "繳交",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-04"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_04"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_turn_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-04",
+        "lesson_ids": [
+          "V3-W1-04"
+        ],
+        "base_word": "turn in",
+        "variants": [
+          "turn in"
+        ],
+        "chinese": "繳交",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_work_on",
+      "target_item_id": "item_coll_work_on",
+      "phrase": "work on",
+      "gloss_zh": "著手處理；從事",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_work_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "work on",
+        "variants": [
+          "work on"
+        ],
+        "chinese": "著手處理；從事",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_write_back",
+      "target_item_id": "item_coll_write_back",
+      "phrase": "write back",
+      "gloss_zh": "回信",
+      "difficulty": "A",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_05"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_write_back",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-05",
+        "lesson_ids": [
+          "V3-W1-05"
+        ],
+        "base_word": "write back",
+        "variants": [
+          "write back"
+        ],
+        "chinese": "回信",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 2
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_adjust_to",
+      "target_item_id": "item_coll_adjust_to",
+      "phrase": "adjust to",
+      "gloss_zh": "適應；調整到",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_16"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_adjust_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-16",
+        "lesson_ids": [
+          "V3-W1-16"
+        ],
+        "base_word": "adjust to",
+        "variants": [
+          "adjust to"
+        ],
+        "chinese": "適應；調整到",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_answer_to",
+      "target_item_id": "item_coll_answer_to",
+      "phrase": "answer to",
+      "gloss_zh": "對…負責；聽命於",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_16"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_answer_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-16",
+        "lesson_ids": [
+          "V3-W1-16"
+        ],
+        "base_word": "answer to",
+        "variants": [
+          "answer to"
+        ],
+        "chinese": "對…負責；聽命於",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_at_your_earliest_convenience",
+      "target_item_id": "item_coll_at_your_earliest_convenience",
+      "phrase": "at your earliest convenience",
+      "gloss_zh": "在你方便時盡快",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_at_your_earliest_convenience",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "at your earliest convenience",
+        "variants": [
+          "at your earliest convenience"
+        ],
+        "chinese": "在你方便時盡快",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_back_out",
+      "target_item_id": "item_coll_back_out",
+      "phrase": "back out",
+      "gloss_zh": "退出；反悔",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_back_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "back out",
+        "variants": [
+          "back out"
+        ],
+        "chinese": "退出；反悔",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_bear_in_mind",
+      "target_item_id": "item_coll_bear_in_mind",
+      "phrase": "bear in mind",
+      "gloss_zh": "記住；牢記",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-08"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_08"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_bear_in_mind",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-08",
+        "lesson_ids": [
+          "V3-W1-08"
+        ],
+        "base_word": "bear in mind",
+        "variants": [
+          "bear in mind"
+        ],
+        "chinese": "記住；牢記",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_break_off",
+      "target_item_id": "item_coll_break_off",
+      "phrase": "break off",
+      "gloss_zh": "中斷；終止",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_14"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_break_off",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-14",
+        "lesson_ids": [
+          "V3-W1-14"
+        ],
+        "base_word": "break off",
+        "variants": [
+          "break off"
+        ],
+        "chinese": "中斷；終止",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_bring_forward",
+      "target_item_id": "item_coll_bring_forward",
+      "phrase": "bring forward",
+      "gloss_zh": "提前；提出",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_10"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_bring_forward",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-10",
+        "lesson_ids": [
+          "V3-W1-10"
+        ],
+        "base_word": "bring forward",
+        "variants": [
+          "bring forward"
+        ],
+        "chinese": "提前；提出",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_bring_up",
+      "target_item_id": "item_coll_bring_up",
+      "phrase": "bring up",
+      "gloss_zh": "提出（話題）",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-08"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_08"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_bring_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-08",
+        "lesson_ids": [
+          "V3-W1-08"
+        ],
+        "base_word": "bring up",
+        "variants": [
+          "bring up"
+        ],
+        "chinese": "提出（話題）",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_call_off",
+      "target_item_id": "item_coll_call_off",
+      "phrase": "call off",
+      "gloss_zh": "取消",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_call_off",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "call off",
+        "variants": [
+          "call off"
+        ],
+        "chinese": "取消",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_carry_out",
+      "target_item_id": "item_coll_carry_out",
+      "phrase": "carry out",
+      "gloss_zh": "執行",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_carry_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "carry out",
+        "variants": [
+          "carry out"
+        ],
+        "chinese": "執行",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_catch_up_on",
+      "target_item_id": "item_coll_catch_up_on",
+      "phrase": "catch up on",
+      "gloss_zh": "補上；補做",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_catch_up_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "catch up on",
+        "variants": [
+          "catch up on"
+        ],
+        "chinese": "補上；補做",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_catch_up_with",
+      "target_item_id": "item_coll_catch_up_with",
+      "phrase": "catch up with",
+      "gloss_zh": "趕上",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_13"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_catch_up_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-13",
+        "lesson_ids": [
+          "V3-W1-13"
+        ],
+        "base_word": "catch up with",
+        "variants": [
+          "catch up with"
+        ],
+        "chinese": "趕上",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_come_before",
+      "target_item_id": "item_coll_come_before",
+      "phrase": "come before",
+      "gloss_zh": "先於；提交審議",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_09"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_come_before",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-09",
+        "lesson_ids": [
+          "V3-W1-09"
+        ],
+        "base_word": "come before",
+        "variants": [
+          "come before"
+        ],
+        "chinese": "先於；提交審議",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_come_through",
+      "target_item_id": "item_coll_come_through",
+      "phrase": "come through",
+      "gloss_zh": "兌現承諾；順利度過",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_13"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_come_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-13",
+        "lesson_ids": [
+          "V3-W1-13"
+        ],
+        "base_word": "come through",
+        "variants": [
+          "come through"
+        ],
+        "chinese": "兌現承諾；順利度過",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_decide_on",
+      "target_item_id": "item_coll_decide_on",
+      "phrase": "decide on",
+      "gloss_zh": "決定採用",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_09"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_decide_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-09",
+        "lesson_ids": [
+          "V3-W1-09"
+        ],
+        "base_word": "decide on",
+        "variants": [
+          "decide on"
+        ],
+        "chinese": "決定採用",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_depend_upon",
+      "target_item_id": "item_coll_depend_upon",
+      "phrase": "depend upon",
+      "gloss_zh": "取決於；依賴",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_depend_upon",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "depend upon",
+        "variants": [
+          "depend upon"
+        ],
+        "chinese": "取決於；依賴",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_draw_up",
+      "target_item_id": "item_coll_draw_up",
+      "phrase": "draw up",
+      "gloss_zh": "起草；擬定",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_draw_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "draw up",
+        "variants": [
+          "draw up"
+        ],
+        "chinese": "起草；擬定",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_fill_in_for",
+      "target_item_id": "item_coll_fill_in_for",
+      "phrase": "fill in for",
+      "gloss_zh": "代班；代替出勤",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_15"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_fill_in_for",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-15",
+        "lesson_ids": [
+          "V3-W1-15"
+        ],
+        "base_word": "fill in for",
+        "variants": [
+          "fill in for"
+        ],
+        "chinese": "代班；代替出勤",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_fit_in_with",
+      "target_item_id": "item_coll_fit_in_with",
+      "phrase": "fit in with",
+      "gloss_zh": "與…相配；融入",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_16"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_fit_in_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-16",
+        "lesson_ids": [
+          "V3-W1-16"
+        ],
+        "base_word": "fit in with",
+        "variants": [
+          "fit in with"
+        ],
+        "chinese": "與…相配；融入",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_go_ahead_with",
+      "target_item_id": "item_coll_go_ahead_with",
+      "phrase": "go ahead with",
+      "gloss_zh": "著手進行",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_13"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_go_ahead_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-13",
+        "lesson_ids": [
+          "V3-W1-13"
+        ],
+        "base_word": "go ahead with",
+        "variants": [
+          "go ahead with"
+        ],
+        "chinese": "著手進行",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_go_through",
+      "target_item_id": "item_coll_go_through",
+      "phrase": "go through",
+      "gloss_zh": "檢查；經歷；逐項說明",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_go_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "go through",
+        "variants": [
+          "go through"
+        ],
+        "chinese": "檢查；經歷；逐項說明",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_hand_over",
+      "target_item_id": "item_coll_hand_over",
+      "phrase": "hand over",
+      "gloss_zh": "交出；移交",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_15"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_hand_over",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-15",
+        "lesson_ids": [
+          "V3-W1-15"
+        ],
+        "base_word": "hand over",
+        "variants": [
+          "hand over"
+        ],
+        "chinese": "交出；移交",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_jot_down",
+      "target_item_id": "item_coll_jot_down",
+      "phrase": "jot down",
+      "gloss_zh": "草草記下",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-08"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_08"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_jot_down",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-08",
+        "lesson_ids": [
+          "V3-W1-08"
+        ],
+        "base_word": "jot down",
+        "variants": [
+          "jot down"
+        ],
+        "chinese": "草草記下",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_lay_out",
+      "target_item_id": "item_coll_lay_out",
+      "phrase": "lay out",
+      "gloss_zh": "安排；陳列；說明",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_lay_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "lay out",
+        "variants": [
+          "lay out"
+        ],
+        "chinese": "安排；陳列；說明",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_leave_out",
+      "target_item_id": "item_coll_leave_out",
+      "phrase": "leave out",
+      "gloss_zh": "漏掉；省略",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_06"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_leave_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-06",
+        "lesson_ids": [
+          "V3-W1-06"
+        ],
+        "base_word": "leave out",
+        "variants": [
+          "leave out"
+        ],
+        "chinese": "漏掉；省略",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_look_into",
+      "target_item_id": "item_coll_look_into",
+      "phrase": "look into",
+      "gloss_zh": "調查；了解",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_02"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_look_into",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-02",
+        "lesson_ids": [
+          "V3-W1-02"
+        ],
+        "base_word": "look into",
+        "variants": [
+          "look into"
+        ],
+        "chinese": "調查；了解",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_object_to",
+      "target_item_id": "item_coll_object_to",
+      "phrase": "object to",
+      "gloss_zh": "反對",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_09"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_object_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-09",
+        "lesson_ids": [
+          "V3-W1-09"
+        ],
+        "base_word": "object to",
+        "variants": [
+          "object to"
+        ],
+        "chinese": "反對",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_pitch_in",
+      "target_item_id": "item_coll_pitch_in",
+      "phrase": "pitch in",
+      "gloss_zh": "幫忙；出力",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_pitch_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "pitch in",
+        "variants": [
+          "pitch in"
+        ],
+        "chinese": "幫忙；出力",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_prior_to",
+      "target_item_id": "item_coll_prior_to",
+      "phrase": "prior to",
+      "gloss_zh": "在…之前",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_prior_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "prior to",
+        "variants": [
+          "prior to"
+        ],
+        "chinese": "在…之前",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_put_forward",
+      "target_item_id": "item_coll_put_forward",
+      "phrase": "put forward",
+      "gloss_zh": "提出",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-08"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_08"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_put_forward",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-08",
+        "lesson_ids": [
+          "V3-W1-08"
+        ],
+        "base_word": "put forward",
+        "variants": [
+          "put forward"
+        ],
+        "chinese": "提出",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_put_off",
+      "target_item_id": "item_coll_put_off",
+      "phrase": "put off",
+      "gloss_zh": "延後；推遲",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_11"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_put_off",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-11",
+        "lesson_ids": [
+          "V3-W1-11"
+        ],
+        "base_word": "put off",
+        "variants": [
+          "put off"
+        ],
+        "chinese": "延後；推遲",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_refer_back_to",
+      "target_item_id": "item_coll_refer_back_to",
+      "phrase": "refer back to",
+      "gloss_zh": "回頭參照",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_07"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_refer_back_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-07",
+        "lesson_ids": [
+          "V3-W1-07"
+        ],
+        "base_word": "refer back to",
+        "variants": [
+          "refer back to"
+        ],
+        "chinese": "回頭參照",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_rely_upon",
+      "target_item_id": "item_coll_rely_upon",
+      "phrase": "rely upon",
+      "gloss_zh": "依靠",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_13"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_rely_upon",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-13",
+        "lesson_ids": [
+          "V3-W1-13"
+        ],
+        "base_word": "rely upon",
+        "variants": [
+          "rely upon"
+        ],
+        "chinese": "依靠",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_run_by",
+      "target_item_id": "item_coll_run_by",
+      "phrase": "run by",
+      "gloss_zh": "先給…過目；匆匆經過",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_run_by",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "run by",
+        "variants": [
+          "run by"
+        ],
+        "chinese": "先給…過目；匆匆經過",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_run_through",
+      "target_item_id": "item_coll_run_through",
+      "phrase": "run through",
+      "gloss_zh": "快速演練；過一遍",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_09"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_run_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-09",
+        "lesson_ids": [
+          "V3-W1-09"
+        ],
+        "base_word": "run through",
+        "variants": [
+          "run through"
+        ],
+        "chinese": "快速演練；過一遍",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_see_to",
+      "target_item_id": "item_coll_see_to",
+      "phrase": "see to",
+      "gloss_zh": "負責處理；照料",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_see_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "see to",
+        "variants": [
+          "see to"
+        ],
+        "chinese": "負責處理；照料",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_settle_on",
+      "target_item_id": "item_coll_settle_on",
+      "phrase": "settle on",
+      "gloss_zh": "決定採用",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_09"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_settle_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-09",
+        "lesson_ids": [
+          "V3-W1-09"
+        ],
+        "base_word": "settle on",
+        "variants": [
+          "settle on"
+        ],
+        "chinese": "決定採用",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_sign_off",
+      "target_item_id": "item_coll_sign_off",
+      "phrase": "sign off",
+      "gloss_zh": "簽核；批准結案",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_07"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_sign_off",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-07",
+        "lesson_ids": [
+          "V3-W1-07"
+        ],
+        "base_word": "sign off",
+        "variants": [
+          "sign off"
+        ],
+        "chinese": "簽核；批准結案",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_sort_through",
+      "target_item_id": "item_coll_sort_through",
+      "phrase": "sort through",
+      "gloss_zh": "逐一整理",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_sort_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "sort through",
+        "variants": [
+          "sort through"
+        ],
+        "chinese": "逐一整理",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_stick_to",
+      "target_item_id": "item_coll_stick_to",
+      "phrase": "stick to",
+      "gloss_zh": "堅持；遵守",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_stick_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "stick to",
+        "variants": [
+          "stick to"
+        ],
+        "chinese": "堅持；遵守",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_stick_with",
+      "target_item_id": "item_coll_stick_with",
+      "phrase": "stick with",
+      "gloss_zh": "持續採用；不離開",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_13"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_stick_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-13",
+        "lesson_ids": [
+          "V3-W1-13"
+        ],
+        "base_word": "stick with",
+        "variants": [
+          "stick with"
+        ],
+        "chinese": "持續採用；不離開",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_take_on",
+      "target_item_id": "item_coll_take_on",
+      "phrase": "take on",
+      "gloss_zh": "承擔；聘用",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_15"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_take_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-15",
+        "lesson_ids": [
+          "V3-W1-15"
+        ],
+        "base_word": "take on",
+        "variants": [
+          "take on"
+        ],
+        "chinese": "承擔；聘用",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_take_up",
+      "target_item_id": "item_coll_take_up",
+      "phrase": "take up",
+      "gloss_zh": "開始從事；占用",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_take_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "take up",
+        "variants": [
+          "take up"
+        ],
+        "chinese": "開始從事；占用",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_talk_over",
+      "target_item_id": "item_coll_talk_over",
+      "phrase": "talk over",
+      "gloss_zh": "詳細討論",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_09"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_talk_over",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-09",
+        "lesson_ids": [
+          "V3-W1-09"
+        ],
+        "base_word": "talk over",
+        "variants": [
+          "talk over"
+        ],
+        "chinese": "詳細討論",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_tie_up",
+      "target_item_id": "item_coll_tie_up",
+      "phrase": "tie up",
+      "gloss_zh": "占用；使受阻",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_tie_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "tie up",
+        "variants": [
+          "tie up"
+        ],
+        "chinese": "占用；使受阻",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_touch_on",
+      "target_item_id": "item_coll_touch_on",
+      "phrase": "touch on",
+      "gloss_zh": "略提；談到",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-08"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_08"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_touch_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-08",
+        "lesson_ids": [
+          "V3-W1-08"
+        ],
+        "base_word": "touch on",
+        "variants": [
+          "touch on"
+        ],
+        "chinese": "略提；談到",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_track_down",
+      "target_item_id": "item_coll_track_down",
+      "phrase": "track down",
+      "gloss_zh": "追查到；找到",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-12"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_12"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_track_down",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-12",
+        "lesson_ids": [
+          "V3-W1-12"
+        ],
+        "base_word": "track down",
+        "variants": [
+          "track down"
+        ],
+        "chinese": "追查到；找到",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_turn_to",
+      "target_item_id": "item_coll_turn_to",
+      "phrase": "turn to",
+      "gloss_zh": "轉向；求助於",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_13"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_turn_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-13",
+        "lesson_ids": [
+          "V3-W1-13"
+        ],
+        "base_word": "turn to",
+        "variants": [
+          "turn to"
+        ],
+        "chinese": "轉向；求助於",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_walk_through",
+      "target_item_id": "item_coll_walk_through",
+      "phrase": "walk through",
+      "gloss_zh": "逐步說明；演練",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_10"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_walk_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-10",
+        "lesson_ids": [
+          "V3-W1-10"
+        ],
+        "base_word": "walk through",
+        "variants": [
+          "walk through"
+        ],
+        "chinese": "逐步說明；演練",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_wrap_up",
+      "target_item_id": "item_coll_wrap_up",
+      "phrase": "wrap up",
+      "gloss_zh": "結束；做總結",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-08"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_08"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_wrap_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-08",
+        "lesson_ids": [
+          "V3-W1-08"
+        ],
+        "base_word": "wrap up",
+        "variants": [
+          "wrap up"
+        ],
+        "chinese": "結束；做總結",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_write_up",
+      "target_item_id": "item_coll_write_up",
+      "phrase": "write up",
+      "gloss_zh": "寫成正式報告",
+      "difficulty": "B",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_07"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_write_up",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-07",
+        "lesson_ids": [
+          "V3-W1-07"
+        ],
+        "base_word": "write up",
+        "variants": [
+          "write up"
+        ],
+        "chinese": "寫成正式報告",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 3
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_as_to",
+      "target_item_id": "item_coll_as_to",
+      "phrase": "as to",
+      "gloss_zh": "關於；至於",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_07"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_as_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-07",
+        "lesson_ids": [
+          "V3-W1-07"
+        ],
+        "base_word": "as to",
+        "variants": [
+          "as to"
+        ],
+        "chinese": "關於；至於",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_fall_in_with",
+      "target_item_id": "item_coll_fall_in_with",
+      "phrase": "fall in with",
+      "gloss_zh": "同意；偶然加入",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_16"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_fall_in_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-16",
+        "lesson_ids": [
+          "V3-W1-16"
+        ],
+        "base_word": "fall in with",
+        "variants": [
+          "fall in with"
+        ],
+        "chinese": "同意；偶然加入",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "人事與組織",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_fall_through",
+      "target_item_id": "item_coll_fall_through",
+      "phrase": "fall through",
+      "gloss_zh": "落空；失敗",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_14"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_fall_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-14",
+        "lesson_ids": [
+          "V3-W1-14"
+        ],
+        "base_word": "fall through",
+        "variants": [
+          "fall through"
+        ],
+        "chinese": "落空；失敗",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_follow_through",
+      "target_item_id": "item_coll_follow_through",
+      "phrase": "follow through",
+      "gloss_zh": "貫徹到底",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_14"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_follow_through",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-14",
+        "lesson_ids": [
+          "V3-W1-14"
+        ],
+        "base_word": "follow through",
+        "variants": [
+          "follow through"
+        ],
+        "chinese": "貫徹到底",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_hold_off_on",
+      "target_item_id": "item_coll_hold_off_on",
+      "phrase": "hold off on",
+      "gloss_zh": "暫緩；延期處理",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_10"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_hold_off_on",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-10",
+        "lesson_ids": [
+          "V3-W1-10"
+        ],
+        "base_word": "hold off on",
+        "variants": [
+          "hold off on"
+        ],
+        "chinese": "暫緩；延期處理",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_interfere_in",
+      "target_item_id": "item_coll_interfere_in",
+      "phrase": "interfere in",
+      "gloss_zh": "干涉",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_14"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_interfere_in",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-14",
+        "lesson_ids": [
+          "V3-W1-14"
+        ],
+        "base_word": "interfere in",
+        "variants": [
+          "interfere in"
+        ],
+        "chinese": "干涉",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_interfere_with",
+      "target_item_id": "item_coll_interfere_with",
+      "phrase": "interfere with",
+      "gloss_zh": "妨礙；干擾",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_14"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_interfere_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-14",
+        "lesson_ids": [
+          "V3-W1-14"
+        ],
+        "base_word": "interfere with",
+        "variants": [
+          "interfere with"
+        ],
+        "chinese": "妨礙；干擾",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_keep_back",
+      "target_item_id": "item_coll_keep_back",
+      "phrase": "keep back",
+      "gloss_zh": "保留；隱瞞",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_07"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_keep_back",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-07",
+        "lesson_ids": [
+          "V3-W1-07"
+        ],
+        "base_word": "keep back",
+        "variants": [
+          "keep back"
+        ],
+        "chinese": "保留；隱瞞",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_leave_to",
+      "target_item_id": "item_coll_leave_to",
+      "phrase": "leave to",
+      "gloss_zh": "交由…處理",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_14"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_leave_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-14",
+        "lesson_ids": [
+          "V3-W1-14"
+        ],
+        "base_word": "leave to",
+        "variants": [
+          "leave to"
+        ],
+        "chinese": "交由…處理",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "業務協調",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_on_behalf_of",
+      "target_item_id": "item_coll_on_behalf_of",
+      "phrase": "on behalf of",
+      "gloss_zh": "代表；代替",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_10"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_on_behalf_of",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-10",
+        "lesson_ids": [
+          "V3-W1-10"
+        ],
+        "base_word": "on behalf of",
+        "variants": [
+          "on behalf of"
+        ],
+        "chinese": "代表；代替",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_put_up_with",
+      "target_item_id": "item_coll_put_up_with",
+      "phrase": "put up with",
+      "gloss_zh": "忍受",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-03"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_03"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_put_up_with",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-03",
+        "lesson_ids": [
+          "V3-W1-03"
+        ],
+        "base_word": "put up with",
+        "variants": [
+          "put up with"
+        ],
+        "chinese": "忍受",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "辦公室",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_rule_out",
+      "target_item_id": "item_coll_rule_out",
+      "phrase": "rule out",
+      "gloss_zh": "排除",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_10"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_rule_out",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-10",
+        "lesson_ids": [
+          "V3-W1-10"
+        ],
+        "base_word": "rule out",
+        "variants": [
+          "rule out"
+        ],
+        "chinese": "排除",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "商務會議",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    },
+    {
+      "candidate_item_id": "item_coll_with_regard_to",
+      "target_item_id": "item_coll_with_regard_to",
+      "phrase": "with regard to",
+      "gloss_zh": "關於",
+      "difficulty": "C",
+      "resolution_status": "missing",
+      "matched_item_ids": [],
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "source_blueprint_lessons": [
+        "draft_coll_w1_07"
+      ],
+      "suggested_seed_row": {
+        "item_id": "item_coll_with_regard_to",
+        "item_type": "collocation",
+        "stage": "V3",
+        "lesson_id": "V3-W1-07",
+        "lesson_ids": [
+          "V3-W1-07"
+        ],
+        "base_word": "with regard to",
+        "variants": [
+          "with regard to"
+        ],
+        "chinese": "關於",
+        "example": "",
+        "common_wrong_forms": [],
+        "toeic_contexts": [
+          "文書作業",
+          "toeic_collocation_rebuild",
+          "wave1"
+        ],
+        "review_priority": 4
+      }
+    }
+  ]
+}

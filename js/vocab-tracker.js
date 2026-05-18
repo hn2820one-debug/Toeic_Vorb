@@ -85,15 +85,15 @@ import {
     const completed = state.lessons.filter((lesson) => PASS_STATUSES.has(lesson.status)).length;
     const total = state.lessons.length || 1;
     const lesson = currentLesson();
-    $("top-strip").textContent = `TOEIC Vocabulary Tracker | ${completed}/${total} vocab lessons | Current: ${lesson?.lesson_id || "-"} | Local-first IndexedDB`;
+    $("top-strip").textContent = `TOEIC 單字追蹤器｜已完成 ${completed}/${total} 課｜目前課程：${lesson?.lesson_id || "-"}｜本機優先 IndexedDB`;
 
     const tabs = [
-      ["today", "Today"],
-      ["roadmap", "Roadmap"],
-      ["lesson", "Lesson"],
-      ["mistakes", "Review"],
-      ["mastery", "Mastery"],
-      ["settings", "Settings"]
+      ["today", "今日"],
+      ["roadmap", "課程地圖"],
+      ["lesson", "課程"],
+      ["mistakes", "複習"],
+      ["mastery", "精熟度"],
+      ["settings", "設定"]
     ];
     $("tracker-tabs").innerHTML = tabs.map(([id, label]) => (
       `<button class="tracker-tab ${state.view === id ? "active" : ""}" type="button" onclick="VocabTracker.setView('${id}')">${html(label)}</button>`

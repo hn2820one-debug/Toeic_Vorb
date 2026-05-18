@@ -1,11 +1,13 @@
 # Question Creation Specification
-## TOEIC Vocabulary Tracker — v1.0 (2026-05-17)
+## TOEIC Vocabulary Tracker — v1.1 (2026-05-18)
 
 This document defines all rules for creating questions for this question bank.
 **Every rule here exists because a violation has already caused a real problem.**
 When asking an AI to generate questions, paste the relevant sections as instructions.
 
 Current production scope is V0-V3 only. V4 remains draft-only under `drafts/v4/` and must not be added to `data/vocab/` or the production manifest until a future V4 activation task explicitly updates the spec, curriculum, seed version, data, and tests. For current counts and priorities, use root `TO_AI.md` as the source of truth.
+
+Rebuild status as of 2026-05-18: the active production seed is intentionally cleared, with 0 production lesson rows and 0 production question rows. Stage structures below are authoring targets or historical production structures unless a later section explicitly says they are current runnable counts. For the Wave 1 V3 collocation rebuild, use this spec together with `docs/plans/questions plan.md` and `drafts/collocation-rebuild/wave1_authoring_policy_pack.json`.
 
 The default production audit is manifest-driven: it loads only files listed in `data/vocab/curriculum.json -> question_files`. Files under `drafts/v4/` are skipped by default. A V4 file under `data/vocab/` or in the production manifest is treated as production leakage.
 
@@ -62,6 +64,7 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 - For fill-in questions: name the grammar pattern or semantic rule ("be 動詞後接形容詞", "固定搭配 make a decision")
 - For meaning questions: give the business-context definition and contrast one key distractor
 - Length: 20–60 characters
+- For Wave 1 V3 collocation drafts, also follow `wave1_authoring_policy_pack.json -> explanation_rubric`.
 
 ### 1.5 English language standards
 
@@ -71,20 +74,42 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 - Tense: present simple or past simple preferred; avoid future perfect or conditionals
 - Register: formal business prose, not casual
 
+### 1.6 Production quality policy — semantic meaning, progression, and reuse
+
+For this spec, a **direct-definition question** means:
+- `meaning_choice`
+- `review_question` in V0 / V2 / V3 when the options are English definitions
+
+V1 `word_family` and V1 `review_question` are excluded from this definition because they test form, not vocabulary meaning.
+
+Rules:
+- Across the entire production bank, one `target_item_id` + one semantic meaning may have only **one** direct-definition question row.
+- A second direct-definition row is allowed only when the word has a **genuinely different semantic meaning**. A different department, scene, or business domain by itself does **not** justify a second definition row.
+- If more than one direct-definition row exists for the same surface word, each such row must include a `semantic_sense:<sense_id>` tag. Add `domain_sense:<domain>` only when it helps document the different meaning. `domain_sense` alone never justifies a second definition row.
+- V0 diagnostic is strict: the same `target_item_id` + same semantic meaning must appear only once as a direct-definition question.
+- After a target item's direct-definition row has been used, later practice for that same meaning should shift to `collocation`, `part5_sentence_completion`, `part6_context_choice`, `scene_vocabulary`, or other context-based usage questions.
+- The same item may appear multiple times within one lesson only when the cognitive demand is clearly staircased, for example: definition → meaning in sentence → collocation → fill-in → context → review. `definition + definition` repetition is forbidden.
+- Contextual reuse must be meaningfully different. Changing only a scene label, department name, or a few surface words does not count as a new context.
+- Scene diversity target: high-frequency core words should appear in at least 3 distinct context skeletons across the bank, mid-frequency words in at least 2, and low-frequency words in 1–2.
+- Formal production content should avoid near-template rewrites. Limited template reuse may be tolerated in drafts or temporary practice content, but not as a normal production strategy.
+
 ---
 
 ## 2. Stage Rules
 
-### V0 — Diagnostic (1 lesson, 31 questions)
+Current production has no runnable V0-V3 lessons after the full-bank clear. The structures in this section remain target authoring contracts for future production rebuilds.
+
+### V0 — Diagnostic (target/historical: 1 lesson, 31 questions)
 
 **Purpose:** Establish a compact baseline before V1 starts.
 
-- Current production distribution: 19 `question_ids` + 12 `review_question_ids`
-- Current type mix: 12 `meaning_choice`, 1 each of `scene_vocabulary`, `collocation`, `formal_phrase`, `false_friend`, `part5_sentence_completion`, `part6_context_choice`, `speed_drill`, plus 12 `review_question`
+- Target/historical distribution before the full-bank clear: 19 `question_ids` + 12 `review_question_ids`
+- Target/historical type mix: 12 `meaning_choice`, 1 each of `scene_vocabulary`, `collocation`, `formal_phrase`, `false_friend`, `part5_sentence_completion`, `part6_context_choice`, `speed_drill`, plus 12 `review_question`
 - Keep stems globally unique and avoid expanding V0 unless it is an intentional production seed change
+- Keep diagnostic meaning coverage clean: do not repeat the same `target_item_id` + same semantic meaning as a second direct-definition question in V0
 - Difficulty: 1–2 only
 
-### V1 — Word Family (60 lessons across A–F groups)
+### V1 — Word Family (target/historical: 60 lessons across A–F groups)
 
 **Purpose:** Teach four grammatical forms of each root word (noun / verb / adjective / adverb).
 
@@ -113,7 +138,7 @@ V1-B through V1-E (lessons 21–52): **20 question_ids + 4 review_question_ids**
 - `default_error_code`: `WORD_FAMILY_POS` for ALL question types within a V1 lesson (lesson-level consistency — all errors in V1 are word-family errors)
 - `distractor_type`: `same_word_family` for ALL question types within a V1 lesson
 
-### V2 — TOEIC Scene Vocabulary (50 core + 10 mixed_review = 60 lessons)
+### V2 — TOEIC Scene Vocabulary (target/historical: 50 core + 10 mixed_review = 60 lessons)
 
 **Purpose:** Teach four scene-specific target items per core lesson through in-context fill-in-the-blank.
 
@@ -139,9 +164,11 @@ V1-B through V1-E (lessons 21–52): **20 question_ids + 4 review_question_ids**
 - Old-item pressure must use earlier same-stage items only. Do not use V4 items, future items, or mixed-review lessons as sources.
 - `V2-A-71` is a first-core policy exception because no earlier V2 core lesson exists.
 
-### V3 — Collocation (60 core + 12 mixed_review = 72 lessons)
+### V3 — Collocation (target/historical: 60 core + 12 mixed_review = 72 lessons)
 
 **Purpose:** Teach four target collocations per core lesson.
+
+Wave 1 rebuild note: the current V3 Wave 1 draft under `drafts/collocation-rebuild/` uses 16 draft collocation lessons with 20 core slots and 4 review slots per lesson. These are draft authoring rows only, not production rows.
 
 **Lesson structure:**
 - `question_ids`: 20-22 session questions
@@ -174,6 +201,7 @@ V1-B through V1-E (lessons 21–52): **20 question_ids + 4 review_question_ids**
 - Reuse is intentional only when the curriculum lesson has `"lesson_type": "mixed_review"` and the referenced IDs are valid existing `review_question` rows from earlier same-stage core lessons
 - Invalid references, non-review question references, future references, or cross-stage references still fail the full audit
 - Mixed-review reuse must not be counted as duplicate core question stems because no duplicate production question rows are created
+- Current architecture is reuse-based. If future mixed-review authoring explicitly adds new rows, target mix should be 70–80% new contextual review rows and 20–30% reused old-error rows.
 
 ---
 
@@ -187,6 +215,10 @@ Answer:  The most precise business-English definition
 Time:    10 seconds
 Error:   VOCAB_UNKNOWN
 Tags:    ["toeic_part5", "meaning"]
+Rule:    Only one direct-definition row is allowed per target_item_id + semantic meaning
+         across the production bank. If the same surface word truly needs a second
+         definition row for a different meaning, tag it with `semantic_sense:<sense_id>`
+         and, when helpful, `domain_sense:<domain>`.
 ```
 
 ### `scene_vocabulary`
@@ -276,6 +308,10 @@ Time:     10 seconds
 Error:    VOCAB_WEAK_RECALL (V0/V2/V3) / WORD_FAMILY_POS (V1)
 Tags:     ["review"]
 Note:     Goes in review_question_ids only — never in question_ids main session flow.
+          For V0 / V2 / V3, do not write a second same-meaning definition prompt for an
+          item that already has a direct-definition row in the production bank.
+          Follow-up review should shift to collocation, Part 5 vocabulary fill-in,
+          Part 6 context, or other contextual sentence practice.
 ```
 
 ### `formal_phrase`
@@ -310,7 +346,11 @@ Before finalising any question, verify every distractor:
 - [ ] Is a real TOEIC-level English word (not invented or obscure)
 - [ ] Comes from the same semantic field or business domain as the correct answer
 - [ ] Would plausibly attract a test-taker who partially knows the topic
+- [ ] Has similar length / surface shape to the correct answer when practical, so it is not too easy to eliminate
+- [ ] Ideally includes at least one realistic Chinese-speaker confusion distractor that still survives grammatical screening
 - [ ] Does not accidentally also fit the blank (second-correct-answer problem)
+
+For Wave 1 V3 collocation drafts, distractor candidates must follow the schema in `drafts/collocation-rebuild/wave1_authoring_policy_pack.json -> distractor_bank_schema`.
 
 ---
 
@@ -350,6 +390,29 @@ Old-item pressure: [0-2 prior same-stage review_question IDs are added in curric
 
 5. REVIEW QUESTIONS: go in review_question_ids (not question_ids).
    Format: "Quick review: choose the best TOEIC meaning for \"[word]\"."
+
+6. DEFINITION CONTROL: For direct-definition questions (`meaning_choice` and V0/V2/V3
+   `review_question`), one `target_item_id` + one semantic meaning may appear only once
+   across the production bank.
+
+7. SENSE TAGGING: If the same surface word truly requires a second direct-definition row,
+   it must carry `semantic_sense:<sense_id>`. Add `domain_sense:<domain>` only when it
+   clarifies the different meaning. Domain alone does not justify the second row.
+
+8. PROGRESSION: Do not write `definition + definition` repetition in the same lesson.
+   After the first definition row, move later practice into context, collocation,
+   Part 5 vocabulary fill-in, or Part 6 passage questions.
+
+9. CONTEXT DIVERSITY: Repeated practice for the same item must use genuinely different
+   sentence skeletons. Prefix swaps and near-template rewrites are not acceptable.
+
+10. EXPLANATION / DISTRACTOR QUALITY: explanation_zh should state the rule, one likely
+    wrong choice, and a common Chinese-speaker trap when relevant. Distractors should be
+    structurally similar and not instantly removable.
+
+11. WAVE 1 POLICY PACK: For V3 Wave 1 collocation drafts, follow
+    drafts/collocation-rebuild/wave1_authoring_policy_pack.json. It defines
+    target_item_id, semantic_sense, distractor, explanation, and source-of-truth rules.
 
 ══ OUTPUT FORMAT ══
 JSON array. Each object must have:
@@ -406,6 +469,47 @@ npx playwright test
 npm run test:all
 ```
 
+### 6.1 Release-gate interpretation
+
+- New production rows must pass all blocking checks before import.
+- Warning checks do not block import by themselves, but they must be reviewed and should trend downward over time.
+- Temporarily non-automated checks remain part of human quality review even when no script enforces them yet.
+
+### 6.2 Audit check matrix
+
+#### Blocking
+
+| Check | Scope | Standard |
+|------|------|----------|
+| Duplicate `question_text` | Whole production bank | Fail if any production row reuses an existing stem |
+| Duplicate `question_id` / missing required fields | Whole production bank | Fail immediately |
+| Same-lesson direct-definition repetition | One lesson | Fail if the same `target_item_id` + same semantic meaning appears twice in direct-definition rows |
+| Whole-bank direct-definition repetition | Whole production bank | Fail if a new direct-definition row duplicates an existing `target_item_id` + same semantic meaning already present elsewhere in production |
+| Missing sense tag on an allowed second definition row | Whole production bank | Fail if a surface word has more than one direct-definition row and the extra row lacks `semantic_sense:<sense_id>` |
+| V0 diagnostic definition contamination | V0 only | Fail if V0 repeats the same `target_item_id` + same semantic meaning as a second direct-definition row |
+| Invalid mixed-review references | Mixed-review lessons | Fail if reused IDs are invalid, cross-stage, future, or non-review rows |
+
+#### Warning
+
+| Check | Scope | Standard |
+|------|------|----------|
+| Near-template similarity | Whole production bank | Warn when stems are highly similar in sentence skeleton even if not exact duplicates |
+| Context diversity below target | Per target item | Warn when high-frequency words have fewer than 3 distinct context skeletons, or mid-frequency words fewer than 2 |
+| Weak distractor heuristics | Per question | Warn when distractors are too short/long, too structurally different, or trivially removable |
+| Explanation quality heuristics | Per question | Warn when explanation_zh appears to omit rule, likely wrong choice, or common trap guidance |
+| Same-lesson staircase weakness | Per lesson | Warn when one item repeats within a lesson but the question types do not clearly increase cognitive demand |
+| Mixed-review composition drift | Mixed-review content when explicitly newly authored | Warn if new contextual rows fall far below the target 70–80% and reused old-error rows exceed the intended 20–30% |
+
+#### Temporarily not auto-checked
+
+| Check | Why it is not fully automated yet |
+|------|----------------------------------|
+| Whether two `semantic_sense` tags represent truly different meanings | This requires semantic judgment; tags alone can be faked or oversimplified |
+| Whether a business context is truly natural and authentic | Naturalness is hard to score reliably with simple heuristics |
+| Whether a distractor is a genuine high-probability Chinese-speaker confusion | This needs bilingual learner-error knowledge, not just string rules |
+| Whether the chosen progression for one item is pedagogically optimal | Scripts can detect rough type order, but not deeper learning value |
+| Whether V1 word-family content should remain on the vocabulary main track | This is a curriculum decision, not only a question-audit decision |
+
 ---
 
 ## 7. Error Code Reference
@@ -432,7 +536,7 @@ These are real problems that occurred and are now fixed. The rules above were wr
 
 | Issue | Root cause | Rule that prevents it |
 |-------|-----------|----------------------|
-| Historical V0 pre-consolidation draft: 31 unique stems repeated across an obsolete 240-question draft. Current production V0 is 31 questions. | No uniqueness constraint in generation prompt | §1.1 |
+| Historical V0 pre-consolidation draft: 31 unique stems repeated across an obsolete 240-question draft. V0 was later compacted to 31 questions, then cleared with the rest of production during the 2026-05-18 rebuild reset. | No uniqueness constraint in generation prompt | §1.1 |
 | V1: 762 duplicate stems across lessons | `speed_drill` lessons copied `word_family` sentences; `word_family` shared 17 template sentences across 10 lessons | §1.1, §2 V1 |
 | V3 vocab_items: empty `chinese` and `example` | Item data was generated without requiring those fields | (Vocab item spec, not question spec) |
 | Audit script missed duplicates | Audit checked coverage and interference but not text uniqueness | §6 post-generation checklist |

@@ -1,0 +1,241 @@
+{
+  "generated_at": "2026-05-18T00:13:06.189Z",
+  "pack_version": "v4_reference_pack_v1",
+  "reference_role": "future_stage_planning",
+  "status": "draft_only",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "scope": {
+    "stage": "V4",
+    "stage_name": "Formal Phrase",
+    "planned_total_lessons": 50,
+    "planned_total_question_rows": 1000,
+    "draft_slice_lessons": 5,
+    "draft_slice_questions": 100
+  },
+  "boundary_rules": [
+    "V4 remains under drafts/v4/ until an explicit V4 activation task.",
+    "Do not add questions_v4*.json to curriculum.question_files without activation review.",
+    "Do not import this pack into data/vocab/ without seed-version sync and full validation."
+  ],
+  "source_files": [
+    {
+      "path": "drafts/v4/questions_v4a.json",
+      "role": "V4-A draft questions",
+      "sha256": "1680110067256dda3b26f6240afeeb256ff0aa56e06fbc19d1846e02c8ede77a"
+    },
+    {
+      "path": "drafts/v4/add-v4-items.js",
+      "role": "optional vocab item generator",
+      "note": "not run during Phase 8"
+    }
+  ],
+  "lesson_id_policy": {
+    "global_range": {
+      "from": "V4-A-181",
+      "to": "V4-E-230",
+      "count": 50
+    },
+    "draft_active_range": {
+      "from": "V4-A-181",
+      "to": "V4-A-185",
+      "count": 5
+    },
+    "numbering_note": "V4 global IDs continue after V3 core ends at 180."
+  },
+  "lesson_groups": [
+    {
+      "group": "A",
+      "lesson_id_range": {
+        "from": "V4-A-181",
+        "to": "V4-A-190"
+      },
+      "planned_question_file": "questions_v4a.json",
+      "lesson_count": 10,
+      "lesson_type": "formal_phrase",
+      "suggested_topics": [
+        "Email opening",
+        "Reference & compliance"
+      ],
+      "question_rows_per_lesson_planned": 20,
+      "question_type_mix_per_lesson_planned": {
+        "formal_phrase": 8,
+        "meaning_choice": 4,
+        "part5_sentence_completion": 4,
+        "review_question": 4
+      },
+      "draft_status": "slice_authored_in_drafts_v4"
+    },
+    {
+      "group": "B",
+      "lesson_id_range": {
+        "from": "V4-B-191",
+        "to": "V4-B-200"
+      },
+      "planned_question_file": "questions_v4a.json",
+      "lesson_count": 10,
+      "lesson_type": "formal_phrase",
+      "suggested_topics": [
+        "Requests & follow-up",
+        "Deadlines & scheduling"
+      ],
+      "question_rows_per_lesson_planned": 20,
+      "question_type_mix_per_lesson_planned": {
+        "formal_phrase": 8,
+        "meaning_choice": 4,
+        "part5_sentence_completion": 4,
+        "review_question": 4
+      },
+      "draft_status": "pending"
+    },
+    {
+      "group": "C",
+      "lesson_id_range": {
+        "from": "V4-C-201",
+        "to": "V4-C-210"
+      },
+      "planned_question_file": "questions_v4b.json",
+      "lesson_count": 10,
+      "lesson_type": "formal_phrase",
+      "suggested_topics": [
+        "Approvals & authorization",
+        "Reports & findings"
+      ],
+      "question_rows_per_lesson_planned": 20,
+      "question_type_mix_per_lesson_planned": {
+        "formal_phrase": 8,
+        "meaning_choice": 4,
+        "part5_sentence_completion": 4,
+        "review_question": 4
+      },
+      "draft_status": "pending"
+    },
+    {
+      "group": "D",
+      "lesson_id_range": {
+        "from": "V4-D-211",
+        "to": "V4-D-220"
+      },
+      "planned_question_file": "questions_v4c.json",
+      "lesson_count": 10,
+      "lesson_type": "formal_phrase",
+      "suggested_topics": [
+        "Negotiation & terms",
+        "Notices & announcements"
+      ],
+      "question_rows_per_lesson_planned": 20,
+      "question_type_mix_per_lesson_planned": {
+        "formal_phrase": 8,
+        "meaning_choice": 4,
+        "part5_sentence_completion": 4,
+        "review_question": 4
+      },
+      "draft_status": "pending"
+    },
+    {
+      "group": "E",
+      "lesson_id_range": {
+        "from": "V4-E-221",
+        "to": "V4-E-230"
+      },
+      "planned_question_file": "questions_v4d.json",
+      "lesson_count": 10,
+      "lesson_type": "formal_phrase",
+      "suggested_topics": [
+        "Apologies & clarification",
+        "Closings & next steps"
+      ],
+      "question_rows_per_lesson_planned": 20,
+      "question_type_mix_per_lesson_planned": {
+        "formal_phrase": 8,
+        "meaning_choice": 4,
+        "part5_sentence_completion": 4,
+        "review_question": 4
+      },
+      "draft_status": "pending"
+    }
+  ],
+  "draft_slice_summary": {
+    "question_count": 100,
+    "lesson_count": 5,
+    "lesson_ids": [
+      "V4-A-181",
+      "V4-A-182",
+      "V4-A-183",
+      "V4-A-184",
+      "V4-A-185"
+    ],
+    "type_totals": {
+      "formal_phrase": 40,
+      "meaning_choice": 20,
+      "part5_sentence_completion": 20,
+      "review_question": 20
+    },
+    "per_lesson": {
+      "V4-A-181": {
+        "count": 20,
+        "types": {
+          "formal_phrase": 8,
+          "meaning_choice": 4,
+          "part5_sentence_completion": 4,
+          "review_question": 4
+        }
+      },
+      "V4-A-182": {
+        "count": 20,
+        "types": {
+          "formal_phrase": 8,
+          "meaning_choice": 4,
+          "part5_sentence_completion": 4,
+          "review_question": 4
+        }
+      },
+      "V4-A-183": {
+        "count": 20,
+        "types": {
+          "formal_phrase": 8,
+          "meaning_choice": 4,
+          "part5_sentence_completion": 4,
+          "review_question": 4
+        }
+      },
+      "V4-A-184": {
+        "count": 20,
+        "types": {
+          "formal_phrase": 8,
+          "meaning_choice": 4,
+          "part5_sentence_completion": 4,
+          "review_question": 4
+        }
+      },
+      "V4-A-185": {
+        "count": 20,
+        "types": {
+          "formal_phrase": 8,
+          "meaning_choice": 4,
+          "part5_sentence_completion": 4,
+          "review_question": 4
+        }
+      }
+    }
+  },
+  "authoring_policy": {
+    "distractor_type": "similar_formal_phrase",
+    "default_error_code": "FORMAL_PHRASE",
+    "primary_type": "formal_phrase",
+    "allowed_types": [
+      "formal_phrase",
+      "meaning_choice",
+      "part5_sentence_completion",
+      "review_question"
+    ]
+  },
+  "activation_blockers": [
+    "Add V4 rules to docs/question-creation-spec.md",
+    "Confirm distractor_type policy in audit-quality-full.js",
+    "Promote vocab items via drafts/v4/add-v4-items.js only after review",
+    "Add curriculum.lessons rows and question_files only during activation merge",
+    "V2/V3 old-item interference stable before V4 activation (TO_AI.md)"
+  ],
+  "last_verified_at": "2026-05-18T00:13:56.352Z"
+}

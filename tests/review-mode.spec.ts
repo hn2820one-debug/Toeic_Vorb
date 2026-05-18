@@ -34,10 +34,10 @@ async function answerCurrentCorrect(page: Page) {
   const index = "ABCD".indexOf(correctAnswer);
   await expect(page.locator(".answer-button").nth(index)).toBeEnabled({ timeout: STEP_TIMEOUT });
   await page.locator(".answer-button").nth(index).click({ timeout: STEP_TIMEOUT });
-  const confirmButton = page.getByRole("button", { name: "Confirm Answer" });
+  const confirmButton = page.getByRole("button", { name: "確認答案" });
   await expect(confirmButton).toBeEnabled({ timeout: STEP_TIMEOUT });
   await confirmButton.click({ timeout: STEP_TIMEOUT });
-  const advanceButton = page.getByRole("button", { name: /Next Question|See Summary/ });
+  const advanceButton = page.getByRole("button", { name: /下一題|查看摘要/ });
   await expect(advanceButton).toBeVisible({ timeout: STEP_TIMEOUT });
   await advanceButton.click({ timeout: STEP_TIMEOUT });
 }
@@ -61,21 +61,21 @@ test("review mode: due queue creates review attempts and export effectiveness", 
   await page.waitForFunction(() => typeof window.VocabTracker?.setView === "function", { timeout: APP_TIMEOUT });
 
   await page.evaluate(() => window.VocabTracker.setView("mistakes"));
-  await expect(page.locator(".tracker-panel h3", { hasText: "Review Mode" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "複習模式" })).toBeVisible({ timeout: STEP_TIMEOUT });
 
-  const startReview = page.getByRole("button", { name: /Start Review \(5\)/ });
+  const startReview = page.getByRole("button", { name: /開始複習 \(5\)/ });
   await expect(startReview).toBeVisible({ timeout: STEP_TIMEOUT });
   await startReview.click({ timeout: STEP_TIMEOUT });
 
-  await expect(page.locator(".runtime-head h2")).toContainText("Review Mode", { timeout: STEP_TIMEOUT });
+  await expect(page.locator(".runtime-head h2")).toContainText("複習模式", { timeout: STEP_TIMEOUT });
   for (let index = 0; index < trackerSeed.questionIds.length; index += 1) {
     await answerCurrentCorrect(page);
   }
 
-  const finishReview = page.getByRole("button", { name: "Finish Review" });
+  const finishReview = page.getByRole("button", { name: "完成複習" });
   await expect(finishReview).toBeVisible({ timeout: STEP_TIMEOUT });
   await finishReview.click({ timeout: STEP_TIMEOUT });
-  await expect(page.locator(".tracker-panel h3", { hasText: "Review Mode" })).toBeVisible({ timeout: APP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "複習模式" })).toBeVisible({ timeout: APP_TIMEOUT });
 
   const reviewState = await page.evaluate(async () => {
     const attempts = await window.VocabDB.getAll("attempts");

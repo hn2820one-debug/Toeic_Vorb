@@ -18,6 +18,8 @@ function buildQuestion({ lessonId, lessonNumber, index, review = false }) {
   const termIndex = (index - 1) % TERMS.length;
   const correct = ["A", "B", "C", "D"][termIndex];
   const term = TERMS[termIndex];
+  const tags = ["toeic_scene", "office"];
+  if (review) tags.push(`semantic_sense:${term}`);
   return {
     question_id: questionId(lessonNumber, review ? "rv" : "q", review ? index + 20 : index),
     lesson_id: lessonId,
@@ -41,7 +43,7 @@ function buildQuestion({ lessonId, lessonNumber, index, review = false }) {
     difficulty: 1,
     estimated_time_seconds: review ? 10 : 15,
     default_error_code: review ? "VOCAB_WEAK_RECALL" : "SCENE_VOCAB_GAP",
-    tags: ["toeic_scene", "office"]
+    tags
   };
 }
 
@@ -111,7 +113,7 @@ function buildFixture(mutator) {
   }
 
   lessons.push({
-    lesson_id: "V2-MIX-01",
+    lesson_id: "V2-MR-01",
     stage: "V2",
     stage_name: "TOEIC Scene Vocabulary",
     lesson_number: 10001,

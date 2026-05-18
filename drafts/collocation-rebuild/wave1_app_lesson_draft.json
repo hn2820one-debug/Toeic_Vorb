@@ -1,0 +1,995 @@
+{
+  "generated_at": "2026-05-18T00:18:50.032Z",
+  "source_blueprint": "drafts/collocation-rebuild/wave1_lesson_blueprint.json",
+  "reference_role": "ability_signal_only",
+  "content_generation_note": "These lesson rows are draft app-schema mappings derived from the Wave 1 blueprint. They reserve lesson/question structure, but do not represent final authored question content.",
+  "curriculum_stage_patch": {
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_type": "collocation",
+    "proposed_total_lessons": 16,
+    "proposed_stage_status": "draft_ready"
+  },
+  "lessons": [
+    {
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 1,
+      "title": "辦公室 搭配詞 1",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "辦公室",
+      "target_items": [
+        "item_coll_run_out_of",
+        "item_coll_set_up",
+        "item_coll_drop_by",
+        "item_coll_look_over",
+        "item_coll_run_into",
+        "item_coll_pick_up",
+        "item_coll_give_out"
+      ],
+      "question_ids": [
+        "V3-W1-01_Q01",
+        "V3-W1-01_Q02",
+        "V3-W1-01_Q03",
+        "V3-W1-01_Q04",
+        "V3-W1-01_Q05",
+        "V3-W1-01_Q06",
+        "V3-W1-01_Q07",
+        "V3-W1-01_Q08",
+        "V3-W1-01_Q09",
+        "V3-W1-01_Q10",
+        "V3-W1-01_Q11",
+        "V3-W1-01_Q12",
+        "V3-W1-01_Q13",
+        "V3-W1-01_Q14",
+        "V3-W1-01_Q15",
+        "V3-W1-01_Q16",
+        "V3-W1-01_Q17",
+        "V3-W1-01_Q18",
+        "V3-W1-01_Q19",
+        "V3-W1-01_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-01_R01",
+        "V3-W1-01_R02",
+        "V3-W1-01_R03",
+        "V3-W1-01_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_01",
+        "topic_lesson_index": 1,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 7,
+          "B": 0,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 2,
+      "title": "辦公室 搭配詞 2",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "辦公室",
+      "target_items": [
+        "item_coll_sort_out",
+        "item_coll_focus_on",
+        "item_coll_concentrate_on",
+        "item_coll_work_on",
+        "item_coll_stop_by",
+        "item_coll_draw_up",
+        "item_coll_look_into"
+      ],
+      "question_ids": [
+        "V3-W1-02_Q01",
+        "V3-W1-02_Q02",
+        "V3-W1-02_Q03",
+        "V3-W1-02_Q04",
+        "V3-W1-02_Q05",
+        "V3-W1-02_Q06",
+        "V3-W1-02_Q07",
+        "V3-W1-02_Q08",
+        "V3-W1-02_Q09",
+        "V3-W1-02_Q10",
+        "V3-W1-02_Q11",
+        "V3-W1-02_Q12",
+        "V3-W1-02_Q13",
+        "V3-W1-02_Q14",
+        "V3-W1-02_Q15",
+        "V3-W1-02_Q16",
+        "V3-W1-02_Q17",
+        "V3-W1-02_Q18",
+        "V3-W1-02_Q19",
+        "V3-W1-02_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-02_R01",
+        "V3-W1-02_R02",
+        "V3-W1-02_R03",
+        "V3-W1-02_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_02",
+        "topic_lesson_index": 2,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 5,
+          "B": 2,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-03",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 3,
+      "title": "辦公室 搭配詞 3",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "辦公室",
+      "target_items": [
+        "item_coll_prior_to",
+        "item_coll_catch_up_on",
+        "item_coll_pitch_in",
+        "item_coll_take_up",
+        "item_coll_sort_through",
+        "item_coll_run_by",
+        "item_coll_put_up_with"
+      ],
+      "question_ids": [
+        "V3-W1-03_Q01",
+        "V3-W1-03_Q02",
+        "V3-W1-03_Q03",
+        "V3-W1-03_Q04",
+        "V3-W1-03_Q05",
+        "V3-W1-03_Q06",
+        "V3-W1-03_Q07",
+        "V3-W1-03_Q08",
+        "V3-W1-03_Q09",
+        "V3-W1-03_Q10",
+        "V3-W1-03_Q11",
+        "V3-W1-03_Q12",
+        "V3-W1-03_Q13",
+        "V3-W1-03_Q14",
+        "V3-W1-03_Q15",
+        "V3-W1-03_Q16",
+        "V3-W1-03_Q17",
+        "V3-W1-03_Q18",
+        "V3-W1-03_Q19",
+        "V3-W1-03_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-03_R01",
+        "V3-W1-03_R02",
+        "V3-W1-03_R03",
+        "V3-W1-03_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_03",
+        "topic_lesson_index": 3,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 6,
+          "C": 1
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-04",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 4,
+      "title": "文書作業 搭配詞 1",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "文書作業",
+      "target_items": [
+        "item_coll_fill_out",
+        "item_coll_hand_in",
+        "item_coll_go_over",
+        "item_coll_turn_in",
+        "item_coll_key_in",
+        "item_coll_read_over",
+        "item_coll_refer_to"
+      ],
+      "question_ids": [
+        "V3-W1-04_Q01",
+        "V3-W1-04_Q02",
+        "V3-W1-04_Q03",
+        "V3-W1-04_Q04",
+        "V3-W1-04_Q05",
+        "V3-W1-04_Q06",
+        "V3-W1-04_Q07",
+        "V3-W1-04_Q08",
+        "V3-W1-04_Q09",
+        "V3-W1-04_Q10",
+        "V3-W1-04_Q11",
+        "V3-W1-04_Q12",
+        "V3-W1-04_Q13",
+        "V3-W1-04_Q14",
+        "V3-W1-04_Q15",
+        "V3-W1-04_Q16",
+        "V3-W1-04_Q17",
+        "V3-W1-04_Q18",
+        "V3-W1-04_Q19",
+        "V3-W1-04_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-04_R01",
+        "V3-W1-04_R02",
+        "V3-W1-04_R03",
+        "V3-W1-04_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_04",
+        "topic_lesson_index": 1,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 7,
+          "B": 0,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 5,
+      "title": "文書作業 搭配詞 2",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "文書作業",
+      "target_items": [
+        "item_coll_check_over",
+        "item_coll_hand_back",
+        "item_coll_send_in",
+        "item_coll_file_away",
+        "item_coll_cross_out",
+        "item_coll_cut_out",
+        "item_coll_write_back"
+      ],
+      "question_ids": [
+        "V3-W1-05_Q01",
+        "V3-W1-05_Q02",
+        "V3-W1-05_Q03",
+        "V3-W1-05_Q04",
+        "V3-W1-05_Q05",
+        "V3-W1-05_Q06",
+        "V3-W1-05_Q07",
+        "V3-W1-05_Q08",
+        "V3-W1-05_Q09",
+        "V3-W1-05_Q10",
+        "V3-W1-05_Q11",
+        "V3-W1-05_Q12",
+        "V3-W1-05_Q13",
+        "V3-W1-05_Q14",
+        "V3-W1-05_Q15",
+        "V3-W1-05_Q16",
+        "V3-W1-05_Q17",
+        "V3-W1-05_Q18",
+        "V3-W1-05_Q19",
+        "V3-W1-05_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-05_R01",
+        "V3-W1-05_R02",
+        "V3-W1-05_R03",
+        "V3-W1-05_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_05",
+        "topic_lesson_index": 2,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 7,
+          "B": 0,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 6,
+      "title": "文書作業 搭配詞 3",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "文書作業",
+      "target_items": [
+        "item_coll_divide_into",
+        "item_coll_glance_through",
+        "item_coll_skim_through",
+        "item_coll_at_your_earliest_convenience",
+        "item_coll_lay_out",
+        "item_coll_go_through",
+        "item_coll_leave_out"
+      ],
+      "question_ids": [
+        "V3-W1-06_Q01",
+        "V3-W1-06_Q02",
+        "V3-W1-06_Q03",
+        "V3-W1-06_Q04",
+        "V3-W1-06_Q05",
+        "V3-W1-06_Q06",
+        "V3-W1-06_Q07",
+        "V3-W1-06_Q08",
+        "V3-W1-06_Q09",
+        "V3-W1-06_Q10",
+        "V3-W1-06_Q11",
+        "V3-W1-06_Q12",
+        "V3-W1-06_Q13",
+        "V3-W1-06_Q14",
+        "V3-W1-06_Q15",
+        "V3-W1-06_Q16",
+        "V3-W1-06_Q17",
+        "V3-W1-06_Q18",
+        "V3-W1-06_Q19",
+        "V3-W1-06_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-06_R01",
+        "V3-W1-06_R02",
+        "V3-W1-06_R03",
+        "V3-W1-06_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_06",
+        "topic_lesson_index": 3,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 3,
+          "B": 4,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 7,
+      "title": "文書作業 搭配詞 4",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "文書作業",
+      "target_items": [
+        "item_coll_write_up",
+        "item_coll_sign_off",
+        "item_coll_refer_back_to",
+        "item_coll_as_to",
+        "item_coll_with_regard_to",
+        "item_coll_keep_back"
+      ],
+      "question_ids": [
+        "V3-W1-07_Q01",
+        "V3-W1-07_Q02",
+        "V3-W1-07_Q03",
+        "V3-W1-07_Q04",
+        "V3-W1-07_Q05",
+        "V3-W1-07_Q06",
+        "V3-W1-07_Q07",
+        "V3-W1-07_Q08",
+        "V3-W1-07_Q09",
+        "V3-W1-07_Q10",
+        "V3-W1-07_Q11",
+        "V3-W1-07_Q12",
+        "V3-W1-07_Q13",
+        "V3-W1-07_Q14",
+        "V3-W1-07_Q15",
+        "V3-W1-07_Q16",
+        "V3-W1-07_Q17",
+        "V3-W1-07_Q18",
+        "V3-W1-07_Q19",
+        "V3-W1-07_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-07_R01",
+        "V3-W1-07_R02",
+        "V3-W1-07_R03",
+        "V3-W1-07_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_07",
+        "topic_lesson_index": 4,
+        "item_count": 6,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 3,
+          "C": 3
+        },
+        "unresolved_target_count": 6
+      }
+    },
+    {
+      "lesson_id": "V3-W1-08",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 8,
+      "title": "商務會議 搭配詞 1",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "商務會議",
+      "target_items": [
+        "item_coll_bring_up",
+        "item_coll_jot_down",
+        "item_coll_wrap_up",
+        "item_coll_put_forward",
+        "item_coll_bear_in_mind",
+        "item_coll_touch_on"
+      ],
+      "question_ids": [
+        "V3-W1-08_Q01",
+        "V3-W1-08_Q02",
+        "V3-W1-08_Q03",
+        "V3-W1-08_Q04",
+        "V3-W1-08_Q05",
+        "V3-W1-08_Q06",
+        "V3-W1-08_Q07",
+        "V3-W1-08_Q08",
+        "V3-W1-08_Q09",
+        "V3-W1-08_Q10",
+        "V3-W1-08_Q11",
+        "V3-W1-08_Q12",
+        "V3-W1-08_Q13",
+        "V3-W1-08_Q14",
+        "V3-W1-08_Q15",
+        "V3-W1-08_Q16",
+        "V3-W1-08_Q17",
+        "V3-W1-08_Q18",
+        "V3-W1-08_Q19",
+        "V3-W1-08_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-08_R01",
+        "V3-W1-08_R02",
+        "V3-W1-08_R03",
+        "V3-W1-08_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_08",
+        "topic_lesson_index": 1,
+        "item_count": 6,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 6,
+          "C": 0
+        },
+        "unresolved_target_count": 6
+      }
+    },
+    {
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 9,
+      "title": "商務會議 搭配詞 2",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "商務會議",
+      "target_items": [
+        "item_coll_run_through",
+        "item_coll_settle_on",
+        "item_coll_talk_over",
+        "item_coll_object_to",
+        "item_coll_decide_on",
+        "item_coll_come_before"
+      ],
+      "question_ids": [
+        "V3-W1-09_Q01",
+        "V3-W1-09_Q02",
+        "V3-W1-09_Q03",
+        "V3-W1-09_Q04",
+        "V3-W1-09_Q05",
+        "V3-W1-09_Q06",
+        "V3-W1-09_Q07",
+        "V3-W1-09_Q08",
+        "V3-W1-09_Q09",
+        "V3-W1-09_Q10",
+        "V3-W1-09_Q11",
+        "V3-W1-09_Q12",
+        "V3-W1-09_Q13",
+        "V3-W1-09_Q14",
+        "V3-W1-09_Q15",
+        "V3-W1-09_Q16",
+        "V3-W1-09_Q17",
+        "V3-W1-09_Q18",
+        "V3-W1-09_Q19",
+        "V3-W1-09_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-09_R01",
+        "V3-W1-09_R02",
+        "V3-W1-09_R03",
+        "V3-W1-09_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_09",
+        "topic_lesson_index": 2,
+        "item_count": 6,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 6,
+          "C": 0
+        },
+        "unresolved_target_count": 6
+      }
+    },
+    {
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 10,
+      "title": "商務會議 搭配詞 3",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "商務會議",
+      "target_items": [
+        "item_coll_bring_forward",
+        "item_coll_walk_through",
+        "item_coll_on_behalf_of",
+        "item_coll_rule_out",
+        "item_coll_hold_off_on"
+      ],
+      "question_ids": [
+        "V3-W1-10_Q01",
+        "V3-W1-10_Q02",
+        "V3-W1-10_Q03",
+        "V3-W1-10_Q04",
+        "V3-W1-10_Q05",
+        "V3-W1-10_Q06",
+        "V3-W1-10_Q07",
+        "V3-W1-10_Q08",
+        "V3-W1-10_Q09",
+        "V3-W1-10_Q10",
+        "V3-W1-10_Q11",
+        "V3-W1-10_Q12",
+        "V3-W1-10_Q13",
+        "V3-W1-10_Q14",
+        "V3-W1-10_Q15",
+        "V3-W1-10_Q16",
+        "V3-W1-10_Q17",
+        "V3-W1-10_Q18",
+        "V3-W1-10_Q19",
+        "V3-W1-10_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-10_R01",
+        "V3-W1-10_R02",
+        "V3-W1-10_R03",
+        "V3-W1-10_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_10",
+        "topic_lesson_index": 3,
+        "item_count": 5,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 2,
+          "C": 3
+        },
+        "unresolved_target_count": 5
+      }
+    },
+    {
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 11,
+      "title": "業務協調 搭配詞 1",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "業務協調",
+      "target_items": [
+        "item_coll_turn_down",
+        "item_coll_go_ahead",
+        "item_coll_line_up",
+        "item_coll_depend_on",
+        "item_coll_carry_on",
+        "item_coll_call_off",
+        "item_coll_put_off"
+      ],
+      "question_ids": [
+        "V3-W1-11_Q01",
+        "V3-W1-11_Q02",
+        "V3-W1-11_Q03",
+        "V3-W1-11_Q04",
+        "V3-W1-11_Q05",
+        "V3-W1-11_Q06",
+        "V3-W1-11_Q07",
+        "V3-W1-11_Q08",
+        "V3-W1-11_Q09",
+        "V3-W1-11_Q10",
+        "V3-W1-11_Q11",
+        "V3-W1-11_Q12",
+        "V3-W1-11_Q13",
+        "V3-W1-11_Q14",
+        "V3-W1-11_Q15",
+        "V3-W1-11_Q16",
+        "V3-W1-11_Q17",
+        "V3-W1-11_Q18",
+        "V3-W1-11_Q19",
+        "V3-W1-11_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-11_R01",
+        "V3-W1-11_R02",
+        "V3-W1-11_R03",
+        "V3-W1-11_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_11",
+        "topic_lesson_index": 1,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 5,
+          "B": 2,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-12",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 12,
+      "title": "業務協調 搭配詞 2",
+      "estimated_minutes": 35,
+      "lesson_type": "collocation",
+      "topic": "業務協調",
+      "target_items": [
+        "item_coll_carry_out",
+        "item_coll_track_down",
+        "item_coll_tie_up",
+        "item_coll_back_out",
+        "item_coll_see_to",
+        "item_coll_stick_to",
+        "item_coll_depend_upon"
+      ],
+      "question_ids": [
+        "V3-W1-12_Q01",
+        "V3-W1-12_Q02",
+        "V3-W1-12_Q03",
+        "V3-W1-12_Q04",
+        "V3-W1-12_Q05",
+        "V3-W1-12_Q06",
+        "V3-W1-12_Q07",
+        "V3-W1-12_Q08",
+        "V3-W1-12_Q09",
+        "V3-W1-12_Q10",
+        "V3-W1-12_Q11",
+        "V3-W1-12_Q12",
+        "V3-W1-12_Q13",
+        "V3-W1-12_Q14",
+        "V3-W1-12_Q15",
+        "V3-W1-12_Q16",
+        "V3-W1-12_Q17",
+        "V3-W1-12_Q18",
+        "V3-W1-12_Q19",
+        "V3-W1-12_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-12_R01",
+        "V3-W1-12_R02",
+        "V3-W1-12_R03",
+        "V3-W1-12_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_12",
+        "topic_lesson_index": 2,
+        "item_count": 7,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 7,
+          "C": 0
+        },
+        "unresolved_target_count": 7
+      }
+    },
+    {
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 13,
+      "title": "業務協調 搭配詞 3",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "業務協調",
+      "target_items": [
+        "item_coll_rely_upon",
+        "item_coll_turn_to",
+        "item_coll_stick_with",
+        "item_coll_come_through",
+        "item_coll_go_ahead_with",
+        "item_coll_catch_up_with"
+      ],
+      "question_ids": [
+        "V3-W1-13_Q01",
+        "V3-W1-13_Q02",
+        "V3-W1-13_Q03",
+        "V3-W1-13_Q04",
+        "V3-W1-13_Q05",
+        "V3-W1-13_Q06",
+        "V3-W1-13_Q07",
+        "V3-W1-13_Q08",
+        "V3-W1-13_Q09",
+        "V3-W1-13_Q10",
+        "V3-W1-13_Q11",
+        "V3-W1-13_Q12",
+        "V3-W1-13_Q13",
+        "V3-W1-13_Q14",
+        "V3-W1-13_Q15",
+        "V3-W1-13_Q16",
+        "V3-W1-13_Q17",
+        "V3-W1-13_Q18",
+        "V3-W1-13_Q19",
+        "V3-W1-13_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-13_R01",
+        "V3-W1-13_R02",
+        "V3-W1-13_R03",
+        "V3-W1-13_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_13",
+        "topic_lesson_index": 3,
+        "item_count": 6,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 6,
+          "C": 0
+        },
+        "unresolved_target_count": 6
+      }
+    },
+    {
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 14,
+      "title": "業務協調 搭配詞 4",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "業務協調",
+      "target_items": [
+        "item_coll_break_off",
+        "item_coll_interfere_with",
+        "item_coll_leave_to",
+        "item_coll_interfere_in",
+        "item_coll_fall_through",
+        "item_coll_follow_through"
+      ],
+      "question_ids": [
+        "V3-W1-14_Q01",
+        "V3-W1-14_Q02",
+        "V3-W1-14_Q03",
+        "V3-W1-14_Q04",
+        "V3-W1-14_Q05",
+        "V3-W1-14_Q06",
+        "V3-W1-14_Q07",
+        "V3-W1-14_Q08",
+        "V3-W1-14_Q09",
+        "V3-W1-14_Q10",
+        "V3-W1-14_Q11",
+        "V3-W1-14_Q12",
+        "V3-W1-14_Q13",
+        "V3-W1-14_Q14",
+        "V3-W1-14_Q15",
+        "V3-W1-14_Q16",
+        "V3-W1-14_Q17",
+        "V3-W1-14_Q18",
+        "V3-W1-14_Q19",
+        "V3-W1-14_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-14_R01",
+        "V3-W1-14_R02",
+        "V3-W1-14_R03",
+        "V3-W1-14_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_14",
+        "topic_lesson_index": 4,
+        "item_count": 6,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 1,
+          "C": 5
+        },
+        "unresolved_target_count": 6
+      }
+    },
+    {
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 15,
+      "title": "人事與組織 搭配詞 1",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "人事與組織",
+      "target_items": [
+        "item_coll_clock_in",
+        "item_coll_move_up",
+        "item_coll_fill_in_for",
+        "item_coll_hand_over",
+        "item_coll_take_on"
+      ],
+      "question_ids": [
+        "V3-W1-15_Q01",
+        "V3-W1-15_Q02",
+        "V3-W1-15_Q03",
+        "V3-W1-15_Q04",
+        "V3-W1-15_Q05",
+        "V3-W1-15_Q06",
+        "V3-W1-15_Q07",
+        "V3-W1-15_Q08",
+        "V3-W1-15_Q09",
+        "V3-W1-15_Q10",
+        "V3-W1-15_Q11",
+        "V3-W1-15_Q12",
+        "V3-W1-15_Q13",
+        "V3-W1-15_Q14",
+        "V3-W1-15_Q15",
+        "V3-W1-15_Q16",
+        "V3-W1-15_Q17",
+        "V3-W1-15_Q18",
+        "V3-W1-15_Q19",
+        "V3-W1-15_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-15_R01",
+        "V3-W1-15_R02",
+        "V3-W1-15_R03",
+        "V3-W1-15_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_15",
+        "topic_lesson_index": 1,
+        "item_count": 5,
+        "difficulty_breakdown": {
+          "A": 2,
+          "B": 3,
+          "C": 0
+        },
+        "unresolved_target_count": 5
+      }
+    },
+    {
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "lesson_number": 16,
+      "title": "人事與組織 搭配詞 2",
+      "estimated_minutes": 30,
+      "lesson_type": "collocation",
+      "topic": "人事與組織",
+      "target_items": [
+        "item_coll_answer_to",
+        "item_coll_adjust_to",
+        "item_coll_fit_in_with",
+        "item_coll_fall_in_with"
+      ],
+      "question_ids": [
+        "V3-W1-16_Q01",
+        "V3-W1-16_Q02",
+        "V3-W1-16_Q03",
+        "V3-W1-16_Q04",
+        "V3-W1-16_Q05",
+        "V3-W1-16_Q06",
+        "V3-W1-16_Q07",
+        "V3-W1-16_Q08",
+        "V3-W1-16_Q09",
+        "V3-W1-16_Q10",
+        "V3-W1-16_Q11",
+        "V3-W1-16_Q12",
+        "V3-W1-16_Q13",
+        "V3-W1-16_Q14",
+        "V3-W1-16_Q15",
+        "V3-W1-16_Q16",
+        "V3-W1-16_Q17",
+        "V3-W1-16_Q18",
+        "V3-W1-16_Q19",
+        "V3-W1-16_Q20"
+      ],
+      "review_question_ids": [
+        "V3-W1-16_R01",
+        "V3-W1-16_R02",
+        "V3-W1-16_R03",
+        "V3-W1-16_R04"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "status": "not_started",
+      "draft_metadata": {
+        "wave": 1,
+        "source_blueprint_lesson_id": "draft_coll_w1_16",
+        "topic_lesson_index": 2,
+        "item_count": 4,
+        "difficulty_breakdown": {
+          "A": 0,
+          "B": 3,
+          "C": 1
+        },
+        "unresolved_target_count": 4
+      }
+    }
+  ]
+}

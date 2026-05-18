@@ -1,0 +1,272 @@
+{
+  "generated_at": "2026-05-18T00:18:53.171Z",
+  "policy_pack_version": "wave1_phase6_authoring_policy_pack_v1",
+  "reference_role": "ability_signal_only",
+  "status": "draft_only",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "source_files": [
+    "drafts/collocation-rebuild/wave1_schema_contracts.json",
+    "drafts/collocation-rebuild/wave1_reference_bundle_v1.json",
+    "drafts/collocation-rebuild/wave1_difficulty_mixing_policy.json",
+    "drafts/collocation-rebuild/phrase_family_table.json",
+    "drafts/collocation-rebuild/phrase_duplicate_reference.json",
+    "drafts/collocation-rebuild/wave1_question_shells.json",
+    "drafts/collocation-rebuild/wave1_vocab_items_seed_draft.json"
+  ],
+  "scope": {
+    "program": "Program B - TOEIC Vocabulary Tracker",
+    "stage": "V3",
+    "lesson_type": "collocation",
+    "wave": 1,
+    "lesson_count": 16,
+    "question_shell_count": 384,
+    "draft_vocab_item_count": 100
+  },
+  "policies": {
+    "semantic_sense_and_target_item": {
+      "status": "defined",
+      "applies_to": "Wave 1 V3 collocation rebuild",
+      "target_item_id_rule": "Use one stable target_item_id per collocation phrase. For Wave 1 drafts this is item_coll_{english_slug}.",
+      "production_merge_rule": "Before production merge, every target_item_id in questions must exist in production vocab_items.json, not only in a draft seed artifact.",
+      "direct_definition_policy": {
+        "default_for_wave1": "Do not author direct-definition questions for Wave 1 V3 collocation unless a future prompt explicitly scopes one.",
+        "semantic_sense_required_when": [
+          "A direct-definition row is authored for the same surface phrase or item more than once.",
+          "The same surface phrase is intentionally split into genuinely different meanings.",
+          "A reviewer cannot determine the intended meaning from target_item_id alone."
+        ],
+        "semantic_sense_tag_format": "semantic_sense:{short_snake_case_sense}",
+        "domain_sense_tag_format": "domain_sense:{short_snake_case_domain}",
+        "domain_sense_limit": "domain_sense may clarify context, but it never justifies duplicate direct-definition rows by itself."
+      },
+      "contextual_practice_rule": "For collocations, later practice should test use in sentence, Part 5, Part 6, or review context rather than repeating definitions.",
+      "current_counts": {
+        "draft_target_items": 100,
+        "question_target_items": 100,
+        "direct_definition_shells": 0
+      }
+    },
+    "distractor_bank_schema": {
+      "status": "defined",
+      "schema_version": "wave1_distractor_bank_schema_v1",
+      "purpose": "Define a reviewable distractor candidate format before real authoring begins.",
+      "row_schema": {
+        "distractor_id": "string, unique; suggested dstr_{target_item_id}_{nn}",
+        "target_item_id": "string, target item being tested",
+        "target_phrase": "string, correct phrase",
+        "option_text": "string, proposed distractor option",
+        "source_type": "same_head_family | surface_close | topic_peer | teacher_written",
+        "source_reference_id": "string|null, reference row/pair/family identifier when available",
+        "distractor_role": "wrong_particle | wrong_verb | wrong_object | near_surface | semantic_neighbor | register_mismatch",
+        "grammar_fit": "true when the option can grammatically fit the blank",
+        "collocation_fit": "false for a valid distractor; true means reject as ambiguous",
+        "ambiguity_risk": "low | medium | high",
+        "review_status": "candidate | approved | rejected",
+        "rejection_reason": "string|null"
+      },
+      "approval_rules": [
+        "The distractor must be grammatically possible in the sentence.",
+        "The distractor must be collocationally wrong in the authored context.",
+        "The correct answer must remain the only natural TOEIC answer.",
+        "Same-head and surface-close references require manual ambiguity review.",
+        "Do not use a future-stage item or V4 draft item as a distractor source for Wave 1 production authoring.",
+        "Do not leak the Chinese or English definition in option text."
+      ],
+      "reference_sources": {
+        "phrase_families": {
+          "file": "drafts/collocation-rebuild/phrase_family_table.json",
+          "family_count": 83,
+          "usage": "Candidate source for same-head contrasts only, not automatic options."
+        },
+        "near_confusable_pairs": {
+          "file": "drafts/collocation-rebuild/phrase_duplicate_reference.json",
+          "exact_duplicate_groups": 0,
+          "near_confusable_pairs": 341,
+          "usage": "Manual review list for possible contrast, not a blocker by itself."
+        }
+      }
+    },
+    "explanation_rubric": {
+      "status": "defined",
+      "schema_version": "wave1_explanation_rubric_v1",
+      "language": "Traditional Chinese",
+      "length_target": "20-80 Chinese characters; shorter is acceptable only if the rule and trap are clear.",
+      "required_parts": [
+        "Name the correct collocation or phrase pattern.",
+        "State why it fits the business context.",
+        "Contrast at least one likely wrong option or trap.",
+        "Avoid merely translating the question."
+      ],
+      "templates": {
+        "collocation": "固定搭配為「{correct_phrase}」，表示{meaning}；{wrong_option}語法可通但搭配不自然。",
+        "part5_sentence_completion": "此處需要「{correct_phrase}」完成{business_action}；{wrong_option}常見但不符合句意。",
+        "part6_context_choice": "前文提到{context_clue}，所以用「{correct_phrase}」；{wrong_option}與語境不合。",
+        "review_question": "複習重點是「{correct_phrase}」的{usage}；{wrong_option}容易混淆但不是此情境用法。"
+      },
+      "fail_conditions": [
+        "Only translates the English sentence.",
+        "Says only that the answer is correct without explaining why.",
+        "Uses simplified Chinese.",
+        "Mentions the correct answer in a way that leaks a later question.",
+        "Does not identify any trap or contrast."
+      ]
+    },
+    "source_of_truth_workflow": {
+      "status": "defined",
+      "workflow_version": "wave1_source_of_truth_v1",
+      "source_of_truth": {
+        "handoff": "TO_AI.md",
+        "authoring_spec": "docs/question-creation-spec.md",
+        "production_seed": "data/vocab/*.json files listed by data/vocab/curriculum.json -> question_files",
+        "draft_workspace": "drafts/collocation-rebuild/",
+        "browser_editor": "IndexedDB review surface only; not production source"
+      },
+      "draft_to_production_flow": [
+        "Author draft rows under drafts/collocation-rebuild/.",
+        "Review target item rows and examples.",
+        "Replace TODO question shells with real TOEIC questions.",
+        "Run draft/schema checks.",
+        "Complete Phase 7/8 manifest and mixed-review policy decisions.",
+        "Only then merge approved rows into data/vocab/ with a production task.",
+        "Bump seed version in exactly three files.",
+        "Run full validation and update TO_AI.md."
+      ],
+      "forbidden_paths": [
+        "C:\\Users\\Keith\\toeic-app",
+        "data/vocab/questions_v4*.json unless V4 activation is explicitly approved",
+        "drafts/v4/ promotion during V0-V3 rebuild"
+      ]
+    },
+    "documentation_sync": {
+      "status": "defined",
+      "active_docs": [
+        "TO_AI.md",
+        "README.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "docs/question-creation-spec.md",
+        "docs/question-bank-source-of-truth-workflow.md",
+        "docs/plans/questions plan.md"
+      ],
+      "sync_rules": [
+        "TO_AI.md remains the current handoff source of truth.",
+        "README.md, AGENTS.md, and CLAUDE.md must not claim 193 lessons or 4,399 active question rows while production is cleared.",
+        "docs/question-creation-spec.md may describe historical/target structures, but must label them as target/rebuild structures, not current production counts.",
+        "Question Bank workflow docs must state that browser edits are IndexedDB-local until patch-applied.",
+        "Archived docs under docs/backups/ remain historical and are not current facts."
+      ]
+    }
+  },
+  "validation_gate": {
+    "status": "defined",
+    "applies_before": "Any production seed merge or release claim",
+    "commands": [
+      "node scripts/validate-vocab-data.js",
+      "node scripts/audit-quality-full.js",
+      "node scripts/audit-duplicates.js",
+      "npm run test:scoring",
+      "npx playwright test",
+      "npm run test:all"
+    ],
+    "phase6_verification_commands": [
+      "node scripts/build-collocation-phase6-authoring-policy.js",
+      "node scripts/validate-vocab-data.js",
+      "node scripts/audit-quality-full.js",
+      "node scripts/audit-duplicates.js"
+    ],
+    "seed_sync_rule": [
+      "data/vocab/curriculum.json -> seed_version",
+      "js/vocab-db.js -> SEED_VERSION",
+      "tests/helpers/seed-idb.ts -> APP_SEED_VERSION"
+    ]
+  },
+  "next_phase_guardrails": {
+    "status": "defined",
+    "next_required_phase": "Phase 8 - Future Reference Packs",
+    "do_next": [
+      "Complete Steps 36-39 reference packs and mixed-review architecture reconciliation.",
+      "Freeze Step 40 master lesson manifest, file split, and V3-W1 production ID table.",
+      "Keep Wave 1 content under drafts/collocation-rebuild/ until Step 40 is complete."
+    ],
+    "do_not_do_yet": [
+      "Do not merge Wave 1 shells into data/vocab/.",
+      "Do not author production rows from TODO shells until Step 40 manifest/file split is frozen.",
+      "Do not bump the production seed version for draft-only policy work.",
+      "Do not use V4 draft data as a source for production distractors or lesson rows."
+    ],
+    "phase7_reference": "drafts/v0-v3-rebuild/stage_map_v0_v3.json"
+  },
+  "readiness": {
+    "schema_ready": true,
+    "phase6_policy_ready": true,
+    "authoring_ready": true,
+    "content_ready": false,
+    "production_ready": false,
+    "production_merge_allowed": false,
+    "interpretation": "Phase 6 defines authoring rules. It permits controlled draft authoring, not production merge."
+  },
+  "remaining_blockers": {
+    "todo_question_shells": 384,
+    "blank_draft_item_examples": 100,
+    "production_lesson_ids_not_frozen_until_step40": true,
+    "full_v0_v3_stage_blueprint_incomplete_until_phase7": false,
+    "mixed_review_architecture_incomplete_until_step39": true
+  },
+  "current_counts": {
+    "todo_question_shells": 384,
+    "blank_draft_item_examples": 100,
+    "question_type_counts": {
+      "collocation": 124,
+      "part5_sentence_completion": 100,
+      "part6_context_choice": 96,
+      "review_question": 64
+    },
+    "slot_role_counts": {
+      "core": 320,
+      "review": 64
+    },
+    "target_difficulty_counts": {
+      "A": 36,
+      "B": 51,
+      "C": 13
+    },
+    "planned_type_counts": {
+      "collocation": 124,
+      "part5_sentence_completion": 100,
+      "part6_context_choice": 96,
+      "review_question": 64
+    }
+  },
+  "consistency_checks": {
+    "status": "passed",
+    "checked_at": "2026-05-18T00:18:53.175Z",
+    "checks": [
+      {
+        "id": "reference_role",
+        "pass": true,
+        "detail": "Phase 6 policy pack is reference-only."
+      },
+      {
+        "id": "all_policy_sections_defined",
+        "pass": true,
+        "detail": "Semantic/target, distractor, explanation, workflow, and doc sync policies are all defined."
+      },
+      {
+        "id": "readiness_flags",
+        "pass": true,
+        "detail": "Phase 6 policies are ready for draft authoring, but production merge is still disabled."
+      },
+      {
+        "id": "content_blockers_preserved",
+        "pass": true,
+        "detail": "Authoring blockers remain explicit after policy completion."
+      },
+      {
+        "id": "phase6_guardrails_defined",
+        "pass": true,
+        "detail": "Validation commands and next-phase sequencing are explicit."
+      }
+    ]
+  }
+}

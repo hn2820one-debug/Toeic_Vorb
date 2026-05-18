@@ -1,0 +1,1301 @@
+{
+  "reference_file": "Background/多益搭配詞全面測試/Phrase_411_by_topic.txt",
+  "generated_at": "2026-05-17T22:00:42.161Z",
+  "reference_role": "ability_signal_only",
+  "content_generation_note": "This blueprint defines which phrase targets should be taught first. It does not contain the final generated lessons, sentences, or question rows.",
+  "wave": 1,
+  "selected_topics": [
+    "辦公室",
+    "文書作業",
+    "商務會議",
+    "業務協調",
+    "人事與組織"
+  ],
+  "selected_unknown_count": 100,
+  "lessons": [
+    {
+      "lesson_id": "draft_coll_w1_01",
+      "wave": 1,
+      "sequence": 1,
+      "topic": "辦公室",
+      "topic_lesson_index": 1,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 40,
+          "original_index": 40,
+          "phrase": "run out of",
+          "phrase_slug": "run_out_of",
+          "gloss_zh": "用完；耗盡",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_run_out_of"
+        },
+        {
+          "formal_index": 41,
+          "original_index": 41,
+          "phrase": "set up",
+          "phrase_slug": "set_up",
+          "gloss_zh": "設立；安排",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_set_up"
+        },
+        {
+          "formal_index": 61,
+          "original_index": 61,
+          "phrase": "drop by",
+          "phrase_slug": "drop_by",
+          "gloss_zh": "順道拜訪",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_drop_by"
+        },
+        {
+          "formal_index": 72,
+          "original_index": 72,
+          "phrase": "look over",
+          "phrase_slug": "look_over",
+          "gloss_zh": "快速查看；審閱",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_look_over"
+        },
+        {
+          "formal_index": 83,
+          "original_index": 83,
+          "phrase": "run into",
+          "phrase_slug": "run_into",
+          "gloss_zh": "碰到；遭遇",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_run_into"
+        },
+        {
+          "formal_index": 110,
+          "original_index": 110,
+          "phrase": "pick up",
+          "phrase_slug": "pick_up",
+          "gloss_zh": "接收；拿取；恢復",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_pick_up"
+        },
+        {
+          "formal_index": 111,
+          "original_index": 111,
+          "phrase": "give out",
+          "phrase_slug": "give_out",
+          "gloss_zh": "分發；耗盡",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_give_out"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_02",
+      "wave": 1,
+      "sequence": 2,
+      "topic": "辦公室",
+      "topic_lesson_index": 2,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 5,
+        "B": 2,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 112,
+          "original_index": 112,
+          "phrase": "sort out",
+          "phrase_slug": "sort_out",
+          "gloss_zh": "整理；解決",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_sort_out"
+        },
+        {
+          "formal_index": 140,
+          "original_index": 141,
+          "phrase": "focus on",
+          "phrase_slug": "focus_on",
+          "gloss_zh": "專注於",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_focus_on"
+        },
+        {
+          "formal_index": 142,
+          "original_index": 143,
+          "phrase": "concentrate on",
+          "phrase_slug": "concentrate_on",
+          "gloss_zh": "集中於",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_concentrate_on"
+        },
+        {
+          "formal_index": 154,
+          "original_index": 157,
+          "phrase": "work on",
+          "phrase_slug": "work_on",
+          "gloss_zh": "著手處理；從事",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_work_on"
+        },
+        {
+          "formal_index": 386,
+          "original_index": 424,
+          "phrase": "stop by",
+          "phrase_slug": "stop_by",
+          "gloss_zh": "順道拜訪",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_stop_by"
+        },
+        {
+          "formal_index": 11,
+          "original_index": 11,
+          "phrase": "draw up",
+          "phrase_slug": "draw_up",
+          "gloss_zh": "起草；擬定",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_draw_up"
+        },
+        {
+          "formal_index": 36,
+          "original_index": 36,
+          "phrase": "look into",
+          "phrase_slug": "look_into",
+          "gloss_zh": "調查；了解",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_look_into"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_03",
+      "wave": 1,
+      "sequence": 3,
+      "topic": "辦公室",
+      "topic_lesson_index": 3,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 6,
+        "C": 1
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 50,
+          "original_index": 50,
+          "phrase": "prior to",
+          "phrase_slug": "prior_to",
+          "gloss_zh": "在…之前",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_prior_to"
+        },
+        {
+          "formal_index": 53,
+          "original_index": 53,
+          "phrase": "catch up on",
+          "phrase_slug": "catch_up_on",
+          "gloss_zh": "補上；補做",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_catch_up_on"
+        },
+        {
+          "formal_index": 77,
+          "original_index": 77,
+          "phrase": "pitch in",
+          "phrase_slug": "pitch_in",
+          "gloss_zh": "幫忙；出力",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_pitch_in"
+        },
+        {
+          "formal_index": 206,
+          "original_index": 212,
+          "phrase": "take up",
+          "phrase_slug": "take_up",
+          "gloss_zh": "開始從事；占用",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_take_up"
+        },
+        {
+          "formal_index": 215,
+          "original_index": 221,
+          "phrase": "sort through",
+          "phrase_slug": "sort_through",
+          "gloss_zh": "逐一整理",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_sort_through"
+        },
+        {
+          "formal_index": 385,
+          "original_index": 423,
+          "phrase": "run by",
+          "phrase_slug": "run_by",
+          "gloss_zh": "先給…過目；匆匆經過",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_run_by"
+        },
+        {
+          "formal_index": 80,
+          "original_index": 80,
+          "phrase": "put up with",
+          "phrase_slug": "put_up_with",
+          "gloss_zh": "忍受",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_put_up_with"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_04",
+      "wave": 1,
+      "sequence": 4,
+      "topic": "文書作業",
+      "topic_lesson_index": 1,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 10,
+          "original_index": 10,
+          "phrase": "fill out",
+          "phrase_slug": "fill_out",
+          "gloss_zh": "填寫（表格）",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_fill_out"
+        },
+        {
+          "formal_index": 33,
+          "original_index": 33,
+          "phrase": "hand in",
+          "phrase_slug": "hand_in",
+          "gloss_zh": "提交",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_hand_in"
+        },
+        {
+          "formal_index": 67,
+          "original_index": 67,
+          "phrase": "go over",
+          "phrase_slug": "go_over",
+          "gloss_zh": "檢查；覆核",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_go_over"
+        },
+        {
+          "formal_index": 95,
+          "original_index": 95,
+          "phrase": "turn in",
+          "phrase_slug": "turn_in",
+          "gloss_zh": "繳交",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_turn_in"
+        },
+        {
+          "formal_index": 106,
+          "original_index": 106,
+          "phrase": "key in",
+          "phrase_slug": "key_in",
+          "gloss_zh": "鍵入",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_key_in"
+        },
+        {
+          "formal_index": 124,
+          "original_index": 124,
+          "phrase": "read over",
+          "phrase_slug": "read_over",
+          "gloss_zh": "再讀一遍；審閱",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_read_over"
+        },
+        {
+          "formal_index": 128,
+          "original_index": 128,
+          "phrase": "refer to",
+          "phrase_slug": "refer_to",
+          "gloss_zh": "提到；參考",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_refer_to"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_05",
+      "wave": 1,
+      "sequence": 5,
+      "topic": "文書作業",
+      "topic_lesson_index": 2,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 163,
+          "original_index": 166,
+          "phrase": "check over",
+          "phrase_slug": "check_over",
+          "gloss_zh": "仔細檢查",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_check_over"
+        },
+        {
+          "formal_index": 165,
+          "original_index": 168,
+          "phrase": "hand back",
+          "phrase_slug": "hand_back",
+          "gloss_zh": "歸還",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_hand_back"
+        },
+        {
+          "formal_index": 210,
+          "original_index": 216,
+          "phrase": "send in",
+          "phrase_slug": "send_in",
+          "gloss_zh": "寄送；提交",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_send_in"
+        },
+        {
+          "formal_index": 214,
+          "original_index": 220,
+          "phrase": "file away",
+          "phrase_slug": "file_away",
+          "gloss_zh": "歸檔",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_file_away"
+        },
+        {
+          "formal_index": 218,
+          "original_index": 224,
+          "phrase": "cross out",
+          "phrase_slug": "cross_out",
+          "gloss_zh": "劃掉",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_cross_out"
+        },
+        {
+          "formal_index": 219,
+          "original_index": 225,
+          "phrase": "cut out",
+          "phrase_slug": "cut_out",
+          "gloss_zh": "刪除；剪下",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_cut_out"
+        },
+        {
+          "formal_index": 335,
+          "original_index": 362,
+          "phrase": "write back",
+          "phrase_slug": "write_back",
+          "gloss_zh": "回信",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_write_back"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_06",
+      "wave": 1,
+      "sequence": 6,
+      "topic": "文書作業",
+      "topic_lesson_index": 3,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 3,
+        "B": 4,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 383,
+          "original_index": 421,
+          "phrase": "divide into",
+          "phrase_slug": "divide_into",
+          "gloss_zh": "分成",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_divide_into"
+        },
+        {
+          "formal_index": 394,
+          "original_index": 433,
+          "phrase": "glance through",
+          "phrase_slug": "glance_through",
+          "gloss_zh": "快速瀏覽",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_glance_through"
+        },
+        {
+          "formal_index": 395,
+          "original_index": 434,
+          "phrase": "skim through",
+          "phrase_slug": "skim_through",
+          "gloss_zh": "略讀",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_skim_through"
+        },
+        {
+          "formal_index": 16,
+          "original_index": 16,
+          "phrase": "at your earliest convenience",
+          "phrase_slug": "at_your_earliest_convenience",
+          "gloss_zh": "在你方便時盡快",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_at_your_earliest_convenience"
+        },
+        {
+          "formal_index": 121,
+          "original_index": 121,
+          "phrase": "lay out",
+          "phrase_slug": "lay_out",
+          "gloss_zh": "安排；陳列；說明",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_lay_out"
+        },
+        {
+          "formal_index": 202,
+          "original_index": 207,
+          "phrase": "go through",
+          "phrase_slug": "go_through",
+          "gloss_zh": "檢查；經歷；逐項說明",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_go_through"
+        },
+        {
+          "formal_index": 203,
+          "original_index": 209,
+          "phrase": "leave out",
+          "phrase_slug": "leave_out",
+          "gloss_zh": "漏掉；省略",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_leave_out"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_07",
+      "wave": 1,
+      "sequence": 7,
+      "topic": "文書作業",
+      "topic_lesson_index": 4,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 3,
+        "C": 3
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 207,
+          "original_index": 213,
+          "phrase": "write up",
+          "phrase_slug": "write_up",
+          "gloss_zh": "寫成正式報告",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_write_up"
+        },
+        {
+          "formal_index": 208,
+          "original_index": 214,
+          "phrase": "sign off",
+          "phrase_slug": "sign_off",
+          "gloss_zh": "簽核；批准結案",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_sign_off"
+        },
+        {
+          "formal_index": 239,
+          "original_index": 260,
+          "phrase": "refer back to",
+          "phrase_slug": "refer_back_to",
+          "gloss_zh": "回頭參照",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_refer_back_to"
+        },
+        {
+          "formal_index": 46,
+          "original_index": 46,
+          "phrase": "as to",
+          "phrase_slug": "as_to",
+          "gloss_zh": "關於；至於",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_as_to"
+        },
+        {
+          "formal_index": 92,
+          "original_index": 92,
+          "phrase": "with regard to",
+          "phrase_slug": "with_regard_to",
+          "gloss_zh": "關於",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_with_regard_to"
+        },
+        {
+          "formal_index": 330,
+          "original_index": 357,
+          "phrase": "keep back",
+          "phrase_slug": "keep_back",
+          "gloss_zh": "保留；隱瞞",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_keep_back"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_08",
+      "wave": 1,
+      "sequence": 8,
+      "topic": "商務會議",
+      "topic_lesson_index": 1,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 26,
+          "original_index": 26,
+          "phrase": "bring up",
+          "phrase_slug": "bring_up",
+          "gloss_zh": "提出（話題）",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_bring_up"
+        },
+        {
+          "formal_index": 35,
+          "original_index": 35,
+          "phrase": "jot down",
+          "phrase_slug": "jot_down",
+          "gloss_zh": "草草記下",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_jot_down"
+        },
+        {
+          "formal_index": 45,
+          "original_index": 45,
+          "phrase": "wrap up",
+          "phrase_slug": "wrap_up",
+          "gloss_zh": "結束；做總結",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_wrap_up"
+        },
+        {
+          "formal_index": 79,
+          "original_index": 79,
+          "phrase": "put forward",
+          "phrase_slug": "put_forward",
+          "gloss_zh": "提出",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_put_forward"
+        },
+        {
+          "formal_index": 85,
+          "original_index": 85,
+          "phrase": "bear in mind",
+          "phrase_slug": "bear_in_mind",
+          "gloss_zh": "記住；牢記",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_bear_in_mind"
+        },
+        {
+          "formal_index": 93,
+          "original_index": 93,
+          "phrase": "touch on",
+          "phrase_slug": "touch_on",
+          "gloss_zh": "略提；談到",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_touch_on"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_09",
+      "wave": 1,
+      "sequence": 9,
+      "topic": "商務會議",
+      "topic_lesson_index": 2,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 123,
+          "original_index": 123,
+          "phrase": "run through",
+          "phrase_slug": "run_through",
+          "gloss_zh": "快速演練；過一遍",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_run_through"
+        },
+        {
+          "formal_index": 158,
+          "original_index": 161,
+          "phrase": "settle on",
+          "phrase_slug": "settle_on",
+          "gloss_zh": "決定採用",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_settle_on"
+        },
+        {
+          "formal_index": 199,
+          "original_index": 204,
+          "phrase": "talk over",
+          "phrase_slug": "talk_over",
+          "gloss_zh": "詳細討論",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_talk_over"
+        },
+        {
+          "formal_index": 238,
+          "original_index": 259,
+          "phrase": "object to",
+          "phrase_slug": "object_to",
+          "gloss_zh": "反對",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_object_to"
+        },
+        {
+          "formal_index": 254,
+          "original_index": 275,
+          "phrase": "decide on",
+          "phrase_slug": "decide_on",
+          "gloss_zh": "決定採用",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_decide_on"
+        },
+        {
+          "formal_index": 279,
+          "original_index": 302,
+          "phrase": "come before",
+          "phrase_slug": "come_before",
+          "gloss_zh": "先於；提交審議",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_come_before"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_10",
+      "wave": 1,
+      "sequence": 10,
+      "topic": "商務會議",
+      "topic_lesson_index": 3,
+      "item_count": 5,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 2,
+        "C": 3
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 388,
+          "original_index": 427,
+          "phrase": "bring forward",
+          "phrase_slug": "bring_forward",
+          "gloss_zh": "提前；提出",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_bring_forward"
+        },
+        {
+          "formal_index": 396,
+          "original_index": 435,
+          "phrase": "walk through",
+          "phrase_slug": "walk_through",
+          "gloss_zh": "逐步說明；演練",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_walk_through"
+        },
+        {
+          "formal_index": 4,
+          "original_index": 4,
+          "phrase": "on behalf of",
+          "phrase_slug": "on_behalf_of",
+          "gloss_zh": "代表；代替",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_on_behalf_of"
+        },
+        {
+          "formal_index": 15,
+          "original_index": 15,
+          "phrase": "rule out",
+          "phrase_slug": "rule_out",
+          "gloss_zh": "排除",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_rule_out"
+        },
+        {
+          "formal_index": 34,
+          "original_index": 34,
+          "phrase": "hold off on",
+          "phrase_slug": "hold_off_on",
+          "gloss_zh": "暫緩；延期處理",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_hold_off_on"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_11",
+      "wave": 1,
+      "sequence": 11,
+      "topic": "業務協調",
+      "topic_lesson_index": 1,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 5,
+        "B": 2,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 44,
+          "original_index": 44,
+          "phrase": "turn down",
+          "phrase_slug": "turn_down",
+          "gloss_zh": "拒絕",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_turn_down"
+        },
+        {
+          "formal_index": 66,
+          "original_index": 66,
+          "phrase": "go ahead",
+          "phrase_slug": "go_ahead",
+          "gloss_zh": "開始做；繼續進行",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_go_ahead"
+        },
+        {
+          "formal_index": 108,
+          "original_index": 108,
+          "phrase": "line up",
+          "phrase_slug": "line_up",
+          "gloss_zh": "安排好；排隊",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_line_up"
+        },
+        {
+          "formal_index": 144,
+          "original_index": 146,
+          "phrase": "depend on",
+          "phrase_slug": "depend_on",
+          "gloss_zh": "取決於；依靠",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_depend_on"
+        },
+        {
+          "formal_index": 148,
+          "original_index": 151,
+          "phrase": "carry on",
+          "phrase_slug": "carry_on",
+          "gloss_zh": "繼續進行",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_carry_on"
+        },
+        {
+          "formal_index": 27,
+          "original_index": 27,
+          "phrase": "call off",
+          "phrase_slug": "call_off",
+          "gloss_zh": "取消",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_call_off"
+        },
+        {
+          "formal_index": 39,
+          "original_index": 39,
+          "phrase": "put off",
+          "phrase_slug": "put_off",
+          "gloss_zh": "延後；推遲",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_put_off"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_12",
+      "wave": 1,
+      "sequence": 12,
+      "topic": "業務協調",
+      "topic_lesson_index": 2,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 7,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 52,
+          "original_index": 52,
+          "phrase": "carry out",
+          "phrase_slug": "carry_out",
+          "gloss_zh": "執行",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_carry_out"
+        },
+        {
+          "formal_index": 94,
+          "original_index": 94,
+          "phrase": "track down",
+          "phrase_slug": "track_down",
+          "gloss_zh": "追查到；找到",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_track_down"
+        },
+        {
+          "formal_index": 107,
+          "original_index": 107,
+          "phrase": "tie up",
+          "phrase_slug": "tie_up",
+          "gloss_zh": "占用；使受阻",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_tie_up"
+        },
+        {
+          "formal_index": 118,
+          "original_index": 118,
+          "phrase": "back out",
+          "phrase_slug": "back_out",
+          "gloss_zh": "退出；反悔",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_back_out"
+        },
+        {
+          "formal_index": 153,
+          "original_index": 156,
+          "phrase": "see to",
+          "phrase_slug": "see_to",
+          "gloss_zh": "負責處理；照料",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_see_to"
+        },
+        {
+          "formal_index": 228,
+          "original_index": 249,
+          "phrase": "stick to",
+          "phrase_slug": "stick_to",
+          "gloss_zh": "堅持；遵守",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_stick_to"
+        },
+        {
+          "formal_index": 255,
+          "original_index": 276,
+          "phrase": "depend upon",
+          "phrase_slug": "depend_upon",
+          "gloss_zh": "取決於；依賴",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_depend_upon"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_13",
+      "wave": 1,
+      "sequence": 13,
+      "topic": "業務協調",
+      "topic_lesson_index": 3,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 256,
+          "original_index": 277,
+          "phrase": "rely upon",
+          "phrase_slug": "rely_upon",
+          "gloss_zh": "依靠",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_rely_upon"
+        },
+        {
+          "formal_index": 309,
+          "original_index": 335,
+          "phrase": "turn to",
+          "phrase_slug": "turn_to",
+          "gloss_zh": "轉向；求助於",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_turn_to"
+        },
+        {
+          "formal_index": 310,
+          "original_index": 336,
+          "phrase": "stick with",
+          "phrase_slug": "stick_with",
+          "gloss_zh": "持續採用；不離開",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_stick_with"
+        },
+        {
+          "formal_index": 324,
+          "original_index": 350,
+          "phrase": "come through",
+          "phrase_slug": "come_through",
+          "gloss_zh": "兌現承諾；順利度過",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_come_through"
+        },
+        {
+          "formal_index": 341,
+          "original_index": 373,
+          "phrase": "go ahead with",
+          "phrase_slug": "go_ahead_with",
+          "gloss_zh": "著手進行",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_go_ahead_with"
+        },
+        {
+          "formal_index": 343,
+          "original_index": 375,
+          "phrase": "catch up with",
+          "phrase_slug": "catch_up_with",
+          "gloss_zh": "趕上",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_catch_up_with"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_14",
+      "wave": 1,
+      "sequence": 14,
+      "topic": "業務協調",
+      "topic_lesson_index": 4,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 1,
+        "C": 5
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 359,
+          "original_index": 391,
+          "phrase": "break off",
+          "phrase_slug": "break_off",
+          "gloss_zh": "中斷；終止",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_break_off"
+        },
+        {
+          "formal_index": 193,
+          "original_index": 197,
+          "phrase": "interfere with",
+          "phrase_slug": "interfere_with",
+          "gloss_zh": "妨礙；干擾",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_interfere_with"
+        },
+        {
+          "formal_index": 229,
+          "original_index": 250,
+          "phrase": "leave to",
+          "phrase_slug": "leave_to",
+          "gloss_zh": "交由…處理",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_leave_to"
+        },
+        {
+          "formal_index": 264,
+          "original_index": 285,
+          "phrase": "interfere in",
+          "phrase_slug": "interfere_in",
+          "gloss_zh": "干涉",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_interfere_in"
+        },
+        {
+          "formal_index": 347,
+          "original_index": 379,
+          "phrase": "fall through",
+          "phrase_slug": "fall_through",
+          "gloss_zh": "落空；失敗",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_fall_through"
+        },
+        {
+          "formal_index": 348,
+          "original_index": 380,
+          "phrase": "follow through",
+          "phrase_slug": "follow_through",
+          "gloss_zh": "貫徹到底",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_follow_through"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_15",
+      "wave": 1,
+      "sequence": 15,
+      "topic": "人事與組織",
+      "topic_lesson_index": 1,
+      "item_count": 5,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 3,
+        "C": 0
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 102,
+          "original_index": 102,
+          "phrase": "clock in",
+          "phrase_slug": "clock_in",
+          "gloss_zh": "打卡上班",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_clock_in"
+        },
+        {
+          "formal_index": 157,
+          "original_index": 160,
+          "phrase": "move up",
+          "phrase_slug": "move_up",
+          "gloss_zh": "晉升；上移",
+          "difficulty": "A",
+          "candidate_item_id": "item_coll_move_up"
+        },
+        {
+          "formal_index": 63,
+          "original_index": 63,
+          "phrase": "fill in for",
+          "phrase_slug": "fill_in_for",
+          "gloss_zh": "代班；代替出勤",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_fill_in_for"
+        },
+        {
+          "formal_index": 68,
+          "original_index": 68,
+          "phrase": "hand over",
+          "phrase_slug": "hand_over",
+          "gloss_zh": "交出；移交",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_hand_over"
+        },
+        {
+          "formal_index": 91,
+          "original_index": 91,
+          "phrase": "take on",
+          "phrase_slug": "take_on",
+          "gloss_zh": "承擔；聘用",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_take_on"
+        }
+      ]
+    },
+    {
+      "lesson_id": "draft_coll_w1_16",
+      "wave": 1,
+      "sequence": 16,
+      "topic": "人事與組織",
+      "topic_lesson_index": 2,
+      "item_count": 4,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 3,
+        "C": 1
+      },
+      "build_policy": {
+        "direct_definition_limit_per_phrase": 1,
+        "follow_up_types": [
+          "collocation",
+          "part5_sentence_completion",
+          "part6_context_choice"
+        ],
+        "review_strategy": "known phrases stay out of core lessons; unknown phrases use staircase progression"
+      },
+      "items": [
+        {
+          "formal_index": 174,
+          "original_index": 177,
+          "phrase": "answer to",
+          "phrase_slug": "answer_to",
+          "gloss_zh": "對…負責；聽命於",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_answer_to"
+        },
+        {
+          "formal_index": 240,
+          "original_index": 261,
+          "phrase": "adjust to",
+          "phrase_slug": "adjust_to",
+          "gloss_zh": "適應；調整到",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_adjust_to"
+        },
+        {
+          "formal_index": 400,
+          "original_index": 439,
+          "phrase": "fit in with",
+          "phrase_slug": "fit_in_with",
+          "gloss_zh": "與…相配；融入",
+          "difficulty": "B",
+          "candidate_item_id": "item_coll_fit_in_with"
+        },
+        {
+          "formal_index": 401,
+          "original_index": 440,
+          "phrase": "fall in with",
+          "phrase_slug": "fall_in_with",
+          "gloss_zh": "同意；偶然加入",
+          "difficulty": "C",
+          "candidate_item_id": "item_coll_fall_in_with"
+        }
+      ]
+    }
+  ]
+}

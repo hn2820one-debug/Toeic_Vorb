@@ -22,29 +22,29 @@ function callRender() {
 export function renderSettings() {
   return `
     <section class="tracker-panel">
-      <h3>Settings</h3>
+      <h3>設定</h3>
       <div class="settings-grid">
-        <label><span>User</span><input id="setting-user" value="${html(state.user?.display_name || "Keith")}"></label>
-        <label><span>Baseline Score</span><input id="setting-baseline" type="number" value="${html(state.user?.baseline_score || 570)}"></label>
-        <label><span>Target Score</span><input id="setting-target" type="number" value="${html(state.user?.target_score || 750)}"></label>
-        <label><span>Planned Lessons / Week</span><input id="setting-weekly" type="number" min="1" max="14" value="${html(state.prefs.planned_lessons_this_week || 5)}"></label>
+        <label><span>使用者</span><input id="setting-user" value="${html(state.user?.display_name || "Keith")}"></label>
+        <label><span>起始分數</span><input id="setting-baseline" type="number" value="${html(state.user?.baseline_score || 570)}"></label>
+        <label><span>目標分數</span><input id="setting-target" type="number" value="${html(state.user?.target_score || 750)}"></label>
+        <label><span>每週規劃課數</span><input id="setting-weekly" type="number" min="1" max="14" value="${html(state.prefs.planned_lessons_this_week || 5)}"></label>
         <label><span>每日目標題數</span><input id="setting-daily-goal" type="number" min="10" max="200" value="${html(state.prefs.daily_goal_questions || 30)}"></label>
       </div>
       <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.saveSettings()">Save Settings</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.clearActiveSession()">Clear Active Lesson Resume</button>
+        <button class="button primary" type="button" onclick="VocabTracker.saveSettings()">儲存設定</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.clearActiveSession()">清除目前課程續作</button>
       </div>
     </section>
     <section class="tracker-panel">
       <h3>進階工具</h3>
       <p class="muted-note">資料匯出與題庫管理屬於進階功能，建議學習完一個 stage 後使用。</p>
       <div class="tracker-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">Export 資料匯出</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.setView('bank')">Question Bank 題庫管理</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">資料匯出</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.setView('bank')">題庫管理</button>
       </div>
     </section>
     <section class="tracker-panel">
-      <h3>Local Stores</h3>
+      <h3>本機資料儲存</h3>
       <div class="stage-list">
         <div class="stage-row"><span>users</span><strong>1</strong></div>
         <div class="stage-row"><span>lessons</span><strong>${state.lessons.length}</strong></div>
@@ -72,7 +72,7 @@ export async function saveSettings() {
     daily_goal_questions: Number($("setting-daily-goal")?.value || 30)
   });
   await loadData();
-  setNotice("Settings saved.", "ok");
+  setNotice("設定已儲存。", "ok");
   callRender();
 }
 

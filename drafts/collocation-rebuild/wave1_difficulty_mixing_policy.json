@@ -1,0 +1,554 @@
+{
+  "generated_at": "2026-05-17T22:43:15.366Z",
+  "policy_version": "wave1_phase4_difficulty_mixing_v1",
+  "reference_role": "ability_signal_only",
+  "production_impact": "none",
+  "source_files": [
+    "drafts/collocation-rebuild/wave1_lesson_blueprint.json",
+    "drafts/collocation-rebuild/wave1_app_lesson_draft.json",
+    "drafts/collocation-rebuild/wave1_question_plan.json",
+    "drafts/collocation-rebuild/wave1_missing_item_backlog.json",
+    "drafts/collocation-rebuild/wave1_question_shells.json"
+  ],
+  "content_generation_note": "Draft-only difficulty and slot-mixing policy for Wave 1 collocation authoring. It is not production curriculum data.",
+  "scope": {
+    "stage": "V3",
+    "lesson_type": "collocation",
+    "wave": 1,
+    "lesson_count": 16,
+    "target_item_count": 100,
+    "question_shell_count": 384
+  },
+  "difficulty_code_meaning": {
+    "A": "foundation or high-frequency operational collocation",
+    "B": "intermediate TOEIC workplace collocation",
+    "C": "advanced, abstract, formal, or easily confused collocation"
+  },
+  "target_item_policy": {
+    "source_difficulty_is_authoring_signal": true,
+    "all_wave1_targets_require_seed_review": true,
+    "unresolved_target_count": 100,
+    "missing_item_count": 100,
+    "ambiguous_item_count": 0,
+    "rule": "Do not merge Wave 1 questions until every target item row has been manually reviewed as a production vocab item."
+  },
+  "lesson_mixing_policy": {
+    "target_items_per_lesson": "4-7",
+    "preserve_topic_order": true,
+    "do_not_force_cross_topic_difficulty_balance": true,
+    "c_item_rule": "If a lesson contains C items, assign those items extra reinforcement and review pressure before easier items.",
+    "all_a_lesson_rule": "All-A lessons are allowed when the topic slice naturally starts with foundation phrases.",
+    "ambiguity_rule": "Do not place visually similar collocations in one lesson unless the authored contexts make the correct answer unambiguous."
+  },
+  "question_slot_policy": {
+    "core_slots_per_lesson": 20,
+    "review_slots_per_lesson": 4,
+    "per_target_minimum": [
+      "collocation",
+      "part5_sentence_completion"
+    ],
+    "reinforcement_cycle": [
+      "part6_context_choice",
+      "collocation"
+    ],
+    "reinforcement_priority": [
+      "C",
+      "B",
+      "A"
+    ],
+    "review_priority": [
+      "C",
+      "B",
+      "A"
+    ],
+    "review_question_rule": "Review slots are draft review pressure inside the authoring plan; mixed-review production architecture is still Phase 8."
+  },
+  "totals": {
+    "target_difficulty_counts": {
+      "A": 36,
+      "B": 51,
+      "C": 13
+    },
+    "slot_difficulty_counts": {
+      "A": 121,
+      "B": 203,
+      "C": 60
+    },
+    "planned_type_counts": {
+      "collocation": 124,
+      "part5_sentence_completion": 100,
+      "part6_context_choice": 96,
+      "review_question": 64
+    },
+    "lessons_with_c_items": 5,
+    "all_a_lessons": 3
+  },
+  "lessons": [
+    {
+      "lesson_id": "V3-W1-01",
+      "source_blueprint_lesson_id": "draft_coll_w1_01",
+      "topic": "辦公室",
+      "topic_lesson_index": 1,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "A",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 24
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-02",
+      "source_blueprint_lesson_id": "draft_coll_w1_02",
+      "topic": "辦公室",
+      "topic_lesson_index": 2,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 5,
+        "B": 2,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 16,
+        "B": 8
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-03",
+      "source_blueprint_lesson_id": "draft_coll_w1_03",
+      "topic": "辦公室",
+      "topic_lesson_index": 3,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 6,
+        "C": 1
+      },
+      "has_c_items": true,
+      "max_target_difficulty": "C",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 20,
+        "C": 4
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "Contains advanced targets; extra reinforcement and review pressure should prioritize C then B items."
+    },
+    {
+      "lesson_id": "V3-W1-04",
+      "source_blueprint_lesson_id": "draft_coll_w1_04",
+      "topic": "文書作業",
+      "topic_lesson_index": 1,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "A",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 24
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-05",
+      "source_blueprint_lesson_id": "draft_coll_w1_05",
+      "topic": "文書作業",
+      "topic_lesson_index": 2,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "A",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 24
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-06",
+      "source_blueprint_lesson_id": "draft_coll_w1_06",
+      "topic": "文書作業",
+      "topic_lesson_index": 3,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 3,
+        "B": 4,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 8,
+        "B": 16
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-07",
+      "source_blueprint_lesson_id": "draft_coll_w1_07",
+      "topic": "文書作業",
+      "topic_lesson_index": 4,
+      "target_item_count": 6,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 3,
+        "C": 3
+      },
+      "has_c_items": true,
+      "max_target_difficulty": "C",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 10,
+        "C": 14
+      },
+      "planned_type_counts": {
+        "collocation": 8,
+        "part5_sentence_completion": 6,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "Contains advanced targets; extra reinforcement and review pressure should prioritize C then B items."
+    },
+    {
+      "lesson_id": "V3-W1-08",
+      "source_blueprint_lesson_id": "draft_coll_w1_08",
+      "topic": "商務會議",
+      "topic_lesson_index": 1,
+      "target_item_count": 6,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 24
+      },
+      "planned_type_counts": {
+        "collocation": 8,
+        "part5_sentence_completion": 6,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-09",
+      "source_blueprint_lesson_id": "draft_coll_w1_09",
+      "topic": "商務會議",
+      "topic_lesson_index": 2,
+      "target_item_count": 6,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 24
+      },
+      "planned_type_counts": {
+        "collocation": 8,
+        "part5_sentence_completion": 6,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-10",
+      "source_blueprint_lesson_id": "draft_coll_w1_10",
+      "topic": "商務會議",
+      "topic_lesson_index": 3,
+      "target_item_count": 5,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 2,
+        "C": 3
+      },
+      "has_c_items": true,
+      "max_target_difficulty": "C",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 9,
+        "C": 15
+      },
+      "planned_type_counts": {
+        "collocation": 10,
+        "part5_sentence_completion": 5,
+        "part6_context_choice": 5,
+        "review_question": 4
+      },
+      "mixing_note": "Contains advanced targets; extra reinforcement and review pressure should prioritize C then B items."
+    },
+    {
+      "lesson_id": "V3-W1-11",
+      "source_blueprint_lesson_id": "draft_coll_w1_11",
+      "topic": "業務協調",
+      "topic_lesson_index": 1,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 5,
+        "B": 2,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 16,
+        "B": 8
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-12",
+      "source_blueprint_lesson_id": "draft_coll_w1_12",
+      "topic": "業務協調",
+      "topic_lesson_index": 2,
+      "target_item_count": 7,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 7,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 24
+      },
+      "planned_type_counts": {
+        "collocation": 7,
+        "part5_sentence_completion": 7,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-13",
+      "source_blueprint_lesson_id": "draft_coll_w1_13",
+      "topic": "業務協調",
+      "topic_lesson_index": 3,
+      "target_item_count": 6,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 24
+      },
+      "planned_type_counts": {
+        "collocation": 8,
+        "part5_sentence_completion": 6,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-14",
+      "source_blueprint_lesson_id": "draft_coll_w1_14",
+      "topic": "業務協調",
+      "topic_lesson_index": 4,
+      "target_item_count": 6,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 1,
+        "C": 5
+      },
+      "has_c_items": true,
+      "max_target_difficulty": "C",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 3,
+        "C": 21
+      },
+      "planned_type_counts": {
+        "collocation": 8,
+        "part5_sentence_completion": 6,
+        "part6_context_choice": 6,
+        "review_question": 4
+      },
+      "mixing_note": "Contains advanced targets; extra reinforcement and review pressure should prioritize C then B items."
+    },
+    {
+      "lesson_id": "V3-W1-15",
+      "source_blueprint_lesson_id": "draft_coll_w1_15",
+      "topic": "人事與組織",
+      "topic_lesson_index": 1,
+      "target_item_count": 5,
+      "target_difficulty_counts": {
+        "A": 2,
+        "B": 3,
+        "C": 0
+      },
+      "has_c_items": false,
+      "max_target_difficulty": "B",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "A": 9,
+        "B": 15
+      },
+      "planned_type_counts": {
+        "collocation": 10,
+        "part5_sentence_completion": 5,
+        "part6_context_choice": 5,
+        "review_question": 4
+      },
+      "mixing_note": "No C targets; keep topic progression and avoid adding unrelated hard items only for balance."
+    },
+    {
+      "lesson_id": "V3-W1-16",
+      "source_blueprint_lesson_id": "draft_coll_w1_16",
+      "topic": "人事與組織",
+      "topic_lesson_index": 2,
+      "target_item_count": 4,
+      "target_difficulty_counts": {
+        "A": 0,
+        "B": 3,
+        "C": 1
+      },
+      "has_c_items": true,
+      "max_target_difficulty": "C",
+      "core_slot_count": 20,
+      "review_slot_count": 4,
+      "slot_difficulty_counts": {
+        "B": 18,
+        "C": 6
+      },
+      "planned_type_counts": {
+        "collocation": 8,
+        "part5_sentence_completion": 4,
+        "part6_context_choice": 8,
+        "review_question": 4
+      },
+      "mixing_note": "Contains advanced targets; extra reinforcement and review pressure should prioritize C then B items."
+    }
+  ],
+  "consistency_checks": {
+    "status": "passed",
+    "checked_at": "2026-05-17T22:43:15.368Z",
+    "checks": [
+      {
+        "id": "reference_role",
+        "pass": true,
+        "detail": "All Phase 4 inputs and outputs must remain reference-only."
+      },
+      {
+        "id": "lesson_count",
+        "pass": true,
+        "detail": "16 lesson rows, 16 blueprint lessons, 16 question-plan lessons."
+      },
+      {
+        "id": "target_item_count",
+        "pass": true,
+        "detail": "100 Wave 1 target items."
+      },
+      {
+        "id": "missing_item_count",
+        "pass": true,
+        "detail": "100 missing items, 100 draft seed rows."
+      },
+      {
+        "id": "question_slot_count",
+        "pass": true,
+        "detail": "384 planned slots, 384 question shells."
+      },
+      {
+        "id": "production_ready_flag",
+        "pass": true,
+        "detail": "Phase 4 is draft-only; production readiness is intentionally false in the reference bundle."
+      },
+      {
+        "id": "reference_duplicate_status",
+        "pass": true,
+        "detail": "0 exact duplicate groups; 341 near/confusable pairs for manual review."
+      }
+    ]
+  }
+}

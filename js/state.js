@@ -1,9 +1,9 @@
 export const LESSON_STEPS = [
-  { id: "previous_review", label: "Previous Quick Review", minutes: 5 },
-  { id: "new_vocabulary", label: "New Vocabulary", minutes: 10 },
-  { id: "pattern_focus", label: "Pattern / Collocation Focus", minutes: 10 },
-  { id: "toeic_practice", label: "TOEIC Practice", minutes: 15 },
-  { id: "error_review_scheduling", label: "Error Review + Scheduling", minutes: 5 }
+  { id: "previous_review", label: "上一輪快速複習", minutes: 5 },
+  { id: "new_vocabulary", label: "新單字學習", minutes: 10 },
+  { id: "pattern_focus", label: "句型 / 搭配詞聚焦", minutes: 10 },
+  { id: "toeic_practice", label: "TOEIC 練習", minutes: 15 },
+  { id: "error_review_scheduling", label: "錯題回顧與安排", minutes: 5 }
 ];
 
 export const PASS_STATUSES = new Set(["completed", "completed_with_reinforcement", "sealed"]);
@@ -73,28 +73,28 @@ export const state = {
 
 export function questionTypeLabel(type) {
   return {
-    meaning_choice: "Meaning",
-    word_family: "Word Family",
-    collocation: "Collocation",
-    formal_phrase: "Formal Phrase",
-    false_friend: "False Friend",
-    scene_vocabulary: "Scene Vocabulary",
+    meaning_choice: "詞義判斷",
+    word_family: "詞族變化",
+    collocation: "搭配詞",
+    formal_phrase: "正式用語",
+    false_friend: "易混字",
+    scene_vocabulary: "情境字彙",
     part5_sentence_completion: "Part 5",
-    part6_context_choice: "Part 6 Context",
-    speed_drill: "Speed Drill",
-    review_question: "Review"
-  }[type] || type || "Question";
+    part6_context_choice: "Part 6 語境",
+    speed_drill: "速度練習",
+    review_question: "複習題"
+  }[type] || type || "題型";
 }
 
 export function lessonTypeLabel(type) {
   return {
-    diagnostic: "Diagnostic",
-    word_family: "Word Family",
-    scene_vocabulary: "Scene Vocabulary",
-    collocation: "Collocation",
-    mixed_review: "Mixed Review",
-    speed_reflex: "Speed Reflex"
-  }[type] || type || "Lesson";
+    diagnostic: "診斷",
+    word_family: "詞族",
+    scene_vocabulary: "情境字彙",
+    collocation: "搭配詞",
+    mixed_review: "混合複習",
+    speed_reflex: "速度反應"
+  }[type] || type || "課程";
 }
 
 export function learningGuidance(question) {
@@ -171,12 +171,12 @@ export function statusLabel(status) {
 
 export function masteryLabel(level) {
   return {
-    blind: "Blind",
-    weak: "Weak",
-    unstable: "Unstable",
-    stable: "Stable",
-    mastered: "Mastered"
-  }[level] || "Blind";
+    blind: "陌生",
+    weak: "薄弱",
+    unstable: "不穩定",
+    stable: "穩定",
+    mastered: "精熟"
+  }[level] || "陌生";
 }
 
 export function optionText(question, answer) {

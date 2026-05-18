@@ -61,7 +61,7 @@ test("roadmap filters: controls render, filter lessons, and clear", async ({ pag
   await gotoProductionTracker(page);
   await setTrackerView(page, "roadmap");
 
-  await expect(page.locator(".tracker-panel h3", { hasText: "Curriculum Roadmap" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "課程地圖" })).toBeVisible({ timeout: STEP_TIMEOUT });
 
   const stageFilter = page.getByTestId("roadmap-filter-stage");
   const statusFilter = page.getByTestId("roadmap-filter-status");
@@ -72,19 +72,19 @@ test("roadmap filters: controls render, filter lessons, and clear", async ({ pag
   await expect(stageFilter).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(statusFilter).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(typeFilter).toBeVisible({ timeout: STEP_TIMEOUT });
-  await expect(summary).toContainText("193/193 lessons shown", { timeout: STEP_TIMEOUT });
+  await expect(summary).toContainText("193/193 課顯示中", { timeout: STEP_TIMEOUT });
   await expect(lessonRows).toHaveCount(193, { timeout: STEP_TIMEOUT });
 
   await stageFilter.selectOption("V2");
-  await expect(summary).toContainText("60/193 lessons shown", { timeout: STEP_TIMEOUT });
+  await expect(summary).toContainText("60/193 課顯示中", { timeout: STEP_TIMEOUT });
   await expect(lessonRows).toHaveCount(60, { timeout: STEP_TIMEOUT });
 
   await typeFilter.selectOption("mixed_review");
-  await expect(summary).toContainText("10/193 lessons shown", { timeout: STEP_TIMEOUT });
+  await expect(summary).toContainText("10/193 課顯示中", { timeout: STEP_TIMEOUT });
   await expect(lessonRows).toHaveCount(10, { timeout: STEP_TIMEOUT });
 
-  await page.getByRole("button", { name: "Clear Filters" }).click({ timeout: STEP_TIMEOUT });
-  await expect(summary).toContainText("193/193 lessons shown", { timeout: STEP_TIMEOUT });
+  await page.getByRole("button", { name: "清除篩選" }).click({ timeout: STEP_TIMEOUT });
+  await expect(summary).toContainText("193/193 課顯示中", { timeout: STEP_TIMEOUT });
   await expect(lessonRows).toHaveCount(193, { timeout: STEP_TIMEOUT });
 });
 
@@ -95,9 +95,9 @@ test("today dashboard: Stage Seal Readiness survives empty and populated V0 atte
   const v0SealCard = page.getByTestId("stage-seal-card-V0");
 
   await expect(stageSealPanel).toBeVisible({ timeout: STEP_TIMEOUT });
-  await expect(stageSealPanel).toContainText("Stage Seal Readiness", { timeout: STEP_TIMEOUT });
-  await expect(v0SealCard).toContainText("Open", { timeout: STEP_TIMEOUT });
-  await expect(v0SealCard).toContainText("need 20 attempts", { timeout: STEP_TIMEOUT });
+  await expect(stageSealPanel).toContainText("階段封關準備度", { timeout: STEP_TIMEOUT });
+  await expect(v0SealCard).toContainText("開放中", { timeout: STEP_TIMEOUT });
+  await expect(v0SealCard).toContainText("需至少 20 次作答", { timeout: STEP_TIMEOUT });
   await expect(page.getByTestId("diagnostic-recommendation")).toHaveCount(0);
 
   await seedReadyV0Attempts(page);
@@ -105,10 +105,10 @@ test("today dashboard: Stage Seal Readiness survives empty and populated V0 atte
   await waitForApp(page);
 
   await expect(page.getByTestId("diagnostic-recommendation")).toBeVisible({ timeout: STEP_TIMEOUT });
-  await expect(page.getByTestId("diagnostic-recommendation")).toContainText("Overall", { timeout: STEP_TIMEOUT });
-  await expect(page.getByTestId("diagnostic-recommendation")).toContainText("Recommended", { timeout: STEP_TIMEOUT });
-  await expect(v0SealCard).toContainText("Ready", { timeout: STEP_TIMEOUT });
-  await expect(v0SealCard).toContainText("Recent accuracy", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("diagnostic-recommendation")).toContainText("整體", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("diagnostic-recommendation")).toContainText("建議先從", { timeout: STEP_TIMEOUT });
+  await expect(v0SealCard).toContainText("可封關", { timeout: STEP_TIMEOUT });
+  await expect(v0SealCard).toContainText("近期正確率", { timeout: STEP_TIMEOUT });
   await expect(v0SealCard).toContainText("100%", { timeout: STEP_TIMEOUT });
 });
 
@@ -117,7 +117,7 @@ test("export inventory: expected analysis files are visible without downloading"
   await setTrackerView(page, "export");
 
   const inventory = page.getByTestId("export-file-inventory");
-  await expect(page.locator(".tracker-panel h3", { hasText: "Export Dashboard" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "匯出總覽" })).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(inventory).toBeVisible({ timeout: STEP_TIMEOUT });
 
   for (const fileName of [
@@ -155,14 +155,14 @@ test("question bank: search, pagination, and seed JSON export controls render", 
   await gotoProductionTracker(page);
   await setTrackerView(page, "bank");
 
-  await expect(page.locator(".tracker-panel h3", { hasText: "Question Bank Manager" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "題庫管理" })).toBeVisible({ timeout: STEP_TIMEOUT });
 
   const searchInput = page.getByTestId("question-bank-search");
   const questionCount = page.getByTestId("question-bank-count");
   const rows = page.getByTestId("question-bank-row");
 
   await expect(searchInput).toBeVisible({ timeout: STEP_TIMEOUT });
-  await expect(page.getByTestId("question-bank-local-warning")).toContainText("Browser edits are local IndexedDB edits", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("question-bank-local-warning")).toContainText("瀏覽器內的編輯只會寫進本機 IndexedDB", { timeout: STEP_TIMEOUT });
   await expect(questionCount).toContainText("4399", { timeout: STEP_TIMEOUT });
   await expect(page.getByTestId("question-bank-load-more")).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(page.getByTestId("question-bank-patch-export")).toBeVisible({ timeout: STEP_TIMEOUT });
@@ -183,9 +183,9 @@ test("stage seal: Today dashboard shows Wait checks with detail on not-ready sta
   await expect(v0Card).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(v0Card).toContainText("V0", { timeout: STEP_TIMEOUT });
   // With empty DB: lessons check fails (0/1 complete) and attempt-based checks show "need 20 attempts"
-  await expect(v0Card).toContainText("Wait", { timeout: STEP_TIMEOUT });
-  await expect(v0Card).toContainText("0/1 complete", { timeout: STEP_TIMEOUT });
-  await expect(v0Card).toContainText("need 20 attempts", { timeout: STEP_TIMEOUT });
+  await expect(v0Card).toContainText("待補", { timeout: STEP_TIMEOUT });
+  await expect(v0Card).toContainText("0/1 已完成", { timeout: STEP_TIMEOUT });
+  await expect(v0Card).toContainText("需至少 20 次作答", { timeout: STEP_TIMEOUT });
 });
 
 test("stage seal: attempting a V1 lesson when V0 is not ready shows soft warning", async ({ page }) => {
@@ -197,11 +197,11 @@ test("stage seal: attempting a V1 lesson when V0 is not ready shows soft warning
   const warning = page.getByTestId("stage-gate-warning");
   await expect(warning).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(warning).toContainText("V0", { timeout: STEP_TIMEOUT });
-  await expect(warning).toContainText("Stage Readiness Check", { timeout: STEP_TIMEOUT });
+  await expect(warning).toContainText("階段準備度檢查", { timeout: STEP_TIMEOUT });
 
   const reasons = page.getByTestId("stage-gate-reasons");
   await expect(reasons).toBeVisible({ timeout: STEP_TIMEOUT });
-  await expect(reasons).toContainText("Lessons", { timeout: STEP_TIMEOUT });
+  await expect(reasons).toContainText("課程完成", { timeout: STEP_TIMEOUT });
 });
 
 test("stage seal: Continue Anyway starts the lesson without blocking", async ({ page }) => {
@@ -222,12 +222,12 @@ test("stage seal: Go to Review Mode redirects when no items are due", async ({ p
   await page.evaluate(() => window.VocabTracker.startLesson("V1-A-11"));
   await expect(page.getByTestId("stage-gate-warning")).toBeVisible({ timeout: STEP_TIMEOUT });
 
-  await page.getByRole("button", { name: "Go to Review Mode" }).click();
+  await page.getByRole("button", { name: "先去複習模式" }).click();
 
   // With empty DB there are no due items; app navigates to Mistakes view
   // Scope to the main nav bar only (not the review filter tabs inside Mistakes view)
   const activeTab = page.locator("#tracker-tabs .tracker-tab.active");
-  await expect(activeTab).toContainText(/Review/, { timeout: STEP_TIMEOUT });
+  await expect(activeTab).toContainText(/複習/, { timeout: STEP_TIMEOUT });
 });
 
 test("stage seal: Cancel returns user to Today view", async ({ page }) => {
@@ -236,18 +236,18 @@ test("stage seal: Cancel returns user to Today view", async ({ page }) => {
   await page.evaluate(() => window.VocabTracker.startLesson("V1-A-11"));
   await expect(page.getByTestId("stage-gate-warning")).toBeVisible({ timeout: STEP_TIMEOUT });
 
-  await page.getByRole("button", { name: "Cancel" }).click();
+  await page.getByRole("button", { name: "取消" }).click();
 
   const activeTab = page.locator(".tracker-tab.active");
-  await expect(activeTab).toContainText(/Today/, { timeout: STEP_TIMEOUT });
+  await expect(activeTab).toContainText(/今日/, { timeout: STEP_TIMEOUT });
 });
 
 test("review mode: Mistakes view renders with heading and Start Review button", async ({ page }) => {
   await gotoProductionTracker(page);
   await setTrackerView(page, "mistakes");
 
-  await expect(page.locator(".tracker-panel h3", { hasText: "Review Mode" })).toBeVisible({ timeout: STEP_TIMEOUT });
-  await expect(page.getByRole("button", { name: /Start Review/ })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "複習模式" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.getByRole("button", { name: /開始複習/ })).toBeVisible({ timeout: STEP_TIMEOUT });
 });
 
 test("speed mode: V1-F-53 opens runtime with speed-mode class and countdown visible", async ({ page }) => {

@@ -1,0 +1,243 @@
+{
+  "generated_at": "2026-05-17T22:43:15.369Z",
+  "bundle_version": "wave1_reference_bundle_v1",
+  "reference_role": "ability_signal_only",
+  "status": "draft_only",
+  "production_impact": "none",
+  "scope": {
+    "program": "Program B - TOEIC Vocabulary Tracker",
+    "stage": "V3",
+    "lesson_type": "collocation",
+    "wave": 1,
+    "production_merge_allowed": false
+  },
+  "boundary_rules": [
+    "Do not modify Program A.",
+    "Do not enable V4.",
+    "Do not move V4 draft files into data/vocab/.",
+    "Do not import this bundle into production seed files without a later production merge task.",
+    "Do not treat TODO question shells as valid production questions."
+  ],
+  "source_files": [
+    {
+      "path": "drafts/collocation-rebuild/phrase_411_inventory.json",
+      "role": "ability inventory",
+      "sha256": "880e9fd35eef6b7292c92cfd2e85fa0841a8bb78f343024db8cf460113a65749"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_lesson_blueprint.json",
+      "role": "Wave 1 topic and lesson blueprint",
+      "sha256": "501baf0a40fb3ed0588c69e616f6a993138578cb412b7401d605336ed7676927"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_app_lesson_draft.json",
+      "role": "draft app lesson rows",
+      "sha256": "a5668022c295cf9d5c6123c814f91afacacf54887ec6b353d4c398fe3bed80cd"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_question_plan.json",
+      "role": "draft question slot plan",
+      "sha256": "d2437a0973a4ee30d25d3c7e363f4c5e019c7075e343452eadfc148218f9dee5"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_missing_item_backlog.json",
+      "role": "missing item backlog",
+      "sha256": "2cbad3f124a42d285e6d31952646bc2054552f2d25d0fc48551f7ff2c342cf74"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_vocab_items_seed_draft.json",
+      "role": "draft vocab item seed rows",
+      "sha256": "1bbb89b30fc1d7e21d4317063567a2a2b2af4c6466c02af88e816e058b10c615"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_question_shells.json",
+      "role": "draft TODO question shells",
+      "sha256": "83672a9a2a8ae0a7970dba399877002c7611b85e1a96b5bd1ef35f41a0f0cd8e"
+    },
+    {
+      "path": "drafts/collocation-rebuild/topic_normalization_table.json",
+      "role": "topic normalization table",
+      "sha256": "a7a515f47ccf0570b0dd5564606bbe6ef59a02c1f96a8e63dd2ab756845ec0fb"
+    },
+    {
+      "path": "drafts/collocation-rebuild/phrase_family_table.json",
+      "role": "phrase-family reference",
+      "sha256": "7383d48a1fd13ddd3666ef9c6e22c1e50f79a6f0ba42fb3e2b3be413e4efe20f"
+    },
+    {
+      "path": "drafts/collocation-rebuild/phrase_duplicate_reference.json",
+      "role": "duplicate and near-confusable reference",
+      "sha256": "23ae4c5bb2e219b74e978ff00bb31ea55e0688d975a8a3a5415b2bf7afd1568f"
+    },
+    {
+      "path": "drafts/collocation-rebuild/wave1_difficulty_mixing_policy.json",
+      "role": "Phase 4 difficulty and slot policy",
+      "sha256": "a533747db0225acc04dde2510c95b461ad19c57b47575d76d71285948c170ce4"
+    }
+  ],
+  "phase4_summary": {
+    "topic_priority_count": 5,
+    "wave1_lesson_count": 16,
+    "wave1_target_item_count": 100,
+    "target_difficulty_counts": {
+      "A": 36,
+      "B": 51,
+      "C": 13
+    },
+    "item_mapping": {
+      "production_matches": 0,
+      "missing_items": 100,
+      "ambiguous_phrase_matches": 0,
+      "draft_seed_rows": 100
+    },
+    "question_slots": {
+      "core": 320,
+      "review": 64,
+      "total": 384,
+      "planned_type_counts": {
+        "collocation": 124,
+        "part5_sentence_completion": 100,
+        "part6_context_choice": 96,
+        "review_question": 64
+      }
+    },
+    "reference_checks": {
+      "topic_count": 29,
+      "phrase_family_count": 83,
+      "exact_duplicate_groups": 0,
+      "near_confusable_pairs": 341
+    }
+  },
+  "topic_priority_matrix": [
+    {
+      "priority": 1,
+      "topic_id": "topic_26",
+      "topic": "辦公室",
+      "source_unknown_count": 21,
+      "source_known_count": 3,
+      "wave1_lesson_count": 3,
+      "wave1_target_count": 21,
+      "wave1_difficulty_counts": {
+        "A": 12,
+        "B": 8,
+        "C": 1
+      },
+      "policy_note": "Priority comes from the Wave 1 blueprint; topic IDs are planning labels only."
+    },
+    {
+      "priority": 2,
+      "topic_id": "topic_05",
+      "topic": "文書作業",
+      "source_unknown_count": 27,
+      "source_known_count": 7,
+      "wave1_lesson_count": 4,
+      "wave1_target_count": 27,
+      "wave1_difficulty_counts": {
+        "A": 17,
+        "B": 7,
+        "C": 3
+      },
+      "policy_note": "Priority comes from the Wave 1 blueprint; topic IDs are planning labels only."
+    },
+    {
+      "priority": 3,
+      "topic_id": "topic_17",
+      "topic": "商務會議",
+      "source_unknown_count": 17,
+      "source_known_count": 3,
+      "wave1_lesson_count": 3,
+      "wave1_target_count": 17,
+      "wave1_difficulty_counts": {
+        "B": 14,
+        "C": 3
+      },
+      "policy_note": "Priority comes from the Wave 1 blueprint; topic IDs are planning labels only."
+    },
+    {
+      "priority": 4,
+      "topic_id": "topic_20",
+      "topic": "業務協調",
+      "source_unknown_count": 26,
+      "source_known_count": 6,
+      "wave1_lesson_count": 4,
+      "wave1_target_count": 26,
+      "wave1_difficulty_counts": {
+        "A": 5,
+        "B": 16,
+        "C": 5
+      },
+      "policy_note": "Priority comes from the Wave 1 blueprint; topic IDs are planning labels only."
+    },
+    {
+      "priority": 5,
+      "topic_id": "topic_02",
+      "topic": "人事與組織",
+      "source_unknown_count": 9,
+      "source_known_count": 6,
+      "wave1_lesson_count": 2,
+      "wave1_target_count": 9,
+      "wave1_difficulty_counts": {
+        "A": 2,
+        "B": 6,
+        "C": 1
+      },
+      "policy_note": "Priority comes from the Wave 1 blueprint; topic IDs are planning labels only."
+    }
+  ],
+  "authoring_readiness": {
+    "item_seed_review_required": true,
+    "question_shell_authoring_required": true,
+    "production_ready": false,
+    "blockers": [
+      "100 Wave 1 target items are draft seed rows, not reviewed production vocab items.",
+      "384 Wave 1 question rows are TODO shells.",
+      "Production lesson IDs, file split, and manifest placement are not frozen until Step 40."
+    ]
+  },
+  "consistency_checks": {
+    "status": "passed",
+    "checked_at": "2026-05-17T22:43:15.368Z",
+    "checks": [
+      {
+        "id": "reference_role",
+        "pass": true,
+        "detail": "All Phase 4 inputs and outputs must remain reference-only."
+      },
+      {
+        "id": "lesson_count",
+        "pass": true,
+        "detail": "16 lesson rows, 16 blueprint lessons, 16 question-plan lessons."
+      },
+      {
+        "id": "target_item_count",
+        "pass": true,
+        "detail": "100 Wave 1 target items."
+      },
+      {
+        "id": "missing_item_count",
+        "pass": true,
+        "detail": "100 missing items, 100 draft seed rows."
+      },
+      {
+        "id": "question_slot_count",
+        "pass": true,
+        "detail": "384 planned slots, 384 question shells."
+      },
+      {
+        "id": "production_ready_flag",
+        "pass": true,
+        "detail": "Phase 4 is draft-only; production readiness is intentionally false in the reference bundle."
+      },
+      {
+        "id": "reference_duplicate_status",
+        "pass": true,
+        "detail": "0 exact duplicate groups; 341 near/confusable pairs for manual review."
+      }
+    ]
+  },
+  "next_use": [
+    "Use this bundle as the shared Wave 1 input for Phase 5 schema checks and Phase 9 authoring.",
+    "Use the difficulty policy to prioritize C and B targets for reinforcement, not to reshuffle topics blindly.",
+    "Use duplicate and phrase-family references for manual ambiguity checks before writing distractors."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "verified_at": "2026-05-18T00:36:01.785Z",
+  "script": "scripts/verify-phase10-slice.js",
+  "phase": 10,
+  "lesson_id": "V3-W1-01",
+  "status": "passed",
+  "summary": {
+    "checks_total": 17,
+    "checks_passed": 17,
+    "errors": 0,
+    "authored_question_rows": 24,
+    "authored_vocab_items": 7
+  },
+  "checks": [
+    {
+      "id": "apply_script_present",
+      "pass": true,
+      "detail": "Phase 10 slice authoring script exists and targets V3-W1-01.",
+      "severity": "error"
+    },
+    {
+      "id": "slice_question_count",
+      "pass": true,
+      "detail": "Lesson V3-W1-01 authored question rows = 24",
+      "severity": "error"
+    },
+    {
+      "id": "slice_question_id_alignment",
+      "pass": true,
+      "detail": "Lesson V3-W1-01 question_id coverage = 24",
+      "severity": "error"
+    },
+    {
+      "id": "question_target_alignment",
+      "pass": true,
+      "detail": "All 24 first-slice rows keep the expected question_id -> target_item_id mapping.",
+      "severity": "error"
+    },
+    {
+      "id": "no_todo_markers",
+      "pass": true,
+      "detail": "All first-slice question text, options, and explanations are authored (no TODO markers remain).",
+      "severity": "error"
+    },
+    {
+      "id": "option_schema_integrity",
+      "pass": true,
+      "detail": "All first-slice rows use exactly four non-empty A/B/C/D options, and correct_answer points to one of them.",
+      "severity": "error"
+    },
+    {
+      "id": "type_distribution",
+      "pass": true,
+      "detail": "Type counts = {\"collocation\":7,\"part5_sentence_completion\":7,\"part6_context_choice\":6,\"review_question\":4}",
+      "severity": "error"
+    },
+    {
+      "id": "review_format",
+      "pass": true,
+      "detail": "All four review rows use the V3 direct-meaning review format.",
+      "severity": "error"
+    },
+    {
+      "id": "part6_passage_shape",
+      "pass": true,
+      "detail": "All six Part 6 rows use multi-sentence passage-style prompts with a blank.",
+      "severity": "error"
+    },
+    {
+      "id": "type_policy_alignment",
+      "pass": true,
+      "detail": "All first-slice rows keep the expected skill, subskill, time, error-code, distractor, and slot-role policy by type.",
+      "severity": "error"
+    },
+    {
+      "id": "explanation_length",
+      "pass": true,
+      "detail": "All first-slice explanations are within the draft review length band (20-80 chars).",
+      "severity": "error"
+    },
+    {
+      "id": "question_text_unique",
+      "pass": true,
+      "detail": "All 24 first-slice question_text values are unique.",
+      "severity": "error"
+    },
+    {
+      "id": "item_example_coverage",
+      "pass": true,
+      "detail": "Authored vocab item examples = 7",
+      "severity": "error"
+    },
+    {
+      "id": "item_trap_metadata",
+      "pass": true,
+      "detail": "All seven authored vocab items include at least two common_wrong_forms trap cues.",
+      "severity": "error"
+    },
+    {
+      "id": "authored_metadata_alignment",
+      "pass": true,
+      "detail": "Question and vocab-row metadata both record authored-slice + reviewed Phase 10 status.",
+      "severity": "error"
+    },
+    {
+      "id": "artifact_note_alignment",
+      "pass": true,
+      "detail": "Draft artifact notes now reflect a mixed state: draft-only overall, with V3-W1-01 already authored.",
+      "severity": "error"
+    },
+    {
+      "id": "production_seed_unchanged",
+      "pass": true,
+      "detail": "Production curriculum seed, questions_v3a, and vocab_items remain unchanged after the draft-only slice authoring.",
+      "severity": "error"
+    }
+  ]
+}

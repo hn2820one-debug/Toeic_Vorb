@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-05-17T22:49:31.267Z",
+  "contract_version": "wave1_phase5_schema_contracts_v1",
+  "reference_role": "ability_signal_only",
+  "status": "draft_only",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "schema_ready": true,
+  "content_ready": false,
+  "authoring_ready": false,
+  "production_ready": false,
+  "readiness": {
+    "schema_ready": true,
+    "content_ready": false,
+    "authoring_ready": false,
+    "phase6_policy_ready": false,
+    "production_ready": false,
+    "production_merge_allowed": false,
+    "interpretation": "Phase 5 validates structural contracts only. It does not certify authored content, Phase 6 policies, or production merge readiness."
+  },
+  "source_files": [
+    "data/vocab/curriculum.json",
+    "data/vocab/vocab_items.json",
+    "data/vocab/grammar_links.json",
+    "docs/question-creation-spec.md",
+    "js/vocab-db.js",
+    "js/views/lesson.js",
+    "drafts/collocation-rebuild/wave1_reference_bundle_v1.json",
+    "drafts/collocation-rebuild/wave1_app_lesson_draft.json",
+    "drafts/collocation-rebuild/wave1_question_plan.json",
+    "drafts/collocation-rebuild/wave1_vocab_items_seed_draft.json",
+    "drafts/collocation-rebuild/wave1_question_shells.json"
+  ],
+  "scope": {
+    "program": "Program B - TOEIC Vocabulary Tracker",
+    "stage": "V3",
+    "lesson_type": "collocation",
+    "wave": 1,
+    "lesson_count": 16,
+    "question_shell_count": 384,
+    "draft_vocab_item_count": 100
+  },
+  "contracts": {
+    "curriculum_root": {
+      "required_fields": [
+        "course_id",
+        "course_name",
+        "schema_version",
+        "seed_version",
+        "generated_at",
+        "default_user",
+        "stages",
+        "lessons",
+        "question_files"
+      ],
+      "production_manifest_rule": "Only files listed in data/vocab/curriculum.json -> question_files are production question files.",
+      "seed_version_rule": "Production merges must sync seed_version in curriculum.json, js/vocab-db.js, and tests/helpers/seed-idb.ts."
+    },
+    "lesson": {
+      "required_fields": [
+        "lesson_id",
+        "stage",
+        "stage_name",
+        "lesson_number",
+        "title",
+        "estimated_minutes",
+        "lesson_type",
+        "topic",
+        "target_items",
+        "question_ids",
+        "review_question_ids",
+        "mastery_threshold",
+        "seal_threshold",
+        "status"
+      ],
+      "id_policy": "Draft IDs stay V3-W1-NN until Step 40 freezes production lesson IDs.",
+      "runtime_reference_rule": "question_ids and review_question_ids must reference valid question rows loaded from the production manifest after merge.",
+      "wave1_quota": {
+        "question_ids": 20,
+        "review_question_ids": 4,
+        "total_session_rows_if_all_loaded": 24
+      }
+    },
+    "question": {
+      "required_fields": [
+        "question_id",
+        "lesson_id",
+        "stage",
+        "type",
+        "skill",
+        "subskill",
+        "grammar_link_id",
+        "question_text",
+        "options",
+        "correct_answer",
+        "explanation_zh",
+        "target_item_id",
+        "distractor_type",
+        "difficulty",
+        "estimated_time_seconds",
+        "default_error_code",
+        "tags"
+      ],
+      "option_keys": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "valid_correct_answers": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "valid_types": [
+        "meaning_choice",
+        "scene_vocabulary",
+        "word_family",
+        "collocation",
+        "part5_sentence_completion",
+        "part6_context_choice",
+        "speed_drill",
+        "review_question",
+        "formal_phrase",
+        "false_friend"
+      ],
+      "wave1_allowed_types": [
+        "collocation",
+        "part5_sentence_completion",
+        "part6_context_choice",
+        "review_question"
+      ],
+      "wave1_stage": "V3",
+      "wave1_skill": "collocation",
+      "wave1_distractor_type": "wrong_verb_collocation",
+      "production_authoring_blockers": [
+        "question_text must be fully authored and globally unique",
+        "options must be real distractors, not TODO placeholders",
+        "explanation_zh must be Traditional Chinese and explain the rule/trap",
+        "target_item_id must exist in production vocab_items.json after item merge"
+      ]
+    },
+    "vocab_item": {
+      "required_fields": [
+        "item_id",
+        "item_type",
+        "stage",
+        "lesson_id",
+        "lesson_ids",
+        "base_word",
+        "variants",
+        "chinese",
+        "example",
+        "common_wrong_forms",
+        "toeic_contexts",
+        "review_priority",
+        "mastery_score",
+        "mastery_level"
+      ],
+      "wave1_item_type": "collocation",
+      "production_authoring_blockers": [
+        "example must be non-empty before production merge",
+        "chinese must be reviewed for the intended collocation sense",
+        "lesson_ids must point to the final production lesson IDs after Step 40"
+      ]
+    }
+  },
+  "runtime_dependencies": {
+    "indexeddb_stores": {
+      "lessons": "keyPath lesson_id; indexes stage, status, lesson_type",
+      "questions": "keyPath question_id; indexes lesson_id, stage, type, default_error_code, target_item_id",
+      "vocab_items": "keyPath item_id; indexes item_type, mastery_level, next_review_date"
+    },
+    "lesson_view_requires": [
+      "question_text",
+      "options.A-D",
+      "correct_answer",
+      "target_item_id",
+      "default_error_code",
+      "estimated_time_seconds",
+      "grammar_link_id"
+    ],
+    "seeding_requires": [
+      "curriculum.question_files",
+      "curriculum.lessons",
+      "question arrays from data/vocab/*.json",
+      "data/vocab/vocab_items.json"
+    ]
+  },
+  "current_counts": {
+    "question_type_counts": {
+      "collocation": 124,
+      "part5_sentence_completion": 100,
+      "part6_context_choice": 96,
+      "review_question": 64
+    },
+    "slot_role_counts": {
+      "core": 320,
+      "review": 64
+    },
+    "draft_target_item_count": 100,
+    "todo_question_shells": 384,
+    "blank_draft_item_examples": 100
+  },
+  "blocking_authoring_gaps": [
+    {
+      "id": "todo_question_shells",
+      "count": 384,
+      "total": 384,
+      "blocks": [
+        "authoring_ready",
+        "content_ready",
+        "production_ready"
+      ],
+      "required_action": "Replace TODO question_text, options, and explanation_zh with fully authored TOEIC content."
+    },
+    {
+      "id": "blank_draft_item_examples",
+      "count": 100,
+      "total": 100,
+      "blocks": [
+        "content_ready",
+        "production_ready"
+      ],
+      "required_action": "Add reviewed example sentences to Wave 1 vocab item rows before production merge."
+    },
+    {
+      "id": "phase6_policy_gaps",
+      "count": 5,
+      "blocks": [
+        "authoring_ready",
+        "production_ready"
+      ],
+      "required_action": "Complete semantic_sense/target_item_id policy, distractor-bank schema, explanation rubric, source-of-truth workflow alignment, and reference doc sync."
+    }
+  ],
+  "consistency_checks": {
+    "status": "passed",
+    "checked_at": "2026-05-17T22:49:31.266Z",
+    "checks": [
+      {
+        "id": "curriculum_shape",
+        "pass": true,
+        "detail": "curriculum.json required root fields present; production lessons currently 0."
+      },
+      {
+        "id": "phase4_bundle_status",
+        "pass": true,
+        "detail": "Phase 4 bundle is draft-only and production merge is disabled."
+      },
+      {
+        "id": "lesson_contract",
+        "pass": true,
+        "detail": "16 draft lessons satisfy required lesson fields and question references."
+      },
+      {
+        "id": "question_contract",
+        "pass": true,
+        "detail": "384 draft question shells satisfy structural question fields and target references."
+      },
+      {
+        "id": "vocab_item_contract",
+        "pass": true,
+        "detail": "100 draft vocab item rows satisfy structural fields."
+      },
+      {
+        "id": "quota_contract",
+        "pass": true,
+        "detail": "16 lessons use 20 core + 4 review draft quota."
+      },
+      {
+        "id": "authoring_content_status",
+        "pass": true,
+        "detail": "384/384 question rows are TODO shells; 100/100 draft item examples are blank. This is expected before authoring but blocks production merge."
+      }
+    ]
+  },
+  "next_phase_inputs": {
+    "phase6_needs": [
+      "semantic_sense and target_item_id policy for direct-definition control",
+      "distractor-bank schema",
+      "explanation_zh rubric",
+      "source-of-truth workflow alignment",
+      "core reference doc synchronization"
+    ],
+    "phase9_authoring_can_use": [
+      "lesson required fields",
+      "question required fields",
+      "vocab item required fields",
+      "20 core + 4 review quota"
+    ]
+  }
+}

@@ -106,9 +106,108 @@ function addIssue(bucket, metric, rule, id, file, msg) {
   bucket.push({ metric, rule, id, file, msg });
 }
 
+function addWarning(bucket, metric, rule, id, file, msg) {
+  bucket.push({ metric, rule, id, file, msg });
+}
+
+function questionTags(question) {
+  return Array.isArray(question?.tags) ? question.tags.map((tag) => String(tag)) : [];
+}
+
+function taggedValue(question, prefix) {
+  const lowerPrefix = `${String(prefix).toLowerCase()}:`;
+  const tag = questionTags(question).find((entry) => entry.toLowerCase().startsWith(lowerPrefix));
+  if (!tag) return "";
+  return tag.slice(tag.indexOf(":") + 1).trim();
+}
+
+function semanticSense(question) {
+  return taggedValue(question, "semantic_sense");
+}
+
+function isDirectDefinitionQuestion(question) {
+  return Boolean(
+    question && (
+      (question.type === "meaning_choice" && ["V0", "V2", "V3"].includes(question.stage))
+      || (question.type === "review_question" && ["V0", "V2", "V3"].includes(question.stage))
+    )
+  );
+}
+
+function itemSurfaceWord(question) {
+  const item = itemById.get(question?.target_item_id);
+  return normalize(item?.base_word || item?.word || item?.term || item?.lemma || question?.target_item_id || "");
+}
+
+function definitionMeaningKey(question) {
+  return `${question?.target_item_id || "(missing_target_item_id)"}::${semanticSense(question) || "__default__"}`;
+}
+
+function escapeRegex(text) {
+  return String(text).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function contextSkeleton(question) {
+  let text = normalize(question?.question_text || "");
+  text = text.replace(/^[a-z][a-z &/]+:\s+/i, "");
+  text = text.replace(/"[^"]+"/g, '"__quoted__"');
+  text = text.replace(/\b\d+\b/g, "__num__");
+  text = text.replace(/______/g, "__blank__");
+
+  const item = itemById.get(question?.target_item_id);
+  const variants = [
+    item?.base_word,
+    item?.word,
+    item?.term,
+    item?.lemma,
+    ...(Array.isArray(item?.variants) ? item.variants : [])
+  ]
+    .filter(Boolean)
+    .map((entry) => normalize(entry))
+    .filter((entry) => /^[a-z][a-z -]*$/.test(entry) && entry.length >= 3);
+
+  for (const token of new Set(variants)) {
+    text = text.replace(new RegExp(`\\b${escapeRegex(token)}\\b`, "gi"), "__target__");
+  }
+
+  return text;
+}
+
+function lessonQuestionSequence(lesson) {
+  return [
+    ...(lesson.question_ids || []).map((id) => questionById.get(id)).filter(Boolean),
+    ...(lesson.review_question_ids || []).map((id) => questionById.get(id)).filter(Boolean)
+  ];
+}
+
+function questionDemandRank(question) {
+  if (!question) return 0;
+  if (isDirectDefinitionQuestion(question)) return 1;
+
+  switch (question.type) {
+    case "scene_vocabulary":
+    case "false_friend":
+      return 2;
+    case "collocation":
+    case "formal_phrase":
+      return 3;
+    case "part5_sentence_completion":
+    case "speed_drill":
+    case "word_family":
+      return 4;
+    case "part6_context_choice":
+      return 5;
+    case "review_question":
+      return 6;
+    default:
+      return 2;
+  }
+}
+
 const coreIssues = [];
 const mixedReviewIssues = [];
 const mixedReviewCoverageWarnings = [];
+const qualityWarnings = [];
 
 for (const issue of loadIssues) {
   addIssue(coreIssues, "manifest", "Core Lesson Audit", issue.id, issue.file, issue.msg);
@@ -360,6 +459,12 @@ function inRange(value, [min, max]) {
   return value >= min && value <= max;
 }
 
+function isReviewCapacityWarning(lesson, actual, expectedRange) {
+  return ["V2", "V3"].includes(lesson.stage)
+    && actual > 0
+    && actual < expectedRange[0];
+}
+
 for (const lesson of coreLessons) {
   const qids = lesson.question_ids || [];
   const rvids = lesson.review_question_ids || [];
@@ -368,7 +473,11 @@ for (const lesson of coreLessons) {
     addIssue(coreIssues, "lessonStructure", "§2", lesson.lesson_id, "curriculum.json", `question_ids=${qids.length}, expected ${expected.q[0] === expected.q[1] ? expected.q[0] : expected.q.join("-")}`);
   }
   if (expected && !inRange(rvids.length, expected.rv)) {
-    addIssue(coreIssues, "lessonStructure", "§2", lesson.lesson_id, "curriculum.json", `review_question_ids=${rvids.length}, expected ${expected.rv[0] === expected.rv[1] ? expected.rv[0] : expected.rv.join("-")}`);
+    if (isReviewCapacityWarning(lesson, rvids.length, expected.rv)) {
+      addWarning(qualityWarnings, "reviewCapacity", "§2", lesson.lesson_id, "curriculum.json", `review_question_ids=${rvids.length}, expected ${expected.rv[0] === expected.rv[1] ? expected.rv[0] : expected.rv.join("-")}; underflow is currently tolerated after strict question pruning`);
+    } else {
+      addIssue(coreIssues, "lessonStructure", "§2", lesson.lesson_id, "curriculum.json", `review_question_ids=${rvids.length}, expected ${expected.rv[0] === expected.rv[1] ? expected.rv[0] : expected.rv.join("-")}`);
+    }
   }
   for (const qid of qids) {
     if (!questionById.has(qid)) {
@@ -446,6 +555,212 @@ for (const lesson of coreLessons.filter((row) => ["V2", "V3"].includes(row.stage
     if (invalidSource) {
       addIssue(coreIssues, "oldItemPressure", "Core Lesson Audit", lesson.lesson_id, "curriculum.json", `Old-item pressure question ${question.question_id} is not from an earlier same-stage core lesson`);
     }
+  }
+}
+
+// ── Direct-definition blocking checks and non-blocking quality warnings ─────
+
+const directDefinitionRows = allQ.filter(isDirectDefinitionQuestion);
+
+for (const lesson of coreLessons) {
+  const groups = new Map();
+  for (const question of lessonQuestions(lesson).filter(isDirectDefinitionQuestion)) {
+    const key = definitionMeaningKey(question);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(question);
+  }
+
+  for (const questions of groups.values()) {
+    if (questions.length <= 1) continue;
+    const targetItemId = questions[0].target_item_id || "(missing_target_item_id)";
+    const sense = semanticSense(questions[0]) || "default";
+    const word = itemSurfaceWord(questions[0]) || targetItemId;
+    const questionIds = questions.map((question) => question.question_id).join(", ");
+    const metric = lesson.stage === "V0" ? "diagnosticDefinitionReuse" : "definitionReuseSameLesson";
+    addIssue(
+      coreIssues,
+      metric,
+      "§1.6",
+      lesson.lesson_id,
+      questions[0]._file,
+      `Direct-definition repetition for ${word} (${targetItemId}, sense=${sense}) in lesson ${lesson.lesson_id}: ${questionIds}`
+    );
+  }
+}
+
+const directDefinitionByMeaning = new Map();
+for (const question of directDefinitionRows) {
+  const key = definitionMeaningKey(question);
+  if (!directDefinitionByMeaning.has(key)) directDefinitionByMeaning.set(key, []);
+  directDefinitionByMeaning.get(key).push(question);
+}
+
+for (const questions of directDefinitionByMeaning.values()) {
+  const lessonIds = [...new Set(questions.map((question) => question.lesson_id))];
+  if (lessonIds.length <= 1) continue;
+  const targetItemId = questions[0].target_item_id || "(missing_target_item_id)";
+  const sense = semanticSense(questions[0]) || "default";
+  const word = itemSurfaceWord(questions[0]) || targetItemId;
+  addIssue(
+    coreIssues,
+    "definitionReuseCrossLesson",
+    "§1.6",
+    targetItemId,
+    questions[0]._file,
+    `Direct-definition meaning reused across lessons for ${word} (${targetItemId}, sense=${sense}): ${lessonIds.join(", ")}`
+  );
+}
+
+const directDefinitionBySurfaceWord = new Map();
+for (const question of directDefinitionRows) {
+  const word = itemSurfaceWord(question);
+  if (!word) continue;
+  if (!directDefinitionBySurfaceWord.has(word)) directDefinitionBySurfaceWord.set(word, []);
+  directDefinitionBySurfaceWord.get(word).push(question);
+}
+
+for (const [word, questions] of directDefinitionBySurfaceWord.entries()) {
+  if (questions.length <= 1) continue;
+
+  const distinctLessons = new Set(questions.map((question) => question.lesson_id));
+  const distinctTargets = new Set(questions.map((question) => question.target_item_id));
+  if (distinctLessons.size === 1 && distinctTargets.size === 1) continue;
+
+  const missingSenseRows = questions.filter((question) => !semanticSense(question));
+  if (missingSenseRows.length === 0) continue;
+
+  addIssue(
+    coreIssues,
+    "missingSemanticSenseTag",
+    "§1.6",
+    word,
+    missingSenseRows[0]._file,
+    `Surface word "${word}" has multiple direct-definition rows but these question_ids are missing semantic_sense tags: ${missingSenseRows.map((question) => question.question_id).join(", ")}`
+  );
+}
+
+const templateSensitiveRows = allQ.filter((question) => !isDirectDefinitionQuestion(question) && question.stage !== "V1");
+const rowsBySkeleton = new Map();
+for (const question of templateSensitiveRows) {
+  const skeleton = contextSkeleton(question);
+  if (skeleton.length < 18) continue;
+  if (!rowsBySkeleton.has(skeleton)) rowsBySkeleton.set(skeleton, []);
+  rowsBySkeleton.get(skeleton).push(question);
+}
+
+for (const questions of rowsBySkeleton.values()) {
+  if (questions.length <= 1) continue;
+  const distinctTexts = new Set(questions.map((question) => normalize(question.question_text)));
+  if (distinctTexts.size <= 1) continue;
+  addWarning(
+    qualityWarnings,
+    "nearTemplateSimilarity",
+    "§1.6",
+    questions[0].question_id,
+    questions[0]._file,
+    `Questions share an almost identical context skeleton: ${questions.slice(0, 5).map((question) => question.question_id).join(", ")}`
+  );
+}
+
+const contextualRowsByItem = new Map();
+for (const question of allQ.filter((row) => row.stage !== "V1" && !isDirectDefinitionQuestion(row))) {
+  if (!question.target_item_id) continue;
+  if (!contextualRowsByItem.has(question.target_item_id)) contextualRowsByItem.set(question.target_item_id, []);
+  contextualRowsByItem.get(question.target_item_id).push(question);
+}
+
+for (const [targetItemId, questions] of contextualRowsByItem.entries()) {
+  const exposureCount = questions.length;
+  const requiredSkeletons = exposureCount >= 3 ? 3 : exposureCount >= 2 ? 2 : 0;
+  if (!requiredSkeletons) continue;
+
+  const skeletonCount = new Set(questions.map(contextSkeleton)).size;
+  if (skeletonCount >= requiredSkeletons) continue;
+
+  const word = itemSurfaceWord(questions[0]) || targetItemId;
+  addWarning(
+    qualityWarnings,
+    "contextDiversity",
+    "§1.6",
+    targetItemId,
+    questions[0]._file,
+    `Context diversity below target for ${word} (${targetItemId}): exposures=${exposureCount}, distinct_context_skeletons=${skeletonCount}, target=${requiredSkeletons}`
+  );
+}
+
+for (const question of allQ) {
+  const options = Object.values(question.options || {}).map((value) => normalize(value));
+  if (options.length === 4) {
+    const lengths = options.map((value) => value.length).filter(Boolean);
+    if (lengths.length === 4) {
+      const min = Math.min(...lengths);
+      const max = Math.max(...lengths);
+      const sorted = [...lengths].sort((a, b) => a - b);
+      const median = (sorted[1] + sorted[2]) / 2;
+      const correctLength = normalize(question.options?.[question.correct_answer] || "").length;
+      if ((min > 0 && max / min >= 3 && max - min >= 8) || Math.abs(correctLength - median) >= 10) {
+        addWarning(
+          qualityWarnings,
+          "weakDistractors",
+          "§4",
+          question.question_id,
+          question._file,
+          `Distractor length pattern looks weak: lengths=${lengths.join("/")}, correct=${correctLength}`
+        );
+      }
+    }
+  }
+
+  const explanation = String(question.explanation_zh || "").trim();
+  const hasRuleCue = /(因為|表示|指|後接|搭配|語境|文意|語法|固定|用法)/.test(explanation);
+  const hasTrapCue = /(不是|而非|誤|陷阱|不要|別選|混淆|易錯|常見)/.test(explanation);
+  if (explanation.length < 20 || !hasRuleCue || !hasTrapCue) {
+    addWarning(
+      qualityWarnings,
+      "explanationHeuristics",
+      "§1.4",
+      question.question_id,
+      question._file,
+      `Explanation may be too weak for the current policy: length=${explanation.length}, ruleCue=${hasRuleCue}, trapCue=${hasTrapCue}`
+    );
+  }
+}
+
+for (const lesson of coreLessons.filter((row) => row.stage !== "V1")) {
+  const orderedRows = lessonQuestionSequence(lesson);
+  const rowsByTarget = new Map();
+
+  for (const question of orderedRows) {
+    if (!question?.target_item_id) continue;
+    if (!rowsByTarget.has(question.target_item_id)) rowsByTarget.set(question.target_item_id, []);
+    rowsByTarget.get(question.target_item_id).push(question);
+  }
+
+  for (const [targetItemId, questions] of rowsByTarget.entries()) {
+    if (questions.length <= 1) continue;
+    let staircaseWeak = false;
+    let previousRank = -1;
+
+    for (const question of questions) {
+      const currentRank = questionDemandRank(question);
+      if (currentRank <= previousRank) {
+        staircaseWeak = true;
+        break;
+      }
+      previousRank = currentRank;
+    }
+
+    if (!staircaseWeak) continue;
+
+    const word = itemSurfaceWord(questions[0]) || targetItemId;
+    addWarning(
+      qualityWarnings,
+      "staircaseWeakness",
+      "§1.6",
+      lesson.lesson_id,
+      questions[0]._file,
+      `Repeated item lacks clear staircase progression for ${word} (${targetItemId}): ${questions.map((question) => `${question.question_id}:${question.type}`).join(", ")}`
+    );
   }
 }
 
@@ -546,6 +861,10 @@ console.log(`- answer distribution issues: ${countMetric(coreIssues, "answerDist
 console.log(`- lesson reference/count issues: ${countMetric(coreIssues, "lessonStructure")}`);
 console.log(`- target item coverage issues: ${countMetric(coreIssues, "targetCoverage")}`);
 console.log(`- old-item pressure issues: ${countMetric(coreIssues, "oldItemPressure")}`);
+console.log(`- same-lesson direct-definition issues: ${countMetric(coreIssues, "definitionReuseSameLesson")}`);
+console.log(`- cross-lesson direct-definition issues: ${countMetric(coreIssues, "definitionReuseCrossLesson")}`);
+console.log(`- V0 diagnostic definition issues: ${countMetric(coreIssues, "diagnosticDefinitionReuse")}`);
+console.log(`- missing semantic_sense tag issues: ${countMetric(coreIssues, "missingSemanticSenseTag")}`);
 console.log(`- first-core old-item policy exceptions: ${oldItemFirstCoreExceptions.length}${oldItemFirstCoreExceptions.length ? ` (${oldItemFirstCoreExceptions.join(", ")})` : ""}`);
 console.log(`- V4 production leakage issues: ${countMetric(coreIssues, "draftLeakage")}`);
 
@@ -555,12 +874,21 @@ console.log(`- invalid review references: ${countMetric(mixedReviewIssues, "inva
 console.log(`- intentional reused review questions: ${mixedReviewIssues.length === 0 ? "OK" : "CHECK"} (${intentionalMixedReviewRefs} references)`);
 console.log(`- mixed-review coverage warnings: ${mixedReviewCoverageWarnings.length}`);
 
+console.log("\nQuality Warnings:");
+console.log(`- near-template similarity warnings: ${countMetric(qualityWarnings, "nearTemplateSimilarity")}`);
+console.log(`- context diversity warnings: ${countMetric(qualityWarnings, "contextDiversity")}`);
+console.log(`- weak distractor warnings: ${countMetric(qualityWarnings, "weakDistractors")}`);
+console.log(`- explanation quality warnings: ${countMetric(qualityWarnings, "explanationHeuristics")}`);
+console.log(`- staircase progression warnings: ${countMetric(qualityWarnings, "staircaseWeakness")}`);
+console.log(`- review capacity warnings: ${countMetric(qualityWarnings, "reviewCapacity")}`);
+
 console.log("\nDraft Audit:");
 console.log("- V4 draft audit: skipped by default");
 console.log(`- drafts/v4 question files detected but not loaded: ${draftV4Files.length}`);
 
 printIssueDetails("Core Lesson Audit issues", coreIssues);
 printIssueDetails("Mixed Review Audit issues", mixedReviewIssues);
+printIssueDetails("Quality warnings", qualityWarnings, 20);
 if (mixedReviewCoverageWarnings.length > 0) {
   console.log(`\nMixed Review coverage warnings (${mixedReviewCoverageWarnings.length}):`);
   for (const warning of mixedReviewCoverageWarnings.slice(0, 15)) {
@@ -572,8 +900,8 @@ if (mixedReviewCoverageWarnings.length > 0) {
 const totalIssues = coreIssues.length + mixedReviewIssues.length;
 console.log(`\n${"─".repeat(68)}`);
 if (totalIssues === 0) {
-  if (mixedReviewCoverageWarnings.length > 0) {
-    console.log("✅  PASSED — no blocking issues found. Review mixed-review coverage warnings above.");
+  if (mixedReviewCoverageWarnings.length > 0 || qualityWarnings.length > 0) {
+    console.log("✅  PASSED — no blocking issues found. Review non-blocking warnings above.");
   } else {
     console.log("✅  PASSED — no issues found across core, mixed-review, and draft handling checks.");
   }

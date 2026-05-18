@@ -1,0 +1,964 @@
+{
+  "artifact": "stage_map_v0_v3",
+  "artifact_version": "1.0",
+  "phase": 7,
+  "generated_at": "2026-05-18",
+  "status": "planning_frozen",
+  "reference_role": "planning_reference",
+  "production_impact": "none",
+  "production_merge_allowed": false,
+  "production_ready": false,
+  "program": "Program B — TOEIC Vocabulary Tracker",
+  "scope": "V0 through V3 — full stage map from empty production baseline",
+  "related_doc": "docs/plans/question-rebuild-phase07-stage-blueprints.md",
+  "stage_totals": {
+    "V0": {
+      "total_lessons": 1,
+      "core_lessons": 1,
+      "mixed_review_lessons": 0,
+      "total_question_rows": 31,
+      "question_files": [
+        "questions_v0.json"
+      ]
+    },
+    "V1": {
+      "total_lessons": 60,
+      "core_lessons": 60,
+      "mixed_review_lessons": 0,
+      "total_question_rows": 1728,
+      "question_files": [
+        "questions_v1a.json",
+        "questions_v1b.json",
+        "questions_v1c.json",
+        "questions_v1d.json",
+        "questions_v1e.json",
+        "questions_v1f.json"
+      ]
+    },
+    "V2": {
+      "total_lessons": 60,
+      "core_lessons": 50,
+      "mixed_review_lessons": 10,
+      "total_question_rows": 1200,
+      "question_files": [
+        "questions_v2a.json",
+        "questions_v2b.json",
+        "questions_v2c.json",
+        "questions_v2d.json",
+        "questions_v2e.json"
+      ],
+      "note": "Mixed-review lessons reuse existing review_question rows; they do not add new question rows."
+    },
+    "V3": {
+      "total_lessons": 72,
+      "core_lessons": 60,
+      "mixed_review_lessons": 12,
+      "total_question_rows": 1440,
+      "question_files": [
+        "questions_v3a.json",
+        "questions_v3b.json",
+        "questions_v3c.json",
+        "questions_v3d.json",
+        "questions_v3e.json",
+        "questions_v3f.json"
+      ],
+      "note": "Mixed-review lessons reuse existing review_question rows; they do not add new question rows."
+    },
+    "grand_total": {
+      "total_lessons": 193,
+      "total_question_rows": 4399,
+      "total_question_files": 18
+    }
+  },
+  "lesson_id_numbering": {
+    "policy": "Format {stage}-{group}-{nn} where nn is a global sequential number covering all V0-V3 core lessons. Mixed-review lessons use {stage}-MR-{nn} with a per-stage counter to avoid disrupting core ranges.",
+    "numbering_rationale": "V1 historically starts at 11 because V0 historically had 10 lessons later consolidated to 1. V2 starts at 71 after V1 ends at 70. V3 starts at 121 after V2 core ends at 120. Gaps after consolidation are intentional and preserved for ID stability.",
+    "question_id_format": "{stage_lower}_{lesson_id_lower}_q_{NNN} for core questions; {stage_lower}_{lesson_id_lower}_rv_{NNN} for review questions",
+    "ranges": {
+      "V0": {
+        "from": "V0-01",
+        "to": "V0-01",
+        "count": 1,
+        "notes": "Single diagnostic lesson; no group sub-letter needed."
+      },
+      "V1-A": {
+        "from": "V1-A-11",
+        "to": "V1-A-20",
+        "count": 10
+      },
+      "V1-B": {
+        "from": "V1-B-21",
+        "to": "V1-B-28",
+        "count": 8
+      },
+      "V1-C": {
+        "from": "V1-C-29",
+        "to": "V1-C-36",
+        "count": 8
+      },
+      "V1-D": {
+        "from": "V1-D-37",
+        "to": "V1-D-44",
+        "count": 8
+      },
+      "V1-E": {
+        "from": "V1-E-45",
+        "to": "V1-E-52",
+        "count": 8
+      },
+      "V1-F": {
+        "from": "V1-F-53",
+        "to": "V1-F-70",
+        "count": 18
+      },
+      "V2-A": {
+        "from": "V2-A-71",
+        "to": "V2-A-80",
+        "count": 10
+      },
+      "V2-B": {
+        "from": "V2-B-81",
+        "to": "V2-B-90",
+        "count": 10
+      },
+      "V2-C": {
+        "from": "V2-C-91",
+        "to": "V2-C-100",
+        "count": 10
+      },
+      "V2-D": {
+        "from": "V2-D-101",
+        "to": "V2-D-110",
+        "count": 10
+      },
+      "V2-E": {
+        "from": "V2-E-111",
+        "to": "V2-E-120",
+        "count": 10
+      },
+      "V2-MR": {
+        "from": "V2-MR-01",
+        "to": "V2-MR-10",
+        "count": 10,
+        "notes": "Mixed-review only; no new question rows."
+      },
+      "V3-A": {
+        "from": "V3-A-121",
+        "to": "V3-A-130",
+        "count": 10
+      },
+      "V3-B": {
+        "from": "V3-B-131",
+        "to": "V3-B-140",
+        "count": 10
+      },
+      "V3-C": {
+        "from": "V3-C-141",
+        "to": "V3-C-150",
+        "count": 10
+      },
+      "V3-D": {
+        "from": "V3-D-151",
+        "to": "V3-D-160",
+        "count": 10
+      },
+      "V3-E": {
+        "from": "V3-E-161",
+        "to": "V3-E-170",
+        "count": 10
+      },
+      "V3-F": {
+        "from": "V3-F-171",
+        "to": "V3-F-180",
+        "count": 10
+      },
+      "V3-MR": {
+        "from": "V3-MR-01",
+        "to": "V3-MR-12",
+        "count": 12,
+        "notes": "Mixed-review only; no new question rows."
+      }
+    }
+  },
+  "stages": {
+    "V0": {
+      "stage_name": "Diagnosis",
+      "blueprint_step": 32,
+      "distractor_type": "toeic_realistic",
+      "default_error_code": "VOCAB_UNKNOWN",
+      "difficulty_range": [
+        1,
+        2
+      ],
+      "lesson_groups": [
+        {
+          "group": "single",
+          "lesson_id": "V0-01",
+          "file": "questions_v0.json",
+          "lesson_type": "diagnostic",
+          "question_ids_count": 19,
+          "review_question_ids_count": 12,
+          "question_rows_per_lesson": 31,
+          "question_type_mix": {
+            "meaning_choice": 12,
+            "scene_vocabulary": 1,
+            "collocation": 1,
+            "formal_phrase": 1,
+            "false_friend": 1,
+            "part5_sentence_completion": 1,
+            "part6_context_choice": 1,
+            "speed_drill": 1,
+            "review_question": 12
+          },
+          "vocab_item_source": "Sampler across V1-V3 vocab items to establish a baseline ability profile before V1 starts."
+        }
+      ],
+      "total_question_rows": 31
+    },
+    "V1": {
+      "stage_name": "Word Family",
+      "blueprint_step": 33,
+      "distractor_type": "same_word_family",
+      "default_error_code": "WORD_FAMILY_POS",
+      "vocab_item_source": "Existing word_family items in data/vocab/vocab_items.json.",
+      "lesson_groups": [
+        {
+          "group": "A",
+          "lesson_id_range": {
+            "from": "V1-A-11",
+            "to": "V1-A-20"
+          },
+          "file": "questions_v1a.json",
+          "lesson_count": 10,
+          "lesson_type": "word_family",
+          "question_ids_per_lesson": 18,
+          "review_question_ids_per_lesson": 6,
+          "question_rows_per_lesson": 24,
+          "total_question_rows": 240,
+          "question_type_mix_per_lesson": {
+            "word_family": 8,
+            "part5_sentence_completion": 4,
+            "collocation": 2,
+            "speed_drill": 4,
+            "review_question": 6
+          }
+        },
+        {
+          "group": "B",
+          "lesson_id_range": {
+            "from": "V1-B-21",
+            "to": "V1-B-28"
+          },
+          "file": "questions_v1b.json",
+          "lesson_count": 8,
+          "lesson_type": "word_family",
+          "question_ids_per_lesson": 20,
+          "review_question_ids_per_lesson": 4,
+          "question_rows_per_lesson": 24,
+          "total_question_rows": 192,
+          "question_type_mix_per_lesson": {
+            "word_family": 8,
+            "part5_sentence_completion": 5,
+            "collocation": 3,
+            "speed_drill": 4,
+            "review_question": 4
+          }
+        },
+        {
+          "group": "C",
+          "lesson_id_range": {
+            "from": "V1-C-29",
+            "to": "V1-C-36"
+          },
+          "file": "questions_v1c.json",
+          "lesson_count": 8,
+          "lesson_type": "word_family",
+          "question_ids_per_lesson": 20,
+          "review_question_ids_per_lesson": 4,
+          "question_rows_per_lesson": 24,
+          "total_question_rows": 192,
+          "question_type_mix_per_lesson": {
+            "word_family": 8,
+            "part5_sentence_completion": 5,
+            "collocation": 3,
+            "speed_drill": 4,
+            "review_question": 4
+          }
+        },
+        {
+          "group": "D",
+          "lesson_id_range": {
+            "from": "V1-D-37",
+            "to": "V1-D-44"
+          },
+          "file": "questions_v1d.json",
+          "lesson_count": 8,
+          "lesson_type": "word_family",
+          "question_ids_per_lesson": 20,
+          "review_question_ids_per_lesson": 4,
+          "question_rows_per_lesson": 24,
+          "total_question_rows": 192,
+          "question_type_mix_per_lesson": {
+            "word_family": 8,
+            "part5_sentence_completion": 5,
+            "collocation": 3,
+            "speed_drill": 4,
+            "review_question": 4
+          }
+        },
+        {
+          "group": "E",
+          "lesson_id_range": {
+            "from": "V1-E-45",
+            "to": "V1-E-52"
+          },
+          "file": "questions_v1e.json",
+          "lesson_count": 8,
+          "lesson_type": "word_family",
+          "question_ids_per_lesson": 20,
+          "review_question_ids_per_lesson": 4,
+          "question_rows_per_lesson": 24,
+          "total_question_rows": 192,
+          "question_type_mix_per_lesson": {
+            "word_family": 8,
+            "part5_sentence_completion": 5,
+            "collocation": 3,
+            "speed_drill": 4,
+            "review_question": 4
+          }
+        },
+        {
+          "group": "F",
+          "lesson_id_range": {
+            "from": "V1-F-53",
+            "to": "V1-F-70"
+          },
+          "file": "questions_v1f.json",
+          "lesson_count": 18,
+          "lesson_type": "speed_drill",
+          "question_ids_per_lesson": 40,
+          "review_question_ids_per_lesson": 0,
+          "question_rows_per_lesson": 40,
+          "total_question_rows": 720,
+          "question_type_mix_per_lesson": {
+            "speed_drill": 40
+          },
+          "notes": "V1-F lessons are pure speed_drill; no review questions. All 40 sentences per lesson must be newly written — never copied from earlier V1 lessons."
+        }
+      ],
+      "total_question_rows": 1728
+    },
+    "V2": {
+      "stage_name": "TOEIC Scene Vocabulary",
+      "blueprint_step": 34,
+      "distractor_type": "same_scene_vocabulary",
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "vocab_item_source": "Scene vocabulary items in data/vocab/vocab_items.json, plus any new scene vocab items identified during authoring.",
+      "core_lesson_structure": {
+        "question_ids_base": 20,
+        "question_ids_with_review_pressure": "20 to 22",
+        "review_question_ids_per_lesson": 4,
+        "first_lesson_exception": "V2-A-71 has exactly 20 question_ids because no prior same-stage items exist for review pressure.",
+        "review_pressure_policy": "Lesson 2 adds 1 prior review_question row; lesson 3 onwards adds 2 prior review_question rows from earlier same-stage core lessons only."
+      },
+      "mixed_review_structure": {
+        "lesson_ids": "V2-MR-01 through V2-MR-10",
+        "assembly_script": "scripts/add-mixed-review-lessons.js",
+        "question_ids_per_lesson": 20,
+        "question_rows_created": 0,
+        "source_policy": "Each mixed_review lesson draws review_question_ids from the 5 preceding same-stage core lessons (4 review_questions × 5 = 20).",
+        "mixed_review_source_map": {
+          "V2-MR-01": [
+            "V2-A-71",
+            "V2-A-72",
+            "V2-A-73",
+            "V2-A-74",
+            "V2-A-75"
+          ],
+          "V2-MR-02": [
+            "V2-A-76",
+            "V2-A-77",
+            "V2-A-78",
+            "V2-A-79",
+            "V2-A-80"
+          ],
+          "V2-MR-03": [
+            "V2-B-81",
+            "V2-B-82",
+            "V2-B-83",
+            "V2-B-84",
+            "V2-B-85"
+          ],
+          "V2-MR-04": [
+            "V2-B-86",
+            "V2-B-87",
+            "V2-B-88",
+            "V2-B-89",
+            "V2-B-90"
+          ],
+          "V2-MR-05": [
+            "V2-C-91",
+            "V2-C-92",
+            "V2-C-93",
+            "V2-C-94",
+            "V2-C-95"
+          ],
+          "V2-MR-06": [
+            "V2-C-96",
+            "V2-C-97",
+            "V2-C-98",
+            "V2-C-99",
+            "V2-C-100"
+          ],
+          "V2-MR-07": [
+            "V2-D-101",
+            "V2-D-102",
+            "V2-D-103",
+            "V2-D-104",
+            "V2-D-105"
+          ],
+          "V2-MR-08": [
+            "V2-D-106",
+            "V2-D-107",
+            "V2-D-108",
+            "V2-D-109",
+            "V2-D-110"
+          ],
+          "V2-MR-09": [
+            "V2-E-111",
+            "V2-E-112",
+            "V2-E-113",
+            "V2-E-114",
+            "V2-E-115"
+          ],
+          "V2-MR-10": [
+            "V2-E-116",
+            "V2-E-117",
+            "V2-E-118",
+            "V2-E-119",
+            "V2-E-120"
+          ]
+        }
+      },
+      "lesson_groups": [
+        {
+          "group": "A",
+          "lesson_id_range": {
+            "from": "V2-A-71",
+            "to": "V2-A-80"
+          },
+          "file": "questions_v2a.json",
+          "lesson_count": 10,
+          "lesson_type": "scene_vocabulary",
+          "question_type_mix_per_lesson": {
+            "scene_vocabulary": 20,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "suggested_scenes": [
+            "HR",
+            "Staffing",
+            "Recruitment",
+            "Training",
+            "Performance Review"
+          ]
+        },
+        {
+          "group": "B",
+          "lesson_id_range": {
+            "from": "V2-B-81",
+            "to": "V2-B-90"
+          },
+          "file": "questions_v2b.json",
+          "lesson_count": 10,
+          "lesson_type": "scene_vocabulary",
+          "question_type_mix_per_lesson": {
+            "scene_vocabulary": 20,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "suggested_scenes": [
+            "Finance",
+            "Accounting",
+            "Banking",
+            "Budgeting",
+            "Payments"
+          ]
+        },
+        {
+          "group": "C",
+          "lesson_id_range": {
+            "from": "V2-C-91",
+            "to": "V2-C-100"
+          },
+          "file": "questions_v2c.json",
+          "lesson_count": 10,
+          "lesson_type": "scene_vocabulary",
+          "question_type_mix_per_lesson": {
+            "scene_vocabulary": 20,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "suggested_scenes": [
+            "Office Administration",
+            "Meetings",
+            "Correspondence",
+            "Scheduling"
+          ]
+        },
+        {
+          "group": "D",
+          "lesson_id_range": {
+            "from": "V2-D-101",
+            "to": "V2-D-110"
+          },
+          "file": "questions_v2d.json",
+          "lesson_count": 10,
+          "lesson_type": "scene_vocabulary",
+          "question_type_mix_per_lesson": {
+            "scene_vocabulary": 20,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "suggested_scenes": [
+            "Supply Chain",
+            "Purchasing",
+            "Inventory",
+            "Manufacturing",
+            "Logistics"
+          ]
+        },
+        {
+          "group": "E",
+          "lesson_id_range": {
+            "from": "V2-E-111",
+            "to": "V2-E-120"
+          },
+          "file": "questions_v2e.json",
+          "lesson_count": 10,
+          "lesson_type": "scene_vocabulary",
+          "question_type_mix_per_lesson": {
+            "scene_vocabulary": 20,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "suggested_scenes": [
+            "Customer Service",
+            "Marketing",
+            "Travel",
+            "Contracts",
+            "Legal"
+          ]
+        },
+        {
+          "group": "MR",
+          "lesson_id_range": {
+            "from": "V2-MR-01",
+            "to": "V2-MR-10"
+          },
+          "file": "no_new_rows",
+          "lesson_count": 10,
+          "lesson_type": "mixed_review",
+          "question_ids_per_lesson": 20,
+          "question_rows_created": 0
+        }
+      ],
+      "total_question_rows": 1200
+    },
+    "V3": {
+      "stage_name": "Collocation",
+      "blueprint_step": 35,
+      "distractor_type": "wrong_verb_collocation",
+      "default_error_code": "COLLOCATION_GAP",
+      "vocab_item_source": "Wave 1: 100 draft items in drafts/collocation-rebuild/wave1_vocab_items_seed_draft.json. Waves 2+: additional collocation items to be planned in future wave steps.",
+      "core_lesson_structure": {
+        "question_ids_base": 20,
+        "question_ids_with_review_pressure": "20 to 22",
+        "review_question_ids_per_lesson": 4,
+        "first_lesson_exception": "V3-A-121 has exactly 20 question_ids because no prior same-stage items exist for review pressure.",
+        "review_pressure_policy": "Lesson 2 adds 1 prior review_question row; lesson 3 onwards adds 2 prior review_question rows from earlier same-stage core lessons only.",
+        "question_type_mix_base_20": {
+          "part6_context_choice": 12,
+          "collocation": 4,
+          "part5_sentence_completion": 4
+        }
+      },
+      "mixed_review_structure": {
+        "lesson_ids": "V3-MR-01 through V3-MR-12",
+        "assembly_script": "scripts/add-mixed-review-lessons.js",
+        "question_ids_per_lesson": 20,
+        "question_rows_created": 0,
+        "source_policy": "Each mixed_review lesson draws review_question_ids from the 5 preceding same-stage core lessons (4 review_questions × 5 = 20).",
+        "mixed_review_source_map": {
+          "V3-MR-01": [
+            "V3-A-121",
+            "V3-A-122",
+            "V3-A-123",
+            "V3-A-124",
+            "V3-A-125"
+          ],
+          "V3-MR-02": [
+            "V3-A-126",
+            "V3-A-127",
+            "V3-A-128",
+            "V3-A-129",
+            "V3-A-130"
+          ],
+          "V3-MR-03": [
+            "V3-B-131",
+            "V3-B-132",
+            "V3-B-133",
+            "V3-B-134",
+            "V3-B-135"
+          ],
+          "V3-MR-04": [
+            "V3-B-136",
+            "V3-B-137",
+            "V3-B-138",
+            "V3-B-139",
+            "V3-B-140"
+          ],
+          "V3-MR-05": [
+            "V3-C-141",
+            "V3-C-142",
+            "V3-C-143",
+            "V3-C-144",
+            "V3-C-145"
+          ],
+          "V3-MR-06": [
+            "V3-C-146",
+            "V3-C-147",
+            "V3-C-148",
+            "V3-C-149",
+            "V3-C-150"
+          ],
+          "V3-MR-07": [
+            "V3-D-151",
+            "V3-D-152",
+            "V3-D-153",
+            "V3-D-154",
+            "V3-D-155"
+          ],
+          "V3-MR-08": [
+            "V3-D-156",
+            "V3-D-157",
+            "V3-D-158",
+            "V3-D-159",
+            "V3-D-160"
+          ],
+          "V3-MR-09": [
+            "V3-E-161",
+            "V3-E-162",
+            "V3-E-163",
+            "V3-E-164",
+            "V3-E-165"
+          ],
+          "V3-MR-10": [
+            "V3-E-166",
+            "V3-E-167",
+            "V3-E-168",
+            "V3-E-169",
+            "V3-E-170"
+          ],
+          "V3-MR-11": [
+            "V3-F-171",
+            "V3-F-172",
+            "V3-F-173",
+            "V3-F-174",
+            "V3-F-175"
+          ],
+          "V3-MR-12": [
+            "V3-F-176",
+            "V3-F-177",
+            "V3-F-178",
+            "V3-F-179",
+            "V3-F-180"
+          ]
+        }
+      },
+      "wave_structure": {
+        "total_core_lessons": 60,
+        "wave1": {
+          "draft_lesson_count": 16,
+          "draft_ids": "V3-W1-01 through V3-W1-16",
+          "production_id_range_approx": "V3-A-121 through V3-B-136",
+          "production_id_freeze_step": 40,
+          "topics": [
+            "辦公室",
+            "文書作業",
+            "商務會議",
+            "業務協調",
+            "人事與組織"
+          ],
+          "topic_lesson_counts": {
+            "辦公室": 3,
+            "文書作業": 4,
+            "商務會議": 3,
+            "業務協調": 4,
+            "人事與組織": 2
+          },
+          "draft_location": "drafts/collocation-rebuild/",
+          "target_item_count": 100,
+          "status": "draft_authoring_ready"
+        },
+        "wave2_plus": {
+          "core_lessons_remaining": 44,
+          "suggested_topic_groups": [
+            "Finance, Banking (V3-B/C overlap with Wave 1 tail)",
+            "Procurement, Supply Chain (V3-C)",
+            "Customer Service, Marketing, Retail (V3-D)",
+            "Travel, Transportation, Manufacturing (V3-E)",
+            "Legal, Contracts, Compliance, Media (V3-F)"
+          ],
+          "status": "pending — Phase 8 and future wave planning steps"
+        }
+      },
+      "lesson_groups": [
+        {
+          "group": "A",
+          "lesson_id_range": {
+            "from": "V3-A-121",
+            "to": "V3-A-130"
+          },
+          "file": "questions_v3a.json",
+          "lesson_count": 10,
+          "lesson_type": "collocation",
+          "question_type_mix_per_lesson": {
+            "part6_context_choice": 12,
+            "collocation": 4,
+            "part5_sentence_completion": 4,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "wave_coverage": "Wave 1 first 10 lessons"
+        },
+        {
+          "group": "B",
+          "lesson_id_range": {
+            "from": "V3-B-131",
+            "to": "V3-B-140"
+          },
+          "file": "questions_v3b.json",
+          "lesson_count": 10,
+          "lesson_type": "collocation",
+          "question_type_mix_per_lesson": {
+            "part6_context_choice": 12,
+            "collocation": 4,
+            "part5_sentence_completion": 4,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "wave_coverage": "Wave 1 final 6 lessons + Wave 2 first 4 lessons"
+        },
+        {
+          "group": "C",
+          "lesson_id_range": {
+            "from": "V3-C-141",
+            "to": "V3-C-150"
+          },
+          "file": "questions_v3c.json",
+          "lesson_count": 10,
+          "lesson_type": "collocation",
+          "question_type_mix_per_lesson": {
+            "part6_context_choice": 12,
+            "collocation": 4,
+            "part5_sentence_completion": 4,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "wave_coverage": "Wave 2 (Finance, Banking, Procurement)"
+        },
+        {
+          "group": "D",
+          "lesson_id_range": {
+            "from": "V3-D-151",
+            "to": "V3-D-160"
+          },
+          "file": "questions_v3d.json",
+          "lesson_count": 10,
+          "lesson_type": "collocation",
+          "question_type_mix_per_lesson": {
+            "part6_context_choice": 12,
+            "collocation": 4,
+            "part5_sentence_completion": 4,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "wave_coverage": "Wave 3 (Customer Service, Marketing, Retail)"
+        },
+        {
+          "group": "E",
+          "lesson_id_range": {
+            "from": "V3-E-161",
+            "to": "V3-E-170"
+          },
+          "file": "questions_v3e.json",
+          "lesson_count": 10,
+          "lesson_type": "collocation",
+          "question_type_mix_per_lesson": {
+            "part6_context_choice": 12,
+            "collocation": 4,
+            "part5_sentence_completion": 4,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "wave_coverage": "Wave 4 (Travel, Transportation, Manufacturing)"
+        },
+        {
+          "group": "F",
+          "lesson_id_range": {
+            "from": "V3-F-171",
+            "to": "V3-F-180"
+          },
+          "file": "questions_v3f.json",
+          "lesson_count": 10,
+          "lesson_type": "collocation",
+          "question_type_mix_per_lesson": {
+            "part6_context_choice": 12,
+            "collocation": 4,
+            "part5_sentence_completion": 4,
+            "review_question": 4
+          },
+          "total_question_rows": 240,
+          "wave_coverage": "Wave 5 (Legal, Contracts, Compliance, Media)"
+        },
+        {
+          "group": "MR",
+          "lesson_id_range": {
+            "from": "V3-MR-01",
+            "to": "V3-MR-12"
+          },
+          "file": "no_new_rows",
+          "lesson_count": 12,
+          "lesson_type": "mixed_review",
+          "question_ids_per_lesson": 20,
+          "question_rows_created": 0
+        }
+      ],
+      "total_question_rows": 1440
+    }
+  },
+  "consistency_checks": [
+    {
+      "check": "V0_question_rows",
+      "expected": 31,
+      "computed": "19_core + 12_review = 31",
+      "result": "pass"
+    },
+    {
+      "check": "V1_A_question_rows",
+      "expected": 240,
+      "computed": "10_lessons × 24_rows = 240",
+      "result": "pass"
+    },
+    {
+      "check": "V1_B_to_E_question_rows",
+      "expected": 768,
+      "computed": "32_lessons × 24_rows = 768",
+      "result": "pass"
+    },
+    {
+      "check": "V1_F_question_rows",
+      "expected": 720,
+      "computed": "18_lessons × 40_rows = 720",
+      "result": "pass"
+    },
+    {
+      "check": "V1_total_question_rows",
+      "expected": 1728,
+      "computed": "240+768+720 = 1728",
+      "result": "pass"
+    },
+    {
+      "check": "V2_core_question_rows",
+      "expected": 1200,
+      "computed": "50_lessons × 24_rows = 1200",
+      "result": "pass"
+    },
+    {
+      "check": "V3_core_question_rows",
+      "expected": 1440,
+      "computed": "60_lessons × 24_rows = 1440",
+      "result": "pass"
+    },
+    {
+      "check": "grand_total_question_rows",
+      "expected": 4399,
+      "computed": "31+1728+1200+1440 = 4399",
+      "result": "pass"
+    },
+    {
+      "check": "V1_total_lessons",
+      "expected": 60,
+      "computed": "10+8+8+8+8+18 = 60",
+      "result": "pass"
+    },
+    {
+      "check": "V2_total_lessons",
+      "expected": 60,
+      "computed": "50_core + 10_mixed_review = 60",
+      "result": "pass"
+    },
+    {
+      "check": "V3_total_lessons",
+      "expected": 72,
+      "computed": "60_core + 12_mixed_review = 72",
+      "result": "pass"
+    },
+    {
+      "check": "grand_total_lessons",
+      "expected": 193,
+      "computed": "1+60+60+72 = 193",
+      "result": "pass"
+    },
+    {
+      "check": "total_question_files",
+      "expected": 18,
+      "computed": "1+6+5+6 = 18",
+      "result": "pass"
+    },
+    {
+      "check": "V3_wave1_draft_lesson_count",
+      "expected": 16,
+      "computed": "3+4+3+4+2 = 16",
+      "result": "pass"
+    },
+    {
+      "check": "V2_mixed_review_source_coverage",
+      "expected": "50 core lessons covered",
+      "computed": "10 MR × 5 sources = 50",
+      "result": "pass"
+    },
+    {
+      "check": "V3_mixed_review_source_coverage",
+      "expected": "60 core lessons covered",
+      "computed": "12 MR × 5 sources = 60",
+      "result": "pass"
+    }
+  ],
+  "last_verified_at": "2026-05-18T00:03:38.913Z",
+  "verification": {
+    "script": "scripts/verify-phase7-stage-map.js",
+    "status": "passed",
+    "summary": {
+      "checks_total": 57,
+      "checks_passed": 57,
+      "errors": 0,
+      "warnings": 1
+    },
+    "known_gaps": [
+      {
+        "id": "mixed_review_lesson_id_naming",
+        "severity": "warning",
+        "detail": "Phase 7 freezes V2-MR-* / V3-MR-* lesson IDs, but scripts/add-mixed-review-lessons.js still emits V2-MIX-* / V3-MIX-*.",
+        "resolve_in_step": 39
+      },
+      {
+        "id": "wave1_production_id_table",
+        "severity": "info",
+        "detail": "V3-W1-01..16 to V3-A-121..V3-B-136 mapping is approximate until Step 40.",
+        "resolve_in_step": 40
+      }
+    ]
+  }
+}

@@ -45,19 +45,19 @@ function renderStageSealWarning({ lessonId, warning }) {
   const reasons = warning.reasons || [];
   return `
     <section class="tracker-panel stage-gate-warning" data-testid="stage-gate-warning">
-      <h3>Stage Readiness Check</h3>
-      <p class="tracker-bigline">${html(warning.stage)} ${html(warning.stageName)} — not yet ready</p>
-      <p class="muted-note">You are starting <strong>${html(lessonId)}</strong> (Stage ${html(lesson?.stage || "")}), but the previous stage has not met readiness criteria.</p>
+      <h3>階段準備度檢查</h3>
+      <p class="tracker-bigline">${html(warning.stage)} ${html(warning.stageName)} 尚未達到就緒條件</p>
+      <p class="muted-note">你正要開始 <strong>${html(lessonId)}</strong>（${html(lesson?.stage || "")} 階段），但上一階段還沒有通過準備度條件。</p>
       ${reasons.length ? `
         <div class="stage-gate-reasons" data-testid="stage-gate-reasons">
-          <strong>Not ready because:</strong>
+          <strong>尚未就緒的原因：</strong>
           <ul>${reasons.map((r) => `<li>${html(r)}</li>`).join("")}</ul>
         </div>
       ` : ""}
       <div class="tracker-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.startReviewMode('due')">Go to Review Mode</button>
-        <button class="button primary" type="button" data-testid="stage-gate-continue" onclick="VocabTracker.confirmStartLesson()">Continue Anyway</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.cancelStageSeal()">Cancel</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.startReviewMode('due')">先去複習模式</button>
+        <button class="button primary" type="button" data-testid="stage-gate-continue" onclick="VocabTracker.confirmStartLesson()">仍要繼續</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.cancelStageSeal()">取消</button>
       </div>
     </section>
   `;
@@ -108,11 +108,11 @@ export function isSpeedSession(session) {
 
 function reviewFilterLabel(filter) {
   return {
-    due: "Due Today",
-    high_priority: "High Priority",
-    repeated: "Repeated Errors",
-    all: "All Pending"
-  }[filter] || "Due Today";
+    due: "今日到期",
+    high_priority: "高優先",
+    repeated: "反覆錯誤",
+    all: "全部待處理"
+  }[filter] || "今日到期";
 }
 
 function isDue(entry, today) {
@@ -209,14 +209,14 @@ function renderFeedback(question, userAnswer, isCorrect, hasMore) {
   return `
     <article class="question-panel">
       <div class="feedback-banner ${isCorrect ? "correct" : "wrong"}">
-        ${isCorrect ? "✓ Correct" : "✗ Wrong — correct answer highlighted"}
+        ${isCorrect ? "✓ 答對" : "✗ 答錯，已標示正解"}
       </div>
       <p class="question-text">${renderQuestionText(question.question_text)}</p>
       <div class="answer-grid">${buttons}</div>
       ${question.explanation_zh ? `<p class="feedback-explanation">${html(question.explanation_zh)}</p>` : ""}
       ${renderPostAnswerLearningCard(question, userAnswer, isCorrect)}
       <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.advanceAfterFeedback()">${hasMore ? "Next Question →" : "See Summary →"}</button>
+        <button class="button primary" type="button" onclick="VocabTracker.advanceAfterFeedback()">${hasMore ? "下一題" : "查看摘要"}</button>
       </div>
     </article>
   `;
@@ -242,13 +242,13 @@ function renderPostAnswerLearningCard(question, userAnswer, isCorrect) {
   return `
     <aside class="learning-card ${isCorrect ? "correct" : "review"}">
       <div>
-        <span class="learning-card-label">${isCorrect ? "Locked In" : "Review Point"}</span>
-        <strong>${html(correctText || item?.base_word || question.target_item_id || "Target item")}</strong>
+        <span class="learning-card-label">${isCorrect ? "已記住" : "回顧重點"}</span>
+        <strong>${html(correctText || item?.base_word || question.target_item_id || "目標詞")}</strong>
         ${item?.chinese ? `<small>${html(item.chinese)}</small>` : ""}
       </div>
       <div class="learning-card-detail">
         ${item?.example ? `<p>${html(item.example)}</p>` : ""}
-        ${!isCorrect ? `<p>Your answer: ${html(userAnswer)} ${html(optionText(question, userAnswer))}</p>` : ""}
+        ${!isCorrect ? `<p>你的答案：${html(userAnswer)} ${html(optionText(question, userAnswer))}</p>` : ""}
         ${grammarLink ? `<p>${html(grammarLink.title_zh || question.grammar_link_id)}: ${html(grammarLink.rule_zh || "")}</p>` : ""}
       </div>
     </aside>
@@ -265,8 +265,8 @@ function renderLessonPreview(lesson) {
   if (lesson.lesson_type === "mixed_review") {
     return `
       <div class="lesson-preview">
-        <strong>Mixed Review</strong>
-        <span>This lesson recycles ${lesson.question_ids?.length || 0} review questions from earlier ${html(lesson.stage)} lessons.</span>
+        <strong>混合複習</strong>
+        <span>這一課會回收先前 ${html(lesson.stage)} 課程中的 ${lesson.question_ids?.length || 0} 題複習題。</span>
       </div>
     `;
   }
@@ -274,8 +274,8 @@ function renderLessonPreview(lesson) {
   if (lesson.lesson_type === "speed_drill") {
     return `
       <div class="lesson-preview speed-preview">
-        <strong>Speed Reflex Drill</strong>
-        <span>${lesson.question_ids?.length || 0} speed questions · ${SPEED_TIME_LIMIT}s per question · click to answer · no confirm step</span>
+        <strong>速度反應練習</strong>
+        <span>${lesson.question_ids?.length || 0} 題速度題 · 每題 ${SPEED_TIME_LIMIT} 秒 · 點選即作答 · 不需再次確認</span>
       </div>
     `;
   }
@@ -288,11 +288,11 @@ function renderLessonPreview(lesson) {
     const typeCounts = topCounts(state.questions.filter((question) => ids.has(question.question_id)), "type", 4);
     return `
       <div class="lesson-preview">
-        <strong>Lesson Focus</strong>
+        <strong>本課重點</strong>
         <div class="lesson-focus-grid">
           ${typeCounts.length
             ? typeCounts.map(([type, count]) => `<span><b>${html(questionTypeLabel(type))}</b> ${count}</span>`).join("")
-            : `<span>${html(lesson.stage_name || lesson.lesson_type || "General lesson")}</span>`}
+            : `<span>${html(lesson.stage_name || lesson.lesson_type || "一般課程")}</span>`}
         </div>
       </div>
     `;
@@ -300,7 +300,7 @@ function renderLessonPreview(lesson) {
 
   return `
     <div class="lesson-preview">
-      <strong>Lesson Focus</strong>
+      <strong>本課重點</strong>
       <div class="lesson-focus-grid">
         ${targetItems.slice(0, 8).map((item) => `
           <span><b>${html(item.base_word || item.item_id)}</b>${item.chinese ? ` ${html(item.chinese)}` : ""}</span>
@@ -308,6 +308,28 @@ function renderLessonPreview(lesson) {
       </div>
     </div>
   `;
+}
+
+function plannedLessonQuestionCount(lesson) {
+  if (!lesson) return 0;
+  if (lesson.lesson_type === "speed_drill") return lesson.question_ids?.length || 0;
+  if (lesson.lesson_type !== "diagnostic") {
+    return (lesson.question_ids?.length || 0) + (lesson.review_question_ids?.length || 0);
+  }
+
+  const ids = new Set([...(lesson.question_ids || []), ...(lesson.review_question_ids || [])]);
+  const usedTargetIds = new Set();
+  let total = 0;
+
+  state.questions.forEach((question) => {
+    if (!ids.has(question.question_id)) return;
+    const targetId = question.target_item_id || question.question_id;
+    if (usedTargetIds.has(targetId)) return;
+    usedTargetIds.add(targetId);
+    total += 1;
+  });
+
+  return total || lesson.target_items?.length || ids.size;
 }
 
 // --- Speed Mode rendering ---
@@ -329,7 +351,7 @@ function renderSpeedLesson(lesson, row, progress) {
         </div>
         <div class="speed-countdown-wrapper">
           <span id="speed-countdown" class="speed-countdown">${SPEED_TIME_LIMIT}</span>
-          <small>sec</small>
+          <small>秒</small>
         </div>
         <div class="speed-lesson-label">${html(lesson?.lesson_id || session.lesson_id)}</div>
       </div>
@@ -337,7 +359,7 @@ function renderSpeedLesson(lesson, row, progress) {
       <article class="question-panel speed-question">
         <div class="question-meta">
           <span>${html(questionTypeLabel(question.type))}</span>
-          <span>Target ${window.VocabScoring.targetTime(question.type)}s</span>
+          <span>目標 ${window.VocabScoring.targetTime(question.type)}s</span>
         </div>
         <p class="question-text">${renderQuestionText(question.question_text)}</p>
         <div class="answer-grid">
@@ -350,7 +372,7 @@ function renderSpeedLesson(lesson, row, progress) {
         </div>
       </article>
       <div class="runtime-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">Exit</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開</button>
       </div>
     </section>
   `;
@@ -384,9 +406,9 @@ function renderSpeedSummary(session) {
         <article class="speed-review-row ${a.timeout ? "timeout" : "wrong"}">
           <p class="question-text small">${renderQuestionText(q.question_text)}</p>
           <div class="speed-review-meta">
-            <span>Your: ${html(a.user_answer)} ${html(q.options?.[a.user_answer] || "(timeout)")}</span>
-            <span>Correct: ${html(q.correct_answer)} ${html(q.options?.[q.correct_answer] || "")}</span>
-            <span>${seconds(a.response_time_seconds)}${a.timeout ? " ⏱ timeout" : ""}</span>
+            <span>你的：${html(a.user_answer)} ${html(q.options?.[a.user_answer] || "（超時）")}</span>
+            <span>正解：${html(q.correct_answer)} ${html(q.options?.[q.correct_answer] || "")}</span>
+            <span>${seconds(a.response_time_seconds)}${a.timeout ? " ⏱ 超時" : ""}</span>
             ${item?.chinese ? `<span>${html(item.chinese)}</span>` : ""}
           </div>
         </article>
@@ -396,37 +418,37 @@ function renderSpeedSummary(session) {
   return `
     <section class="runtime-shell speed-mode">
       <article class="tracker-panel">
-        <h3>Speed Session Complete</h3>
+        <h3>速度練習完成</h3>
         <div class="tracker-grid speed-summary-grid">
           <article class="tracker-stat ${accuracy >= 0.8 ? "" : "stat-warn"}">
-            <span>Accuracy</span><strong>${pct(accuracy)}</strong><small>${correct}/${total}</small>
+            <span>正確率</span><strong>${pct(accuracy)}</strong><small>${correct}/${total}</small>
           </article>
           <article class="tracker-stat">
-            <span>Avg Time</span><strong>${seconds(avgTime)}</strong><small>per question</small>
+            <span>平均時間</span><strong>${seconds(avgTime)}</strong><small>每題</small>
           </article>
           <article class="tracker-stat">
-            <span>Fast Correct</span><strong>${fastCorrect}</strong><small>≤ ${targetSec}s</small>
+            <span>快答正確</span><strong>${fastCorrect}</strong><small>≤ ${targetSec}s</small>
           </article>
           <article class="tracker-stat ${timeouts ? "stat-warn" : ""}">
-            <span>Timeouts</span><strong>${timeouts}</strong><small>missed</small>
+            <span>超時</span><strong>${timeouts}</strong><small>未完成</small>
           </article>
         </div>
         <div class="speed-bucket-breakdown">
-          <span class="speed-stat ok">Fast correct: ${fastCorrect}</span>
-          <span class="speed-stat slow">Slow correct: ${slowCorrect}</span>
-          <span class="speed-stat bad">Timeouts: ${timeouts}</span>
+          <span class="speed-stat ok">快答正確：${fastCorrect}</span>
+          <span class="speed-stat slow">較慢但答對：${slowCorrect}</span>
+          <span class="speed-stat bad">超時：${timeouts}</span>
         </div>
         <div class="tracker-actions">
-          <button class="button primary" type="button" onclick="VocabTracker.finishLesson()">Finish &amp; Save</button>
-          <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">Exit Without Saving</button>
+          <button class="button primary" type="button" onclick="VocabTracker.finishLesson()">完成並儲存</button>
+          <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開且不儲存</button>
         </div>
       </article>
       ${wrong > 0 ? `
         <article class="tracker-panel">
-          <h3>Items to Review (${wrong})</h3>
+          <h3>需要回顧的題目 (${wrong})</h3>
           <div class="speed-review-list">${wrongRows}</div>
         </article>
-      ` : `<article class="tracker-panel"><p class="tracker-bigline">No errors — perfect run!</p></article>`}
+      ` : `<article class="tracker-panel"><p class="tracker-bigline">沒有錯誤，這輪很完整。</p></article>`}
     </section>
   `;
 }
@@ -448,11 +470,11 @@ export function renderLesson() {
     const isSpeed = lesson?.lesson_type === "speed_drill";
     return `
       <section class="tracker-panel">
-        <h3>Lesson Start</h3>
+        <h3>開始課程</h3>
         <p class="tracker-bigline">${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "")}</p>
         ${renderLessonPreview(lesson)}
         ${!isSpeed ? `
-        <p class="lesson-quick-meta">本課 ${(lesson?.question_ids?.length || 0) + (lesson?.review_question_ids?.length || 0)} 題 · 約 ${lesson?.estimated_minutes || 20} 分鐘</p>
+        <p class="lesson-quick-meta">本課 ${plannedLessonQuestionCount(lesson)} 題 · 約 ${lesson?.estimated_minutes || 20} 分鐘</p>
         <details class="step-plan-details">
           <summary>查看學習步驟</summary>
           <div class="step-plan">
@@ -460,8 +482,8 @@ export function renderLesson() {
           </div>
         </details>` : ""}
         <div class="tracker-actions">
-          <button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">Start Current Lesson</button>
-          <button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">Choose Lesson</button>
+          <button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">開始目前課程</button>
+          <button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">選擇課程</button>
         </div>
       </section>
     `;
@@ -472,9 +494,9 @@ export function renderLesson() {
   const lesson = isReviewSession(session)
     ? {
       lesson_id: REVIEW_LESSON_ID,
-      title: session.lesson_title || `Review Mode · ${reviewFilterLabel(session.review_filter)}`,
+      title: session.lesson_title || `複習模式 · ${reviewFilterLabel(session.review_filter)}`,
       stage: "REVIEW",
-      stage_name: "Mistake Review"
+      stage_name: "錯題複習"
     }
     : state.lessons.find((row) => row.lesson_id === session.lesson_id);
 
@@ -495,8 +517,8 @@ export function renderLesson() {
             ${renderRuntimeHeader(lesson, row.step)}
             ${renderFeedback(question, answerData.user_answer, answerData.is_correct, hasMore)}
             <div class="runtime-actions">
-              <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "Resume" : "Pause"}</button>
-              <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">Exit</button>
+              <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "繼續" : "暫停"}</button>
+              <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開</button>
             </div>
           </section>
         `;
@@ -508,17 +530,17 @@ export function renderLesson() {
   const allAnswered = progress.answered >= progress.total && progress.total > 0;
 
   if (allAnswered) {
-    const finishTitle = isReviewSession(session) ? "Review Summary" : "Step 5: Error Review + Scheduling";
+    const finishTitle = isReviewSession(session) ? "複習摘要" : "第 5 步：錯題回顧與安排";
     const finishNote = isReviewSession(session)
-      ? "Generate the review session summary and update fixed / still weak / repeated-error queue status."
-      : "Generate the session summary, apply the mastery gate, then confirm mistake causes.";
-    const finishButton = isReviewSession(session) ? "Finish Review" : "Finish Lesson";
+      ? "產生這次複習摘要，並更新已修正 / 仍不穩 / 反覆錯誤的佇列狀態。"
+      : "先產生本次課程摘要、套用精熟度判定，再確認錯因。";
+    const finishButton = isReviewSession(session) ? "完成複習" : "完成課程";
     return `
       <section class="runtime-shell">
         ${renderRuntimeHeader(lesson, "error_review_scheduling")}
         <article class="tracker-panel finish-panel">
           <h3>${finishTitle}</h3>
-          <p class="tracker-bigline">${progress.answered}/${progress.total} answers saved immediately.</p>
+          <p class="tracker-bigline">${progress.answered}/${progress.total} 題已即時儲存。</p>
           <p class="muted-note">${finishNote}</p>
           <button class="button primary" type="button" onclick="VocabTracker.finishLesson()">${finishButton}</button>
         </article>
@@ -527,7 +549,7 @@ export function renderLesson() {
   }
 
   const row = progress.current;
-  if (!row) return `<section class="tracker-panel"><p class="muted-note">No question is available for this lesson.</p></section>`;
+  if (!row) return `<section class="tracker-panel"><p class="muted-note">這一課目前沒有可作答題目。</p></section>`;
   const question = row.question;
   ensureQuestionClock(question.question_id);
 
@@ -546,7 +568,7 @@ export function renderLesson() {
         <div class="question-meta">
           <span>${html(questionTypeLabel(question.type))}</span>
           <span>Q ${progress.index + 1} / ${progress.total}</span>
-          <span>Target ${window.VocabScoring.targetTime(question.type)}s</span>
+          <span>目標 ${window.VocabScoring.targetTime(question.type)}s</span>
         </div>
         ${renderQuestionGuidance(question)}
         <p class="question-text">${renderQuestionText(question.question_text)}</p>
@@ -560,15 +582,15 @@ export function renderLesson() {
         </div>
         <p class="keyboard-hint">快捷鍵：A / B / C / D 選擇 · Enter 確認</p>
         <div class="confirm-answer-row">
-          <p class="muted-note">${savedAnswer ? "Answer locked and saved. Correctness is hidden until review." : selected ? `Selected ${html(selected)}. Press Confirm Answer to save.` : "Choose one answer, then press Confirm Answer. Nothing is saved until you confirm."}</p>
-          <button class="button primary" type="button" onclick="VocabTracker.confirmCurrentAnswer()" ${!selected || savedAnswer || session.paused ? "disabled" : ""}>Confirm Answer</button>
+          <p class="muted-note">${savedAnswer ? "答案已鎖定並儲存，對錯會等回顧時再顯示。" : selected ? `已選擇 ${html(selected)}，按下「確認答案」後才會儲存。` : "請先選一個答案，再按下「確認答案」。在你確認前，系統不會儲存。"}</p>
+          <button class="button primary" type="button" onclick="VocabTracker.confirmCurrentAnswer()" ${!selected || savedAnswer || session.paused ? "disabled" : ""}>確認答案</button>
         </div>
       </article>
       <div class="runtime-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.previousQuestion()" ${progress.index <= 0 ? "disabled" : ""}>Previous</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.nextQuestion()">Skip / Next</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "Resume" : "Pause"}</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">Exit</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.previousQuestion()" ${progress.index <= 0 ? "disabled" : ""}>上一題</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.nextQuestion()">略過 / 下一題</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "繼續" : "暫停"}</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開</button>
       </div>
     </section>
   `;
@@ -580,8 +602,8 @@ export function renderRuntimeHeader(lesson, currentStepId) {
   const stepItems = isReviewSession(session)
     ? `
       <span class="step-chip active">${html(reviewFilterLabel(session.review_filter))}</span>
-      <span class="step-chip">Review Queue</span>
-      <span class="step-chip">${html(session.review_ids?.length || 0)} items</span>
+      <span class="step-chip">複習佇列</span>
+      <span class="step-chip">${html(session.review_ids?.length || 0)} 個項目</span>
     `
     : LESSON_STEPS.map((step) => `
       <span class="step-chip ${step.id === currentStepId ? "active" : ""}">${html(step.label)}</span>
@@ -594,13 +616,13 @@ export function renderRuntimeHeader(lesson, currentStepId) {
         <h2>${html(lesson?.title || session.lesson_title)}</h2>
       </div>
       <div class="runtime-timers">
-        <span>Lesson <strong id="lesson-elapsed">0:00</strong></span>
-        <span>Question <strong id="question-elapsed">0.0s</strong></span>
+        <span>課程 <strong id="lesson-elapsed">0:00</strong></span>
+        <span>本題 <strong id="question-elapsed">0.0s</strong></span>
       </div>
     </article>
     <div class="step-strip">${stepItems}</div>
     <div class="tracker-progress runtime-progress"><div style="width:${width}%"></div></div>
-    ${session.paused ? `<div class="tracker-alert warn">Lesson paused. Resume to continue recording response time.</div>` : ""}
+    ${session.paused ? `<div class="tracker-alert warn">課程已暫停。繼續後才會重新計算作答時間。</div>` : ""}
   `;
 }
 
@@ -618,6 +640,59 @@ function buildSpeedRuntimeQuestions(lesson, allLessonQuestions, session) {
     .map((q) => ({ question: q, step: "toeic_practice" }));
 }
 
+const ITEM_REPEAT_COOLDOWN = 6;
+
+function spreadRuntimeQuestions(rows) {
+  const remaining = rows.slice();
+  const ordered = [];
+
+  while (remaining.length) {
+    const recentItemIds = new Set(
+      ordered
+        .slice(-ITEM_REPEAT_COOLDOWN)
+        .map((row) => row?.question?.target_item_id)
+        .filter(Boolean)
+    );
+    const previousItemId = ordered.at(-1)?.question?.target_item_id || null;
+    let nextIndex = remaining.findIndex((row) => !recentItemIds.has(row?.question?.target_item_id));
+    if (nextIndex < 0) {
+      nextIndex = remaining.findIndex((row) => (row?.question?.target_item_id || null) !== previousItemId);
+    }
+    if (nextIndex < 0) nextIndex = 0;
+    ordered.push(remaining.splice(nextIndex, 1)[0]);
+  }
+
+  return ordered;
+}
+
+function lessonStepForQuestion(question) {
+  if (!question) return "toeic_practice";
+  if (question.type === "review_question") return "previous_review";
+  if (["meaning_choice", "scene_vocabulary", "word_family"].includes(question.type)) return "new_vocabulary";
+  if (["collocation", "formal_phrase", "false_friend"].includes(question.type)) return "pattern_focus";
+  return "toeic_practice";
+}
+
+function buildDiagnosticRuntimeQuestions(lesson, questionMap) {
+  const orderedIds = [...(lesson.question_ids || []), ...(lesson.review_question_ids || [])];
+  const usedTargetIds = new Set();
+  const rows = [];
+
+  orderedIds.forEach((questionId) => {
+    const question = questionMap[questionId];
+    if (!question) return;
+    const targetId = question.target_item_id || question.question_id;
+    if (usedTargetIds.has(targetId)) return;
+    usedTargetIds.add(targetId);
+    rows.push({
+      question,
+      step: lessonStepForQuestion(question)
+    });
+  });
+
+  return rows;
+}
+
 export function buildRuntimeQuestions(lesson, allLessonQuestions, session) {
   const questionMap = byId(allLessonQuestions, "question_id");
   if (session?.question_ids?.length) {
@@ -625,6 +700,10 @@ export function buildRuntimeQuestions(lesson, allLessonQuestions, session) {
       question: questionMap[questionId],
       step: session.step_by_question?.[questionId] || "toeic_practice"
     })).filter((row) => row.question);
+  }
+
+  if (lesson.lesson_type === "diagnostic") {
+    return buildDiagnosticRuntimeQuestions(lesson, questionMap);
   }
 
   const masteryByItem = {};
@@ -655,7 +734,7 @@ export function buildRuntimeQuestions(lesson, allLessonQuestions, session) {
   take(core.filter((q) => ["word_family", "collocation", "formal_phrase", "false_friend"].includes(q.type)), 6, "pattern_focus");
   take(core.filter((q) => ["part5_sentence_completion", "part6_context_choice", "speed_drill"].includes(q.type)), 8, "toeic_practice");
   take([...core, ...review], 99, "toeic_practice");
-  return picked;
+  return spreadRuntimeQuestions(picked);
 }
 
 export function ensureQuestionClock(questionId) {
@@ -685,8 +764,8 @@ export async function prepareRuntime(lessonId, existingSession) {
       lesson: {
         lesson_id: REVIEW_LESSON_ID,
         stage: "REVIEW",
-        stage_name: "Mistake Review",
-        title: existingSession?.lesson_title || "Review Mode",
+        stage_name: "錯題複習",
+        title: existingSession?.lesson_title || "複習模式",
         lesson_type: "review_queue",
         estimated_minutes: existingSession?.planned_minutes || 15
       },
@@ -788,7 +867,7 @@ export async function startReviewMode(filter = "due") {
 
   const review = getReviewCandidates(filter, REVIEW_QUESTION_LIMIT);
   if (!review.rows.length) {
-    setNotice(`No ${review.label.toLowerCase()} review questions are available.`, "warn");
+    setNotice(`目前沒有可用的「${review.label}」複習題。`, "warn");
     callSetView("mistakes");
     return;
   }
@@ -801,7 +880,7 @@ export async function startReviewMode(filter = "due") {
     course_id: window.VocabDB.COURSE_ID,
     stage: "REVIEW",
     lesson_id: REVIEW_LESSON_ID,
-    lesson_title: `Review Mode · ${review.label}`,
+    lesson_title: `複習模式 · ${review.label}`,
     planned_minutes: 15,
     started_at: window.VocabScoring.localIso(now),
     started_at_ms: Date.now(),
@@ -1258,7 +1337,7 @@ async function finishReviewSession(session) {
     course_id: session.course_id,
     stage: "REVIEW",
     lesson_id: REVIEW_LESSON_ID,
-    lesson_title: session.lesson_title || "Review Mode",
+    lesson_title: session.lesson_title || "複習模式",
     planned_minutes: session.planned_minutes || 15,
     actual_minutes: Number((callLessonElapsedSeconds() / 60).toFixed(1)),
     started_at: session.started_at,
@@ -1324,7 +1403,7 @@ async function finishReviewSession(session) {
   state.activeSession = null;
   state.currentQuestionKey = null;
   await loadData();
-  setNotice(`Review saved: ${correct}/${total} correct, ${state.lastReviewSummary.fixed_items} fixed, ${state.lastReviewSummary.still_weak_items} still weak, ${state.lastReviewSummary.repeated_error_items} repeated.`, wrong ? "warn" : "ok");
+  setNotice(`複習已儲存：${correct}/${total} 題答對，${state.lastReviewSummary.fixed_items} 項已修正，${state.lastReviewSummary.still_weak_items} 項仍不穩，${state.lastReviewSummary.repeated_error_items} 項反覆錯誤。`, wrong ? "warn" : "ok");
   callSetView("mistakes");
 }
 
@@ -1380,7 +1459,7 @@ async function finishSpeedSession(session) {
   state.currentQuestionKey = null;
   state.speedTimerFired = false;
   await loadData();
-  setNotice(`Speed session saved: ${correct}/${total} correct, ${timeouts} timeouts.`, wrong ? "warn" : "ok");
+  setNotice(`速度練習已儲存：${correct}/${total} 題答對，${timeouts} 題超時。`, wrong ? "warn" : "ok");
   callSetView("today");
 }
 

@@ -39,21 +39,21 @@ The active production seed is V0-V3 only. V4 is draft-only and must not be enabl
 
 | Metric | Current value |
 |---|---:|
-| Runnable lessons | 193 |
-| Question-bank rows | 4,399 |
+| Runnable lessons | 0 |
+| Question-bank rows | 0 |
 | Vocab items | 494 |
 | Question files in manifest | 18 |
 | Duplicate stems | 0 |
 | Full quality audit issues | 0 |
-| Seed version | `toeic_vocab_tracker_c001_cross_lesson_2026_05_17` |
-| Service worker cache | `toeic-vorb-v8` |
+| Seed version | `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` |
+| Service worker cache | `toeic-vorb-v9` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
-| V0 Diagnosis | 1 | 31 | Active |
-| V1 Word Family + Speed | 60 | 1,728 | Active |
-| V2 TOEIC Scene Vocabulary | 60 | 1,200 | Active |
-| V3 Collocation | 72 | 1,440 | Active |
+| V0 Diagnosis | 0 | 0 | Cleared |
+| V1 Word Family + Speed | 0 | 0 | Cleared |
+| V2 TOEIC Scene Vocabulary | 0 | 0 | Cleared |
+| V3 Collocation | 0 | 0 | Cleared |
 | V4 Formal Phrase | 0 active | 0 active | Draft only in `drafts/v4/` |
 | V5 False Friends + Speed Reflex | 0 | 0 | Planned |
 | V6 Integrated Review + Seal Test | 0 | 0 | Planned |
@@ -108,7 +108,7 @@ tests/helpers/seed-idb.ts         -> APP_SEED_VERSION
 Current seed version:
 
 ```text
-toeic_vocab_tracker_c001_cross_lesson_2026_05_17
+toeic_vocab_tracker_c004_full_bank_clear_2026_05_18
 ```
 
 ## Main Files

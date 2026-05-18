@@ -39,7 +39,7 @@ const FILE_SUBDIRS = {
 const EXPORT_CATEGORIES = [
   {
     key: "summary",
-    label: "Summary / Reports",
+    label: "摘要 / 報告",
     files: [
       "report.md",
       "summary.md",
@@ -51,7 +51,7 @@ const EXPORT_CATEGORIES = [
   },
   {
     key: "data",
-    label: "Data",
+    label: "資料",
     files: [
       "attempts.csv",
       "attempts.json",
@@ -66,7 +66,7 @@ const EXPORT_CATEGORIES = [
   },
   {
     key: "analytics",
-    label: "Analytics",
+    label: "分析",
     files: [
       "error_summary.json",
       "error_summary.csv",
@@ -78,7 +78,7 @@ const EXPORT_CATEGORIES = [
   },
   {
     key: "package",
-    label: "Full Package",
+    label: "完整封包",
     files: [
       "question_bank_snapshot.json",
       "raw_events.jsonl"
@@ -109,13 +109,13 @@ export function renderExport() {
   const dateKey = `toeic_vocab_export_${date}.json`;
   const hasDirectoryPicker = typeof window.showDirectoryPicker === "function";
   const modeNote = hasDirectoryPicker
-    ? `Folder save available — package will be organized into <strong>summary/</strong>, <strong>data/</strong>, and <strong>analytics/</strong> subdirectories when you click Export.`
-    : `Individual download mode — ${fileNames.length} files will download separately. Zip packaging is not available in this static build.`;
+    ? `可直接儲存資料夾。按下匯出後，檔案會自動整理到 <strong>summary/</strong>、<strong>data/</strong> 與 <strong>analytics/</strong> 子資料夾。`
+    : `目前是逐檔下載模式，會分別下載 ${fileNames.length} 個檔案。此靜態版本不支援 zip 封裝。`;
 
   const warnings = [];
-  if (!state.attempts.length) warnings.push("No attempt data recorded yet — analytics files will show empty values.");
-  if (!state.sessions.length) warnings.push("No session data recorded yet — session files will be empty.");
-  if (!state.reviewQueue.length) warnings.push("Review queue is empty — review_queue.json will be an empty array.");
+  if (!state.attempts.length) warnings.push("目前還沒有作答資料，分析檔案會顯示空值。");
+  if (!state.sessions.length) warnings.push("目前還沒有課程紀錄，sessions 類檔案會是空的。");
+  if (!state.reviewQueue.length) warnings.push("目前複習佇列是空的，review_queue.json 會輸出空陣列。");
 
   const warningHtml = warnings.length
     ? `<div class="export-warnings">${warnings.map((w) => `<p class="muted-note">⚠ ${html(w)}</p>`).join("")}</div>`
@@ -140,24 +140,24 @@ export function renderExport() {
 
   return `
     <section class="tracker-panel">
-      <h3>Export Dashboard</h3>
+      <h3>匯出總覽</h3>
       <div class="tracker-grid export-grid">
-        <article class="tracker-stat"><span>Sessions</span><strong>${state.sessions.length}</strong><small>saved</small></article>
-        <article class="tracker-stat"><span>Attempts</span><strong>${state.attempts.length}</strong><small>saved</small></article>
-        <article class="tracker-stat"><span>Items</span><strong>${state.vocabItems.length}</strong><small>mastery rows</small></article>
-        <article class="tracker-stat"><span>Questions</span><strong>${state.questions.length}</strong><small>bank snapshot</small></article>
+        <article class="tracker-stat"><span>課程紀錄</span><strong>${state.sessions.length}</strong><small>筆</small></article>
+        <article class="tracker-stat"><span>作答紀錄</span><strong>${state.attempts.length}</strong><small>筆</small></article>
+        <article class="tracker-stat"><span>單字項目</span><strong>${state.vocabItems.length}</strong><small>精熟度列</small></article>
+        <article class="tracker-stat"><span>題目快照</span><strong>${state.questions.length}</strong><small>題</small></article>
       </div>
       <p class="export-mode-note">${modeNote}</p>
       <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.exportPackage()">Export for ChatGPT Analysis</button>
+        <button class="button primary" type="button" onclick="VocabTracker.exportPackage()">匯出給 ChatGPT 分析</button>
       </div>
     </section>
 
     <section class="tracker-panel">
       <div class="panel-head-row">
         <div>
-          <h3>Export Inventory — ${fileNames.length} files</h3>
-          <p class="muted-note">Click any file to download it individually.</p>
+          <h3>匯出清單 — ${fileNames.length} 個檔案</h3>
+          <p class="muted-note">點任何檔案都可以單獨下載。</p>
         </div>
       </div>
       ${warningHtml}
@@ -167,7 +167,7 @@ export function renderExport() {
     </section>
 
     <section class="tracker-panel">
-      <h3>summary.md Preview</h3>
+      <h3>summary.md 預覽</h3>
       <pre class="export-preview">${html(files["summary.md"])}</pre>
     </section>
   `;
@@ -1216,7 +1216,7 @@ export async function exportPackage() {
         await writable.write(content);
         await writable.close();
       }
-      setNotice(`Export package saved to ${folderName}/ with summary/, data/, and analytics/ subdirectories.`, "ok");
+      setNotice(`匯出封包已儲存到 ${folderName}/，並包含 summary/、data/、analytics/ 子資料夾。`, "ok");
       await loadData();
       callRender();
       return;
@@ -1234,7 +1234,7 @@ export async function exportPackage() {
       window.VocabScoring.downloadText(`${folderName}_${name}`, content, mime);
     }, index * 160);
   });
-  setNotice(`Downloading ${Object.keys(files).length} files individually — folder save not available and zip is not supported in this static build.`, "warn");
+  setNotice(`將逐一下載 ${Object.keys(files).length} 個檔案。目前無法直接存成資料夾，且此靜態版本不支援 zip。`, "warn");
   await loadData();
   callRender();
 }
