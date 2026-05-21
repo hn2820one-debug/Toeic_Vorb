@@ -5,24 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>清除快取</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 480px; margin: 60px auto; padding: 0 20px; background: #f8faf9; }
-    h2   { margin-bottom: 8px; }
-    p    { color: #555; font-size: 14px; line-height: 1.7; }
-    #status { margin-top: 16px; padding: 14px 16px; border-radius: 10px; background: #f1f5f9; font-size: 14px; min-height: 48px; }
-    button { margin-top: 16px; padding: 12px 24px; background: #dc2626; color: #fff;
-             border: none; border-radius: 8px; font-size: 15px; cursor: pointer; width: 100%; }
-    button:hover { background: #b91c1c; }
-    .go-btn { background: #1D9E75; margin-top: 10px; display: none; }
-    .go-btn:hover { background: #15705a; }
+    :root {
+      color-scheme: light;
+      --page-bg: #f3faf6;
+      --card-bg: #ffffff;
+      --border: #d7e7dd;
+      --text: #17342b;
+      --muted: #52645d;
+      --danger: #c73939;
+      --danger-hover: #a72d2d;
+      --success: #1d9e75;
+      --success-hover: #15705a;
+      --status-bg: #eef6f2;
+      --status-ok-bg: #e8f7f0;
+      --status-error-bg: #fdecec;
+      --shadow: 0 20px 50px rgba(23, 52, 43, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at top, #fbfffd 0%, var(--page-bg) 58%, #edf7f2 100%);
+      color: var(--text);
+      padding: 28px 16px 36px;
+    }
+
+    .clear-sw-shell {
+      width: min(100%, 520px);
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px 18px 18px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 5vw, 30px);
+      line-height: 1.25;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .clear-sw-note {
+      margin-top: 10px;
+    }
+
+    .clear-sw-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    #status {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--status-bg);
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 56px;
+      border: 1px solid var(--border);
+    }
+
+    button {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #fff;
+      background: var(--danger);
+      transition: background-color 120ms ease;
+    }
+
+    button:hover { background: var(--danger-hover); }
+    button:disabled { cursor: wait; opacity: 0.75; }
+
+    .go-btn {
+      display: none;
+      background: var(--success);
+    }
+
+    .go-btn:hover { background: var(--success-hover); }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 18px 12px 28px;
+      }
+
+      .clear-sw-shell {
+        border-radius: 16px;
+        padding: 18px 14px 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h2>🔄 清除 Service Worker 快取</h2>
-  <p>按下按鈕後，瀏覽器會取消所有 Service Worker 並清除快取，確保你看到最新版本的程式。</p>
+  <main class="clear-sw-shell" data-testid="clear-sw-card">
+    <h2>🔄 清除 Service Worker 快取</h2>
+    <p>按下按鈕後，瀏覽器會取消所有 Service Worker 並清除快取，確保你看到最新版本的程式。</p>
+    <p class="clear-sw-note">如果首頁或 tracker 還顯示舊內容，先用這個頁面清掉舊快取，再回首頁重新下載最新殼層。</p>
 
-  <button id="clear-btn" onclick="clearAll()">清除快取並重新整理</button>
-  <button id="go-btn" class="go-btn" onclick="location.href='./index.html'">✅ 完成 — 前往首頁</button>
-  <div id="status">準備中…</div>
+    <div class="clear-sw-actions">
+      <button id="clear-btn" data-testid="clear-sw-action-button" onclick="clearAll()">清除快取並重新整理</button>
+      <button id="go-btn" data-testid="clear-sw-home-button" class="go-btn" onclick="location.href='./index.html'">✅ 完成 — 前往首頁</button>
+    </div>
+    <div id="status" data-testid="clear-sw-status" aria-live="polite">準備中…</div>
+  </main>
 
   <script>
     async function clearAll() {
@@ -43,11 +145,11 @@
         const keys = await caches.keys();
         await Promise.all(keys.map(k => caches.delete(k)));
 
-        status.style.background = '#e8f7f0';
+        status.style.background = 'var(--status-ok-bg)';
         status.textContent = `✅ 完成！已清除 ${keys.length} 個快取。請按下方按鈕前往首頁（會重新下載最新版本）。`;
         document.getElementById('go-btn').style.display = 'block';
       } catch (err) {
-        status.style.background = '#fdecec';
+        status.style.background = 'var(--status-error-bg)';
         status.textContent = '❌ 清除失敗：' + err.message;
         clearBtn.disabled = false;
       }

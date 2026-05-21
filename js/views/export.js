@@ -7,9 +7,10 @@ import {
   setNotice,
   loadData,
   currentLesson,
-  topCounts
+  topCounts,
+  wordHighlightSummary
 } from "../state.js";
-import { buildStageSealReadiness } from "./today.js";
+import { buildStageSealReadiness, V0_DIAGNOSTIC_MIN_ATTEMPTS } from "./today.js";
 
 // Maps flat file names to the subdirectory they belong to when saving as a folder.
 // Files not listed here are saved at the root of the export folder.
@@ -32,7 +33,11 @@ const FILE_SUBDIRS = {
   "speed_summary.json": "analytics",
   "review_effectiveness.json": "analytics",
   "review_effectiveness.csv": "analytics",
-  "stage_seal_readiness.json": "analytics"
+  "stage_seal_readiness.json": "analytics",
+  "word_highlights.csv": "data",
+  "word_highlights.json": "data",
+  "word_highlight_summary.csv": "analytics",
+  "word_highlight_summary.json": "analytics"
 };
 
 // Controls which files appear in each UI category group.
@@ -61,7 +66,9 @@ const EXPORT_CATEGORIES = [
       "item_mastery.csv",
       "mastery.json",
       "review_queue.json",
-      "error_logs.json"
+      "error_logs.json",
+      "word_highlights.csv",
+      "word_highlights.json"
     ]
   },
   {
@@ -73,12 +80,14 @@ const EXPORT_CATEGORIES = [
       "speed_summary.json",
       "review_effectiveness.json",
       "review_effectiveness.csv",
-      "stage_seal_readiness.json"
+      "stage_seal_readiness.json",
+      "word_highlight_summary.csv",
+      "word_highlight_summary.json"
     ]
   },
   {
     key: "package",
-    label: "完整封包",
+    label: "完整資料封包",
     files: [
       "question_bank_snapshot.json",
       "raw_events.jsonl"
@@ -109,8 +118,8 @@ export function renderExport() {
   const dateKey = `toeic_vocab_export_${date}.json`;
   const hasDirectoryPicker = typeof window.showDirectoryPicker === "function";
   const modeNote = hasDirectoryPicker
-    ? `可直接儲存資料夾。按下匯出後，檔案會自動整理到 <strong>summary/</strong>、<strong>data/</strong> 與 <strong>analytics/</strong> 子資料夾。`
-    : `目前是逐檔下載模式，會分別下載 ${fileNames.length} 個檔案。此靜態版本不支援 zip 封裝。`;
+    ? `可直接儲存資料夾。按下<strong>匯出完整資料封包</strong>後，檔案會自動整理到 <strong>summary/</strong>、<strong>data/</strong> 與 <strong>analytics/</strong> 子資料夾。`
+    : `目前是逐檔下載模式。按下<strong>匯出完整資料封包</strong>後，會分別下載 ${fileNames.length} 個檔案；此靜態版本不支援 zip 封裝。`;
 
   const warnings = [];
   if (!state.attempts.length) warnings.push("目前還沒有作答資料，分析檔案會顯示空值。");
@@ -139,21 +148,23 @@ export function renderExport() {
   }).join("");
 
   return `
-    <section class="tracker-panel">
+    <section class="tracker-panel export-panel" data-testid="export-panel">
       <h3>匯出總覽</h3>
-      <div class="tracker-grid export-grid">
+      <p class="muted-note">一次下載完整資料封包，可用於備份、檢查與後續分析。</p>
+      <div class="tracker-actions export-actions" data-testid="export-primary-actions">
+        <button class="button primary" type="button" data-testid="export-package-button" onclick="VocabTracker.exportPackage()">匯出完整資料封包</button>
+      </div>
+      <div class="tracker-grid tracker-grid--five export-grid">
         <article class="tracker-stat"><span>課程紀錄</span><strong>${state.sessions.length}</strong><small>筆</small></article>
         <article class="tracker-stat"><span>作答紀錄</span><strong>${state.attempts.length}</strong><small>筆</small></article>
         <article class="tracker-stat"><span>單字項目</span><strong>${state.vocabItems.length}</strong><small>精熟度列</small></article>
         <article class="tracker-stat"><span>題目快照</span><strong>${state.questions.length}</strong><small>題</small></article>
+        <article class="tracker-stat"><span>不熟單字標記</span><strong>${(state.wordHighlights || []).length}</strong><small>筆</small></article>
       </div>
-      <p class="export-mode-note">${modeNote}</p>
-      <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.exportPackage()">匯出給 ChatGPT 分析</button>
-      </div>
+      <p class="export-mode-note" data-testid="export-mode-note">${modeNote}</p>
     </section>
 
-    <section class="tracker-panel">
+    <section class="tracker-panel export-inventory-panel" data-testid="export-inventory-panel">
       <div class="panel-head-row">
         <div>
           <h3>匯出清單 — ${fileNames.length} 個檔案</h3>
@@ -166,9 +177,9 @@ export function renderExport() {
       </div>
     </section>
 
-    <section class="tracker-panel">
+    <section class="tracker-panel export-preview-panel" data-testid="export-preview-panel">
       <h3>summary.md 預覽</h3>
-      <pre class="export-preview">${html(files["summary.md"])}</pre>
+      <pre class="export-preview" data-testid="export-preview">${html(files["summary.md"])}</pre>
     </section>
   `;
 }
@@ -543,7 +554,16 @@ function buildDiagnosticRecommendationForExport() {
   const v0Attempts = state.attempts.filter((attempt) => attempt.stage === "V0");
   if (!v0Attempts.length) return {
     status: "not_available",
+    attempt_count: 0,
+    min_required_attempts: V0_DIAGNOSTIC_MIN_ATTEMPTS,
     message: "No V0 diagnostic attempts found."
+  };
+  if (v0Attempts.length < V0_DIAGNOSTIC_MIN_ATTEMPTS) return {
+    status: "insufficient_data",
+    attempt_count: v0Attempts.length,
+    min_required_attempts: V0_DIAGNOSTIC_MIN_ATTEMPTS,
+    remaining_attempts: V0_DIAGNOSTIC_MIN_ATTEMPTS - v0Attempts.length,
+    message: `V0 diagnostic needs at least ${V0_DIAGNOSTIC_MIN_ATTEMPTS} attempts before producing a recommendation.`
   };
   const groups = {};
   v0Attempts.forEach((attempt) => {
@@ -567,6 +587,8 @@ function buildDiagnosticRecommendationForExport() {
     : "V1";
   return {
     status: "available",
+    attempt_count: v0Attempts.length,
+    min_required_attempts: V0_DIAGNOSTIC_MIN_ATTEMPTS,
     overall_accuracy: overallAccuracy,
     recommended_stage: recommendedStage,
     weakest_question_type: weakest?.question_type || "",
@@ -813,6 +835,44 @@ export function buildExportFiles() {
     ]);
   });
 
+  const wordHighlights = state.wordHighlights || [];
+  const wordHighlightRows = [[
+    "highlight_id", "created_at", "updated_at", "user_id", "session_id", "stage", "lesson_id", "lesson_title", "question_id", "question_type", "target_item_id", "source", "text", "normalized", "occurrences", "context_text"
+  ]];
+  wordHighlights.forEach((row) => {
+    wordHighlightRows.push([
+      exportValue(row.highlight_id),
+      exportValue(row.created_at),
+      exportValue(row.updated_at),
+      exportValue(row.user_id),
+      exportValue(row.session_id),
+      exportValue(row.stage),
+      exportValue(row.lesson_id),
+      exportValue(row.lesson_title),
+      exportValue(row.question_id),
+      exportValue(row.question_type),
+      exportValue(row.target_item_id),
+      exportValue(row.source),
+      exportValue(row.text),
+      exportValue(row.normalized),
+      exportValue(row.occurrences || 1),
+      exportValue(row.context_text)
+    ]);
+  });
+  const wordSummary = wordHighlightSummary(wordHighlights);
+  const wordSummaryRows = [["text", "normalized", "occurrences", "question_count", "lesson_count", "lesson_ids", "latest_at"]];
+  wordSummary.forEach((row) => {
+    wordSummaryRows.push([
+      row.text,
+      row.normalized,
+      row.occurrences,
+      row.question_count,
+      row.lesson_count,
+      (row.lesson_ids || []).join("|"),
+      row.latest_at
+    ]);
+  });
+
   const stageProgress = buildStageProgress();
   const contentQualitySummary = buildContentQualitySummary();
   const diagnosticRecommendation = buildDiagnosticRecommendationForExport();
@@ -824,7 +884,8 @@ export function buildExportFiles() {
     ...state.sessions.map((record) => ({ event_type: "session", ...record })),
     ...state.attempts.map((record) => ({ event_type: "attempt", ...record })),
     ...state.errorLogs.map((record) => ({ event_type: "error_log", ...record })),
-    ...state.reviewQueue.map((record) => ({ event_type: "review_queue", ...record }))
+    ...state.reviewQueue.map((record) => ({ event_type: "review_queue", ...record })),
+    ...wordHighlights.map((record) => ({ event_type: "word_highlight", ...record }))
   ].map((record) => JSON.stringify(record)).join("\n");
 
   const summaryMd = buildSummaryMarkdown(stageProgress);
@@ -863,6 +924,12 @@ export function buildExportFiles() {
       count: state.reviewQueue.length,
       review_queue: state.reviewQueue
     }, null, 2),
+    "word_highlights.csv": `﻿${window.VocabScoring.toCsv(wordHighlightRows)}`,
+    "word_highlights.json": JSON.stringify({
+      exported_at: window.VocabScoring.localIso(),
+      count: wordHighlights.length,
+      word_highlights: wordHighlights
+    }, null, 2),
     "error_logs.json": JSON.stringify({
       exported_at: window.VocabScoring.localIso(),
       count: state.errorLogs.length,
@@ -880,6 +947,12 @@ export function buildExportFiles() {
       rows: reviewEffectiveness.rows
     }, null, 2),
     "stage_seal_readiness.json": JSON.stringify(stageSealReadiness, null, 2),
+    "word_highlight_summary.csv": `﻿${window.VocabScoring.toCsv(wordSummaryRows)}`,
+    "word_highlight_summary.json": JSON.stringify({
+      generated_at: window.VocabScoring.localIso(),
+      count: wordSummary.length,
+      rows: wordSummary
+    }, null, 2),
 
     // --- Full Package ---
     "question_bank_snapshot.json": JSON.stringify({
@@ -901,12 +974,16 @@ export function buildExportFiles() {
         item_mastery_csv: "item_mastery.csv",
         mastery_json: "mastery.json",
         review_queue_json: "review_queue.json",
+        word_highlights_csv: "word_highlights.csv",
+        word_highlights_json: "word_highlights.json",
         error_logs_json: "error_logs.json",
         error_summary_csv: "error_summary.csv",
         error_summary_json: "error_summary.json",
         speed_summary_json: "speed_summary.json",
         review_effectiveness_csv: "review_effectiveness.csv",
         review_effectiveness_json: "review_effectiveness.json",
+        word_highlight_summary_csv: "word_highlight_summary.csv",
+        word_highlight_summary_json: "word_highlight_summary.json",
         stage_seal_readiness_json: "stage_seal_readiness.json",
         content_quality_summary_json: "content_quality_summary.json",
         diagnostic_recommendation_json: "diagnostic_recommendation.json",
@@ -920,6 +997,8 @@ export function buildExportFiles() {
         attempts: state.attempts,
         item_mastery: state.vocabItems,
         review_queue: state.reviewQueue,
+        word_highlights: wordHighlights,
+        word_highlight_summary: wordSummary,
         errors: state.errorLogs,
         review_effectiveness: reviewEffectiveness,
         content_quality_summary: contentQualitySummary,
@@ -988,6 +1067,7 @@ export function buildSummaryMarkdown(stageProgress) {
   const questionTypeRows = buildQuestionTypeStats(attempts);
   const targetItemRows = buildTargetItemStats(attempts);
   const reviewEffectiveness = buildReviewEffectiveness(attempts);
+  const highlightedWordRows = wordHighlightSummary(state.wordHighlights || []);
   const errorRows = topCounts(wrongAttempts.filter((attempt) => attempt.error_code), "error_code", 5)
     .map(([code, count]) => ({
       error_code: code,
@@ -1073,6 +1153,16 @@ export function buildSummaryMarkdown(stageProgress) {
       row.repeated_count
     ])
   );
+  const highlightedWordTable = exportMarkdownTable(
+    ["text", "occurrences", "question_count", "lesson_count", "latest_at"],
+    highlightedWordRows.slice(0, 12).map((row) => [
+      row.text,
+      row.occurrences,
+      row.question_count,
+      row.lesson_count,
+      row.latest_at || ""
+    ])
+  );
   const repeatedTargetItemTable = exportMarkdownTable(
     ["target_item_id", "base_word", "repeated_count", "last_error_code"],
     repeatedTargetItemRows.map((row) => [
@@ -1126,6 +1216,7 @@ export function buildSummaryMarkdown(stageProgress) {
 - total questions: ${state.questions.length}
 - total attempts: ${attempts.length}
 - total sessions: ${sessions.length}
+- highlighted unknown words: ${(state.wordHighlights || []).length}
 
 ## 2. Completed Lessons
 ${completedLessonTable}
@@ -1142,7 +1233,10 @@ ${weakestTargetItemTable}
 ## 6. Top Error Codes
 ${topErrorCodeTable}
 
-## 7. Speed Analysis
+## 7. Reader Vocabulary Highlights
+${highlightedWordTable}
+
+## 8. Speed Analysis
 - overall average response time: ${exportSeconds(overallAvgTime)}
 - overall accuracy: ${exportPercent(overallAccuracy)}
 - fast_correct count: ${speedBuckets.fast_correct}
@@ -1150,13 +1244,13 @@ ${topErrorCodeTable}
 - fast_wrong count: ${speedBuckets.fast_wrong}
 - slow_wrong count: ${speedBuckets.slow_wrong}
 
-## 8. Repeated Error Analysis
+## 9. Repeated Error Analysis
 - repeated_error count: ${repeatedAttempts.length}
 - repeated_error rate: ${attempts.length ? exportPercent(repeatedAttempts.length / attempts.length) : "insufficient data"}
 - top repeated target_items:
 ${repeatedTargetItemTable}
 
-## 9. Review Effectiveness
+## 10. Review Effectiveness
 - review attempts: ${reviewEffectiveness.overall.attempts}
 - review fix rate: ${exportPercent(reviewEffectiveness.overall.fix_rate)}
 - review average response time: ${exportSeconds(reviewEffectiveness.overall.avg_response_time)}
@@ -1168,7 +1262,7 @@ ${reviewItemTable}
 ### Review Fix Rate by Error Code
 ${reviewErrorTable}
 
-## 10. Recommended Next Actions
+## 11. Recommended Next Actions
 ${recommendedActions.length ? recommendedActions.map((line) => `- ${line}`).join("\n") : "- insufficient data"}
 
 ## Stage Status Snapshot
@@ -1216,7 +1310,7 @@ export async function exportPackage() {
         await writable.write(content);
         await writable.close();
       }
-      setNotice(`匯出封包已儲存到 ${folderName}/，並包含 summary/、data/、analytics/ 子資料夾。`, "ok");
+      setNotice(`完整資料封包已儲存到 ${folderName}/，並包含 summary/、data/、analytics/ 子資料夾。`, "ok");
       await loadData();
       callRender();
       return;
@@ -1234,7 +1328,7 @@ export async function exportPackage() {
       window.VocabScoring.downloadText(`${folderName}_${name}`, content, mime);
     }, index * 160);
   });
-  setNotice(`將逐一下載 ${Object.keys(files).length} 個檔案。目前無法直接存成資料夾，且此靜態版本不支援 zip。`, "warn");
+  setNotice(`將逐一下載完整資料封包的 ${Object.keys(files).length} 個檔案。目前無法直接存成資料夾，且此靜態版本不支援 zip。`, "warn");
   await loadData();
   callRender();
 }

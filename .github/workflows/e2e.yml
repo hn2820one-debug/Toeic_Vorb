@@ -26,8 +26,8 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install chromium
 
-      - name: Run Playwright tests
-        run: npx playwright test
+      - name: Run aggregate validation suite
+        run: npm run test:all
 
       - name: Upload Playwright report
         if: always()

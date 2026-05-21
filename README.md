@@ -33,27 +33,42 @@ Program B is a static local-first PWA.
 - No build step
 - No runtime AI question generation
 
+## Navigation
+
+The main tracker shell uses 8 top-level tabs:
+
+- Today
+- Roadmap
+- Lesson
+- Mistakes
+- Mastery
+- Export
+- Question Bank
+- Settings
+
+With the current 39-lesson production seed, Today routes learners to the first incomplete lesson; on a clean reseed this starts at `V2-A-71`. The tracker shell still supports a non-dismissible empty-seed banner, but it appears only when both lesson rows and question rows return to 0.
+
 ## Current Production Seed
 
-The active production seed is V0-V3 only. V4 is draft-only and must not be enabled or moved into `data/vocab/`.
+The active production seed is V0-V3 only. V2 restores `V2-A-71` through `V2-A-80` plus `V2-MR-01` / `V2-MR-02`; V3 restores `V3-A-121` through `V3-A-143` plus `V3-MR-01` through `V3-MR-04`. V4 remains draft-only and must not be enabled or moved into `data/vocab/`.
 
 | Metric | Current value |
 |---|---:|
-| Runnable lessons | 0 |
-| Question-bank rows | 0 |
-| Vocab items | 494 |
+| Runnable lessons | 39 |
+| Question-bank rows | 780 |
+| Vocab items | 632 |
 | Question files in manifest | 18 |
 | Duplicate stems | 0 |
 | Full quality audit issues | 0 |
-| Seed version | `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` |
-| Service worker cache | `toeic-vorb-v9` |
+| Seed version | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` |
+| Service worker cache | `toeic-vorb-v38` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
 | V0 Diagnosis | 0 | 0 | Cleared |
 | V1 Word Family + Speed | 0 | 0 | Cleared |
-| V2 TOEIC Scene Vocabulary | 0 | 0 | Cleared |
-| V3 Collocation | 0 | 0 | Cleared |
+| V2 TOEIC Scene Vocabulary | 12 | 240 | Core `V2-A-71`–`V2-A-80` + `V2-MR-01` / `V2-MR-02` live |
+| V3 Collocation | 27 | 540 | Core `V3-A-121`–`V3-A-143` + `V3-MR-01`–`V3-MR-04` live |
 | V4 Formal Phrase | 0 active | 0 active | Draft only in `drafts/v4/` |
 | V5 False Friends + Speed Reflex | 0 | 0 | Planned |
 | V6 Integrated Review + Seal Test | 0 | 0 | Planned |
@@ -108,8 +123,10 @@ tests/helpers/seed-idb.ts         -> APP_SEED_VERSION
 Current seed version:
 
 ```text
-toeic_vocab_tracker_c004_full_bank_clear_2026_05_18
+toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22
 ```
+
+Every production seed change must also copy `docs/templates/seed-change-record-template.md` to `docs/seed-changes/YYYY-MM-DD-{new-seed-version}.md` and fill the required file-sync checklist, validation results, rollback plan, and sign-off. See `docs/seed-changes/example-seed-change-record.md` for the expected format. Do not skip this record.
 
 ## Main Files
 
@@ -147,15 +164,33 @@ Or go directly to:
 http://127.0.0.1:8787/tracker.html
 ```
 
+## GitHub Pages / Mobile Baseline
+
+Program B is shipped as a repo-subpath-safe static PWA. Launcher, tracker, manifest, icons, and service-worker registration all use relative `./` paths so the app can run under a GitHub Pages repository subpath.
+
+- Official deploy target stays `main` + `.github/workflows/pages.yml`.
+- If a deployed shell looks stale, use `clear-sw.html` or the launcher link `如果畫面怪怪的，先清除快取` before reopening the app.
+- The dedicated Pages/mobile smoke entrypoint is `npm run test:pages-mobile`.
+- The live deployment release gate is `npm run test:pages-live`.
+- The aggregate local release gate is `npm run test:all`.
+- Manual phone/browser checks for offline reopen and update pickup are documented in `docs/pages-offline-update-manual-checklist-2026-05-22.md`.
+- The current Pages/mobile phase plan is tracked in `docs/pages-mobile-experience-plan.md`.
+- Still pending real-device acceptance: mobile export download confirmation and GitHub Pages real-URL phone validation.
+
 ## Validation Commands
 
 Run these after documentation consolidation that changes current facts, and after any production code, UI, or seed change:
 
 ```powershell
 node scripts/validate-vocab-data.js
+node scripts/check-doc-consistency.js
 node scripts/audit-quality-full.js
 node scripts/audit-duplicates.js
 npm run test:scoring
+npm run test:mup
+npm run test:export-governance
+npm run test:pages-mobile
+npm run test:pages-live
 npx playwright test
 ```
 
@@ -163,8 +198,16 @@ Useful package shortcuts:
 
 ```powershell
 npm run test:data
+npm run test:docs
+npm run test:mup
+npm run test:export-governance
+npm run test:pages-mobile
+npm run test:pages-live
 npm run test:all
 ```
+
+Content rebuild waves must also follow `docs/rebuild-wave-release-gate.md` before a draft slice or production seed change is treated as ready.
+Export-based content feedback reviews are defined in `docs/export-analysis-feedback-governance.md`.
 
 ## Operational Rules
 
