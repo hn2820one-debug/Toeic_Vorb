@@ -17,6 +17,10 @@ const mistakesRuntime = {
   setView: null
 };
 
+function markDriveChange(reason) {
+  window.VocabTracker?.markGoogleDriveLocalChange?.(reason);
+}
+
 export function configureMistakesView(deps) {
   mistakesRuntime.render = deps?.render || mistakesRuntime.render;
   mistakesRuntime.setView = deps?.setView || mistakesRuntime.setView;
@@ -119,7 +123,7 @@ export function renderMistakes() {
       <div class="tracker-actions">
         <button class="button primary" type="button" onclick="VocabTracker.startReviewMode('${html(filter)}')" ${candidates.rows.length ? "" : "disabled"}>開始複習 (${candidates.rows.length})</button>
         <button class="button secondary" type="button" onclick="VocabTracker.setView('lesson')">一般課程</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">資料匯出</button>
+        <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">匯出完整資料封包</button>
       </div>
       ${state.lastReviewSummary ? `
         <div class="tracker-alert ${state.lastReviewSummary.wrong_questions ? "warn" : "ok"}">
@@ -337,6 +341,7 @@ export async function confirmSessionErrors() {
   }
   state.reviewSessionId = null;
   await loadData();
+  markDriveChange("error_review");
   setNotice("錯因已儲存，複習佇列也已更新。", "ok");
   callSetView("lesson");
 }
@@ -390,5 +395,6 @@ export async function markQueueDone(reviewId) {
   if (!entry) return;
   await window.VocabDB.put("review_queue", { ...entry, status: "done", completed_at: window.VocabScoring.localIso() });
   await loadData();
+  markDriveChange("review_queue");
   callRender();
 }

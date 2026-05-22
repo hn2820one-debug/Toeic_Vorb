@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_mr_02_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "mixed_review_assembly_candidate",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "drafts/v0-v3-rebuild/mixed_review_architecture.json",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "source_core_lessons": [
+    "V3-A-126",
+    "V3-A-127",
+    "V3-A-128",
+    "V3-A-129",
+    "V3-A-130"
+  ],
+  "new_question_rows": 0,
+  "lesson": {
+    "lesson_id": "V3-MR-02",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 20002,
+    "title": "V3 Mixed Review 02",
+    "estimated_minutes": 30,
+    "lesson_type": "mixed_review",
+    "topic": "V3 Mixed Review",
+    "target_items": [],
+    "question_ids": [
+      "v3_a_126_rv_021",
+      "v3_a_126_rv_022",
+      "v3_a_126_rv_023",
+      "v3_a_126_rv_024",
+      "v3_a_127_rv_021",
+      "v3_a_127_rv_022",
+      "v3_a_127_rv_023",
+      "v3_a_127_rv_024",
+      "v3_a_128_rv_021",
+      "v3_a_128_rv_022",
+      "v3_a_128_rv_023",
+      "v3_a_128_rv_024",
+      "v3_a_129_rv_021",
+      "v3_a_129_rv_022",
+      "v3_a_129_rv_023",
+      "v3_a_129_rv_024",
+      "v3_a_130_rv_021",
+      "v3_a_130_rv_022",
+      "v3_a_130_rv_023",
+      "v3_a_130_rv_024"
+    ],
+    "review_question_ids": [],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "grammar_link_id": "COLLOCATION_VERB_NOUN",
+    "status": "not_started",
+    "draft_metadata": {
+      "authoring_method": "v3_mixed_review_assembly",
+      "mixed_review_index": 2,
+      "source_core_lessons": [
+        "V3-A-126",
+        "V3-A-127",
+        "V3-A-128",
+        "V3-A-129",
+        "V3-A-130"
+      ],
+      "new_question_rows": 0,
+      "reused_review_question_refs": 20,
+      "production_seed_change": false
+    }
+  },
+  "validation": {
+    "validated_at": "2026-05-21",
+    "all_sources_in_production": true,
+    "all_20_question_ids_accounted_for": true,
+    "new_question_rows": 0,
+    "review_question_ids_empty": true,
+    "reference_validity_checked": true,
+    "answer_distribution": {
+      "D": 20
+    },
+    "isolated_full_quality_audit": "passed",
+    "production_seed_changed": true
+  },
+  "notes": [
+    "V3-MR-02 reuses 20 existing V3 review_question rows from V3-A-126, V3-A-127, V3-A-128, V3-A-129, V3-A-130.",
+    "Promotion adds 0 question-bank rows; curriculum-only seed change."
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_mr_01_02_mixed_review_2026_05_21",
+  "promoted_lesson_id": "V3-MR-02"
+}

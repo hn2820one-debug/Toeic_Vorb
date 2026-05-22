@@ -1,0 +1,1466 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_13_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-133",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-13-current-isolated-audit",
+    "isolated_audit_scope": "27 lessons / 550 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_132_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 8 candidate: V3-W1-13 business-coordination collocation lesson 3 (6 target items).",
+    "Part6 and closing slots spread targets evenly; Q10 reuses v3_a_132_rv_024.",
+    "Promotion target lesson id: V3-A-133."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-13",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 133,
+    "title": "業務協調 搭配詞 3",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "業務協調",
+    "target_items": [
+      "item_coll_rely_upon",
+      "item_coll_turn_to",
+      "item_coll_stick_with",
+      "item_coll_come_through",
+      "item_coll_go_ahead_with",
+      "item_coll_catch_up_with"
+    ],
+    "question_ids": [
+      "V3-W1-13_Q01",
+      "V3-W1-13_Q02",
+      "V3-W1-13_Q03",
+      "V3-W1-13_Q04",
+      "V3-W1-13_Q05",
+      "V3-W1-13_Q06",
+      "V3-W1-13_Q07",
+      "V3-W1-13_Q08",
+      "V3-W1-13_Q09",
+      "v3_a_132_rv_024",
+      "V3-W1-13_Q11",
+      "V3-W1-13_Q12",
+      "V3-W1-13_Q13",
+      "V3-W1-13_Q14",
+      "V3-W1-13_Q15",
+      "V3-W1-13_Q16",
+      "V3-W1-13_Q17",
+      "V3-W1-13_Q18",
+      "V3-W1-13_Q19",
+      "V3-W1-13_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-13_R01",
+      "V3-W1-13_R02",
+      "V3-W1-13_R03",
+      "V3-W1-13_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_13",
+      "topic_lesson_index": 3,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w1_13_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_132_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-13_Q01",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The regional rollout will ______ support from the logistics hub during peak season.",
+      "options": {
+        "A": "rely upon",
+        "B": "rely in",
+        "C": "rely at",
+        "D": "rely with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "rely upon 依靠；語境需要依靠，故用 rely upon 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rely_upon",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "rely upon",
+        "gloss_zh": "依靠",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rely upon",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q02",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Smaller clinics may ______ telehealth vendors when in-house staff cannot cover night shifts.",
+      "options": {
+        "A": "rely upon",
+        "B": "rely in",
+        "C": "rely at",
+        "D": "rely with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "rely upon 依靠；語境需要依靠，故用 rely upon 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rely_upon",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "rely upon",
+        "gloss_zh": "依靠",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rely upon",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q03",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "When the prototype failed stress testing, engineers had to ______ the design team for a revised plan.",
+      "options": {
+        "A": "turn to",
+        "B": "turn in",
+        "C": "turn over",
+        "D": "turn around"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "turn to 轉向；求助於；語境需要轉向，故用 turn to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "turn to",
+        "gloss_zh": "轉向；求助於",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q04",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "If the compliance checklist is unclear, managers should ______ legal counsel before signing.",
+      "options": {
+        "A": "turn to",
+        "B": "turn in",
+        "C": "turn over",
+        "D": "turn around"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "turn to 轉向；求助於；語境需要轉向，故用 turn to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "turn to",
+        "gloss_zh": "轉向；求助於",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q05",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "After the pilot review, the committee voted to ______ the original vendor despite higher quotes.",
+      "options": {
+        "A": "stick with",
+        "B": "stick in",
+        "C": "stick on",
+        "D": "stick up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "stick with 持續採用；不離開；語境需要持續採用，故用 stick with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stick_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "stick with",
+        "gloss_zh": "持續採用；不離開",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stick with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q06",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Trainees are encouraged to ______ the approved script when handling billing disputes.",
+      "options": {
+        "A": "stick with",
+        "B": "stick in",
+        "C": "stick on",
+        "D": "stick up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "stick with 持續採用；不離開；語境需要持續採用，故用 stick with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stick_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "stick with",
+        "gloss_zh": "持續採用；不離開",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stick with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q07",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The supplier promised to ______ with the replacement parts before the factory restart.",
+      "options": {
+        "A": "come in",
+        "B": "come through",
+        "C": "come on",
+        "D": "come off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "come through 順利完成；兌現；語境需要順利完成，故用 come through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "come through",
+        "gloss_zh": "順利完成；兌現",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q08",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Investors hope the joint venture will ______ with audited results by the end of Q3.",
+      "options": {
+        "A": "come in",
+        "B": "come through",
+        "C": "come on",
+        "D": "come off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "come through 順利完成；兌現；語境需要順利完成，故用 come through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "come through",
+        "gloss_zh": "順利完成；兌現",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q09",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The board authorized the PMO to ______ the warehouse automation phase next month.",
+      "options": {
+        "A": "go over with",
+        "B": "go ahead with",
+        "C": "go through with",
+        "D": "go back with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "go ahead with 繼續進行；語境需要繼續進行，故用 go ahead with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "go ahead with",
+        "gloss_zh": "繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q11",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the product team after your site visits to share client feedback.",
+      "options": {
+        "A": "catch in with",
+        "B": "catch up with",
+        "C": "catch on with",
+        "D": "catch off with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "catch up with 趕上；了解近況；語境需要趕上，故用 catch up with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_catch_up_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "catch up with",
+        "gloss_zh": "趕上；了解近況",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "catch up with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q12",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "New hires need time to ______ workflow changes introduced during the merger.",
+      "options": {
+        "A": "catch in with",
+        "B": "catch up with",
+        "C": "catch on with",
+        "D": "catch off with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "catch up with 趕上；了解近況；語境需要趕上，故用 catch up with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_catch_up_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "catch up with",
+        "gloss_zh": "趕上；了解近況",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "catch up with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q13",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The procurement office received three bids for the travel booking platform. After comparing service-level guarantees, the director decided to ______ the incumbent provider. Training materials for employees will be updated next week.",
+      "options": {
+        "A": "stick in",
+        "B": "stick with",
+        "C": "stick on",
+        "D": "stick up"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "stick with 持續採用；不離開；語境要求持續採用，故用 stick with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stick_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "stick with",
+        "gloss_zh": "持續採用；不離開",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stick with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q14",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The customs broker warned that paperwork errors could delay the exhibition equipment. Fortunately, the freight partner managed to ______ with the containers two days early. Setup crews began installing displays on Monday morning.",
+      "options": {
+        "A": "come in",
+        "B": "come on",
+        "C": "come through",
+        "D": "come off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "come through 順利完成；兌現；語境要求順利完成，故用 come through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "come through",
+        "gloss_zh": "順利完成；兌現",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q15",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Safety inspectors completed their walkthrough of the pilot production line. Management announced the plant could ______ the night shift trial as scheduled. Operators received revised checklists before the first run.",
+      "options": {
+        "A": "go over with",
+        "B": "go through with",
+        "C": "go ahead with",
+        "D": "go back with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "go ahead with 繼續進行；語境要求繼續進行，故用 go ahead with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "go ahead with",
+        "gloss_zh": "繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q16",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Several regional managers missed the webinar on the new expense policy. HR scheduled small-group sessions so supervisors could ______ the finance team. Updated policy summaries were emailed afterward.",
+      "options": {
+        "A": "catch in with",
+        "B": "catch on with",
+        "C": "catch up with",
+        "D": "catch off with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "catch up with 趕上；了解近況；語境要求趕上，故用 catch up with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_catch_up_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "catch up with",
+        "gloss_zh": "趕上；了解近況",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "catch up with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q17",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "When the data center overheated, technicians had to ______ the facilities vendor immediately.",
+      "options": {
+        "A": "turn in",
+        "B": "turn over",
+        "C": "turn to",
+        "D": "turn around"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "turn to 轉向；求助於；語境需要轉向，故用 turn to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "turn to",
+        "gloss_zh": "轉向；求助於",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q18",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The crisis team will ______ satellite links if local networks fail during the storm.",
+      "options": {
+        "A": "rely in",
+        "B": "rely at",
+        "C": "rely upon",
+        "D": "rely with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "rely upon 依靠；語境需要依靠，故用 rely upon 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rely_upon",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "rely upon",
+        "gloss_zh": "依靠",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rely upon",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q19",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Despite competitor discounts, we will ______ our service bundles for enterprise clients.",
+      "options": {
+        "A": "stick in",
+        "B": "stick on",
+        "C": "stick with",
+        "D": "stick up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "stick with 持續採用；不離開；語境需要持續採用，故用 stick with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stick_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "stick with",
+        "gloss_zh": "持續採用；不離開",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stick with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_Q20",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The audit liaison will ______ the tax advisors once the preliminary findings are released.",
+      "options": {
+        "A": "catch in with",
+        "B": "catch on with",
+        "C": "catch off with",
+        "D": "catch up with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "catch up with 趕上；了解近況；語境需要趕上，故用 catch up with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_catch_up_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "catch up with",
+        "gloss_zh": "趕上；了解近況",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "catch up with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_R01",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The training lead asked interns to ______ the checklist until the software update ships.",
+      "options": {
+        "A": "stick in",
+        "B": "stick on",
+        "C": "stick up",
+        "D": "stick with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "stick with 持續採用；不離開；語境需要持續採用，故用 stick with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stick_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "stick with",
+        "gloss_zh": "持續採用；不離開",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stick with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_R02",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Partners expect the distributor to ______ with the promotional samples by Friday.",
+      "options": {
+        "A": "come in",
+        "B": "come on",
+        "C": "come off",
+        "D": "come through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "come through 順利完成；兌現；語境需要順利完成，故用 come through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "come through",
+        "gloss_zh": "順利完成；兌現",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_R03",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Once insurance approves the claim, we can ______ the office renovation contract.",
+      "options": {
+        "A": "go over with",
+        "B": "go through with",
+        "C": "go back with",
+        "D": "go ahead with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "go ahead with 繼續進行；語境需要繼續進行，故用 go ahead with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "go ahead with",
+        "gloss_zh": "繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-13_R04",
+      "lesson_id": "V3-W1-13",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "After the conference, please ______ the sales director about the booth leads.",
+      "options": {
+        "A": "catch in with",
+        "B": "catch on with",
+        "C": "catch off with",
+        "D": "catch up with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "catch up with 趕上；了解近況；語境需要趕上，故用 catch up with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_catch_up_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-13",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_13",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 3",
+        "source_phrase": "catch up with",
+        "gloss_zh": "趕上；了解近況",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "catch up with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave8_candidate",
+        "authored_slice_lesson_id": "V3-W1-13",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_rely_upon",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-13",
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "base_word": "rely upon",
+      "variants": [
+        "rely upon"
+      ],
+      "chinese": "依靠",
+      "example": "The coordinator will rely upon the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "rely upon",
+        "gloss_zh": "依靠",
+        "source_lessons": [
+          "V3-W1-13"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave8_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_turn_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-13",
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "base_word": "turn to",
+      "variants": [
+        "turn to"
+      ],
+      "chinese": "轉向",
+      "example": "The coordinator will turn to the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "turn to",
+        "gloss_zh": "轉向；求助於",
+        "source_lessons": [
+          "V3-W1-13"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave8_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_stick_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-13",
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "base_word": "stick with",
+      "variants": [
+        "stick with"
+      ],
+      "chinese": "持續採用",
+      "example": "The coordinator will stick with the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "stick with",
+        "gloss_zh": "持續採用；不離開",
+        "source_lessons": [
+          "V3-W1-13"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave8_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_come_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-13",
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "base_word": "come through",
+      "variants": [
+        "come through"
+      ],
+      "chinese": "順利完成",
+      "example": "The coordinator will come through the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "come through",
+        "gloss_zh": "順利完成；兌現",
+        "source_lessons": [
+          "V3-W1-13"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave8_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_go_ahead_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-13",
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "base_word": "go ahead with",
+      "variants": [
+        "go ahead with"
+      ],
+      "chinese": "繼續進行",
+      "example": "The coordinator will go ahead with the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "go ahead with",
+        "gloss_zh": "繼續進行",
+        "source_lessons": [
+          "V3-W1-13"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave8_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_catch_up_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-13",
+      "lesson_ids": [
+        "V3-W1-13"
+      ],
+      "base_word": "catch up with",
+      "variants": [
+        "catch up with"
+      ],
+      "chinese": "趕上",
+      "example": "The coordinator will catch up with the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "catch up with",
+        "gloss_zh": "趕上；了解近況",
+        "source_lessons": [
+          "V3-W1-13"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave8_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_13_wave_8_2026_05_21",
+  "promoted_lesson_id": "V3-A-133"
+}

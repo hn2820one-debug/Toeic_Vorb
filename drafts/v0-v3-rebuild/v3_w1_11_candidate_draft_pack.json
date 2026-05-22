@@ -1,0 +1,1555 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_11_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-131",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-11-current-isolated-audit",
+    "isolated_audit_scope": "25 lessons / 503 questions",
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "explanation_warnings": 0,
+    "preferred_stem_length_warnings": 0
+  },
+  "notes": [
+    "C-11 wave 6 candidate: V3-W1-11 business-coordination collocation lesson 1 (7 target items).",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-131."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-11",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 131,
+    "title": "業務協調 搭配詞 1",
+    "estimated_minutes": 35,
+    "lesson_type": "collocation",
+    "topic": "業務協調",
+    "target_items": [
+      "item_coll_turn_down",
+      "item_coll_go_ahead",
+      "item_coll_line_up",
+      "item_coll_depend_on",
+      "item_coll_carry_on",
+      "item_coll_call_off",
+      "item_coll_put_off"
+    ],
+    "question_ids": [
+      "V3-W1-11_Q01",
+      "V3-W1-11_Q02",
+      "V3-W1-11_Q03",
+      "V3-W1-11_Q04",
+      "V3-W1-11_Q05",
+      "V3-W1-11_Q06",
+      "V3-W1-11_Q07",
+      "V3-W1-11_Q08",
+      "V3-W1-11_Q09",
+      "V3-W1-11_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-11_Q11",
+      "V3-W1-11_Q12",
+      "V3-W1-11_Q13",
+      "V3-W1-11_Q14",
+      "V3-W1-11_Q15",
+      "V3-W1-11_Q16",
+      "V3-W1-11_Q17",
+      "V3-W1-11_Q18",
+      "V3-W1-11_Q19",
+      "V3-W1-11_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-11_R01",
+      "V3-W1-11_R02",
+      "V3-W1-11_R03",
+      "V3-W1-11_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_11",
+      "topic_lesson_index": 1,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 5,
+        "B": 2,
+        "C": 0
+      },
+      "unresolved_target_count": 7,
+      "authoring_method": "c11_v3_w1_11_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-11_Q01",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The procurement committee may ______ the vendor's revised bid if the warranty terms remain unacceptable.",
+      "options": {
+        "A": "turn down",
+        "B": "turn in",
+        "C": "turn over",
+        "D": "turn around"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "turn down 拒絕；語境需要拒絕，故用 turn down 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "turn down",
+        "gloss_zh": "拒絕",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q02",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Ms. Ortiz had to ______ the speaking invitation because she will be coordinating the merger workshop.",
+      "options": {
+        "A": "turn down",
+        "B": "turn in",
+        "C": "turn to",
+        "D": "turn over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "turn down 拒絕；語境需要拒絕，故用 turn down 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "turn down",
+        "gloss_zh": "拒絕",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q03",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Once legal clears the draft contract, the project office will ______ with the pilot rollout.",
+      "options": {
+        "A": "go ahead",
+        "B": "go over",
+        "C": "go through",
+        "D": "go after"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "go ahead 開始做；繼續進行；語境需要開始做，故用 go ahead 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "go ahead",
+        "gloss_zh": "開始做；繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q04",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The steering committee voted to ______ with the facility upgrade after the safety audit passed.",
+      "options": {
+        "A": "go ahead",
+        "B": "go over",
+        "C": "go through",
+        "D": "go back"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "go ahead 開始做；繼續進行；語境需要開始做，故用 go ahead 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "go ahead",
+        "gloss_zh": "開始做；繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q05",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The events team must ______ backup interpreters before the regional partners arrive on Monday.",
+      "options": {
+        "A": "line up",
+        "B": "line on",
+        "C": "line in",
+        "D": "line over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "line up 安排好；排隊；語境需要安排好，故用 line up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_line_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "line up",
+        "gloss_zh": "安排好；排隊",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "line up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q06",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ conference rooms and catering slots for the three-day strategy forum.",
+      "options": {
+        "A": "line up",
+        "B": "line on",
+        "C": "line in",
+        "D": "line over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "line up 安排好；排隊；語境需要安排好，故用 line up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_line_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "line up",
+        "gloss_zh": "安排好；排隊",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "line up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q07",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The shipment schedule will ______ customs clearance times at the port of entry.",
+      "options": {
+        "A": "depend in",
+        "B": "depend on",
+        "C": "depend at",
+        "D": "depend with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "depend on 取決於；依靠；語境需要取決於，故用 depend on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_depend_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "depend on",
+        "gloss_zh": "取決於；依靠",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "depend on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q08",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Our ability to launch the mobile portal will ______ final approval from the data-privacy board.",
+      "options": {
+        "A": "depend in",
+        "B": "depend on",
+        "C": "depend at",
+        "D": "depend with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "depend on 取決於；依靠；語境需要取決於，故用 depend on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_depend_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "depend on",
+        "gloss_zh": "取決於；依靠",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "depend on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q09",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Despite the network outage, customer-support agents were told to ______ handling priority tickets.",
+      "options": {
+        "A": "carry out",
+        "B": "carry on",
+        "C": "carry over",
+        "D": "carry back"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "carry on 繼續進行；語境需要繼續進行，故用 carry on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_carry_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "carry on",
+        "gloss_zh": "繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "carry on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q10",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The facilitator asked participants to ______ the workshop exercises while IT restores the webinar link.",
+      "options": {
+        "A": "carry out",
+        "B": "carry on",
+        "C": "carry over",
+        "D": "carry back"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "carry on 繼續進行；語境需要繼續進行，故用 carry on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_carry_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "carry on",
+        "gloss_zh": "繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "carry on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q11",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Organizers had to ______ the outdoor team-building session because of the severe weather warning.",
+      "options": {
+        "A": "call for",
+        "B": "call off",
+        "C": "call on",
+        "D": "call back"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "call off 取消；語境需要取消，故用 call off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_call_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "call off",
+        "gloss_zh": "取消",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "call off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q12",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The airline liaison may ______ tomorrow's charter flight if the runway repairs are not finished.",
+      "options": {
+        "A": "call for",
+        "B": "call off",
+        "C": "call on",
+        "D": "call back"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "call off 取消；語境需要取消，故用 call off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_call_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "call off",
+        "gloss_zh": "取消",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "call off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q13",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The board agreed to ______ the dividend announcement until quarterly results are audited.",
+      "options": {
+        "A": "put forward",
+        "B": "put aside",
+        "C": "put off",
+        "D": "put away"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "put off 延後；推遲；語境需要延後，故用 put off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "put off",
+        "gloss_zh": "延後；推遲",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "put off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q14",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Managers should not ______ the compliance training any longer because regulators visit next month.",
+      "options": {
+        "A": "put forward",
+        "B": "put aside",
+        "C": "put off",
+        "D": "put through"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "put off 延後；推遲；語境需要延後，故用 put off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "put off",
+        "gloss_zh": "延後；推遲",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "put off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q15",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Heavy rain flooded the convention center parking lot on the morning of the supplier fair. Safety officers asked the host committee to ______ the outdoor exhibition. Vendors were instructed to move display materials to the mezzanine by noon.",
+      "options": {
+        "A": "call for",
+        "B": "call on",
+        "C": "call off",
+        "D": "call back"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "call off 取消；語境要求取消，故用 call off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_call_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "call off",
+        "gloss_zh": "取消",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "call off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q16",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The integration team discovered conflicting data formats in two legacy systems. Executives voted to ______ the system cutover until a migration specialist arrives. Employees will receive a revised timeline on Friday.",
+      "options": {
+        "A": "put forward",
+        "B": "put aside",
+        "C": "put off",
+        "D": "put through"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "put off 延後；推遲；語境要求延後，故用 put off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "put off",
+        "gloss_zh": "延後；推遲",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "put off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q17",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The joint venture partner proposed sharing proprietary pricing models during negotiations. Legal counsel advised the CEO to ______ the request because confidentiality clauses would be violated. Talks will continue on delivery schedules only.",
+      "options": {
+        "A": "turn in",
+        "B": "turn to",
+        "C": "turn down",
+        "D": "turn over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "turn down 拒絕；語境要求拒絕，故用 turn down 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "turn down",
+        "gloss_zh": "拒絕",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q18",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "All regional managers submitted signed risk assessments for the warehouse automation project. The operations director told the implementation team to ______ with equipment installation next week. Training materials will be uploaded to the portal tonight.",
+      "options": {
+        "A": "go over",
+        "B": "go through",
+        "C": "go ahead",
+        "D": "go back"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "go ahead 開始做；繼續進行；語境要求開始做，故用 go ahead 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "go ahead",
+        "gloss_zh": "開始做；繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q19",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the catering upgrade unless the client confirms attendance above two hundred guests.",
+      "options": {
+        "A": "turn in",
+        "B": "turn over",
+        "C": "turn around",
+        "D": "turn down"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "turn down 拒絕；語境需要拒絕，故用 turn down 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "turn down",
+        "gloss_zh": "拒絕",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_Q20",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "You may ______ and distribute the briefing packets once the director signs the cover memo.",
+      "options": {
+        "A": "go over",
+        "B": "go through",
+        "C": "go after",
+        "D": "go ahead"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "go ahead 開始做；繼續進行；語境需要開始做，故用 go ahead 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "go ahead",
+        "gloss_zh": "開始做；繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_R01",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The coordinator will ______ tonight's video conference if the guest speaker's flight is delayed.",
+      "options": {
+        "A": "call for",
+        "B": "call on",
+        "C": "call back",
+        "D": "call off"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "call off 取消；語境需要取消，故用 call off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_call_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "call off",
+        "gloss_zh": "取消",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "call off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_R02",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "We cannot ______ the policy rollout again without missing the regulatory filing deadline.",
+      "options": {
+        "A": "put forward",
+        "B": "put aside",
+        "C": "put away",
+        "D": "put off"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "put off 延後；推遲；語境需要延後，故用 put off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "put off",
+        "gloss_zh": "延後；推遲",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "put off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_R03",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The grants office may ______ applications that omit the required budget appendix.",
+      "options": {
+        "A": "turn in",
+        "B": "turn over",
+        "C": "turn around",
+        "D": "turn down"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "turn down 拒絕；語境需要拒絕，故用 turn down 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "turn down",
+        "gloss_zh": "拒絕",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-11_R04",
+      "lesson_id": "V3-W1-11",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "After the firewall test passes, the network team can ______ with migrating the payroll server.",
+      "options": {
+        "A": "go over",
+        "B": "go through",
+        "C": "go back",
+        "D": "go ahead"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "go ahead 開始做；繼續進行；語境需要開始做，故用 go ahead 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_ahead",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-11",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_11",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 1",
+        "source_phrase": "go ahead",
+        "gloss_zh": "開始做；繼續進行",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go ahead",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave6_candidate",
+        "authored_slice_lesson_id": "V3-W1-11",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_turn_down",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "turn down",
+      "variants": [
+        "turn down"
+      ],
+      "chinese": "拒絕",
+      "example": "The coordinator will turn down the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "turn down",
+        "gloss_zh": "拒絕",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_go_ahead",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "go ahead",
+      "variants": [
+        "go ahead"
+      ],
+      "chinese": "開始做",
+      "example": "The coordinator will go ahead the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "go ahead",
+        "gloss_zh": "開始做；繼續進行",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_line_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "line up",
+      "variants": [
+        "line up"
+      ],
+      "chinese": "安排好",
+      "example": "The coordinator will line up the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "line up",
+        "gloss_zh": "安排好；排隊",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_depend_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "depend on",
+      "variants": [
+        "depend on"
+      ],
+      "chinese": "取決於",
+      "example": "The coordinator will depend on the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "depend on",
+        "gloss_zh": "取決於；依靠",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_carry_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "carry on",
+      "variants": [
+        "carry on"
+      ],
+      "chinese": "繼續進行",
+      "example": "The coordinator will carry on the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "carry on",
+        "gloss_zh": "繼續進行",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_call_off",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "call off",
+      "variants": [
+        "call off"
+      ],
+      "chinese": "取消",
+      "example": "The coordinator will call off the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "call off",
+        "gloss_zh": "取消",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_put_off",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-11",
+      "lesson_ids": [
+        "V3-W1-11"
+      ],
+      "base_word": "put off",
+      "variants": [
+        "put off"
+      ],
+      "chinese": "延後",
+      "example": "The coordinator will put off the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "put off",
+        "gloss_zh": "延後；推遲",
+        "source_lessons": [
+          "V3-W1-11"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave6_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_11_wave_6_2026_05_21",
+  "promoted_lesson_id": "V3-A-131"
+}

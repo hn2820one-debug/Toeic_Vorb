@@ -29,7 +29,7 @@ function buildQuestion({ lessonId, lessonNumber, index, review = false }) {
     subskill: "office_equipment",
     question_text: review
       ? `Office review ${lessonNumber}-${index}: The team confirmed the ${term} request after the inventory check.`
-      : `Office: The team updated the ______ request for record ${lessonNumber}-${index}.`,
+      : `Office: The procurement team updated the ______ request for batch ${lessonNumber}-${index} before this month's equipment vendor meeting.`,
     options: {
       A: TERMS[0],
       B: TERMS[1],
@@ -201,6 +201,37 @@ withFixture("V4 production file leakage fails", (fixture) => {
   assert.notStrictEqual(result.status, 0, result.stdout + result.stderr);
   assert.match(result.stdout, /V4 production leakage issues: 1/);
   assert.match(result.stdout, /V4 question file is under data\/vocab/);
+});
+
+withFixture("forbidden shortcut option fails", (fixture) => {
+  fixture.questions[0].options.D = "All of the above";
+}, (result) => {
+  assert.notStrictEqual(result.status, 0, result.stdout + result.stderr);
+  assert.match(result.stdout, /forbidden option shortcut issues: 1/);
+  assert.match(result.stdout, /forbidden shortcut answer pattern/);
+});
+
+withFixture("duplicate option text fails", (fixture) => {
+  fixture.questions[1].options.B = fixture.questions[1].options.A;
+}, (result) => {
+  assert.notStrictEqual(result.status, 0, result.stdout + result.stderr);
+  assert.match(result.stdout, /duplicate option text issues: 1/);
+  assert.match(result.stdout, /Options repeat the same normalized text/);
+});
+
+withFixture("stem length and blank-position warnings are reported", (fixture) => {
+  const firstLesson = fixture.curriculum.lessons.find((lesson) => lesson.lesson_id === "V2-A-71");
+  const firstLessonQuestionIds = new Set(firstLesson.question_ids || []);
+
+  fixture.questions
+    .filter((question) => firstLessonQuestionIds.has(question.question_id))
+    .forEach((question, index) => {
+      question.question_text = `Office: Please process vendor batch ${index + 1} by tomorrow ______.`;
+    });
+}, (result) => {
+  assert.strictEqual(result.status, 0, result.stdout + result.stderr);
+  assert.match(result.stdout, /preferred stem length warnings: [1-9]/);
+  assert.match(result.stdout, /blank-position concentration warnings: 1/);
 });
 
 console.log("Audit quality script tests passed.");

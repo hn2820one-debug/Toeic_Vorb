@@ -1,0 +1,1358 @@
+{
+  "generated_at": "2026-05-22",
+  "artifact_id": "v3_w2_07_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-143",
+  "validation": {
+    "validated_at": "2026-05-22",
+    "isolated_audit_root": "tmp/v3-w2-07-current-isolated-audit",
+    "isolated_audit_scope": "39 lessons / 780 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_142_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 18 candidate: V3-W2-07 finance collocation lesson 4 (remaining 3 targets from Phrase_411 財務會計).",
+    "Q10 reuses v3_a_142_rv_024 for cross-lesson pressure.",
+    "Promotion target lesson id: V3-A-143."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W2-07",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 143,
+    "title": "財務會計 搭配詞 4",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "財務會計",
+    "target_items": [
+      "item_coll_allow_for",
+      "item_coll_draw_from",
+      "item_coll_bring_down"
+    ],
+    "draft_metadata": {
+      "wave": 2,
+      "source_blueprint_lesson_id": "draft_coll_w2_07",
+      "topic_lesson_index": 4,
+      "item_count": 3,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 0
+      },
+      "unresolved_target_count": 3,
+      "authoring_method": "c11_v3_w2_07_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_142_rv_024"
+      ],
+      "production_seed_change": false
+    },
+    "question_ids": [
+      "V3-W2-07_Q01",
+      "V3-W2-07_Q02",
+      "V3-W2-07_Q03",
+      "V3-W2-07_Q04",
+      "V3-W2-07_Q05",
+      "V3-W2-07_Q06",
+      "V3-W2-07_Q07",
+      "V3-W2-07_Q08",
+      "V3-W2-07_Q09",
+      "v3_a_142_rv_024",
+      "V3-W2-07_Q11",
+      "V3-W2-07_Q12",
+      "V3-W2-07_Q13",
+      "V3-W2-07_Q14",
+      "V3-W2-07_Q15",
+      "V3-W2-07_Q16",
+      "V3-W2-07_Q17",
+      "V3-W2-07_Q18",
+      "V3-W2-07_Q19",
+      "V3-W2-07_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W2-07_R01",
+      "V3-W2-07_R02",
+      "V3-W2-07_R03",
+      "V3-W2-07_R04"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "V3-W2-07_Q01",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The revised budget must ______ seasonal fuel surcharges before managers approve delivery rates for the winter schedule.",
+      "options": {
+        "A": "allow for",
+        "B": "allow on",
+        "C": "allow to",
+        "D": "allow with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q02",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ delayed customs fees when updating the cash-flow forecast for the Asia shipments due next month.",
+      "options": {
+        "A": "allow on",
+        "B": "allow for",
+        "C": "allow to",
+        "D": "allow with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q03",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Analysts will ______ archived sales data to estimate demand for the renewed maintenance contracts this quarter.",
+      "options": {
+        "A": "draw on",
+        "B": "draw out",
+        "C": "draw from",
+        "D": "draw up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q04",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The controller asked staff to ______ last year's tax files before preparing the revised deduction schedule.",
+      "options": {
+        "A": "draw on",
+        "B": "draw out",
+        "C": "draw up",
+        "D": "draw from"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q05",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Switching payroll vendors should ______ processing costs without disrupting direct deposits for hourly employees this summer.",
+      "options": {
+        "A": "bring down",
+        "B": "bring up",
+        "C": "bring in",
+        "D": "bring over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q06",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Negotiating longer payment terms may ______ monthly cash pressure before the warehouse expansion is approved.",
+      "options": {
+        "A": "bring up",
+        "B": "bring down",
+        "C": "bring in",
+        "D": "bring over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q07",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The lease proposal should ______ annual maintenance increases before finance compares the two office locations.",
+      "options": {
+        "A": "allow on",
+        "B": "allow to",
+        "C": "allow for",
+        "D": "allow with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q08",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Auditors can ______ bank confirmations from the shared folder when reviewing the year-end reconciliation package.",
+      "options": {
+        "A": "draw on",
+        "B": "draw out",
+        "C": "draw up",
+        "D": "draw from"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q09",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Early repayment could ______ interest expense if the treasury team closes the loan before September.",
+      "options": {
+        "A": "bring down",
+        "B": "bring up",
+        "C": "bring in",
+        "D": "bring over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q11",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The pricing template must ______ credit-card fees so margins remain accurate across small online orders.",
+      "options": {
+        "A": "allow on",
+        "B": "allow for",
+        "C": "allow to",
+        "D": "allow with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q12",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Finance will ______ vendor statements to support the adjustment requested by the external audit team.",
+      "options": {
+        "A": "draw on",
+        "B": "draw out",
+        "C": "draw from",
+        "D": "draw up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q13",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Several carriers announced peak-season surcharges after the draft budget was circulated. The final forecast must ______ those fees.",
+      "options": {
+        "A": "allow on",
+        "B": "allow to",
+        "C": "allow with",
+        "D": "allow for"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "前後文語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q14",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The committee needs evidence before changing depreciation assumptions. Analysts will ______ asset records from prior audits.",
+      "options": {
+        "A": "draw from",
+        "B": "draw on",
+        "C": "draw out",
+        "D": "draw up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "前後文語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q15",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Energy rates remain above the forecast used in April. A new supply contract could ______ utility costs.",
+      "options": {
+        "A": "bring up",
+        "B": "bring down",
+        "C": "bring in",
+        "D": "bring over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "前後文語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q16",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The revenue plan assumes several invoices will be paid late. Managers need to ______ that delay.",
+      "options": {
+        "A": "allow on",
+        "B": "allow to",
+        "C": "allow for",
+        "D": "allow with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "前後文語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q17",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The training budget will ______ unused seminar credits before the team requests additional funding from headquarters.",
+      "options": {
+        "A": "draw on",
+        "B": "draw out",
+        "C": "draw up",
+        "D": "draw from"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q18",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Bulk purchasing should ______ paper costs for every branch once the new vendor agreement begins.",
+      "options": {
+        "A": "bring down",
+        "B": "bring up",
+        "C": "bring in",
+        "D": "bring over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q19",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The audit timeline must ______ regional holidays before headquarters sets the final document deadline for controllers.",
+      "options": {
+        "A": "allow on",
+        "B": "allow for",
+        "C": "allow to",
+        "D": "allow with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_Q20",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Automation may ______ invoice-processing errors after staff stop entering purchase orders manually during month-end closing.",
+      "options": {
+        "A": "bring up",
+        "B": "bring in",
+        "C": "bring down",
+        "D": "bring over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_R01",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The cash-flow model should ______ refund delays before managers approve next quarter's spending limits today.",
+      "options": {
+        "A": "allow on",
+        "B": "allow to",
+        "C": "allow with",
+        "D": "allow for"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored",
+        "semantic_sense:cash_flow_refunds"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_R02",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the payroll archive when verifying bonus amounts for the final compensation report today.",
+      "options": {
+        "A": "draw from",
+        "B": "draw on",
+        "C": "draw out",
+        "D": "draw up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示從...取得，固定搭配用 draw from；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_from",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "draw from",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_R03",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Renegotiating software licenses could ______ annual subscription costs before the renewal period starts in August.",
+      "options": {
+        "A": "bring up",
+        "B": "bring down",
+        "C": "bring in",
+        "D": "bring over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示降低，固定搭配用 bring down；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_down",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "bring down",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-07_R04",
+      "lesson_id": "V3-W2-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The reserve estimate must ______ warranty claims filed after the product update this month by regional customers.",
+      "options": {
+        "A": "allow on",
+        "B": "allow to",
+        "C": "allow for",
+        "D": "allow with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示將...考慮在內，固定搭配用 allow for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_allow_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-07",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_07",
+        "resolution:authored",
+        "semantic_sense:warranty_reserve"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 4",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "allow for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave18_candidate",
+        "authored_slice_lesson_id": "V3-W2-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_allow_for",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-07",
+      "lesson_ids": [
+        "V3-W2-07"
+      ],
+      "base_word": "allow for",
+      "variants": [
+        "allow for"
+      ],
+      "chinese": "將...考慮在內",
+      "example": "The finance team will allow for the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "allow for",
+        "gloss_zh": "將...考慮在內",
+        "source_lessons": [
+          "V3-W2-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave18_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_draw_from",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-07",
+      "lesson_ids": [
+        "V3-W2-07"
+      ],
+      "base_word": "draw from",
+      "variants": [
+        "draw from"
+      ],
+      "chinese": "從...取得",
+      "example": "The finance team will draw from the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "draw from",
+        "gloss_zh": "從...取得；得出",
+        "source_lessons": [
+          "V3-W2-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave18_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_bring_down",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-07",
+      "lesson_ids": [
+        "V3-W2-07"
+      ],
+      "base_word": "bring down",
+      "variants": [
+        "bring down"
+      ],
+      "chinese": "降低",
+      "example": "The finance team will bring down the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "bring down",
+        "gloss_zh": "降低",
+        "source_lessons": [
+          "V3-W2-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave18_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-22",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22",
+  "promoted_lesson_id": "V3-A-143"
+}

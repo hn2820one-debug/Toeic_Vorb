@@ -1,0 +1,1464 @@
+{
+  "generated_at": "2026-05-22",
+  "artifact_id": "v3_w2_06_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-142",
+  "validation": {
+    "validated_at": "2026-05-22",
+    "isolated_audit_root": "tmp/v3-w2-06-current-isolated-audit",
+    "isolated_audit_scope": "38 lessons / 757 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_141_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 17 candidate: V3-W2-06 finance collocation lesson 3 (6 targets from Phrase_411 財務會計).",
+    "Q10 reuses v3_a_141_rv_024 for cross-lesson pressure.",
+    "Promotion target lesson id: V3-A-142."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W2-06",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 142,
+    "title": "財務會計 搭配詞 3",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "財務會計",
+    "target_items": [
+      "item_coll_add_to",
+      "item_coll_total_up",
+      "item_coll_count_toward",
+      "item_coll_break_even",
+      "item_coll_write_off",
+      "item_coll_close_out"
+    ],
+    "draft_metadata": {
+      "wave": 2,
+      "source_blueprint_lesson_id": "draft_coll_w2_06",
+      "topic_lesson_index": 3,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w2_06_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_141_rv_024"
+      ],
+      "production_seed_change": false
+    },
+    "question_ids": [
+      "V3-W2-06_Q01",
+      "V3-W2-06_Q02",
+      "V3-W2-06_Q03",
+      "V3-W2-06_Q04",
+      "V3-W2-06_Q05",
+      "V3-W2-06_Q06",
+      "V3-W2-06_Q07",
+      "V3-W2-06_Q08",
+      "V3-W2-06_Q09",
+      "v3_a_141_rv_024",
+      "V3-W2-06_Q11",
+      "V3-W2-06_Q12",
+      "V3-W2-06_Q13",
+      "V3-W2-06_Q14",
+      "V3-W2-06_Q15",
+      "V3-W2-06_Q16",
+      "V3-W2-06_Q17",
+      "V3-W2-06_Q18",
+      "V3-W2-06_Q19",
+      "V3-W2-06_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W2-06_R01",
+      "V3-W2-06_R02",
+      "V3-W2-06_R03",
+      "V3-W2-06_R04"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "V3-W2-06_Q01",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Higher card-processing fees will ______ the department's operating costs during the next reporting cycle, according to finance.",
+      "options": {
+        "A": "add to",
+        "B": "add up",
+        "C": "add on",
+        "D": "add over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示增加，固定搭配用 add to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "add to",
+        "gloss_zh": "增加",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q02",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Late supplier invoices may ______ the uncertainty around the quarterly cash-flow projection before Friday's board review.",
+      "options": {
+        "A": "add up",
+        "B": "add to",
+        "C": "add on",
+        "D": "add over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示增加，固定搭配用 add to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "add to",
+        "gloss_zh": "增加",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q03",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the reimbursement receipts before sending the expense report to finance for approval this afternoon.",
+      "options": {
+        "A": "total out",
+        "B": "total over",
+        "C": "total up",
+        "D": "total on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示合計，固定搭配用 total up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_total_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "total up",
+        "gloss_zh": "合計",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "total up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q04",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The assistant will ______ travel costs for each region before the annual budget review begins on Monday.",
+      "options": {
+        "A": "total out",
+        "B": "total over",
+        "C": "total on",
+        "D": "total up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示合計，固定搭配用 total up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_total_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "total up",
+        "gloss_zh": "合計",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "total up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q05",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Prepaid service credits will ______ the client's annual spending threshold under the new contract this year.",
+      "options": {
+        "A": "count toward",
+        "B": "count on",
+        "C": "count for",
+        "D": "count over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示算入，固定搭配用 count toward；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_count_toward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "count toward",
+        "gloss_zh": "算入",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "count toward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q06",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Only approved training expenses can ______ the grant total reported to auditors during the final review.",
+      "options": {
+        "A": "count on",
+        "B": "count toward",
+        "C": "count for",
+        "D": "count over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示算入，固定搭配用 count toward；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_count_toward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "count toward",
+        "gloss_zh": "算入",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "count toward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q07",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The new branch may ______ by December if monthly subscription revenue keeps rising after the local launch.",
+      "options": {
+        "A": "break up",
+        "B": "break down",
+        "C": "break even",
+        "D": "break out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示損益兩平，固定搭配用 break even；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_even",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "break even",
+        "gloss_zh": "損益兩平",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "break even",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q08",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Management expects the project to ______ once installation fees are collected in full from all customers.",
+      "options": {
+        "A": "break up",
+        "B": "break down",
+        "C": "break out",
+        "D": "break even"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示損益兩平，固定搭配用 break even；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_even",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "break even",
+        "gloss_zh": "損益兩平",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "break even",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q09",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The company may ______ several unpaid invoices after the client entered bankruptcy protection last week unexpectedly.",
+      "options": {
+        "A": "write off",
+        "B": "write up",
+        "C": "write down",
+        "D": "write out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示沖銷，固定搭配用 write off；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "write off",
+        "gloss_zh": "沖銷；認列報廢",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "write off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q11",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Finance decided to ______ obsolete equipment that can no longer be repaired economically by approved vendors.",
+      "options": {
+        "A": "write up",
+        "B": "write off",
+        "C": "write down",
+        "D": "write out"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示沖銷，固定搭配用 write off；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "write off",
+        "gloss_zh": "沖銷；認列報廢",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "write off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q12",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the inactive vendor account after the final reconciliation is approved by the audit manager.",
+      "options": {
+        "A": "close up",
+        "B": "close down",
+        "C": "close out",
+        "D": "close off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示結清，固定搭配用 close out；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_close_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "close out",
+        "gloss_zh": "結清；結束處理",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "close out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q13",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Several vendors submitted revised quotations after the audit deadline. Their higher service charges will ______ the finance team's cost concerns.",
+      "options": {
+        "A": "add up",
+        "B": "add on",
+        "C": "add over",
+        "D": "add to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "前後文語境表示增加，固定搭配用 add to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "add to",
+        "gloss_zh": "增加",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q14",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The controller found receipts from three regional offices. She asked the assistant to ______ the amounts before Monday's budget meeting.",
+      "options": {
+        "A": "total up",
+        "B": "total out",
+        "C": "total over",
+        "D": "total on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "前後文語境表示合計，固定搭配用 total up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_total_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "total up",
+        "gloss_zh": "合計",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "total up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q15",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Under the revised grant rules, only documented travel and training costs will ______ the reimbursable amount submitted to auditors. Finance will verify the receipts.",
+      "options": {
+        "A": "count on",
+        "B": "count toward",
+        "C": "count for",
+        "D": "count over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "前後文語境表示算入，固定搭配用 count toward；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_count_toward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "count toward",
+        "gloss_zh": "算入",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "count toward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q16",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The subscription plan lost money for six months. Executives now expect it to ______ after renewal fees increase in July.",
+      "options": {
+        "A": "break up",
+        "B": "break down",
+        "C": "break even",
+        "D": "break out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "前後文語境表示損益兩平，固定搭配用 break even；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_even",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "break even",
+        "gloss_zh": "損益兩平",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "break even",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q17",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Accounting must ______ the temporary project account before the fiscal year closes next Tuesday for reporting.",
+      "options": {
+        "A": "close up",
+        "B": "close down",
+        "C": "close off",
+        "D": "close out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示結清，固定搭配用 close out；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_close_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "close out",
+        "gloss_zh": "結清；結束處理",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "close out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q18",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Unexpected legal fees could ______ the pressure on this quarter's administrative budget during the audit review.",
+      "options": {
+        "A": "add to",
+        "B": "add up",
+        "C": "add on",
+        "D": "add over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示增加，固定搭配用 add to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "add to",
+        "gloss_zh": "增加",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q19",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Auditors advised the firm to ______ damaged inventory after the warehouse flood last month during closing.",
+      "options": {
+        "A": "write up",
+        "B": "write off",
+        "C": "write down",
+        "D": "write out"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示沖銷，固定搭配用 write off；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "write off",
+        "gloss_zh": "沖銷；認列報廢",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "write off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_Q20",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Treasury will ______ the hedging position once the overseas payment is settled tomorrow by banking partners.",
+      "options": {
+        "A": "close up",
+        "B": "close down",
+        "C": "close out",
+        "D": "close off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示結清，固定搭配用 close out；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_close_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "close out",
+        "gloss_zh": "結清；結束處理",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "close out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_R01",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the cash receipts before sending the daily deposit report to accounting this afternoon for review.",
+      "options": {
+        "A": "total out",
+        "B": "total over",
+        "C": "total on",
+        "D": "total up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示合計，固定搭配用 total up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_total_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "total up",
+        "gloss_zh": "合計",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "total up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_R02",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Only verified receipts will ______ the reimbursable expenses listed on the grant report this quarter for auditors.",
+      "options": {
+        "A": "count toward",
+        "B": "count on",
+        "C": "count for",
+        "D": "count over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示算入，固定搭配用 count toward；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_count_toward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "count toward",
+        "gloss_zh": "算入",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "count toward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_R03",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The kiosk may ______ once weekend sales cover rent and staffing costs after promotion in June.",
+      "options": {
+        "A": "break up",
+        "B": "break even",
+        "C": "break down",
+        "D": "break out"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示損益兩平，固定搭配用 break even；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_even",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "break even",
+        "gloss_zh": "損益兩平",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "break even",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-06_R04",
+      "lesson_id": "V3-W2-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the old billing account after the final invoice is paid by the client today.",
+      "options": {
+        "A": "close up",
+        "B": "close down",
+        "C": "close out",
+        "D": "close off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示結清，固定搭配用 close out；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_close_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-06",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 3",
+        "source_phrase": "close out",
+        "gloss_zh": "結清；結束處理",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "close out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave17_candidate",
+        "authored_slice_lesson_id": "V3-W2-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_add_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-06",
+      "lesson_ids": [
+        "V3-W2-06"
+      ],
+      "base_word": "add to",
+      "variants": [
+        "add to"
+      ],
+      "chinese": "增加",
+      "example": "The finance team will add to the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "add to",
+        "gloss_zh": "增加",
+        "source_lessons": [
+          "V3-W2-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave17_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_total_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-06",
+      "lesson_ids": [
+        "V3-W2-06"
+      ],
+      "base_word": "total up",
+      "variants": [
+        "total up"
+      ],
+      "chinese": "合計",
+      "example": "The finance team will total up the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "total up",
+        "gloss_zh": "合計",
+        "source_lessons": [
+          "V3-W2-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave17_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_count_toward",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-06",
+      "lesson_ids": [
+        "V3-W2-06"
+      ],
+      "base_word": "count toward",
+      "variants": [
+        "count toward"
+      ],
+      "chinese": "算入",
+      "example": "The finance team will count toward the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "count toward",
+        "gloss_zh": "算入",
+        "source_lessons": [
+          "V3-W2-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave17_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_break_even",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-06",
+      "lesson_ids": [
+        "V3-W2-06"
+      ],
+      "base_word": "break even",
+      "variants": [
+        "break even"
+      ],
+      "chinese": "損益兩平",
+      "example": "The finance team will break even the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "break even",
+        "gloss_zh": "損益兩平",
+        "source_lessons": [
+          "V3-W2-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave17_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_write_off",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-06",
+      "lesson_ids": [
+        "V3-W2-06"
+      ],
+      "base_word": "write off",
+      "variants": [
+        "write off"
+      ],
+      "chinese": "沖銷",
+      "example": "The finance team will write off the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "write off",
+        "gloss_zh": "沖銷；認列報廢",
+        "source_lessons": [
+          "V3-W2-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave17_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_close_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-06",
+      "lesson_ids": [
+        "V3-W2-06"
+      ],
+      "base_word": "close out",
+      "variants": [
+        "close out"
+      ],
+      "chinese": "結清",
+      "example": "The finance team will close out the closing report before the monthly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "close out",
+        "gloss_zh": "結清；結束處理",
+        "source_lessons": [
+          "V3-W2-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave17_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-22",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w2_06_wave_17_2026_05_22",
+  "promoted_lesson_id": "V3-A-142"
+}

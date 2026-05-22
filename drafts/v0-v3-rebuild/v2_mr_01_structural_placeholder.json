@@ -1,0 +1,111 @@
+{
+  "generated_at": "2026-05-20",
+  "artifact_id": "v2_mr_01_structural_placeholder",
+  "artifact_version": "0.3",
+  "reference_role": "structural_placeholder",
+  "status": "superseded_by_candidate_draft_pack",
+  "production_impact": "none",
+  "production_ready": false,
+  "promotion_candidate": false,
+  "source_spec": "drafts/v0-v3-rebuild/mixed_review_architecture.json",
+  "source_pipeline": "docs/v2-production-promotion-pipeline.md",
+  "assembly_script": "scripts/add-mixed-review-lessons.js",
+  "notes": [
+    "This file is now a historical structural placeholder. V2-MR-01 candidate assembly lives in drafts/v0-v3-rebuild/v2_mr_01_candidate_draft_pack.json.",
+    "Current status: V2-A-71 through V2-A-75 are all in production after wave 3 promotion.",
+    "The candidate draft reuses the 20 expected review_question IDs and adds 0 new question-bank rows.",
+    "Run the formal mixed-review promotion gate before adding V2-MR-01 to production curriculum."
+  ],
+  "v2_mr_01_definition": {
+    "lesson_id": "V2-MR-01",
+    "lesson_type": "mixed_review",
+    "title": "V2 Mixed Review 01",
+    "lesson_number": 10001,
+    "stage": "V2",
+    "stage_name": "TOEIC Scene Vocabulary",
+    "estimated_minutes": 30,
+    "source_core_lessons": [
+      "V2-A-71",
+      "V2-A-72",
+      "V2-A-73",
+      "V2-A-74",
+      "V2-A-75"
+    ],
+    "question_ids_source_policy": "flatMap of review_question_ids from the 5 source core lessons (4 x 5 = 20)",
+    "question_ids_expected": [
+      "v2_a_71_rv_021",
+      "v2_a_71_rv_022",
+      "v2_a_71_rv_023",
+      "v2_a_71_rv_024",
+      "v2_a_72_rv_021",
+      "v2_a_72_rv_022",
+      "v2_a_72_rv_023",
+      "v2_a_72_rv_024",
+      "v2_a_73_rv_021",
+      "v2_a_73_rv_022",
+      "v2_a_73_rv_023",
+      "v2_a_73_rv_024",
+      "v2_a_74_rv_021",
+      "v2_a_74_rv_022",
+      "v2_a_74_rv_023",
+      "v2_a_74_rv_024",
+      "v2_a_75_rv_021",
+      "v2_a_75_rv_022",
+      "v2_a_75_rv_023",
+      "v2_a_75_rv_024"
+    ],
+    "review_question_ids": [],
+    "new_question_rows": 0,
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started"
+  },
+  "validation_checklist": {
+    "reference_validity_spec": "docs/wave-retrospectives/2026-05-20-t044-t046-v2-mixed-review-definition.md",
+    "v2_a_71_rv_ids_confirmed": true,
+    "v2_a_72_rv_ids_confirmed": true,
+    "v2_a_73_rv_ids_confirmed": true,
+    "v2_a_74_rv_ids_confirmed": true,
+    "v2_a_75_rv_ids_confirmed": true,
+    "all_sources_in_production": true,
+    "candidate_draft_created": true,
+    "isolated_audit_quality_full_passed": true,
+    "audit_duplicate_stems_passed": true
+  },
+  "t048_reuse_integrity_check": {
+    "policy": "All 20 question_ids in V2-MR-01 must be original review_question rows from their respective source lessons. None may be newly authored IDs. None may appear in any core lesson's question_ids except as old-item pressure in subsequent lessons, which is a separate intentional use.",
+    "known_reuse_exceptions": [
+      {
+        "question_id": "v2_a_71_rv_021",
+        "used_in_v2_a_72_question_ids_as_old_item_pressure": true,
+        "used_in_v2_mr_01_question_ids": true,
+        "policy_classification": "intentional_dual_use - V2-A-71 review question legitimately appears both as old-item pressure in V2-A-72 and as a future MR-01 review question."
+      },
+      {
+        "question_id": "v2_a_72_rv_021",
+        "used_in_v2_a_73_question_ids_as_old_item_pressure": true,
+        "used_in_v2_mr_01_question_ids": true,
+        "policy_classification": "intentional_dual_use - V2-A-72 review question legitimately appears both as old-item pressure in V2-A-73 and as a future MR-01 review question."
+      },
+      {
+        "question_id": "v2_a_73_rv_021",
+        "used_in_v2_a_74_question_ids_as_old_item_pressure": true,
+        "used_in_v2_mr_01_question_ids": true,
+        "policy_classification": "intentional_dual_use - V2-A-73 review question legitimately appears both as old-item pressure in V2-A-74 and as a future MR-01 review question."
+      },
+      {
+        "question_id": "v2_a_74_rv_021",
+        "used_in_v2_a_75_question_ids_as_old_item_pressure": true,
+        "used_in_v2_mr_01_question_ids": true,
+        "policy_classification": "intentional_dual_use - if V2-A-75 is promoted unchanged, this V2-A-74 review question appears both as old-item pressure in V2-A-75 and as a future MR-01 review question."
+      },
+      {
+        "question_id": "v2_a_73_rv_022",
+        "used_in_v2_a_75_question_ids_as_old_item_pressure": true,
+        "used_in_v2_mr_01_question_ids": true,
+        "policy_classification": "intentional_dual_use - if V2-A-75 is promoted unchanged, this V2-A-73 review question appears both as old-item pressure in V2-A-75 and as a future MR-01 review question."
+      }
+    ],
+    "t048_verdict": "Ready for formal mixed-review promotion gate. V2-A-75 review IDs are live in production, and the assembled candidate draft validates all 20 expected review references."
+  }
+}

@@ -1,0 +1,1464 @@
+{
+  "generated_at": "2026-05-22",
+  "artifact_id": "v3_w2_05_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-141",
+  "validation": {
+    "validated_at": "2026-05-22",
+    "isolated_audit_root": "tmp/v3-w2-05-current-isolated-audit",
+    "isolated_audit_scope": "37 lessons / 734 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_140_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 16 candidate: V3-W2-05 finance collocation lesson 2 (6 targets from Phrase_411 財務會計).",
+    "Q10 reuses v3_a_140_rv_024 for cross-lesson pressure.",
+    "Promotion target lesson id: V3-A-141."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W2-05",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 141,
+    "title": "財務會計 搭配詞 2",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "財務會計",
+    "target_items": [
+      "item_coll_make_up_for",
+      "item_coll_put_aside",
+      "item_coll_amount_to",
+      "item_coll_budget_for",
+      "item_coll_carry_over",
+      "item_coll_add_up"
+    ],
+    "draft_metadata": {
+      "wave": 2,
+      "source_blueprint_lesson_id": "draft_coll_w2_05",
+      "topic_lesson_index": 2,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 3,
+        "C": 2,
+        "D": 0
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w2_05_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_140_rv_024"
+      ],
+      "production_seed_change": false
+    },
+    "question_ids": [
+      "V3-W2-05_Q01",
+      "V3-W2-05_Q02",
+      "V3-W2-05_Q03",
+      "V3-W2-05_Q04",
+      "V3-W2-05_Q05",
+      "V3-W2-05_Q06",
+      "V3-W2-05_Q07",
+      "V3-W2-05_Q08",
+      "V3-W2-05_Q09",
+      "v3_a_140_rv_024",
+      "V3-W2-05_Q11",
+      "V3-W2-05_Q12",
+      "V3-W2-05_Q13",
+      "V3-W2-05_Q14",
+      "V3-W2-05_Q15",
+      "V3-W2-05_Q16",
+      "V3-W2-05_Q17",
+      "V3-W2-05_Q18",
+      "V3-W2-05_Q19",
+      "V3-W2-05_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W2-05_R01",
+      "V3-W2-05_R02",
+      "V3-W2-05_R03",
+      "V3-W2-05_R04"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "V3-W2-05_Q01",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The finance director said stronger online sales could ______ the shortfall from canceled corporate orders this quarter.",
+      "options": {
+        "A": "make up for",
+        "B": "make out for",
+        "C": "make over",
+        "D": "make up with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示彌補，固定搭配用 make up for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_make_up_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "make up for",
+        "gloss_zh": "彌補",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "make up for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q02",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The revised service fees may ______ part of the revenue lost during the billing-system outage last month.",
+      "options": {
+        "A": "make out for",
+        "B": "make up for",
+        "C": "make over",
+        "D": "make up with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示彌補，固定搭配用 make up for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_make_up_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "make up for",
+        "gloss_zh": "彌補",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "make up for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q03",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The controller asked each regional branch to ______ emergency funds before finalizing next year's annual operating budget.",
+      "options": {
+        "A": "put up",
+        "B": "put through",
+        "C": "put aside",
+        "D": "put off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示撥出，固定搭配用 put aside；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "put aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "put aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q04",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "We should ______ a small reserve for audit adjustments before distributing the quarterly surplus to shareholders.",
+      "options": {
+        "A": "put up",
+        "B": "put through",
+        "C": "put off",
+        "D": "put aside"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示撥出，固定搭配用 put aside；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "put aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "put aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q05",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The late-payment fees ______ nearly 8 percent of total receivables after three major clients missed deadlines.",
+      "options": {
+        "A": "amount to",
+        "B": "amount at",
+        "C": "amount for",
+        "D": "amount by"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示總計達到，固定搭配用 amount to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_amount_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "amount to",
+        "gloss_zh": "總計達到；等同於",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "amount to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q06",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Small currency losses can ______ a material variance when consolidated across all overseas subsidiaries this year.",
+      "options": {
+        "A": "amount at",
+        "B": "amount to",
+        "C": "amount for",
+        "D": "amount by"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示總計達到，固定搭配用 amount to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_amount_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "amount to",
+        "gloss_zh": "總計達到；等同於",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "amount to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q07",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Department heads must ______ software renewals and security licenses before submitting the annual operating plan to headquarters.",
+      "options": {
+        "A": "budget to",
+        "B": "budget on",
+        "C": "budget for",
+        "D": "budget with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示為…編列預算，固定搭配用 budget for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_budget_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "budget for",
+        "gloss_zh": "為…編列預算",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "budget for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q08",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The project team failed to ______ translation costs when estimating the regional launch expenses for Europe.",
+      "options": {
+        "A": "budget to",
+        "B": "budget on",
+        "C": "budget with",
+        "D": "budget for"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示為…編列預算，固定搭配用 budget for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_budget_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "budget for",
+        "gloss_zh": "為…編列預算",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "budget for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q09",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Unused training funds will ______ to next quarter if managers submit revised spending plans by Friday.",
+      "options": {
+        "A": "carry over",
+        "B": "carry out",
+        "C": "carry on",
+        "D": "carry off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示延續到，固定搭配用 carry over；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_carry_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "carry over",
+        "gloss_zh": "延續到；結轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "carry over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q11",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Any unpaid balance may ______ to the next billing cycle under the revised vendor agreement for June.",
+      "options": {
+        "A": "carry out",
+        "B": "carry over",
+        "C": "carry on",
+        "D": "carry off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示延續到，固定搭配用 carry over；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_carry_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "carry over",
+        "gloss_zh": "延續到；結轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "carry over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q12",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The analyst checked whether travel receipts would ______ to the amount claimed on the expense report.",
+      "options": {
+        "A": "add in",
+        "B": "add on",
+        "C": "add up",
+        "D": "add over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示加總，固定搭配用 add up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "add up",
+        "gloss_zh": "加總；說得通",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q13",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Taiwan sales beat expectations, but Japan missed its target after a delay. Finance expects the surplus to ______ part of the regional revenue gap.",
+      "options": {
+        "A": "make out for",
+        "B": "make over",
+        "C": "make up with",
+        "D": "make up for"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "前後文語境表示彌補，固定搭配用 make up for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_make_up_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "make up for",
+        "gloss_zh": "彌補",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "make up for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q14",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The company received an unexpected tax refund in April. Controllers will ______ part of the cash for year-end compliance work.",
+      "options": {
+        "A": "put aside",
+        "B": "put up",
+        "C": "put through",
+        "D": "put off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "前後文語境表示撥出，固定搭配用 put aside；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "put aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "put aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q15",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Several small bank charges were missed during review. Combined, they may ______ more than the audit team's tolerance level.",
+      "options": {
+        "A": "amount at",
+        "B": "amount to",
+        "C": "amount for",
+        "D": "amount by"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "前後文語境表示總計達到，固定搭配用 amount to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_amount_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "amount to",
+        "gloss_zh": "總計達到；等同於",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "amount to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q16",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Marketing requested a larger October event. Finance told the team to ______ venue deposits and cancellation fees before approval.",
+      "options": {
+        "A": "budget to",
+        "B": "budget on",
+        "C": "budget for",
+        "D": "budget with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "前後文語境表示為…編列預算，固定搭配用 budget for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_budget_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "budget for",
+        "gloss_zh": "為…編列預算",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "budget for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q17",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Finance will ______ unused consulting funds after the supplier review was delayed until January by auditors.",
+      "options": {
+        "A": "carry out",
+        "B": "carry on",
+        "C": "carry off",
+        "D": "carry over"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示延續到，固定搭配用 carry over；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_carry_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "carry over",
+        "gloss_zh": "延續到；結轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "carry over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q18",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The figures in the reimbursement spreadsheet do not ______ because two travel lines were entered twice.",
+      "options": {
+        "A": "add up",
+        "B": "add in",
+        "C": "add on",
+        "D": "add over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示加總，固定搭配用 add up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "add up",
+        "gloss_zh": "加總；說得通",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q19",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Quarterly interest charges may ______ a larger expense once the new credit facility is fully drawn.",
+      "options": {
+        "A": "amount at",
+        "B": "amount to",
+        "C": "amount for",
+        "D": "amount by"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示總計達到，固定搭配用 amount to；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_amount_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "amount to",
+        "gloss_zh": "總計達到；等同於",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "amount to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_Q20",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ extra audit hours before approving the finance team's revised compliance schedule for December closing.",
+      "options": {
+        "A": "budget to",
+        "B": "budget on",
+        "C": "budget for",
+        "D": "budget with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示為…編列預算，固定搭配用 budget for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_budget_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "budget for",
+        "gloss_zh": "為…編列預算",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "budget for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_R01",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "A small rebate will not ______ the revenue lost from the canceled distributor contract this quarter.",
+      "options": {
+        "A": "make out for",
+        "B": "make over",
+        "C": "make up with",
+        "D": "make up for"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示彌補，固定搭配用 make up for；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_make_up_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "make up for",
+        "gloss_zh": "彌補",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "make up for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_R02",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Finance asked us to ______ reserve cash before confirming the dividend payment next month with treasury.",
+      "options": {
+        "A": "put aside",
+        "B": "put up",
+        "C": "put through",
+        "D": "put off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境表示撥出，固定搭配用 put aside；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_put_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "put aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "put aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_R03",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Unused grant money can ______ to the next fiscal year with written approval from auditors in April.",
+      "options": {
+        "A": "carry out",
+        "B": "carry over",
+        "C": "carry on",
+        "D": "carry off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境表示延續到，固定搭配用 carry over；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_carry_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "carry over",
+        "gloss_zh": "延續到；結轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "carry over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-05_R04",
+      "lesson_id": "V3-W2-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The receipt totals do not ______, so please recheck the travel claim before payment today.",
+      "options": {
+        "A": "add in",
+        "B": "add on",
+        "C": "add up",
+        "D": "add over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示加總，固定搭配用 add up；不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_add_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-05",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 2",
+        "source_phrase": "add up",
+        "gloss_zh": "加總；說得通",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": false,
+        "source_item_base_word": "add up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave16_candidate",
+        "authored_slice_lesson_id": "V3-W2-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_make_up_for",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-05",
+      "lesson_ids": [
+        "V3-W2-05"
+      ],
+      "base_word": "make up for",
+      "variants": [
+        "make up for"
+      ],
+      "chinese": "彌補",
+      "example": "The finance team will make up for the revised budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "make up for",
+        "gloss_zh": "彌補",
+        "source_lessons": [
+          "V3-W2-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave16_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_put_aside",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-05",
+      "lesson_ids": [
+        "V3-W2-05"
+      ],
+      "base_word": "put aside",
+      "variants": [
+        "put aside"
+      ],
+      "chinese": "撥出",
+      "example": "The finance team will put aside the revised budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "put aside",
+        "gloss_zh": "撥出；保留",
+        "source_lessons": [
+          "V3-W2-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave16_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_amount_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-05",
+      "lesson_ids": [
+        "V3-W2-05"
+      ],
+      "base_word": "amount to",
+      "variants": [
+        "amount to"
+      ],
+      "chinese": "總計達到",
+      "example": "The finance team will amount to the revised budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "amount to",
+        "gloss_zh": "總計達到；等同於",
+        "source_lessons": [
+          "V3-W2-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave16_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_budget_for",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-05",
+      "lesson_ids": [
+        "V3-W2-05"
+      ],
+      "base_word": "budget for",
+      "variants": [
+        "budget for"
+      ],
+      "chinese": "為…編列預算",
+      "example": "The finance team will budget for the revised budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "budget for",
+        "gloss_zh": "為…編列預算",
+        "source_lessons": [
+          "V3-W2-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave16_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_carry_over",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-05",
+      "lesson_ids": [
+        "V3-W2-05"
+      ],
+      "base_word": "carry over",
+      "variants": [
+        "carry over"
+      ],
+      "chinese": "延續到",
+      "example": "The finance team will carry over the revised budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "carry over",
+        "gloss_zh": "延續到；結轉",
+        "source_lessons": [
+          "V3-W2-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave16_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_add_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-05",
+      "lesson_ids": [
+        "V3-W2-05"
+      ],
+      "base_word": "add up",
+      "variants": [
+        "add up"
+      ],
+      "chinese": "加總",
+      "example": "The finance team will add up the revised budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "add up",
+        "gloss_zh": "加總；說得通",
+        "source_lessons": [
+          "V3-W2-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave16_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-22",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w2_05_wave_16_2026_05_22",
+  "promoted_lesson_id": "V3-A-141"
+}

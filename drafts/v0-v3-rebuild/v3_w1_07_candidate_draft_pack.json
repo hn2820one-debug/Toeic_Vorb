@@ -1,0 +1,1519 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_07_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-127",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-07-current-isolated-audit",
+    "isolated_audit_scope": "production + V3-W1-07 = 18 lessons / 408 questions",
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "duplicate_stems": 0,
+    "old_item_pressure_issues": 0
+  },
+  "notes": [
+    "C-11 wave 4 candidate: V3-W1-07 paperwork collocation lesson 4 (6 target items).",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-127."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-07",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 127,
+    "title": "文書作業 搭配詞 4",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "文書作業",
+    "target_items": [
+      "item_coll_write_up",
+      "item_coll_sign_off",
+      "item_coll_refer_back_to",
+      "item_coll_as_to",
+      "item_coll_with_regard_to",
+      "item_coll_keep_back"
+    ],
+    "question_ids": [
+      "V3-W1-07_Q01",
+      "V3-W1-07_Q02",
+      "V3-W1-07_Q03",
+      "V3-W1-07_Q04",
+      "V3-W1-07_Q05",
+      "V3-W1-07_Q06",
+      "V3-W1-07_Q07",
+      "V3-W1-07_Q08",
+      "V3-W1-07_Q09",
+      "V3-W1-07_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-07_Q11",
+      "V3-W1-07_Q12",
+      "V3-W1-07_Q13",
+      "V3-W1-07_Q14",
+      "V3-W1-07_Q15",
+      "V3-W1-07_Q16",
+      "V3-W1-07_Q17",
+      "V3-W1-07_Q18",
+      "V3-W1-07_Q19",
+      "V3-W1-07_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-07_R01",
+      "V3-W1-07_R02",
+      "V3-W1-07_R03",
+      "V3-W1-07_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_07",
+      "topic_lesson_index": 4,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 3,
+        "C": 3
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w1_07_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-07_Q01",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The analyst will ______ a summary of the supplier negotiations before the steering committee meets.",
+      "options": {
+        "A": "write up",
+        "B": "write in",
+        "C": "write off",
+        "D": "write on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "write up 寫成正式報告；語境需要寫成正式報告，故用 write up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "write up",
+        "gloss_zh": "寫成正式報告",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q02",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the inspection findings in the standard incident-report format by tomorrow.",
+      "options": {
+        "A": "write up",
+        "B": "write in",
+        "C": "write off",
+        "D": "write on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "write up 寫成正式報告；語境需要寫成正式報告，故用 write up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "write up",
+        "gloss_zh": "寫成正式報告",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q03",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The department head must ______ the revised travel policy before it is posted on the intranet.",
+      "options": {
+        "A": "sign off",
+        "B": "sign on",
+        "C": "sign up",
+        "D": "sign in"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "sign off 簽核；批准結案；語境需要簽核，故用 sign off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sign_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "sign off",
+        "gloss_zh": "簽核；批准結案",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sign off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q04",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "No purchase order can be issued until the finance director ______ the capital request form.",
+      "options": {
+        "A": "sign off",
+        "B": "sign on",
+        "C": "sign up",
+        "D": "sign in"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "sign off 簽核；批准結案；語境需要簽核，故用 sign off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sign_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "sign off",
+        "gloss_zh": "簽核；批准結案",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sign off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q05",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "When auditors question a line item, analysts should ______ the original contract appendix for supporting figures.",
+      "options": {
+        "A": "refer back to",
+        "B": "refer back on",
+        "C": "refer back at",
+        "D": "refer back with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "refer back to 回頭參照；語境需要回頭參照，故用 refer back to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_refer_back_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "refer back to",
+        "gloss_zh": "回頭參照",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "refer back to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q06",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "If the numbering looks inconsistent, please ______ the master template stored in the documentation portal.",
+      "options": {
+        "A": "refer back to",
+        "B": "refer back on",
+        "C": "refer back at",
+        "D": "refer back with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "refer back to 回頭參照；語境需要回頭參照，故用 refer back to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_refer_back_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "refer back to",
+        "gloss_zh": "回頭參照",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "refer back to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q07",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The legal memo did not clarify the policy ______ overtime pay for temporary contractors.",
+      "options": {
+        "A": "as for",
+        "B": "as to",
+        "C": "as on",
+        "D": "as with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "as to 關於；至於；語境需要關於，故用 as to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_as_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "as to",
+        "gloss_zh": "關於；至於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "as to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q08",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The chair asked for a written statement ______ the proposed changes to the reporting schedule.",
+      "options": {
+        "A": "as for",
+        "B": "as to",
+        "C": "as on",
+        "D": "as with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "as to 關於；至於；語境需要關於，故用 as to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_as_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "as to",
+        "gloss_zh": "關於；至於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "as to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q09",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "______ the new retention rules, employees must archive email threads older than ninety days.",
+      "options": {
+        "A": "with regard on",
+        "B": "with regard to",
+        "C": "with regard at",
+        "D": "with regard for"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "with regard to 關於；語境需要關於，故用 with regard to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_with_regard_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "with regard to",
+        "gloss_zh": "關於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "with regard to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q10",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The compliance bulletin explains the filing deadline ______ overseas subsidiary reports.",
+      "options": {
+        "A": "with regard on",
+        "B": "with regard to",
+        "C": "with regard at",
+        "D": "with regard for"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "with regard to 關於；語境需要關於，故用 with regard to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_with_regard_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "with regard to",
+        "gloss_zh": "關於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "with regard to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q11",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Managers were warned not to ______ critical safety updates from the maintenance crews.",
+      "options": {
+        "A": "keep on",
+        "B": "keep back",
+        "C": "keep up",
+        "D": "keep off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "keep back 保留；隱瞞；語境需要保留，故用 keep back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_keep_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "keep back",
+        "gloss_zh": "保留；隱瞞",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "keep back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q12",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The compliance officer asked editors not to ______ draft contract comments from the published client summary.",
+      "options": {
+        "A": "keep on",
+        "B": "keep back",
+        "C": "keep up",
+        "D": "keep off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "keep back 保留；隱瞞；語境需要保留，故用 keep back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_keep_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "keep back",
+        "gloss_zh": "保留；隱瞞",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "keep back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q13",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "During the contract review, counsel raised several questions ______ liability limits for subcontractors. The client asked for a revised clause before signing. The negotiation is scheduled to resume on Thursday.",
+      "options": {
+        "A": "as for",
+        "B": "as on",
+        "C": "as to",
+        "D": "as with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "as to 關於；至於；語境要求關於，故用 as to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_as_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "as to",
+        "gloss_zh": "關於；至於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "as to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q14",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The audit team issued a follow-up memo ______ data-privacy controls at the regional offices. Each site manager must submit an action plan by Friday. Corporate IT will track implementation monthly.",
+      "options": {
+        "A": "with regard on",
+        "B": "with regard at",
+        "C": "with regard to",
+        "D": "with regard for"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "with regard to 關於；語境要求關於，故用 with regard to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_with_regard_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "with regard to",
+        "gloss_zh": "關於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "with regard to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q15",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "After the product recall, internal investigators learned that a supplier had ______ test results from the quality team. Executives demanded a full disclosure before regulators arrived. The case is now under external review.",
+      "options": {
+        "A": "keep on",
+        "B": "keep up",
+        "C": "keep back",
+        "D": "keep off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "keep back 保留；隱瞞；語境要求保留，故用 keep back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_keep_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "keep back",
+        "gloss_zh": "保留；隱瞞",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "keep back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q16",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Field engineers returned from the site visit with handwritten notes. The project office hired a contractor to ______ the observations into a formal assessment for the board. The draft must be ready before the capital vote.",
+      "options": {
+        "A": "write in",
+        "B": "write off",
+        "C": "write up",
+        "D": "write on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "write up 寫成正式報告；語境要求寫成正式報告，故用 write up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "write up",
+        "gloss_zh": "寫成正式報告",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q17",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The procurement team completed the vendor comparison spreadsheet. The chief operating officer will ______ the final selection after legal reviews the service agreement. Orders cannot be placed until approval is recorded.",
+      "options": {
+        "A": "sign on",
+        "B": "sign up",
+        "C": "sign off",
+        "D": "sign in"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "sign off 簽核；批准結案；語境要求簽核，故用 sign off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sign_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "sign off",
+        "gloss_zh": "簽核；批准結案",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sign off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q18",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Trainees found conflicting footnotes in the policy manual. The trainer told them to ______ section 4.2 of the archived handbook rather than relying on an outdated slide deck. Updated pages will be distributed next week.",
+      "options": {
+        "A": "refer back on",
+        "B": "refer back at",
+        "C": "refer back to",
+        "D": "refer back with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "refer back to 回頭參照；語境要求回頭參照，故用 refer back to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_refer_back_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "refer back to",
+        "gloss_zh": "回頭參照",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "refer back to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q19",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Applicants may call the help desk if they have questions ______ the document submission portal.",
+      "options": {
+        "A": "as for",
+        "B": "as on",
+        "C": "as with",
+        "D": "as to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "as to 關於；至於；語境需要關於，故用 as to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_as_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "as to",
+        "gloss_zh": "關於；至於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "as to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_Q20",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "______ parking assignments, please consult the facilities notice posted in the lobby.",
+      "options": {
+        "A": "with regard on",
+        "B": "with regard at",
+        "C": "with regard for",
+        "D": "with regard to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "with regard to 關於；語境需要關於，故用 with regard to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_with_regard_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "with regard to",
+        "gloss_zh": "關於",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "with regard to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_R01",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the checklist on page two before submitting the enrollment packet.",
+      "options": {
+        "A": "refer back on",
+        "B": "refer back at",
+        "C": "refer back with",
+        "D": "refer back to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "refer back to 回頭參照；語境需要回頭參照，故用 refer back to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_refer_back_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "refer back to",
+        "gloss_zh": "回頭參照",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "refer back to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_R02",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The project cannot close until the safety officer ______ the final inspection form.",
+      "options": {
+        "A": "sign on",
+        "B": "sign up",
+        "C": "sign in",
+        "D": "sign off"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "sign off 簽核；批准結案；語境需要簽核，故用 sign off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sign_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "sign off",
+        "gloss_zh": "簽核；批准結案",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sign off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_R03",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The intern was asked to ______ the customer feedback into a one-page briefing note.",
+      "options": {
+        "A": "write in",
+        "B": "write off",
+        "C": "write on",
+        "D": "write up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "write up 寫成正式報告；語境需要寫成正式報告，故用 write up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "write up",
+        "gloss_zh": "寫成正式報告",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-07_R04",
+      "lesson_id": "V3-W1-07",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Ethics training warns employees not to ______ material facts during an internal investigation.",
+      "options": {
+        "A": "keep on",
+        "B": "keep up",
+        "C": "keep off",
+        "D": "keep back"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "keep back 保留；隱瞞；語境需要保留，故用 keep back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_keep_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-07",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_07",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 4",
+        "source_phrase": "keep back",
+        "gloss_zh": "保留；隱瞞",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "keep back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave4_candidate",
+        "authored_slice_lesson_id": "V3-W1-07",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_write_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-07",
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "base_word": "write up",
+      "variants": [
+        "write up"
+      ],
+      "chinese": "寫成正式報告",
+      "example": "The team will write up the pending documentation before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "write up",
+        "gloss_zh": "寫成正式報告",
+        "source_lessons": [
+          "V3-W1-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave4_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_sign_off",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-07",
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "base_word": "sign off",
+      "variants": [
+        "sign off"
+      ],
+      "chinese": "簽核",
+      "example": "The team will sign off the pending documentation before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "sign off",
+        "gloss_zh": "簽核；批准結案",
+        "source_lessons": [
+          "V3-W1-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave4_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_refer_back_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-07",
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "base_word": "refer back to",
+      "variants": [
+        "refer back to"
+      ],
+      "chinese": "回頭參照",
+      "example": "The team will refer back to the pending documentation before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "refer back to",
+        "gloss_zh": "回頭參照",
+        "source_lessons": [
+          "V3-W1-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave4_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_as_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-07",
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "base_word": "as to",
+      "variants": [
+        "as to"
+      ],
+      "chinese": "關於",
+      "example": "The team will as to the pending documentation before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "as to",
+        "gloss_zh": "關於；至於",
+        "source_lessons": [
+          "V3-W1-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave4_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_with_regard_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-07",
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "base_word": "with regard to",
+      "variants": [
+        "with regard to"
+      ],
+      "chinese": "關於",
+      "example": "The team will with regard to the pending documentation before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "with regard to",
+        "gloss_zh": "關於",
+        "source_lessons": [
+          "V3-W1-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave4_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_keep_back",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-07",
+      "lesson_ids": [
+        "V3-W1-07"
+      ],
+      "base_word": "keep back",
+      "variants": [
+        "keep back"
+      ],
+      "chinese": "保留",
+      "example": "The team will keep back the pending documentation before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "keep back",
+        "gloss_zh": "保留；隱瞞",
+        "source_lessons": [
+          "V3-W1-07"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave4_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_07_wave_4_2026_05_21",
+  "promoted_lesson_id": "V3-A-127"
+}

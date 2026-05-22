@@ -1,11 +1,15 @@
 import { test as base, expect, type Page } from "@playwright/test";
 
+// Seeded Playwright fixture helper. Production-empty coverage should use clearIndexedDb() plus waitForApp().
+
 const DB_NAME = "toeic_vocab_tracker_db";
 const DB_VERSION = 2;
 const COURSE_ID = "toeic_vocab_v1";
-const APP_SEED_VERSION = "toeic_vocab_tracker_c004_full_bank_clear_2026_05_18";
+const APP_SEED_VERSION = "toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22";
 const PREF_KEY = "toeic_vocab_tracker_preferences";
 const ACTIVE_SESSION_KEY = "toeic_vocab_active_session";
+const WORD_HIGHLIGHT_KEY = "toeic_vocab_word_highlights";
+const PLAYWRIGHT_SEEDED_FLAG = "toeic_vocab_playwright_seeded_fixture";
 const HELPER_TIMEOUT = 15_000;
 
 const STORES = {
@@ -143,7 +147,7 @@ const seedQuestions = [
     target_item_id: "item_precise",
     distractor_type: "toeic_realistic",
     difficulty: 1,
-    estimated_time_seconds: 10,
+    estimated_time_seconds: 8,
     default_error_code: "TIME_PRESSURE",
     tags: ["playwright", "seed"]
   }
@@ -194,7 +198,7 @@ export async function waitForVocabDb(page: Page) {
 
 export async function clearIndexedDb(page: Page) {
   await page.goto("/index.html?pw-cleanup=1", { waitUntil: "load", timeout: HELPER_TIMEOUT });
-  await page.evaluate(async ({ dbName, prefKey, activeSessionKey }) => {
+  await page.evaluate(async ({ dbName, prefKey, activeSessionKey, wordHighlightKey, seededFlag }) => {
     const deleteDb = () => new Promise<void>((resolve, reject) => {
       const request = window.indexedDB.deleteDatabase(dbName);
       request.onsuccess = () => resolve();
@@ -204,9 +208,11 @@ export async function clearIndexedDb(page: Page) {
 
     localStorage.removeItem(prefKey);
     localStorage.removeItem(activeSessionKey);
+    localStorage.removeItem(wordHighlightKey);
+    localStorage.removeItem(seededFlag);
     sessionStorage.clear();
     await deleteDb();
-  }, { dbName: DB_NAME, prefKey: PREF_KEY, activeSessionKey: ACTIVE_SESSION_KEY });
+  }, { dbName: DB_NAME, prefKey: PREF_KEY, activeSessionKey: ACTIVE_SESSION_KEY, wordHighlightKey: WORD_HIGHLIGHT_KEY, seededFlag: PLAYWRIGHT_SEEDED_FLAG });
 }
 
 export async function waitForApp(page: Page) {
@@ -231,7 +237,8 @@ export async function clearAndSeedIndexedDb(page: Page) {
     lesson,
     questions,
     user,
-    appSeedVersion
+    appSeedVersion,
+    seededFlag
   }) => {
     const requestPromise = (request: IDBRequest) => new Promise((resolve, reject) => {
       request.onsuccess = () => resolve(request.result);
@@ -275,6 +282,7 @@ export async function clearAndSeedIndexedDb(page: Page) {
 
     localStorage.removeItem(prefKey);
     localStorage.removeItem(activeSessionKey);
+  localStorage.setItem(seededFlag, "1");
     sessionStorage.clear();
 
     await deleteDb();
@@ -306,7 +314,8 @@ export async function clearAndSeedIndexedDb(page: Page) {
     questions: seedQuestions,
     user: seedUser,
     // Match the app seed marker so tracker init skips the full production seed.
-    appSeedVersion: APP_SEED_VERSION
+    appSeedVersion: APP_SEED_VERSION,
+    seededFlag: PLAYWRIGHT_SEEDED_FLAG
   });
 }
 

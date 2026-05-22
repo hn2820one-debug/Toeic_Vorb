@@ -1,0 +1,1430 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_15_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-135",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-15-current-isolated-audit",
+    "isolated_audit_scope": "29 lessons / 596 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_134_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 10 candidate: V3-W1-15 HR/org collocation lesson 1 (5 target items).",
+    "First lesson in 人事與組織 topic; Q10 reuses v3_a_134_rv_024 for cross-topic pressure.",
+    "Promotion target lesson id: V3-A-135."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-15",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 135,
+    "title": "人事與組織 搭配詞 1",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "人事與組織",
+    "target_items": [
+      "item_coll_clock_in",
+      "item_coll_move_up",
+      "item_coll_fill_in_for",
+      "item_coll_hand_over",
+      "item_coll_take_on"
+    ],
+    "question_ids": [
+      "V3-W1-15_Q01",
+      "V3-W1-15_Q02",
+      "V3-W1-15_Q03",
+      "V3-W1-15_Q04",
+      "V3-W1-15_Q05",
+      "V3-W1-15_Q06",
+      "V3-W1-15_Q07",
+      "V3-W1-15_Q08",
+      "V3-W1-15_Q09",
+      "v3_a_134_rv_024",
+      "V3-W1-15_Q11",
+      "V3-W1-15_Q12",
+      "V3-W1-15_Q13",
+      "V3-W1-15_Q14",
+      "V3-W1-15_Q15",
+      "V3-W1-15_Q16",
+      "V3-W1-15_Q17",
+      "V3-W1-15_Q18",
+      "V3-W1-15_Q19",
+      "V3-W1-15_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-15_R01",
+      "V3-W1-15_R02",
+      "V3-W1-15_R03",
+      "V3-W1-15_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_15",
+      "topic_lesson_index": 1,
+      "item_count": 5,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 3,
+        "C": 0
+      },
+      "unresolved_target_count": 5,
+      "authoring_method": "c11_v3_w1_15_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_134_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-15_Q01",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Employees must ______ at the security desk before entering the research wing.",
+      "options": {
+        "A": "clock in",
+        "B": "clock on",
+        "C": "clock at",
+        "D": "clock over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "clock in 打卡上班；語境需要打卡上班，故用 clock in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_clock_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "clock in",
+        "gloss_zh": "打卡上班",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "clock in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q02",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ by 8:30 a.m. so the morning briefing can start on time.",
+      "options": {
+        "A": "clock in",
+        "B": "clock on",
+        "C": "clock at",
+        "D": "clock over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "clock in 打卡上班；語境需要打卡上班，故用 clock in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_clock_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "clock in",
+        "gloss_zh": "打卡上班",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "clock in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q03",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "After the reorganization, two analysts may ______ to senior coordinator roles.",
+      "options": {
+        "A": "move up",
+        "B": "move in",
+        "C": "move on",
+        "D": "move out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "move up 晉升；上移；語境需要晉升，故用 move up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_move_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "move up",
+        "gloss_zh": "晉升；上移",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "move up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q04",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "High performers are eligible to ______ in the pay band after the annual review.",
+      "options": {
+        "A": "move up",
+        "B": "move in",
+        "C": "move on",
+        "D": "move out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "move up 晉升；上移；語境需要晉升，故用 move up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_move_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "move up",
+        "gloss_zh": "晉升；上移",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "move up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q05",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Ms. Chen will ______ the front-desk supervisor while he attends the compliance seminar.",
+      "options": {
+        "A": "fill in for",
+        "B": "fill on for",
+        "C": "fill at for",
+        "D": "fill over for"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "fill in for 代班；代替出勤；語境需要代班，故用 fill in for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fill_in_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "fill in for",
+        "gloss_zh": "代班；代替出勤",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fill in for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q06",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Could you ______ the logistics lead during her maternity leave?",
+      "options": {
+        "A": "fill in for",
+        "B": "fill on for",
+        "C": "fill at for",
+        "D": "fill over for"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "fill in for 代班；代替出勤；語境需要代班，故用 fill in for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fill_in_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "fill in for",
+        "gloss_zh": "代班；代替出勤",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fill in for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q07",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The outgoing manager will ______ the client portfolio to her successor on Friday.",
+      "options": {
+        "A": "hand in",
+        "B": "hand over",
+        "C": "hand on",
+        "D": "hand off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "hand over 交出；移交；語境需要交出，故用 hand over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "hand over",
+        "gloss_zh": "交出；移交",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q08",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the signed contracts to the legal archive before noon.",
+      "options": {
+        "A": "hand in",
+        "B": "hand over",
+        "C": "hand on",
+        "D": "hand off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "hand over 交出；移交；語境需要交出，故用 hand over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "hand over",
+        "gloss_zh": "交出；移交",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q09",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The department plans to ______ twelve interns for the summer analytics program.",
+      "options": {
+        "A": "take in",
+        "B": "take on",
+        "C": "take up",
+        "D": "take over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "take on 承擔；聘用；語境需要承擔，故用 take on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "take on",
+        "gloss_zh": "承擔；聘用",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q11",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The branch may ______ two part-time coordinators for the membership drive.",
+      "options": {
+        "A": "take in",
+        "B": "take on",
+        "C": "take up",
+        "D": "take over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "take on 承擔；聘用；語境需要承擔，故用 take on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "take on",
+        "gloss_zh": "承擔；聘用",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q12",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ask the assistant manager to ______ the shift supervisor tonight.",
+      "options": {
+        "A": "fill on for",
+        "B": "fill in for",
+        "C": "fill at for",
+        "D": "fill over for"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fill in for 代班；代替出勤；語境需要代班，故用 fill in for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fill_in_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "fill in for",
+        "gloss_zh": "代班；代替出勤",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fill in for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q13",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The call-center manager flew to the regional summit on short notice. Supervisors asked experienced agents to ______ team leaders for three evening shifts. Updated rosters were emailed to all staff.",
+      "options": {
+        "A": "fill on for",
+        "B": "fill in for",
+        "C": "fill at for",
+        "D": "fill over for"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fill in for 代班；代替出勤；語境要求代班，故用 fill in for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fill_in_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "fill in for",
+        "gloss_zh": "代班；代替出勤",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fill in for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q14",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The finance director retired at the end of the fiscal year. Before leaving, she had to ______ budget files and vendor contacts to the interim controller. The transition checklist was completed on her last day.",
+      "options": {
+        "A": "hand in",
+        "B": "hand on",
+        "C": "hand over",
+        "D": "hand off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "hand over 交出；移交；語境要求交出，故用 hand over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "hand over",
+        "gloss_zh": "交出；移交",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q15",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Rising order volume overwhelmed the warehouse crew last quarter. Operations decided to ______ additional pickers through a staffing agency. Training sessions began the following Monday.",
+      "options": {
+        "A": "take in",
+        "B": "take up",
+        "C": "take on",
+        "D": "take over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "take on 承擔；聘用；語境要求承擔，故用 take on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "take on",
+        "gloss_zh": "承擔；聘用",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q16",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The internal audit praised the mentorship program's results. Several junior buyers were approved to ______ after completing leadership workshops. Announcements will be posted on the intranet tomorrow.",
+      "options": {
+        "A": "move in",
+        "B": "move on",
+        "C": "move up",
+        "D": "move out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "move up 晉升；上移；語境要求晉升，故用 move up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_move_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "move up",
+        "gloss_zh": "晉升；上移",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "move up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q17",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Night-shift technicians must ______ at the main gate before receiving safety gear.",
+      "options": {
+        "A": "clock on",
+        "B": "clock at",
+        "C": "clock in",
+        "D": "clock over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "clock in 打卡上班；語境需要打卡上班，故用 clock in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_clock_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "clock in",
+        "gloss_zh": "打卡上班",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "clock in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q18",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "All warehouse staff must ______ through the timekeeping kiosk after the policy update.",
+      "options": {
+        "A": "clock on",
+        "B": "clock at",
+        "C": "clock in",
+        "D": "clock over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "clock in 打卡上班；語境需要打卡上班，故用 clock in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_clock_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "clock in",
+        "gloss_zh": "打卡上班",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "clock in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q19",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The nonprofit may ______ extra translators for the multilingual helpline.",
+      "options": {
+        "A": "take in",
+        "B": "take up",
+        "C": "take on",
+        "D": "take over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "take on 承擔；聘用；語境需要承擔，故用 take on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "take on",
+        "gloss_zh": "承擔；聘用",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_Q20",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "If the pilot succeeds, the product team could ______ the launch date by two weeks.",
+      "options": {
+        "A": "move in",
+        "B": "move on",
+        "C": "move out",
+        "D": "move up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "move up 晉升；上移；語境需要晉升，故用 move up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_move_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "move up",
+        "gloss_zh": "晉升；上移",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "move up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_R01",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Contractors should ______ at the reception tablet before accessing the server room.",
+      "options": {
+        "A": "clock on",
+        "B": "clock at",
+        "C": "clock over",
+        "D": "clock in"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "clock in 打卡上班；語境需要打卡上班，故用 clock in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_clock_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "clock in",
+        "gloss_zh": "打卡上班",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "clock in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_R02",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Strong quarterly results helped her ______ within the regional sales group.",
+      "options": {
+        "A": "move in",
+        "B": "move on",
+        "C": "move out",
+        "D": "move up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "move up 晉升；上移；語境需要晉升，故用 move up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_move_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "move up",
+        "gloss_zh": "晉升；上移",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "move up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_R03",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the access badges to security after the audit.",
+      "options": {
+        "A": "hand in",
+        "B": "hand on",
+        "C": "hand off",
+        "D": "hand over"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "hand over 交出；移交；語境需要交出，故用 hand over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "hand over",
+        "gloss_zh": "交出；移交",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-15_R04",
+      "lesson_id": "V3-W1-15",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The plant may ______ twenty seasonal workers before the holiday rush.",
+      "options": {
+        "A": "take in",
+        "B": "take up",
+        "C": "take over",
+        "D": "take on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "take on 承擔；聘用；語境需要承擔，故用 take on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-15",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_15",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 1",
+        "source_phrase": "take on",
+        "gloss_zh": "承擔；聘用",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave10_candidate",
+        "authored_slice_lesson_id": "V3-W1-15",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_clock_in",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-15",
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "base_word": "clock in",
+      "variants": [
+        "clock in"
+      ],
+      "chinese": "打卡上班",
+      "example": "The HR team will clock in the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "clock in",
+        "gloss_zh": "打卡上班",
+        "source_lessons": [
+          "V3-W1-15"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave10_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_move_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-15",
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "base_word": "move up",
+      "variants": [
+        "move up"
+      ],
+      "chinese": "晉升",
+      "example": "The HR team will move up the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "move up",
+        "gloss_zh": "晉升；上移",
+        "source_lessons": [
+          "V3-W1-15"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave10_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_fill_in_for",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-15",
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "base_word": "fill in for",
+      "variants": [
+        "fill in for"
+      ],
+      "chinese": "代班",
+      "example": "The HR team will fill in for the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "fill in for",
+        "gloss_zh": "代班；代替出勤",
+        "source_lessons": [
+          "V3-W1-15"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave10_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_hand_over",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-15",
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "base_word": "hand over",
+      "variants": [
+        "hand over"
+      ],
+      "chinese": "交出",
+      "example": "The HR team will hand over the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "hand over",
+        "gloss_zh": "交出；移交",
+        "source_lessons": [
+          "V3-W1-15"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave10_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_take_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-15",
+      "lesson_ids": [
+        "V3-W1-15"
+      ],
+      "base_word": "take on",
+      "variants": [
+        "take on"
+      ],
+      "chinese": "承擔",
+      "example": "The HR team will take on the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "take on",
+        "gloss_zh": "承擔；聘用",
+        "source_lessons": [
+          "V3-W1-15"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave10_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_15_wave_10_2026_05_21",
+  "promoted_lesson_id": "V3-A-135"
+}

@@ -69,7 +69,7 @@ test("export flow: completed session appears on dashboard and download fallbacks
   const sessionsStat = page.locator(".tracker-stat").filter({ has: page.locator("span", { hasText: "課程紀錄" }) });
   await expect(sessionsStat.locator("strong")).toHaveText(/^[1-9]\d*$/, { timeout: STEP_TIMEOUT });
 
-  const exportPackageButton = page.getByRole("button", { name: "匯出給 ChatGPT 分析" });
+  const exportPackageButton = page.getByRole("button", { name: "匯出完整資料封包" });
   await expect(exportPackageButton).toBeVisible({ timeout: STEP_TIMEOUT });
 
   const exportDownloads = [];

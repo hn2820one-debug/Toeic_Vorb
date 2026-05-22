@@ -86,7 +86,8 @@ Detailed steps:
    - `js/vocab-db.js` -> `SEED_VERSION`
    - `tests/helpers/seed-idb.ts` -> `APP_SEED_VERSION`
 8. Run full validation.
-9. Commit the production JSON change, seed-version sync, and any patch/audit documentation needed for traceability.
+9. Copy `docs/templates/seed-change-record-template.md` to `docs/seed-changes/YYYY-MM-DD-{new-seed-version}.md`, then record the reason, affected files, validation results, rollback plan, and sign-off. Do not skip this record.
+10. Commit the production JSON change, seed-version sync, and any patch/audit documentation needed for traceability.
 
 Browser edits must never silently rewrite files under `data/vocab/`.
 

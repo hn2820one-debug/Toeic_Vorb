@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v2_mr_02_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "mixed_review_assembly_candidate",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "drafts/v0-v3-rebuild/mixed_review_architecture.json",
+  "source_pipeline": "docs/v2-production-promotion-pipeline.md",
+  "source_core_lessons": [
+    "V2-A-76",
+    "V2-A-77",
+    "V2-A-78",
+    "V2-A-79",
+    "V2-A-80"
+  ],
+  "new_question_rows": 0,
+  "lesson": {
+    "lesson_id": "V2-MR-02",
+    "stage": "V2",
+    "stage_name": "TOEIC Scene Vocabulary",
+    "lesson_number": 10002,
+    "title": "V2 Mixed Review 02",
+    "estimated_minutes": 30,
+    "lesson_type": "mixed_review",
+    "topic": "V2 Mixed Review",
+    "target_items": [],
+    "question_ids": [
+      "v2_a_76_rv_021",
+      "v2_a_76_rv_022",
+      "v2_a_76_rv_023",
+      "v2_a_76_rv_024",
+      "v2_a_77_rv_021",
+      "v2_a_77_rv_022",
+      "v2_a_77_rv_023",
+      "v2_a_77_rv_024",
+      "v2_a_78_rv_021",
+      "v2_a_78_rv_022",
+      "v2_a_78_rv_023",
+      "v2_a_78_rv_024",
+      "v2_a_79_rv_021",
+      "v2_a_79_rv_022",
+      "v2_a_79_rv_023",
+      "v2_a_79_rv_024",
+      "v2_a_80_rv_021",
+      "v2_a_80_rv_022",
+      "v2_a_80_rv_023",
+      "v2_a_80_rv_024"
+    ],
+    "review_question_ids": [],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+    "status": "not_started",
+    "draft_metadata": {
+      "authoring_method": "v2_mixed_review_assembly",
+      "mixed_review_index": 2,
+      "source_core_lessons": [
+        "V2-A-76",
+        "V2-A-77",
+        "V2-A-78",
+        "V2-A-79",
+        "V2-A-80"
+      ],
+      "new_question_rows": 0,
+      "reused_review_question_refs": 20,
+      "production_seed_change": false
+    }
+  },
+  "validation": {
+    "validated_at": "2026-05-21",
+    "all_sources_in_production": true,
+    "all_20_question_ids_accounted_for": true,
+    "new_question_rows": 0,
+    "review_question_ids_empty": true,
+    "reference_validity_checked": true,
+    "answer_distribution": {
+      "A": 5,
+      "B": 5,
+      "C": 5,
+      "D": 5
+    },
+    "isolated_full_quality_audit": "passed",
+    "production_seed_changed": true
+  },
+  "notes": [
+    "V2-MR-02 reuses 20 existing V2 review_question rows from V2-A-76 through V2-A-80.",
+    "Promotion adds 0 question-bank rows; curriculum-only seed change."
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v2_mr_02_mixed_review_2026_05_21",
+  "promoted_lesson_id": "V2-MR-02"
+}

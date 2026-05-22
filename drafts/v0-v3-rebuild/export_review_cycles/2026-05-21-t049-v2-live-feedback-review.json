@@ -1,0 +1,191 @@
+{
+  "review_id": "export_review_2026_05_21_t049_v2_live_feedback",
+  "review_date": "2026-05-21",
+  "reviewer": "Codex",
+  "scope": "T049 real learner/export feedback review after V2-A-71 through V2-A-80 and V2-MR-01 reached production",
+  "wave_or_pack": "V2 ten-core milestone plus V2-MR-01",
+  "production_seed_changed": false,
+  "production_seed_version": "toeic_vocab_tracker_v2_a_78_80_wave_4_2026_05_21",
+  "production_counts": {
+    "runnable_lessons": 11,
+    "v2_core_lessons": 10,
+    "question_bank_rows": 240
+  },
+  "source_documents": [
+    "Log Download/toeic_vocab_export_2026-05-14_toeic_vocab_export_2026-05-14.json",
+    "Log Download/toeic_vocab_export_2026-05-14_attempts.csv",
+    "Log Download/toeic_vocab_export_2026-05-14_sessions.csv",
+    "docs/wave-retrospectives/2026-05-21-c13-v2-wave4-promotion-review.md",
+    "data/vocab/curriculum.json",
+    "data/vocab/questions_v2a.json"
+  ],
+  "source_commands": [
+    {
+      "command": "node scripts/validate-vocab-data.js",
+      "status": "passed",
+      "note": "Production baseline remained 11 lessons / 240 questions."
+    },
+    {
+      "command": "node scripts/check-doc-consistency.js",
+      "status": "passed",
+      "note": "Seed/cache/count current-truth docs aligned before feedback decision."
+    },
+    {
+      "command": "node scripts/audit-quality-full.js",
+      "status": "passed",
+      "note": "0 blocking issues; 40 V2 staircase progression warnings remain non-blocking warning debt."
+    },
+    {
+      "command": "node export evidence summary against Log Download/toeic_vocab_export_2026-05-14_toeic_vocab_export_2026-05-14.json",
+      "status": "completed",
+      "note": "24 attempts and 1 session found, all for V1-B-21; 0 V2 attempts found."
+    }
+  ],
+  "export_evidence_summary": {
+    "available_export_package": "Log Download/toeic_vocab_export_2026-05-14_toeic_vocab_export_2026-05-14.json",
+    "available_export_date": "2026-05-14",
+    "attempts_found": 24,
+    "sessions_found": 1,
+    "attempts_by_lesson": {
+      "V1-B-21": 24
+    },
+    "v2_attempts_found": 0,
+    "current_v2_lessons_with_attempts": [],
+    "verdict": "old_export_not_applicable_to_current_v2_seed"
+  },
+  "files_reviewed": [
+    {
+      "file": "summary.md",
+      "status": "old_export_only",
+      "evidence": "Existing package is dated 2026-05-14 and predates the current V2 ten-core seed."
+    },
+    {
+      "file": "attempts.csv",
+      "status": "not_applicable",
+      "evidence": "Available attempts belong to V1-B-21; no V2 lesson attempts were found."
+    },
+    {
+      "file": "attempts.json",
+      "status": "old_export_only",
+      "evidence": "Nested export data contains 24 attempts, all for V1-B-21."
+    },
+    {
+      "file": "sessions.csv",
+      "status": "old_export_only",
+      "evidence": "1 session exists in the old export package; it is not a current V2 session."
+    },
+    {
+      "file": "stage_progress.json",
+      "status": "old_export_only",
+      "evidence": "Not usable for current V2-A-71 through V2-A-80 learner feedback."
+    },
+    {
+      "file": "content_quality_summary.json",
+      "status": "reviewed_by_audit",
+      "evidence": "Production quality was checked by full audit instead of learner-derived content flags."
+    },
+    {
+      "file": "review_effectiveness.json",
+      "status": "not_available",
+      "evidence": "No current V2 review-mode export exists."
+    },
+    {
+      "file": "stage_seal_readiness.json",
+      "status": "not_available",
+      "evidence": "No current V2 learner sessions exist to support readiness analysis."
+    }
+  ],
+  "metrics_reviewed": [
+    {
+      "metric": "attempt_volume",
+      "status": "insufficient_data",
+      "note": "0 attempts found for V2-A-71 through V2-A-80 or V2-MR-01."
+    },
+    {
+      "metric": "accuracy_by_stage_lesson_type",
+      "status": "insufficient_data",
+      "note": "Available attempts are from V1-B-21 only."
+    },
+    {
+      "metric": "avg_response_time_by_type",
+      "status": "insufficient_data",
+      "note": "No current V2 attempt timing evidence exists."
+    },
+    {
+      "metric": "speed_bucket_distribution",
+      "status": "insufficient_data",
+      "note": "No current V2 attempts exist."
+    },
+    {
+      "metric": "error_code_distribution",
+      "status": "insufficient_data",
+      "note": "No current V2 error logs or attempts exist."
+    },
+    {
+      "metric": "repeated_error_rate",
+      "status": "insufficient_data",
+      "note": "No current V2 repeated-error evidence exists."
+    },
+    {
+      "metric": "review_fix_rate",
+      "status": "insufficient_data",
+      "note": "No current V2 review-mode export exists."
+    },
+    {
+      "metric": "target_item_mastery",
+      "status": "insufficient_data",
+      "note": "No current V2 item mastery evidence exists."
+    },
+    {
+      "metric": "content_quality_flags",
+      "status": "reviewed_by_audit",
+      "note": "Full audit passed with 0 blocking issues and 40 existing V2 staircase warnings."
+    },
+    {
+      "metric": "stage_readiness",
+      "status": "insufficient_data",
+      "note": "The ten-core V2 milestone is live, but learner evidence is absent."
+    }
+  ],
+  "findings": [
+    {
+      "area": "learner_evidence",
+      "finding": "No real current V2 learner attempts or sessions exist in the repo.",
+      "decision": "do_not_rewrite_v2_seed"
+    },
+    {
+      "area": "old_export_package",
+      "finding": "The only export package is V1-B-21 from 2026-05-14, so it cannot justify changes to the 2026-05-21 V2 seed.",
+      "decision": "record_as_insufficient_data"
+    },
+    {
+      "area": "production_quality",
+      "finding": "The current production seed remains audit-clean at the blocking level.",
+      "decision": "keep_current_v2_seed"
+    },
+    {
+      "area": "next_content_path",
+      "finding": "With no learner evidence requiring a V2 rewrite, the next content process should move to C-11 V3 production candidate preparation.",
+      "decision": "advance_to_v3_candidate_gate"
+    }
+  ],
+  "feedback_actions": [
+    {
+      "target": "docs/Future Plan.md",
+      "action": "Mark T049 as completed with insufficient learner data and move the next process to C-11 V3 candidate work."
+    },
+    {
+      "target": "TO_AI.md",
+      "action": "Record that no V2 live seed rewrite is authorized by current evidence."
+    },
+    {
+      "target": "C-11 V3 candidate",
+      "action": "Validate the first V3 candidate against the current V2 ten-core production baseline before any seed promotion."
+    }
+  ],
+  "blocked_on": [
+    "No current V2-A-71 through V2-A-80 learner sessions or export package exist in the repo."
+  ],
+  "status": "completed_with_insufficient_learner_data",
+  "final_decision": "Keep the V2 seed unchanged. Do not rewrite the 40 V2 staircase warnings without real learner/export evidence or a separate isolated draft probe. Proceed to C-11 V3 production candidate preparation."
+}

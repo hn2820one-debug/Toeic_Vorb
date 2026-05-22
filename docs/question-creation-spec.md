@@ -1,5 +1,5 @@
 # Question Creation Specification
-## TOEIC Vocabulary Tracker — v1.1 (2026-05-18)
+## TOEIC Vocabulary Tracker — v1.3 (2026-05-20)
 
 This document defines all rules for creating questions for this question bank.
 **Every rule here exists because a violation has already caused a real problem.**
@@ -7,7 +7,7 @@ When asking an AI to generate questions, paste the relevant sections as instruct
 
 Current production scope is V0-V3 only. V4 remains draft-only under `drafts/v4/` and must not be added to `data/vocab/` or the production manifest until a future V4 activation task explicitly updates the spec, curriculum, seed version, data, and tests. For current counts and priorities, use root `TO_AI.md` as the source of truth.
 
-Rebuild status as of 2026-05-18: the active production seed is intentionally cleared, with 0 production lesson rows and 0 production question rows. Stage structures below are authoring targets or historical production structures unless a later section explicitly says they are current runnable counts. For the Wave 1 V3 collocation rebuild, use this spec together with `docs/plans/questions plan.md` and `drafts/collocation-rebuild/wave1_authoring_policy_pack.json`.
+Rebuild status as of 2026-05-18: the active production seed is intentionally cleared, with 0 production lesson rows and 0 production question rows. Stage structures below are authoring targets or historical production structures unless a later section explicitly says they are current runnable counts. For current rebuild priorities, use `docs/Future Plan.md`. Historical planning documents are archived under `docs/backups/plans/2026-05-19/`. For any rebuild wave release, use this spec together with `docs/rebuild-wave-release-gate.md`. For the Wave 1 V3 collocation rebuild, also use `drafts/collocation-rebuild/wave1_authoring_policy_pack.json`.
 
 The default production audit is manifest-driven: it loads only files listed in `data/vocab/curriculum.json -> question_files`. Files under `drafts/v4/` are skipped by default. A V4 file under `data/vocab/` or in the production manifest is treated as production leakage.
 
@@ -41,13 +41,13 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 | `question_text` | string | Globally unique; contains exactly one `______` for fill-in types |
 | `options` | object | Keys A, B, C, D — exactly four options |
 | `correct_answer` | string | A, B, C, or D |
-| `explanation_zh` | string | Non-empty Traditional Chinese, 20–60 characters |
+| `explanation_zh` | string | Non-empty Traditional Chinese, 20–60 characters; must explain the correct rule and at least one key distractor contrast |
 | `target_item_id` | string | Must exist in `vocab_items` store |
 | `distractor_type` | string | Must use the stage-appropriate value: `toeic_realistic` (V0), `same_word_family` (V1), `same_scene_vocabulary` (V2), `wrong_verb_collocation` (V3) |
-| `difficulty` | number | 1, 2, or 3 |
+| `difficulty` | number | 1, 2, or 3 in the current production schema; finer difficulty nuance must go into `tags` or review notes until the schema is intentionally upgraded |
 | `estimated_time_seconds` | number | See §3 per type |
 | `default_error_code` | string | See §3 per type |
-| `tags` | array | At least one tag |
+| `tags` | array | At least one tag; include lexical / scene / sense / risk tags when relevant (for example `semantic_sense:*`, `business_scene:*`, `phrasal_verb`, `connector`, `degree_adverb`, `collocation`) |
 | `grammar_link_id` | string\|null | null unless the question tests a grammar pattern |
 
 ### 1.3 Options quality
@@ -56,6 +56,11 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 - Distractors must be **TOEIC-realistic**: words that a test-taker who half-knows the material might plausibly choose
 - Distractors must **not** be eliminated by grammatical cues alone (article `a/an`, singular/plural, subject-verb agreement must not rule out options)
 - At least two distractors should be from the **same semantic field** as the correct answer
+- Distractors should usually be **grammatically legal but semantically or collocationally wrong** once inserted into the blank
+- Avoid absolute-synonym option pairs or two wrong options that are effectively the same meaning; duplicate wrong meanings lower discrimination
+- Prefer similar option length / surface shape / difficulty when practical so the correct answer does not stand out visually
+- All options must be real English words or established business phrases; do not invent misspellings or fake words
+- When natural, include a realistic Chinese-speaker confusion distractor, but only if it still survives grammar screening
 
 ### 1.4 `explanation_zh` rules
 
@@ -64,15 +69,21 @@ Verification: run `node scripts/audit-duplicates.js` after generation. Zero dupl
 - For fill-in questions: name the grammar pattern or semantic rule ("be 動詞後接形容詞", "固定搭配 make a decision")
 - For meaning questions: give the business-context definition and contrast one key distractor
 - Length: 20–60 characters
+- The paid-quality target is: correct rule + why at least one likely distractor is wrong + Chinese-speaker trap when relevant
+- The current production schema stores only one `explanation_zh` field. If fuller rationale for all three distractors is needed, keep it in authoring notes, review sheets, or policy packs until the schema is deliberately expanded.
 - For Wave 1 V3 collocation drafts, also follow `wave1_authoring_policy_pack.json -> explanation_rubric`.
 
 ### 1.5 English language standards
 
 - Business English, B2 level (CEFR)
-- Sentence length: 8–22 words for fill-in; up to 60 words for `part6_context_choice`
+- Most single-sentence stems should target **15–25 words**. Shorter 8–14 word stems are acceptable only for `speed_drill`, very tight collocation prompts, or other clearly justified fast-response formats; `part6_context_choice` may still run up to 60 words.
 - No invented company names — use generic labels (the company, the firm, the client)
-- Tense: present simple or past simple preferred; avoid future perfect or conditionals
-- Register: formal business prose, not casual
+- Tense: present simple or past simple preferred; avoid unstable tense stacks unless the context genuinely requires them
+- Register: formal, neutral business prose rather than casual or emotional language
+- Context should prefer universal business scenes such as procurement, HR, customer service, finance, operations, logistics, compliance, and IT support
+- Grammar and spelling must be fully correct; the stem itself may not create noise or ambiguity
+- Vary syntax across the bank: relative clauses, participle phrases, contrast clauses, and other TOEIC-relevant structures are encouraged when they remain clear and natural
+- Avoid culture-bound jokes, slang, or country-specific assumptions that a global learner would not reasonably know
 
 ### 1.6 Production quality policy — semantic meaning, progression, and reuse
 
@@ -92,6 +103,61 @@ Rules:
 - Contextual reuse must be meaningfully different. Changing only a scene label, department name, or a few surface words does not count as a new context.
 - Scene diversity target: high-frequency core words should appear in at least 3 distinct context skeletons across the bank, mid-frequency words in at least 2, and low-frequency words in 1–2.
 - Formal production content should avoid near-template rewrites. Limited template reuse may be tolerated in drafts or temporary practice content, but not as a normal production strategy.
+
+### 1.7 High-reliability authoring rules
+
+#### 1.7.1 Vocabulary and collocation selection
+
+- Test **application ability**, not rote memorisation. If a learner can answer from dictionary memory alone, the item is usually too weak.
+- Prioritise **high-frequency TOEIC / workplace vocabulary**. Reject literary, obscure, or low-utility words unless a future explicitly approved wave requires them.
+- When a target word has a stable partner or preposition, the item should often force **collocational knowledge** rather than isolated translation, for example `access to`, `comply with`, `streamline the process`, `leverage resources`.
+- Use **polysemy deliberately**: prefer high-utility secondary senses such as `address = deal with` or `outstanding = unpaid` when those senses matter in business English.
+- Use **phrasal-verb contrast** when the particle changes meaning materially, for example `turn in` vs `turn down`, but only when all options remain real and plausible business English.
+- Avoid contestable near-synonym fights that even strong speakers could argue over. If the discrimination relies on microscopic stylistic preference rather than a clear rule, rewrite the item.
+- Strengthen **business idioms and operating language** when natural, not as decorative jargon.
+- Use **word-family confusion** strategically when the sentence structure truly requires that sensitivity.
+- Include **connectors and logical linkers** such as `therefore`, `nevertheless`, and `in contrast` when the sentence logic genuinely depends on them.
+- Include **degree-adverb precision** when a specific collocation matters, for example `highly successful` rather than any generic intensifier.
+- The blanked target must be the **semantic core** of the sentence. If several harmless substitutions preserve the same meaning, the stem is too weak.
+
+#### 1.7.2 Stem design and context control
+
+- The stem must be **closed-context**: once the correct answer is inserted, the sentence or passage should support only one natural interpretation.
+- Every stem should contain at least one **context clue** that points toward the answer or rules out common traps.
+- Prefer **real workplace situations**: procurement, hiring, meetings, customer support, budgeting, documentation, facilities, equipment, scheduling, and compliance.
+- Vary sentence structures across the bank; do not let the whole set collapse into repetitive `S + V + O` fillers.
+- Keep the tone **professional and neutral**. Do not use melodramatic, sarcastic, or chatty narration.
+- Avoid accidental answer leakage from articles, number agreement, or obvious morphology.
+- Distribute blank positions across subject, verb, object, complement, and modifier slots instead of always blanking the sentence tail.
+- If a stem is shorter than the preferred target length, it must still contain enough information to prevent ambiguity.
+- If a stem is longer than the preferred target length, every extra word must materially support context, not padding.
+- Do not use culture-specific references, local memes, or idioms that are not part of international business English.
+
+#### 1.7.3 Distractor psychology
+
+- All options must keep the **same part of speech** unless POS is the explicit test point.
+- Distractors should cluster around the **same topic family** as the answer, so the learner must discriminate meaning or usage, not simply detect category mismatch.
+- When natural, use **visual or phonological twins** (`adapt`, `adopt`, `adept`) to probe lexical precision.
+- Wrong options should stay **grammar-compatible** after insertion whenever the skill being tested is meaning, collocation, or context.
+- Use **Chinese L1 transfer traps** only when they are real learner errors, not caricatures.
+- No two distractors may be effectively the same wrong idea. Otherwise the single-correct-answer logic becomes easier to reverse-engineer.
+- Keep option length and structure reasonably symmetrical.
+- Keep distractor difficulty in the same band as the answer; do not prop up an easy answer with obviously harder or much easier filler options.
+- Every distractor must be a real English word or phrase.
+- Reverse common sense carefully: a distractor may sound plausible in daily life but should fail in the specific business context of the stem.
+
+#### 1.7.4 System architecture and governance notes
+
+- Across a large release batch, canonical `A/B/C/D` correct-answer distribution should stay close to **25% each**.
+- The current production app still stores canonical option order in JSON. **Do not assume frontend shuffling is already guaranteed.** If runtime randomisation is added later, it must preserve `correct_answer`, review logic, exports, and analytics.
+- `All of the above` and `None of the above` are forbidden.
+- The current schema uses `difficulty` 1/2/3 plus `tags`; do not invent a parallel 1–5 production field until the schema is explicitly upgraded.
+- A single lesson or test session should not accidentally collide on the same target word or collocation unless the reuse is an intentional staircase or review design.
+- Formatting and punctuation must be consistent. Single-word options should usually stay lowercase and unpunctuated; full-sentence options should follow sentence casing and punctuation consistently.
+- Rich explanation structure is mandatory at the authoring level even though production JSON currently stores only `explanation_zh`.
+- UI readability and whitespace matter, but they are presentation constraints; do not solve poor UI readability by weakening stem precision.
+- The app does **not** currently expose a learner-facing dispute button. Until such a feature exists, question disputes must flow through `question_edits`, patch export / review, and seed-change records.
+- Question fixes must remain traceable and must not invalidate historical attempt data. Use seed records, patch workflow, and source-seed metadata instead of silent overwrites.
 
 ---
 
@@ -286,7 +352,7 @@ Format:  [Short business sentence with ______.] (8–12 words preferred)
 Example: "The client asked us to ______ the proposal by noon."
 Options: Four plausible completions
 Answer:  The most natural completion
-Time:    10 seconds
+Time:    8 seconds
 Error:   TIME_PRESSURE
 Tags:    ["toeic_part5", "speed"]
 Note:    Sentence must be newly written — not copied from word_family or part5 questions
@@ -337,18 +403,54 @@ Tags:    ["false_friend"]
 
 ---
 
-## 4. Distractor Quality Checklist
+## 4. Authoring Quality Checklists
+
+Use these checklists before finalising any question set.
+
+### 4.1 Target vocabulary and collocation checklist
+
+- [ ] The target is high-frequency TOEIC / workplace vocabulary, not literary or low-utility filler
+- [ ] The question tests application, not bare dictionary recall
+- [ ] If the target naturally selects a partner word or preposition, the item forces collocation knowledge instead of translation only
+- [ ] If the item uses polysemy, the chosen sense is a real high-utility meaning and the context makes that sense explicit
+- [ ] If the item uses a phrasal verb, connector, or degree adverb, the wrong options create a meaningful but incorrect contrast
+- [ ] The blanked target is semantically indispensable; a harmless synonym cannot replace it without changing the core message
+
+### 4.2 Stem and context checklist
+
+- [ ] Most single-sentence stems stay in the 15–25 word target zone unless a speed / tight-context exception is justified
+- [ ] The context is closed and leads to one natural interpretation
+- [ ] The stem contains at least one useful clue that points toward the answer or screens out common traps
+- [ ] The scenario is realistic workplace English and free from culture-specific barriers
+- [ ] Grammar, spelling, and register are fully professional and correct
+- [ ] The blank position is not predictable and does not leak the answer through articles, agreement, or morphology
+- [ ] The sentence pattern adds variety without becoming unnatural or overloaded
+
+### 4.3 Distractor quality checklist
 
 Before finalising any question, verify every distractor:
 
 - [ ] Is the same part of speech as the correct answer (unless POS is being tested)
 - [ ] Cannot be ruled out by `a/an`, singular/plural, or subject-verb agreement
-- [ ] Is a real TOEIC-level English word (not invented or obscure)
+- [ ] Is a real TOEIC-level English word or phrase (not invented or obscure)
 - [ ] Comes from the same semantic field or business domain as the correct answer
 - [ ] Would plausibly attract a test-taker who partially knows the topic
+- [ ] Is grammatically legal in the slot when the item is meant to test meaning / context / collocation
 - [ ] Has similar length / surface shape to the correct answer when practical, so it is not too easy to eliminate
 - [ ] Ideally includes at least one realistic Chinese-speaker confusion distractor that still survives grammatical screening
 - [ ] Does not accidentally also fit the blank (second-correct-answer problem)
+- [ ] Does not duplicate another wrong option's meaning
+- [ ] Matches the answer's general difficulty band rather than making the answer stand out
+
+### 4.4 System and governance checklist
+
+- [ ] No option uses `All of the above` or `None of the above`
+- [ ] The batch still supports healthy A/B/C/D answer balance
+- [ ] `difficulty` and `tags` reflect the actual test point, scene, and sense using the current schema rather than invented extra fields
+- [ ] The lesson does not accidentally retest the same target word / collocation unless the reuse is an intentional staircase or review row
+- [ ] `explanation_zh` is strong enough for production, and fuller distractor rationale is preserved in review notes when needed
+- [ ] Any expected future dispute can be traced through patch workflow, `question_edits`, or seed records
+- [ ] Option casing, punctuation, and formatting are internally consistent
 
 For Wave 1 V3 collocation drafts, distractor candidates must follow the schema in `drafts/collocation-rebuild/wave1_authoring_policy_pack.json -> distractor_bank_schema`.
 
@@ -358,6 +460,8 @@ For Wave 1 V3 collocation drafts, distractor candidates must follow the schema i
 
 Use this template when asking an AI to write new questions.
 Replace `[...]` blocks with actual data.
+
+For a shorter copy-paste version aimed at day-to-day AI authoring, use `docs/templates/ai-question-authoring-prompt.md`. The inline template below remains the fuller reference version tied directly to this spec.
 
 ```
 You are designing questions for a TOEIC vocabulary learning app.
@@ -414,6 +518,16 @@ Old-item pressure: [0-2 prior same-stage review_question IDs are added in curric
     drafts/collocation-rebuild/wave1_authoring_policy_pack.json. It defines
     target_item_id, semantic_sense, distractor, explanation, and source-of-truth rules.
 
+12. HIGH-RELIABILITY AUTHORING: Also follow §1.7 and the checklists in §4.
+   Prefer high-frequency business vocabulary, force collocation when natural,
+   write closed-context stems, avoid contestable absolute synonyms, and keep
+   the blanked target semantically indispensable.
+
+13. SYSTEM HONESTY: Use only fields supported by the current schema.
+   `difficulty` is still 1/2/3, and production JSON still has one `explanation_zh`
+   field. Do not invent extra runtime fields for 1–5 difficulty, per-distractor
+   explanations, or unimplemented learner-feedback features.
+
 ══ OUTPUT FORMAT ══
 JSON array. Each object must have:
 question_id, lesson_id, stage, type, skill, subskill,
@@ -445,13 +559,20 @@ After receiving generated questions and before adding them to the question bank:
    - V3 core lesson: 20-22 final `question_ids` + 4 `review_question_ids`
    - V2/V3 mixed-review lesson: `question_ids` should be valid reused `review_question` IDs from earlier same-stage core lessons; no `review_question_ids`
 
-4. **Bump `seed_version`** in three files simultaneously:
+4. **Run the §4 authoring quality checklists** for target choice, stem design, distractors, and governance notes.
+   Any deliberate exception should be recorded in draft review notes before import.
+
+5. **Bump `seed_version`** in three files simultaneously:
    - `data/vocab/curriculum.json` → `seed_version`
    - `js/vocab-db.js` → `SEED_VERSION`
    - `tests/helpers/seed-idb.ts` → `APP_SEED_VERSION`
    Format: `toeic_vocab_tracker_{description}_{YYYY_MM_DD}`
 
-5. **Run all Playwright tests:**
+6. **Create a seed-change record** from `docs/templates/seed-change-record-template.md` and save it as `docs/seed-changes/YYYY-MM-DD-{new-seed-version}.md`.
+   - Record the change items, reason, affected files, validation results, rollback plan, and sign-off.
+   - Do not merge or describe a production seed change as complete without this record.
+
+7. **Run all Playwright tests:**
    ```
    npx playwright test
    ```
@@ -464,18 +585,70 @@ node scripts/validate-vocab-data.js
 node scripts/audit-quality-full.js
 node scripts/audit-duplicates.js
 npm run test:scoring
+npm run test:docs
 npm run test:audit
 npx playwright test
 npm run test:all
 ```
 
-### 6.1 Release-gate interpretation
+### 6.1 Rebuild wave minimum release gate
+
+Every rebuild wave must follow `docs/rebuild-wave-release-gate.md` before it is described as ready, merged, or production-promoted.
+
+Before scaling a V1, V2, or V3 rebuild, first pass the relevant minimum usable content pack in `docs/minimum-usable-content-packs.md` and `drafts/v0-v3-rebuild/minimum_usable_packs.json`. The machine check is:
+
+```powershell
+npm run test:mup
+```
+
+Minimum output:
+
+- A declared wave scope: draft-only or production release.
+- Complete lesson rows for every claimed lesson; no placeholder production lesson rows.
+- Complete question rows for every claimed `question_id` and `review_question_id`.
+- Valid review wiring, including mixed-review reuse only from earlier same-stage `review_question` rows.
+- Complete target item coverage in vocab items for every production `target_item_id`.
+- Documentation updates for any changed counts, rules, current facts, or user-facing behavior.
+- Automated tests or verifier coverage for the wave-specific behavior.
+
+Required production validation:
+
+```powershell
+node scripts/validate-vocab-data.js
+node scripts/audit-quality-full.js
+node scripts/audit-duplicates.js
+npm run test:scoring
+npm run test:audit
+npm run test:patch
+npm run test:docs
+npx playwright test
+npm run test:all
+```
+
+Required human review:
+
+- High-frequency business vocabulary selection and target-word irreplaceability.
+- Polysemy, phrasal-verb, connector, and degree-adverb precision when those are the intended traps.
+- Stem clue sufficiency, single-interpretation closure, and cultural neutrality.
+- Content quality and natural TOEIC business English.
+- Semantic-sense policy for direct-definition rows.
+- Error-code and distractor-type alignment.
+- Answer distribution across A/B/C/D.
+- Tag completeness and schema-aligned difficulty.
+- Traditional Chinese explanations that explain the rule or contrast.
+- Authoring rationale for why the correct answer wins and why major distractors fail.
+- Distractor plausibility and grammar-giveaway screening.
+- Review-row and old-item pressure validity.
+
+Any unchecked blocking item in `docs/rebuild-wave-release-gate.md` blocks production promotion.
+
+### 6.2 Release-gate interpretation
 
 - New production rows must pass all blocking checks before import.
 - Warning checks do not block import by themselves, but they must be reviewed and should trend downward over time.
 - Temporarily non-automated checks remain part of human quality review even when no script enforces them yet.
 
-### 6.2 Audit check matrix
+### 6.3 Audit check matrix
 
 #### Blocking
 
@@ -483,6 +656,8 @@ npm run test:all
 |------|------|----------|
 | Duplicate `question_text` | Whole production bank | Fail if any production row reuses an existing stem |
 | Duplicate `question_id` / missing required fields | Whole production bank | Fail immediately |
+| Duplicate option text inside one question | Per question | Fail if two options normalize to the same text |
+| Forbidden shortcut options | Per question | Fail if any option uses `All of the above` or `None of the above` |
 | Same-lesson direct-definition repetition | One lesson | Fail if the same `target_item_id` + same semantic meaning appears twice in direct-definition rows |
 | Whole-bank direct-definition repetition | Whole production bank | Fail if a new direct-definition row duplicates an existing `target_item_id` + same semantic meaning already present elsewhere in production |
 | Missing sense tag on an allowed second definition row | Whole production bank | Fail if a surface word has more than one direct-definition row and the extra row lacks `semantic_sense:<sense_id>` |
@@ -497,6 +672,8 @@ npm run test:all
 | Context diversity below target | Per target item | Warn when high-frequency words have fewer than 3 distinct context skeletons, or mid-frequency words fewer than 2 |
 | Weak distractor heuristics | Per question | Warn when distractors are too short/long, too structurally different, or trivially removable |
 | Explanation quality heuristics | Per question | Warn when explanation_zh appears to omit rule, likely wrong choice, or common trap guidance |
+| Preferred stem length drift | Per contextual question | Warn when contextual stems fall outside the preferred 15-25 word range for types that should normally stay within one controlled sentence |
+| Blank-position concentration | Per lesson | Warn when fill-in blanks are overly concentrated near sentence end across the same lesson |
 | Same-lesson staircase weakness | Per lesson | Warn when one item repeats within a lesson but the question types do not clearly increase cognitive demand |
 | Mixed-review composition drift | Mixed-review content when explicitly newly authored | Warn if new contextual rows fall far below the target 70–80% and reused old-error rows exceed the intended 20–30% |
 

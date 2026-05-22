@@ -24,14 +24,14 @@ Evidence: `TO_AI.md` is now the single active AI handoff for Program B.
 Recommended fix: Keep README aligned with `TO_AI.md`.
 Do not fix now unless it is documentation-only.
 
-## ISSUE-003｜Program A docs described grammar app as main system
+## ISSUE-003｜Archived Program A planning docs can still confuse scope
 
 Status: Documented
 Severity: High
-Affected files: `Background/PLAN.md`, `Background/TOEIC_App_Program_Plan.md`, `使用說明書.md`
-Problem: Background docs describe Program A only, so readers may mistake them for whole-repo architecture.
-Evidence: `Background/TOEIC_App_Program_Plan.md` describes Claude grammar teaching replication and PoS color system.
-Recommended fix: Keep Background files as Program A references and keep Program B documentation separate.
+Affected files: `docs/backups/plans/2026-05-19/background/PLAN.md`, `docs/backups/plans/2026-05-19/background/TOEIC_App_Program_Plan.md`, `使用說明書.md`
+Problem: Archived Program A planning docs describe grammar-only scope, so readers may still mistake them for current Program B architecture if they are treated as active.
+Evidence: `docs/backups/plans/2026-05-19/background/TOEIC_App_Program_Plan.md` describes Claude grammar teaching replication and PoS color system.
+Recommended fix: Keep those files archived only, and use `docs/Future Plan.md` plus `TO_AI.md` for active Program B planning.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-004｜Root route is now a launcher but PWA cache can mask it
@@ -39,8 +39,8 @@ Do not fix now unless it is documentation-only.
 Status: Open
 Severity: High
 Affected files: `index.html`, `tracker.html`
-Problem: Root `index.html` is the Program B launcher, but a stale service worker may still serve older Program B assets.
-Evidence: `sw.js` caches Program B files with cache `toeic-vorb-v8`; cache reset is needed after route changes.
+Problem: Root `index.html` is the Program B launcher, but a stale service worker may still serve older Program B assets until the browser refreshes its cached shell.
+Evidence: `sw.js` caches Program B files with cache `toeic-vorb-v46`; `clear-sw.html` remains the repair path after route or shell-asset changes.
 Recommended fix: Use `clear-sw.html` or unregister the service worker before regression testing.
 Do not fix now unless it is documentation-only.
 
@@ -64,14 +64,14 @@ Evidence: Program A uses `toeic_progress` and `toeic_learning_db`; vocabulary us
 Recommended fix: Keep stores separate but add clear reset/export UI labels.
 Do not fix now unless it is documentation-only.
 
-## ISSUE-007｜Vocabulary content still lacks V4-V6
+## ISSUE-007｜Vocabulary content is only partially rebuilt
 
 Status: Open
 Severity: High
 Affected files: `data/vocab/curriculum.json`, `data/vocab/questions_v*.json`
-Problem: V0, V1, V2, and V3 are implemented, but V4-V6 vocabulary content is not active in the production seed.
-Evidence: Current vocabulary curriculum has 193 runnable lessons and 4,399 production questions: V0 has 1/31, V1 has 60/1,728, V2 has 60/1,200, and V3 has 72/1,440. V4-A has a draft under `drafts/v4/`, but V4-V6 remain inactive.
-Recommended fix: Review V2/V3 seed quality with real learner sessions before starting V4 Formal Phrase.
+Problem: V2 and the first 23 V3 core lessons are live, but V0/V1 and the remaining V3/V4-V6 content are still not active in production.
+Evidence: Current production seed has 39 runnable lessons and 780 question-bank rows from `V2-A-71` through `V2-A-80`, `V2-MR-01` / `V2-MR-02`, `V3-A-121` through `V3-A-143`, and `V3-MR-01` through `V3-MR-04`. Full production audit passes with 0 blocking issues; existing preferred stem-length and staircase warnings remain non-blocking warning debt. V4-A remains draft-only under `drafts/v4/`, and V4-V6 are still inactive for production.
+Recommended fix: Collect real V2/V3 learner sessions for warning-debt revisit triggers, then continue V3 wave-2 production candidates before starting V4 Formal Phrase.
 Do not fix now unless it is documentation-only.
 
 ## ISSUE-008｜Program A roadmap claims many planned lessons that are not runnable
@@ -144,13 +144,13 @@ Evidence: `sw.js` explicitly caches Vocabulary Tracker files only.
 Recommended fix: Keep cache version updated and provide a clear cache-reset path.
 Do not fix now unless it is documentation-only.
 
-## ISSUE-015｜No automated browser test suite
+## ISSUE-015｜Automated browser test suite exists but still needs coverage growth
 
 Status: Documented
 Severity: Medium
 Affected files: project-wide
-Problem: Browser coverage exists but should be expanded for newer dashboard/export surfaces.
-Evidence: `package.json`, Playwright config, and 4 E2E tests exist; focused checks for Roadmap filters, Stage Seal Readiness, and export inventory are still recommended.
+Problem: Browser coverage now exists and is useful, but it should keep expanding as empty-seed UX and seeded-fixture flows evolve.
+Evidence: `package.json`, Playwright config, and Playwright currently cover 61 tests across 12 spec files, including production-empty UI, seeded UI, lesson flow, review mode, export flow, Google Drive backup/sync, Pages/mobile routing, speed timer, seed sync, and V2/V3 fixture runtime checks.
 Recommended fix: Extend the local Playwright suite before larger content changes.
 Do not fix now unless it is documentation-only.
 

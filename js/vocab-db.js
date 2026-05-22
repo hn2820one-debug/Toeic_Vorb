@@ -2,9 +2,10 @@
   const DB_NAME = "toeic_vocab_tracker_db";
   const DB_VERSION = 2;
   const COURSE_ID = "toeic_vocab_v1";
-  const SEED_VERSION = "toeic_vocab_tracker_c004_full_bank_clear_2026_05_18";
+  const SEED_VERSION = "toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22";
   const PREF_KEY = "toeic_vocab_tracker_preferences";
   const ACTIVE_SESSION_KEY = "toeic_vocab_active_session";
+  const PLAYWRIGHT_SEEDED_FLAG = "toeic_vocab_playwright_seeded_fixture";
 
   const STORES = {
     users: { keyPath: "user_id" },
@@ -197,14 +198,35 @@
     localStorage.setItem(ACTIVE_SESSION_KEY, JSON.stringify(session));
   }
 
+  function isPlaywrightSeededFixtureMode() {
+    try {
+      return localStorage.getItem(PLAYWRIGHT_SEEDED_FLAG) === "1";
+    } catch (_err) {
+      return false;
+    }
+  }
+
   async function count(storeName) {
     return withStore(storeName, "readonly", (store) => requestPromise(store.count()));
   }
 
+  function clearInvalidActiveSession(validLessonIds, validQuestionIds) {
+    const active = loadActiveSession();
+    if (!active?.lesson_id) return false;
+    const questionIds = active.question_ids || [];
+    const valid = validLessonIds.has(active.lesson_id)
+      && questionIds.every((questionId) => validQuestionIds.has(questionId));
+    if (valid) return false;
+    saveActiveSession(null);
+    return true;
+  }
+
   async function seedIfNeeded() {
     await openDB();
+    if (isPlaywrightSeededFixtureMode()) {
+      return { seeded: false, seed_version: SEED_VERSION, fixture_mode: true };
+    }
     const current = await get("settings", "seed_version");
-    if (current?.value === SEED_VERSION) return { seeded: false, seed_version: SEED_VERSION };
 
     const curriculum = await fetchJSON("./data/vocab/curriculum.json");
     const questionFiles = Array.isArray(curriculum.question_files) && curriculum.question_files.length
@@ -230,6 +252,21 @@
     const lessonMap = Object.fromEntries(existingLessons.map((lesson) => [lesson.lesson_id, lesson]));
     const questionMap = Object.fromEntries(existingQuestions.map((question) => [question.question_id, question]));
     const itemMap = Object.fromEntries(existingItems.map((item) => [item.item_id, item]));
+    const validLessonIds = new Set(curriculum.lessons.map((lesson) => lesson.lesson_id));
+    const validQuestionIds = new Set(seedQuestions.map((question) => question.question_id));
+
+    if (current?.value === SEED_VERSION) {
+      await withStores(["lessons", "questions"], "readwrite", (stores) => {
+        existingLessons.forEach((lesson) => {
+          if (!validLessonIds.has(lesson.lesson_id)) stores.lessons.delete(lesson.lesson_id);
+        });
+        existingQuestions.forEach((question) => {
+          if (!validQuestionIds.has(question.question_id)) stores.questions.delete(question.question_id);
+        });
+      });
+      clearInvalidActiveSession(validLessonIds, validQuestionIds);
+      return { seeded: false, seed_version: SEED_VERSION };
+    }
 
     const lessons = curriculum.lessons.map((lesson) => {
       const existing = lessonMap[lesson.lesson_id];
@@ -282,10 +319,18 @@
       lessons.forEach((lesson) => stores.lessons.put(lesson));
       questions.forEach((question) => stores.questions.put(question));
       items.forEach((item) => stores.vocab_items.put(item));
+      existingLessons.forEach((lesson) => {
+        if (!validLessonIds.has(lesson.lesson_id)) stores.lessons.delete(lesson.lesson_id);
+      });
+      existingQuestions.forEach((question) => {
+        if (!validQuestionIds.has(question.question_id)) stores.questions.delete(question.question_id);
+      });
 
       stores.settings.put({ key: "seed_version", value: SEED_VERSION, updated_at: window.VocabScoring.localIso() });
       stores.settings.put({ key: "course_id", value: COURSE_ID, updated_at: window.VocabScoring.localIso() });
     });
+
+    clearInvalidActiveSession(validLessonIds, validQuestionIds);
 
     return { seeded: true, seed_version: SEED_VERSION };
   }
@@ -310,6 +355,7 @@
     COURSE_ID,
     DB_NAME,
     DB_VERSION,
+    PLAYWRIGHT_SEEDED_FLAG,
     PREF_KEY,
     SEED_VERSION,
     count,

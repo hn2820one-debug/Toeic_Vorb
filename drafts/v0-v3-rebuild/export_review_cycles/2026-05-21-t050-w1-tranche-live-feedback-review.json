@@ -1,0 +1,144 @@
+{
+  "review_id": "export_review_2026_05_21_t050_w1_tranche_live_feedback",
+  "review_date": "2026-05-21",
+  "reviewer": "Codex",
+  "scope": "T050 real learner/export feedback review after W1 tranche reached full production (V2/V3 core 10/10 plus MR 2/2 each)",
+  "wave_or_pack": "W1 tranche milestone: V2-A-71..80 + V2-MR-01/02 + V3-A-121..130 + V3-MR-01/02",
+  "production_seed_changed": false,
+  "production_seed_version": "toeic_vocab_tracker_v2_mr_02_mixed_review_2026_05_21",
+  "production_counts": {
+    "runnable_lessons": 24,
+    "v2_lessons": 12,
+    "v3_lessons": 12,
+    "question_bank_rows": 480
+  },
+  "source_documents": [
+    "Log Download/toeic_vocab_export_2026-05-14_toeic_vocab_export_2026-05-14.json",
+    "docs/wave-retrospectives/2026-05-21-c13-v2-mr-02-promotion-review.md",
+    "docs/wave-retrospectives/2026-05-21-c11-v3-mr-01-02-promotion-review.md",
+    "data/vocab/curriculum.json",
+    "data/vocab/questions_v2a.json",
+    "data/vocab/questions_v3a.json"
+  ],
+  "source_commands": [
+    {
+      "command": "node scripts/validate-vocab-data.js",
+      "status": "passed",
+      "note": "24 lessons / 480 questions."
+    },
+    {
+      "command": "node scripts/check-doc-consistency.js",
+      "status": "passed",
+      "note": "Seed toeic_vocab_tracker_v2_mr_02_mixed_review_2026_05_21; cache toeic-vorb-v22."
+    },
+    {
+      "command": "node scripts/audit-quality-full.js",
+      "status": "passed",
+      "note": "0 blocking issues; 4 mixed-review lessons; 143 non-blocking warnings (stem length + staircase)."
+    },
+    {
+      "command": "export evidence summary against Log Download/toeic_vocab_export_2026-05-14_toeic_vocab_export_2026-05-14.json",
+      "status": "completed",
+      "note": "24 attempts and 1 session found, all for V1-B-21; 0 V2 and 0 V3 attempts found."
+    }
+  ],
+  "export_evidence_summary": {
+    "available_export_package": "Log Download/toeic_vocab_export_2026-05-14_toeic_vocab_export_2026-05-14.json",
+    "available_export_date": "2026-05-14",
+    "attempts_found": 24,
+    "sessions_found": 1,
+    "attempts_by_lesson": {
+      "V1-B-21": 24
+    },
+    "v2_attempts_found": 0,
+    "v3_attempts_found": 0,
+    "current_v2_lessons_with_attempts": [],
+    "current_v3_lessons_with_attempts": [],
+    "verdict": "old_export_not_applicable_to_current_w1_tranche_seed"
+  },
+  "files_reviewed": [
+    {
+      "file": "summary.md",
+      "status": "old_export_only",
+      "evidence": "Existing package is dated 2026-05-14 and predates the current 24-lesson W1 tranche seed."
+    },
+    {
+      "file": "attempts.csv",
+      "status": "not_applicable",
+      "evidence": "Available attempts belong to V1-B-21 only."
+    },
+    {
+      "file": "sessions.csv",
+      "status": "old_export_only",
+      "evidence": "1 session exists in the old export package; it is not a current V2/V3 session."
+    },
+    {
+      "file": "content_quality_summary.json",
+      "status": "reviewed_by_audit",
+      "evidence": "Production quality checked by full audit instead of learner-derived flags."
+    }
+  ],
+  "metrics_reviewed": [
+    {
+      "metric": "attempt_volume",
+      "status": "insufficient_data",
+      "note": "0 attempts found for any current V2 or V3 lesson."
+    },
+    {
+      "metric": "error_code_distribution",
+      "status": "insufficient_data",
+      "note": "No current V2/V3 error logs or attempts exist."
+    },
+    {
+      "metric": "content_quality_flags",
+      "status": "reviewed_by_audit",
+      "note": "Full audit passed with 0 blocking issues; staircase/stem warnings remain non-blocking debt."
+    },
+    {
+      "metric": "stage_readiness",
+      "status": "insufficient_data",
+      "note": "W1 tranche is live, but learner evidence is absent."
+    }
+  ],
+  "findings": [
+    {
+      "area": "learner_evidence",
+      "finding": "No real current V2 or V3 learner attempts or sessions exist in the repo.",
+      "decision": "do_not_rewrite_v2_or_v3_seed"
+    },
+    {
+      "area": "old_export_package",
+      "finding": "The only export package is V1-B-21 from 2026-05-14; it cannot justify changes to the 2026-05-21 W1 tranche seed.",
+      "decision": "record_as_insufficient_data"
+    },
+    {
+      "area": "production_quality",
+      "finding": "The current production seed remains audit-clean at the blocking level with symmetric V2/V3 MR coverage.",
+      "decision": "keep_current_seed"
+    },
+    {
+      "area": "next_content_path",
+      "finding": "With no learner evidence requiring a rewrite, the next content process should start V3-W1-11 (V3-B-131) draft authoring or wait for real learner exports.",
+      "decision": "advance_to_v3_w1_11_authoring"
+    }
+  ],
+  "feedback_actions": [
+    {
+      "target": "docs/Future Plan.md",
+      "action": "Mark W1 tranche complete (24 lessons / 480 rows) and T050 as completed_with_insufficient_learner_data."
+    },
+    {
+      "target": "TO_AI.md",
+      "action": "Record that no V2/V3 live seed rewrite is authorized by current evidence."
+    },
+    {
+      "target": "C-11 V3 wave 6",
+      "action": "Begin V3-W1-11 candidate authoring toward V3-B-131 after governance sign-off."
+    }
+  ],
+  "blocked_on": [
+    "No current V2 or V3 learner sessions or export package exist in the repo."
+  ],
+  "status": "completed_with_insufficient_learner_data",
+  "final_decision": "Keep the W1 tranche seed unchanged. Do not rewrite V2/V3 warning debt without real learner/export evidence. Next content work: V3-W1-11 authoring (業務協調) unless the user supplies a fresh export package first."
+}

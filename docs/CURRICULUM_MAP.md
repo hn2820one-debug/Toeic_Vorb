@@ -1,10 +1,12 @@
 # Curriculum Map
 
-Status: GENERATED FROM CURRENT TOEIC VOCABULARY TRACKER DATA
+Status: HISTORICAL SNAPSHOT FROM THE PRE-CLEAR 2026-05-17 SEED
 
 This document describes Program B only: TOEIC Vocabulary Tracker in `C:\Users\Keith\Toeic\toeic-app-Vorb`. It does not describe the separate Grammar / PoS App.
 
-## Summary (updated 2026-05-17)
+Current production truth now lives in root `TO_AI.md`: the production seed currently has the first rebuilt wave, `V2-A-71`, with 1 runnable lesson and 24 question-bank rows. The lesson and stage listings below are retained as a historical/reference snapshot of the last populated V0-V3 production seed before the full-bank clear and should not be treated as current production counts.
+
+## Historical Summary (snapshot updated 2026-05-17)
 
 - Vocabulary lessons: 193 (was 180)
 - Vocabulary questions: 4,399 (was 4,608 — 826 duplicates replaced, 200 types corrected, V0 consolidated)
@@ -17,7 +19,7 @@ This document describes Program B only: TOEIC Vocabulary Tracker in `C:\Users\Ke
 - Audit: `✅ PASSED` — `node scripts/audit-quality-full.js`
 - Question files: questions_v0.json, questions_v1a.json, questions_v1b.json, questions_v1c.json, questions_v1d.json, questions_v1e.json, questions_v1f.json, questions_v2a.json, questions_v2b.json, questions_v2c.json, questions_v2d.json, questions_v2e.json, questions_v3a.json, questions_v3b.json, questions_v3c.json, questions_v3d.json, questions_v3e.json, questions_v3f.json
 
-## Current Stage Status
+## Historical Stage Status
 
 | stage | stage_name | total_lessons | questions | status |
 |---|---|---:|---:|---|
@@ -29,7 +31,7 @@ This document describes Program B only: TOEIC Vocabulary Tracker in `C:\Users\Ke
 | V5 | False Friends + Speed Reflex | 50 | 0 | planned |
 | V6 | Integrated Review + Seal Test | 40 | 0 | planned |
 
-## Lessons
+## Historical Lesson Listing
 
 | stage | lesson_id | title | type | vocabulary_focus | grammar_link_id | question_count | status | source_file |
 |---|---|---|---|---|---|---:|---|---|

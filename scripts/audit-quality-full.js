@@ -173,6 +173,24 @@ function contextSkeleton(question) {
   return text;
 }
 
+function questionTokens(text) {
+  return String(text || "")
+    .replace(/^[A-Za-z][A-Za-z &/]+:\s+/, "")
+    .match(/[A-Za-z0-9_'’-]+|______+/g) || [];
+}
+
+function questionWordCount(question) {
+  return questionTokens(question?.question_text).length;
+}
+
+function blankRelativePosition(question) {
+  const tokens = questionTokens(question?.question_text);
+  if (tokens.length <= 1) return null;
+  const blankIndex = tokens.findIndex((token) => token.includes("______"));
+  if (blankIndex === -1) return null;
+  return blankIndex / (tokens.length - 1);
+}
+
 function lessonQuestionSequence(lesson) {
   return [
     ...(lesson.question_ids || []).map((id) => questionById.get(id)).filter(Boolean),
@@ -253,6 +271,28 @@ const DEFINITION_IN_STEM_PATTERNS = [
   /,\s+[a-z][^,]{5,40},\s*(V\d|for|in|at|on|by)/i,
   /[\u3400-\u9fff]{2,}/,
 ];
+
+const FORBIDDEN_OPTION_PATTERNS = [
+  /^all of the above\.?$/i,
+  /^none of the above\.?$/i,
+];
+
+const STEM_LENGTH_WARNING_TYPES = new Set([
+  "scene_vocabulary",
+  "collocation",
+  "word_family",
+  "part5_sentence_completion",
+  "formal_phrase"
+]);
+
+const BLANK_POSITION_WARNING_TYPES = new Set([
+  "scene_vocabulary",
+  "collocation",
+  "word_family",
+  "part5_sentence_completion",
+  "speed_drill",
+  "formal_phrase"
+]);
 
 // ── Production manifest and draft leakage checks ─────────────────────────────
 
@@ -335,6 +375,21 @@ for (const q of allQ) {
     if (!value || String(value).trim() === "") {
       addIssue(coreIssues, "answerValidity", "§1.2", q.question_id, q._file, `Empty option text for option ${key}`);
     }
+    if (FORBIDDEN_OPTION_PATTERNS.some((pattern) => pattern.test(String(value).trim()))) {
+      addIssue(coreIssues, "forbiddenOptions", "§1.7", q.question_id, q._file, `Option ${key} uses a forbidden shortcut answer pattern: "${String(value).trim()}"`);
+    }
+  }
+
+  const optionBuckets = new Map();
+  for (const [key, value] of Object.entries(options)) {
+    const normalizedValue = normalize(value);
+    if (!normalizedValue) continue;
+    if (!optionBuckets.has(normalizedValue)) optionBuckets.set(normalizedValue, []);
+    optionBuckets.get(normalizedValue).push(key);
+  }
+  for (const [optionText, keys] of optionBuckets.entries()) {
+    if (keys.length <= 1) continue;
+    addIssue(coreIssues, "optionDuplication", "§1.3", q.question_id, q._file, `Options repeat the same normalized text across ${keys.join("/")}: "${optionText}"`);
   }
 
   const explanation = String(q.explanation_zh || "").trim();
@@ -409,6 +464,20 @@ for (const q of allQ) {
   }
   if (DEFINITION_IN_STEM_PATTERNS.some((pattern) => pattern.test(String(q.question_text || "")))) {
     addIssue(coreIssues, "definitionLeakage", "§1.3", q.question_id, q._file, "Question stem appears to embed a definition or direct clue.");
+  }
+
+  if (STEM_LENGTH_WARNING_TYPES.has(q.type)) {
+    const wordCount = questionWordCount(q);
+    if (wordCount < 15 || wordCount > 25) {
+      addWarning(
+        qualityWarnings,
+        "stemLength",
+        "§1.5",
+        q.question_id,
+        q._file,
+        `Context stem length falls outside the preferred 15-25 word range (${wordCount} words)`
+      );
+    }
   }
 }
 
@@ -764,6 +833,27 @@ for (const lesson of coreLessons.filter((row) => row.stage !== "V1")) {
   }
 }
 
+for (const lesson of coreLessons) {
+  const fillInRows = lessonQuestions(lesson).filter((question) => BLANK_POSITION_WARNING_TYPES.has(question?.type));
+  const blankPositions = fillInRows
+    .map((question) => blankRelativePosition(question))
+    .filter((value) => value !== null);
+
+  if (blankPositions.length < 6) continue;
+
+  const lateBlankCount = blankPositions.filter((value) => value >= 0.75).length;
+  if (lateBlankCount / blankPositions.length < 0.8) continue;
+
+  addWarning(
+    qualityWarnings,
+    "blankPositionBias",
+    "§1.7",
+    lesson.lesson_id,
+    "curriculum.json",
+    `Blank position is overly concentrated near sentence end: ${lateBlankCount}/${blankPositions.length} fill-in rows place the blank in the final quarter of the stem`
+  );
+}
+
 // ── Mixed review audit ───────────────────────────────────────────────────────
 
 let intentionalMixedReviewRefs = 0;
@@ -854,6 +944,8 @@ console.log(`- loaded production questions: ${allQ.length}`);
 console.log(`- duplicate stems: ${countMetric(coreIssues, "duplicateStems")}`);
 console.log(`- required field / format issues: ${countMetric(coreIssues, "requiredFields")}`);
 console.log(`- answer validity issues: ${countMetric(coreIssues, "answerValidity")}`);
+console.log(`- duplicate option text issues: ${countMetric(coreIssues, "optionDuplication")}`);
+console.log(`- forbidden option shortcut issues: ${countMetric(coreIssues, "forbiddenOptions")}`);
 console.log(`- blank check issues: ${countMetric(coreIssues, "blankChecks")}`);
 console.log(`- definition leakage issues: ${countMetric(coreIssues, "definitionLeakage")}`);
 console.log(`- article giveaways: ${countMetric(coreIssues, "articleGiveaways")}`);
@@ -879,6 +971,8 @@ console.log(`- near-template similarity warnings: ${countMetric(qualityWarnings,
 console.log(`- context diversity warnings: ${countMetric(qualityWarnings, "contextDiversity")}`);
 console.log(`- weak distractor warnings: ${countMetric(qualityWarnings, "weakDistractors")}`);
 console.log(`- explanation quality warnings: ${countMetric(qualityWarnings, "explanationHeuristics")}`);
+console.log(`- preferred stem length warnings: ${countMetric(qualityWarnings, "stemLength")}`);
+console.log(`- blank-position concentration warnings: ${countMetric(qualityWarnings, "blankPositionBias")}`);
 console.log(`- staircase progression warnings: ${countMetric(qualityWarnings, "staircaseWeakness")}`);
 console.log(`- review capacity warnings: ${countMetric(qualityWarnings, "reviewCapacity")}`);
 

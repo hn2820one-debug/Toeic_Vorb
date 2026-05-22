@@ -1,6 +1,6 @@
 # Future Plan
 
-更新日期：2026-05-22
+更新日期：2026-05-23
 專案：TOEIC Vocabulary Tracker (Program B)
 範圍：整體程式 + 教學內容 + 使用體驗 + 文檔記錄
 
@@ -22,11 +22,14 @@
 ### Current Progress Snapshot
 
 - Last updated by: Codex
-- Last updated on: 2026-05-22
-- Current focus: `PAGES-01` — GitHub Pages + mobile baseline. Repo-side phases are largely verified, but Phase 10 remains open because the public GitHub Pages deployment is stale and still needs live redeploy plus real-device acceptance. See `docs/pages-mobile-experience-plan.md`.
-- Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`; SW `toeic-vorb-v38`.
-- Current priority rule: 完成 `PAGES-01` 前，不繼續下一個 content promotion，除非使用者明確要求。
-- Blocked on: production V2/V3 rewrites remain blocked until real current learner/export evidence exists (repo export still 2026-05-14 `V1-B-21` only).
+- Last updated on: 2026-05-23
+- Current focus: `PAGES-01` — GitHub Pages + mobile baseline remains the only mainline gate. Repo-side Pages/mobile hardening is effectively at 58/60 phase checkpoints complete; the remaining mainline blockers are public GitHub Pages redeploy drift plus `PAGES-07-06` and `PAGES-10-06` real-device acceptance. `XPLAT-01` is complete, and `SYNC-01` repo-side Phases 1-7 are verified; neither replaces `PAGES-01`. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
+- Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v46`, and `npm run test:all` is green.
+- Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`. `XPLAT-01` added Google Drive manual backup/restore flow without production seed changes.
+- Newly verified: `SYNC-01` repo-side Phases 1-7 are now complete. Phase 1 linkage, Phase 2 repo-side setup, Phase 3 disabled-safe Drive client skeleton, Phase 4 sync payload contract, Phase 5 safe-merge/conflict rules, Phase 6 auto-sync UX/state, and Phase 7 failure-handling/safety are verified in-repo; remaining blockers are external Google Cloud / OAuth authorization setup plus later Phase 8 acceptance coverage. Shipped asset cache is `toeic-vorb-v46`.
+- Current priority rule: 完成 `PAGES-01` 前，不繼續下一個 content promotion，除非使用者明確要求。`SYNC-01` 是 user-requested parallel sync work，不授權任何 content promotion。
+- Blocked on (mainline): 公開 GitHub Pages 部署仍停在舊 seed / 舊 launcher 文案；`PAGES-07-06` 與 `PAGES-10-06` 要在 redeploy 後完成實機驗收。
+- Blocked on (content rewrite): production V2/V3 rewrites remain blocked until real current learner/export evidence exists (repo export still 2026-05-14 `V1-B-21` only).
 - Note: `V3-W1-17` is not in `wave1_app_lesson_draft.json` (wave-1 ends at `V3-W1-16`); do not plan a W1-17 promotion without a new blueprint slice.
 
 ---
@@ -45,6 +48,10 @@
 
 - [ ] Step 0 / PAGES-01：完善 GitHub Pages 與手機端完整體驗。
 	Done when: `docs/pages-mobile-experience-plan.md` 的十階段 60 個 checkpoint 全部完成，最小 mobile smoke test 通過，`npm run test:all` 通過，GitHub Pages 真實 URL 手機驗收清單完成。完成前不要繼續下一個 content promotion，除非使用者明確要求。
+- [x] User-requested parallel / XPLAT-01：Google Drive 手動跨平台備份 / 還原。
+	Done when: `docs/google-drive-record-portability-plan.md` 的 Phase 1-8、Export backup JSON、Import preview、safe merge、文件更新與 backup/restore Playwright 覆蓋完成。這是「使用者指定的非內容 promotion 並行工作」；不取代 `PAGES-01`，不解除 Pages live deployment 剩餘驗收，不修改 `data/vocab/*`，不啟用 V4，也不影響 seed version。
+- [ ] User-requested parallel / SYNC-01：Google Drive 自動跨裝置同步。
+	Done when: `docs/google-drive-cloud-sync-plan.md` 的 Phase 1-8 全部完成，Settings 提供 Google Drive connect/status/sync now/pause/disconnect，同一 Google Drive 帳戶可在至少兩部裝置 safe merge learner records，重複同步不產生重複資料，seed mismatch/corrupt cloud file/token/offline paths 都安全處理，`XPLAT-01` 手動備份仍保留，且 `npm run test:all` 通過。這是使用者指定的 no-login/no-cloud-sync hard rule scoped exception；只允許 Google Identity Services + Google Drive API 作為 local-first learner-record sync layer，不新增後端、不修改 `data/vocab/*`、不啟用 V4、不改 seed version，也不取代 `PAGES-01`。
 - [x] Step 1 / C-10：完成 wave 2（`V2-A-72` 到 `V2-A-74`）候選草稿、isolated validation、人審與正式 promotion，讓 production 由 1 課擴到 4 課。
 	Done when: `V2-A-74` 候選草稿完成，且 `V2-A-72`、`V2-A-73`、`V2-A-74` 一起通過 release gate 並寫入 live seed。
 - [x] Step 2 / D-10：在第一個多課 production wave 之後固定 inventory refresh / monthly reporting 流程，讓 production / draft / rebuild / archive 四桶統計與 current-truth sync 不再靠手動臨時整理。
@@ -56,13 +63,14 @@
 
 ### 本輪完成條件
 
-- [ ] 當 Step 0 / PAGES-01 完成後，才恢復評估下一個 content promotion 或進入「上課流程」手機深度測試。
+- [ ] 當 Step 0 / PAGES-01 完成後，才恢復評估下一個 content promotion 或進入「上課流程」手機深度測試。`XPLAT-01` 與 `SYNC-01` 都是 user-requested parallel portability/sync work，不授權任何 content promotion。
 
 ### 狀態總覽
 
 - [x] 已完成基礎層：C-01..C-09、C-12、U-01..U-06、D-01..D-09、D-11
-- [ ] 目前唯一主線：`PAGES-01` GitHub Pages + mobile baseline（`docs/pages-mobile-experience-plan.md`）
-- [ ] 非主線並行工作：暫不開放；若未來要開平行工作，必須先回寫本節再開始
+- [ ] 目前唯一主線：`PAGES-01` GitHub Pages + mobile baseline（`docs/pages-mobile-experience-plan.md`；repo-side 58/60 checkpoints complete，剩餘 `PAGES-07-06` / `PAGES-10-06` 與 redeploy 後實機驗收）
+- [x] 非主線並行工作：`XPLAT-01` Google Drive 手動跨平台備份 / 還原（使用者指定；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
+- [ ] 非主線並行工作：`SYNC-01` Google Drive 自動跨裝置同步（使用者指定；repo-side Phase 1-7 verified；剩餘 Google Cloud / OAuth live auth 與 Phase 8 acceptance；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
 
 ---
 
@@ -380,6 +388,136 @@ Priority: P2
 
 Completed on: 2026-05-19
 Decision: 清空模式 Banner 由 tracker shell 根據 `state.lessons.length === 0 && state.questions.length === 0` 顯示，覆蓋主要 tracker views。Banner 內容只在 production seed 同時為 0 lessons / 0 questions 時說明 Today / Roadmap / Lesson 的限制，以及 Future Plan、題庫管理、資料匯出入口。提示不可手動關閉，不寫入 localStorage；正式 lesson 與 question seed 恢復後自動消失。Service Worker cache 當時更新為 `toeic-vorb-v10`，C-08 後推進到 `toeic-vorb-v11`，T039 wave 2 promotion 後為 `toeic-vorb-v12`，C-13 wave 3 promotion 後為 `toeic-vorb-v13`，`V2-MR-01` promotion 後為 `toeic-vorb-v14`，wave 4 promotion 後 current cache 為 `toeic-vorb-v15`；測試保留 production-empty banner smoke test 與 seeded fixture 隱藏檢查。
+
+### XPLAT-01 Google Drive 手動跨平台備份 / 還原
+Priority: P1
+重要性: 高
+複雜度: 中
+Execution position: user-requested parallel UX/data-portability work
+
+Scope decision: 這是使用者指定的非內容 promotion 並行工作；不取代 `PAGES-01`，不解除 Pages live deployment 與 real-device acceptance 的剩餘驗收。它不修改 `data/vocab/*`，不啟用 V4，不移動 `drafts/v4/`，不改 seed version，也不新增登入、後端、Google Drive API、cloud sync、build tooling 或 runtime AI。
+
+- [x] 將完整計畫保存為 `docs/google-drive-record-portability-plan.md`。
+- [x] 在 Export 新增 `匯出 Google Drive 備份檔`，產生 `toeic_vocab_backup_YYYY-MM-DD.json`。
+- [x] 備份檔包含 `backup_version`、`app_id`、`seed_version`、`exported_at`、`source_device_label`、summary、learner stores 與 localStorage highlights。
+- [x] 在 Export 新增 `匯入備份檔`，先 preview 再確認 safe merge。
+- [x] Safe merge 只處理 learner records：attempts、sessions、review_queue、error_logs、vocab_items mastery、lesson progress、settings local-first、exports、word_highlights；Question Bank source workflow 不被自動改寫。
+- [x] 相同 keyPath records 去重；本機已有同 ID 時不重複匯入，lesson/mastery 只合併可保留進度的欄位。
+- [x] seed mismatch 只警告，不覆蓋 production seed。
+- [x] 更新 `README.md`、`TO_AI.md`、`docs/使用說明書.md`，說明 Google Drive 只是手動保存位置，不是即時同步。
+- [x] 新增 Playwright backup/restore 覆蓋：builder summary、invalid JSON、duplicate import、seed mismatch、two-device merge、mobile 390x844 操作。
+- [x] 完整 regression gate：`npx playwright test tests/app-pages-click-smoke.spec.ts`、`node scripts/check-doc-consistency.js`、`npm run test:all` 全部通過。
+
+Completed on: 2026-05-22
+Decision: 採「Google Drive 檔案搬運」而不是雲端同步。App 只產生與讀取 JSON，使用者自行把檔案上傳 / 下載到 Google Drive；任何真正同步功能都需要另開架構決策並重新評估 hard rules。
+
+### SYNC-01 Google Drive 自動跨裝置同步
+Priority: P1
+重要性: 高
+複雜度: 高
+Execution position: user-requested parallel UX/data-sync work
+
+Scope decision: 這是使用者指定的 `XPLAT-01` 後續同步計畫；不取代 `PAGES-01`，不解除 Pages live deployment 與 real-device acceptance 的剩餘驗收。`SYNC-01` 是原 no-login / no-cloud-sync hard rule 的 scoped exception，只允許 Google Identity Services + Google Drive API 讀寫同一 Google Drive 帳戶下的 learner-record sync file。它不新增後端、不新增 build tooling、不修改 `data/vocab/*`、不啟用 V4、不移動 `drafts/v4/`、不改 production seed version，也不授權 content promotion。
+
+Phase 1 completed on: 2026-05-23
+
+- [x] 將完整計畫保存為 `docs/google-drive-cloud-sync-plan.md`。
+- [x] 計畫代號固定為 `SYNC-01`。
+- [x] 記錄 `SYNC-01` 是 `XPLAT-01` 手動備份 / 還原之後的真正同步計畫。
+- [x] 記錄 `XPLAT-01` 手動 backup/restore 仍保留為 fallback。
+- [x] 記錄 `PAGES-01` 仍是唯一 mainline gate，且不因 `SYNC-01` 關閉。
+- [x] 記錄 GitHub Pages live deployment 與手機端驗收仍需完成。
+- [x] 記錄本計畫不授權任何 content promotion。
+- [x] 記錄本計畫不修改 `data/vocab/*` production question/curriculum source files。
+- [x] 記錄 V4 仍是 draft-only，不得啟用。
+- [x] 記錄 production seed version 不因計畫階段改變。
+- [x] 記錄 no-login / no-cloud-sync hard rule 的有限例外範圍。
+- [x] 更新 `TO_AI.md`，讓 future handoff 知道 `SYNC-01` 已被使用者批准為 scoped future sync work。
+
+Phase 2 started on: 2026-05-23
+
+- [x] 核對 Phase 1 linkage：`docs/google-drive-cloud-sync-plan.md`、`docs/Future Plan.md`、`TO_AI.md`、README 與 handoff rules 已一致。
+- [x] 新增 `docs/google-drive-oauth-setup.md`，保存 Google Cloud / OAuth personal testing 設定 checklist。
+- [x] 在 OAuth setup checklist 記錄 required origins：Playwright `127.0.0.1:3000`、manual local `127.0.0.1:8787`、GitHub Pages origin `https://hn2820one-debug.github.io`。
+- [x] 新增 `js/google-drive-sync-config.js`，以空 `clientId` 與 `isConfigured: false` 作為 disabled-safe placeholder。
+- [x] 記錄 `drive.file` scope、Drive folder name、sync filename 與 token memory-only policy。
+- [x] 記錄官方 Google Identity Services / Drive API 文件來源。
+- [x] Settings 已覆蓋 Drive Sync 未設定狀態，以及 client ID 已設定但尚未連接時的 disconnected 狀態。
+- [x] `tests/google-drive-sync.spec.ts` 覆蓋 configured client ID、no client secret、Settings disconnected controls、pre-token Drive API rejection 不載入 GIS script。
+- [ ] 使用者在 Google Cloud Console 確認 project。
+- [ ] 使用者啟用 Google Drive API。
+- [ ] 使用者設定 OAuth consent screen / Google Auth Platform。
+- [x] 使用者建立 Web OAuth Client ID 並填入 `js/google-drive-sync-config.js`；下載 JSON 內的 client secret 沒有複製到 repo。
+
+Phase 3 started on: 2026-05-23
+
+- [x] 新增 `js/google-drive-sync-client.js`，不改 build tooling，以 browser global 提供 Drive auth/API client。
+- [x] `tracker.html` 載入 `js/google-drive-sync-config.js` 與 `js/google-drive-sync-client.js`。
+- [x] Google Identity Services 只在 connect/token path 被要求時才載入；token 前 Drive API rejection 不載入外部 script。
+- [x] Drive client 提供 connect / disconnect / in-memory token clear。
+- [x] Drive client 提供 find/create sync folder、find/create sync file、download state、upload state 的 REST API methods。
+- [x] Drive client 透過 status object 回報 unavailable / disconnected / connecting / connected / reconnect_required / error。
+- [x] Settings 暴露初步 Drive Sync panel；full auto sync UX 已於 Phase 6 repo-side 開始。
+- [x] 因新增 shipped JS assets，service worker cache 推進到 `toeic-vorb-v40`，並同步 Pages smoke expectation。
+- [ ] 在 Drive API、OAuth consent/test-user access 與 local authorized origins 確認後，使用真實 Web OAuth Client ID 驗證 live Google authorization。
+
+Phase 4 verified on: 2026-05-23
+
+- [x] 新增 `js/google-drive-sync-data.js`，負責 sync payload build / validate / summary / local device ID。
+- [x] Payload 固定包含 `sync_version`、`app_id`、`seed_version`、`updated_at`、`device_id`、`last_writer_device_id`、summary、learner stores 與 localStorage block。
+- [x] `device_id` 使用 localStorage `toeic_vocab_drive_sync_device_id` 持久保存，不依賴 Google identity。
+- [x] Learner stores 只包含 users/settings/lessons/vocab_items/attempts/sessions/error_logs/review_queue/exports/word_highlights。
+- [x] Payload validator 禁止 `stores.questions`、`stores.curriculum`、`stores.question_edits`，避免 Drive sync 改寫 production source workflow。
+- [x] Drive client 建立初始 sync file 時改用 P4 payload builder。
+- [x] Drive client 下載 cloud state 後會先 validate，invalid state 不會被接受。
+- [x] Drive client 上傳 sync state 前會先 validate payload，invalid state 不會寫入 Drive。
+- [x] `tests/google-drive-sync.spec.ts` 補 payload shape、device ID persistence、validator rejection 覆蓋。
+- [x] 因新增 shipped JS asset 並填入 Web OAuth client ID，service worker cache 曾推進到 `toeic-vorb-v42`。
+
+Phase 5 verified on: 2026-05-23
+
+- [x] 新增 `GoogleDriveSyncData.analyzeMerge(payload)`，可預覽 safe merge plan、seed mismatch warning、add/merge/skip/blocked totals。
+- [x] 新增 `GoogleDriveSyncData.mergePayload(payload)`，只合併 learner records。
+- [x] `attempts`、`sessions`、`error_logs`、`exports` 依 keyPath 去重，只新增本機缺少的 records。
+- [x] `review_queue` 依 `review_id` 去重；相同 ID 保留較早 due/retry date、較高 priority / retry count、pending / repeated_error 等較安全狀態。
+- [x] `vocab_items` 只合併 mastery/progress 欄位；本機不存在的 cloud vocab item 會 blocked，不匯入 seed metadata。
+- [x] `lessons` 只合併 progress/status 欄位；本機不存在的 cloud lesson 會 blocked，不匯入 curriculum metadata。
+- [x] `settings` 採本機優先；既有 settings 不被 cloud 覆蓋，`seed_version` / `course_id` 不匯入。
+- [x] localStorage preferences 採本機優先，但可補入本機沒有的 cloud preference key。
+- [x] `word_highlights` 依 `highlight_id` 或 fallback key 去重合併。
+- [x] seed mismatch 只回傳 warning，不修改 production seed 或 `settings.seed_version`。
+- [x] 同一份 cloud state 重複 merge 不會重複新增 attempts/sessions/error_logs/review_queue/word_highlights。
+- [x] Settings `Sync now` 改為 download -> validate -> safe merge -> rebuild local payload -> upload merged state。
+- [x] `tests/google-drive-sync.spec.ts` 覆蓋 idempotent merge、metadata preservation、seed mismatch warning、invalid payload 不改本機資料、invalid upload before Drive write。
+- [x] 因 P5 shipped JS asset 變更，service worker cache 曾推進到 `toeic-vorb-v43`。
+
+Phase 6 verified on: 2026-05-23
+
+- [x] Settings Drive Sync panel 顯示 status、Drive folder、sync filename、token storage。
+- [x] Settings 顯示 last successful sync、pending local changes、pending reasons。
+- [x] Settings 新增 auto-sync enabled/paused toggle。
+- [x] Settings 顯示背景同步限制：app 關閉時不執行，token 只在記憶體內保存，重開後需重新連接。
+- [x] `GoogleDriveSyncData` 新增 auto-sync metadata helpers：enabled、pending count/reasons、last attempt、last success、last error。
+- [x] 手動 `Sync now` 會記錄 attempt/success/failure metadata；成功 upload 後清除 pending markers。
+- [x] auto sync 只在 enabled、browser online、Drive client connected、且有 memory token 時執行。
+- [x] app start 會在 auto sync enabled 且 token valid 時排程 pull/merge/upload。
+- [x] browser 回到 online 時，若有 pending changes 且 auto sync enabled，會排程 retry。
+- [x] lesson completion、review completion、settings changes、word highlight changes 會標記 pending local changes 並在 connected 時排程 auto sync。
+- [x] `tests/google-drive-sync.spec.ts` 覆蓋 Phase 6 Settings UX、pending markers、connected-only scheduler、upload 後清除 pending。
+- [x] 因 P6 shipped JS asset 變更，service worker cache 推進到 `toeic-vorb-v44`。
+
+Phase 7 verified on: 2026-05-23
+
+- [x] retryable Drive API failure（`429` / `500` / `502` / `503` / `504`）會先做 backoff retry，不會立刻把 client 打成永久錯誤狀態。
+- [x] `401` / `403` 會清掉 memory token，並把 Settings 狀態切到 reconnect required。
+- [x] retryable 失敗會保留 pending local changes，讓 auto sync 可在後續 backoff 或重新連線後繼續重試。
+- [x] 舊版 `sync_version` 會給 compatibility warning，未來不支援版本會在 merge 前被阻擋。
+- [x] duplicate sync file 候選現在會優先選最新的 app-created 檔案，而不是任意第一個結果。
+- [x] upload 前會先 re-read cloud `modifiedTime`；若準備期間雲端檔案變更，會安全 re-merge 一次後再重試 upload。
+- [x] `tests/google-drive-sync.spec.ts` 新增 P7 failure-path 覆蓋：reconnect-required、retryable backoff、sync-version compatibility、duplicate file selection、upload conflict、one-shot re-merge。
+- [x] 因 P7 shipped JS asset 變更，service worker cache 推進到 `toeic-vorb-v46`。
+
+Blocked on: confirming Google Cloud project, Drive API enablement, OAuth consent/test-user access, adding the missing local authorized origins, and live browser authorization validation. Phase 8 acceptance tests remain open in `docs/google-drive-cloud-sync-plan.md`.
 
 ---
 

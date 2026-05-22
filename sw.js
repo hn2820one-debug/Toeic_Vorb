@@ -2,7 +2,8 @@
 // This SW only caches Vocabulary Tracker assets.
 // It does NOT cache Grammar / PoS App files.
 
-const CACHE_NAME = "toeic-vorb-v9";
+// Advance CACHE_NAME only when a deployed asset or production seed changes.
+const CACHE_NAME = "toeic-vorb-v46";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -13,6 +14,9 @@ const STATIC_ASSETS = [
   "./css/tracker.css",
   "./js/vocab-db.js",
   "./js/vocab-scoring.js",
+  "./js/google-drive-sync-config.js",
+  "./js/google-drive-sync-data.js",
+  "./js/google-drive-sync-client.js",
   "./js/state.js",
   "./js/vocab-tracker.js",
   "./js/views/today.js",
@@ -25,6 +29,7 @@ const STATIC_ASSETS = [
   "./js/views/mastery.js",
   "./data/vocab/curriculum.json",
   "./data/vocab/vocab_items.json",
+  "./data/vocab/grammar_links.json",
   "./data/vocab/questions_v0.json",
   "./data/vocab/questions_v1a.json",
   "./data/vocab/questions_v1b.json",
@@ -69,23 +74,45 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+function isVocabDataRequest(requestUrl) {
+  return requestUrl.origin === self.location.origin
+    && /\/data\/vocab\/.+\.json$/i.test(requestUrl.pathname);
+}
+
+function fetchAndCache(request) {
+  return caches.open(CACHE_NAME).then((cache) =>
+    fetch(request).then((response) => {
+      if (response && response.status === 200 && response.type === "basic") {
+        cache.put(request, response.clone());
+      }
+      return response;
+    })
+  );
+}
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const requestUrl = new URL(event.request.url);
 
-  // Stale-while-revalidate: serve cache immediately, update cache in background.
-  const cacheUpdate = caches.open(CACHE_NAME).then((cache) =>
-    fetch(event.request)
-      .then((response) => {
-        if (response && response.status === 200 && response.type === "basic") {
-          cache.put(event.request, response.clone());
-        }
-        return response;
-      })
-      .catch(() => null)
-  );
+  if (requestUrl.origin !== self.location.origin) return;
+
+  if (isVocabDataRequest(requestUrl)) {
+    // Network-first for live vocab data reduces stale curriculum/question payloads when online.
+    event.respondWith(
+      fetchAndCache(event.request).catch(() =>
+        caches.match(event.request).then((cached) => cached || Response.error())
+      )
+    );
+    return;
+  }
+
+  // Stale-while-revalidate for shell assets keeps launcher/tracker responsive.
+  const cacheUpdate = fetchAndCache(event.request).catch(() => null);
 
   event.respondWith(
-    caches.match(event.request).then((cached) => cached || cacheUpdate)
+    caches.match(event.request).then((cached) => (
+      cached || cacheUpdate.then((response) => response || Response.error())
+    ))
   );
 
   // Keep SW alive until background cache update completes.

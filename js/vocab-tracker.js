@@ -35,7 +35,9 @@ import {
   speedTimeoutCurrent,
   SPEED_TIME_LIMIT,
   isSpeedSession,
-  addItemToReview
+  addItemToReview,
+  captureLessonHighlight,
+  removeLessonHighlight
 } from "./views/lesson.js";
 import {
   configureMistakesView,
@@ -49,7 +51,13 @@ import {
   configureExportView,
   renderExport,
   exportPackage,
-  downloadExportFile
+  downloadExportFile,
+  exportGoogleDriveBackup,
+  previewGoogleDriveBackup,
+  mergeGoogleDriveBackup,
+  buildGoogleDriveBackupPayload,
+  analyzeGoogleDriveBackupPayload,
+  mergeGoogleDriveBackupPayload
 } from "./views/export.js";
 import {
   configureBankView,
@@ -71,21 +79,121 @@ import {
   renderSettings,
   saveSettings,
   clearActiveSession,
+  connectGoogleDrive,
+  disconnectGoogleDrive,
+  performGoogleDriveSync,
+  setGoogleDriveAutoSync,
+  syncGoogleDriveNow,
   changeLessonStatus
 } from "./views/settings.js";
 
 (function () {
   let deferredInstallPrompt = null;
+  let driveAutoSyncTimer = null;
+  let driveAutoSyncInFlight = false;
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredInstallPrompt = e;
   });
 
+  function driveAutoSyncState() {
+    return window.GoogleDriveSyncData?.getAutoSyncState?.() || { enabled: false, pending: false };
+  }
+
+  function driveClientStatus() {
+    return window.GoogleDriveSyncClient?.getStatus?.() || { state: "unavailable", connected: false, hasToken: false };
+  }
+
+  function canRunGoogleDriveAutoSync() {
+    const auto = driveAutoSyncState();
+    const status = driveClientStatus();
+    return Boolean(auto.enabled && status.state === "connected" && status.connected && status.hasToken && navigator.onLine !== false);
+  }
+
+  function isRetryableGoogleDriveError(error) {
+    return Boolean(error?.retryable || [
+      "DRIVE_SYNC_OFFLINE",
+      "DRIVE_SYNC_NETWORK_ERROR",
+      "DRIVE_SYNC_RETRYABLE"
+    ].includes(error?.code));
+  }
+
+  function googleDriveRetryDelayMs(error) {
+    const retryAfterMs = Number(error?.retryAfterMs);
+    if (Number.isFinite(retryAfterMs) && retryAfterMs > 0) {
+      return Math.min(60000, Math.max(1000, retryAfterMs));
+    }
+    return 15000;
+  }
+
+  async function runGoogleDriveAutoSync(reason = "auto") {
+    if (driveAutoSyncInFlight || !canRunGoogleDriveAutoSync()) {
+      return { skipped: true, reason };
+    }
+    driveAutoSyncInFlight = true;
+    try {
+      const result = await performGoogleDriveSync({ reason });
+      if (state.view === "settings") render();
+      return { skipped: false, reason, result };
+    } catch (error) {
+      const auto = driveAutoSyncState();
+      const retryScheduled = isRetryableGoogleDriveError(error) && auto.enabled && auto.pending
+        ? scheduleGoogleDriveAutoSync("auto_retry_backoff", { mark: false, delayMs: googleDriveRetryDelayMs(error) }).scheduled
+        : false;
+      if (state.view === "settings") {
+        const message = error.message || "Google Drive auto sync failed.";
+        setNotice(retryScheduled ? `${message} 系統會稍後自動重試。` : message, "warn");
+        render();
+      }
+      return {
+        skipped: true,
+        reason,
+        error: error.message || String(error),
+        retryScheduled
+      };
+    } finally {
+      driveAutoSyncInFlight = false;
+    }
+  }
+
+  function scheduleGoogleDriveAutoSync(reason = "local_change", options = {}) {
+    const shouldMark = options.mark !== false;
+    const delayMs = Number.isFinite(Number(options.delayMs)) ? Number(options.delayMs) : 1500;
+    const auto = shouldMark
+      ? window.GoogleDriveSyncData?.markLocalChange?.(reason)
+      : driveAutoSyncState();
+    if (driveAutoSyncTimer) {
+      clearTimeout(driveAutoSyncTimer);
+      driveAutoSyncTimer = null;
+    }
+    if (!auto?.enabled || !canRunGoogleDriveAutoSync()) return { scheduled: false, auto };
+    driveAutoSyncTimer = setTimeout(() => {
+      driveAutoSyncTimer = null;
+      runGoogleDriveAutoSync(reason);
+    }, Math.max(0, delayMs));
+    return { scheduled: true, auto };
+  }
+
+  function markGoogleDriveLocalChange(reason = "local_change") {
+    return scheduleGoogleDriveAutoSync(reason, { mark: true });
+  }
+
+  window.addEventListener("online", () => {
+    const auto = driveAutoSyncState();
+    if (auto.enabled && auto.pending) {
+      scheduleGoogleDriveAutoSync("online_retry", { mark: false, delayMs: 1000 });
+    }
+  });
+
   function renderShell() {
     const completed = state.lessons.filter((lesson) => PASS_STATUSES.has(lesson.status)).length;
-    const total = state.lessons.length || 1;
+    const total = state.lessons.length;
+    const questionTotal = state.questions.length;
+    const isEmptyProductionSeed = total === 0 && questionTotal === 0;
     const lesson = currentLesson();
-    $("top-strip").textContent = `TOEIC 單字追蹤器｜已完成 ${completed}/${total} 課｜目前課程：${lesson?.lesson_id || "-"}｜本機優先 IndexedDB`;
+    const progressLabel = total ? `已完成 ${completed}/${total} 課` : "目前沒有正式課程";
+    const lessonLabel = lesson?.lesson_id || (total ? "-" : "重建中");
+    $("top-strip").textContent = `TOEIC 單字追蹤器｜${progressLabel}｜目前課程：${lessonLabel}｜本機優先 IndexedDB`;
 
     const tabs = [
       ["today", "今日"],
@@ -93,11 +201,32 @@ import {
       ["lesson", "課程"],
       ["mistakes", "複習"],
       ["mastery", "精熟度"],
+      ["export", "匯出"],
+      ["bank", "題庫"],
       ["settings", "設定"]
     ];
     $("tracker-tabs").innerHTML = tabs.map(([id, label]) => (
       `<button class="tracker-tab ${state.view === id ? "active" : ""}" type="button" onclick="VocabTracker.setView('${id}')">${html(label)}</button>`
     )).join("");
+
+    const banner = $("empty-seed-banner");
+    if (banner) {
+      banner.hidden = !isEmptyProductionSeed;
+      banner.innerHTML = isEmptyProductionSeed ? `
+        <aside class="empty-seed-banner" data-testid="empty-seed-banner" aria-label="Production seed 清空狀態">
+          <div class="empty-seed-banner-copy">
+            <strong>正式課程重建中</strong>
+            <p>production seed 目前為空：0 lessons / 0 questions。Today、Roadmap 與 Lesson 不會提供可開始的正式課程；既有 IndexedDB 學習資料、Export、Mastery、Mistakes 與 Question Bank 仍可使用。</p>
+            <small>此提示不可手動關閉，會在正式 lesson 與 question seed 恢復後自動消失。</small>
+          </div>
+          <div class="empty-seed-banner-actions" aria-label="清空模式下一步">
+            <button class="button primary small" type="button" onclick="VocabTracker.setView('roadmap')">查看課程地圖</button>
+              <button class="button secondary small" type="button" onclick="VocabTracker.setView('export')">匯出完整資料封包</button>
+              <button class="button secondary small" type="button" onclick="VocabTracker.setView('bank')">題庫管理</button>
+          </div>
+        </aside>
+      ` : "";
+    }
   }
 
   function stopTicker() {
@@ -244,6 +373,7 @@ import {
         await prepareRuntime(active.lesson_id, active);
       }
       render();
+      scheduleGoogleDriveAutoSync("app_start", { mark: false, delayMs: 0 });
       if (seed.seeded) setNotice("Seeded V0-V3 curriculum and question bank into IndexedDB.", "ok");
     } catch (err) {
       console.error(err);
@@ -286,14 +416,27 @@ import {
     confirmSessionErrors,
     confirmCurrentAnswer,
     confirmStartLesson,
+    connectGoogleDrive,
+    captureLessonHighlight,
     deleteSelectedQuestion,
+    disconnectGoogleDrive,
     downloadExportFile,
     downloadSeedJson,
     exitLesson,
     exportPackage,
+    exportGoogleDriveBackup,
     exportLocalEditsPatch,
     exportQuestions,
     finishLesson,
+    previewGoogleDriveBackup,
+    mergeGoogleDriveBackup,
+    analyzeGoogleDriveSyncPayload: (payload) => window.GoogleDriveSyncData.analyzeMerge(payload),
+    buildGoogleDriveBackupPayload,
+    buildGoogleDriveSyncPayload: () => window.GoogleDriveSyncData.buildPayload(),
+    analyzeGoogleDriveBackupPayload,
+    mergeGoogleDriveBackupPayload,
+    mergeGoogleDriveSyncPayload: (payload) => window.GoogleDriveSyncData.mergePayload(payload),
+    validateGoogleDriveSyncPayload: (payload) => window.GoogleDriveSyncData.validatePayload(payload),
     importQuestions,
     init,
     loadMoreBankQuestions,
@@ -301,9 +444,12 @@ import {
     newQuestionTemplate,
     nextQuestion,
     previousQuestion,
+    performGoogleDriveSync,
+    removeLessonHighlight,
     saveQuestionFromEditor,
     saveSettings,
     selectQuestion,
+    setGoogleDriveAutoSync,
     setBankFilter,
     setMasteryFilter,
     setRoadmapFilter,
@@ -312,6 +458,10 @@ import {
     startLesson,
     startReviewMode,
     setReviewFilter,
+    markGoogleDriveLocalChange,
+    runGoogleDriveAutoSync,
+    scheduleGoogleDriveAutoSync,
+    syncGoogleDriveNow,
     togglePause,
     triggerInstall,
     dismissInstall,

@@ -1,0 +1,1463 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w2_01_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-137",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w2-01-current-isolated-audit",
+    "isolated_audit_scope": "32 lessons / 642 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_136_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 12 candidate: first wave-2 core lesson V3-W2-01 (人事與組織 搭配詞 3, 6 targets).",
+    "Q10 reuses v3_a_136_rv_024 (fall in with) for cross-lesson pressure.",
+    "Promotion target lesson id: V3-A-137."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W2-01",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 137,
+    "title": "人事與組織 搭配詞 3",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "人事與組織",
+    "target_items": [
+      "item_coll_in_charge_of",
+      "item_coll_lay_off",
+      "item_coll_get_along_with",
+      "item_coll_report_to",
+      "item_coll_belong_to",
+      "item_coll_adapt_to"
+    ],
+    "draft_metadata": {
+      "wave": 2,
+      "source_blueprint_lesson_id": "draft_coll_w2_01",
+      "topic_lesson_index": 3,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 3,
+        "C": 1
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w2_01_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_136_rv_024"
+      ],
+      "production_seed_change": false
+    },
+    "question_ids": [
+      "V3-W2-01_Q01",
+      "V3-W2-01_Q02",
+      "V3-W2-01_Q03",
+      "V3-W2-01_Q04",
+      "V3-W2-01_Q05",
+      "V3-W2-01_Q06",
+      "V3-W2-01_Q07",
+      "V3-W2-01_Q08",
+      "V3-W2-01_Q09",
+      "v3_a_136_rv_024",
+      "V3-W2-01_Q11",
+      "V3-W2-01_Q12",
+      "V3-W2-01_Q13",
+      "V3-W2-01_Q14",
+      "V3-W2-01_Q15",
+      "V3-W2-01_Q16",
+      "V3-W2-01_Q17",
+      "V3-W2-01_Q18",
+      "V3-W2-01_Q19",
+      "V3-W2-01_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W2-01_R01",
+      "V3-W2-01_R02",
+      "V3-W2-01_R03",
+      "V3-W2-01_R04"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "V3-W2-01_Q01",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Ms. Ortiz is ______ the regional training program until a permanent director is hired.",
+      "options": {
+        "A": "in charge of",
+        "B": "in charge for",
+        "C": "in charge at",
+        "D": "in charge on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "in charge of 負責；主管；語境需要負責，故用 in charge of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_charge_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "in charge of",
+        "gloss_zh": "負責；主管",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in charge of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q02",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Who will be ______ payroll processing while the HR manager is on leave?",
+      "options": {
+        "A": "in charge of",
+        "B": "in charge for",
+        "C": "in charge at",
+        "D": "in charge on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "in charge of 負責；主管；語境需要負責，故用 in charge of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_charge_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "in charge of",
+        "gloss_zh": "負責；主管",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in charge of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q03",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The plant may ______ twenty assembly workers after orders fell sharply.",
+      "options": {
+        "A": "lay off",
+        "B": "lay in",
+        "C": "lay on",
+        "D": "lay over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "lay off 裁員；語境需要裁員，故用 lay off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "lay off",
+        "gloss_zh": "裁員",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q04",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Executives warned that the company might ______ temporary staff in Q3.",
+      "options": {
+        "A": "lay off",
+        "B": "lay in",
+        "C": "lay on",
+        "D": "lay over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "lay off 裁員；語境需要裁員，故用 lay off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "lay off",
+        "gloss_zh": "裁員",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q05",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "New supervisors are encouraged to ______ colleagues from other departments.",
+      "options": {
+        "A": "get along with",
+        "B": "get along for",
+        "C": "get along at",
+        "D": "get along on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "get along with 與…相處融洽；語境需要與…相處融洽，故用 get along with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_get_along_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "get along with",
+        "gloss_zh": "與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "get along with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q06",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The mediator helped the two teams ______ each other during the merger.",
+      "options": {
+        "A": "get along with",
+        "B": "get along for",
+        "C": "get along at",
+        "D": "get along on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "get along with 與…相處融洽；語境需要與…相處融洽，故用 get along with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_get_along_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "get along with",
+        "gloss_zh": "與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "get along with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q07",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "All field technicians now ______ the operations director instead of the site lead.",
+      "options": {
+        "A": "report for",
+        "B": "report to",
+        "C": "report at",
+        "D": "report on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "report to 向…報告；語境需要向…報告，故用 report to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_report_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "report to",
+        "gloss_zh": "向…報告",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "report to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q08",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Interns must ______ the compliance officer during their first month.",
+      "options": {
+        "A": "report for",
+        "B": "report to",
+        "C": "report at",
+        "D": "report on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "report to 向…報告；語境需要向…報告，故用 report to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_report_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "report to",
+        "gloss_zh": "向…報告",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "report to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q09",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "These archived personnel files ______ the human resources department only.",
+      "options": {
+        "A": "belong for",
+        "B": "belong to",
+        "C": "belong at",
+        "D": "belong on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "belong to 屬於；語境需要屬於，故用 belong to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_belong_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "belong to",
+        "gloss_zh": "屬於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "belong to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q11",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Returning employees need coaching to ______ the updated performance review system.",
+      "options": {
+        "A": "adapt for",
+        "B": "adapt to",
+        "C": "adapt with",
+        "D": "adapt at"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "adapt to 適應；語境需要適應，故用 adapt to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adapt_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "adapt to",
+        "gloss_zh": "適應",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adapt to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q12",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Contract analysts ______ the finance controller for weekly budget updates.",
+      "options": {
+        "A": "report for",
+        "B": "report to",
+        "C": "report at",
+        "D": "report on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "report to 向…報告；語境需要向…報告，故用 report to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_report_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "report to",
+        "gloss_zh": "向…報告",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "report to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q13",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The company reorganized its customer-support units last spring. Until a new VP arrives, Ms. Park will be ______ onboarding and quality reviews. Team leads received updated escalation charts yesterday.",
+      "options": {
+        "A": "in charge for",
+        "B": "in charge of",
+        "C": "in charge at",
+        "D": "in charge on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "in charge of 負責；主管；語境要求負責，故用 in charge of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_charge_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "in charge of",
+        "gloss_zh": "負責；主管",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in charge of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q14",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Falling export orders forced the board to revise its staffing plan. Management may ______ night-shift crews at two plants next month. Union representatives requested advance notice of any headcount changes.",
+      "options": {
+        "A": "lay in",
+        "B": "lay on",
+        "C": "lay off",
+        "D": "lay over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "lay off 裁員；語境要求裁員，故用 lay off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "lay off",
+        "gloss_zh": "裁員",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q15",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The cross-functional task force included staff from sales, logistics, and finance. Workshop facilitators coached members to ______ partners they rarely met before the project. Peer feedback scores improved after the second session.",
+      "options": {
+        "A": "get along for",
+        "B": "get along at",
+        "C": "get along with",
+        "D": "get along on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "get along with 與…相處融洽；語境要求與…相處融洽，故用 get along with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_get_along_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "get along with",
+        "gloss_zh": "與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "get along with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q16",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "After the matrix restructure, regional coordinators no longer reported to country managers. They now ______ the global operations office for staffing approvals. The policy took effect at the start of the fiscal year.",
+      "options": {
+        "A": "report for",
+        "B": "report at",
+        "C": "report to",
+        "D": "report on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "report to 向…報告；語境要求向…報告，故用 report to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_report_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "report to",
+        "gloss_zh": "向…報告",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "report to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q17",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The deputy will be ______ benefits enrollment while the director attends the conference.",
+      "options": {
+        "A": "in charge for",
+        "B": "in charge at",
+        "C": "in charge of",
+        "D": "in charge on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "in charge of 負責；主管；語境需要負責，故用 in charge of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_charge_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "in charge of",
+        "gloss_zh": "負責；主管",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in charge of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q18",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Auditors reviewed equipment tagged after the warehouse move. Several barcode scanners still ______ the maintenance budget code instead of logistics. Finance asked facilities to relabel the assets by Friday.",
+      "options": {
+        "A": "belong for",
+        "B": "belong at",
+        "C": "belong to",
+        "D": "belong on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "belong to 屬於；語境要求屬於，故用 belong to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_belong_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "belong to",
+        "gloss_zh": "屬於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "belong to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q19",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Teams must ______ new safety drills before the inspection next week.",
+      "options": {
+        "A": "adapt for",
+        "B": "adapt with",
+        "C": "adapt to",
+        "D": "adapt at"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "adapt to 適應；語境需要適應，故用 adapt to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adapt_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "adapt to",
+        "gloss_zh": "適應",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adapt to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_Q20",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Safety vests stored in the lobby ______ the facilities department, not individual teams.",
+      "options": {
+        "A": "belong for",
+        "B": "belong at",
+        "C": "belong on",
+        "D": "belong to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "belong to 屬於；語境需要屬於，故用 belong to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_belong_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "belong to",
+        "gloss_zh": "屬於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "belong to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_R01",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Returning employees need coaching to ______ the updated performance review system.",
+      "options": {
+        "A": "adapt for",
+        "B": "adapt with",
+        "C": "adapt at",
+        "D": "adapt to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "adapt to 適應；語境需要適應，故用 adapt to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adapt_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "adapt to",
+        "gloss_zh": "適應",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adapt to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_R02",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The retailer had to ______ part-time cashiers after the holiday season.",
+      "options": {
+        "A": "lay in",
+        "B": "lay on",
+        "C": "lay over",
+        "D": "lay off"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "lay off 裁員；語境需要裁員，故用 lay off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "lay off",
+        "gloss_zh": "裁員",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_R03",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The mentor helped interns ______ senior engineers during lunch rotations.",
+      "options": {
+        "A": "get along for",
+        "B": "get along at",
+        "C": "get along on",
+        "D": "get along with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "get along with 與…相處融洽；語境需要與…相處融洽，故用 get along with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_get_along_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "get along with",
+        "gloss_zh": "與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "get along with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-01_R04",
+      "lesson_id": "V3-W2-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "He is temporarily ______ vendor negotiations during the acquisition.",
+      "options": {
+        "A": "in charge for",
+        "B": "in charge at",
+        "C": "in charge on",
+        "D": "in charge of"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "in charge of 負責；主管；語境需要負責，故用 in charge of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_charge_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-01",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_01",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 3",
+        "source_phrase": "in charge of",
+        "gloss_zh": "負責；主管",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in charge of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave12_candidate",
+        "authored_slice_lesson_id": "V3-W2-01",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_in_charge_of",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-01",
+      "lesson_ids": [
+        "V3-W2-01"
+      ],
+      "base_word": "in charge of",
+      "variants": [
+        "in charge of"
+      ],
+      "chinese": "負責",
+      "example": "The HR team will in charge of the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "in charge of",
+        "gloss_zh": "負責；主管",
+        "source_lessons": [
+          "V3-W2-01"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave12_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_lay_off",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-01",
+      "lesson_ids": [
+        "V3-W2-01"
+      ],
+      "base_word": "lay off",
+      "variants": [
+        "lay off"
+      ],
+      "chinese": "裁員",
+      "example": "The HR team will lay off the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "lay off",
+        "gloss_zh": "裁員",
+        "source_lessons": [
+          "V3-W2-01"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave12_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_get_along_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-01",
+      "lesson_ids": [
+        "V3-W2-01"
+      ],
+      "base_word": "get along with",
+      "variants": [
+        "get along with"
+      ],
+      "chinese": "與…相處融洽",
+      "example": "The HR team will get along with the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "get along with",
+        "gloss_zh": "與…相處融洽",
+        "source_lessons": [
+          "V3-W2-01"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave12_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_report_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-01",
+      "lesson_ids": [
+        "V3-W2-01"
+      ],
+      "base_word": "report to",
+      "variants": [
+        "report to"
+      ],
+      "chinese": "向…報告",
+      "example": "The HR team will report to the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "report to",
+        "gloss_zh": "向…報告",
+        "source_lessons": [
+          "V3-W2-01"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave12_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_belong_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-01",
+      "lesson_ids": [
+        "V3-W2-01"
+      ],
+      "base_word": "belong to",
+      "variants": [
+        "belong to"
+      ],
+      "chinese": "屬於",
+      "example": "The HR team will belong to the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "belong to",
+        "gloss_zh": "屬於",
+        "source_lessons": [
+          "V3-W2-01"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave12_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_adapt_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-01",
+      "lesson_ids": [
+        "V3-W2-01"
+      ],
+      "base_word": "adapt to",
+      "variants": [
+        "adapt to"
+      ],
+      "chinese": "適應",
+      "example": "The HR team will adapt to the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "adapt to",
+        "gloss_zh": "適應",
+        "source_lessons": [
+          "V3-W2-01"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave12_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w2_01_wave_12_2026_05_21",
+  "promoted_lesson_id": "V3-A-137"
+}

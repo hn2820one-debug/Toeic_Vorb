@@ -4,6 +4,8 @@ Status: CURRENT REVIEW DOCUMENT
 
 This document defines the desired export format for ChatGPT analysis and notes the current implementation status.
 
+C-06 governance note: after content updates, export evidence must be reviewed through `docs/export-analysis-feedback-governance.md`. The machine-readable review policy is `drafts/v0-v3-rebuild/export_analysis_review_policy.json`, and the verifier is `npm run test:export-governance`.
+
 ## Export Package
 
 Target folder name:
@@ -26,11 +28,52 @@ question_bank_snapshot.json
 raw_events.jsonl
 ```
 
+Current generated review files also include:
+
+```text
+report.md
+lesson_recommendations.md
+diagnostic_recommendation.json
+content_quality_summary.json
+attempts.json
+attempts.jsonl
+sessions.json
+mastery.json
+review_queue.json
+word_highlights.csv
+word_highlights.json
+error_logs.json
+error_summary.json
+speed_summary.json
+review_effectiveness.json
+stage_seal_readiness.json
+word_highlight_summary.csv
+word_highlight_summary.json
+toeic_vocab_export_YYYY-MM-DD.json
+```
+
 Current status:
 
 - IMPLEMENTED/PARTIAL: `tracker.html` generates all listed files.
+- IMPLEMENTED: Export also provides a separate manual Google Drive portability file, `toeic_vocab_backup_YYYY-MM-DD.json`, for backup/restore safe merge. This file is not part of the multi-file analysis package.
 - PARTIAL: If browser folder access is unavailable, files download individually.
 - PARTIAL: No zip archive is generated.
+
+## Google Drive Manual Backup
+
+Status: IMPLEMENTED
+
+The backup file is a single JSON payload for cross-device learner-record portability. The user manually uploads/downloads it through Google Drive; the app does not use Google Drive API or cloud sync.
+
+Import behavior:
+
+- Preview first, then user confirms safe merge.
+- Same IDs are deduped.
+- Local settings and current production seed remain authoritative.
+- Production curriculum/question source JSON is never overwritten.
+- `question_edits` are included for visibility but are not automatically restored into the source-of-truth workflow.
+
+Detailed plan: `docs/google-drive-record-portability-plan.md`.
 
 ## summary.md
 

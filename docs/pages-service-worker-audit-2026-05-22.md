@@ -54,4 +54,4 @@ pages-subpath-routing.spec.ts => 11 passed
 ## Remaining Work
 
 - Real offline behavior and post-update first-load UX still belong to Phase 8.
-- If later mobile work changes shipped shell assets again, the next asset change must advance `CACHE_NAME` beyond `toeic-vorb-v38`.
+- Post-audit note: `XPLAT-01` changed shipped JS assets after this Phase 4 audit, advancing `CACHE_NAME` beyond `toeic-vorb-v38` to `toeic-vorb-v39`. `SYNC-01` Phase 3 added Drive sync config/client shipped assets (`toeic-vorb-v40`), Phase 4 added the sync payload builder asset, the user-provided Web OAuth client ID updated the shipped config asset, Phase 5 added safe-merge logic, Phase 6 added auto-sync UX/state, and Phase 7 completed the repo-side failure-handling/safety slice, so current cache is `toeic-vorb-v46`.

@@ -1,0 +1,1394 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_16_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-136",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-16-current-isolated-audit",
+    "isolated_audit_scope": "30 lessons / 619 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_135_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 11 candidate: V3-W1-16 HR/org collocation lesson 2 (4 target items).",
+    "Q10 reuses v3_a_135_rv_024 (take on) for cross-lesson pressure.",
+    "Promotion target lesson id: V3-A-136."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-16",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 136,
+    "title": "人事與組織 搭配詞 2",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "人事與組織",
+    "target_items": [
+      "item_coll_answer_to",
+      "item_coll_adjust_to",
+      "item_coll_fit_in_with",
+      "item_coll_fall_in_with"
+    ],
+    "question_ids": [
+      "V3-W1-16_Q01",
+      "V3-W1-16_Q02",
+      "V3-W1-16_Q03",
+      "V3-W1-16_Q04",
+      "V3-W1-16_Q05",
+      "V3-W1-16_Q06",
+      "V3-W1-16_Q07",
+      "V3-W1-16_Q08",
+      "V3-W1-16_Q09",
+      "v3_a_135_rv_024",
+      "V3-W1-16_Q11",
+      "V3-W1-16_Q12",
+      "V3-W1-16_Q13",
+      "V3-W1-16_Q14",
+      "V3-W1-16_Q15",
+      "V3-W1-16_Q16",
+      "V3-W1-16_Q17",
+      "V3-W1-16_Q18",
+      "V3-W1-16_Q19",
+      "V3-W1-16_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-16_R01",
+      "V3-W1-16_R02",
+      "V3-W1-16_R03",
+      "V3-W1-16_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_16",
+      "topic_lesson_index": 2,
+      "item_count": 4,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 3,
+        "C": 1
+      },
+      "unresolved_target_count": 4,
+      "authoring_method": "c11_v3_w1_16_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_135_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-16_Q01",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "All regional managers must ______ the vice president of operations during the reorganization.",
+      "options": {
+        "A": "answer to",
+        "B": "answer for",
+        "C": "answer at",
+        "D": "answer on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "answer to 對…負責；聽命於；語境需要對…負責，故用 answer to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_answer_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "answer to",
+        "gloss_zh": "對…負責；聽命於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "answer to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q02",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The compliance officer will ______ the audit committee until the investigation closes.",
+      "options": {
+        "A": "answer to",
+        "B": "answer for",
+        "C": "answer at",
+        "D": "answer on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "answer to 對…負責；聽命於；語境需要對…負責，故用 answer to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_answer_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "answer to",
+        "gloss_zh": "對…負責；聽命於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "answer to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q03",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "New hires need time to ______ the company's flexible scheduling policy.",
+      "options": {
+        "A": "adjust to",
+        "B": "adjust for",
+        "C": "adjust with",
+        "D": "adjust at"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "adjust to 適應；調整到；語境需要適應，故用 adjust to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adjust_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adjust to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q04",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "After the merger, staff had to ______ revised reporting lines and shared systems.",
+      "options": {
+        "A": "adjust to",
+        "B": "adjust for",
+        "C": "adjust with",
+        "D": "adjust at"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "adjust to 適應；調整到；語境需要適應，故用 adjust to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adjust_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adjust to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q05",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The consultant tried to ______ the team's collaborative culture during her first month.",
+      "options": {
+        "A": "fit in with",
+        "B": "fit on with",
+        "C": "fit at with",
+        "D": "fit over with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "fit in with 融入；與…相處融洽；語境需要融入，故用 fit in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fit_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fit in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q06",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Interns who ______ established norms tend to receive stronger peer feedback.",
+      "options": {
+        "A": "fit in with",
+        "B": "fit on with",
+        "C": "fit at with",
+        "D": "fit over with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "fit in with 融入；與…相處融洽；語境需要融入，故用 fit in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fit_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fit in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q07",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Several supervisors chose to ______ the committee's proposal on remote-work limits.",
+      "options": {
+        "A": "fall on with",
+        "B": "fall in with",
+        "C": "fall at with",
+        "D": "fall over with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fall in with 附和；同意（他人意見）；語境需要附和，故用 fall in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q08",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Not every board member was willing to ______ the chair's timeline for the vote.",
+      "options": {
+        "A": "fall on with",
+        "B": "fall in with",
+        "C": "fall at with",
+        "D": "fall over with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fall in with 附和；同意（他人意見）；語境需要附和，故用 fall in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q09",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Employees returning from leave must ______ updated safety procedures in the warehouse.",
+      "options": {
+        "A": "adjust for",
+        "B": "adjust to",
+        "C": "adjust with",
+        "D": "adjust at"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "adjust to 適應；調整到；語境需要適應，故用 adjust to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adjust_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adjust to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q11",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The transferred analyst struggled at first but soon learned to ______ the finance unit's pace.",
+      "options": {
+        "A": "fit on with",
+        "B": "fit in with",
+        "C": "fit at with",
+        "D": "fit over with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fit in with 融入；與…相處融洽；語境需要融入，故用 fit in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fit_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fit in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q12",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Two directors refused to ______ the majority view on outsourcing payroll.",
+      "options": {
+        "A": "fall on with",
+        "B": "fall in with",
+        "C": "fall at with",
+        "D": "fall over with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fall in with 附和；同意（他人意見）；語境需要附和，故用 fall in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q13",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The company created a matrix structure for the Asia-Pacific rollout. Country leads still had to ______ the regional COO on staffing and budgets. Weekly sync calls replaced the old approval chain.",
+      "options": {
+        "A": "answer for",
+        "B": "answer to",
+        "C": "answer at",
+        "D": "answer on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "answer to 對…負責；聽命於；語境要求對…負責，故用 answer to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_answer_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "answer to",
+        "gloss_zh": "對…負責；聽命於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "answer to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q14",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "After the office redesign, teams worked in open pods instead of private suites. Many employees needed several weeks to ______ the noisier environment and shared desks. HR offered noise-cancelling headsets.",
+      "options": {
+        "A": "adjust for",
+        "B": "adjust with",
+        "C": "adjust to",
+        "D": "adjust at"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "adjust to 適應；調整到；語境要求適應，故用 adjust to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adjust_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adjust to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q15",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The mentorship program paired senior engineers with new graduates. Mentors coached recruits on how to ______ project rituals and code-review etiquette. Satisfaction scores rose after the first quarter.",
+      "options": {
+        "A": "fit on with",
+        "B": "fit at with",
+        "C": "fit in with",
+        "D": "fit over with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "fit in with 融入；與…相處融洽；語境要求融入，故用 fit in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fit_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fit in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q16",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Union representatives met management to discuss overtime caps. Most shop stewards agreed to ______ the mediator's compromise on weekend shifts. A minority asked for further legal review.",
+      "options": {
+        "A": "fall on with",
+        "B": "fall at with",
+        "C": "fall in with",
+        "D": "fall over with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "fall in with 附和；同意（他人意見）；語境要求附和，故用 fall in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q17",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Volunteers from other branches were encouraged to ______ local charity partners.",
+      "options": {
+        "A": "fit on with",
+        "B": "fit at with",
+        "C": "fit in with",
+        "D": "fit over with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "fit in with 融入；與…相處融洽；語境需要融入，故用 fit in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fit_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fit in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q18",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Night-shift nurses had to ______ a new electronic handover checklist.",
+      "options": {
+        "A": "adjust for",
+        "B": "adjust with",
+        "C": "adjust to",
+        "D": "adjust at"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "adjust to 適應；調整到；語境需要適應，故用 adjust to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adjust_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adjust to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q19",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Field technicians in the pilot program will ______ the service director for route changes.",
+      "options": {
+        "A": "answer for",
+        "B": "answer at",
+        "C": "answer to",
+        "D": "answer on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "answer to 對…負責；聽命於；語境需要對…負責，故用 answer to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_answer_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "answer to",
+        "gloss_zh": "對…負責；聽命於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "answer to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_Q20",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The task force expected department heads to ______ its recommendation on hybrid attendance.",
+      "options": {
+        "A": "fall on with",
+        "B": "fall at with",
+        "C": "fall over with",
+        "D": "fall in with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "fall in with 附和；同意（他人意見）；語境需要附和，故用 fall in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_R01",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Branch supervisors still ______ the national training lead for certification targets.",
+      "options": {
+        "A": "answer for",
+        "B": "answer at",
+        "C": "answer on",
+        "D": "answer to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "answer to 對…負責；聽命於；語境需要對…負責，故用 answer to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_answer_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "answer to",
+        "gloss_zh": "對…負責；聽命於",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "answer to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_R02",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Contractors must ______ stricter badge rules after the security audit.",
+      "options": {
+        "A": "adjust for",
+        "B": "adjust with",
+        "C": "adjust at",
+        "D": "adjust to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "adjust to 適應；調整到；語境需要適應，故用 adjust to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_adjust_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "adjust to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_R03",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The rotating manager helped the crew ______ the plant's safety-first mindset.",
+      "options": {
+        "A": "fit on with",
+        "B": "fit at with",
+        "C": "fit over with",
+        "D": "fit in with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "fit in with 融入；與…相處融洽；語境需要融入，故用 fit in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fit_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fit in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-16_R04",
+      "lesson_id": "V3-W1-16",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Only three delegates were ready to ______ the chair's summary of the policy draft.",
+      "options": {
+        "A": "fall on with",
+        "B": "fall at with",
+        "C": "fall over with",
+        "D": "fall in with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "fall in with 附和；同意（他人意見）；語境需要附和，故用 fall in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-16",
+        "topic:人事與組織",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_16",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "人事與組織 搭配詞 2",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_topic": "人事與組織",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave11_candidate",
+        "authored_slice_lesson_id": "V3-W1-16",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_answer_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-16",
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "base_word": "answer to",
+      "variants": [
+        "answer to"
+      ],
+      "chinese": "對…負責",
+      "example": "The HR team will answer to the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "answer to",
+        "gloss_zh": "對…負責；聽命於",
+        "source_lessons": [
+          "V3-W1-16"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave11_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_adjust_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-16",
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "base_word": "adjust to",
+      "variants": [
+        "adjust to"
+      ],
+      "chinese": "適應",
+      "example": "The HR team will adjust to the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "adjust to",
+        "gloss_zh": "適應；調整到",
+        "source_lessons": [
+          "V3-W1-16"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave11_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_fit_in_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-16",
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "base_word": "fit in with",
+      "variants": [
+        "fit in with"
+      ],
+      "chinese": "融入",
+      "example": "The HR team will fit in with the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "fit in with",
+        "gloss_zh": "融入；與…相處融洽",
+        "source_lessons": [
+          "V3-W1-16"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave11_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_fall_in_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-16",
+      "lesson_ids": [
+        "V3-W1-16"
+      ],
+      "base_word": "fall in with",
+      "variants": [
+        "fall in with"
+      ],
+      "chinese": "附和",
+      "example": "The HR team will fall in with the staffing plan before the site visit.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "人事與組織",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "fall in with",
+        "gloss_zh": "附和；同意（他人意見）",
+        "source_lessons": [
+          "V3-W1-16"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave11_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_16_wave_11_2026_05_21",
+  "promoted_lesson_id": "V3-A-136"
+}

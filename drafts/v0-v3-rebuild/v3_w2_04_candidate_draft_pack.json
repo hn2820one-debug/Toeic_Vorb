@@ -1,0 +1,1464 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w2_04_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-140",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w2-04-current-isolated-audit",
+    "isolated_audit_scope": "35 lessons / 711 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_139_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 15 candidate: V3-W2-04 finance collocation lesson 1 (6 targets from Phrase_411 財務會計).",
+    "Q10 reuses v3_a_139_rv_024 (tie in with) for cross-topic pressure.",
+    "Promotion target lesson id: V3-A-140."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W2-04",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 140,
+    "title": "財務會計 搭配詞 1",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "財務會計",
+    "target_items": [
+      "item_coll_account_for",
+      "item_coll_draw_on",
+      "item_coll_set_aside",
+      "item_coll_take_into_account",
+      "item_coll_factor_in",
+      "item_coll_turn_over"
+    ],
+    "draft_metadata": {
+      "wave": 2,
+      "source_blueprint_lesson_id": "draft_coll_w2_04",
+      "topic_lesson_index": 1,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 2,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w2_04_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_139_rv_024"
+      ],
+      "production_seed_change": false
+    },
+    "question_ids": [
+      "V3-W2-04_Q01",
+      "V3-W2-04_Q02",
+      "V3-W2-04_Q03",
+      "V3-W2-04_Q04",
+      "V3-W2-04_Q05",
+      "V3-W2-04_Q06",
+      "V3-W2-04_Q07",
+      "V3-W2-04_Q08",
+      "V3-W2-04_Q09",
+      "v3_a_139_rv_024",
+      "V3-W2-04_Q11",
+      "V3-W2-04_Q12",
+      "V3-W2-04_Q13",
+      "V3-W2-04_Q14",
+      "V3-W2-04_Q15",
+      "V3-W2-04_Q16",
+      "V3-W2-04_Q17",
+      "V3-W2-04_Q18",
+      "V3-W2-04_Q19",
+      "V3-W2-04_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W2-04_R01",
+      "V3-W2-04_R02",
+      "V3-W2-04_R03",
+      "V3-W2-04_R04"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "V3-W2-04_Q01",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Rising freight costs ______ most of the margin decline reported last quarter.",
+      "options": {
+        "A": "account for",
+        "B": "account to",
+        "C": "account on",
+        "D": "account with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "account for 占比；解釋原因；語境需要占比，故用 account for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_account_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "account for",
+        "gloss_zh": "占比；解釋原因",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "account for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q02",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The audit memo must ______ the unexpected drop in overseas revenue.",
+      "options": {
+        "A": "account for",
+        "B": "account to",
+        "C": "account on",
+        "D": "account with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "account for 占比；解釋原因；語境需要占比，故用 account for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_account_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "account for",
+        "gloss_zh": "占比；解釋原因",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "account for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q03",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The treasury team may ______ reserve funds if short-term rates keep climbing.",
+      "options": {
+        "A": "draw on",
+        "B": "draw in",
+        "C": "draw at",
+        "D": "draw over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "draw on 動用；利用；語境需要動用，故用 draw on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "draw on",
+        "gloss_zh": "動用；利用",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q04",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Analysts expect the firm to ______ prior market research when pricing the bond issue.",
+      "options": {
+        "A": "draw on",
+        "B": "draw in",
+        "C": "draw at",
+        "D": "draw over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "draw on 動用；利用；語境需要動用，故用 draw on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "draw on",
+        "gloss_zh": "動用；利用",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q05",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The board voted to ______ capital for facility upgrades next year.",
+      "options": {
+        "A": "set aside",
+        "B": "set up",
+        "C": "set off",
+        "D": "set out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "set aside 撥出；保留；語境需要撥出，故用 set aside 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "set aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q06",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Finance will ______ contingency funds until the supplier dispute is settled.",
+      "options": {
+        "A": "set aside",
+        "B": "set up",
+        "C": "set off",
+        "D": "set out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "set aside 撥出；保留；語境需要撥出，故用 set aside 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "set aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q07",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ currency swings when forecasting next quarter's cash flow.",
+      "options": {
+        "A": "take account of",
+        "B": "take into account",
+        "C": "take on account",
+        "D": "take in account"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "take into account 納入考量；語境需要納入考量，故用 take into account 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_into_account",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "take into account",
+        "gloss_zh": "納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take into account",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q08",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The pricing model should ______ seasonal demand before we lock in discounts.",
+      "options": {
+        "A": "take account of",
+        "B": "take into account",
+        "C": "take on account",
+        "D": "take in account"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "take into account 納入考量；語境需要納入考量，故用 take into account 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_into_account",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "take into account",
+        "gloss_zh": "納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take into account",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q09",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Planners must ______ inflation when updating the five-year budget.",
+      "options": {
+        "A": "factor on",
+        "B": "factor in",
+        "C": "factor at",
+        "D": "factor into"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "factor in 把…納入考量；語境需要把…納入考量，故用 factor in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_factor_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "factor in",
+        "gloss_zh": "把…納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "factor in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q11",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The warehouse can ______ inventory faster after the new scanning system goes live.",
+      "options": {
+        "A": "turn in",
+        "B": "turn over",
+        "C": "turn on",
+        "D": "turn up"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "turn over 翻轉；移交；周轉；語境需要翻轉，故用 turn over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "turn over",
+        "gloss_zh": "翻轉；移交；周轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q12",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Did the committee ______ tax incentives before approving the lease terms?",
+      "options": {
+        "A": "factor on",
+        "B": "factor in",
+        "C": "factor at",
+        "D": "factor into"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "factor in 把…納入考量；語境需要把…納入考量，故用 factor in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_factor_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "factor in",
+        "gloss_zh": "把…納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "factor in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q13",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Operating expenses jumped in March, and controllers asked each region to ______ the variance in writing. Two divisions cited delayed shipments, while others blamed temporary staffing gaps. The CFO scheduled a follow-up review on Friday.",
+      "options": {
+        "A": "account to",
+        "B": "account for",
+        "C": "account on",
+        "D": "account with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "account for 占比；解釋原因；語境要求占比，故用 account for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_account_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "account for",
+        "gloss_zh": "占比；解釋原因",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "account for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q14",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "With credit markets tightening, the company chose not to issue new debt immediately. Instead, treasury officers will ______ existing liquidity lines to cover payroll through June. The board will revisit external borrowing in July.",
+      "options": {
+        "A": "draw in",
+        "B": "draw at",
+        "C": "draw on",
+        "D": "draw over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "draw on 動用；利用；語境要求動用，故用 draw on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "draw on",
+        "gloss_zh": "動用；利用",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q15",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "After a strong holiday season, directors agreed to reward shareholders but keep flexibility. They voted to ______ part of the surplus for cybersecurity upgrades and compliance training. Dividends will still rise modestly this year.",
+      "options": {
+        "A": "set up",
+        "B": "set off",
+        "C": "set aside",
+        "D": "set out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "set aside 撥出；保留；語境要求撥出，故用 set aside 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "set aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q16",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The merger timeline slipped when regulators requested more disclosure. Project leaders reminded negotiators to ______ pension obligations and lease exit costs before signing. Both sides expect another draft agreement next week.",
+      "options": {
+        "A": "take account of",
+        "B": "take on account",
+        "C": "take into account",
+        "D": "take in account"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "take into account 納入考量；語境要求納入考量，故用 take into account 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_into_account",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "take into account",
+        "gloss_zh": "納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take into account",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q17",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The forecast should ______ higher utility rates starting in October.",
+      "options": {
+        "A": "factor on",
+        "B": "factor at",
+        "C": "factor in",
+        "D": "factor into"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "factor in 把…納入考量；語境需要把…納入考量，故用 factor in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_factor_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "factor in",
+        "gloss_zh": "把…納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "factor in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q18",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Retailers with lean staffing still need to ______ stock before the back-to-school rush.",
+      "options": {
+        "A": "turn in",
+        "B": "turn on",
+        "C": "turn over",
+        "D": "turn up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "turn over 翻轉；移交；周轉；語境需要翻轉，故用 turn over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "turn over",
+        "gloss_zh": "翻轉；移交；周轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q19",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Investors want models that ______ delayed receivables from overseas clients.",
+      "options": {
+        "A": "factor on",
+        "B": "factor at",
+        "C": "factor in",
+        "D": "factor into"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "factor in 把…納入考量；語境需要把…納入考量，故用 factor in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_factor_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "factor in",
+        "gloss_zh": "把…納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "factor in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_Q20",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The subsidiary must ______ records to headquarters by the tenth of each month.",
+      "options": {
+        "A": "turn in",
+        "B": "turn on",
+        "C": "turn up",
+        "D": "turn over"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "turn over 翻轉；移交；周轉；語境需要翻轉，故用 turn over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_turn_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "turn over",
+        "gloss_zh": "翻轉；移交；周轉",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "turn over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_R01",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Marketing costs alone cannot ______ the full gap between forecast and actual sales.",
+      "options": {
+        "A": "account to",
+        "B": "account on",
+        "C": "account with",
+        "D": "account for"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "account for 占比；解釋原因；語境需要占比，故用 account for 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_account_for",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "account for",
+        "gloss_zh": "占比；解釋原因",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "account for",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_R02",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The CFO said the firm could ______ internal expertise instead of hiring consultants.",
+      "options": {
+        "A": "draw in",
+        "B": "draw at",
+        "C": "draw over",
+        "D": "draw on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "draw on 動用；利用；語境需要動用，故用 draw on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "draw on",
+        "gloss_zh": "動用；利用",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_R03",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ enough budget for the compliance audit scheduled in April.",
+      "options": {
+        "A": "set up",
+        "B": "set off",
+        "C": "set out",
+        "D": "set aside"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "set aside 撥出；保留；語境需要撥出，故用 set aside 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_aside",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "set aside",
+        "gloss_zh": "撥出；保留",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set aside",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-04_R04",
+      "lesson_id": "V3-W2-04",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "When you revise the quote, ______ shipping delays reported by our logistics team.",
+      "options": {
+        "A": "take account of",
+        "B": "take on account",
+        "C": "take in account",
+        "D": "take into account"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "take into account 納入考量；語境需要納入考量，故用 take into account 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_take_into_account",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-04",
+        "topic:財務會計",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_04",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "財務會計 搭配詞 1",
+        "source_phrase": "take into account",
+        "gloss_zh": "納入考量",
+        "source_topic": "財務會計",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "take into account",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave15_candidate",
+        "authored_slice_lesson_id": "V3-W2-04",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_account_for",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-04",
+      "lesson_ids": [
+        "V3-W2-04"
+      ],
+      "base_word": "account for",
+      "variants": [
+        "account for"
+      ],
+      "chinese": "占比",
+      "example": "The finance team will account for the budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "account for",
+        "gloss_zh": "占比；解釋原因",
+        "source_lessons": [
+          "V3-W2-04"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave15_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_draw_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-04",
+      "lesson_ids": [
+        "V3-W2-04"
+      ],
+      "base_word": "draw on",
+      "variants": [
+        "draw on"
+      ],
+      "chinese": "動用",
+      "example": "The finance team will draw on the budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "draw on",
+        "gloss_zh": "動用；利用",
+        "source_lessons": [
+          "V3-W2-04"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave15_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_set_aside",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-04",
+      "lesson_ids": [
+        "V3-W2-04"
+      ],
+      "base_word": "set aside",
+      "variants": [
+        "set aside"
+      ],
+      "chinese": "撥出",
+      "example": "The finance team will set aside the budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "set aside",
+        "gloss_zh": "撥出；保留",
+        "source_lessons": [
+          "V3-W2-04"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave15_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_take_into_account",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-04",
+      "lesson_ids": [
+        "V3-W2-04"
+      ],
+      "base_word": "take into account",
+      "variants": [
+        "take into account"
+      ],
+      "chinese": "納入考量",
+      "example": "The finance team will take into account the budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "take into account",
+        "gloss_zh": "納入考量",
+        "source_lessons": [
+          "V3-W2-04"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave15_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_factor_in",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-04",
+      "lesson_ids": [
+        "V3-W2-04"
+      ],
+      "base_word": "factor in",
+      "variants": [
+        "factor in"
+      ],
+      "chinese": "把…納入考量",
+      "example": "The finance team will factor in the budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "factor in",
+        "gloss_zh": "把…納入考量",
+        "source_lessons": [
+          "V3-W2-04"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave15_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_turn_over",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-04",
+      "lesson_ids": [
+        "V3-W2-04"
+      ],
+      "base_word": "turn over",
+      "variants": [
+        "turn over"
+      ],
+      "chinese": "翻轉",
+      "example": "The finance team will turn over the budget before the quarterly review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "財務會計",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "turn over",
+        "gloss_zh": "翻轉；移交；周轉",
+        "source_lessons": [
+          "V3-W2-04"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave15_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w2_04_wave_15_2026_05_21",
+  "promoted_lesson_id": "V3-A-140"
+}

@@ -1,0 +1,1605 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_01_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/v2-production-promotion-pipeline.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-01-current-isolated-audit",
+    "isolated_full_quality_audit": "passed",
+    "isolated_audit_scope": "V2-A-71 through V2-A-80 production + V2-MR-01 + V3-W1-01 draft = 264q, 12 lessons",
+    "blocking_issues": 0,
+    "duplicate_stems": 0,
+    "old_item_pressure_issues": 0,
+    "fix_applied_distractor_type": "R01-R04 distractor_type changed from mixed_review_collocation to wrong_verb_collocation",
+    "fix_applied_answer_dist": "Q04/Q10/Q14 rotated; A=6 B=6 C=6 D=6",
+    "fix_applied_q20_distractors": "pick over/pick off/pick out replacing cross-stem distractors",
+    "explanation_quality_warnings": 0,
+    "stem_length_warnings": 0,
+    "staircase_warnings": 4,
+    "current_baseline_total_staircase_warnings": 44,
+    "all_warnings_accepted": true,
+    "p0_human_review_passed": true,
+    "production_seed_changed": true,
+    "fix_applied_answer_slot_semantics": "Q04, Q10, and Q14 options were repaired so the balanced correct_answer slots contain the phrase named in the explanation.",
+    "fix_applied_current_baseline_stems": "Q07, Q11, Q13, and Q14 stems expanded to the preferred range under the current audit.",
+    "fix_applied_explanation_trap_cues": "All explanations now include a trap/confusion cue where needed.",
+    "fix_applied_current_baseline_explanations": "Q12, Q14, Q15, Q18, and R03 explanations now include both rule and trap cues under the current audit.",
+    "current_baseline_isolated_full_quality_audit": "passed"
+  },
+  "notes": [
+    "T061-T065 complete. V3-W1-01 first V3 production candidate.",
+    "7 vocab items staged in wave1_vocab_items_seed_draft.json.",
+    "Promotion requires T066+ wave gate."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-01",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 1,
+    "title": "辦公室 搭配詞 1",
+    "estimated_minutes": 35,
+    "lesson_type": "collocation",
+    "topic": "辦公室",
+    "target_items": [
+      "item_coll_run_out_of",
+      "item_coll_set_up",
+      "item_coll_drop_by",
+      "item_coll_look_over",
+      "item_coll_run_into",
+      "item_coll_pick_up",
+      "item_coll_give_out"
+    ],
+    "question_ids": [
+      "V3-W1-01_Q01",
+      "V3-W1-01_Q02",
+      "V3-W1-01_Q03",
+      "V3-W1-01_Q04",
+      "V3-W1-01_Q05",
+      "V3-W1-01_Q06",
+      "V3-W1-01_Q07",
+      "V3-W1-01_Q08",
+      "V3-W1-01_Q09",
+      "V3-W1-01_Q10",
+      "V3-W1-01_Q11",
+      "V3-W1-01_Q12",
+      "V3-W1-01_Q13",
+      "V3-W1-01_Q14",
+      "V3-W1-01_Q15",
+      "V3-W1-01_Q16",
+      "V3-W1-01_Q17",
+      "V3-W1-01_Q18",
+      "V3-W1-01_Q19",
+      "V3-W1-01_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-01_R01",
+      "V3-W1-01_R02",
+      "V3-W1-01_R03",
+      "V3-W1-01_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_01",
+      "topic_lesson_index": 1,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "unresolved_target_count": 7
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-01_Q01",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The reception team had to borrow copy paper from another floor after we ______ it before noon.",
+      "options": {
+        "A": "run by",
+        "B": "run out of",
+        "C": "run through",
+        "D": "run into"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "run out of 表示用品用盡；句中交代紙張耗盡，run into 只是碰到。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_out_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run out of",
+        "gloss_zh": "用完；耗盡",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run out of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q02",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The front desk may ______ visitor badges if the courier is delayed again this morning.",
+      "options": {
+        "A": "run into",
+        "B": "run through",
+        "C": "run by",
+        "D": "run out of"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "may 後接原形；語意是名牌快耗盡，所以用 run out of，不是 run into。",
+      "target_item_id": "item_coll_run_out_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run out of",
+        "gloss_zh": "用完；耗盡",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run out of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q03",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Before the auditors arrive, Ms. Wu will ______ a temporary workspace in the small meeting room.",
+      "options": {
+        "A": "set up",
+        "B": "set aside",
+        "C": "set back",
+        "D": "set off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "set up 表示安排或設立臨時空間；set aside 是保留，不合語境。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "set up",
+        "gloss_zh": "設立；安排",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q04",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The operations assistant was asked to ______ a video call for the branch managers before 3 p.m.",
+      "options": {
+        "A": "set up",
+        "B": "set back",
+        "C": "set aside",
+        "D": "set off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "此處要安排視訊會議，固定用 set up；set aside 只有保留之意。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "set up",
+        "gloss_zh": "設立；安排",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q05",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "If Mr. Ito has a few minutes after lunch, he can ______ our office to sign the delivery form.",
+      "options": {
+        "A": "drop off",
+        "B": "drop over",
+        "C": "drop by",
+        "D": "drop from"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "drop by 表示順道拜訪；drop off 多指送達或下降，不是臨時來訪。",
+      "target_item_id": "item_coll_drop_by",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "drop by",
+        "gloss_zh": "順道拜訪",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "drop by",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q06",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Our supplier plans to ______ the office this afternoon because the sample boxes need approval today.",
+      "options": {
+        "A": "drop by",
+        "B": "drop off",
+        "C": "drop from",
+        "D": "drop over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境是供應商順道來辦公室，因此用 drop by；drop off 偏向送下貨。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_drop_by",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "drop by",
+        "gloss_zh": "順道拜訪",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "drop by",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q07",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the revised seating chart carefully before the visitors arrive at reception for the client briefing.",
+      "options": {
+        "A": "look into",
+        "B": "look for",
+        "C": "look over",
+        "D": "look after"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "look over 表示快速查看文件；look into 是調查，與接待前檢查不符。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "look over",
+        "gloss_zh": "快速查看；審閱",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q08",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The director asked me to ______ the reimbursement list once more before finance receives it.",
+      "options": {
+        "A": "look after",
+        "B": "look over",
+        "C": "look around",
+        "D": "look for"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "此處是再審閱名單，所以用 look over；look around 只表示四處查看。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "look over",
+        "gloss_zh": "快速查看；審閱",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q09",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "We may ______ a scheduling problem if the training room is still occupied at noon.",
+      "options": {
+        "A": "run through",
+        "B": "run out of",
+        "C": "run by",
+        "D": "run into"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "run into 可指遭遇問題；run out of 是耗盡，和會議室衝突不符。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run into",
+        "gloss_zh": "碰到；遭遇",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q10",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The office move could ______ delays unless the IT team finishes the network check tonight.",
+      "options": {
+        "A": "run out of",
+        "B": "run by",
+        "C": "run into",
+        "D": "run through"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "句意是搬遷可能遭遇延誤，因此用 run into；run through 不表示碰到障礙。",
+      "target_item_id": "item_coll_run_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run into",
+        "gloss_zh": "碰到；遭遇",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q11",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the guest badges from reception before escorting the clients upstairs to the training room.",
+      "options": {
+        "A": "pick up",
+        "B": "hand in",
+        "C": "turn down",
+        "D": "sort out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "pick up 表示拿取物件；hand in 是提交，和去櫃檯領取相反。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_pick_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "pick up",
+        "gloss_zh": "接收；拿取；恢復",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "pick up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q12",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Ms. Lin will ______ the signed contract from the courier desk after the afternoon briefing.",
+      "options": {
+        "A": "take over",
+        "B": "check in",
+        "C": "pick up",
+        "D": "close out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示到櫃檯領取文件，固定搭配用 pick up；take over 是接管，語意不同。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_pick_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "pick up",
+        "gloss_zh": "接收；拿取；恢復",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "pick up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q13",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The receptionist will ______ parking passes to all conference guests at the lobby desk before registration opens.",
+      "options": {
+        "A": "give over",
+        "B": "give out",
+        "C": "give away",
+        "D": "give back"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "give out 在此表示分發；give away 偏向白送或洩露，不是正式派發。",
+      "target_item_id": "item_coll_give_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "give out",
+        "gloss_zh": "分發；耗盡",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "give out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q14",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the updated evacuation cards before the safety drill begins on Friday morning at headquarters.",
+      "options": {
+        "A": "give back",
+        "B": "give away",
+        "C": "give over",
+        "D": "give out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示安全演練前要分發卡片，因此固定搭配用 give out；give back 是歸還，不合句意。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_give_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "give out",
+        "gloss_zh": "分發；耗盡",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "give out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q15",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The office manager expected the printer cartridges to last through Friday. However, two departments printed extra presentation packets this morning. By noon, we had ______ toner and had to delay the copies for the client visit.",
+      "options": {
+        "A": "run through",
+        "B": "run into",
+        "C": "run out of",
+        "D": "run by"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境表示大量加印導致碳粉耗盡，所以固定搭配用 run out of；run into 不表用完。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_out_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run out of",
+        "gloss_zh": "用完；耗盡",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run out of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q16",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The regional managers were told at 9 a.m. that the original meeting link had failed. To keep the review on schedule, the assistant quickly ______ a new video conference and emailed the access code to everyone.",
+      "options": {
+        "A": "set aside",
+        "B": "set off",
+        "C": "set back",
+        "D": "set up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境要臨時安排新會議，因此用 set up；set aside 只是擱置保留。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_set_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "set up",
+        "gloss_zh": "設立；安排",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q17",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The purchasing director cannot stay for the full site tour because another meeting was moved forward. She said she would ______ our office after lunch, sign the samples, and then head to the airport.",
+      "options": {
+        "A": "drop off",
+        "B": "drop by",
+        "C": "drop from",
+        "D": "drop over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "前後文表示短暫順道到訪，所以用 drop by；drop off 只像送人或送貨。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_drop_by",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "drop by",
+        "gloss_zh": "順道拜訪",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "drop by",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q18",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The assistant finished revising the visitor schedule, but the director has not approved it yet. Before the guests arrive, he wants to ______ the final version for any timing conflicts.",
+      "options": {
+        "A": "look for",
+        "B": "look after",
+        "C": "look into",
+        "D": "look over"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境表示快速審閱最終版本，所以固定搭配用 look over；look into 偏向深入調查。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "look over",
+        "gloss_zh": "快速查看；審閱",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q19",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The delivery route looked simple on paper, yet a road closure was announced just before departure. As a result, the driver may ______ traffic delays and miss the first appointment.",
+      "options": {
+        "A": "run through",
+        "B": "run by",
+        "C": "run into",
+        "D": "run out of"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "前文指出道路封閉，會遭遇延誤，所以用 run into；run out of 是耗盡。",
+      "target_item_id": "item_coll_run_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run into",
+        "gloss_zh": "碰到；遭遇",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_Q20",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The reception desk called to say the client welcome packets had arrived early. Since the sales team is still in a cross-department briefing, could you ______ the packets and place them in the meeting room?",
+      "options": {
+        "A": "pick over",
+        "B": "pick off",
+        "C": "pick out",
+        "D": "pick up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境是去櫃檯取回資料，固定用 pick up；pick out 是挑選特定對象，pick over 是逐件翻揀，pick off 是逐一除去。 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_pick_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "pick up",
+        "gloss_zh": "接收；拿取；恢復",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "pick up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_R01",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "meaning_review",
+      "grammar_link_id": null,
+      "question_text": "Quick review: choose the best TOEIC meaning for \"run out of\".",
+      "options": {
+        "A": "to finish using all of something",
+        "B": "to meet unexpectedly",
+        "C": "to establish a new system",
+        "D": "to review quickly"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "run out of 指用品或資源用盡；易和 run into 混淆，但後者是碰到。",
+      "target_item_id": "item_coll_run_out_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "run out of",
+        "gloss_zh": "用完；耗盡",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run out of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_R02",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "meaning_review",
+      "grammar_link_id": null,
+      "question_text": "Quick review: choose the best TOEIC meaning for \"set up\".",
+      "options": {
+        "A": "to cancel a reservation",
+        "B": "to arrange or establish something",
+        "C": "to pass something to another person",
+        "D": "to check something briefly"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "set up 指安排或設立；不是快速查看，也不是取消預約。",
+      "target_item_id": "item_coll_set_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "set up",
+        "gloss_zh": "設立；安排",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "set up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_R03",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "meaning_review",
+      "grammar_link_id": null,
+      "question_text": "Quick review: choose the best TOEIC meaning for \"drop by\".",
+      "options": {
+        "A": "to pay a short informal visit",
+        "B": "to use all that remains",
+        "C": "to recover after a slowdown",
+        "D": "to delay until later"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "drop by 固定搭配表示順道短暫拜訪；不是用完資源，也不是恢復狀態，請不要誤選外形相近的片語。",
+      "target_item_id": "item_coll_drop_by",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "drop by",
+        "gloss_zh": "順道拜訪",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "drop by",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "question_id": "V3-W1-01_R04",
+      "lesson_id": "V3-W1-01",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "meaning_review",
+      "grammar_link_id": null,
+      "question_text": "Quick review: choose the best TOEIC meaning for \"look over\".",
+      "options": {
+        "A": "to distribute to everyone",
+        "B": "to check something quickly",
+        "C": "to meet someone unexpectedly",
+        "D": "to hand something in"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "look over 指快速查看或審閱；不是分發 give out，也不是遇見 run into。",
+      "target_item_id": "item_coll_look_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-01",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "phase10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 1",
+        "source_phrase": "look over",
+        "gloss_zh": "快速查看；審閱",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "phase10",
+        "authored_slice_lesson_id": "V3-W1-01",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_drop_by",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "drop by",
+      "variants": [
+        "drop by"
+      ],
+      "chinese": "順道拜訪",
+      "example": "The supplier will drop by the office after the client meeting.",
+      "common_wrong_forms": [
+        "drop off",
+        "drop over"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "drop by",
+        "gloss_zh": "順道拜訪",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "item_id": "item_coll_give_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "give out",
+      "variants": [
+        "give out"
+      ],
+      "chinese": "分發；耗盡",
+      "example": "The receptionist will give out parking passes to conference guests.",
+      "common_wrong_forms": [
+        "give away",
+        "give back"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "give out",
+        "gloss_zh": "分發；耗盡",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "item_id": "item_coll_look_over",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "look over",
+      "variants": [
+        "look over"
+      ],
+      "chinese": "快速查看；審閱",
+      "example": "Please look over the contract summary before the director signs it.",
+      "common_wrong_forms": [
+        "look into",
+        "look after"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "look over",
+        "gloss_zh": "快速查看；審閱",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "item_id": "item_coll_pick_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "pick up",
+      "variants": [
+        "pick up"
+      ],
+      "chinese": "接收；拿取；恢復",
+      "example": "Ms. Chen will pick up the visitor badges at reception.",
+      "common_wrong_forms": [
+        "take over",
+        "check in"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "pick up",
+        "gloss_zh": "接收；拿取；恢復",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "item_id": "item_coll_run_into",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "run into",
+      "variants": [
+        "run into"
+      ],
+      "chinese": "碰到；遭遇",
+      "example": "Our team ran into a scheduling problem during the office move.",
+      "common_wrong_forms": [
+        "run by",
+        "run through"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "run into",
+        "gloss_zh": "碰到；遭遇",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "item_id": "item_coll_run_out_of",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "run out of",
+      "variants": [
+        "run out of"
+      ],
+      "chinese": "用完；耗盡",
+      "example": "We ran out of toner just before the monthly reports were printed.",
+      "common_wrong_forms": [
+        "run into",
+        "run through"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "run out of",
+        "gloss_zh": "用完；耗盡",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    },
+    {
+      "item_id": "item_coll_set_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-01",
+      "lesson_ids": [
+        "V3-W1-01"
+      ],
+      "base_word": "set up",
+      "variants": [
+        "set up"
+      ],
+      "chinese": "設立；安排",
+      "example": "The assistant set up a video call for the regional managers.",
+      "common_wrong_forms": [
+        "set aside",
+        "set off"
+      ],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "set up",
+        "gloss_zh": "設立；安排",
+        "source_lessons": [
+          "V3-W1-01"
+        ],
+        "source_blueprint_lessons": [
+          "draft_coll_w1_01"
+        ],
+        "resolution_status": "authored_slice",
+        "matched_item_ids": [],
+        "authored_in_phase": "phase10",
+        "editorial_review_status": "phase10_review_passed"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_01_first_wave_2026_05_21",
+  "promoted_lesson_id": "V3-A-121"
+}

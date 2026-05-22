@@ -1,0 +1,808 @@
+{
+  "generated_at": "2026-05-20",
+  "artifact_id": "v2_a_71_compact_prompt_probe",
+  "artifact_version": "1.0",
+  "reference_role": "draft_authoring_probe",
+  "status": "draft_only",
+  "production_impact": "none",
+  "production_ready": false,
+  "prompt_template": "docs/templates/ai-question-authoring-prompt.md",
+  "source_spec": "docs/question-creation-spec.md",
+  "notes": [
+    "This draft pack was authored directly from the compact AI prompt to probe audit behavior.",
+    "It is not added to production question_files and does not change the current seed.",
+    "V2-A-71 is used because it is the minimum usable V2 baseline and the first-core exception has no old-item pressure requirement."
+  ],
+  "prompt_inputs": {
+    "stage": "V2",
+    "lesson_id": "V2-A-71",
+    "lesson_type": "scene_vocabulary",
+    "scene_domain": "Office Administration",
+    "rows_needed": "20 core + 4 review_question",
+    "existing_stems_to_avoid": [],
+    "target_words": [
+      "item_v2_v2_a_71_extension | extension | 分機",
+      "item_v2_v2_a_71_photocopier | photocopier | 影印機",
+      "item_v2_v2_a_71_stationery | stationery | 文具",
+      "item_v2_v2_a_71_workstation | workstation | 工作站"
+    ]
+  },
+  "lessons": [
+    {
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "lesson_number": 71,
+      "title": "Office Equipment Scene Vocabulary",
+      "estimated_minutes": 45,
+      "lesson_type": "scene_vocabulary",
+      "topic": "Office Administration",
+      "target_items": [
+        "item_v2_v2_a_71_extension",
+        "item_v2_v2_a_71_photocopier",
+        "item_v2_v2_a_71_stationery",
+        "item_v2_v2_a_71_workstation"
+      ],
+      "question_ids": [
+        "v2_a_71_q_001",
+        "v2_a_71_q_002",
+        "v2_a_71_q_003",
+        "v2_a_71_q_004",
+        "v2_a_71_q_005",
+        "v2_a_71_q_006",
+        "v2_a_71_q_007",
+        "v2_a_71_q_008",
+        "v2_a_71_q_009",
+        "v2_a_71_q_010",
+        "v2_a_71_q_011",
+        "v2_a_71_q_012",
+        "v2_a_71_q_013",
+        "v2_a_71_q_014",
+        "v2_a_71_q_015",
+        "v2_a_71_q_016",
+        "v2_a_71_q_017",
+        "v2_a_71_q_018",
+        "v2_a_71_q_019",
+        "v2_a_71_q_020"
+      ],
+      "review_question_ids": [
+        "v2_a_71_rv_021",
+        "v2_a_71_rv_022",
+        "v2_a_71_rv_023",
+        "v2_a_71_rv_024"
+      ],
+      "mastery_threshold": 0.8,
+      "seal_threshold": 0.85,
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "status": "not_started",
+      "draft_metadata": {
+        "authoring_method": "compact_prompt_direct_draft",
+        "question_file_candidate": "questions_v2a.json",
+        "existing_production_stem_count_seen": 0,
+        "intended_use": "warning_probe_before_seed_change"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "v2_a_71_q_001",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: After the sales team moved floors, the receptionist updated the printed phone list with each manager's new ______.",
+      "options": {
+        "A": "extension",
+        "B": "photocopier",
+        "C": "stationery",
+        "D": "workstation"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境指電話分機號碼，extension 才通順；不要和 workstation 混淆成座位設備。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:extension"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_002",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The caller reached the main line, so the operator transferred him to Ms. Huang's ______ in accounting.",
+      "options": {
+        "A": "photocopier",
+        "B": "extension",
+        "C": "workstation",
+        "D": "stationery"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境是轉接到個人分機，extension 才合理；不要誤選 photocopier 這種辦公設備。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:extension"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_003",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The welcome message tells visitors to dial the support ______ if they need help after business hours.",
+      "options": {
+        "A": "workstation",
+        "B": "stationery",
+        "C": "extension",
+        "D": "photocopier"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境指撥打支援分機，extension 才正確；不要和 workstation 混淆成工作座位。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:extension"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_004",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: During onboarding, employees memorize their supervisor's ______ so urgent calls do not go to the front desk.",
+      "options": {
+        "A": "stationery",
+        "B": "photocopier",
+        "C": "workstation",
+        "D": "extension"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境是記住主管的分機，extension 才對；不要把 stationery 混淆成文具用品。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:extension"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_005",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The branch directory was reprinted because one digit was missing from the HR manager's ______.",
+      "options": {
+        "A": "extension",
+        "B": "workstation",
+        "C": "photocopier",
+        "D": "stationery"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境指人名旁的電話分機，extension 才通順；不要誤選 photocopier 這類設備。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:extension"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_006",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The assistant waited beside the ______ because the client needed two signed copies of the proposal.",
+      "options": {
+        "A": "extension",
+        "B": "photocopier",
+        "C": "stationery",
+        "D": "workstation"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境指影印文件的機器，photocopier 才合理；不要和 extension 混淆成電話號碼。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:photocopier"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_007",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: Please remove the jammed paper from the ______ before the training handouts are printed again.",
+      "options": {
+        "A": "workstation",
+        "B": "stationery",
+        "C": "photocopier",
+        "D": "extension"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境指卡紙的影印機，photocopier 才正確；不要把 stationery 混淆成耗材用品。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:photocopier"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_008",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The facilities team ordered new toner for the heavily used third-floor ______ near the mailroom entrance.",
+      "options": {
+        "A": "stationery",
+        "B": "extension",
+        "C": "workstation",
+        "D": "photocopier"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境是補充碳粉的設備，photocopier 才對；不要和 extension 混淆成電話分機。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:photocopier"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_009",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: Visitors may use the lobby ______ only for badge forms and other short administrative copies.",
+      "options": {
+        "A": "photocopier",
+        "B": "workstation",
+        "C": "extension",
+        "D": "stationery"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境指拿來影印表單的設備，photocopier 才合理；不要誤選 workstation 的座位意思。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:photocopier"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_010",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The admin clerk cleaned the ______ glass before copying the contract for the legal file.",
+      "options": {
+        "A": "workstation",
+        "B": "photocopier",
+        "C": "extension",
+        "D": "stationery"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境指影印機玻璃平台，photocopier 才正確；不要和 extension 混淆成號碼。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:photocopier"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_011",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The office manager locked extra branded ______ in a cabinet before the client event started downtown.",
+      "options": {
+        "A": "extension",
+        "B": "workstation",
+        "C": "stationery",
+        "D": "photocopier"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境指收起來備用的文具，stationery 才合理；不要把 workstation 混淆成座位。",
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:stationery"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_012",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: New hires receive basic ______ such as pens, folders, and notepads on their first day.",
+      "options": {
+        "A": "workstation",
+        "B": "extension",
+        "C": "photocopier",
+        "D": "stationery"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境列出筆和資料夾等文具，stationery 才對；不要誤選 photocopier 這種機器。",
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:stationery"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_013",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The mailroom requested more basic ______ after envelopes and writing pads ran low during registration week.",
+      "options": {
+        "A": "stationery",
+        "B": "photocopier",
+        "C": "extension",
+        "D": "workstation"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境指信封和便條本這類文具，stationery 才合理；不要和 photocopier 混淆成設備。",
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:stationery"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_014",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The marketing assistant chose matching corporate ______ for the thank-you cards, envelopes, and memo pads.",
+      "options": {
+        "A": "photocopier",
+        "B": "stationery",
+        "C": "workstation",
+        "D": "extension"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境指卡片與信封整套文具，stationery 才正確；不要誤選 extension 這種號碼。",
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:stationery"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_015",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The front desk keeps spare ______ nearby so visitors can fill out forms without waiting.",
+      "options": {
+        "A": "workstation",
+        "B": "extension",
+        "C": "stationery",
+        "D": "photocopier"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境指讓訪客填表用的文具，stationery 才通順；不要和 workstation 混淆成座位。",
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:stationery"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_016",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: IT assigned the new designer a larger ______ with dual monitors for the video-editing project.",
+      "options": {
+        "A": "extension",
+        "B": "stationery",
+        "C": "photocopier",
+        "D": "workstation"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境指配有螢幕的工作座位，workstation 才合理；不要把 extension 混淆成分機。",
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:workstation"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_017",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The relocation map shows each analyst's ______ so movers know where every desktop computer belongs.",
+      "options": {
+        "A": "workstation",
+        "B": "extension",
+        "C": "photocopier",
+        "D": "stationery"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語境指分析師的工作座位位置，workstation 才對；不要誤選 extension 這種電話號碼。",
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:workstation"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_018",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The intern logged in at a shared ______ near reception while her own desk was being prepared.",
+      "options": {
+        "A": "stationery",
+        "B": "workstation",
+        "C": "extension",
+        "D": "photocopier"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語境指共用的電腦工作位，workstation 才正確；不要和 stationery 混淆成文具。",
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:workstation"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_019",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: Each remote employee received a checklist for setting up a home ______ before Monday's orientation.",
+      "options": {
+        "A": "photocopier",
+        "B": "stationery",
+        "C": "workstation",
+        "D": "extension"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語境指在家配置工作的電腦位，workstation 才合理；不要誤選 extension 這種分機。",
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:workstation"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_q_020",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Office: The cleaning crew tagged every empty ______ on the east side before the renovation began.",
+      "options": {
+        "A": "stationery",
+        "B": "photocopier",
+        "C": "extension",
+        "D": "workstation"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語境指東側每個空的工作位，workstation 才通順；不要把 stationery 混淆成用品。",
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "office_equipment",
+        "item:workstation"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_rv_021",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "review_question",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment_review",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Quick review: Which office word most nearly means an internal phone number for one employee?",
+      "options": {
+        "A": "workstation",
+        "B": "extension",
+        "C": "stationery",
+        "D": "photocopier"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "語意指員工的內線分機，extension 才正確；不要和 workstation 混淆成工作座位。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "review_row",
+        "item:extension"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_rv_022",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "review_question",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment_review",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Quick review: Which office word most nearly means a machine that makes paper copies?",
+      "options": {
+        "A": "extension",
+        "B": "workstation",
+        "C": "photocopier",
+        "D": "stationery"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "語意指用來影印文件的機器，photocopier 才對；不要和 extension 混淆成分機。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "review_row",
+        "item:photocopier"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_rv_023",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "review_question",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment_review",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Quick review: Which office word most nearly means office supplies such as pens and envelopes?",
+      "options": {
+        "A": "workstation",
+        "B": "extension",
+        "C": "photocopier",
+        "D": "stationery"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "語意指筆和信封等文具用品，stationery 才合理；不要誤選 photocopier 這種設備。",
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "review_row",
+        "item:stationery"
+      ]
+    },
+    {
+      "question_id": "v2_a_71_rv_024",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "review_question",
+      "skill": "scene_vocabulary",
+      "subskill": "office_equipment_review",
+      "grammar_link_id": "SCENE_VOCAB_CONTEXT",
+      "question_text": "Quick review: Which office word most nearly means an employee's computer desk area?",
+      "options": {
+        "A": "workstation",
+        "B": "stationery",
+        "C": "extension",
+        "D": "photocopier"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "語意指員工的電腦工作位，workstation 才正確；不要和 stationery 混淆成文具。",
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "compact_prompt_probe",
+        "toeic_scene",
+        "office_administration",
+        "review_row",
+        "item:workstation"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import {
   PASS_STATUSES,
   state,
   html,
+  renderAdvancedToolsPanel,
   pct,
   seconds,
   average,
@@ -19,6 +20,7 @@ const SEAL_ACCURACY_TARGET = 0.85;
 const SEAL_REPEATED_ERROR_LIMIT = 0.05;
 const SEAL_RECENT_ATTEMPT_LIMIT = 80;
 const SEAL_MIN_RECENT_ATTEMPTS = 20;
+export const V0_DIAGNOSTIC_MIN_ATTEMPTS = 20;
 
 function calculateStreak() {
   const today = window.VocabScoring.localDate();
@@ -40,6 +42,7 @@ function calculateStreak() {
 export function renderToday() {
   const today = window.VocabScoring.localDate();
   const lesson = currentLesson();
+  const hasLesson = Boolean(lesson);
   const todayAttempts = state.attempts.filter((attempt) => localDateFromTimestamp(attempt.timestamp) === today);
   const todaySessions = state.sessions.filter((session) => session.date === today);
   const dailyGoal = Number(state.prefs.daily_goal_questions || 30);
@@ -52,15 +55,30 @@ export function renderToday() {
   const completed = state.lessons.filter((item) => PASS_STATUSES.has(item.status)).length;
   const pendingQueue = state.reviewQueue.filter((item) => item.status === "pending" && (!item.due_date || String(item.due_date) <= today));
   const diagnostic = buildDiagnosticRecommendation();
-  const nextAction = pendingQueue.length ? "review_due_items" : lesson?.status === "needs_retake" ? "retake_current_lesson" : "start_current_lesson";
+  const nextAction = pendingQueue.length
+    ? "review_due_items"
+    : !hasLesson
+      ? "open_rebuild_plan"
+      : lesson.status === "needs_retake"
+        ? "retake_current_lesson"
+        : "start_current_lesson";
   const nextActionLabel = nextAction === "review_due_items"
     ? `複習 ${pendingQueue.length} 個到期項目`
+    : nextAction === "open_rebuild_plan"
+    ? "正式課程重建中，請先進入課程地圖或題庫管理。"
     : nextAction === "retake_current_lesson"
     ? `重跑 ${html(lesson?.lesson_id || "")}`
     : `${html(lesson?.lesson_id || "")} · ${html(lesson?.title || "")}`;
   const nextActionBtn = nextAction === "review_due_items"
     ? `<button class="button primary" type="button" onclick="VocabTracker.startReviewMode('due')">開始複習</button>`
+    : nextAction === "open_rebuild_plan"
+    ? `<button class="button primary" type="button" onclick="VocabTracker.setView('roadmap')">查看課程地圖</button>`
     : `<button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">${nextAction === "retake_current_lesson" ? "開始重跑" : "開始課程"}</button>`;
+  const heroStage = lesson?.stage || "REBUILD";
+  const heroStageName = lesson?.stage_name || "重建中";
+  const heroSubtitle = lesson
+    ? `${html(lesson.lesson_id)} · ${html(lesson.title || "尚未選擇課程")}`
+    : "production seed 目前為空，可先查看課程地圖或使用題庫管理。";
 
   return `
     ${buildCompletionMessage() ? `<div class="tracker-alert ok">${html(buildCompletionMessage())}</div>` : ""}
@@ -75,8 +93,8 @@ export function renderToday() {
     <section class="tracker-hero">
       <div>
         <div class="tracker-kicker">目前階段</div>
-        <h2>${html(lesson?.stage || "V0")} ${html(lesson?.stage_name || "診斷")}</h2>
-        <p>${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "尚未選擇課程")}</p>
+        <h2>${html(heroStage)} ${html(heroStageName)}</h2>
+        <p>${html(heroSubtitle)}</p>
       </div>
       ${nextActionBtn}
     </section>
@@ -104,10 +122,14 @@ export function renderToday() {
         <div class="tracker-actions">
           ${nextActionBtn}
           <button class="button secondary" type="button" onclick="VocabTracker.setView('mistakes')">錯題複習</button>
-          <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">資料匯出</button>
-          <button class="button secondary" type="button" onclick="VocabTracker.setView('bank')">題庫</button>
         </div>
       </article>
+      ${renderAdvancedToolsPanel({
+        tag: "article",
+        testId: "today-advanced-tools",
+        actionsTestId: "today-advanced-tools-actions",
+        note: "匯出完整資料封包與題庫管理屬於進階 / 維護功能；一般學習請優先使用下一步與錯題複習。"
+      })}
       <article class="tracker-panel">
         <h3>今日主要錯因</h3>
         ${topErrors.length ? `<ol class="tracker-list">${topErrors.map(([code, count]) => `<li>${html(errorCodeLabel(code))} <small class="muted-note error-code-tag">${html(code)}</small> <span>${count}</span></li>`).join("")}</ol>` : `<p class="muted-note">今天還沒有錯題紀錄。</p>`}
@@ -148,6 +170,16 @@ function buildDiagnosticRecommendation() {
   const v0Attempts = state.attempts.filter((attempt) => attempt.stage === "V0");
   if (!v0Attempts.length) return null;
 
+  if (v0Attempts.length < V0_DIAGNOSTIC_MIN_ATTEMPTS) {
+    return {
+      status: "insufficient_data",
+      attemptCount: v0Attempts.length,
+      minAttempts: V0_DIAGNOSTIC_MIN_ATTEMPTS,
+      remainingAttempts: V0_DIAGNOSTIC_MIN_ATTEMPTS - v0Attempts.length,
+      reason: `V0 診斷資料不足：目前 ${v0Attempts.length}/${V0_DIAGNOSTIC_MIN_ATTEMPTS} 次作答，暫不產生分流建議。`
+    };
+  }
+
   const grouped = {};
   v0Attempts.forEach((attempt) => {
     const type = attempt.question_type || "unknown";
@@ -182,6 +214,9 @@ function buildDiagnosticRecommendation() {
       : "V0 已相對穩定，可以進入正常單字訓練。";
 
   return {
+    status: "available",
+    attemptCount: v0Attempts.length,
+    minAttempts: V0_DIAGNOSTIC_MIN_ATTEMPTS,
     overallAccuracy,
     primaryStage,
     primaryLesson,
@@ -191,6 +226,25 @@ function buildDiagnosticRecommendation() {
 }
 
 function renderDiagnosticRecommendation(diagnostic) {
+  if (diagnostic.status === "insufficient_data") {
+    return `
+      <section class="tracker-panel diagnostic-panel" data-testid="diagnostic-recommendation">
+        <div class="panel-head-row">
+          <div>
+            <h3>V0 診斷資料不足</h3>
+            <p class="muted-note">${html(diagnostic.reason)}</p>
+          </div>
+          <button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">打開課程地圖</button>
+        </div>
+        <div class="diagnostic-summary">
+          <span>${html(diagnostic.attemptCount)}/${html(diagnostic.minAttempts)} 次作答</span>
+          <span>尚需 ${html(diagnostic.remainingAttempts)} 次</span>
+          <span>暫不產生分流建議</span>
+        </div>
+      </section>
+    `;
+  }
+
   const action = diagnostic.primaryLesson
     ? `<button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(diagnostic.primaryLesson.lesson_id)}')">開始 ${html(diagnostic.primaryLesson.lesson_id)}</button>`
     : `<button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">打開課程地圖</button>`;
@@ -223,7 +277,14 @@ function renderDiagnosticRecommendation(diagnostic) {
 }
 
 function renderTodayLessonFocus(lesson) {
-  if (!lesson) return `<p class="muted-note">目前沒有可開始的課程。</p>`;
+  if (!lesson) {
+    return `
+      <div class="today-focus">
+        <span>目前沒有可開始的正式課程</span>
+        <span>建議先查看課程地圖或前往題庫管理</span>
+      </div>
+    `;
+  }
   const ids = new Set([...(lesson.question_ids || []), ...(lesson.review_question_ids || [])]);
   const questionTypes = topCounts(state.questions.filter((question) => ids.has(question.question_id)), "type", 4);
   const targetItems = (lesson.target_items || [])
@@ -299,13 +360,18 @@ export function buildStageSealReadiness(stageMeta) {
     && queueBelongsToStage(entry, stageMeta.stage)
   ));
 
+  const plannedLessonCount = Number(stageMeta.total_lessons || 0);
   const hasLessons = lessons.length > 0;
+  const planned = !hasLessons && plannedLessonCount === 0;
+  const hasAttempts = attempts.length > 0;
+  const noData = !planned && !hasLessons;
+  const awaitingAttempts = hasLessons && !hasAttempts;
   const hasEnoughRecentAttempts = recentAttempts.length >= SEAL_MIN_RECENT_ATTEMPTS;
   const checks = [
     {
       label: "課程完成",
       ok: hasLessons && done === lessons.length,
-      detail: hasLessons ? `${done}/${lessons.length} 已完成` : `${stageMeta.total_lessons || 0} 規劃中`
+      detail: hasLessons ? `${done}/${lessons.length} 已完成` : planned ? `${plannedLessonCount} 規劃中` : "尚未載入課程資料"
     },
     {
       label: "到期複習",
@@ -317,14 +383,14 @@ export function buildStageSealReadiness(stageMeta) {
       ok: hasEnoughRecentAttempts && Number(repeatedRate || 0) <= SEAL_REPEATED_ERROR_LIMIT,
       detail: hasEnoughRecentAttempts
         ? `${pct(repeatedRate)} <= ${pct(SEAL_REPEATED_ERROR_LIMIT)}`
-        : `需至少 ${SEAL_MIN_RECENT_ATTEMPTS} 次作答`
+        : hasAttempts ? `需至少 ${SEAL_MIN_RECENT_ATTEMPTS} 次作答（目前 ${recentAttempts.length}）` : "尚未有作答資料"
     },
     {
       label: "近期正確率",
       ok: hasEnoughRecentAttempts && Number(recentAccuracy || 0) >= SEAL_ACCURACY_TARGET,
       detail: hasEnoughRecentAttempts
         ? `${pct(recentAccuracy)} 最近 ${recentAttempts.length} 題`
-        : `需至少 ${SEAL_MIN_RECENT_ATTEMPTS} 次作答`
+        : hasAttempts ? `需至少 ${SEAL_MIN_RECENT_ATTEMPTS} 次作答（目前 ${recentAttempts.length}）` : "尚未有作答資料"
     }
   ];
   const allSealed = hasLessons && lessons.every((lesson) => lesson.status === "sealed");
@@ -342,7 +408,9 @@ export function buildStageSealReadiness(stageMeta) {
     stage: stageMeta.stage,
     stage_id: stageMeta.stage,
     stageName: stageMeta.stage_name,
-    planned: !hasLessons,
+    planned,
+    noData,
+    awaitingAttempts,
     ready,
     is_ready: ready,
     allSealed,
@@ -366,8 +434,16 @@ function renderStageSealReadiness(readiness) {
     `;
   }
 
-  const label = readiness.allSealed ? "已封關" : readiness.ready ? "可封關" : "開放中";
-  const statusClass = readiness.allSealed ? "is-sealed" : readiness.ready ? "is-ready" : "is-open";
+  const label = readiness.allSealed
+    ? "已封關"
+    : readiness.ready
+      ? "可封關"
+      : readiness.noData
+        ? "無資料"
+        : readiness.awaitingAttempts
+          ? "待作答"
+          : "未達標";
+  const statusClass = readiness.allSealed ? "is-sealed" : readiness.ready ? "is-ready" : readiness.noData ? "is-no-data" : "is-open";
 
   return `
     <div class="stage-seal-card ${statusClass}" data-testid="stage-seal-card-${html(readiness.stage)}">
@@ -379,7 +455,7 @@ function renderStageSealReadiness(readiness) {
       <div class="stage-seal-checks">
         ${readiness.checks.map((check) => `
           <span class="${check.ok ? "ok" : "wait"}">
-            <b>${check.ok ? "完成" : "待補"}</b> ${html(check.label)}：${html(check.detail)}
+            <b>${check.ok ? "完成" : readiness.noData ? "需資料" : readiness.awaitingAttempts ? "待作答" : "待補"}</b> ${html(check.label)}：${html(check.detail)}
           </span>
         `).join("")}
       </div>

@@ -1,0 +1,1466 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_14_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-134",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-14-current-isolated-audit",
+    "isolated_audit_scope": "28 lessons / 573 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_133_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 9 candidate: V3-W1-14 business-coordination collocation lesson 4 (6 target items).",
+    "Part6 on items 3-6; Q17-Q20 spread earlier items; Q10 reuses v3_a_133_rv_024.",
+    "Promotion target lesson id: V3-A-134."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-14",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 134,
+    "title": "業務協調 搭配詞 4",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "業務協調",
+    "target_items": [
+      "item_coll_break_off",
+      "item_coll_interfere_with",
+      "item_coll_leave_to",
+      "item_coll_interfere_in",
+      "item_coll_fall_through",
+      "item_coll_follow_through"
+    ],
+    "question_ids": [
+      "V3-W1-14_Q01",
+      "V3-W1-14_Q02",
+      "V3-W1-14_Q03",
+      "V3-W1-14_Q04",
+      "V3-W1-14_Q05",
+      "V3-W1-14_Q06",
+      "V3-W1-14_Q07",
+      "V3-W1-14_Q08",
+      "V3-W1-14_Q09",
+      "v3_a_133_rv_024",
+      "V3-W1-14_Q11",
+      "V3-W1-14_Q12",
+      "V3-W1-14_Q13",
+      "V3-W1-14_Q14",
+      "V3-W1-14_Q15",
+      "V3-W1-14_Q16",
+      "V3-W1-14_Q17",
+      "V3-W1-14_Q18",
+      "V3-W1-14_Q19",
+      "V3-W1-14_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-14_R01",
+      "V3-W1-14_R02",
+      "V3-W1-14_R03",
+      "V3-W1-14_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_14",
+      "topic_lesson_index": 4,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 1,
+        "C": 5
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w1_14_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_133_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-14_Q01",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Negotiators had to ______ talks when the supplier refused to revise liability clauses.",
+      "options": {
+        "A": "break off",
+        "B": "break in",
+        "C": "break up",
+        "D": "break out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "break off 中斷；終止；語境需要中斷，故用 break off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "break off",
+        "gloss_zh": "中斷；終止",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "break off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q02",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The CEO asked the moderator to ______ the panel discussion after the protest began.",
+      "options": {
+        "A": "break off",
+        "B": "break in",
+        "C": "break up",
+        "D": "break out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "break off 中斷；終止；語境需要中斷，故用 break off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "break off",
+        "gloss_zh": "中斷；終止",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "break off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q03",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Loose cables near the assembly line could ______ the calibration sensors.",
+      "options": {
+        "A": "interfere with",
+        "B": "interfere in",
+        "C": "interfere at",
+        "D": "interfere on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "interfere with 妨礙；干擾；語境需要妨礙，故用 interfere with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere with",
+        "gloss_zh": "妨礙；干擾",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q04",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Background noise from construction may ______ the conference microphones.",
+      "options": {
+        "A": "interfere with",
+        "B": "interfere in",
+        "C": "interfere at",
+        "D": "interfere on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "interfere with 妨礙；干擾；語境需要妨礙，故用 interfere with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere with",
+        "gloss_zh": "妨礙；干擾",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q05",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The director decided to ______ the vendor selection to the procurement committee.",
+      "options": {
+        "A": "leave to",
+        "B": "leave in",
+        "C": "leave on",
+        "D": "leave with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "leave to 交由…處理；語境需要交由…處理，故用 leave to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "leave to",
+        "gloss_zh": "交由…處理",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q06",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the travel reimbursements to the finance desk this afternoon.",
+      "options": {
+        "A": "leave to",
+        "B": "leave in",
+        "C": "leave on",
+        "D": "leave with"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "leave to 交由…處理；語境需要交由…處理，故用 leave to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "leave to",
+        "gloss_zh": "交由…處理",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q07",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Head office should not ______ local hiring decisions without consulting site managers.",
+      "options": {
+        "A": "interfere with",
+        "B": "interfere in",
+        "C": "interfere at",
+        "D": "interfere on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "interfere in 干涉；語境需要干涉，故用 interfere in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere in",
+        "gloss_zh": "干涉",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q08",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The union warned that regulators might ______ wage negotiations next quarter.",
+      "options": {
+        "A": "interfere with",
+        "B": "interfere in",
+        "C": "interfere at",
+        "D": "interfere on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "interfere in 干涉；語境需要干涉，故用 interfere in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere in",
+        "gloss_zh": "干涉",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q09",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The merger may ______ if shareholders reject the revised valuation.",
+      "options": {
+        "A": "fall in",
+        "B": "fall through",
+        "C": "fall on",
+        "D": "fall off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "fall through 失敗；落空；語境需要失敗，故用 fall through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "fall through",
+        "gloss_zh": "失敗；落空",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q11",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Project leads must ______ on the action items assigned during the retrospective.",
+      "options": {
+        "A": "follow in",
+        "B": "follow through",
+        "C": "follow on",
+        "D": "follow up"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "follow through 貫徹到底；語境需要貫徹到底，故用 follow through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_follow_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "follow through",
+        "gloss_zh": "貫徹到底",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "follow through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q12",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Customer success managers ______ with clients until onboarding tickets are closed.",
+      "options": {
+        "A": "follow in",
+        "B": "follow through",
+        "C": "follow on",
+        "D": "follow up"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "follow through 貫徹到底；語境需要貫徹到底，故用 follow through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_follow_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "follow through",
+        "gloss_zh": "貫徹到底",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "follow through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q13",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The regional office received dozens of warranty claims after the product recall. Because headquarters lacked local staff, managers agreed to ______ claim reviews to the partner service center. Updated response timelines were posted for dealers.",
+      "options": {
+        "A": "leave in",
+        "B": "leave to",
+        "C": "leave on",
+        "D": "leave with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "leave to 交由…處理；語境要求交由…處理，故用 leave to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "leave to",
+        "gloss_zh": "交由…處理",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q14",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The joint venture board asked division heads to set their own training budgets. Corporate counsel reminded executives not to ______ subsidiary staffing plans without written approval. Each unit kept hiring authority for the pilot year.",
+      "options": {
+        "A": "interfere with",
+        "B": "interfere at",
+        "C": "interfere in",
+        "D": "interfere on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "interfere in 干涉；語境要求干涉，故用 interfere in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere in",
+        "gloss_zh": "干涉",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q15",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The city council delayed voting on the tax incentive package twice this month. Investors feared the factory relocation deal would ______ before permits expired. The mayor scheduled a special session for Friday morning.",
+      "options": {
+        "A": "fall in",
+        "B": "fall on",
+        "C": "fall through",
+        "D": "fall off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "fall through 失敗；落空；語境要求失敗，故用 fall through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "fall through",
+        "gloss_zh": "失敗；落空",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q16",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "After the compliance workshop, department heads signed a checklist of remediation tasks. The audit committee will verify that each manager ______ on the promised corrections. Progress reports are due every two weeks.",
+      "options": {
+        "A": "follow in",
+        "B": "follow on",
+        "C": "follow through",
+        "D": "follow up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "follow through 貫徹到底；語境要求貫徹到底，故用 follow through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_follow_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "follow through",
+        "gloss_zh": "貫徹到底",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "follow through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q17",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the video interview if the candidate loses the connection again.",
+      "options": {
+        "A": "break in",
+        "B": "break up",
+        "C": "break off",
+        "D": "break out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "break off 中斷；終止；語境需要中斷，故用 break off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "break off",
+        "gloss_zh": "中斷；終止",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "break off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q18",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Do not let outdated software licenses ______ the migration schedule.",
+      "options": {
+        "A": "interfere in",
+        "B": "interfere at",
+        "C": "interfere with",
+        "D": "interfere on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "interfere with 妨礙；干擾；語境需要妨礙，故用 interfere with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere with",
+        "gloss_zh": "妨礙；干擾",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q19",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The parent company promised not to ______ day-to-day warehouse operations.",
+      "options": {
+        "A": "interfere with",
+        "B": "interfere at",
+        "C": "interfere in",
+        "D": "interfere on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "interfere in 干涉；語境需要干涉，故用 interfere in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere in",
+        "gloss_zh": "干涉",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_Q20",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Our financing arrangement could ______ unless the bank extends the deadline.",
+      "options": {
+        "A": "fall in",
+        "B": "fall on",
+        "C": "fall off",
+        "D": "fall through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "fall through 失敗；落空；語境需要失敗，故用 fall through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "fall through",
+        "gloss_zh": "失敗；落空",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_R01",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The host may ______ the live stream if technical issues continue.",
+      "options": {
+        "A": "break in",
+        "B": "break up",
+        "C": "break out",
+        "D": "break off"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "break off 中斷；終止；語境需要中斷，故用 break off 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_break_off",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "break off",
+        "gloss_zh": "中斷；終止",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "break off",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_R02",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Bright sunlight can ______ the barcode scanners at the loading dock.",
+      "options": {
+        "A": "interfere in",
+        "B": "interfere at",
+        "C": "interfere on",
+        "D": "interfere with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "interfere with 妨礙；干擾；語境需要妨礙，故用 interfere with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_interfere_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "interfere with",
+        "gloss_zh": "妨礙；干擾",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "interfere with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_R03",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "We should ______ the contract redlines to the legal team overnight.",
+      "options": {
+        "A": "leave in",
+        "B": "leave on",
+        "C": "leave with",
+        "D": "leave to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "leave to 交由…處理；語境需要交由…處理，故用 leave to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "leave to",
+        "gloss_zh": "交由…處理",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-14_R04",
+      "lesson_id": "V3-W1-14",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The sponsorship deal might ______ if the venue fee increases again.",
+      "options": {
+        "A": "fall in",
+        "B": "fall on",
+        "C": "fall off",
+        "D": "fall through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "fall through 失敗；落空；語境需要失敗，故用 fall through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_fall_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-14",
+        "topic:業務協調",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_14",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "業務協調 搭配詞 4",
+        "source_phrase": "fall through",
+        "gloss_zh": "失敗；落空",
+        "source_topic": "業務協調",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "fall through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave9_candidate",
+        "authored_slice_lesson_id": "V3-W1-14",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_break_off",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-14",
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "base_word": "break off",
+      "variants": [
+        "break off"
+      ],
+      "chinese": "中斷",
+      "example": "The coordinator will break off the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "break off",
+        "gloss_zh": "中斷；終止",
+        "source_lessons": [
+          "V3-W1-14"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave9_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_interfere_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-14",
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "base_word": "interfere with",
+      "variants": [
+        "interfere with"
+      ],
+      "chinese": "妨礙",
+      "example": "The coordinator will interfere with the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "interfere with",
+        "gloss_zh": "妨礙；干擾",
+        "source_lessons": [
+          "V3-W1-14"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave9_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_leave_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-14",
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "base_word": "leave to",
+      "variants": [
+        "leave to"
+      ],
+      "chinese": "交由…處理",
+      "example": "The coordinator will leave to the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "leave to",
+        "gloss_zh": "交由…處理",
+        "source_lessons": [
+          "V3-W1-14"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave9_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_interfere_in",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-14",
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "base_word": "interfere in",
+      "variants": [
+        "interfere in"
+      ],
+      "chinese": "干涉",
+      "example": "The coordinator will interfere in the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "interfere in",
+        "gloss_zh": "干涉",
+        "source_lessons": [
+          "V3-W1-14"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave9_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_fall_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-14",
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "base_word": "fall through",
+      "variants": [
+        "fall through"
+      ],
+      "chinese": "失敗",
+      "example": "The coordinator will fall through the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "fall through",
+        "gloss_zh": "失敗；落空",
+        "source_lessons": [
+          "V3-W1-14"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave9_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_follow_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-14",
+      "lesson_ids": [
+        "V3-W1-14"
+      ],
+      "base_word": "follow through",
+      "variants": [
+        "follow through"
+      ],
+      "chinese": "貫徹到底",
+      "example": "The coordinator will follow through the cross-team briefing before the partners arrive.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "業務協調",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "follow through",
+        "gloss_zh": "貫徹到底",
+        "source_lessons": [
+          "V3-W1-14"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave9_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_14_wave_9_2026_05_21",
+  "promoted_lesson_id": "V3-A-134"
+}

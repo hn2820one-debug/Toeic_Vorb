@@ -23,7 +23,8 @@
 - Do not modify Program A: `C:\Users\Keith\toeic-app`.
 - Do not enable V4.
 - Do not move V4 draft files into `data/vocab/`.
-- Do not add backend, login, cloud sync, build tooling, or runtime AI question generation.
+- Do not add backend, build tooling, or runtime AI question generation.
+- Do not add login/cloud sync except the approved `SYNC-01` scoped Google Identity Services + Google Drive API learner-record sync plan; it must remain local-first and must not modify production seed data.
 - Do not refactor the whole app.
 - Do not change production question or curriculum data without seed-version sync and full validation.
 - Treat browser Question Bank edits as IndexedDB-only unless a future task explicitly asks to update source JSON.
@@ -34,29 +35,30 @@
 
 Static local-first PWA for TOEIC vocabulary learning (target: 570 → 750).
 - Local-first: all data in IndexedDB (`toeic_vocab_tracker_db`), no backend
-- No login, cloud sync, build step, or runtime AI question generation
+- No active login, cloud sync, build step, or runtime AI question generation in the shipped runtime
+- `SYNC-01` is the approved future exception for Google Drive learner-record sync only; it does not authorize backend work, production seed changes, or V4 activation
 - Tracks attempts, mastery, error codes, review queue per vocab item
 - 8 views: Today / Roadmap / Lesson / Mistakes / Mastery / Export / Question Bank / Settings
 - Accessible at `tracker.html`; launcher at `index.html`
 
 ---
 
-## Question Bank — Current State (2026-05-18)
+## Question Bank — Current State (2026-05-22)
 
 | Stage | Stage Name | Lessons | Questions | Status |
 |-------|-----------|---------|-----------|--------|
 | V0 | Diagnosis | 0 | 0 | Cleared |
 | V1 | Word Family | 0 | 0 | Cleared |
-| V2 | TOEIC Scene Vocabulary | 0 | 0 | Cleared |
-| V3 | Collocation | 0 | 0 | Cleared |
+| V2 | TOEIC Scene Vocabulary | 12 | 240 | Core `V2-A-71`–`V2-A-80` + `V2-MR-01` / `V2-MR-02` live |
+| V3 | Collocation | 27 | 540 | Core `V3-A-121`–`V3-A-143` + `V3-MR-01`–`V3-MR-04` live |
 | V4 | Formal Phrase | 0 active / 50 planned | 0 active / 100 draft | Draft isolated in `drafts/v4/` |
 | V5 | False Friends + Speed Reflex | 50 | 0 | 🔲 Planned |
 | V6 | Integrated Review + Seal Test | 40 | 0 | 🔲 Planned |
 
-**Total: 0 runnable lessons, 0 question-bank rows, 494 vocab items, 18 manifest question files, 0 duplicate stems, 0 full-audit issues**
+**Total: 39 runnable lessons, 780 question-bank rows, 632 vocab items, 18 manifest question files, 0 duplicate stems, 0 full-audit issues**
 Audit tool: `node scripts/audit-quality-full.js` → must output `✅ PASSED`
 
-Production seed manifest remains V0-V3 only, but all production V0-V3 lesson rows and question rows are intentionally cleared. V4 is draft-only in `drafts/v4/` and must not be promoted without a future explicit V4 activation task.
+Production seed manifest remains V0-V3 only. V2 restores `V2-A-71` through `V2-A-80` inside `questions_v2a.json` plus `V2-MR-01` / `V2-MR-02`; V3 restores `V3-A-121` through `V3-A-143` inside `questions_v3a.json` plus `V3-MR-01` through `V3-MR-04`. V4 is draft-only in `drafts/v4/` and must not be promoted without a future explicit V4 activation task.
 
 ---
 
@@ -71,7 +73,9 @@ tests/helpers/seed-idb.ts         → const APP_SEED_VERSION = "..."
 ```
 
 Format: `toeic_vocab_tracker_{description}_{YYYY_MM_DD}`
-Current: `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18`
+Current: `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`
+
+Every production seed change must also create a filled record from `docs/templates/seed-change-record-template.md` under `docs/seed-changes/`; do not treat a seed change as complete without that record.
 
 ---
 
@@ -100,9 +104,10 @@ js/views/settings.js  — Settings, clear session, lesson status override
 data/vocab/curriculum.json          — course structure, lesson list, default user
 data/vocab/questions_v0.json        — V0 manifest file; currently empty after full-bank clear
 data/vocab/questions_v1a–f.json     — V1 manifest files; currently empty after full-bank clear
-data/vocab/questions_v2a–e.json     — V2 manifest files; currently empty after full-bank clear
+data/vocab/questions_v2a.json       — V2 production file; currently contains `V2-A-71` through `V2-A-80`
+data/vocab/questions_v2b–e.json     — Remaining V2 manifest files; currently empty after full-bank clear
 data/vocab/questions_v3a–f.json     — V3 manifest files; currently empty after full-bank clear
-data/vocab/vocab_items.json         — 494 vocabulary items with metadata
+data/vocab/vocab_items.json         — 632 vocabulary items with metadata
 data/vocab/grammar_links.json       — grammar pattern references (optional metadata)
 drafts/v4/questions_v4a.json        — V4 draft only, not production seed
 ```
@@ -161,11 +166,14 @@ Score = accuracy(50) + speed(25) + stability(15) + recency(10), clamped 0–100.
 
 ```
 node scripts/validate-vocab-data.js      — structural vocab validation
+node scripts/check-doc-consistency.js    — active documentation consistency check
 node scripts/audit-quality-full.js       — full production quality audit (must pass)
 node scripts/audit-duplicates.js         — duplicate question_text audit (must be 0)
 npm run test:scoring                     — mastery scoring fixture tests
+npm run test:mup                         — draft minimum usable content-pack verifier
+npm run test:export-governance           — export feedback governance verifier
 npx playwright test                      — run current Playwright suite
-npm run test:all                      — scoring + data validation + Playwright
+npm run test:all                      — scoring + data/doc/MUP/export-governance validation + Playwright
 tests/lesson-flow.spec.ts             — full lesson run
 tests/review-mode.spec.ts             — review queue
 tests/v2-v3-content.spec.ts           — V2/V3 question rendering
@@ -230,3 +238,49 @@ Full list: `docs/KNOWN_ISSUES.md`
 - Mastery scoring fixture tests added.
 - Strict question-bank prune removed 25 production direct-definition rows that violated the new semantic-meaning policy; production audit now passes with warnings only.
 - Full production bank clear removed the remaining V0-V3 lesson rows and production question rows after the strict warning-level review; production audit now passes with zero questions and zero lessons.
+
+## Recent History (2026-05-19)
+
+- `speed_drill` lesson runtime countdown was realigned to the canonical 8-second limit already used by scoring, docs, and seed fixtures.
+- V0 Diagnostic Recommendation now requires at least 20 V0 attempts; partial data is marked insufficient in Today and export.
+
+## Recent History (2026-05-20)
+
+- First rebuilt production wave restored `V2-A-71` with 1 lesson row and 24 production question rows in `questions_v2a.json`.
+- Wave 2 production promotion added `V2-A-72` through `V2-A-74`, bringing production to 4 lesson rows and 96 production question rows.
+- Wave 3 production promotion added `V2-A-75` through `V2-A-77`, bringing production to 7 lesson rows and 168 production question rows.
+- `V2-MR-01` mixed-review promotion added 1 curriculum lesson row and 0 question rows, bringing production to 8 runnable lessons and 168 question-bank rows.
+- Production seed version advanced to `toeic_vocab_tracker_v2_mr_01_mixed_review_2026_05_21` and the service worker cache advanced to `toeic-vorb-v14`.
+- Wave 4 production promotion added `V2-A-78` through `V2-A-80`, bringing production to 11 runnable lessons and 240 question-bank rows.
+- Production seed version advanced to `toeic_vocab_tracker_v2_a_78_80_wave_4_2026_05_21` and the service worker cache advanced to `toeic-vorb-v15`.
+- C-09 post-release review accepted the 4 `V2-A-71` staircase progression warnings as short-term debt only; no live seed rewrite is authorized until real learner/export evidence or an isolated draft probe justifies it.
+
+## Recent History (2026-05-21)
+
+- V3 MR-04 mixed review for `V3-A-136`–`140`: 36 lessons, 711 rows unchanged. Seed `toeic_vocab_tracker_v3_mr_04_mixed_review_2026_05_21`; SW `toeic-vorb-v34`.
+- V3 wave 15 promoted `V3-W2-04` → `V3-A-140` (財務會計 1): 35 lessons, 711 rows. Seed `toeic_vocab_tracker_v3_w2_04_wave_15_2026_05_21`; SW `toeic-vorb-v33`.
+- V3 wave 14 promoted `V3-W2-03` → `V3-A-139` (行銷與宣傳 2): 34 lessons, 688 rows. Seed `toeic_vocab_tracker_v3_w2_03_wave_14_2026_05_21`; SW `toeic-vorb-v32`.
+- V3 wave 13 promoted `V3-W2-02` → `V3-A-138` (行銷與宣傳 1): 33 lessons, 665 rows; repaired `v3_a_137_rv_021` duplicate stem. Seed `toeic_vocab_tracker_v3_w2_02_wave_13_2026_05_21`; SW `toeic-vorb-v31`.
+- V3 wave 12 promoted `V3-W2-01` → `V3-A-137` (人事與組織 3): 32 lessons, 642 rows. Seed `toeic_vocab_tracker_v3_w2_01_wave_12_2026_05_21`; SW `toeic-vorb-v30`.
+- V3-MR-03 promoted for `V3-A-131`–`135`: 31 runnable lessons, 619 rows unchanged. Seed `toeic_vocab_tracker_v3_mr_03_mixed_review_2026_05_21`; SW `toeic-vorb-v29`. Wave-1 draft ends at `V3-W1-16`.
+- V3 wave 11 promoted `V3-W1-16` → `V3-A-136` (人事與組織 2): 30 runnable lessons, 619 question rows, 594 vocab items. Reuses `v3_a_135_rv_024`. Seed `toeic_vocab_tracker_v3_w1_16_wave_11_2026_05_21`; SW `toeic-vorb-v28`.
+
+## Recent History (2026-05-22)
+
+- V3 wave 16 promoted `V3-W2-05` → `V3-A-141` (財務會計 2): 37 runnable lessons, 734 question-bank rows, 623 vocab items. Reuses `v3_a_140_rv_024`. Seed `toeic_vocab_tracker_v3_w2_05_wave_16_2026_05_22`; SW `toeic-vorb-v35`.
+- V3 wave 17 promoted `V3-W2-06` → `V3-A-142` (財務會計 3): 38 runnable lessons, 757 question-bank rows, 629 vocab items. Reuses `v3_a_141_rv_024`. Seed `toeic_vocab_tracker_v3_w2_06_wave_17_2026_05_22`; SW `toeic-vorb-v36`.
+- V3 wave 18 promoted `V3-W2-07` → `V3-A-143` (財務會計 4): 39 runnable lessons, 780 question-bank rows, 632 vocab items. Reuses `v3_a_142_rv_024`. Seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`; SW `toeic-vorb-v37`.
+- V3 wave 10 promoted `V3-W1-15` → `V3-A-135` (人事與組織 1): 29 runnable lessons, 596 question rows, 590 vocab items. Seed `toeic_vocab_tracker_v3_w1_15_wave_10_2026_05_21`; SW `toeic-vorb-v27`.
+- V3 wave 9 promoted `V3-W1-14` → `V3-A-134`.
+- V3 wave 8 promoted `V3-W1-13` → `V3-A-133`.
+- V3 wave 7 promoted `V3-W1-12` → `V3-A-132`.
+- V3 wave 6 promoted `V3-W1-11` → `V3-A-131`; post-promote Q17–Q20 rebalance fixed target coverage audit.
+- T049 export feedback review completed with insufficient current V2 learner data: the only repo export is 2026-05-14 `V1-B-21` with 24 attempts / 1 session / 0 V2 attempts.
+- No V2 live seed rewrite is authorized by current learner evidence; the 40 V2 staircase warnings remain non-blocking warning debt.
+- `V3-W1-01` was promoted to live `V3-A-121` in the first V3 production wave.
+- `V3-W1-02` and `V3-W1-03` were promoted to live `V3-A-122` and `V3-A-123` in the second V3 production wave.
+- `V3-W1-04` through `V3-W1-06` were promoted to live `V3-A-124` through `V3-A-126` in the third V3 production wave.
+- `V3-W1-08` through `V3-W1-10` were promoted to live `V3-A-128` through `V3-A-130` in the fifth V3 production wave; V3 core is 10/10.
+- `V3-MR-01` and `V3-MR-02` were promoted as curriculum-only mixed-review checkpoints.
+- `V2-MR-02` was promoted as a curriculum-only mixed-review checkpoint. Production is now 24 runnable lessons / 480 question-bank rows.
+- Next process is authoring/validation for `V3-W1-02` onward toward the V3 10-core milestone.

@@ -1,0 +1,1560 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_06_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-126",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-wave3-current-isolated-audit",
+    "isolated_audit_scope": "production baseline + V3-W1-04/05/06 drafts = 17 lessons / 384 questions",
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "duplicate_stems": 0,
+    "old_item_pressure_issues": 0,
+    "explanation_quality_warnings": 0,
+    "preferred_stem_length_warnings": 0,
+    "staircase_warnings": 24,
+    "current_baseline_total_staircase_warnings": 96,
+    "all_warnings_accepted": true
+  },
+  "notes": [
+    "C-11 wave 3 candidate: V3-W1-06 paperwork collocation lesson 3.",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-126."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-06",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 126,
+    "title": "文書作業 搭配詞 3",
+    "estimated_minutes": 35,
+    "lesson_type": "collocation",
+    "topic": "文書作業",
+    "target_items": [
+      "item_coll_divide_into",
+      "item_coll_glance_through",
+      "item_coll_skim_through",
+      "item_coll_at_your_earliest_convenience",
+      "item_coll_lay_out",
+      "item_coll_go_through",
+      "item_coll_leave_out"
+    ],
+    "question_ids": [
+      "V3-W1-06_Q01",
+      "V3-W1-06_Q02",
+      "V3-W1-06_Q03",
+      "V3-W1-06_Q04",
+      "V3-W1-06_Q05",
+      "V3-W1-06_Q06",
+      "V3-W1-06_Q07",
+      "V3-W1-06_Q08",
+      "V3-W1-06_Q09",
+      "V3-W1-06_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-06_Q11",
+      "V3-W1-06_Q12",
+      "V3-W1-06_Q13",
+      "V3-W1-06_Q14",
+      "V3-W1-06_Q15",
+      "V3-W1-06_Q16",
+      "V3-W1-06_Q17",
+      "V3-W1-06_Q18",
+      "V3-W1-06_Q19",
+      "V3-W1-06_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-06_R01",
+      "V3-W1-06_R02",
+      "V3-W1-06_R03",
+      "V3-W1-06_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_06",
+      "topic_lesson_index": 3,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 3,
+        "B": 4,
+        "C": 0
+      },
+      "unresolved_target_count": 7,
+      "authoring_method": "c11_v3_w1_06_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-06_Q01",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The training coordinator will ______ four workshop groups so each room stays within the fire-code limit.",
+      "options": {
+        "A": "divide into",
+        "B": "divide in",
+        "C": "divide on",
+        "D": "divide over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "divide into 分成；語境需要分成，故用 divide into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_divide_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "divide into",
+        "gloss_zh": "分成",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "divide into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q02",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the survey responses by department before compiling the summary chart.",
+      "options": {
+        "A": "divide into",
+        "B": "divide in",
+        "C": "divide on",
+        "D": "divide over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "divide into 分成；語境需要分成，故用 divide into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_divide_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "divide into",
+        "gloss_zh": "分成",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "divide into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q03",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "While waiting for the videoconference to start, she decided to ______ the agenda packet on her desk.",
+      "options": {
+        "A": "glance through",
+        "B": "glance at",
+        "C": "glance on",
+        "D": "glance over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "glance through 瀏覽；語境需要瀏覽，故用 glance through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_glance_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "glance through",
+        "gloss_zh": "瀏覽",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "glance through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q04",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The manager asked new hires to ______ the safety manual before their first site visit.",
+      "options": {
+        "A": "glance through",
+        "B": "glance at",
+        "C": "glance on",
+        "D": "glance over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "glance through 瀏覽；語境需要瀏覽，故用 glance through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_glance_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "glance through",
+        "gloss_zh": "瀏覽",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "glance through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q05",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Because time was short, the auditor could only ______ the expense reports for obvious errors.",
+      "options": {
+        "A": "skim through",
+        "B": "skim at",
+        "C": "skim on",
+        "D": "skim over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "skim through 略讀；語境需要略讀，故用 skim through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_skim_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "skim through",
+        "gloss_zh": "略讀",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "skim through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q06",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Before the meeting, please ______ the briefing notes and flag any outdated figures.",
+      "options": {
+        "A": "skim through",
+        "B": "skim at",
+        "C": "skim on",
+        "D": "skim over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "skim through 略讀；語境需要略讀，故用 skim through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_skim_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "skim through",
+        "gloss_zh": "略讀",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "skim through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q07",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The memo asked vendors to confirm delivery dates ______ so procurement can finalize the schedule.",
+      "options": {
+        "A": "at your latest convenience",
+        "B": "at your earliest convenience",
+        "C": "at your nearest convenience",
+        "D": "at your closest convenience"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "at your earliest convenience 儘快；方便時；語境需要儘快，故用 at your earliest convenience 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_at_your_earliest_convenience",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "at your earliest convenience",
+        "gloss_zh": "儘快；方便時",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "at your earliest convenience",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q08",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please upload the signed contract ______ to avoid delaying the onboarding timeline.",
+      "options": {
+        "A": "at your latest convenience",
+        "B": "at your earliest convenience",
+        "C": "at your nearest convenience",
+        "D": "at your closest convenience"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "at your earliest convenience 儘快；方便時；語境需要儘快，故用 at your earliest convenience 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_at_your_earliest_convenience",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "at your earliest convenience",
+        "gloss_zh": "儘快；方便時",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "at your earliest convenience",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q09",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The project lead will ______ the implementation steps on the whiteboard during tomorrow's briefing.",
+      "options": {
+        "A": "lay in",
+        "B": "lay out",
+        "C": "lay on",
+        "D": "lay off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "lay out 排列；說明；語境需要排列，故用 lay out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "lay out",
+        "gloss_zh": "排列；說明",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q10",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "In the cover letter, please ______ the three phases of the pilot program clearly.",
+      "options": {
+        "A": "lay in",
+        "B": "lay out",
+        "C": "lay on",
+        "D": "lay off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "lay out 排列；說明；語境需要排列，故用 lay out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "lay out",
+        "gloss_zh": "排列；說明",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q11",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Compliance officers must ______ every clause in the revised vendor agreement before approval.",
+      "options": {
+        "A": "go over",
+        "B": "go through",
+        "C": "go under",
+        "D": "go off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "go through 詳查；經歷；語境需要詳查，故用 go through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "go through",
+        "gloss_zh": "詳查；經歷",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q12",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The archive team will ______ the shipment logs to locate the missing pallet labels.",
+      "options": {
+        "A": "go over",
+        "B": "go through",
+        "C": "go under",
+        "D": "go off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "go through 詳查；經歷；語境需要詳查，故用 go through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "go through",
+        "gloss_zh": "詳查；經歷",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q13",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "When summarizing the minutes, do not ______ the action items assigned to each committee.",
+      "options": {
+        "A": "leave in",
+        "B": "leave on",
+        "C": "leave out",
+        "D": "leave off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "leave out 省略；語境需要省略，故用 leave out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "leave out",
+        "gloss_zh": "省略",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q14",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The editor had to ______ confidential salary figures from the public version of the report.",
+      "options": {
+        "A": "leave in",
+        "B": "leave on",
+        "C": "leave out",
+        "D": "leave off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "leave out 省略；語境需要省略，故用 leave out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "leave out",
+        "gloss_zh": "省略",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q15",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The communications team prepared a press summary of the quarterly results. Legal reviewers insisted they ______ unreleased product code names because partners had not signed NDAs. The final draft went to the CEO at noon.",
+      "options": {
+        "A": "leave in",
+        "B": "leave on",
+        "C": "leave out",
+        "D": "leave off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "leave out 省略；語境要求省略，故用 leave out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "leave out",
+        "gloss_zh": "省略",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q16",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "More than eighty volunteers registered for the charity drive. Organizers decided to ______ teams by neighborhood so each group could cover local pickup routes efficiently. Captains will receive maps tonight.",
+      "options": {
+        "A": "divide in",
+        "B": "divide on",
+        "C": "divide into",
+        "D": "divide over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "divide into 分成；語境要求分成，故用 divide into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_divide_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "divide into",
+        "gloss_zh": "分成",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "divide into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q17",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Guests arrived early for the ribbon-cutting ceremony. While technicians tested the microphones, board members ______ the printed seating chart near the entrance. Ushers corrected two misplaced name cards before the doors opened.",
+      "options": {
+        "A": "glance at",
+        "B": "glance on",
+        "C": "glance through",
+        "D": "glance over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "glance through 瀏覽；語境要求瀏覽，故用 glance through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_glance_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "glance through",
+        "gloss_zh": "瀏覽",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "glance through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q18",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The due diligence folder contained hundreds of pages. With the bid deadline approaching, analysts could only ______ the appendices for red-flag expenses. A full line-by-line review will happen after shortlisting.",
+      "options": {
+        "A": "skim at",
+        "B": "skim on",
+        "C": "skim through",
+        "D": "skim over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "skim through 略讀；語境要求略讀，故用 skim through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_skim_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "skim through",
+        "gloss_zh": "略讀",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "skim through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q19",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The IT ticket system will be offline this weekend. The help desk email asks employees to report missing files ______ so technicians can restore backups before Monday's payroll run. Delays may affect direct deposits.",
+      "options": {
+        "A": "at your latest convenience",
+        "B": "at your nearest convenience",
+        "C": "at your closest convenience",
+        "D": "at your earliest convenience"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "at your earliest convenience 儘快；方便時；語境要求儘快，故用 at your earliest convenience 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_at_your_earliest_convenience",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "at your earliest convenience",
+        "gloss_zh": "儘快；方便時",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "at your earliest convenience",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_Q20",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The facilities committee met to plan the office move. The director used diagrams to ______ where desks, printers, and meeting pods would be placed on each floor. Staff feedback is due by Friday.",
+      "options": {
+        "A": "lay in",
+        "B": "lay on",
+        "C": "lay off",
+        "D": "lay out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "lay out 排列；說明；語境要求排列，故用 lay out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_lay_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "lay out",
+        "gloss_zh": "排列；說明",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "lay out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_R01",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please do not ______ the safety disclaimer when you publish the checklist.",
+      "options": {
+        "A": "leave in",
+        "B": "leave on",
+        "C": "leave off",
+        "D": "leave out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "leave out 省略；語境需要省略，故用 leave out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_leave_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "leave out",
+        "gloss_zh": "省略",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "leave out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_R02",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "We will ______ three breakout sessions based on job function.",
+      "options": {
+        "A": "divide in",
+        "B": "divide on",
+        "C": "divide over",
+        "D": "divide into"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "divide into 分成；語境需要分成，故用 divide into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_divide_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "divide into",
+        "gloss_zh": "分成",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "divide into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_R03",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Could you ______ the attachment and confirm the meeting time?",
+      "options": {
+        "A": "glance at",
+        "B": "glance on",
+        "C": "glance over",
+        "D": "glance through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "glance through 瀏覽；語境需要瀏覽，故用 glance through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_glance_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "glance through",
+        "gloss_zh": "瀏覽",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "glance through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-06_R04",
+      "lesson_id": "V3-W1-06",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The auditor will ______ the warehouse logs before signing the release form.",
+      "options": {
+        "A": "go over",
+        "B": "go under",
+        "C": "go off",
+        "D": "go through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "go through 詳查；經歷；語境需要詳查，故用 go through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_go_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-06",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_06",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 3",
+        "source_phrase": "go through",
+        "gloss_zh": "詳查；經歷",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "go through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-06",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_divide_into",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "divide into",
+      "variants": [
+        "divide into"
+      ],
+      "chinese": "分成",
+      "example": "Please divide into the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "divide into",
+        "gloss_zh": "分成",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_glance_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "glance through",
+      "variants": [
+        "glance through"
+      ],
+      "chinese": "瀏覽",
+      "example": "Please glance through the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "glance through",
+        "gloss_zh": "瀏覽",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_skim_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "skim through",
+      "variants": [
+        "skim through"
+      ],
+      "chinese": "略讀",
+      "example": "Please skim through the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "skim through",
+        "gloss_zh": "略讀",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_at_your_earliest_convenience",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "at your earliest convenience",
+      "variants": [
+        "at your earliest convenience"
+      ],
+      "chinese": "儘快",
+      "example": "Please at your earliest convenience the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "at your earliest convenience",
+        "gloss_zh": "儘快；方便時",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_lay_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "lay out",
+      "variants": [
+        "lay out"
+      ],
+      "chinese": "排列",
+      "example": "Please lay out the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "lay out",
+        "gloss_zh": "排列；說明",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_go_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "go through",
+      "variants": [
+        "go through"
+      ],
+      "chinese": "詳查",
+      "example": "Please go through the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "go through",
+        "gloss_zh": "詳查；經歷",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_leave_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-06",
+      "lesson_ids": [
+        "V3-W1-06"
+      ],
+      "base_word": "leave out",
+      "variants": [
+        "leave out"
+      ],
+      "chinese": "省略",
+      "example": "Please leave out the documents before the compliance review.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "leave out",
+        "gloss_zh": "省略",
+        "source_lessons": [
+          "V3-W1-06"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_04_06_wave_3_2026_05_21",
+  "promoted_lesson_id": "V3-A-126"
+}

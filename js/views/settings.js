@@ -20,6 +20,115 @@ function callRender() {
   renderApp();
 }
 
+function driveSyncStatusText(status) {
+  const labels = {
+    unavailable: "未設定",
+    disconnected: "未連接",
+    connecting: "連接中",
+    connected: "已連接",
+    reconnect_required: "需要重新連接",
+    error: "錯誤"
+  };
+  return labels[status?.state] || "未設定";
+}
+
+function syncTimeLabel(value) {
+  return value ? String(value) : "尚未同步";
+}
+
+function pendingReasonsLabel(reasons) {
+  const rows = Array.isArray(reasons) ? reasons : [];
+  return rows.length ? rows.join(", ") : "無";
+}
+
+function mergeNamedCounts(left = {}, right = {}) {
+  const merged = {};
+  const keys = new Set([...Object.keys(left || {}), ...Object.keys(right || {})]);
+  keys.forEach((key) => {
+    merged[key] = Number(left?.[key] || 0) + Number(right?.[key] || 0);
+  });
+  return merged;
+}
+
+function combineMergeResults(primary, secondary) {
+  const result = {
+    added: mergeNamedCounts(primary?.added, secondary?.added),
+    merged: mergeNamedCounts(primary?.merged, secondary?.merged),
+    skipped: mergeNamedCounts(primary?.skipped, secondary?.skipped),
+    blocked: mergeNamedCounts(primary?.blocked, secondary?.blocked),
+    warnings: Array.from(new Set([...(primary?.warnings || []), ...(secondary?.warnings || [])])),
+    seed_mismatch: Boolean(primary?.seed_mismatch || secondary?.seed_mismatch),
+    seed_version_changed: Boolean(primary?.seed_version_changed || secondary?.seed_version_changed),
+    remerged: true
+  };
+  result.totals = {
+    added: Object.values(result.added).reduce((sum, value) => sum + Number(value || 0), 0),
+    merged: Object.values(result.merged).reduce((sum, value) => sum + Number(value || 0), 0),
+    skipped: Object.values(result.skipped).reduce((sum, value) => sum + Number(value || 0), 0),
+    blocked: Object.values(result.blocked).reduce((sum, value) => sum + Number(value || 0), 0)
+  };
+  return result;
+}
+
+function renderDriveSyncPanel() {
+  const client = window.GoogleDriveSyncClient;
+  const config = window.GoogleDriveSyncConfig || {};
+  const autoSync = window.GoogleDriveSyncData?.getAutoSyncState?.() || {
+    enabled: false,
+    pending: false,
+    pendingCount: 0,
+    pendingReasons: [],
+    lastSuccessAt: "",
+    lastAttemptAt: "",
+    lastError: ""
+  };
+  const status = client?.getStatus?.() || {
+    state: config.isConfigured ? "disconnected" : "unavailable",
+    configured: Boolean(config.isConfigured),
+    folderName: config.folderName || "TOEIC Vocabulary Tracker Sync",
+    syncFileName: config.syncFileName || "toeic_vocab_drive_sync_state.json",
+    lastError: ""
+  };
+  const configured = Boolean(status.configured);
+  const connected = status.state === "connected";
+  const connectDisabled = !configured || status.state === "connecting";
+  const syncDisabled = !connected;
+
+  return `
+    <section class="tracker-panel settings-drive-sync-panel" data-testid="settings-drive-sync-panel">
+      <div class="section-title-row">
+        <div>
+          <h3>Google Drive 同步</h3>
+          <p class="muted-note">SYNC-01：目前仍在 OAuth / Drive client 建置階段；手動備份仍在 Export 可用。</p>
+        </div>
+        <span class="status-pill ${configured ? "done" : "todo"}" data-testid="settings-drive-sync-status">${html(driveSyncStatusText(status))}</span>
+      </div>
+      <div class="stage-list compact" data-testid="settings-drive-sync-details">
+        <div class="stage-row"><span>OAuth Client ID</span><strong>${configured ? "已設定" : "未設定"}</strong></div>
+        <div class="stage-row"><span>Drive folder</span><strong>${html(status.folderName || config.folderName || "-")}</strong></div>
+        <div class="stage-row"><span>Sync file</span><strong>${html(status.syncFileName || config.syncFileName || "-")}</strong></div>
+        <div class="stage-row"><span>Token storage</span><strong>memory-only</strong></div>
+        <div class="stage-row"><span>Last successful sync</span><strong data-testid="settings-drive-last-sync">${html(syncTimeLabel(autoSync.lastSuccessAt))}</strong></div>
+        <div class="stage-row"><span>Pending local changes</span><strong data-testid="settings-drive-pending">${autoSync.pending ? `${html(autoSync.pendingCount)} pending` : "0 pending"}</strong></div>
+        <div class="stage-row"><span>Pending reasons</span><strong data-testid="settings-drive-pending-reasons">${html(pendingReasonsLabel(autoSync.pendingReasons))}</strong></div>
+      </div>
+      ${status.lastError ? `<div class="tracker-alert warn">${html(status.lastError)}</div>` : ""}
+      ${status.lastWarning ? `<div class="tracker-alert warn" data-testid="settings-drive-sync-warning">${html(status.lastWarning)}</div>` : ""}
+      ${autoSync.lastError ? `<div class="tracker-alert warn" data-testid="settings-drive-auto-sync-error">${html(autoSync.lastError)}</div>` : ""}
+      <label class="settings-inline-toggle" data-testid="settings-drive-auto-sync-row">
+        <input type="checkbox" data-testid="settings-drive-auto-sync-toggle" onchange="VocabTracker.setGoogleDriveAutoSync(this.checked)" ${autoSync.enabled ? "checked" : ""}>
+        <span>Auto sync while this app is open and Google Drive is connected</span>
+      </label>
+      <p class="muted-note" data-testid="settings-drive-background-note">背景同步不會在 app 關閉時執行；token 只保存在記憶體，重新開啟後需要重新連接 Google Drive。</p>
+      <div class="tracker-actions settings-actions">
+        <button class="button primary" type="button" data-testid="settings-drive-connect-button" onclick="VocabTracker.connectGoogleDrive()" ${connectDisabled ? "disabled" : ""}>連接 Google Drive</button>
+        <button class="button secondary" type="button" data-testid="settings-drive-sync-now-button" onclick="VocabTracker.syncGoogleDriveNow()" ${syncDisabled ? "disabled" : ""}>立即同步</button>
+        <button class="button secondary" type="button" data-testid="settings-drive-disconnect-button" onclick="VocabTracker.disconnectGoogleDrive()" ${connected ? "" : "disabled"}>中斷連接</button>
+      </div>
+    </section>
+  `;
+}
+
 export function renderSettings() {
   return `
     <section class="tracker-panel settings-panel" data-testid="settings-panel">
@@ -40,6 +149,7 @@ export function renderSettings() {
         <button class="button secondary" type="button" data-testid="settings-clear-session-button" onclick="VocabTracker.clearActiveSession()">清除目前課程續作</button>
       </aside>
     </section>
+    ${renderDriveSyncPanel()}
     ${renderAdvancedToolsPanel({
       testId: "settings-advanced-tools",
       actionsTestId: "settings-advanced-tools-actions",
@@ -74,6 +184,7 @@ export async function saveSettings() {
     planned_lessons_this_week: Number($("setting-weekly").value || 5),
     daily_goal_questions: Number($("setting-daily-goal")?.value || 30)
   });
+  window.VocabTracker?.markGoogleDriveLocalChange?.("settings");
   await loadData();
   setNotice("設定已儲存。", "ok");
   callRender();
@@ -92,11 +203,94 @@ export async function clearActiveSession() {
   callRender();
 }
 
+export async function connectGoogleDrive() {
+  try {
+    const status = await window.GoogleDriveSyncClient.connect();
+    setNotice(`Google Drive 已連接。狀態：${driveSyncStatusText(status)}。`, "ok");
+    window.VocabTracker?.scheduleGoogleDriveAutoSync?.("connect", { mark: false, delayMs: 0 });
+  } catch (error) {
+    setNotice(error.message || "Google Drive 連接失敗。", "warn");
+  }
+  callRender();
+}
+
+export async function disconnectGoogleDrive() {
+  try {
+    await window.GoogleDriveSyncClient.disconnect();
+    setNotice("Google Drive 已中斷連接。", "ok");
+  } catch (error) {
+    setNotice(error.message || "Google Drive 中斷連接失敗。", "warn");
+  }
+  callRender();
+}
+
+export async function syncGoogleDriveNow() {
+  try {
+    const { mergeResult } = await performGoogleDriveSync({ reason: "manual" });
+    const added = mergeResult.totals?.added || 0;
+    const merged = mergeResult.totals?.merged || 0;
+    const warningNote = mergeResult.warnings?.length ? "；有 seed/version 警告但未改 production seed" : "";
+    setNotice(`Google Drive safe sync 完成：新增 ${added} 筆、合併 ${merged} 筆${warningNote}。`, "ok");
+  } catch (error) {
+    setNotice(error.message || "Google Drive 同步失敗。", "warn");
+  }
+  callRender();
+}
+
+export async function performGoogleDriveSync({ reason = "manual" } = {}) {
+  void reason;
+  window.GoogleDriveSyncData.recordSyncAttempt();
+  try {
+    const syncFile = await window.GoogleDriveSyncClient.ensureSyncFile();
+    let snapshot = await window.GoogleDriveSyncClient.downloadSyncSnapshot(syncFile.file.id);
+    let mergeResult = await window.GoogleDriveSyncData.mergePayload(snapshot.payload);
+    let nextPayload = await window.GoogleDriveSyncData.buildPayload();
+    let uploadResult;
+    let remerged = false;
+
+    try {
+      uploadResult = await window.GoogleDriveSyncClient.uploadSyncState(nextPayload, snapshot.file.id, {
+        expectedModifiedTime: snapshot.file.modifiedTime || ""
+      });
+    } catch (error) {
+      if (error?.code !== "DRIVE_SYNC_UPLOAD_CONFLICT") {
+        throw error;
+      }
+      const latestSnapshot = await window.GoogleDriveSyncClient.downloadSyncSnapshot(snapshot.file.id);
+      const remergeResult = await window.GoogleDriveSyncData.mergePayload(latestSnapshot.payload);
+      mergeResult = combineMergeResults(mergeResult, remergeResult);
+      nextPayload = await window.GoogleDriveSyncData.buildPayload();
+      uploadResult = await window.GoogleDriveSyncClient.uploadSyncState(nextPayload, latestSnapshot.file.id, {
+        expectedModifiedTime: latestSnapshot.file.modifiedTime || ""
+      });
+      snapshot = latestSnapshot;
+      remerged = true;
+    }
+
+    window.GoogleDriveSyncData.recordSyncSuccess();
+    await loadData();
+    return { mergeResult: remerged ? { ...mergeResult, remerged: true } : mergeResult, uploadResult, payload: nextPayload, remerged };
+  } catch (error) {
+    window.GoogleDriveSyncData.recordSyncFailure(error);
+    throw error;
+  }
+}
+
+export function setGoogleDriveAutoSync(enabled) {
+  const state = window.GoogleDriveSyncData.setAutoSyncEnabled(Boolean(enabled));
+  setNotice(enabled ? "Google Drive auto sync 已啟用；只會在 app 開啟且已連接時執行。" : "Google Drive auto sync 已暫停。", enabled ? "ok" : "warn");
+  if (state.enabled) {
+    window.VocabTracker?.scheduleGoogleDriveAutoSync?.("auto_sync_enabled", { mark: false, delayMs: 0 });
+  }
+  callRender();
+}
+
 export async function changeLessonStatus(lessonId, status) {
   const lesson = await window.VocabDB.get("lessons", lessonId);
   if (!lesson) return;
 
   await window.VocabDB.put("lessons", { ...lesson, status });
+  window.VocabTracker?.markGoogleDriveLocalChange?.("lesson_status");
   await loadData();
   callRender();
 }

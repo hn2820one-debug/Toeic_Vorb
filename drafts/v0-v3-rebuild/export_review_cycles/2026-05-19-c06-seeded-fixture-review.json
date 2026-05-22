@@ -1,0 +1,96 @@
+{
+  "review_id": "export_review_2026_05_19_c06_seeded_fixture",
+  "review_date": "2026-05-19",
+  "reviewer": "Codex",
+  "scope": "C-06 export analysis feedback process validation",
+  "wave_or_pack": "seeded Playwright fixture coverage",
+  "production_seed_changed": false,
+  "production_seed_version": "toeic_vocab_tracker_c004_full_bank_clear_2026_05_18",
+  "production_counts": {
+    "runnable_lessons": 0,
+    "question_bank_rows": 0
+  },
+  "source_tests": [
+    "tests/ui-regression.spec.ts",
+    "tests/export-flow.spec.ts",
+    "tests/review-mode.spec.ts",
+    "tests/v2-v3-content.spec.ts"
+  ],
+  "files_reviewed": [
+    { "file": "summary.md", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "report.md", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "lesson_recommendations.md", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "diagnostic_recommendation.json", "status": "download_verified", "evidence": "Seeded V0 insufficient-data regression downloads and parses the file." },
+    { "file": "stage_progress.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "content_quality_summary.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "attempts.csv", "status": "download_verified", "evidence": "V2/V3 seeded runtime test downloads attempts.csv and checks representative lesson/type values." },
+    { "file": "attempts.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "attempts.jsonl", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "sessions.csv", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file and export-flow creates a completed session." },
+    { "file": "sessions.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "item_mastery.csv", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "mastery.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "review_queue.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "error_logs.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "error_summary.csv", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "error_summary.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "speed_summary.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "review_effectiveness.csv", "status": "content_verified", "evidence": "Review mode test downloads review_effectiveness.csv and checks target_item, error_code, and values." },
+    { "file": "review_effectiveness.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "stage_seal_readiness.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "question_bank_snapshot.json", "status": "inventory_verified", "evidence": "Export inventory smoke test lists file." },
+    { "file": "raw_events.jsonl", "status": "download_verified", "evidence": "V2/V3 seeded runtime test downloads raw_events.jsonl and checks representative lesson values." },
+    { "file": "toeic_vocab_export_YYYY-MM-DD.json", "status": "inventory_verified", "evidence": "Export inventory test checks dynamic package button name." }
+  ],
+  "metrics_reviewed": [
+    { "metric": "attempt_volume", "status": "verified_by_tests", "note": "V2/V3 seeded runtime creates at least six attempts before export." },
+    { "metric": "accuracy_by_stage_lesson_type", "status": "available", "note": "Available through attempts.csv, sessions.csv, and stage_progress.json; no production conclusion because production seed is empty." },
+    { "metric": "avg_response_time_by_type", "status": "available", "note": "Available through attempts.csv and speed_summary.json." },
+    { "metric": "speed_bucket_distribution", "status": "available", "note": "Available through attempts.csv and speed_summary.json." },
+    { "metric": "error_code_distribution", "status": "available", "note": "Available through error_summary.csv/json." },
+    { "metric": "repeated_error_rate", "status": "available", "note": "Available through attempts.csv and error_summary.csv." },
+    { "metric": "review_fix_rate", "status": "content_verified", "note": "Review mode test checks review_effectiveness.csv after due-queue review attempts." },
+    { "metric": "target_item_mastery", "status": "available", "note": "Available through item_mastery.csv and mastery.json." },
+    { "metric": "review_queue_pressure", "status": "available", "note": "Available through review_queue.json and raw_events.jsonl." },
+    { "metric": "content_quality_flags", "status": "available", "note": "Available through content_quality_summary.json and question_bank_snapshot.json." },
+    { "metric": "stage_readiness", "status": "available", "note": "Available through stage_seal_readiness.json and stage_progress.json." },
+    { "metric": "diagnostic_status", "status": "content_verified", "note": "Seeded UI regression parses insufficient-data diagnostic export." }
+  ],
+  "findings": [
+    {
+      "area": "export_inventory",
+      "finding": "All required export review files are visible from the Export view.",
+      "decision": "keep"
+    },
+    {
+      "area": "review_effectiveness",
+      "finding": "Review-mode attempts produce analyzable review_effectiveness.csv rows.",
+      "decision": "keep"
+    },
+    {
+      "area": "v2_v3_attempt_export",
+      "finding": "Seeded V2/V3 lesson attempts are present in attempts.csv and raw_events.jsonl.",
+      "decision": "keep"
+    },
+    {
+      "area": "production_content",
+      "finding": "Production seed is intentionally empty, so no real learner content rewrite decision can be made yet.",
+      "decision": "hold_for_more_data"
+    }
+  ],
+  "feedback_actions": [
+    {
+      "target": "docs/Future Plan.md",
+      "action": "Mark C-06 complete after verifier and full validation pass; next active target should move to the next open planned item."
+    },
+    {
+      "target": "next_wave_authoring_backlog",
+      "action": "After any future production or draft content wave, create a new export review cycle before scale-up."
+    }
+  ],
+  "blocked_on": [
+    "No production lessons or question rows are active, so content-quality decisions must wait for a future content wave or real learner attempts."
+  ],
+  "status": "passed_for_process_validation",
+  "final_decision": "The export feedback process is usable for future content governance; no production content changes are authorized by this review."
+}

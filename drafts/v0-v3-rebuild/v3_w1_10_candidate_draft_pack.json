@@ -1,0 +1,1483 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_10_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-130",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-wave5-current-isolated-audit",
+    "isolated_audit_scope": "21 lessons / 240 questions",
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "explanation_warnings": 0,
+    "preferred_stem_length_warnings": 0
+  },
+  "notes": [
+    "C-11 wave 5 candidate: V3-W1-10 business-meeting collocation lesson 3 (5 target items).",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-130."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-10",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 130,
+    "title": "商務會議 搭配詞 3",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "商務會議",
+    "target_items": [
+      "item_coll_bring_forward",
+      "item_coll_walk_through",
+      "item_coll_on_behalf_of",
+      "item_coll_rule_out",
+      "item_coll_hold_off_on"
+    ],
+    "question_ids": [
+      "V3-W1-10_Q01",
+      "V3-W1-10_Q02",
+      "V3-W1-10_Q03",
+      "V3-W1-10_Q04",
+      "V3-W1-10_Q05",
+      "V3-W1-10_Q06",
+      "V3-W1-10_Q07",
+      "V3-W1-10_Q08",
+      "V3-W1-10_Q09",
+      "V3-W1-10_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-10_Q11",
+      "V3-W1-10_Q12",
+      "V3-W1-10_Q13",
+      "V3-W1-10_Q14",
+      "V3-W1-10_Q15",
+      "V3-W1-10_Q16",
+      "V3-W1-10_Q17",
+      "V3-W1-10_Q18",
+      "V3-W1-10_Q19",
+      "V3-W1-10_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-10_R01",
+      "V3-W1-10_R02",
+      "V3-W1-10_R03",
+      "V3-W1-10_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_10",
+      "topic_lesson_index": 3,
+      "item_count": 5,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 2,
+        "C": 3
+      },
+      "unresolved_target_count": 5,
+      "authoring_method": "c11_v3_w1_10_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-10_Q01",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The project office asked the steering group to ______ the software rollout date by two weeks.",
+      "options": {
+        "A": "bring forward",
+        "B": "bring in",
+        "C": "bring out",
+        "D": "bring up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "bring forward 提前；提出；語境需要提前，故用 bring forward 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_forward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "bring forward",
+        "gloss_zh": "提前；提出",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "bring forward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q02",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Ms. Huang will ______ the budget amendment at the emergency board session on Wednesday.",
+      "options": {
+        "A": "bring forward",
+        "B": "bring in",
+        "C": "bring out",
+        "D": "bring up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "bring forward 提前；提出；語境需要提前，故用 bring forward 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_forward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "bring forward",
+        "gloss_zh": "提前；提出",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "bring forward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q03",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The trainer will ______ the updated expense-report workflow with every department assistant.",
+      "options": {
+        "A": "walk through",
+        "B": "walk on",
+        "C": "walk over",
+        "D": "walk by"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "walk through 逐步說明；演練；語境需要逐步說明，故用 walk through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_walk_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "walk through",
+        "gloss_zh": "逐步說明；演練",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "walk through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q04",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Before go-live, IT consultants will ______ the backup procedure with the night-shift operators.",
+      "options": {
+        "A": "walk through",
+        "B": "walk on",
+        "C": "walk over",
+        "D": "walk by"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "walk through 逐步說明；演練；語境需要逐步說明，故用 walk through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_walk_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "walk through",
+        "gloss_zh": "逐步說明；演練",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "walk through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q05",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Mr. Delgado spoke ______ the absent regional director during the contract signing ceremony.",
+      "options": {
+        "A": "on behalf of",
+        "B": "on behalf at",
+        "C": "on behalf with",
+        "D": "on behalf from"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "on behalf of 代表；代替；語境需要代表，故用 on behalf of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_on_behalf_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "on behalf of",
+        "gloss_zh": "代表；代替",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "on behalf of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q06",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The legal associate submitted the documents ______ the overseas subsidiary yesterday afternoon.",
+      "options": {
+        "A": "on behalf of",
+        "B": "on behalf at",
+        "C": "on behalf with",
+        "D": "on behalf from"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "on behalf of 代表；代替；語境需要代表，故用 on behalf of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_on_behalf_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "on behalf of",
+        "gloss_zh": "代表；代替",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "on behalf of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q07",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Engineers were able to ______ a software bug after rerunning the diagnostics twice.",
+      "options": {
+        "A": "rule in",
+        "B": "rule out",
+        "C": "rule on",
+        "D": "rule over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "rule out 排除；語境需要排除，故用 rule out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rule_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "rule out",
+        "gloss_zh": "排除",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rule out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q08",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The safety board must ______ equipment failure as a cause until inspection logs are verified.",
+      "options": {
+        "A": "rule in",
+        "B": "rule out",
+        "C": "rule on",
+        "D": "rule over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "rule out 排除；語境需要排除，故用 rule out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rule_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "rule out",
+        "gloss_zh": "排除",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rule out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q09",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The committee agreed to ______ new hiring until the merger review concludes.",
+      "options": {
+        "A": "hold off at",
+        "B": "hold off on",
+        "C": "hold off with",
+        "D": "hold off from"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "hold off on 暫緩；延期處理；語境需要暫緩，故用 hold off on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hold_off_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "hold off on",
+        "gloss_zh": "暫緩；延期處理",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hold off on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q10",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Executives may ______ the capex vote until quarterly earnings are published.",
+      "options": {
+        "A": "hold off at",
+        "B": "hold off on",
+        "C": "hold off with",
+        "D": "hold off from"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "hold off on 暫緩；延期處理；語境需要暫緩，故用 hold off on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hold_off_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "hold off on",
+        "gloss_zh": "暫緩；延期處理",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hold off on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q11",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The chief negotiator was hospitalized the morning of the settlement talks. Her deputy signed the memorandum ______ the entire bargaining unit. Copies were faxed to counsel before noon.",
+      "options": {
+        "A": "on behalf at",
+        "B": "on behalf of",
+        "C": "on behalf with",
+        "D": "on behalf from"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "on behalf of 代表；代替；語境要求代表，故用 on behalf of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_on_behalf_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "on behalf of",
+        "gloss_zh": "代表；代替",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "on behalf of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q12",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Investigators examined server logs after the payment gateway crashed during peak hours. Technicians were able to ______ a cyberattack once routine maintenance records were verified. Customers received status updates every thirty minutes.",
+      "options": {
+        "A": "rule in",
+        "B": "rule out",
+        "C": "rule on",
+        "D": "rule over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "rule out 排除；語境要求排除，故用 rule out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rule_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "rule out",
+        "gloss_zh": "排除",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rule out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q13",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The board received conflicting forecasts about raw-material costs. Directors voted to ______ major capital projects until the supplier audit is finished. A follow-up session is scheduled for early next quarter.",
+      "options": {
+        "A": "hold off at",
+        "B": "hold off with",
+        "C": "hold off on",
+        "D": "hold off from"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "hold off on 暫緩；延期處理；語境要求暫緩，故用 hold off on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hold_off_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "hold off on",
+        "gloss_zh": "暫緩；延期處理",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hold off on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q14",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The product team feared missing the holiday sales window. Marketing asked leadership to ______ the campaign launch by ten days. Warehouse staff are preparing overtime schedules accordingly.",
+      "options": {
+        "A": "bring in",
+        "B": "bring out",
+        "C": "bring forward",
+        "D": "bring up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "bring forward 提前；提出；語境要求提前，故用 bring forward 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_forward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "bring forward",
+        "gloss_zh": "提前；提出",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "bring forward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q15",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "New auditors joined the firm last month and must learn the client's reporting portal. A senior manager will ______ the dashboard features with them on Thursday. Access credentials expire at the end of the week.",
+      "options": {
+        "A": "walk on",
+        "B": "walk over",
+        "C": "walk through",
+        "D": "walk by"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "walk through 逐步說明；演練；語境要求逐步說明，故用 walk through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_walk_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "walk through",
+        "gloss_zh": "逐步說明；演練",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "walk through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q16",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The communications officer issued a statement ______ the joint venture partners after the press inquiry.",
+      "options": {
+        "A": "on behalf at",
+        "B": "on behalf with",
+        "C": "on behalf of",
+        "D": "on behalf from"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "on behalf of 代表；代替；語境需要代表，故用 on behalf of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_on_behalf_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "on behalf of",
+        "gloss_zh": "代表；代替",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "on behalf of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q17",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The quality team could not ______ contamination until the third lab sample returned negative.",
+      "options": {
+        "A": "rule in",
+        "B": "rule on",
+        "C": "rule out",
+        "D": "rule over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "rule out 排除；語境需要排除，故用 rule out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rule_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "rule out",
+        "gloss_zh": "排除",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rule out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q18",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Investors urged management to ______ dividend increases until debt ratios improve.",
+      "options": {
+        "A": "hold off at",
+        "B": "hold off with",
+        "C": "hold off on",
+        "D": "hold off from"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "hold off on 暫緩；延期處理；語境需要暫緩，故用 hold off on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hold_off_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "hold off on",
+        "gloss_zh": "暫緩；延期處理",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hold off on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q19",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Can we ______ the client briefing to Monday morning instead of Wednesday afternoon?",
+      "options": {
+        "A": "bring in",
+        "B": "bring out",
+        "C": "bring up",
+        "D": "bring forward"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "bring forward 提前；提出；語境需要提前，故用 bring forward 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_forward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "bring forward",
+        "gloss_zh": "提前；提出",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "bring forward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_Q20",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The facilitator will ______ the voting procedure with observers before the annual meeting opens.",
+      "options": {
+        "A": "walk on",
+        "B": "walk over",
+        "C": "walk by",
+        "D": "walk through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "walk through 逐步說明；演練；語境需要逐步說明，故用 walk through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_walk_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "walk through",
+        "gloss_zh": "逐步說明；演練",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "walk through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_R01",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "She accepted the award ______ the research team that could not attend the ceremony.",
+      "options": {
+        "A": "on behalf at",
+        "B": "on behalf with",
+        "C": "on behalf from",
+        "D": "on behalf of"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "on behalf of 代表；代替；語境需要代表，故用 on behalf of 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_on_behalf_of",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "on behalf of",
+        "gloss_zh": "代表；代替",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "on behalf of",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_R02",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Technicians must ______ a power surge before reopening the production line.",
+      "options": {
+        "A": "rule in",
+        "B": "rule on",
+        "C": "rule over",
+        "D": "rule out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "rule out 排除；語境需要排除，故用 rule out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_rule_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "rule out",
+        "gloss_zh": "排除",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "rule out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_R03",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The council voted to ______ facility upgrades until the bond measure passes.",
+      "options": {
+        "A": "hold off at",
+        "B": "hold off with",
+        "C": "hold off from",
+        "D": "hold off on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "hold off on 暫緩；延期處理；語境需要暫緩，故用 hold off on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hold_off_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "hold off on",
+        "gloss_zh": "暫緩；延期處理",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hold off on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-10_R04",
+      "lesson_id": "V3-W1-10",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the renewal discussion to this week's agenda if possible.",
+      "options": {
+        "A": "bring in",
+        "B": "bring out",
+        "C": "bring up",
+        "D": "bring forward"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "bring forward 提前；提出；語境需要提前，故用 bring forward 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_bring_forward",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-10",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_10",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 3",
+        "source_phrase": "bring forward",
+        "gloss_zh": "提前；提出",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "bring forward",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-10",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_bring_forward",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-10",
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "base_word": "bring forward",
+      "variants": [
+        "bring forward"
+      ],
+      "chinese": "提前",
+      "example": "The chair will bring forward the pending agenda item before the committee votes.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "bring forward",
+        "gloss_zh": "提前；提出",
+        "source_lessons": [
+          "V3-W1-10"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_walk_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-10",
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "base_word": "walk through",
+      "variants": [
+        "walk through"
+      ],
+      "chinese": "逐步說明",
+      "example": "The chair will walk through the pending agenda item before the committee votes.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "walk through",
+        "gloss_zh": "逐步說明；演練",
+        "source_lessons": [
+          "V3-W1-10"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_on_behalf_of",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-10",
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "base_word": "on behalf of",
+      "variants": [
+        "on behalf of"
+      ],
+      "chinese": "代表",
+      "example": "The chair will on behalf of the pending agenda item before the committee votes.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "on behalf of",
+        "gloss_zh": "代表；代替",
+        "source_lessons": [
+          "V3-W1-10"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_rule_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-10",
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "base_word": "rule out",
+      "variants": [
+        "rule out"
+      ],
+      "chinese": "排除",
+      "example": "The chair will rule out the pending agenda item before the committee votes.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "rule out",
+        "gloss_zh": "排除",
+        "source_lessons": [
+          "V3-W1-10"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_hold_off_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-10",
+      "lesson_ids": [
+        "V3-W1-10"
+      ],
+      "base_word": "hold off on",
+      "variants": [
+        "hold off on"
+      ],
+      "chinese": "暫緩",
+      "example": "The chair will hold off on the pending agenda item before the committee votes.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "hold off on",
+        "gloss_zh": "暫緩；延期處理",
+        "source_lessons": [
+          "V3-W1-10"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_08_10_wave_5_2026_05_21",
+  "promoted_lesson_id": "V3-A-130"
+}

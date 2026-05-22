@@ -1,0 +1,1519 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_09_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-129",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-wave5-current-isolated-audit",
+    "isolated_audit_scope": "21 lessons / 240 questions",
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "explanation_warnings": 0,
+    "preferred_stem_length_warnings": 0
+  },
+  "notes": [
+    "C-11 wave 5 candidate: V3-W1-09 business-meeting collocation lesson 2 (6 target items).",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-129."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-09",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 129,
+    "title": "商務會議 搭配詞 2",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "商務會議",
+    "target_items": [
+      "item_coll_run_through",
+      "item_coll_settle_on",
+      "item_coll_talk_over",
+      "item_coll_object_to",
+      "item_coll_decide_on",
+      "item_coll_come_before"
+    ],
+    "question_ids": [
+      "V3-W1-09_Q01",
+      "V3-W1-09_Q02",
+      "V3-W1-09_Q03",
+      "V3-W1-09_Q04",
+      "V3-W1-09_Q05",
+      "V3-W1-09_Q06",
+      "V3-W1-09_Q07",
+      "V3-W1-09_Q08",
+      "V3-W1-09_Q09",
+      "V3-W1-09_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-09_Q11",
+      "V3-W1-09_Q12",
+      "V3-W1-09_Q13",
+      "V3-W1-09_Q14",
+      "V3-W1-09_Q15",
+      "V3-W1-09_Q16",
+      "V3-W1-09_Q17",
+      "V3-W1-09_Q18",
+      "V3-W1-09_Q19",
+      "V3-W1-09_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-09_R01",
+      "V3-W1-09_R02",
+      "V3-W1-09_R03",
+      "V3-W1-09_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_09",
+      "topic_lesson_index": 2,
+      "item_count": 6,
+      "difficulty_breakdown": {
+        "A": 0,
+        "B": 6,
+        "C": 0
+      },
+      "unresolved_target_count": 6,
+      "authoring_method": "c11_v3_w1_09_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-09_Q01",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Before the client presentation, the sales lead will ______ the demo script with the technical team.",
+      "options": {
+        "A": "run through",
+        "B": "run over",
+        "C": "run by",
+        "D": "run down"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "run through 快速演練；過一遍；語境需要快速演練，故用 run through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "run through",
+        "gloss_zh": "快速演練；過一遍",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q02",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the onboarding checklist with new hires during their first afternoon.",
+      "options": {
+        "A": "run through",
+        "B": "run over",
+        "C": "run by",
+        "D": "run down"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "run through 快速演練；過一遍；語境需要快速演練，故用 run through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "run through",
+        "gloss_zh": "快速演練；過一遍",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q03",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "After three hours of debate, the committee could finally ______ a venue for the annual conference.",
+      "options": {
+        "A": "settle on",
+        "B": "settle in",
+        "C": "settle up",
+        "D": "settle for"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "settle on 決定採用；語境需要決定採用，故用 settle on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_settle_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "settle on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "settle on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q04",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The partners must ______ a distribution model before legal drafts the joint venture agreement.",
+      "options": {
+        "A": "settle on",
+        "B": "settle in",
+        "C": "settle up",
+        "D": "settle for"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "settle on 決定採用；語境需要決定採用，故用 settle on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_settle_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "settle on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "settle on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q05",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The HR director asked supervisors to ______ pending promotion cases in private before the town hall.",
+      "options": {
+        "A": "talk over",
+        "B": "talk on",
+        "C": "talk at",
+        "D": "talk through"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "talk over 詳細討論；語境需要詳細討論，故用 talk over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_talk_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "talk over",
+        "gloss_zh": "詳細討論",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "talk over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q06",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Managers were encouraged to ______ staffing concerns with their teams before submitting headcount requests.",
+      "options": {
+        "A": "talk over",
+        "B": "talk on",
+        "C": "talk at",
+        "D": "talk through"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "talk over 詳細討論；語境需要詳細討論，故用 talk over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_talk_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "talk over",
+        "gloss_zh": "詳細討論",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "talk over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q07",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Two board members chose to ______ the proposed dividend increase during the closed session.",
+      "options": {
+        "A": "object on",
+        "B": "object to",
+        "C": "object at",
+        "D": "object with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "object to 反對；語境需要反對，故用 object to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_object_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "object to",
+        "gloss_zh": "反對",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "object to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q08",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Several union representatives may ______ the revised overtime policy at next week's hearing.",
+      "options": {
+        "A": "object on",
+        "B": "object to",
+        "C": "object at",
+        "D": "object with"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "object to 反對；語境需要反對，故用 object to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_object_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "object to",
+        "gloss_zh": "反對",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "object to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q09",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The procurement panel must ______ a primary logistics provider by Friday afternoon.",
+      "options": {
+        "A": "decide in",
+        "B": "decide on",
+        "C": "decide at",
+        "D": "decide over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "decide on 決定採用；語境需要決定採用，故用 decide on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_decide_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "decide on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "decide on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q10",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Shareholders will ______ a new auditor during the extraordinary general meeting in June.",
+      "options": {
+        "A": "decide in",
+        "B": "decide on",
+        "C": "decide at",
+        "D": "decide over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "decide on 決定採用；語境需要決定採用，故用 decide on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_decide_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "decide on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "decide on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q11",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "All capital expenditure requests must ______ the finance committee before reaching the CEO's desk.",
+      "options": {
+        "A": "come after",
+        "B": "come before",
+        "C": "come under",
+        "D": "come across"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "come before 先於；提交審議；語境需要先於，故用 come before 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_before",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "come before",
+        "gloss_zh": "先於；提交審議",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come before",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q12",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The revised safety policy will ______ the employee council for consultation next month.",
+      "options": {
+        "A": "come after",
+        "B": "come before",
+        "C": "come under",
+        "D": "come across"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "come before 先於；提交審議；語境需要先於，故用 come before 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_before",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "come before",
+        "gloss_zh": "先於；提交審議",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come before",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q13",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The product launch is scheduled for Monday morning, and several slides still need revision. On Sunday evening, the marketing team will ______ the presentation with the design agency. Final approvals must be logged before midnight.",
+      "options": {
+        "A": "run over",
+        "B": "run by",
+        "C": "run through",
+        "D": "run down"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "run through 快速演練；過一遍；語境要求快速演練，故用 run through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "run through",
+        "gloss_zh": "快速演練；過一遍",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q14",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Negotiations between the hotel chain and the event planner stalled over catering costs. After comparing three proposals, the organizers hope to ______ a banquet package this afternoon. Contracts cannot be signed until the choice is confirmed.",
+      "options": {
+        "A": "settle in",
+        "B": "settle up",
+        "C": "settle on",
+        "D": "settle for"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "settle on 決定採用；語境要求決定採用，故用 settle on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_settle_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "settle on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "settle on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q15",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Department heads received anonymous feedback about the new attendance policy. The CEO asked them to ______ concerns with staff representatives before publishing the FAQ. Updated guidance will be emailed on Wednesday.",
+      "options": {
+        "A": "talk on",
+        "B": "talk at",
+        "C": "talk over",
+        "D": "talk through"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "talk over 詳細討論；語境要求詳細討論，故用 talk over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_talk_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "talk over",
+        "gloss_zh": "詳細討論",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "talk over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q16",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The proposed merger would eliminate overlapping regional offices. Several employee associations plan to ______ the restructuring plan at the public hearing. Regulators have requested additional documentation by next week.",
+      "options": {
+        "A": "object on",
+        "B": "object at",
+        "C": "object to",
+        "D": "object with"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "object to 反對；語境要求反對，故用 object to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_object_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "object to",
+        "gloss_zh": "反對",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "object to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q17",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The innovation committee reviewed twelve startup pitches over two days. Members must ______ two finalists for the pilot funding round before the board dinner. Announcements will be made at the closing reception.",
+      "options": {
+        "A": "decide in",
+        "B": "decide at",
+        "C": "decide on",
+        "D": "decide over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "decide on 決定採用；語境要求決定採用，故用 decide on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_decide_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "decide on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "decide on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q18",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The ethics office drafted a new gift-acceptance policy for overseas subsidiaries. The document will ______ the compliance subcommittee for review next Tuesday. Implementation cannot begin until the subcommittee minutes are filed.",
+      "options": {
+        "A": "come after",
+        "B": "come under",
+        "C": "come before",
+        "D": "come across"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "come before 先於；提交審議；語境要求先於，故用 come before 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_come_before",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "come before",
+        "gloss_zh": "先於；提交審議",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "come before",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q19",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The trainer will ______ the evacuation procedure with floor wardens before the building inspection.",
+      "options": {
+        "A": "run over",
+        "B": "run by",
+        "C": "run down",
+        "D": "run through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "run through 快速演練；過一遍；語境需要快速演練，故用 run through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "run through",
+        "gloss_zh": "快速演練；過一遍",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_Q20",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "We should ______ a conference call time that works for both the Tokyo and Chicago offices.",
+      "options": {
+        "A": "settle in",
+        "B": "settle up",
+        "C": "settle for",
+        "D": "settle on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "settle on 決定採用；語境需要決定採用，故用 settle on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_settle_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "settle on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "settle on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_R01",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the revised seating chart with the events team before guests arrive.",
+      "options": {
+        "A": "run over",
+        "B": "run by",
+        "C": "run down",
+        "D": "run through"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "run through 快速演練；過一遍；語境需要快速演練，故用 run through 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_run_through",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "run through",
+        "gloss_zh": "快速演練；過一遍",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "run through",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_R02",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The panel must ______ a keynote speaker before printing the program booklet.",
+      "options": {
+        "A": "settle in",
+        "B": "settle up",
+        "C": "settle for",
+        "D": "settle on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "settle on 決定採用；語境需要決定採用，故用 settle on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_settle_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "settle on",
+        "gloss_zh": "決定採用",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "settle on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_R03",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Supervisors should ______ shift-swap requests with employees before updating the roster.",
+      "options": {
+        "A": "talk on",
+        "B": "talk at",
+        "C": "talk through",
+        "D": "talk over"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "talk over 詳細討論；語境需要詳細討論，故用 talk over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_talk_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "talk over",
+        "gloss_zh": "詳細討論",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "talk over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-09_R04",
+      "lesson_id": "V3-W1-09",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Shareholders may ______ the proxy statement if they disagree with the merger terms.",
+      "options": {
+        "A": "object on",
+        "B": "object at",
+        "C": "object with",
+        "D": "object to"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "object to 反對；語境需要反對，故用 object to 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_object_to",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-09",
+        "topic:商務會議",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_09",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "商務會議 搭配詞 2",
+        "source_phrase": "object to",
+        "gloss_zh": "反對",
+        "source_topic": "商務會議",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "object to",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave5_candidate",
+        "authored_slice_lesson_id": "V3-W1-09",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_run_through",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-09",
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "base_word": "run through",
+      "variants": [
+        "run through"
+      ],
+      "chinese": "快速演練",
+      "example": "The committee will run through the open issues before the executive session ends.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "run through",
+        "gloss_zh": "快速演練；過一遍",
+        "source_lessons": [
+          "V3-W1-09"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_settle_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-09",
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "base_word": "settle on",
+      "variants": [
+        "settle on"
+      ],
+      "chinese": "決定採用",
+      "example": "The committee will settle on the open issues before the executive session ends.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "settle on",
+        "gloss_zh": "決定採用",
+        "source_lessons": [
+          "V3-W1-09"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_talk_over",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-09",
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "base_word": "talk over",
+      "variants": [
+        "talk over"
+      ],
+      "chinese": "詳細討論",
+      "example": "The committee will talk over the open issues before the executive session ends.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "talk over",
+        "gloss_zh": "詳細討論",
+        "source_lessons": [
+          "V3-W1-09"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_object_to",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-09",
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "base_word": "object to",
+      "variants": [
+        "object to"
+      ],
+      "chinese": "反對",
+      "example": "The committee will object to the open issues before the executive session ends.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "object to",
+        "gloss_zh": "反對",
+        "source_lessons": [
+          "V3-W1-09"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_decide_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-09",
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "base_word": "decide on",
+      "variants": [
+        "decide on"
+      ],
+      "chinese": "決定採用",
+      "example": "The committee will decide on the open issues before the executive session ends.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "decide on",
+        "gloss_zh": "決定採用",
+        "source_lessons": [
+          "V3-W1-09"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_come_before",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-09",
+      "lesson_ids": [
+        "V3-W1-09"
+      ],
+      "base_word": "come before",
+      "variants": [
+        "come before"
+      ],
+      "chinese": "先於",
+      "example": "The committee will come before the open issues before the executive session ends.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "商務會議",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "come before",
+        "gloss_zh": "先於；提交審議",
+        "source_lessons": [
+          "V3-W1-09"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave5_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_08_10_wave_5_2026_05_21",
+  "promoted_lesson_id": "V3-A-129"
+}

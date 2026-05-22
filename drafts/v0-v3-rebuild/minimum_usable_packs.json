@@ -1,0 +1,388 @@
+{
+  "artifact": "minimum_usable_packs",
+  "artifact_version": "1.0",
+  "generated_at": "2026-05-19",
+  "status": "draft_governance",
+  "reference_role": "minimum_content_pack_standard",
+  "production_impact": "none",
+  "production_ready": false,
+  "release_gate": "docs/rebuild-wave-release-gate.md",
+  "source_spec": "docs/question-creation-spec.md",
+  "notes": [
+    "This artifact defines the first minimum usable content packs for V1, V2, and V3.",
+    "It does not authorize production seed changes.",
+    "Production promotion still requires seed-version sync and the rebuild-wave release gate."
+  ],
+  "stage_packs": [
+    {
+      "pack_id": "MUP-V1-01",
+      "stage": "V1",
+      "stage_name": "Word Family",
+      "status": "draft_standard",
+      "minimum_lessons": 2,
+      "minimum_question_rows": 64,
+      "minimum_session_question_rows": 60,
+      "minimum_review_question_rows": 4,
+      "lesson_plan": [
+        {
+          "lesson_id": "V1-C-29",
+          "lesson_type": "word_family",
+          "purpose": "Normal word-family lesson surface",
+          "session_question_rows": 20,
+          "review_question_rows": 4,
+          "required_type_coverage": [
+            "word_family",
+            "part5_sentence_completion",
+            "collocation",
+            "review_question"
+          ],
+          "sample_target_items": [
+            "item_finance_family",
+            "item_budget_family"
+          ]
+        },
+        {
+          "lesson_id": "V1-F-53",
+          "lesson_type": "speed_drill",
+          "purpose": "Speed-reflex runtime surface",
+          "session_question_rows": 40,
+          "review_question_rows": 0,
+          "required_type_coverage": [
+            "speed_drill"
+          ],
+          "sample_target_items": [
+            "item_confirm_family"
+          ]
+        }
+      ],
+      "review_requirement": "At least four review_question rows in the normal V1 lesson; speed-drill lesson has no review rows.",
+      "first_sample_target_items": [
+        "item_finance_family",
+        "item_budget_family",
+        "item_confirm_family",
+        "item_apply_family"
+      ],
+      "promotion_note": "A V1 production wave may be small, but it must include both normal lesson behavior and speed behavior before scale-up."
+    },
+    {
+      "pack_id": "MUP-V2-01",
+      "stage": "V2",
+      "stage_name": "TOEIC Scene Vocabulary",
+      "status": "draft_standard",
+      "minimum_lessons": 1,
+      "minimum_question_rows": 24,
+      "minimum_session_question_rows": 20,
+      "minimum_review_question_rows": 4,
+      "lesson_plan": [
+        {
+          "lesson_id": "V2-A-71",
+          "lesson_type": "scene_vocabulary",
+          "purpose": "Office-administration scene baseline",
+          "session_question_rows": 20,
+          "review_question_rows": 4,
+          "required_type_coverage": [
+            "scene_vocabulary",
+            "review_question"
+          ],
+          "sample_target_items": [
+            "item_v2_v2_a_71_extension",
+            "item_v2_v2_a_71_photocopier",
+            "item_v2_v2_a_71_stationery",
+            "item_v2_v2_a_71_workstation"
+          ]
+        }
+      ],
+      "review_requirement": "Four direct-meaning review_question rows, one per core scene item, with semantic-meaning uniqueness preserved.",
+      "first_sample_target_items": [
+        "item_v2_v2_a_71_extension",
+        "item_v2_v2_a_71_photocopier",
+        "item_v2_v2_a_71_stationery",
+        "item_v2_v2_a_71_workstation"
+      ],
+      "promotion_note": "The first V2 production pack must prove scene labels, same-scene distractors, review rows, and export attempts before scaling."
+    },
+    {
+      "pack_id": "MUP-V3-01",
+      "stage": "V3",
+      "stage_name": "Collocation",
+      "status": "draft_reference_ready",
+      "minimum_lessons": 1,
+      "minimum_question_rows": 24,
+      "minimum_session_question_rows": 20,
+      "minimum_review_question_rows": 4,
+      "lesson_plan": [
+        {
+          "lesson_id": "V3-W1-01",
+          "planned_production_lesson_id": "V3-A-121",
+          "lesson_type": "collocation",
+          "purpose": "Existing authored V3 Wave 1 draft slice",
+          "session_question_rows": 20,
+          "review_question_rows": 4,
+          "required_type_coverage": [
+            "collocation",
+            "part5_sentence_completion",
+            "part6_context_choice",
+            "review_question"
+          ],
+          "sample_target_items": [
+            "item_coll_run_out_of",
+            "item_coll_set_up",
+            "item_coll_drop_by",
+            "item_coll_look_over",
+            "item_coll_run_into",
+            "item_coll_pick_up",
+            "item_coll_give_out"
+          ]
+        }
+      ],
+      "review_requirement": "Four review_question rows in the authored draft slice; production promotion must reconcile final V3 type distribution with the active spec.",
+      "first_sample_target_items": [
+        "item_coll_run_out_of",
+        "item_coll_set_up",
+        "item_coll_drop_by",
+        "item_coll_look_over",
+        "item_coll_run_into",
+        "item_coll_pick_up",
+        "item_coll_give_out"
+      ],
+      "promotion_note": "V3-W1-01 is accepted as a draft authoring reference only. It is not a production release because merge order and production IDs are still unresolved."
+    }
+  ],
+  "authoring_samples": [
+    {
+      "question_id": "mup_v1_c_29_q_001",
+      "lesson_id": "V1-C-29",
+      "stage": "V1",
+      "type": "word_family",
+      "skill": "word_family",
+      "subskill": "adjective_before_noun",
+      "grammar_link_id": null,
+      "question_text": "The board requested a detailed ______ review before approving the merger.",
+      "options": {
+        "A": "finance",
+        "B": "financial",
+        "C": "financially",
+        "D": "financed"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "review 前需形容詞 financial；financially 是副詞，不能修飾名詞。",
+      "target_item_id": "item_finance_family",
+      "distractor_type": "same_word_family",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "WORD_FAMILY_POS",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v1",
+        "toeic_part5",
+        "word_family"
+      ]
+    },
+    {
+      "question_id": "mup_v1_c_29_q_002",
+      "lesson_id": "V1-C-29",
+      "stage": "V1",
+      "type": "part5_sentence_completion",
+      "skill": "word_family",
+      "subskill": "adverb_after_passive",
+      "grammar_link_id": null,
+      "question_text": "The quarterly figures were reviewed ______ before the report was sent.",
+      "options": {
+        "A": "finance",
+        "B": "financial",
+        "C": "financially",
+        "D": "financed"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "修飾 reviewed 這個動作要用副詞 financially；financial 是形容詞。",
+      "target_item_id": "item_finance_family",
+      "distractor_type": "same_word_family",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "WORD_FAMILY_POS",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v1",
+        "toeic_part5",
+        "word_family"
+      ]
+    },
+    {
+      "question_id": "mup_v1_c_29_q_003",
+      "lesson_id": "V1-C-29",
+      "stage": "V1",
+      "type": "collocation",
+      "skill": "word_family",
+      "subskill": "business_usage",
+      "grammar_link_id": null,
+      "question_text": "The branch manager asked each team to ______ a budget before the planning meeting.",
+      "options": {
+        "A": "prepare",
+        "B": "perform",
+        "C": "operate",
+        "D": "attend"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "prepare a budget 是編列預算；perform、operate、attend 不接 budget。",
+      "target_item_id": "item_budget_family",
+      "distractor_type": "same_word_family",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v1",
+        "toeic_part5",
+        "collocation"
+      ]
+    },
+    {
+      "question_id": "mup_v1_f_53_q_001",
+      "lesson_id": "V1-F-53",
+      "stage": "V1",
+      "type": "speed_drill",
+      "skill": "word_family",
+      "subskill": "fast_form_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ your reservation before noon.",
+      "options": {
+        "A": "confirm",
+        "B": "confirmation",
+        "C": "confirmed",
+        "D": "confirming"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "Please 後接原形動詞 confirm；confirmation 是名詞，不能作動作。",
+      "target_item_id": "item_confirm_family",
+      "distractor_type": "same_word_family",
+      "difficulty": 1,
+      "estimated_time_seconds": 8,
+      "default_error_code": "TIME_PRESSURE",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v1",
+        "toeic_part5",
+        "speed"
+      ]
+    },
+    {
+      "question_id": "mup_v1_c_29_rv_001",
+      "lesson_id": "V1-C-29",
+      "stage": "V1",
+      "type": "review_question",
+      "skill": "word_family",
+      "subskill": "noun_form_review",
+      "grammar_link_id": null,
+      "question_text": "The applicant submitted a complete ______ before the deadline.",
+      "options": {
+        "A": "apply",
+        "B": "application",
+        "C": "applicable",
+        "D": "applicant"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "complete 後需名詞 application；applicant 是申請人，不是文件。",
+      "target_item_id": "item_apply_family",
+      "distractor_type": "same_word_family",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "WORD_FAMILY_POS",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v1",
+        "review"
+      ]
+    },
+    {
+      "question_id": "mup_v2_a_71_q_001",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "scene_vocabulary",
+      "skill": "scene_vocabulary",
+      "subskill": "office_administration",
+      "grammar_link_id": null,
+      "question_text": "Office: Call Ms. Lin at ______ 204 if the supplier arrives early.",
+      "options": {
+        "A": "extension",
+        "B": "photocopier",
+        "C": "stationery",
+        "D": "workstation"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "extension 是電話分機；photocopier 是影印機，不能接號碼。",
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v2",
+        "toeic_scene",
+        "office"
+      ]
+    },
+    {
+      "question_id": "mup_v2_a_71_rv_001",
+      "lesson_id": "V2-A-71",
+      "stage": "V2",
+      "type": "review_question",
+      "skill": "scene_vocabulary",
+      "subskill": "office_administration",
+      "grammar_link_id": null,
+      "question_text": "Quick review: choose the best TOEIC meaning for \"photocopier\".",
+      "options": {
+        "A": "a machine that makes paper copies",
+        "B": "a desk for using a computer",
+        "C": "paper and office supplies",
+        "D": "an internal phone number"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "photocopier 是影印機；workstation 才是工作站或座位。",
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "distractor_type": "same_scene_vocabulary",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "minimum_usable_pack",
+        "mup_v2",
+        "review",
+        "semantic_sense:office_machine"
+      ]
+    }
+  ],
+  "external_sample_sources": [
+    {
+      "stage": "V3",
+      "pack_id": "MUP-V3-01",
+      "lesson_id": "V3-W1-01",
+      "source_artifact": "drafts/collocation-rebuild/wave1_question_shells.json",
+      "vocab_source_artifact": "drafts/collocation-rebuild/wave1_vocab_items_seed_draft.json",
+      "verification_script": "scripts/verify-phase10-slice.js",
+      "sample_question_ids": [
+        "V3-W1-01_Q01",
+        "V3-W1-01_Q02",
+        "V3-W1-01_Q15",
+        "V3-W1-01_R01"
+      ],
+      "required_type_coverage": [
+        "collocation",
+        "part5_sentence_completion",
+        "part6_context_choice",
+        "review_question"
+      ],
+      "decision": "Accepted as draft authoring reference; blocked from production promotion until release gate and merge-order requirements are satisfied."
+    }
+  ],
+  "manual_review_required": [
+    "content_quality",
+    "semantic_sense_control",
+    "error_code_mapping",
+    "answer_distribution",
+    "explanation_quality",
+    "distractor_quality",
+    "review_pressure",
+    "seed_to_lesson_to_review_to_export_smoke"
+  ]
+}

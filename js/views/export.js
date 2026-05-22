@@ -7,6 +7,8 @@ import {
   setNotice,
   loadData,
   currentLesson,
+  loadWordHighlights,
+  saveWordHighlights,
   topCounts,
   wordHighlightSummary
 } from "../state.js";
@@ -97,7 +99,77 @@ const EXPORT_CATEGORIES = [
 ];
 
 const exportRuntime = {
-  render: null
+  render: null,
+  backupPreview: null
+};
+
+const BACKUP_VERSION = "1.0";
+const BACKUP_APP_ID = "toeic-vocab-tracker";
+const BACKUP_STORES = [
+  "users",
+  "settings",
+  "lessons",
+  "vocab_items",
+  "attempts",
+  "sessions",
+  "error_logs",
+  "review_queue",
+  "exports",
+  "question_edits",
+  "word_highlights"
+];
+const IMPORTABLE_STORES = [
+  "users",
+  "settings",
+  "lessons",
+  "vocab_items",
+  "attempts",
+  "sessions",
+  "error_logs",
+  "review_queue",
+  "exports"
+];
+const BACKUP_KEY_PATHS = {
+  users: "user_id",
+  settings: "key",
+  lessons: "lesson_id",
+  vocab_items: "item_id",
+  attempts: "attempt_id",
+  sessions: "session_id",
+  error_logs: "error_log_id",
+  review_queue: "review_id",
+  exports: "export_id",
+  question_edits: "question_id",
+  word_highlights: "highlight_id"
+};
+const BACKUP_STORE_LABELS = {
+  users: "使用者",
+  settings: "設定",
+  lessons: "課程進度",
+  vocab_items: "詞彙精熟度",
+  attempts: "作答紀錄",
+  sessions: "課程紀錄",
+  error_logs: "錯因紀錄",
+  review_queue: "複習佇列",
+  exports: "匯出紀錄",
+  question_edits: "題庫本機編輯",
+  word_highlights: "不熟單字標記"
+};
+const PROTECTED_SETTING_KEYS = new Set(["seed_version", "course_id"]);
+const LESSON_STATUS_RANK = {
+  not_started: 0,
+  in_progress: 1,
+  needs_retake: 2,
+  completed: 3,
+  completed_with_reinforcement: 4,
+  sealed: 5
+};
+const MASTERY_LEVEL_RANK = {
+  blind: 0,
+  weak: 1,
+  unstable: 2,
+  stable: 3,
+  mastered: 4
 };
 
 export function configureExportView(deps) {
@@ -109,6 +181,615 @@ function callRender() {
     throw new Error("Export module render callback is not configured.");
   }
   exportRuntime.render();
+}
+
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value ?? null));
+}
+
+function safeArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+function safeObject(value) {
+  return value && typeof value === "object" && !Array.isArray(value) ? value : {};
+}
+
+function backupDateKey() {
+  return window.VocabScoring.localDate();
+}
+
+function defaultDeviceLabel(sourceDeviceLabel) {
+  const label = String(sourceDeviceLabel || state.prefs?.device_label || state.user?.display_name || "").trim();
+  if (label) return label.slice(0, 80);
+  return "local-browser";
+}
+
+function latestValue(values) {
+  const clean = values.filter(Boolean).map(String).sort();
+  return clean.length ? clean[clean.length - 1] : null;
+}
+
+function earliestValue(values) {
+  const clean = values.filter(Boolean).map(String).sort();
+  return clean.length ? clean[0] : null;
+}
+
+function masteryLevelForScore(score) {
+  const n = Number(score);
+  if (!Number.isFinite(n)) return "";
+  if (n >= 85) return "mastered";
+  if (n >= 75) return "stable";
+  if (n >= 60) return "unstable";
+  if (n >= 40) return "weak";
+  return "blind";
+}
+
+function strongestMasteryLevel(localLevel, incomingLevel) {
+  const localRank = MASTERY_LEVEL_RANK[localLevel] ?? 0;
+  const incomingRank = MASTERY_LEVEL_RANK[incomingLevel] ?? 0;
+  return incomingRank > localRank ? incomingLevel : localLevel;
+}
+
+function numericMax(localValue, incomingValue) {
+  const localNumber = Number(localValue);
+  const incomingNumber = Number(incomingValue);
+  if (Number.isFinite(localNumber) && Number.isFinite(incomingNumber)) return Math.max(localNumber, incomingNumber);
+  if (Number.isFinite(incomingNumber)) return incomingNumber;
+  if (Number.isFinite(localNumber)) return localNumber;
+  return localValue ?? incomingValue ?? 0;
+}
+
+function recordsByKey(records, keyPath) {
+  const map = {};
+  safeArray(records).forEach((record) => {
+    const key = String(record?.[keyPath] ?? "").trim();
+    if (key) map[key] = record;
+  });
+  return map;
+}
+
+function uniqueByKey(records, keyPath) {
+  const seen = new Set();
+  const rows = [];
+  let invalid = 0;
+  let duplicate = 0;
+  safeArray(records).forEach((record) => {
+    if (!record || typeof record !== "object" || Array.isArray(record)) {
+      invalid += 1;
+      return;
+    }
+    const key = String(record[keyPath] ?? "").trim();
+    if (!key) {
+      invalid += 1;
+      return;
+    }
+    if (seen.has(key)) {
+      duplicate += 1;
+      return;
+    }
+    seen.add(key);
+    rows.push(record);
+  });
+  return { rows, invalid, duplicate };
+}
+
+function wordHighlightRecordKey(record) {
+  const id = String(record?.highlight_id || "").trim();
+  if (id) return `id:${id}`;
+  return [
+    "fallback",
+    String(record?.normalized || record?.text || "").toLowerCase().trim(),
+    String(record?.question_id || "").trim(),
+    String(record?.session_id || "").trim(),
+    String(record?.created_at || "").trim()
+  ].join("|");
+}
+
+function uniqueWordHighlights(records) {
+  const seen = new Set();
+  const rows = [];
+  let invalid = 0;
+  let duplicate = 0;
+  safeArray(records).forEach((record) => {
+    if (!record || typeof record !== "object" || Array.isArray(record)) {
+      invalid += 1;
+      return;
+    }
+    const key = wordHighlightRecordKey(record);
+    if (!key || key === "fallback||||") {
+      invalid += 1;
+      return;
+    }
+    if (seen.has(key)) {
+      duplicate += 1;
+      return;
+    }
+    seen.add(key);
+    rows.push(record);
+  });
+  return { rows, invalid, duplicate };
+}
+
+function getBackupWordHighlights(payload) {
+  const storeRows = safeArray(payload?.stores?.word_highlights);
+  if (storeRows.length) return storeRows;
+  return safeArray(payload?.local_storage?.word_highlights);
+}
+
+function buildBackupSummary(stores) {
+  const attempts = safeArray(stores.attempts);
+  return {
+    attempts: attempts.length,
+    sessions: safeArray(stores.sessions).length,
+    review_queue: safeArray(stores.review_queue).length,
+    vocab_items: safeArray(stores.vocab_items).length,
+    latest_attempt_at: latestValue(attempts.map((attempt) => attempt.timestamp || attempt.created_at))
+  };
+}
+
+function validateBackupPayload(payload) {
+  const errors = [];
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    return ["備份檔不是有效的 JSON object。"];
+  }
+  if (payload.backup_version !== BACKUP_VERSION) {
+    errors.push(`backup_version 必須是 ${BACKUP_VERSION}。`);
+  }
+  if (payload.app_id !== BACKUP_APP_ID) {
+    errors.push(`app_id 必須是 ${BACKUP_APP_ID}。`);
+  }
+  if (!payload.seed_version || typeof payload.seed_version !== "string") {
+    errors.push("缺少 seed_version。");
+  }
+  if (!payload.exported_at || typeof payload.exported_at !== "string") {
+    errors.push("缺少 exported_at。");
+  }
+  if (!payload.stores || typeof payload.stores !== "object" || Array.isArray(payload.stores)) {
+    errors.push("缺少 stores object。");
+  } else {
+    BACKUP_STORES.forEach((storeName) => {
+      if (!Array.isArray(payload.stores[storeName])) {
+        errors.push(`stores.${storeName} 必須是 array。`);
+      }
+    });
+  }
+  if (!payload.local_storage || typeof payload.local_storage !== "object" || Array.isArray(payload.local_storage)) {
+    errors.push("缺少 local_storage object。");
+  }
+  return errors;
+}
+
+function backupAgeWarning(exportedAt) {
+  const exportedMs = Date.parse(exportedAt || "");
+  if (!Number.isFinite(exportedMs)) return "";
+  const ageDays = Math.floor((Date.now() - exportedMs) / 86400000);
+  if (ageDays > 90) return `備份檔已超過 ${ageDays} 天，建議確認是否為最新學習紀錄後再合併。`;
+  return "";
+}
+
+function shouldMergeLesson(localRecord, incomingRecord) {
+  if (!localRecord || !incomingRecord) return false;
+  return JSON.stringify(mergeLessonProgress(localRecord, incomingRecord)) !== JSON.stringify(localRecord);
+}
+
+function shouldMergeVocabItem(localRecord, incomingRecord) {
+  if (!localRecord || !incomingRecord) return false;
+  return JSON.stringify(mergeVocabItemProgress(localRecord, incomingRecord)) !== JSON.stringify(localRecord);
+}
+
+function mergeLessonProgress(localRecord, incomingRecord) {
+  const merged = { ...localRecord };
+  const localStatus = localRecord.status || "not_started";
+  const incomingStatus = incomingRecord.status || "not_started";
+  if ((LESSON_STATUS_RANK[incomingStatus] ?? 0) > (LESSON_STATUS_RANK[localStatus] ?? 0)) {
+    merged.status = incomingStatus;
+  }
+  ["last_opened_at", "completed_at", "updated_at", "last_completed_at"].forEach((field) => {
+    const value = latestValue([localRecord[field], incomingRecord[field]]);
+    if (value) merged[field] = value;
+  });
+  return merged;
+}
+
+function mergeVocabItemProgress(localRecord, incomingRecord) {
+  const merged = { ...localRecord };
+  [
+    "seen_count",
+    "correct_count",
+    "wrong_count",
+    "mastery_score",
+    "consecutive_fast_correct",
+    "stable_review_sessions"
+  ].forEach((field) => {
+    if (field in incomingRecord || field in localRecord) {
+      merged[field] = numericMax(localRecord[field], incomingRecord[field]);
+    }
+  });
+
+  const firstSeen = earliestValue([localRecord.first_seen, incomingRecord.first_seen]);
+  const lastSeen = latestValue([localRecord.last_seen, incomingRecord.last_seen]);
+  const nextReviewDate = earliestValue([localRecord.next_review_date, incomingRecord.next_review_date]);
+  if (firstSeen) merged.first_seen = firstSeen;
+  if (lastSeen) merged.last_seen = lastSeen;
+  if (nextReviewDate) merged.next_review_date = nextReviewDate;
+
+  const incomingIsNewer = String(incomingRecord.last_seen || "") > String(localRecord.last_seen || "");
+  if ((incomingIsNewer || !localRecord.avg_response_time_seconds) && incomingRecord.avg_response_time_seconds !== undefined) {
+    merged.avg_response_time_seconds = incomingRecord.avg_response_time_seconds;
+  }
+  if (incomingIsNewer && incomingRecord.last_error_code !== undefined) {
+    merged.last_error_code = incomingRecord.last_error_code;
+  }
+
+  const scoreLevel = masteryLevelForScore(merged.mastery_score);
+  merged.mastery_level = scoreLevel || strongestMasteryLevel(localRecord.mastery_level, incomingRecord.mastery_level) || "blind";
+  return merged;
+}
+
+function analyzeStorePlan(storeName, incomingRows, currentRows) {
+  const keyPath = BACKUP_KEY_PATHS[storeName];
+  const unique = uniqueByKey(incomingRows, keyPath);
+  const current = recordsByKey(currentRows, keyPath);
+  const plan = {
+    store: storeName,
+    label: BACKUP_STORE_LABELS[storeName] || storeName,
+    incoming: unique.rows.length,
+    add: 0,
+    merge: 0,
+    skip: 0,
+    invalid: unique.invalid,
+    duplicate: unique.duplicate,
+    blocked: 0
+  };
+
+  unique.rows.forEach((record) => {
+    const key = String(record[keyPath]);
+    const localRecord = current[key];
+    if (storeName === "settings") {
+      if (PROTECTED_SETTING_KEYS.has(key) || localRecord) plan.skip += 1;
+      else plan.add += 1;
+      return;
+    }
+    if (storeName === "lessons") {
+      if (!localRecord) {
+        plan.blocked += 1;
+      } else if (shouldMergeLesson(localRecord, record)) {
+        plan.merge += 1;
+      } else {
+        plan.skip += 1;
+      }
+      return;
+    }
+    if (storeName === "vocab_items") {
+      if (!localRecord) {
+        plan.add += 1;
+      } else if (shouldMergeVocabItem(localRecord, record)) {
+        plan.merge += 1;
+      } else {
+        plan.skip += 1;
+      }
+      return;
+    }
+    if (localRecord) plan.skip += 1;
+    else plan.add += 1;
+  });
+  return plan;
+}
+
+function summarizeBackupPlans(plans) {
+  return Object.values(plans).reduce((sum, plan) => ({
+    incoming: sum.incoming + (plan.incoming || 0),
+    add: sum.add + (plan.add || 0),
+    merge: sum.merge + (plan.merge || 0),
+    skip: sum.skip + (plan.skip || 0),
+    invalid: sum.invalid + (plan.invalid || 0),
+    duplicate: sum.duplicate + (plan.duplicate || 0),
+    blocked: sum.blocked + (plan.blocked || 0)
+  }), { incoming: 0, add: 0, merge: 0, skip: 0, invalid: 0, duplicate: 0, blocked: 0 });
+}
+
+async function currentRowsByImportStore() {
+  const entries = await Promise.all(IMPORTABLE_STORES.map(async (storeName) => {
+    const rows = await window.VocabDB.getAll(storeName);
+    return [storeName, rows];
+  }));
+  return Object.fromEntries(entries);
+}
+
+export async function buildGoogleDriveBackupPayload(sourceDeviceLabel = "") {
+  const [
+    users,
+    settings,
+    lessons,
+    vocabItems,
+    attempts,
+    sessions,
+    errorLogs,
+    reviewQueue,
+    exports,
+    questionEdits
+  ] = await Promise.all([
+    window.VocabDB.getAll("users"),
+    window.VocabDB.getAll("settings"),
+    window.VocabDB.getAll("lessons"),
+    window.VocabDB.getAll("vocab_items"),
+    window.VocabDB.getAll("attempts"),
+    window.VocabDB.getAll("sessions"),
+    window.VocabDB.getAll("error_logs"),
+    window.VocabDB.getAll("review_queue"),
+    window.VocabDB.getAll("exports"),
+    window.VocabDB.getAll("question_edits")
+  ]);
+  const wordHighlights = loadWordHighlights();
+  const stores = {
+    users: cloneJson(users),
+    settings: cloneJson(settings),
+    lessons: cloneJson(lessons),
+    vocab_items: cloneJson(vocabItems),
+    attempts: cloneJson(attempts),
+    sessions: cloneJson(sessions),
+    error_logs: cloneJson(errorLogs),
+    review_queue: cloneJson(reviewQueue),
+    exports: cloneJson(exports),
+    question_edits: cloneJson(questionEdits),
+    word_highlights: cloneJson(wordHighlights)
+  };
+  return {
+    backup_version: BACKUP_VERSION,
+    app_id: BACKUP_APP_ID,
+    seed_version: window.VocabDB.SEED_VERSION,
+    exported_at: window.VocabScoring.localIso(),
+    source_device_label: defaultDeviceLabel(sourceDeviceLabel),
+    summary: buildBackupSummary(stores),
+    stores,
+    local_storage: {
+      preferences: cloneJson(window.VocabDB.loadPrefs()),
+      word_highlights: cloneJson(wordHighlights)
+    }
+  };
+}
+
+export async function analyzeGoogleDriveBackupPayload(payload) {
+  const errors = validateBackupPayload(payload);
+  const preview = {
+    payload,
+    ok: errors.length === 0,
+    errors,
+    warnings: [],
+    seedMismatch: false,
+    plans: {},
+    totals: { incoming: 0, add: 0, merge: 0, skip: 0, invalid: 0, duplicate: 0, blocked: 0 },
+    summary: safeObject(payload?.summary),
+    exportedAt: payload?.exported_at || "",
+    sourceDeviceLabel: payload?.source_device_label || "",
+    seedVersion: payload?.seed_version || ""
+  };
+  if (errors.length) return preview;
+
+  if (payload.seed_version !== window.VocabDB.SEED_VERSION) {
+    preview.seedMismatch = true;
+    preview.warnings.push(`seed_version 不同：備份檔是 ${payload.seed_version}，本機是 ${window.VocabDB.SEED_VERSION}。Safe merge 只合併學習紀錄，不會改 production seed。`);
+  }
+  const oldFileWarning = backupAgeWarning(payload.exported_at);
+  if (oldFileWarning) preview.warnings.push(oldFileWarning);
+
+  const currentRows = await currentRowsByImportStore();
+  IMPORTABLE_STORES.forEach((storeName) => {
+    preview.plans[storeName] = analyzeStorePlan(storeName, payload.stores[storeName], currentRows[storeName]);
+  });
+
+  const questionEdits = uniqueByKey(payload.stores.question_edits, BACKUP_KEY_PATHS.question_edits);
+  preview.plans.question_edits = {
+    store: "question_edits",
+    label: BACKUP_STORE_LABELS.question_edits,
+    incoming: questionEdits.rows.length,
+    add: 0,
+    merge: 0,
+    skip: questionEdits.rows.length,
+    invalid: questionEdits.invalid,
+    duplicate: questionEdits.duplicate,
+    blocked: 0,
+    protected: true
+  };
+
+  const incomingHighlights = uniqueWordHighlights(getBackupWordHighlights(payload));
+  const localHighlightKeys = new Set(loadWordHighlights().map(wordHighlightRecordKey));
+  preview.plans.word_highlights = {
+    store: "word_highlights",
+    label: BACKUP_STORE_LABELS.word_highlights,
+    incoming: incomingHighlights.rows.length,
+    add: incomingHighlights.rows.filter((row) => !localHighlightKeys.has(wordHighlightRecordKey(row))).length,
+    merge: 0,
+    skip: incomingHighlights.rows.filter((row) => localHighlightKeys.has(wordHighlightRecordKey(row))).length,
+    invalid: incomingHighlights.invalid,
+    duplicate: incomingHighlights.duplicate,
+    blocked: 0
+  };
+
+  preview.totals = summarizeBackupPlans(preview.plans);
+  preview.summary = {
+    ...buildBackupSummary(payload.stores),
+    ...safeObject(payload.summary)
+  };
+  return preview;
+}
+
+async function putMissingRecords(storeName, rows) {
+  const keyPath = BACKUP_KEY_PATHS[storeName];
+  const current = recordsByKey(await window.VocabDB.getAll(storeName), keyPath);
+  let added = 0;
+  for (const record of uniqueByKey(rows, keyPath).rows) {
+    const key = String(record[keyPath]);
+    if (storeName === "settings" && PROTECTED_SETTING_KEYS.has(key)) continue;
+    if (!current[key]) {
+      await window.VocabDB.put(storeName, cloneJson(record));
+      current[key] = record;
+      added += 1;
+    }
+  }
+  return added;
+}
+
+async function mergeLessonRecords(rows) {
+  const keyPath = BACKUP_KEY_PATHS.lessons;
+  let merged = 0;
+  let skipped = 0;
+  let blocked = 0;
+  for (const record of uniqueByKey(rows, keyPath).rows) {
+    const localRecord = await window.VocabDB.get("lessons", record.lesson_id);
+    if (!localRecord) {
+      blocked += 1;
+      continue;
+    }
+    const next = mergeLessonProgress(localRecord, record);
+    if (JSON.stringify(next) !== JSON.stringify(localRecord)) {
+      await window.VocabDB.put("lessons", next);
+      merged += 1;
+    } else {
+      skipped += 1;
+    }
+  }
+  return { merged, skipped, blocked };
+}
+
+async function mergeVocabItemRecords(rows) {
+  const keyPath = BACKUP_KEY_PATHS.vocab_items;
+  let added = 0;
+  let merged = 0;
+  let skipped = 0;
+  for (const record of uniqueByKey(rows, keyPath).rows) {
+    const localRecord = await window.VocabDB.get("vocab_items", record.item_id);
+    if (!localRecord) {
+      await window.VocabDB.put("vocab_items", cloneJson(record));
+      added += 1;
+      continue;
+    }
+    const next = mergeVocabItemProgress(localRecord, record);
+    if (JSON.stringify(next) !== JSON.stringify(localRecord)) {
+      await window.VocabDB.put("vocab_items", next);
+      merged += 1;
+    } else {
+      skipped += 1;
+    }
+  }
+  return { added, merged, skipped };
+}
+
+function mergePreferences(localStoragePayload) {
+  const incomingPrefs = safeObject(localStoragePayload?.preferences);
+  const localPrefs = window.VocabDB.loadPrefs();
+  window.VocabDB.savePrefs({ ...incomingPrefs, ...localPrefs });
+}
+
+function mergeWordHighlights(payload) {
+  const localRows = loadWordHighlights();
+  const localKeys = new Set(localRows.map(wordHighlightRecordKey));
+  const incoming = uniqueWordHighlights(getBackupWordHighlights(payload));
+  const additions = incoming.rows.filter((row) => !localKeys.has(wordHighlightRecordKey(row)));
+  if (additions.length) saveWordHighlights([...localRows, ...cloneJson(additions)]);
+  return { added: additions.length, skipped: incoming.rows.length - additions.length, invalid: incoming.invalid, duplicate: incoming.duplicate };
+}
+
+export async function mergeGoogleDriveBackupPayload(payload) {
+  const preview = await analyzeGoogleDriveBackupPayload(payload);
+  if (!preview.ok) {
+    throw new Error(preview.errors.join(" "));
+  }
+  const result = {
+    added: {},
+    merged: {},
+    skipped: {},
+    blocked: {},
+    seed_version_changed: false
+  };
+
+  result.added.users = await putMissingRecords("users", payload.stores.users);
+  result.added.settings = await putMissingRecords("settings", payload.stores.settings);
+  const lessonResult = await mergeLessonRecords(payload.stores.lessons);
+  result.merged.lessons = lessonResult.merged;
+  result.skipped.lessons = lessonResult.skipped;
+  result.blocked.lessons = lessonResult.blocked;
+  const vocabResult = await mergeVocabItemRecords(payload.stores.vocab_items);
+  result.added.vocab_items = vocabResult.added;
+  result.merged.vocab_items = vocabResult.merged;
+  result.skipped.vocab_items = vocabResult.skipped;
+
+  for (const storeName of ["attempts", "sessions", "error_logs", "review_queue", "exports"]) {
+    result.added[storeName] = await putMissingRecords(storeName, payload.stores[storeName]);
+  }
+  mergePreferences(payload.local_storage);
+  const highlightResult = mergeWordHighlights(payload);
+  result.added.word_highlights = highlightResult.added;
+  result.skipped.word_highlights = highlightResult.skipped;
+  result.skipped.question_edits = uniqueByKey(payload.stores.question_edits, BACKUP_KEY_PATHS.question_edits).rows.length;
+
+  const seedSetting = await window.VocabDB.get("settings", "seed_version");
+  result.seed_version_changed = seedSetting?.value !== window.VocabDB.SEED_VERSION;
+  return result;
+}
+
+function renderBackupPreview(preview) {
+  if (!preview) {
+    return `<p class="muted-note" data-testid="google-drive-backup-preview-empty">尚未選擇備份檔。請先從 Google Drive 下載 JSON，再用這裡選檔預覽。</p>`;
+  }
+
+  if (!preview.ok) {
+    return `
+      <div class="tracker-alert danger" data-testid="google-drive-backup-preview">
+        備份檔格式不符合要求：${html(preview.errors.join(" "))}
+      </div>
+    `;
+  }
+
+  const warnings = preview.warnings.length
+    ? `<div class="tracker-alert warn" data-testid="google-drive-backup-warnings">${preview.warnings.map((line) => html(line)).join(" ")}</div>`
+    : `<div class="tracker-alert ok" data-testid="google-drive-backup-warnings">備份檔格式正確。請確認 preview 後再執行 safe merge。</div>`;
+  const planOrder = [
+    "attempts",
+    "sessions",
+    "review_queue",
+    "error_logs",
+    "vocab_items",
+    "lessons",
+    "word_highlights",
+    "users",
+    "settings",
+    "exports",
+    "question_edits"
+  ];
+  const planRows = planOrder.map((storeName) => {
+    const plan = preview.plans[storeName];
+    if (!plan) return "";
+    const note = plan.protected ? "不自動匯入" : `新增 ${plan.add || 0} / 合併 ${plan.merge || 0} / 略過 ${plan.skip || 0}`;
+    const extra = plan.blocked || plan.invalid || plan.duplicate
+      ? `（封鎖 ${plan.blocked || 0}，無效 ${plan.invalid || 0}，重複 ${plan.duplicate || 0}）`
+      : "";
+    return `<div class="stage-row"><span>${html(plan.label)}</span><strong>${html(note)}${html(extra)}</strong></div>`;
+  }).join("");
+  const mergeDisabled = "";
+  const mergeResult = preview.lastMergeResult
+    ? `<p class="muted-note" data-testid="google-drive-backup-merge-result">上次合併完成：新增作答 ${preview.lastMergeResult.added?.attempts || 0} 筆、課程紀錄 ${preview.lastMergeResult.added?.sessions || 0} 筆、不熟單字 ${preview.lastMergeResult.added?.word_highlights || 0} 筆。</p>`
+    : "";
+
+  return `
+    <div class="google-drive-backup-preview" data-testid="google-drive-backup-preview">
+      ${warnings}
+      <div class="tracker-grid tracker-grid--five export-grid">
+        <article class="tracker-stat"><span>來源裝置</span><strong>${html(preview.sourceDeviceLabel || "-")}</strong><small>${html(preview.exportedAt || "-")}</small></article>
+        <article class="tracker-stat"><span>作答紀錄</span><strong>${html(preview.summary.attempts ?? 0)}</strong><small>backup rows</small></article>
+        <article class="tracker-stat"><span>課程紀錄</span><strong>${html(preview.summary.sessions ?? 0)}</strong><small>backup rows</small></article>
+        <article class="tracker-stat"><span>複習佇列</span><strong>${html(preview.summary.review_queue ?? 0)}</strong><small>backup rows</small></article>
+        <article class="tracker-stat"><span>Safe merge</span><strong>${html(preview.totals.add + preview.totals.merge)}</strong><small>新增或合併</small></article>
+      </div>
+      <div class="stage-list google-drive-backup-plan" data-testid="google-drive-backup-plan">${planRows}</div>
+      <p class="muted-note">Safe merge 採本機優先；相同 ID 不重複匯入。production 題目、課程來源 JSON、seed version 與 Question Bank source workflow 不會被覆蓋。</p>
+      ${mergeResult}
+      <div class="tracker-actions">
+        <button class="button primary" type="button" data-testid="google-drive-backup-merge" onclick="VocabTracker.mergeGoogleDriveBackup()" ${mergeDisabled}>確認 safe merge</button>
+      </div>
+    </div>
+  `;
 }
 
 export function renderExport() {
@@ -129,6 +810,7 @@ export function renderExport() {
   const warningHtml = warnings.length
     ? `<div class="export-warnings">${warnings.map((w) => `<p class="muted-note">⚠ ${html(w)}</p>`).join("")}</div>`
     : "";
+  const backupPreviewHtml = renderBackupPreview(exportRuntime.backupPreview);
 
   // Build category sections for the inventory, injecting the dynamic date-keyed file into "Full Package"
   const categoryHtml = EXPORT_CATEGORIES.map((cat) => {
@@ -162,6 +844,20 @@ export function renderExport() {
         <article class="tracker-stat"><span>不熟單字標記</span><strong>${(state.wordHighlights || []).length}</strong><small>筆</small></article>
       </div>
       <p class="export-mode-note" data-testid="export-mode-note">${modeNote}</p>
+    </section>
+
+    <section class="tracker-panel google-drive-backup-panel" data-testid="google-drive-backup-panel">
+      <h3>Google Drive 手動備份 / 還原</h3>
+      <p class="muted-note">這是單一 JSON 備份檔流程：匯出後自行放到 Google Drive；在另一台裝置下載後再匯入 preview 與 safe merge。</p>
+      <div class="tracker-alert warn">這不是即時雲端同步，不需要 Google 登入，也不會連接 Google Drive API。Production 題庫 JSON 與 seed version 不會被匯入檔覆蓋。</div>
+      <div class="tracker-actions export-actions" data-testid="google-drive-backup-actions">
+        <button class="button primary" type="button" data-testid="google-drive-backup-export" onclick="VocabTracker.exportGoogleDriveBackup()">匯出 Google Drive 備份檔</button>
+        <label class="button secondary file-button">
+          匯入備份檔
+          <input data-testid="google-drive-backup-import-input" type="file" accept="application/json,.json" onchange="VocabTracker.previewGoogleDriveBackup(this.files[0]); this.value = ''">
+        </label>
+      </div>
+      ${backupPreviewHtml}
     </section>
 
     <section class="tracker-panel export-inventory-panel" data-testid="export-inventory-panel">
@@ -1268,6 +1964,75 @@ ${recommendedActions.length ? recommendedActions.map((line) => `- ${line}`).join
 ## Stage Status Snapshot
 ${stageStatusLines}
 `;
+}
+
+export async function exportGoogleDriveBackup(sourceDeviceLabel = "") {
+  const payload = await buildGoogleDriveBackupPayload(sourceDeviceLabel);
+  const fileName = `toeic_vocab_backup_${backupDateKey()}.json`;
+  window.VocabScoring.downloadText(fileName, JSON.stringify(payload, null, 2), "application/json;charset=utf-8");
+  await window.VocabDB.put("exports", {
+    export_id: `backup_${Date.now()}`,
+    created_at: window.VocabScoring.localIso(),
+    folder_name: "google_drive_manual_backup",
+    file_names: [fileName],
+    session_count: payload.summary.sessions,
+    attempt_count: payload.summary.attempts,
+    export_type: "google_drive_backup"
+  });
+  setNotice(`已匯出 ${fileName}。請自行上傳或移到 Google Drive；這不是即時同步。`, "ok");
+  await loadData();
+  callRender();
+}
+
+export async function previewGoogleDriveBackup(file) {
+  if (!file) return;
+  try {
+    const raw = await file.text();
+    const payload = JSON.parse(raw);
+    exportRuntime.backupPreview = await analyzeGoogleDriveBackupPayload(payload);
+    if (exportRuntime.backupPreview.ok) {
+      const warningNote = exportRuntime.backupPreview.warnings.length ? "，請先確認警告" : "";
+      setNotice(`已載入備份檔 preview${warningNote}。確認無誤後再執行 safe merge。`, exportRuntime.backupPreview.warnings.length ? "warn" : "ok");
+    } else {
+      setNotice("備份檔不符合 Google Drive portability 格式，未執行匯入。", "danger");
+    }
+  } catch (err) {
+    exportRuntime.backupPreview = {
+      ok: false,
+      payload: null,
+      errors: [`備份檔解析失敗：${err.message || String(err)}`],
+      warnings: [],
+      plans: {},
+      totals: { incoming: 0, add: 0, merge: 0, skip: 0, invalid: 0, duplicate: 0, blocked: 0 },
+      summary: {},
+      exportedAt: "",
+      sourceDeviceLabel: "",
+      seedVersion: ""
+    };
+    setNotice("備份檔解析失敗，未執行匯入。", "danger");
+  }
+  callRender();
+}
+
+export async function mergeGoogleDriveBackup() {
+  const preview = exportRuntime.backupPreview;
+  if (!preview?.ok || !preview.payload) {
+    setNotice("請先選擇有效備份檔並完成 preview。", "warn");
+    return;
+  }
+  try {
+    const result = await mergeGoogleDriveBackupPayload(preview.payload);
+    await loadData();
+    exportRuntime.backupPreview = await analyzeGoogleDriveBackupPayload(preview.payload);
+    exportRuntime.backupPreview.lastMergeResult = result;
+    const addedAttempts = result.added?.attempts || 0;
+    const addedSessions = result.added?.sessions || 0;
+    const addedHighlights = result.added?.word_highlights || 0;
+    setNotice(`Safe merge 完成：新增作答 ${addedAttempts} 筆、課程紀錄 ${addedSessions} 筆、不熟單字 ${addedHighlights} 筆；production seed 未變更。`, "ok");
+    callRender();
+  } catch (err) {
+    setNotice(`Safe merge 失敗：${err.message || String(err)}`, "danger");
+  }
 }
 
 export async function exportPackage() {

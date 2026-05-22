@@ -28,8 +28,8 @@ Program B is a static local-first PWA.
 - Storage: IndexedDB `toeic_vocab_tracker_db`
 - Preferences/session: `toeic_vocab_tracker_preferences`, `toeic_vocab_active_session`
 - No backend
-- No login
-- No cloud sync
+- No active login or cloud sync in the shipped runtime
+- `SYNC-01` is the only approved future exception: Google Identity Services + Google Drive API learner-record sync, with no backend and no production seed changes
 - No build step
 - No runtime AI question generation
 
@@ -61,7 +61,7 @@ The active production seed is V0-V3 only. V2 restores `V2-A-71` through `V2-A-80
 | Duplicate stems | 0 |
 | Full quality audit issues | 0 |
 | Seed version | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` |
-| Service worker cache | `toeic-vorb-v38` |
+| Service worker cache | `toeic-vorb-v46` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
@@ -140,7 +140,7 @@ js/views/roadmap.js   -> lesson roadmap
 js/views/lesson.js    -> lesson runner
 js/views/mistakes.js  -> mistakes and review queue
 js/views/mastery.js   -> mastery view
-js/views/export.js    -> export package
+js/views/export.js    -> export package and manual Google Drive backup/restore
 js/views/bank.js      -> question bank browser/editor
 js/views/settings.js  -> settings
 ```
@@ -177,6 +177,19 @@ Program B is shipped as a repo-subpath-safe static PWA. Launcher, tracker, manif
 - The current Pages/mobile phase plan is tracked in `docs/pages-mobile-experience-plan.md`.
 - Still pending real-device acceptance: mobile export download confirmation and GitHub Pages real-URL phone validation.
 
+## Google Drive Manual Backup
+
+The Export page includes `匯出 Google Drive 備份檔` and `匯入備份檔`.
+
+- The app creates one JSON file: `toeic_vocab_backup_YYYY-MM-DD.json`.
+- The user manually uploads/downloads that file through Google Drive.
+- This is not cloud sync, not Google Drive API integration, and not a login flow.
+- Import uses preview first, then safe merge. Existing local IDs are not duplicated; local settings and the current production seed stay authoritative.
+- Production source files under `data/vocab/*` are never imported from a backup file.
+- Full plan: `docs/google-drive-record-portability-plan.md`.
+
+Planned next step: `SYNC-01` is documented in `docs/google-drive-cloud-sync-plan.md` for true Google Drive learner-record sync across devices. OAuth setup notes are in `docs/google-drive-oauth-setup.md`; the Web OAuth client ID is configured in `js/google-drive-sync-config.js` without storing the downloaded client secret; the sync payload, safe-merge, pending-change, and auto-sync metadata logic are in `js/google-drive-sync-data.js`; the inert Drive client skeleton is `js/google-drive-sync-client.js`. Live sync is still blocked until Drive API, OAuth consent/test-user access, missing local authorized origins, and live browser authorization are confirmed. The current manual backup flow remains available.
+
 ## Validation Commands
 
 Run these after documentation consolidation that changes current facts, and after any production code, UI, or seed change:
@@ -192,6 +205,7 @@ npm run test:export-governance
 npm run test:pages-mobile
 npm run test:pages-live
 npx playwright test
+npx playwright test tests/google-drive-backup.spec.ts
 ```
 
 Useful package shortcuts:
@@ -216,5 +230,5 @@ Export-based content feedback reviews are defined in `docs/export-analysis-feedb
 - Do not use archived status files as current facts.
 - Do not modify `C:\Users\Keith\toeic-app`.
 - Do not enable V4 in this repository unless a future prompt explicitly authorizes a V4 production seed change.
-- Do not add backend, login, cloud sync, a build step, or runtime AI question generation.
+- Do not add backend, a build step, or runtime AI question generation. Do not add login/cloud sync except the approved `SYNC-01` scoped Google Drive learner-record sync plan.
 - Question Bank edits made in the browser persist to IndexedDB only; they do not rewrite source JSON.

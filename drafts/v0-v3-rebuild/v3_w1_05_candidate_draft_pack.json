@@ -1,0 +1,1560 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_05_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-125",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-wave3-current-isolated-audit",
+    "isolated_audit_scope": "production baseline + V3-W1-04/05/06 drafts = 17 lessons / 384 questions",
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "duplicate_stems": 0,
+    "old_item_pressure_issues": 0,
+    "explanation_quality_warnings": 0,
+    "preferred_stem_length_warnings": 0,
+    "staircase_warnings": 24,
+    "current_baseline_total_staircase_warnings": 96,
+    "all_warnings_accepted": true
+  },
+  "notes": [
+    "C-11 wave 3 candidate: V3-W1-05 paperwork collocation lesson 2.",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-125."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-05",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 125,
+    "title": "文書作業 搭配詞 2",
+    "estimated_minutes": 35,
+    "lesson_type": "collocation",
+    "topic": "文書作業",
+    "target_items": [
+      "item_coll_check_over",
+      "item_coll_hand_back",
+      "item_coll_send_in",
+      "item_coll_file_away",
+      "item_coll_cross_out",
+      "item_coll_cut_out",
+      "item_coll_write_back"
+    ],
+    "question_ids": [
+      "V3-W1-05_Q01",
+      "V3-W1-05_Q02",
+      "V3-W1-05_Q03",
+      "V3-W1-05_Q04",
+      "V3-W1-05_Q05",
+      "V3-W1-05_Q06",
+      "V3-W1-05_Q07",
+      "V3-W1-05_Q08",
+      "V3-W1-05_Q09",
+      "V3-W1-05_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-05_Q11",
+      "V3-W1-05_Q12",
+      "V3-W1-05_Q13",
+      "V3-W1-05_Q14",
+      "V3-W1-05_Q15",
+      "V3-W1-05_Q16",
+      "V3-W1-05_Q17",
+      "V3-W1-05_Q18",
+      "V3-W1-05_Q19",
+      "V3-W1-05_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-05_R01",
+      "V3-W1-05_R02",
+      "V3-W1-05_R03",
+      "V3-W1-05_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_05",
+      "topic_lesson_index": 2,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 7,
+        "B": 0,
+        "C": 0
+      },
+      "unresolved_target_count": 7,
+      "authoring_method": "c11_v3_w1_05_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-05_Q01",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Before the board packet is bound, the assistant will ______ every appendix page number for accuracy.",
+      "options": {
+        "A": "check over",
+        "B": "check through",
+        "C": "check off",
+        "D": "check up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "check over 檢查；語境需要檢查，故用 check over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_check_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "check over",
+        "gloss_zh": "檢查",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "check over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q02",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the invoice totals once more before they are uploaded to the vendor portal.",
+      "options": {
+        "A": "check over",
+        "B": "check through",
+        "C": "check off",
+        "D": "check up"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "check over 檢查；語境需要檢查，故用 check over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_check_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "check over",
+        "gloss_zh": "檢查",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "check over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q03",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "After the notary stamps the originals, the clerk will ______ the signed contracts to each department head.",
+      "options": {
+        "A": "hand back",
+        "B": "hand on",
+        "C": "hand up",
+        "D": "hand out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "hand back 歸還；語境需要歸還，故用 hand back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "hand back",
+        "gloss_zh": "歸還",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q04",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Visitors must ______ their temporary badges at the security desk before leaving the building.",
+      "options": {
+        "A": "hand back",
+        "B": "hand on",
+        "C": "hand up",
+        "D": "hand out"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "hand back 歸還；語境需要歸還，故用 hand back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "hand back",
+        "gloss_zh": "歸還",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q05",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Applicants were asked to ______ their completed enrollment forms by registered mail this week.",
+      "options": {
+        "A": "send in",
+        "B": "send on",
+        "C": "send up",
+        "D": "send off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "send in 寄送提交；語境需要寄送提交，故用 send in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_send_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "send in",
+        "gloss_zh": "寄送提交",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "send in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q06",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the warranty claim form and proof of purchase to the manufacturer’s service center.",
+      "options": {
+        "A": "send in",
+        "B": "send on",
+        "C": "send up",
+        "D": "send off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "send in 寄送提交；語境需要寄送提交，故用 send in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_send_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "send in",
+        "gloss_zh": "寄送提交",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "send in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q07",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Once the audit closes, the records team will ______ the supporting receipts in labeled storage boxes.",
+      "options": {
+        "A": "file in",
+        "B": "file away",
+        "C": "file up",
+        "D": "file off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "file away 收檔；歸檔；語境需要收檔，故用 file away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_file_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "file away",
+        "gloss_zh": "收檔；歸檔",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "file away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q08",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "After scanning, staff should ______ the hard copies according to the retention schedule.",
+      "options": {
+        "A": "file in",
+        "B": "file away",
+        "C": "file up",
+        "D": "file off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "file away 收檔；歸檔；語境需要收檔，故用 file away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_file_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "file away",
+        "gloss_zh": "收檔；歸檔",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "file away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q09",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The editor asked the intern to ______ obsolete product codes on the draft price list.",
+      "options": {
+        "A": "cross off",
+        "B": "cross out",
+        "C": "cross up",
+        "D": "cross over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "cross out 劃掉；語境需要劃掉，故用 cross out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_cross_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "cross out",
+        "gloss_zh": "劃掉",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "cross out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q10",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please ______ any blank rows on the attendance sheet before submitting it to HR.",
+      "options": {
+        "A": "cross off",
+        "B": "cross out",
+        "C": "cross up",
+        "D": "cross over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "cross out 劃掉；語境需要劃掉，故用 cross out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_cross_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "cross out",
+        "gloss_zh": "劃掉",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "cross out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q11",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Trainees were told to ______ the sample badge from the instruction sheet and attach it to the lanyard.",
+      "options": {
+        "A": "cut in",
+        "B": "cut out",
+        "C": "cut up",
+        "D": "cut off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "cut out 剪下；刪除；語境需要剪下，故用 cut out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_cut_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "cut out",
+        "gloss_zh": "剪下；刪除",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "cut out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q12",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The designer will ______ the expired coupon section before the brochure goes to print.",
+      "options": {
+        "A": "cut in",
+        "B": "cut out",
+        "C": "cut up",
+        "D": "cut off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "cut out 剪下；刪除；語境需要剪下，故用 cut out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_cut_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "cut out",
+        "gloss_zh": "剪下；刪除",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "cut out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q13",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The benefits office promised to ______ every applicant who submitted incomplete medical forms.",
+      "options": {
+        "A": "write on",
+        "B": "write up",
+        "C": "write back",
+        "D": "write off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "write back 回信；語境需要回信，故用 write back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "write back",
+        "gloss_zh": "回信",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q14",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "If you do not receive confirmation within three days, please ______ to the help desk email address.",
+      "options": {
+        "A": "write on",
+        "B": "write up",
+        "C": "write back",
+        "D": "write off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "write back 回信；語境需要回信，故用 write back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "write back",
+        "gloss_zh": "回信",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q15",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Hundreds of employees asked about the new parking policy. The facilities manager said the team would ______ anyone whose registration number was missing from the list. Replies must go out before the garage access system is reset on Monday.",
+      "options": {
+        "A": "write on",
+        "B": "write up",
+        "C": "write back",
+        "D": "write off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "write back 回信；語境要求回信，故用 write back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "write back",
+        "gloss_zh": "回信",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q16",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The client found two mismatched subtotals in the service contract appendix. The analyst stayed late to ______ the pricing tables with the sales director before the board briefing. Revised figures must be uploaded tonight.",
+      "options": {
+        "A": "check through",
+        "B": "check off",
+        "C": "check over",
+        "D": "check up"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "check over 檢查；語境要求檢查，故用 check over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_check_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "check over",
+        "gloss_zh": "檢查",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "check over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q17",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Temporary library passes were issued during the system upgrade. Patrons who borrowed archived folders must ______ them at the circulation desk by 6 p.m. Late returns will delay the digitization project.",
+      "options": {
+        "A": "hand on",
+        "B": "hand up",
+        "C": "hand back",
+        "D": "hand out"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "hand back 歸還；語境要求歸還，故用 hand back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "hand back",
+        "gloss_zh": "歸還",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q18",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The scholarship committee extended the deadline after the website outage. Finalists were told to ______ their recommendation letters by courier rather than email because attachments were being rejected.",
+      "options": {
+        "A": "send on",
+        "B": "send up",
+        "C": "send in",
+        "D": "send off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "send in 寄送提交；語境要求寄送提交，故用 send in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_send_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "send in",
+        "gloss_zh": "寄送提交",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "send in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q19",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "After the tax review, boxes of receipts filled the hallway. Clerks worked in shifts to ______ each bundle by fiscal year before the fire inspector arrived. Mislabeled cartons will be reopened.",
+      "options": {
+        "A": "file in",
+        "B": "file up",
+        "C": "file off",
+        "D": "file away"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "file away 收檔；歸檔；語境要求收檔，故用 file away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_file_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "file away",
+        "gloss_zh": "收檔；歸檔",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "file away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_Q20",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The training manual still listed retired software modules. The coordinator asked volunteers to ______ outdated chapter titles on the printed handouts before the workshop. Electronic versions will be updated separately.",
+      "options": {
+        "A": "cross off",
+        "B": "cross up",
+        "C": "cross over",
+        "D": "cross out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "cross out 劃掉；語境要求劃掉，故用 cross out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_cross_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "cross out",
+        "gloss_zh": "劃掉",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "cross out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_R01",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "If your request is urgent, the coordinator will ______ within one business day.",
+      "options": {
+        "A": "write on",
+        "B": "write up",
+        "C": "write off",
+        "D": "write back"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "write back 回信；語境需要回信，故用 write back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_write_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "write back",
+        "gloss_zh": "回信",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "write back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_R02",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ the shipping labels before the pallets leave the dock.",
+      "options": {
+        "A": "check through",
+        "B": "check off",
+        "C": "check up",
+        "D": "check over"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "check over 檢查；語境需要檢查，故用 check over 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_check_over",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "check over",
+        "gloss_zh": "檢查",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "check over",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_R03",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Remember to ______ the master key to the facilities office after the inspection.",
+      "options": {
+        "A": "hand on",
+        "B": "hand up",
+        "C": "hand out",
+        "D": "hand back"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "hand back 歸還；語境需要歸還，故用 hand back 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_hand_back",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "hand back",
+        "gloss_zh": "歸還",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "hand back",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-05_R04",
+      "lesson_id": "V3-W1-05",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Contestants must ______ their entry forms before the registration window closes.",
+      "options": {
+        "A": "send on",
+        "B": "send up",
+        "C": "send off",
+        "D": "send in"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "send in 寄送提交；語境需要寄送提交，故用 send in 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_send_in",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-05",
+        "topic:文書作業",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_05",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "文書作業 搭配詞 2",
+        "source_phrase": "send in",
+        "gloss_zh": "寄送提交",
+        "source_topic": "文書作業",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "send in",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave3_candidate",
+        "authored_slice_lesson_id": "V3-W1-05",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_check_over",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "check over",
+      "variants": [
+        "check over"
+      ],
+      "chinese": "檢查",
+      "example": "Clerks were asked to check over the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "check over",
+        "gloss_zh": "檢查",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_hand_back",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "hand back",
+      "variants": [
+        "hand back"
+      ],
+      "chinese": "歸還",
+      "example": "Clerks were asked to hand back the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "hand back",
+        "gloss_zh": "歸還",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_send_in",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "send in",
+      "variants": [
+        "send in"
+      ],
+      "chinese": "寄送提交",
+      "example": "Clerks were asked to send in the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "send in",
+        "gloss_zh": "寄送提交",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_file_away",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "file away",
+      "variants": [
+        "file away"
+      ],
+      "chinese": "收檔",
+      "example": "Clerks were asked to file away the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "file away",
+        "gloss_zh": "收檔；歸檔",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_cross_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "cross out",
+      "variants": [
+        "cross out"
+      ],
+      "chinese": "劃掉",
+      "example": "Clerks were asked to cross out the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "cross out",
+        "gloss_zh": "劃掉",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_cut_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "cut out",
+      "variants": [
+        "cut out"
+      ],
+      "chinese": "剪下",
+      "example": "Clerks were asked to cut out the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "cut out",
+        "gloss_zh": "剪下；刪除",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_write_back",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-05",
+      "lesson_ids": [
+        "V3-W1-05"
+      ],
+      "base_word": "write back",
+      "variants": [
+        "write back"
+      ],
+      "chinese": "回信",
+      "example": "Clerks were asked to write back the paperwork before the filing deadline.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "文書作業",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "write back",
+        "gloss_zh": "回信",
+        "source_lessons": [
+          "V3-W1-05"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave3_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_04_06_wave_3_2026_05_21",
+  "promoted_lesson_id": "V3-A-125"
+}

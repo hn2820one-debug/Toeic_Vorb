@@ -2,6 +2,7 @@ import {
   PASS_STATUSES,
   state,
   html,
+  renderAdvancedToolsPanel,
   statusLabel,
   lessonTypeLabel,
   currentLesson
@@ -92,6 +93,11 @@ export function renderRoadmap() {
       </div>
       <div class="lesson-list" data-testid="roadmap-lesson-list">${rows || `<p class="muted-note">目前篩選條件下沒有符合的課程。</p>`}</div>
     </section>
+    ${renderAdvancedToolsPanel({
+      testId: "roadmap-advanced-tools",
+      actionsTestId: "roadmap-advanced-tools-actions",
+      note: "課程地圖用來安排正式學習進度；需要備份資料或檢查本機題庫時，再使用這兩項進階工具。"
+    })}
   `;
 }
 

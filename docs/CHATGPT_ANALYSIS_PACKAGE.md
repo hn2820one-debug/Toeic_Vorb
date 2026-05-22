@@ -2,26 +2,27 @@
 
 Status: HISTORICAL AFTER P1 REVIEW MODE
 
-Obsolete-count warning: this document is retained as an analysis package snapshot. Use root `TO_AI.md` as the single current source of truth for production counts, seed status, and next priorities.
+Obsolete-count warning: this document is retained as an analysis package snapshot from the last populated V0-V3 seed. Use root `TO_AI.md` as the single current source of truth for production counts, seed status, and next priorities.
 
 ## 1. Project Summary
 
-This folder is the standalone Program B: TOEIC Vocabulary Tracker, located at `C:\Users\Keith\Toeic\toeic-app-Vorb`. The separate Grammar / PoS App is kept in `C:\Users\Keith\toeic-app` and is not part of this folder. This app is a static, local-first vocabulary learning PWA. It uses `tracker.html` as the main entry, `data/vocab/*` as the curriculum/question seed source, IndexedDB `toeic_vocab_tracker_db` for progress, and localStorage only for preferences and active session state. There is no backend, login, cloud sync, runtime AI question generation, or Grammar / PoS course engine inside this app. Current content covers V0 Diagnosis, full V1 Word Family, V2 TOEIC Scene Vocabulary, and V3 Collocation. P1 Review Mode is implemented: due/high-priority/repeated review queue items can be answered in a dedicated review runtime and exported through `review_effectiveness.csv`. V4 Formal Phrase, V5 False Friends + Speed Reflex, and V6 Integrated Review + Seal Test remain planned.
+This folder is the standalone Program B: TOEIC Vocabulary Tracker, located at `C:\Users\Keith\Toeic\toeic-app-Vorb`. The separate Grammar / PoS App is kept in `C:\Users\Keith\toeic-app` and is not part of this folder. This app is a static, local-first vocabulary learning PWA. It uses `tracker.html` as the main entry, `data/vocab/*` as the curriculum/question seed source, IndexedDB `toeic_vocab_tracker_db` for progress, and localStorage only for preferences and active session state. There is no backend, login, cloud sync, runtime AI question generation, or Grammar / PoS course engine inside this app. This analysis snapshot was created when V0 Diagnosis, full V1 Word Family, V2 TOEIC Scene Vocabulary, and V3 Collocation were still populated in production. P1 Review Mode is implemented: due/high-priority/repeated review queue items can be answered in a dedicated review runtime and exported through `review_effectiveness.csv`. V4 Formal Phrase, V5 False Friends + Speed Reflex, and V6 Integrated Review + Seal Test remain planned.
 
 ## 2. Intended Product
 
 TOEIC Vocabulary Tracker: a mobile-first local PWA for recording every lesson, question attempt, response time, error code, review queue item, mastery score, and export package for ChatGPT analysis. Grammar links are metadata only through `grammar_link_id`.
 
-## 3. Current Content
+## 3. Historical Content Snapshot
 
-- Total lessons: 193
-- Total questions: 4,399
+- Snapshot lessons: 193
+- Snapshot questions: 4,399
 - Vocab items: 494
 - Question files in manifest: 18
-- V0: 1 lesson, 31 questions
-- V1: 60 lessons, 1728 questions
-- V2: 60 lessons, 1200 questions
-- V3: 72 lessons, 1440 questions
+- Current production seed: 0 runnable lessons / 0 question-bank rows
+- Snapshot V0: 1 lesson, 31 questions
+- Snapshot V1: 60 lessons, 1728 questions
+- Snapshot V2: 60 lessons, 1200 questions
+- Snapshot V3: 72 lessons, 1440 questions
 - V4: draft-only outside production seed
 - V5-V6: planned only
 

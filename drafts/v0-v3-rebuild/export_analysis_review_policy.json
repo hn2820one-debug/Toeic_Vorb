@@ -1,0 +1,81 @@
+{
+  "artifact": "export_analysis_review_policy",
+  "artifact_version": "1.0",
+  "generated_at": "2026-05-19",
+  "status": "active_governance",
+  "reference_role": "content_feedback_review_policy",
+  "production_impact": "none",
+  "production_ready": false,
+  "governance_doc": "docs/export-analysis-feedback-governance.md",
+  "review_template": "docs/templates/export-content-review-template.md",
+  "sample_review_cycle": "drafts/v0-v3-rebuild/export_review_cycles/2026-05-19-c06-seeded-fixture-review.json",
+  "review_required_after": [
+    "production_seed_content_change",
+    "draft_authored_slice_review",
+    "minimum_usable_pack_review",
+    "question_type_scale_up"
+  ],
+  "required_export_files": [
+    { "file": "summary.md", "category": "summary", "purpose": "human-readable overall progress and weakness summary" },
+    { "file": "report.md", "category": "summary", "purpose": "alias of summary.md for report naming" },
+    { "file": "lesson_recommendations.md", "category": "summary", "purpose": "next-lesson recommendation review" },
+    { "file": "diagnostic_recommendation.json", "category": "summary", "purpose": "V0 recommendation status and insufficient-data handling" },
+    { "file": "stage_progress.json", "category": "summary", "purpose": "stage-level lesson, accuracy, timing, and question-type progress" },
+    { "file": "content_quality_summary.json", "category": "summary", "purpose": "content-quality and coverage summary" },
+    { "file": "attempts.csv", "category": "data", "purpose": "per-attempt accuracy, timing, error, lesson, type, and item analysis" },
+    { "file": "attempts.json", "category": "data", "purpose": "structured per-attempt records for scripted analysis" },
+    { "file": "attempts.jsonl", "category": "data", "purpose": "line-oriented attempt records" },
+    { "file": "sessions.csv", "category": "data", "purpose": "per-session accuracy, timing, and outcome analysis" },
+    { "file": "sessions.json", "category": "data", "purpose": "structured session records" },
+    { "file": "item_mastery.csv", "category": "data", "purpose": "item-level mastery, wrong count, timing, and next-review analysis" },
+    { "file": "mastery.json", "category": "data", "purpose": "structured item mastery records" },
+    { "file": "review_queue.json", "category": "data", "purpose": "pending and completed review queue state" },
+    { "file": "error_logs.json", "category": "data", "purpose": "confirmed error-cause records" },
+    { "file": "error_summary.csv", "category": "analytics", "purpose": "error-code count and repeated-error count" },
+    { "file": "error_summary.json", "category": "analytics", "purpose": "structured error summary" },
+    { "file": "speed_summary.json", "category": "analytics", "purpose": "response-time and speed-bucket analysis" },
+    { "file": "review_effectiveness.csv", "category": "analytics", "purpose": "review fix rate by item, error code, and question type" },
+    { "file": "review_effectiveness.json", "category": "analytics", "purpose": "structured review effectiveness analysis" },
+    { "file": "stage_seal_readiness.json", "category": "analytics", "purpose": "stage readiness and no-data/not-ready/ready/sealed state review" },
+    { "file": "question_bank_snapshot.json", "category": "package", "purpose": "question text, type, item, and answer-key inspection" },
+    { "file": "raw_events.jsonl", "category": "package", "purpose": "joined session, attempt, error, and review events" },
+    { "file": "toeic_vocab_export_YYYY-MM-DD.json", "category": "package", "dynamic": true, "purpose": "complete convenience bundle for external review" }
+  ],
+  "core_metrics": [
+    { "id": "attempt_volume", "source_files": ["attempts.csv", "sessions.csv"], "decision_use": "confirm enough learner data exists before judging content" },
+    { "id": "accuracy_by_stage_lesson_type", "source_files": ["attempts.csv", "sessions.csv", "stage_progress.json"], "decision_use": "find weak lessons, stages, and question types" },
+    { "id": "avg_response_time_by_type", "source_files": ["attempts.csv", "speed_summary.json"], "decision_use": "detect slow recall and timing pressure" },
+    { "id": "speed_bucket_distribution", "source_files": ["attempts.csv", "speed_summary.json"], "decision_use": "separate fast wrong, slow correct, and timeout-like behavior" },
+    { "id": "error_code_distribution", "source_files": ["error_summary.csv", "error_summary.json", "attempts.csv"], "decision_use": "identify dominant learner error patterns" },
+    { "id": "repeated_error_rate", "source_files": ["attempts.csv", "error_summary.csv"], "decision_use": "decide whether distractors or explanations need revision" },
+    { "id": "review_fix_rate", "source_files": ["review_effectiveness.csv", "review_effectiveness.json"], "decision_use": "judge whether review rows repair weak items" },
+    { "id": "target_item_mastery", "source_files": ["item_mastery.csv", "mastery.json"], "decision_use": "select items to reinforce, rewrite, or retire" },
+    { "id": "review_queue_pressure", "source_files": ["review_queue.json", "raw_events.jsonl"], "decision_use": "find high-priority stuck items" },
+    { "id": "content_quality_flags", "source_files": ["content_quality_summary.json", "question_bank_snapshot.json"], "decision_use": "catch duplicate, coverage, and question-shape risks" },
+    { "id": "stage_readiness", "source_files": ["stage_seal_readiness.json", "stage_progress.json"], "decision_use": "decide whether stage gates need content or data before scale-up" },
+    { "id": "diagnostic_status", "source_files": ["diagnostic_recommendation.json"], "decision_use": "avoid acting on insufficient V0 diagnostic data" }
+  ],
+  "decision_actions": [
+    "keep",
+    "revise_question_text",
+    "revise_distractors",
+    "revise_explanation",
+    "add_review_pressure",
+    "reduce_or_remove_item",
+    "add_prerequisite_lesson",
+    "promote_to_next_wave",
+    "hold_for_more_data"
+  ],
+  "feedback_targets": [
+    "docs/Future Plan.md",
+    "docs/minimum-usable-content-packs.md",
+    "docs/rebuild-wave-release-gate.md",
+    "drafts/v0-v3-rebuild/minimum_usable_packs.json",
+    "next_wave_authoring_backlog"
+  ],
+  "validation_commands": [
+    "npm run test:export-governance",
+    "npm run test:docs",
+    "npm run test:all"
+  ]
+}

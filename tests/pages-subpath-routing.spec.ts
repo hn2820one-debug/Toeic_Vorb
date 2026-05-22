@@ -14,7 +14,7 @@ const artifactDirs = ["css", "js", "data", "icons"];
 const MANIFEST_HREF = "./manifest.json";
 const APPLE_TOUCH_ICON_HREF = "./icons/icon-192.svg";
 const SW_SCRIPT_HREF = "./sw.js";
-const SW_CACHE_NAME = "toeic-vorb-v38";
+const SW_CACHE_NAME = "toeic-vorb-v46";
 const LAUNCHER_STATUS_TEXT = "目前正式內容：V2 + V3，共 39 課 / 780 題；V0 / V1 已清空，V4 尚未啟用。";
 
 function assertSafeStagePath(targetPath: string) {

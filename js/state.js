@@ -7,6 +7,7 @@ export const LESSON_STEPS = [
 ];
 
 export const PASS_STATUSES = new Set(["completed", "completed_with_reinforcement", "sealed"]);
+export const WORD_HIGHLIGHT_KEY = "toeic_vocab_word_highlights";
 
 export const ERROR_CODE_LABELS = {
   VOCAB_UNKNOWN:     "核心詞義不熟",
@@ -68,7 +69,9 @@ export const state = {
   masteryFilter: { level: "", search: "" },
   grammarLinks: {},
   stageSealPending: null,
-  speedTimerFired: false
+  speedTimerFired: false,
+  wordHighlights: [],
+  wordHighlightSuppressAnswerUntil: 0
 };
 
 export function questionTypeLabel(type) {
@@ -126,8 +129,180 @@ export function html(value) {
   }[char]));
 }
 
+export const ADVANCED_TOOL_ACTIONS = [
+  { view: "export", label: "匯出完整資料封包" },
+  { view: "bank", label: "題庫管理" }
+];
+
+export function renderAdvancedToolButtons(options = {}) {
+  const {
+    views = ADVANCED_TOOL_ACTIONS.map((action) => action.view),
+    containerClass = "tracker-actions",
+    containerTestId = "",
+    buttonClass = "button secondary"
+  } = options;
+  const visibleActions = ADVANCED_TOOL_ACTIONS.filter((action) => views.includes(action.view));
+  const testAttr = containerTestId ? ` data-testid="${html(containerTestId)}"` : "";
+  return `
+    <div class="${html(containerClass)}"${testAttr}>
+      ${visibleActions.map((action) => `<button class="${html(buttonClass)}" type="button" onclick="VocabTracker.setView('${html(action.view)}')">${html(action.label)}</button>`).join("")}
+    </div>
+  `;
+}
+
+export function renderAdvancedToolsPanel(options = {}) {
+  const {
+    tag = "section",
+    title = "進階工具",
+    note = "匯出完整資料封包與題庫管理屬於進階 / 維護功能；一般學習請優先使用 Today、Roadmap、Lesson 與 Mistakes。",
+    testId = "",
+    actionsTestId = ""
+  } = options;
+  const testAttr = testId ? ` data-testid="${html(testId)}"` : "";
+  return `
+    <${tag} class="tracker-panel"${testAttr}>
+      <h3>${html(title)}</h3>
+      <p class="muted-note">${html(note)}</p>
+      ${renderAdvancedToolButtons({ containerTestId: actionsTestId })}
+    </${tag}>
+  `;
+}
+
 export function renderQuestionText(text) {
   return html(text).replace(/_{4,}/g, (m) => `<span class="blank-token">${m}</span>`);
+}
+
+export function normalizeHighlightedText(text) {
+  const words = String(text || "").match(/[A-Za-z][A-Za-z'-]*/g) || [];
+  if (!words.length || words.length > 6) return "";
+  return words.join(" ");
+}
+
+export function normalizeHighlightKey(text) {
+  return normalizeHighlightedText(text).toLowerCase();
+}
+
+export function loadWordHighlights() {
+  try {
+    const rows = JSON.parse(localStorage.getItem(WORD_HIGHLIGHT_KEY) || "[]");
+    return Array.isArray(rows) ? rows : [];
+  } catch (_err) {
+    return [];
+  }
+}
+
+export function saveWordHighlights(rows) {
+  const cleanRows = Array.isArray(rows) ? rows.slice(-1000) : [];
+  state.wordHighlights = cleanRows;
+  try {
+    localStorage.setItem(WORD_HIGHLIGHT_KEY, JSON.stringify(cleanRows));
+    if (window.VocabTracker?.markGoogleDriveLocalChange) {
+      window.VocabTracker.markGoogleDriveLocalChange("word_highlights");
+    } else {
+      window.GoogleDriveSyncData?.markLocalChange?.("word_highlights");
+    }
+  } catch (_err) {
+    // Keep in-memory state even if localStorage is unavailable or full.
+  }
+  return cleanRows;
+}
+
+export function addWordHighlight(record) {
+  const text = normalizeHighlightedText(record?.text);
+  const normalized = normalizeHighlightKey(text);
+  if (!text || !normalized || !record?.question_id) return null;
+
+  const rows = loadWordHighlights();
+  const now = new Date().toISOString();
+  const existing = rows.find((row) => (
+    row.status !== "removed"
+    && row.normalized === normalized
+    && row.question_id === record.question_id
+    && row.session_id === record.session_id
+  ));
+
+  if (existing) {
+    existing.updated_at = now;
+    existing.occurrences = Number(existing.occurrences || 1) + 1;
+    saveWordHighlights(rows);
+    return existing;
+  }
+
+  const highlight = {
+    highlight_id: `hl_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+    created_at: now,
+    updated_at: now,
+    status: "active",
+    occurrences: 1,
+    text,
+    normalized,
+    user_id: record.user_id || "",
+    session_id: record.session_id || "",
+    stage: record.stage || "",
+    lesson_id: record.lesson_id || "",
+    lesson_title: record.lesson_title || "",
+    question_id: record.question_id || "",
+    question_type: record.question_type || "",
+    target_item_id: record.target_item_id || "",
+    source: record.source || "lesson_text",
+    context_text: record.context_text || ""
+  };
+  rows.push(highlight);
+  saveWordHighlights(rows);
+  return highlight;
+}
+
+export function removeWordHighlight(highlightId) {
+  const rows = loadWordHighlights().filter((row) => row.highlight_id !== highlightId);
+  saveWordHighlights(rows);
+}
+
+export function wordHighlightsForQuestion(questionId, sessionId = "") {
+  return (state.wordHighlights || []).filter((row) => (
+    row.status !== "removed"
+    && row.question_id === questionId
+    && (!sessionId || row.session_id === sessionId)
+  ));
+}
+
+export function wordHighlightSummary(rows = state.wordHighlights || []) {
+  const groups = {};
+  rows
+    .filter((row) => row.status !== "removed")
+    .forEach((row) => {
+      const key = row.normalized || normalizeHighlightKey(row.text);
+      if (!key) return;
+      if (!groups[key]) {
+        groups[key] = {
+          normalized: key,
+          text: row.text || key,
+          occurrences: 0,
+          question_ids: new Set(),
+          lesson_ids: new Set(),
+          latest_at: ""
+        };
+      }
+      const group = groups[key];
+      group.occurrences += Number(row.occurrences || 1);
+      if (row.question_id) group.question_ids.add(row.question_id);
+      if (row.lesson_id) group.lesson_ids.add(row.lesson_id);
+      if (String(row.updated_at || row.created_at || "") > String(group.latest_at || "")) {
+        group.latest_at = row.updated_at || row.created_at || "";
+        group.text = row.text || group.text;
+      }
+    });
+
+  return Object.values(groups)
+    .map((group) => ({
+      normalized: group.normalized,
+      text: group.text,
+      occurrences: group.occurrences,
+      question_count: group.question_ids.size,
+      lesson_count: group.lesson_ids.size,
+      lesson_ids: [...group.lesson_ids],
+      latest_at: group.latest_at
+    }))
+    .sort((a, b) => (b.occurrences - a.occurrences) || String(b.latest_at).localeCompare(String(a.latest_at)));
 }
 
 export function pct(value) {
@@ -241,6 +416,7 @@ export async function loadData() {
   state.errorLogs = errorLogs;
   state.reviewQueue = reviewQueue.sort((a, b) => (b.priority || 0) - (a.priority || 0) || String(a.due_date).localeCompare(String(b.due_date)));
   state.prefs = window.VocabDB.loadPrefs();
+  state.wordHighlights = loadWordHighlights();
 }
 
 export function currentLesson() {

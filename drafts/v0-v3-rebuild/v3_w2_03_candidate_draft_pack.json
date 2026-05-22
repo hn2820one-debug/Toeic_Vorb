@@ -1,0 +1,1428 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w2_03_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-139",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w2-03-current-isolated-audit",
+    "isolated_audit_scope": "34 lessons / 688 questions (current production + candidate)",
+    "answer_distribution": "A6/B6/C6/D5",
+    "reused_prior_pressure_ids": [
+      "v3_a_138_rv_024"
+    ],
+    "production_seed_changed": true,
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0
+  },
+  "notes": [
+    "C-11 wave 14 candidate: V3-W2-03 marketing collocation lesson 2 (5 remaining Phrase_411 targets).",
+    "Q10 reuses v3_a_138_rv_024 (appeal to) for cross-lesson pressure.",
+    "Promotion target lesson id: V3-A-139."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W2-03",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 139,
+    "title": "行銷與宣傳 搭配詞 2",
+    "estimated_minutes": 30,
+    "lesson_type": "collocation",
+    "topic": "行銷與宣傳",
+    "target_items": [
+      "item_coll_in_comparison_with",
+      "item_coll_aim_at",
+      "item_coll_give_away",
+      "item_coll_tap_into",
+      "item_coll_tie_in_with"
+    ],
+    "draft_metadata": {
+      "wave": 2,
+      "source_blueprint_lesson_id": "draft_coll_w2_03",
+      "topic_lesson_index": 2,
+      "item_count": 5,
+      "difficulty_breakdown": {
+        "A": 1,
+        "B": 3,
+        "C": 1,
+        "D": 0
+      },
+      "unresolved_target_count": 5,
+      "authoring_method": "c11_v3_w2_03_candidate",
+      "new_question_rows": 23,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_138_rv_024"
+      ],
+      "production_seed_change": false
+    },
+    "question_ids": [
+      "V3-W2-03_Q01",
+      "V3-W2-03_Q02",
+      "V3-W2-03_Q03",
+      "V3-W2-03_Q04",
+      "V3-W2-03_Q05",
+      "V3-W2-03_Q06",
+      "V3-W2-03_Q07",
+      "V3-W2-03_Q08",
+      "V3-W2-03_Q09",
+      "v3_a_138_rv_024",
+      "V3-W2-03_Q11",
+      "V3-W2-03_Q12",
+      "V3-W2-03_Q13",
+      "V3-W2-03_Q14",
+      "V3-W2-03_Q15",
+      "V3-W2-03_Q16",
+      "V3-W2-03_Q17",
+      "V3-W2-03_Q18",
+      "V3-W2-03_Q19",
+      "V3-W2-03_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W2-03_R01",
+      "V3-W2-03_R02",
+      "V3-W2-03_R03",
+      "V3-W2-03_R04"
+    ]
+  },
+  "questions": [
+    {
+      "question_id": "V3-W2-03_Q01",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "This quarter's ad spend looks modest ______ last year's campaign budget.",
+      "options": {
+        "A": "in comparison with",
+        "B": "in comparison for",
+        "C": "in comparison at",
+        "D": "in comparison on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "in comparison with 與…相比；語境需要與…相比，故用 in comparison with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_comparison_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "in comparison with",
+        "gloss_zh": "與…相比",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in comparison with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q02",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The report shows online conversions rose 12% ______ the same period in 2024.",
+      "options": {
+        "A": "in comparison with",
+        "B": "in comparison for",
+        "C": "in comparison at",
+        "D": "in comparison on"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "in comparison with 與…相比；語境需要與…相比，故用 in comparison with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_comparison_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "in comparison with",
+        "gloss_zh": "與…相比",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in comparison with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q03",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The rebranding effort will ______ younger buyers who shop on mobile apps.",
+      "options": {
+        "A": "aim at",
+        "B": "aim for",
+        "C": "aim on",
+        "D": "aim upon"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "aim at 以…為目標；語境需要以…為目標，故用 aim at 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_aim_at",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "aim at",
+        "gloss_zh": "以…為目標",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "aim at",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q04",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The agency was asked to ______ small-business owners in suburban markets.",
+      "options": {
+        "A": "aim at",
+        "B": "aim for",
+        "C": "aim on",
+        "D": "aim upon"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "aim at 以…為目標；語境需要以…為目標，故用 aim at 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_aim_at",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "aim at",
+        "gloss_zh": "以…為目標",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "aim at",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q05",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The booth will ______ free samples to visitors who complete the survey.",
+      "options": {
+        "A": "give away",
+        "B": "give out",
+        "C": "give back",
+        "D": "give off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "give away 贈送；洩露；語境需要贈送，故用 give away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_give_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "give away",
+        "gloss_zh": "贈送；洩露",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "give away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q06",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Please do not ______ the launch date before the press briefing on Friday.",
+      "options": {
+        "A": "give away",
+        "B": "give out",
+        "C": "give back",
+        "D": "give off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "give away 贈送；洩露；語境需要贈送，故用 give away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_give_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "give away",
+        "gloss_zh": "贈送；洩露",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "give away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q07",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The newsletter hopes to ______ existing customer data for personalized offers.",
+      "options": {
+        "A": "tap in",
+        "B": "tap into",
+        "C": "tap on",
+        "D": "tap over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "tap into 開發利用；接取；語境需要開發利用，故用 tap into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tap_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tap into",
+        "gloss_zh": "開發利用；接取",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tap into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q08",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Marketers plan to ______ regional trends when planning the spring catalog.",
+      "options": {
+        "A": "tap in",
+        "B": "tap into",
+        "C": "tap on",
+        "D": "tap over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "tap into 開發利用；接取；語境需要開發利用，故用 tap into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tap_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tap into",
+        "gloss_zh": "開發利用；接取",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tap into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q09",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The video series should ______ the sustainability message on the packaging.",
+      "options": {
+        "A": "tie in for",
+        "B": "tie in with",
+        "C": "tie in at",
+        "D": "tie in on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "tie in with 與…相符；配合；語境需要與…相符，故用 tie in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tie_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tie in with",
+        "gloss_zh": "與…相符；配合",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tie in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q11",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Each social post must ______ the product launch timeline approved last week.",
+      "options": {
+        "A": "tie in for",
+        "B": "tie in with",
+        "C": "tie in at",
+        "D": "tie in on"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "tie in with 與…相符；配合；語境需要與…相符，故用 tie in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tie_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tie in with",
+        "gloss_zh": "與…相符；配合",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tie in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q12",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Outdoor ads were designed to ______ commuters near the central station.",
+      "options": {
+        "A": "aim for",
+        "B": "aim at",
+        "C": "aim on",
+        "D": "aim upon"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "aim at 以…為目標；語境需要以…為目標，故用 aim at 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_aim_at",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "aim at",
+        "gloss_zh": "以…為目標",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "aim at",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q13",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Digital sales grew slowly in January, but the marketing director noted results were strong ______ the previous winter when foot traffic collapsed. The team kept the same media mix for February.",
+      "options": {
+        "A": "in comparison for",
+        "B": "in comparison with",
+        "C": "in comparison on",
+        "D": "in comparison at"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "in comparison with 與…相比；語境要求與…相比，故用 in comparison with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_comparison_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "in comparison with",
+        "gloss_zh": "與…相比",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in comparison with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q14",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Focus groups showed the current slogan confused retirees. The agency proposed a softer tone that would ______ families planning long-term savings. Leadership approved a pilot in two cities.",
+      "options": {
+        "A": "aim for",
+        "B": "aim on",
+        "C": "aim at",
+        "D": "aim upon"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "aim at 以…為目標；語境要求以…為目標，故用 aim at 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_aim_at",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "aim at",
+        "gloss_zh": "以…為目標",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "aim at",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q15",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The product demo looked polished, but an intern accidentally posted slides that seemed to ______ the unreleased price list. Legal asked the team to pause all influencer posts until Monday.",
+      "options": {
+        "A": "give out",
+        "B": "give back",
+        "C": "give away",
+        "D": "give off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "give away 贈送；洩露；語境要求贈送，故用 give away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_give_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "give away",
+        "gloss_zh": "贈送；洩露",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "give away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q16",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Loyalty members shared detailed purchase histories last quarter. Analysts wanted campaigns that could ______ those records without sending duplicate emails. IT signed off on the integration plan.",
+      "options": {
+        "A": "tap in",
+        "B": "tap on",
+        "C": "tap into",
+        "D": "tap over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "tap into 開發利用；接取；語境要求開發利用，故用 tap into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tap_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tap into",
+        "gloss_zh": "開發利用；接取",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tap into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q17",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The partnership will ______ influencer audiences in three overseas markets.",
+      "options": {
+        "A": "tap in",
+        "B": "tap on",
+        "C": "tap into",
+        "D": "tap over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "tap into 開發利用；接取；語境需要開發利用，故用 tap into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tap_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tap into",
+        "gloss_zh": "開發利用；接取",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tap into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q18",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The charity drive should ______ the brand's community outreach theme this year.",
+      "options": {
+        "A": "tie in for",
+        "B": "tie in at",
+        "C": "tie in with",
+        "D": "tie in on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "tie in with 與…相符；配合；語境需要與…相符，故用 tie in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tie_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tie in with",
+        "gloss_zh": "與…相符；配合",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tie in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q19",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Retail staff were trained so in-store displays ______ the online banner campaign.",
+      "options": {
+        "A": "tie in for",
+        "B": "tie in at",
+        "C": "tie in with",
+        "D": "tie in on"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "tie in with 與…相符；配合；語境需要與…相符，故用 tie in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tie_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tie in with",
+        "gloss_zh": "與…相符；配合",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tie in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_Q20",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The webinar series will ______ feedback from last month's beta testers.",
+      "options": {
+        "A": "tap in",
+        "B": "tap on",
+        "C": "tap over",
+        "D": "tap into"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "tap into 開發利用；接取；語境需要開發利用，故用 tap into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tap_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tap into",
+        "gloss_zh": "開發利用；接取",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tap into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_R01",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Our click-through rate is healthy ______ industry averages for travel sites.",
+      "options": {
+        "A": "in comparison for",
+        "B": "in comparison at",
+        "C": "in comparison on",
+        "D": "in comparison with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "in comparison with 與…相比；語境需要與…相比，故用 in comparison with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_in_comparison_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "in comparison with",
+        "gloss_zh": "與…相比",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "in comparison with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_R02",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The revised brochure will ______ corporate clients who renew annual contracts.",
+      "options": {
+        "A": "aim for",
+        "B": "aim on",
+        "C": "aim upon",
+        "D": "aim at"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "aim at 以…為目標；語境需要以…為目標，故用 aim at 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_aim_at",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "aim at",
+        "gloss_zh": "以…為目標",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "aim at",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_R03",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Contest rules say we cannot ______ the grand prize before the live stream ends.",
+      "options": {
+        "A": "give out",
+        "B": "give back",
+        "C": "give off",
+        "D": "give away"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "give away 贈送；洩露；語境需要贈送，故用 give away 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_give_away",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "give away",
+        "gloss_zh": "贈送；洩露",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "give away",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W2-03_R04",
+      "lesson_id": "V3-W2-03",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The podcast episode should ______ the loyalty program refresh announced today.",
+      "options": {
+        "A": "tie in for",
+        "B": "tie in at",
+        "C": "tie in on",
+        "D": "tie in with"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "tie in with 與…相符；配合；語境需要與…相符，故用 tie in with 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_tie_in_with",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 3,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave2",
+        "lesson:V3-W2-03",
+        "topic:行銷與宣傳",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w2_03",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "行銷與宣傳 搭配詞 2",
+        "source_phrase": "tie in with",
+        "gloss_zh": "與…相符；配合",
+        "source_topic": "行銷與宣傳",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "tie in with",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave14_candidate",
+        "authored_slice_lesson_id": "V3-W2-03",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_in_comparison_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-03",
+      "lesson_ids": [
+        "V3-W2-03"
+      ],
+      "base_word": "in comparison with",
+      "variants": [
+        "in comparison with"
+      ],
+      "chinese": "與…相比",
+      "example": "The marketing team will in comparison with the campaign before the product launch.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "行銷與宣傳",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "in comparison with",
+        "gloss_zh": "與…相比",
+        "source_lessons": [
+          "V3-W2-03"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave14_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_aim_at",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-03",
+      "lesson_ids": [
+        "V3-W2-03"
+      ],
+      "base_word": "aim at",
+      "variants": [
+        "aim at"
+      ],
+      "chinese": "以…為目標",
+      "example": "The marketing team will aim at the campaign before the product launch.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "行銷與宣傳",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "aim at",
+        "gloss_zh": "以…為目標",
+        "source_lessons": [
+          "V3-W2-03"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave14_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_give_away",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-03",
+      "lesson_ids": [
+        "V3-W2-03"
+      ],
+      "base_word": "give away",
+      "variants": [
+        "give away"
+      ],
+      "chinese": "贈送",
+      "example": "The marketing team will give away the campaign before the product launch.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "行銷與宣傳",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "give away",
+        "gloss_zh": "贈送；洩露",
+        "source_lessons": [
+          "V3-W2-03"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave14_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_tap_into",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-03",
+      "lesson_ids": [
+        "V3-W2-03"
+      ],
+      "base_word": "tap into",
+      "variants": [
+        "tap into"
+      ],
+      "chinese": "開發利用",
+      "example": "The marketing team will tap into the campaign before the product launch.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "行銷與宣傳",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "tap into",
+        "gloss_zh": "開發利用；接取",
+        "source_lessons": [
+          "V3-W2-03"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave14_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_tie_in_with",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W2-03",
+      "lesson_ids": [
+        "V3-W2-03"
+      ],
+      "base_word": "tie in with",
+      "variants": [
+        "tie in with"
+      ],
+      "chinese": "與…相符",
+      "example": "The marketing team will tie in with the campaign before the product launch.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "行銷與宣傳",
+        "toeic_collocation_rebuild",
+        "wave2"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "tie in with",
+        "gloss_zh": "與…相符；配合",
+        "source_lessons": [
+          "V3-W2-03"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave14_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w2_03_wave_14_2026_05_21",
+  "promoted_lesson_id": "V3-A-139"
+}

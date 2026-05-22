@@ -1,0 +1,129 @@
+{
+  "review_id": "export_review_2026_05_20_c09_v2_a_71_post_release",
+  "review_date": "2026-05-20",
+  "reviewer": "Codex",
+  "scope": "C-09 V2-A-71 post-release review and staircase debt decision",
+  "wave_or_pack": "V2-A-71 first production wave",
+  "production_seed_changed": false,
+  "production_seed_version": "toeic_vocab_tracker_v2_a_71_first_wave_2026_05_20",
+  "production_counts": {
+    "runnable_lessons": 1,
+    "question_bank_rows": 24
+  },
+  "source_documents": [
+    "docs/wave-retrospectives/2026-05-20-c09-v2-a-71-post-release-review.md",
+    "data/vocab/curriculum.json",
+    "data/vocab/questions_v2a.json",
+    "docs/question-bank-source-of-truth-workflow.md"
+  ],
+  "source_commands": [
+    {
+      "command": "node scripts/audit-quality-full.js",
+      "status": "passed",
+      "note": "0 blocking issues; 4 staircase progression warnings accepted as short-term debt."
+    }
+  ],
+  "files_reviewed": [
+    { "file": "summary.md", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "report.md", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "lesson_recommendations.md", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "diagnostic_recommendation.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "stage_progress.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "content_quality_summary.json", "status": "blocked", "evidence": "Production quality was reviewed through audit output instead of an exported learner package." },
+    { "file": "attempts.csv", "status": "not_available", "evidence": "Repo search found no V2-A-71 or v2_a_71 attempts." },
+    { "file": "attempts.json", "status": "not_available", "evidence": "Repo search found no V2-A-71 or v2_a_71 attempts." },
+    { "file": "attempts.jsonl", "status": "not_available", "evidence": "Repo search found no V2-A-71 or v2_a_71 attempts." },
+    { "file": "sessions.csv", "status": "not_available", "evidence": "Existing Log Download export is V1-B-21 from 2026-05-14, not V2-A-71." },
+    { "file": "sessions.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "item_mastery.csv", "status": "not_available", "evidence": "Existing export data is not tied to V2-A-71 target items." },
+    { "file": "mastery.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "review_queue.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "error_logs.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "error_summary.csv", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "error_summary.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "speed_summary.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "review_effectiveness.csv", "status": "not_available", "evidence": "No current V2-A-71 review-mode export exists." },
+    { "file": "review_effectiveness.json", "status": "not_available", "evidence": "No current V2-A-71 review-mode export exists." },
+    { "file": "stage_seal_readiness.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "question_bank_snapshot.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." },
+    { "file": "raw_events.jsonl", "status": "not_available", "evidence": "Repo search found no V2-A-71 or v2_a_71 raw events." },
+    { "file": "toeic_vocab_export_YYYY-MM-DD.json", "status": "not_available", "evidence": "No current V2-A-71 learner export package is present in the repo." }
+  ],
+  "metrics_reviewed": [
+    { "metric": "attempt_volume", "status": "insufficient_data", "note": "0 current V2-A-71 attempts found in repo exports." },
+    { "metric": "accuracy_by_stage_lesson_type", "status": "insufficient_data", "note": "No current V2-A-71 attempts or sessions found." },
+    { "metric": "avg_response_time_by_type", "status": "insufficient_data", "note": "No current V2-A-71 attempts or speed summary found." },
+    { "metric": "speed_bucket_distribution", "status": "insufficient_data", "note": "No current V2-A-71 attempts found." },
+    { "metric": "error_code_distribution", "status": "insufficient_data", "note": "No current V2-A-71 error summary found." },
+    { "metric": "repeated_error_rate", "status": "insufficient_data", "note": "No current V2-A-71 attempts found." },
+    { "metric": "review_fix_rate", "status": "insufficient_data", "note": "No current V2-A-71 review-mode export found." },
+    { "metric": "target_item_mastery", "status": "insufficient_data", "note": "No current V2-A-71 item mastery export found." },
+    { "metric": "review_queue_pressure", "status": "insufficient_data", "note": "No current V2-A-71 review queue export found." },
+    { "metric": "content_quality_flags", "status": "reviewed_by_audit", "note": "Full audit passed with 4 staircase warnings and no blocking issues." },
+    { "metric": "stage_readiness", "status": "insufficient_data", "note": "No current V2 learner sessions are available for a readiness verdict." },
+    { "metric": "diagnostic_status", "status": "not_applicable", "note": "C-09 concerns V2-A-71, not V0 diagnostic recommendation." }
+  ],
+  "staircase_warning_disposition": [
+    {
+      "target_item_id": "item_v2_v2_a_71_extension",
+      "decision": "accepted_short_term_debt",
+      "revisit_trigger": "2 or more context misses after at least 3 full sessions, or review fix rate below 50%."
+    },
+    {
+      "target_item_id": "item_v2_v2_a_71_photocopier",
+      "decision": "accepted_short_term_debt",
+      "revisit_trigger": "Concentrated confusion with workstation or stationery, or average response time above 15 seconds."
+    },
+    {
+      "target_item_id": "item_v2_v2_a_71_stationery",
+      "decision": "accepted_short_term_debt",
+      "revisit_trigger": "Direct review success without context-row transfer."
+    },
+    {
+      "target_item_id": "item_v2_v2_a_71_workstation",
+      "decision": "accepted_short_term_debt",
+      "revisit_trigger": "Over-selection as a generic office answer or weak review repair."
+    }
+  ],
+  "findings": [
+    {
+      "area": "production_quality",
+      "finding": "The live lesson remains release-safe under the current blocking gate.",
+      "decision": "keep"
+    },
+    {
+      "area": "staircase_progression",
+      "finding": "Warnings are valid because each target repeats at the same scene-vocabulary demand rank before a direct review row.",
+      "decision": "hold_for_more_data"
+    },
+    {
+      "area": "review_questions",
+      "finding": "Review rows provide quick recall but not enough evidence of transfer without learner attempts.",
+      "decision": "hold_for_more_data"
+    },
+    {
+      "area": "question_bank_boundary",
+      "finding": "Browser Question Bank edits remain IndexedDB-only until patch-exported, reviewed, applied to source JSON, seed-bumped, and validated.",
+      "decision": "keep"
+    }
+  ],
+  "feedback_actions": [
+    {
+      "target": "docs/Future Plan.md",
+      "action": "Mark C-09 complete with an insufficient-data learner evidence note and revisit conditions."
+    },
+    {
+      "target": "docs/wave-retrospectives/2026-05-20-c09-v2-a-71-post-release-review.md",
+      "action": "Use this as the V2 post-release review note and warning-debt rationale."
+    },
+    {
+      "target": "C-10 V2 pipeline",
+      "action": "Do not copy the flat V2-A-71 five-context pattern as the default; add clearer demand shift in future V2 lessons."
+    }
+  ],
+  "blocked_on": [
+    "No current V2-A-71 learner sessions or export package exist in the repo."
+  ],
+  "status": "completed_with_insufficient_learner_data",
+  "final_decision": "Keep V2-A-71 unchanged, accept the 4 staircase warnings as short-term debt, and revisit only after real learner/export evidence or through an isolated draft probe."
+}

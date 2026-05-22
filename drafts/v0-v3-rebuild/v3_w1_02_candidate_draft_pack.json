@@ -1,0 +1,1560 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_w1_02_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "production_candidate_draft",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "docs/question-creation-spec.md",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "target_question_file_candidate": "data/vocab/questions_v3a.json",
+  "target_production_lesson_id": "V3-A-122",
+  "validation": {
+    "validated_at": "2026-05-21",
+    "isolated_audit_root": "tmp/v3-w1-02-current-isolated-audit",
+    "isolated_audit_scope": "production baseline + V3-W1-02 draft = 13 lessons / 288 questions",
+    "isolated_full_quality_audit": "passed",
+    "blocking_issues": 0,
+    "duplicate_stems": 0,
+    "old_item_pressure_issues": 0,
+    "explanation_quality_warnings": 0,
+    "preferred_stem_length_warnings": 0,
+    "staircase_warnings": 8,
+    "current_baseline_total_staircase_warnings": 48,
+    "all_warnings_accepted": true,
+    "answer_distribution": "A6/B6/C6/D6",
+    "reused_prior_pressure_ids": [
+      "v3_a_121_rv_024"
+    ],
+    "production_seed_changed": true
+  },
+  "notes": [
+    "C-11 wave 2 candidate: V3-W1-02 office collocation lesson 2.",
+    "Includes one reused prior review reference v3_a_121_rv_024 for same-stage old-item pressure.",
+    "Promotion target lesson id: V3-A-122."
+  ],
+  "lesson": {
+    "lesson_id": "V3-W1-02",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 122,
+    "title": "辦公室 搭配詞 2",
+    "estimated_minutes": 35,
+    "lesson_type": "collocation",
+    "topic": "辦公室",
+    "target_items": [
+      "item_coll_sort_out",
+      "item_coll_focus_on",
+      "item_coll_concentrate_on",
+      "item_coll_work_on",
+      "item_coll_stop_by",
+      "item_coll_draw_up",
+      "item_coll_look_into"
+    ],
+    "question_ids": [
+      "V3-W1-02_Q01",
+      "V3-W1-02_Q02",
+      "V3-W1-02_Q03",
+      "V3-W1-02_Q04",
+      "V3-W1-02_Q05",
+      "V3-W1-02_Q06",
+      "V3-W1-02_Q07",
+      "V3-W1-02_Q08",
+      "V3-W1-02_Q09",
+      "V3-W1-02_Q10",
+      "v3_a_121_rv_024",
+      "V3-W1-02_Q11",
+      "V3-W1-02_Q12",
+      "V3-W1-02_Q13",
+      "V3-W1-02_Q14",
+      "V3-W1-02_Q15",
+      "V3-W1-02_Q16",
+      "V3-W1-02_Q17",
+      "V3-W1-02_Q18",
+      "V3-W1-02_Q19",
+      "V3-W1-02_Q20"
+    ],
+    "review_question_ids": [
+      "V3-W1-02_R01",
+      "V3-W1-02_R02",
+      "V3-W1-02_R03",
+      "V3-W1-02_R04"
+    ],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "status": "not_started",
+    "draft_metadata": {
+      "wave": 1,
+      "source_blueprint_lesson_id": "draft_coll_w1_02",
+      "topic_lesson_index": 2,
+      "item_count": 7,
+      "difficulty_breakdown": {
+        "A": 5,
+        "B": 2,
+        "C": 0
+      },
+      "unresolved_target_count": 7,
+      "authoring_method": "c11_v3_w1_02_candidate",
+      "new_question_rows": 24,
+      "reused_prior_question_refs": 1,
+      "reused_prior_pressure_ids": [
+        "v3_a_121_rv_024"
+      ],
+      "production_seed_change": false
+    }
+  },
+  "questions": [
+    {
+      "question_id": "V3-W1-02_Q01",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "Before the audit team arrives, the office manager asked us to ______ the supply-order mix-ups that delayed desk deliveries last week.",
+      "options": {
+        "A": "sort out",
+        "B": "sort through",
+        "C": "sort off",
+        "D": "sort over"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "sort out 整理；解決；語境需要整理，故用 sort out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sort_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "sort out",
+        "gloss_zh": "整理；解決",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sort out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q02",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The administrative team must ______ the seating-chart errors before the regional directors check in at reception tomorrow morning.",
+      "options": {
+        "A": "sort out",
+        "B": "sort over",
+        "C": "sort through",
+        "D": "sort off"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "sort out 整理；解決；語境需要整理，故用 sort out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sort_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "sort out",
+        "gloss_zh": "整理；解決",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sort out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q03",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "During the budget review, the director told staff to ______ customer complaints about delayed badge printing instead of hallway decorations.",
+      "options": {
+        "A": "focus on",
+        "B": "focus in",
+        "C": "focus at",
+        "D": "focus to"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "focus on 專注於；語境需要專注於，故用 focus on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_focus_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "focus on",
+        "gloss_zh": "專注於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "focus on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q04",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "For the next sprint, the operations lead wants the team to ______ reducing duplicate purchase requests rather than redesigning the lobby display.",
+      "options": {
+        "A": "focus on",
+        "B": "focus in",
+        "C": "focus at",
+        "D": "focus to"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "focus on 專注於；語境需要專注於，故用 focus on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_focus_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "focus on",
+        "gloss_zh": "專注於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "focus on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q05",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "With the shipment backlog growing, the warehouse supervisor asked clerks to ______ clearing pending delivery notes before noon.",
+      "options": {
+        "A": "concentrate on",
+        "B": "concentrate in",
+        "C": "concentrate at",
+        "D": "concentrate to"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "concentrate on 集中於；語境需要集中於，故用 concentrate on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_concentrate_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "concentrate on",
+        "gloss_zh": "集中於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "concentrate on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q06",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Because two clients are waiting, the front desk will ______ confirming room assignments before updating the visitor gift inventory.",
+      "options": {
+        "A": "concentrate on",
+        "B": "concentrate in",
+        "C": "concentrate at",
+        "D": "concentrate to"
+      },
+      "correct_answer": "A",
+      "explanation_zh": "concentrate on 集中於；語境需要集中於，故用 concentrate on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_concentrate_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "concentrate on",
+        "gloss_zh": "集中於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "concentrate on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q07",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The project assistant was told to ______ the revised travel-policy checklist while the manager handles the board presentation.",
+      "options": {
+        "A": "work in",
+        "B": "work on",
+        "C": "work at",
+        "D": "work over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "work on 著手處理；從事；語境需要著手處理，故用 work on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_work_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "work on",
+        "gloss_zh": "著手處理；從事",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "work on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q08",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "After the system outage, the IT liaison will ______ restoring access to the shared scheduling board for all branch offices.",
+      "options": {
+        "A": "work in",
+        "B": "work on",
+        "C": "work at",
+        "D": "work over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "work on 著手處理；從事；語境需要著手處理，故用 work on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_work_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "work on",
+        "gloss_zh": "著手處理；從事",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "work on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q09",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The training coordinator said she would ______ the supply room after the safety briefing to collect the signed attendance sheets.",
+      "options": {
+        "A": "stop in",
+        "B": "stop by",
+        "C": "stop at",
+        "D": "stop over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "stop by 順道拜訪；語境需要順道拜訪，故用 stop by 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stop_by",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "stop by",
+        "gloss_zh": "順道拜訪",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stop by",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q10",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "If the courier misses the morning window, the facilities manager will ______ the loading dock later to pick up the replacement keyboards.",
+      "options": {
+        "A": "stop in",
+        "B": "stop by",
+        "C": "stop at",
+        "D": "stop over"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "stop by 順道拜訪；語境需要順道拜訪，故用 stop by 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_stop_by",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "stop by",
+        "gloss_zh": "順道拜訪",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "stop by",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q11",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "The compliance officer needs to ______ a short checklist for temporary contractors before the site inspection on Thursday.",
+      "options": {
+        "A": "draw in",
+        "B": "draw up",
+        "C": "draw on",
+        "D": "draw off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "draw up 起草；擬定；語境需要起草，故用 draw up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "draw up",
+        "gloss_zh": "起草；擬定",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q12",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "Before the union meeting, HR must ______ a revised overtime notice that matches the new attendance-tracking rules.",
+      "options": {
+        "A": "draw in",
+        "B": "draw up",
+        "C": "draw on",
+        "D": "draw off"
+      },
+      "correct_answer": "B",
+      "explanation_zh": "draw up 起草；擬定；語境需要起草，故用 draw up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "draw up",
+        "gloss_zh": "起草；擬定",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q13",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "collocation",
+      "skill": "collocation",
+      "subskill": "target_collocation",
+      "grammar_link_id": null,
+      "question_text": "After several badge-reader failures, security asked IT to ______ whether the access logs were deleted during the weekend update.",
+      "options": {
+        "A": "look in",
+        "B": "look on",
+        "C": "look into",
+        "D": "look over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "look into 調查；了解；語境需要調查，故用 look into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "COLLOCATION_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "look into",
+        "gloss_zh": "調查；了解",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q14",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part5_sentence_completion",
+      "skill": "collocation",
+      "subskill": "sentence_completion",
+      "grammar_link_id": null,
+      "question_text": "The finance controller promised to ______ the duplicate invoice entries before approving next month's office-supply budget.",
+      "options": {
+        "A": "look in",
+        "B": "look on",
+        "C": "look into",
+        "D": "look over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "look into 調查；了解；語境需要調查，故用 look into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 20,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "look into",
+        "gloss_zh": "調查；了解",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q15",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The facilities team received conflicting instructions about contractor parking. The office manager asked legal to ______ a one-page guideline before the renovation briefing. Contractors need clear rules before vehicles arrive at the loading zone on Monday.",
+      "options": {
+        "A": "draw in",
+        "B": "draw on",
+        "C": "draw up",
+        "D": "draw off"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "draw up 起草；擬定；語境要求起草，故用 draw up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "draw up",
+        "gloss_zh": "起草；擬定",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q16",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Several employees reported missing locker keys after the building pass system was reset. Security cannot issue replacements until supervisors ______ how the master list was edited. The investigation must finish before the night shift starts.",
+      "options": {
+        "A": "look in",
+        "B": "look on",
+        "C": "look into",
+        "D": "look over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "look into 調查；了解；語境要求調查，故用 look into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "look into",
+        "gloss_zh": "調查；了解",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q17",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "Two departments ordered overlapping quantities of printer paper, so deliveries were stacked in the wrong storeroom. The procurement lead met with both teams to ______ the duplicate requests. The goal is to restore the normal restocking schedule by Wednesday.",
+      "options": {
+        "A": "sort through",
+        "B": "sort off",
+        "C": "sort out",
+        "D": "sort over"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "sort out 整理；解決；語境要求整理，故用 sort out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sort_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "sort out",
+        "gloss_zh": "整理；解決",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sort out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q18",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The help desk is receiving calls about slow badge printing while the lobby redesign debate continues. The operations director told staff to ______ fixing the queue error first. Clients are waiting for visitor passes before the afternoon tour.",
+      "options": {
+        "A": "focus in",
+        "B": "focus at",
+        "C": "focus on",
+        "D": "focus to"
+      },
+      "correct_answer": "C",
+      "explanation_zh": "focus on 專注於；語境要求專注於，故用 focus on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_focus_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "focus on",
+        "gloss_zh": "專注於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "focus on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q19",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The branch office still has unanswered courier tickets even though the marketing display was updated. The supervisor told the afternoon shift to ______ completing the pending delivery confirmations. Managers want every package logged before the audit walkthrough.",
+      "options": {
+        "A": "concentrate in",
+        "B": "concentrate at",
+        "C": "concentrate to",
+        "D": "concentrate on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "concentrate on 集中於；語境要求集中於，故用 concentrate on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_concentrate_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "concentrate on",
+        "gloss_zh": "集中於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "concentrate on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_Q20",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "part6_context_choice",
+      "skill": "collocation",
+      "subskill": "context_choice",
+      "grammar_link_id": null,
+      "question_text": "The shared calendar froze during the regional call, so assistants could not book interview rooms. IT assigned one technician to ______ the sync error while another resets passwords. Interview panels begin at 8 a.m. tomorrow.",
+      "options": {
+        "A": "work in",
+        "B": "work at",
+        "C": "work over",
+        "D": "work on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "work on 著手處理；從事；語境要求著手處理，故用 work on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_work_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 45,
+      "default_error_code": "SCENE_VOCAB_GAP",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:core",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "work on",
+        "gloss_zh": "著手處理；從事",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "work on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_R01",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "Please ______ a brief vendor-access form before the maintenance crew enters the server room tonight.",
+      "options": {
+        "A": "draw in",
+        "B": "draw on",
+        "C": "draw off",
+        "D": "draw up"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "draw up 起草；擬定；語境需要起草，故用 draw up 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_draw_up",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "draw up",
+        "gloss_zh": "起草；擬定",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "draw up",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_R02",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "The audit team will ______ the missing shipment records before approving the storage fee refund.",
+      "options": {
+        "A": "look in",
+        "B": "look on",
+        "C": "look over",
+        "D": "look into"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "look into 調查；了解；語境需要調查，故用 look into 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_look_into",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 2,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "look into",
+        "gloss_zh": "調查；了解",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "look into",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_R03",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "We need to ______ the conflicting desk-assignment lists before the interns arrive on Monday.",
+      "options": {
+        "A": "sort through",
+        "B": "sort off",
+        "C": "sort over",
+        "D": "sort out"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "sort out 整理；解決；語境需要整理，故用 sort out 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_sort_out",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "sort out",
+        "gloss_zh": "整理；解決",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "sort out",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "question_id": "V3-W1-02_R04",
+      "lesson_id": "V3-W1-02",
+      "stage": "V3",
+      "type": "review_question",
+      "skill": "collocation",
+      "subskill": "review_recall",
+      "grammar_link_id": null,
+      "question_text": "For this week, please ______ clearing the pending badge requests instead of reorganizing the supply closet.",
+      "options": {
+        "A": "focus in",
+        "B": "focus at",
+        "C": "focus to",
+        "D": "focus on"
+      },
+      "correct_answer": "D",
+      "explanation_zh": "focus on 專注於；語境需要專注於，故用 focus on 不要誤選外形相近但語意不同的片語。",
+      "target_item_id": "item_coll_focus_on",
+      "distractor_type": "wrong_verb_collocation",
+      "difficulty": 1,
+      "estimated_time_seconds": 15,
+      "default_error_code": "VOCAB_WEAK_RECALL",
+      "tags": [
+        "wave1",
+        "lesson:V3-W1-02",
+        "topic:辦公室",
+        "slot_role:review",
+        "draft_authored",
+        "candidate_wave_v3_w1_02",
+        "resolution:authored"
+      ],
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "lesson_title": "辦公室 搭配詞 2",
+        "source_phrase": "focus on",
+        "gloss_zh": "專注於",
+        "source_topic": "辦公室",
+        "source_item_found_in_vocab_items": true,
+        "source_item_base_word": "focus on",
+        "authoring_requirements": [
+          "must_be_context_first",
+          "no_direct_definition_repeat",
+          "must_fill_real_distractors",
+          "must_write_real_explanation_zh"
+        ],
+        "authored_in_phase": "c11_wave2_candidate",
+        "authored_slice_lesson_id": "V3-W1-02",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "vocab_items_staged": [
+    {
+      "item_id": "item_coll_sort_out",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "sort out",
+      "variants": [
+        "sort out"
+      ],
+      "chinese": "整理",
+      "example": "The coordinator asked the team to sort out the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "sort out",
+        "gloss_zh": "整理；解決",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_focus_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "focus on",
+      "variants": [
+        "focus on"
+      ],
+      "chinese": "專注於",
+      "example": "The coordinator asked the team to focus on the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "focus on",
+        "gloss_zh": "專注於",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_concentrate_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "concentrate on",
+      "variants": [
+        "concentrate on"
+      ],
+      "chinese": "集中於",
+      "example": "The coordinator asked the team to concentrate on the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "concentrate on",
+        "gloss_zh": "集中於",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_work_on",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "work on",
+      "variants": [
+        "work on"
+      ],
+      "chinese": "著手處理",
+      "example": "The coordinator asked the team to work on the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "work on",
+        "gloss_zh": "著手處理；從事",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_stop_by",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "stop by",
+      "variants": [
+        "stop by"
+      ],
+      "chinese": "順道拜訪",
+      "example": "The coordinator asked the team to stop by the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "stop by",
+        "gloss_zh": "順道拜訪",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_draw_up",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "draw up",
+      "variants": [
+        "draw up"
+      ],
+      "chinese": "起草",
+      "example": "The coordinator asked the team to draw up the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "draw up",
+        "gloss_zh": "起草；擬定",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    },
+    {
+      "item_id": "item_coll_look_into",
+      "item_type": "collocation",
+      "stage": "V3",
+      "lesson_id": "V3-W1-02",
+      "lesson_ids": [
+        "V3-W1-02"
+      ],
+      "base_word": "look into",
+      "variants": [
+        "look into"
+      ],
+      "chinese": "調查",
+      "example": "The coordinator asked the team to look into the pending office requests before the audit walkthrough.",
+      "common_wrong_forms": [],
+      "toeic_contexts": [
+        "辦公室",
+        "toeic_collocation_rebuild",
+        "wave1"
+      ],
+      "review_priority": 2,
+      "mastery_score": 0,
+      "mastery_level": "blind",
+      "draft_metadata": {
+        "authoring_status": "authored_slice",
+        "source_phrase": "look into",
+        "gloss_zh": "調查；了解",
+        "source_lessons": [
+          "V3-W1-02"
+        ],
+        "resolution_status": "authored_slice",
+        "authored_in_phase": "c11_wave2_candidate",
+        "editorial_review_status": "candidate_ready"
+      }
+    }
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_w1_02_03_wave_2_2026_05_21",
+  "promoted_lesson_id": "V3-A-122"
+}

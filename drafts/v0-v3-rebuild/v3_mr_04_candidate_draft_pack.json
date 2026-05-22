@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-05-21",
+  "artifact_id": "v3_mr_04_candidate_draft_pack",
+  "artifact_version": "1.0",
+  "reference_role": "mixed_review_assembly_candidate",
+  "status": "production_candidate_ready",
+  "production_impact": "promoted",
+  "production_ready": true,
+  "promotion_candidate": true,
+  "source_spec": "drafts/v0-v3-rebuild/mixed_review_architecture.json",
+  "source_pipeline": "docs/rebuild-wave-release-gate.md",
+  "source_core_lessons": [
+    "V3-A-136",
+    "V3-A-137",
+    "V3-A-138",
+    "V3-A-139",
+    "V3-A-140"
+  ],
+  "new_question_rows": 0,
+  "lesson": {
+    "lesson_id": "V3-MR-04",
+    "stage": "V3",
+    "stage_name": "Collocation",
+    "lesson_number": 20004,
+    "title": "V3 Mixed Review 04",
+    "estimated_minutes": 30,
+    "lesson_type": "mixed_review",
+    "topic": "V3 Mixed Review",
+    "target_items": [],
+    "question_ids": [
+      "v3_a_136_rv_021",
+      "v3_a_136_rv_022",
+      "v3_a_136_rv_023",
+      "v3_a_136_rv_024",
+      "v3_a_137_rv_021",
+      "v3_a_137_rv_022",
+      "v3_a_137_rv_023",
+      "v3_a_137_rv_024",
+      "v3_a_138_rv_021",
+      "v3_a_138_rv_022",
+      "v3_a_138_rv_023",
+      "v3_a_138_rv_024",
+      "v3_a_139_rv_021",
+      "v3_a_139_rv_022",
+      "v3_a_139_rv_023",
+      "v3_a_139_rv_024",
+      "v3_a_140_rv_021",
+      "v3_a_140_rv_022",
+      "v3_a_140_rv_023",
+      "v3_a_140_rv_024"
+    ],
+    "review_question_ids": [],
+    "mastery_threshold": 0.8,
+    "seal_threshold": 0.85,
+    "grammar_link_id": "COLLOCATION_VERB_NOUN",
+    "status": "not_started",
+    "draft_metadata": {
+      "authoring_method": "v3_mixed_review_assembly",
+      "mixed_review_index": 4,
+      "source_core_lessons": [
+        "V3-A-136",
+        "V3-A-137",
+        "V3-A-138",
+        "V3-A-139",
+        "V3-A-140"
+      ],
+      "new_question_rows": 0,
+      "reused_review_question_refs": 20,
+      "production_seed_change": false
+    }
+  },
+  "validation": {
+    "validated_at": "2026-05-21",
+    "all_sources_in_production": true,
+    "all_20_question_ids_accounted_for": true,
+    "new_question_rows": 0,
+    "review_question_ids_empty": true,
+    "reference_validity_checked": true,
+    "answer_distribution": {
+      "D": 20
+    },
+    "isolated_full_quality_audit": "passed",
+    "production_seed_changed": true,
+    "blocking_issues": 0,
+    "isolated_audit_scope": "36 lessons / 711 questions (current production + MR-04)"
+  },
+  "notes": [
+    "V3-MR-04 reuses 20 existing V3 review_question rows from V3-A-136 through V3-A-140 (wave-1 tail + wave-2 block).",
+    "Sources span 人事與組織 2/3, 行銷與宣傳 1/2, and 財務會計 1.",
+    "Promotion adds 0 question-bank rows; curriculum-only seed change."
+  ],
+  "promoted_at": "2026-05-21",
+  "promoted_seed_version": "toeic_vocab_tracker_v3_mr_04_mixed_review_2026_05_21",
+  "promoted_lesson_id": "V3-MR-04"
+}

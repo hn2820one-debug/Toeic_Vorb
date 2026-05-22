@@ -25,7 +25,7 @@ The real GitHub Pages URL is reachable and its `manifest.json` is readable, but 
 | Live `curriculum.seed_version` | `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` | Fail |
 | Live launcher note | `目前內容：V0 + V1 + V2 + V3，共 193 lessons / 4,399 questions（含 22 個混合複習課）` | `目前正式內容：V2 + V3，共 39 課 / 780 題；V0 / V1 已清空，V4 尚未啟用。` | Fail |
 | Live runnable lessons | `0` | `39` | Fail |
-| Live shell cache | `toeic-vorb-v9` | `toeic-vorb-v38` | Fail |
+| Live shell cache | `toeic-vorb-v9` | `toeic-vorb-v39` | Fail |
 
 ## Verification Paths
 
