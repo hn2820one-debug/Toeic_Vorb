@@ -9,6 +9,7 @@
     clientId,
     isConfigured: Boolean(clientId),
     scope: "https://www.googleapis.com/auth/drive.file",
+    connectTimeoutMs: 12000,
     folderName: "TOEIC Vocabulary Tracker Sync",
     syncFileName: "toeic_vocab_drive_sync_state.json",
     syncVersion: "1.0",

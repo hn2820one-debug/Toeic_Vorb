@@ -1,6 +1,6 @@
 # TO_AI.md — Program B Master Handoff / 程式 B 總交接文件
 
-**Version / 版本:** 10.42
+**Version / 版本:** 10.43
 **Last verified / 最後確認:** 2026-05-23
 **Program / 程式:** TOEIC Vocabulary Tracker (Program B)
 **Path / 路徑:** `C:\Users\Keith\Toeic\toeic-app-Vorb`
@@ -37,7 +37,7 @@ The runnable production seed is V0-V3 only. V2 restores `V2-A-71` through `V2-A-
 | Duplicate stems / 重複題幹 | 0 |
 | Full quality audit issues / 全題庫品質問題 | 0 |
 | Seed version / 種子版本 | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` |
-| Service worker cache / SW 快取 | `toeic-vorb-v46` |
+| Service worker cache / SW 快取 | `toeic-vorb-v48` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
@@ -69,9 +69,9 @@ Important notes:
 
 ## 3. Architecture / 架構
 
-This is a static local-first PWA. The shipped runtime still has no backend, active Google login, active cloud sync, build step, or runtime AI question generation. `SYNC-01` is now an approved user-requested scoped future exception for Google Identity Services + Google Drive API learner-record sync only; it must not add a backend, modify production seed data, enable V4, or replace local-first IndexedDB.
+This is a static local-first PWA. The shipped runtime still has no backend, build step, or runtime AI question generation. `SYNC-01` is now the approved live exception for optional Google Identity Services + Google Drive API learner-record sync in normal browsers; it must not add a backend, modify production seed data, enable V4, or replace local-first IndexedDB.
 
-這是靜態 local-first PWA。目前已出貨 runtime 仍沒有後端、Google 登入、即時雲端同步、建置流程，也沒有 runtime AI 產題。`SYNC-01` 現已被使用者批准為有限 future exception：只允許 Google Identity Services + Google Drive API 做 learner-record sync；不得新增後端、修改 production seed、啟用 V4，或取代 local-first IndexedDB。
+這是靜態 local-first PWA。目前已出貨 runtime 仍沒有後端、建置流程，也沒有 runtime AI 產題。`SYNC-01` 現已成為已上線的有限例外：在一般瀏覽器中可選擇使用 Google Identity Services + Google Drive API 做 learner-record sync；不得新增後端、修改 production seed、啟用 V4，或取代 local-first IndexedDB。
 
 | Layer / 層 | Current design / 目前設計 |
 |---|---|
@@ -169,7 +169,7 @@ Content quality and seed cleanup:
 - C-11 selected and validated `V3-W1-01` as the first V3 draft production candidate in `drafts/v0-v3-rebuild/v3_w1_01_candidate_draft_pack.json`; the human review is `docs/wave-retrospectives/2026-05-21-c11-v3-w1-01-current-baseline-review.md`. The isolated current-baseline audit scope was 12 lessons / 264 questions and passed with 0 blocking issues, 0 explanation warnings, and 0 preferred stem length warnings.
 - V3 wave 16 promoted `V3-W2-05` to live `V3-A-141` (財務會計 搭配詞 2), adding 23 new question rows and 6 vocab items while reusing `v3_a_140_rv_024` for cross-lesson pressure.
 - V3 wave 17 promoted `V3-W2-06` to live `V3-A-142` (財務會計 搭配詞 3), adding 23 new question rows and 6 vocab items while reusing `v3_a_141_rv_024` for cross-lesson pressure.
-- V3 wave 18 promoted `V3-W2-07` to live `V3-A-143` (財務會計 搭配詞 4), adding 23 new question rows and 3 vocab items while reusing `v3_a_142_rv_024` for cross-lesson pressure. Current seed is `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`; current service worker cache is `toeic-vorb-v46` after the 2026-05-23 SYNC-01 Phase 7 verification update.
+- V3 wave 18 promoted `V3-W2-07` to live `V3-A-143` (財務會計 搭配詞 4), adding 23 new question rows and 3 vocab items while reusing `v3_a_142_rv_024` for cross-lesson pressure. Current seed is `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`; current service worker cache is `toeic-vorb-v48` after the 2026-05-23 SYNC-01 completion cleanup update.
 - C-10 execution has completed `T031` through `T037` for `V2-A-72`: the validated draft candidate is `drafts/v0-v3-rebuild/v2_a_72_candidate_draft_pack.json`, and the human review is `docs/wave-retrospectives/2026-05-20-t031-t037-v2-a-72-candidate-review.md`.
 
 Learning workflow:
@@ -178,7 +178,7 @@ Learning workflow:
 - Feedback screen shows correctness, correct answer, selected answer, explanation, target item, Chinese meaning, example, and grammar/collocation note when available.
 - Lesson runtime supports mouse-selected English word highlights for learner-marked unknown words. Highlights are saved locally under `toeic_vocab_word_highlights`, shown immediately in the current question panel, and kept out of production seed data.
 - Export page supports Google Drive manual backup/restore: `匯出 Google Drive 備份檔` creates one `toeic_vocab_backup_YYYY-MM-DD.json`; `匯入備份檔` validates, previews, and safe-merges learner records. This is manual file portability only, not cloud sync, not Google Drive API, and not a login flow.
-- `SYNC-01` repo-side Phases 1-7 are verified. The plan is recorded in `docs/google-drive-cloud-sync-plan.md`, manual OAuth setup is in `docs/google-drive-oauth-setup.md`, the Web OAuth client ID is configured in `js/google-drive-sync-config.js` without storing the downloaded client secret, the sync payload/validator/safe-merge/pending-change/auto-sync metadata logic is `js/google-drive-sync-data.js`, and the inert Drive auth/API client is `js/google-drive-sync-client.js`. Repo-side sync safety, auto-sync UX, retry/backoff, version-compatibility warnings, duplicate file selection, and one-shot re-merge on upload conflict are implemented; live OAuth/API validation is still blocked until Drive API, OAuth consent/test-user access, missing local authorized origins, and live browser authorization are confirmed.
+- `SYNC-01` is complete. The plan is recorded in `docs/google-drive-cloud-sync-plan.md`, manual OAuth setup is in `docs/google-drive-oauth-setup.md`, the Web OAuth client ID is configured in `js/google-drive-sync-config.js` without storing the downloaded client secret, the sync payload/validator/safe-merge/pending-change/auto-sync metadata logic is `js/google-drive-sync-data.js`, and the Drive auth/API client is `js/google-drive-sync-client.js`. Sync safety, auto-sync UX, retry/backoff, version-compatibility warnings, duplicate file selection, one-shot re-merge on upload conflict, stalled OAuth connect timeout handling, and two-device acceptance coverage are implemented; the user confirmed successful same-account sync on desktop and phone in normal browsers on 2026-05-23.
 - Review Mode can run due / high-priority / repeated-error queue items.
 - Review queue outcomes are marked `fixed`, `still_weak`, or `repeated_error`.
 - Today dashboard has clickable Next Action and due-review count.
@@ -256,7 +256,7 @@ Medium priority:
 - Full Lesson runtime mobile depth testing is still pending after the shell/settings/export baseline.
 - Question Bank mobile management ergonomics still need a dedicated follow-up pass.
 - Cross-browser PWA install prompt / install-flow behavior is still pending real-device verification.
-- Public GitHub Pages deployment is now aligned with current repo truth: `npm run test:pages-live` passes on the live URL with seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, 39 runnable lessons, the current launcher note, and service-worker cache `toeic-vorb-v46`.
+- Public GitHub Pages deployment remains aligned with the last released repo truth, and `npm run test:pages-live` passes against the public URL. The local repo cache name is now `toeic-vorb-v48`; redeploy before treating the public shell cache as updated.
 
 Closed or mostly closed:
 
@@ -321,7 +321,7 @@ Goal: keep `TO_AI.md` as the only active AI handoff document and prevent future 
 
 - Keep old root status files archived under `docs/backups/to_ai/2026-05-18/`.
 - `XPLAT-01` is tracked in `docs/google-drive-record-portability-plan.md` as user-requested parallel UX/data-portability work. It does not close `PAGES-01`, does not authorize content promotion, and does not change production seed data.
-- `SYNC-01` is tracked in `docs/google-drive-cloud-sync-plan.md` as user-requested parallel Google Drive sync work. Phase 1 documentation/linkage is verified, Phase 2 repo-side setup is verified with the user-provided Web OAuth client ID copied into `js/google-drive-sync-config.js` and no client secret stored, Phase 3 disabled-safe Drive client skeleton is in place, Phase 4 sync data contract is verified, Phase 5 safe-merge/conflict rules are implemented, Phase 6 auto-sync UX/state is verified through `js/google-drive-sync-data.js` and Settings, and Phase 7 failure-handling/safety is now repo-side verified through `js/google-drive-sync-client.js`, `js/vocab-tracker.js`, `js/views/settings.js`, and `tests/google-drive-sync.spec.ts`. Live authorization remains blocked on confirming Google Cloud project, Drive API, OAuth consent/test-user access, missing local authorized origins, and browser auth validation. It is a scoped exception to the no-login/no-cloud-sync rule for future Google Identity Services + Google Drive API learner-record sync only; it does not close `PAGES-01`, does not authorize content promotion, and does not change production seed data.
+- `SYNC-01` is tracked in `docs/google-drive-cloud-sync-plan.md` as user-requested parallel Google Drive sync work and is now complete. Phase 1 documentation/linkage, Phase 2 Google Cloud/OAuth setup, Phase 3 Drive client, Phase 4 sync data contract, Phase 5 safe-merge/conflict rules, Phase 6 auto-sync UX/state, Phase 7 failure-handling/safety, and Phase 8 acceptance coverage are complete through `js/google-drive-sync-client.js`, `js/vocab-tracker.js`, `js/views/settings.js`, and `tests/google-drive-sync.spec.ts`. The user confirmed successful same-account desktop/phone sync in normal browsers; remaining local authorized-origin additions are optional future local-testing follow-up only. It is the scoped exception to the no-login/no-cloud-sync rule for Google Identity Services + Google Drive API learner-record sync only; it does not reopen `PAGES-01`, does not authorize content promotion, and does not change production seed data.
 - Add or extend Playwright checks for Roadmap filters, Stage Seal Readiness, and export file inventory.
 - Keep `README.md`, `AGENTS.md`, and `CLAUDE.md` aligned with this file.
 

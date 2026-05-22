@@ -99,7 +99,7 @@ function renderDriveSyncPanel() {
       <div class="section-title-row">
         <div>
           <h3>Google Drive 同步</h3>
-          <p class="muted-note">SYNC-01：目前仍在 OAuth / Drive client 建置階段；手動備份仍在 Export 可用。</p>
+          <p class="muted-note">SYNC-01：一般瀏覽器可連接 Google Drive 做跨裝置同步；手動備份仍在 Export 可用。</p>
         </div>
         <span class="status-pill ${configured ? "done" : "todo"}" data-testid="settings-drive-sync-status">${html(driveSyncStatusText(status))}</span>
       </div>

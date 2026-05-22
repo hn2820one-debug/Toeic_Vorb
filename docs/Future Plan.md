@@ -23,10 +23,9 @@
 
 - Last updated by: Codex
 - Last updated on: 2026-05-23
-- Current focus: post-`PAGES-01` follow-up. GitHub Pages + mobile baseline is now complete, including live deployment verification and real-device acceptance. The recommended next mainline step is Lesson runtime mobile depth testing; `XPLAT-01` is complete, and `SYNC-01` repo-side Phases 1-7 are verified. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
-- Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v46`, and `npm run test:all` is green.
-- Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`. `XPLAT-01` added Google Drive manual backup/restore flow without production seed changes.
-- Newly verified: `SYNC-01` repo-side Phases 1-7 are now complete. Phase 1 linkage, Phase 2 repo-side setup, Phase 3 disabled-safe Drive client skeleton, Phase 4 sync payload contract, Phase 5 safe-merge/conflict rules, Phase 6 auto-sync UX/state, and Phase 7 failure-handling/safety are verified in-repo; remaining blockers are external Google Cloud / OAuth authorization setup plus later Phase 8 acceptance coverage. Shipped asset cache is `toeic-vorb-v46`.
+- Current focus: post-`PAGES-01` follow-up. GitHub Pages + mobile baseline, `XPLAT-01`, and `SYNC-01` are now complete. The recommended next mainline step is Lesson runtime mobile depth testing. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
+- Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v48`, and `npm run test:all` is green.
+- Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`. `XPLAT-01` added Google Drive manual backup/restore flow without production seed changes. `SYNC-01` is now functionally complete after repo-side Phase 1-8 verification plus user-confirmed same-account desktop/phone live sync.
 - Current priority rule: `PAGES-01` 已完成。除非使用者明確要求 content promotion，建議先進入 Lesson runtime mobile depth testing；`SYNC-01` 是 user-requested parallel sync work，本身不授權任何 content promotion。
 - Blocked on (mainline): none. `PAGES-01` was closed on 2026-05-23 after live URL verification plus user-confirmed phone export / launcher / tracker / repair-entry acceptance.
 - Blocked on (content rewrite): production V2/V3 rewrites remain blocked until real current learner/export evidence exists (repo export still 2026-05-14 `V1-B-21` only).
@@ -51,8 +50,9 @@
 	Completed on: 2026-05-23。Evidence: `npm run test:pages-live` passed against the public URL, and the user confirmed phone-browser success for launcher, tracker, `clear-sw.html`, and export package retrieval.
 - [x] User-requested parallel / XPLAT-01：Google Drive 手動跨平台備份 / 還原。
 	Done when: `docs/google-drive-record-portability-plan.md` 的 Phase 1-8、Export backup JSON、Import preview、safe merge、文件更新與 backup/restore Playwright 覆蓋完成。這是「使用者指定的非內容 promotion 並行工作」；不取代 `PAGES-01`，不解除 Pages live deployment 剩餘驗收，不修改 `data/vocab/*`，不啟用 V4，也不影響 seed version。
-- [ ] User-requested parallel / SYNC-01：Google Drive 自動跨裝置同步。
+- [x] User-requested parallel / SYNC-01：Google Drive 自動跨裝置同步。
 	Done when: `docs/google-drive-cloud-sync-plan.md` 的 Phase 1-8 全部完成，Settings 提供 Google Drive connect/status/sync now/pause/disconnect，同一 Google Drive 帳戶可在至少兩部裝置 safe merge learner records，重複同步不產生重複資料，seed mismatch/corrupt cloud file/token/offline paths 都安全處理，`XPLAT-01` 手動備份仍保留，且 `npm run test:all` 通過。這是使用者指定的 no-login/no-cloud-sync hard rule scoped exception；只允許 Google Identity Services + Google Drive API 作為 local-first learner-record sync layer，不新增後端、不修改 `data/vocab/*`、不啟用 V4、不改 seed version，也不取代 `PAGES-01`。
+	Completed on: 2026-05-23。Evidence: `docs/google-drive-cloud-sync-plan.md` Phase 1-8 closed, `npm run test:all` passed, and the user confirmed successful same-account desktop/phone sync in normal browsers.
 - [x] Step 1 / C-10：完成 wave 2（`V2-A-72` 到 `V2-A-74`）候選草稿、isolated validation、人審與正式 promotion，讓 production 由 1 課擴到 4 課。
 	Done when: `V2-A-74` 候選草稿完成，且 `V2-A-72`、`V2-A-73`、`V2-A-74` 一起通過 release gate 並寫入 live seed。
 - [x] Step 2 / D-10：在第一個多課 production wave 之後固定 inventory refresh / monthly reporting 流程，讓 production / draft / rebuild / archive 四桶統計與 current-truth sync 不再靠手動臨時整理。
@@ -71,7 +71,7 @@
 - [x] 已完成基礎層：C-01..C-09、C-12、U-01..U-06、D-01..D-09、D-11
 - [x] 已完成主線：`PAGES-01` GitHub Pages + mobile baseline（`docs/pages-mobile-experience-plan.md`；public Pages、live gate 與真機驗收已完成）
 - [x] 非主線並行工作：`XPLAT-01` Google Drive 手動跨平台備份 / 還原（使用者指定；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
-- [ ] 非主線並行工作：`SYNC-01` Google Drive 自動跨裝置同步（使用者指定；repo-side Phase 1-7 verified；剩餘 Google Cloud / OAuth live auth 與 Phase 8 acceptance；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
+- [ ] 非主線並行工作：`SYNC-01` Google Drive 自動跨裝置同步（使用者指定；repo-side Phase 1-8 verified；剩餘 Google Cloud / OAuth live auth；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
 
 ---
 
@@ -435,7 +435,7 @@ Phase 1 completed on: 2026-05-23
 - [x] 記錄 no-login / no-cloud-sync hard rule 的有限例外範圍。
 - [x] 更新 `TO_AI.md`，讓 future handoff 知道 `SYNC-01` 已被使用者批准為 scoped future sync work。
 
-Phase 2 started on: 2026-05-23
+Phase 2 completed on: 2026-05-23
 
 - [x] 核對 Phase 1 linkage：`docs/google-drive-cloud-sync-plan.md`、`docs/Future Plan.md`、`TO_AI.md`、README 與 handoff rules 已一致。
 - [x] 新增 `docs/google-drive-oauth-setup.md`，保存 Google Cloud / OAuth personal testing 設定 checklist。
@@ -445,12 +445,12 @@ Phase 2 started on: 2026-05-23
 - [x] 記錄官方 Google Identity Services / Drive API 文件來源。
 - [x] Settings 已覆蓋 Drive Sync 未設定狀態，以及 client ID 已設定但尚未連接時的 disconnected 狀態。
 - [x] `tests/google-drive-sync.spec.ts` 覆蓋 configured client ID、no client secret、Settings disconnected controls、pre-token Drive API rejection 不載入 GIS script。
-- [ ] 使用者在 Google Cloud Console 確認 project。
-- [ ] 使用者啟用 Google Drive API。
-- [ ] 使用者設定 OAuth consent screen / Google Auth Platform。
+- [x] 使用者在 Google Cloud Console 確認 project。
+- [x] 使用者啟用 Google Drive API。
+- [x] 使用者設定 OAuth consent screen / Google Auth Platform。
 - [x] 使用者建立 Web OAuth Client ID 並填入 `js/google-drive-sync-config.js`；下載 JSON 內的 client secret 沒有複製到 repo。
 
-Phase 3 started on: 2026-05-23
+Phase 3 completed on: 2026-05-23
 
 - [x] 新增 `js/google-drive-sync-client.js`，不改 build tooling，以 browser global 提供 Drive auth/API client。
 - [x] `tracker.html` 載入 `js/google-drive-sync-config.js` 與 `js/google-drive-sync-client.js`。
@@ -460,7 +460,7 @@ Phase 3 started on: 2026-05-23
 - [x] Drive client 透過 status object 回報 unavailable / disconnected / connecting / connected / reconnect_required / error。
 - [x] Settings 暴露初步 Drive Sync panel；full auto sync UX 已於 Phase 6 repo-side 開始。
 - [x] 因新增 shipped JS assets，service worker cache 推進到 `toeic-vorb-v40`，並同步 Pages smoke expectation。
-- [ ] 在 Drive API、OAuth consent/test-user access 與 local authorized origins 確認後，使用真實 Web OAuth Client ID 驗證 live Google authorization。
+- [x] 使用真實 Web OAuth Client ID 在一般桌面 / 手機瀏覽器驗證 live Google authorization。
 
 Phase 4 verified on: 2026-05-23
 
@@ -516,9 +516,9 @@ Phase 7 verified on: 2026-05-23
 - [x] duplicate sync file 候選現在會優先選最新的 app-created 檔案，而不是任意第一個結果。
 - [x] upload 前會先 re-read cloud `modifiedTime`；若準備期間雲端檔案變更，會安全 re-merge 一次後再重試 upload。
 - [x] `tests/google-drive-sync.spec.ts` 新增 P7 failure-path 覆蓋：reconnect-required、retryable backoff、sync-version compatibility、duplicate file selection、upload conflict、one-shot re-merge。
-- [x] 因 P7 shipped JS asset 變更，service worker cache 推進到 `toeic-vorb-v46`。
+- [x] 因 SYNC completion 文案與 shipped Settings asset 變更，service worker cache 推進到 `toeic-vorb-v48`。
 
-Blocked on: confirming Google Cloud project, Drive API enablement, OAuth consent/test-user access, adding the missing local authorized origins, and live browser authorization validation. Phase 8 acceptance tests remain open in `docs/google-drive-cloud-sync-plan.md`.
+Blocked on: none for `SYNC-01`. Optional follow-up only: add local authorized origins later if future local browser authorization testing is needed.
 
 ---
 

@@ -35,8 +35,8 @@
 
 Static local-first PWA for TOEIC vocabulary learning (target: 570 → 750).
 - Local-first: all data in IndexedDB (`toeic_vocab_tracker_db`), no backend
-- No active login, cloud sync, build step, or runtime AI question generation in the shipped runtime
-- `SYNC-01` is the approved future exception for Google Drive learner-record sync only; it does not authorize backend work, production seed changes, or V4 activation
+- Optional `SYNC-01` Google Drive learner-record sync is now available in normal browsers as the only approved cloud-sync exception; it does not authorize backend work, production seed changes, or V4 activation
+- No build step or runtime AI question generation in the shipped runtime
 - Tracks attempts, mastery, error codes, review queue per vocab item
 - 8 views: Today / Roadmap / Lesson / Mistakes / Mastery / Export / Question Bank / Settings
 - Accessible at `tracker.html`; launcher at `index.html`

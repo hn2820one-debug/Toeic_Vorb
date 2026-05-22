@@ -1,9 +1,14 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type BrowserContext, type Page } from "@playwright/test";
 
 const APP_TIMEOUT = 30_000;
 const STEP_TIMEOUT = 10_000;
 
-async function connectMockGoogleDrive(page) {
+async function gotoTracker(page: Page) {
+  await page.goto("/tracker.html");
+  await page.waitForFunction(() => typeof window.VocabTracker?.setView === "function", { timeout: APP_TIMEOUT });
+}
+
+async function primeMockGoogleDrive(page: Page) {
   await page.evaluate(() => {
     window.google = {
       accounts: {
@@ -24,12 +29,243 @@ async function connectMockGoogleDrive(page) {
       }
     };
   });
+}
+
+async function connectMockGoogleDrive(page) {
+  await primeMockGoogleDrive(page);
   await page.evaluate(() => window.GoogleDriveSyncClient.connect());
 }
 
+async function seedSyncLearnerSnapshot(page: Page, suffix = "a") {
+  return page.evaluate(async (idSuffix) => {
+    await window.VocabDB.seedIfNeeded();
+    const now = window.VocabScoring.localIso();
+    const lesson = await window.VocabDB.get("lessons", "V2-A-71");
+    const question = await window.VocabDB.get("questions", "v2_a_71_q_001");
+    const item = await window.VocabDB.get("vocab_items", question.target_item_id);
+    const sessionId = `pw_sync_session_${idSuffix}`;
+    const attemptId = `pw_sync_attempt_${idSuffix}`;
+    const reviewId = `pw_sync_review_${idSuffix}`;
+
+    await window.VocabDB.put("lessons", {
+      ...lesson,
+      status: "completed",
+      completed_at: now,
+      updated_at: now
+    });
+    await window.VocabDB.put("vocab_items", {
+      ...item,
+      seen_count: Math.max(Number(item.seen_count || 0), 3),
+      correct_count: Math.max(Number(item.correct_count || 0), 2),
+      wrong_count: Math.max(Number(item.wrong_count || 0), 1),
+      mastery_score: Math.max(Number(item.mastery_score || 0), 72),
+      mastery_level: "unstable",
+      last_seen: now,
+      next_review_date: window.VocabScoring.localDate()
+    });
+    await window.VocabDB.put("sessions", {
+      session_id: sessionId,
+      date: window.VocabScoring.localDate(),
+      user_id: "Keith",
+      course_id: "toeic_vocab_v1",
+      stage: "V2",
+      lesson_id: "V2-A-71",
+      lesson_title: lesson.title,
+      planned_minutes: 45,
+      actual_minutes: 3,
+      started_at: now,
+      ended_at: now,
+      total_questions: 1,
+      correct_questions: 0,
+      wrong_questions: 1,
+      accuracy: 0,
+      avg_response_time_seconds: 11.2,
+      mastery_status: "needs_reinforcement",
+      next_action: "review_errors"
+    });
+    await window.VocabDB.put("attempts", {
+      attempt_id: attemptId,
+      timestamp: now,
+      user_id: "Keith",
+      course_id: "toeic_vocab_v1",
+      stage: "V2",
+      lesson_id: "V2-A-71",
+      session_id: sessionId,
+      step: "question",
+      question_id: question.question_id,
+      question_type: question.type,
+      target_item_id: question.target_item_id,
+      grammar_link_id: question.grammar_link_id,
+      correct_answer: question.correct_answer,
+      user_answer: question.correct_answer === "A" ? "B" : "A",
+      is_correct: false,
+      response_time_seconds: 11.2,
+      speed_bucket: "slow_wrong",
+      error_code: "SCENE_VOCAB_GAP",
+      default_error_code: question.default_error_code,
+      is_repeated_error: false,
+      review_priority: 3,
+      mode: "lesson"
+    });
+    await window.VocabDB.put("review_queue", {
+      review_id: reviewId,
+      item_id: question.target_item_id,
+      question_ids: [question.question_id],
+      reason: "lesson_error",
+      priority: 3,
+      due_date: window.VocabScoring.localDate(),
+      status: "pending",
+      created_at: now,
+      updated_at: now,
+      review_state: "pending"
+    });
+
+    return {
+      attemptId,
+      sessionId,
+      reviewId,
+      itemId: question.target_item_id,
+      baseWord: item.base_word
+    };
+  }, suffix);
+}
+
+function nextDriveTimestamp(step: number) {
+  return new Date(Date.UTC(2026, 4, 24, 0, 0, step)).toISOString();
+}
+
+function parseMultipartJson(postData = "") {
+  const boundaryMatch = postData.match(/^--([^\r\n]+)/);
+  if (!boundaryMatch) {
+    throw new Error("Missing multipart boundary.");
+  }
+  const boundary = boundaryMatch[1];
+  const parts = postData
+    .split(`--${boundary}`)
+    .map((part) => part.trim())
+    .filter((part) => part && part !== "--");
+  const jsonParts = parts
+    .map((part) => {
+      const jsonStart = part.indexOf("{");
+      return jsonStart >= 0 ? JSON.parse(part.slice(jsonStart)) : null;
+    })
+    .filter(Boolean);
+  return {
+    metadata: jsonParts[0] || {},
+    payload: jsonParts[1] || {}
+  };
+}
+
+function createDriveResponse(body: unknown, status = 200) {
+  return {
+    status,
+    contentType: "application/json",
+    body: typeof body === "string" ? body : JSON.stringify(body)
+  };
+}
+
+function createFakeDriveBackend() {
+  let step = 0;
+  const state: {
+    folder: null | Record<string, unknown>;
+    file: null | Record<string, unknown>;
+    payload: any;
+    calls: string[];
+  } = {
+    folder: null,
+    file: null,
+    payload: null,
+    calls: []
+  };
+
+  function metadataOf(file: any) {
+    return {
+      id: file.id,
+      name: file.name,
+      mimeType: file.mimeType,
+      modifiedTime: file.modifiedTime,
+      appProperties: file.appProperties
+    };
+  }
+
+  async function install(context: BrowserContext) {
+    await context.route("https://www.googleapis.com/**", async (route) => {
+      const request = route.request();
+      const url = new URL(request.url());
+      const method = request.method();
+      state.calls.push(`${method} ${url.pathname}${url.search ? url.search : ""}`);
+
+      if (url.pathname === "/drive/v3/files" && method === "GET") {
+        const query = url.searchParams.get("q") || "";
+        const files = query.includes("mimeType='application/vnd.google-apps.folder'")
+          ? (state.folder ? [metadataOf(state.folder)] : [])
+          : (state.file ? [metadataOf(state.file)] : []);
+        await route.fulfill(createDriveResponse({ files }));
+        return;
+      }
+
+      if (url.pathname === "/drive/v3/files" && method === "POST") {
+        const metadata = JSON.parse(request.postData() || "{}");
+        state.folder = {
+          id: "folder-001",
+          name: metadata.name,
+          mimeType: metadata.mimeType,
+          modifiedTime: nextDriveTimestamp(step++),
+          appProperties: metadata.appProperties || {}
+        };
+        await route.fulfill(createDriveResponse(metadataOf(state.folder)));
+        return;
+      }
+
+      if (url.pathname === "/upload/drive/v3/files" && method === "POST") {
+        const { metadata, payload } = parseMultipartJson(request.postData() || "");
+        state.file = {
+          id: "file-001",
+          name: metadata.name,
+          mimeType: metadata.mimeType,
+          parents: metadata.parents || [],
+          modifiedTime: nextDriveTimestamp(step++),
+          appProperties: metadata.appProperties || {}
+        };
+        state.payload = payload;
+        await route.fulfill(createDriveResponse(metadataOf(state.file)));
+        return;
+      }
+
+      if (url.pathname.startsWith("/drive/v3/files/") && method === "GET") {
+        const id = decodeURIComponent(url.pathname.split("/").pop() || "");
+        if (url.searchParams.get("alt") === "media") {
+          await route.fulfill(createDriveResponse(state.payload || {}));
+          return;
+        }
+        const file = state.file && state.file.id === id
+          ? state.file
+          : state.folder && state.folder.id === id
+            ? state.folder
+            : null;
+        await route.fulfill(file ? createDriveResponse(metadataOf(file)) : { status: 404, body: "not found" });
+        return;
+      }
+
+      if (url.pathname.startsWith("/upload/drive/v3/files/") && method === "PATCH") {
+        state.payload = JSON.parse(request.postData() || "{}");
+        state.file = {
+          ...(state.file || { id: "file-001", name: "toeic_vocab_drive_sync_state.json", mimeType: "application/json", appProperties: {} }),
+          modifiedTime: nextDriveTimestamp(step++)
+        };
+        await route.fulfill(createDriveResponse(metadataOf(state.file)));
+        return;
+      }
+
+      await route.continue();
+    });
+  }
+
+  return { state, install };
+}
+
 test.beforeEach(async ({ page }) => {
-  await page.goto("/tracker.html");
-  await page.waitForFunction(() => typeof window.VocabTracker?.setView === "function", { timeout: APP_TIMEOUT });
+  await gotoTracker(page);
 });
 
 test("Drive sync config stores the Web OAuth client ID without a client secret", async ({ page }) => {
@@ -796,4 +1032,214 @@ test("Drive sync Phase 7 re-merges once when the cloud file changes during uploa
   expect(result.syncResult.mergeResult.remerged).toBe(true);
   expect(result.auto.pending).toBe(false);
   expect(result.auto.lastSuccessAt).toBeTruthy();
+});
+
+test("Drive sync Phase 8 mocked GIS connect flow updates Settings controls", async ({ page }) => {
+  await page.evaluate(() => window.VocabTracker.setView("settings"));
+  await primeMockGoogleDrive(page);
+
+  await page.getByTestId("settings-drive-connect-button").click({ timeout: STEP_TIMEOUT });
+
+  await expect(page.getByTestId("settings-drive-sync-status")).toHaveText("已連接", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("settings-drive-sync-now-button")).toBeEnabled({ timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("settings-drive-disconnect-button")).toBeEnabled({ timeout: STEP_TIMEOUT });
+
+  const status = await page.evaluate(() => window.GoogleDriveSyncClient.getStatus());
+  expect(status.state).toBe("connected");
+  expect(status.hasToken).toBe(true);
+});
+
+test("Drive sync Phase 8 times out stalled OAuth popup attempts with a retryable disconnected state", async ({ page }) => {
+  const result = await page.evaluate(async () => {
+    window.GoogleDriveSyncConfig = Object.freeze({
+      ...window.GoogleDriveSyncConfig,
+      connectTimeoutMs: 25
+    });
+    window.google = {
+      accounts: {
+        oauth2: {
+          initTokenClient: (options) => ({
+            callback: options.callback,
+            requestAccessToken: () => {}
+          }),
+          revoke: (_token, callback) => {
+            if (typeof callback === "function") callback();
+          }
+        }
+      }
+    };
+
+    try {
+      await window.GoogleDriveSyncClient.connect();
+      return { ok: true };
+    } catch (error) {
+      return {
+        ok: false,
+        code: error.code,
+        message: error.message,
+        status: window.GoogleDriveSyncClient.getStatus()
+      };
+    }
+  });
+
+  expect(result.ok).toBe(false);
+  expect(result.code).toBe("DRIVE_SYNC_CONNECT_TIMEOUT");
+  expect(result.message).toContain("popup blockers");
+  expect(result.status.state).toBe("disconnected");
+  expect(result.status.hasToken).toBe(false);
+});
+
+test("Drive sync Phase 8 rejects invalid cloud JSON before merge", async ({ page }) => {
+  await connectMockGoogleDrive(page);
+
+  const result = await page.evaluate(async () => {
+    const originalFetch = window.fetch.bind(window);
+    window.fetch = async (input) => {
+      const url = new URL(String(input));
+      if (url.searchParams.get("alt") === "media") {
+        return new Response("{ bad json", { status: 200, headers: { "Content-Type": "application/json" } });
+      }
+      return new Response(JSON.stringify({
+        id: "file-001",
+        name: "toeic_vocab_drive_sync_state.json",
+        mimeType: "application/json",
+        modifiedTime: "2026-05-24T00:00:00.000Z",
+        appProperties: { app_id: "toeic-vocab-tracker", file_kind: "sync_state" }
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    };
+
+    try {
+      await window.GoogleDriveSyncClient.downloadSyncSnapshot("file-001");
+      return { ok: true };
+    } catch (error) {
+      return {
+        ok: false,
+        message: error.message,
+        status: window.GoogleDriveSyncClient.getStatus()
+      };
+    } finally {
+      window.fetch = originalFetch;
+    }
+  });
+
+  expect(result.ok).toBe(false);
+  expect(result.message).toContain("not valid JSON");
+  expect(result.status.state).toBe("error");
+  expect(result.status.lastAction).toBe("download-sync-state");
+});
+
+test("Drive sync Phase 8 first device creates cloud state and second device restores Today Mastery Review", async ({ browser }) => {
+  const drive = createFakeDriveBackend();
+  const contextA = await browser.newContext();
+  await drive.install(contextA);
+  const pageA = await contextA.newPage();
+  await gotoTracker(pageA);
+  await primeMockGoogleDrive(pageA);
+  await pageA.evaluate(() => window.VocabTracker.setView("settings"));
+  await pageA.getByTestId("settings-drive-connect-button").click({ timeout: STEP_TIMEOUT });
+  const seeded = await seedSyncLearnerSnapshot(pageA, "device_a");
+  await pageA.getByTestId("settings-drive-sync-now-button").click({ timeout: STEP_TIMEOUT });
+  await expect(pageA.locator("#tracker-notice")).toContainText("Google Drive safe sync 完成", { timeout: STEP_TIMEOUT });
+
+  expect(drive.state.folder).toBeTruthy();
+  expect(drive.state.file).toBeTruthy();
+  expect(drive.state.payload.summary.attempts).toBe(1);
+  expect(drive.state.payload.summary.sessions).toBe(1);
+
+  const contextB = await browser.newContext();
+  await drive.install(contextB);
+  const pageB = await contextB.newPage();
+  await gotoTracker(pageB);
+  await primeMockGoogleDrive(pageB);
+  await pageB.evaluate(() => window.VocabTracker.setView("settings"));
+  await pageB.getByTestId("settings-drive-connect-button").click({ timeout: STEP_TIMEOUT });
+  await pageB.getByTestId("settings-drive-sync-now-button").click({ timeout: STEP_TIMEOUT });
+  await expect(pageB.locator("#tracker-notice")).toContainText("Google Drive safe sync 完成", { timeout: STEP_TIMEOUT });
+
+  const restored = await pageB.evaluate(async () => {
+    const attempts = await window.VocabDB.getAll("attempts");
+    const sessions = await window.VocabDB.getAll("sessions");
+    const reviewQueue = await window.VocabDB.getAll("review_queue");
+    return {
+      attempts: attempts.filter((row) => row.attempt_id.startsWith("pw_sync_attempt_")).length,
+      sessions: sessions.filter((row) => row.session_id.startsWith("pw_sync_session_")).length,
+      reviewQueue: reviewQueue.filter((row) => row.review_id.startsWith("pw_sync_review_")).length
+    };
+  });
+
+  expect(restored).toEqual({ attempts: 1, sessions: 1, reviewQueue: 1 });
+
+  await pageB.evaluate(() => window.VocabTracker.setView("today"));
+  await expect(pageB.locator("body")).toContainText("1/39", { timeout: STEP_TIMEOUT });
+
+  await pageB.evaluate(() => window.VocabTracker.setView("mistakes"));
+  await expect(pageB.locator("body")).toContainText(seeded.baseWord, { timeout: STEP_TIMEOUT });
+
+  await pageB.evaluate(() => window.VocabTracker.setView("mastery"));
+  await expect(pageB.locator("body")).toContainText(seeded.baseWord, { timeout: STEP_TIMEOUT });
+
+  await contextA.close();
+  await contextB.close();
+});
+
+test("Drive sync Phase 8 merges two devices without losing attempts or sessions", async ({ browser }) => {
+  const drive = createFakeDriveBackend();
+
+  const contextA = await browser.newContext();
+  await drive.install(contextA);
+  const pageA = await contextA.newPage();
+  await gotoTracker(pageA);
+  await primeMockGoogleDrive(pageA);
+  await pageA.evaluate(() => window.VocabTracker.setView("settings"));
+  await pageA.getByTestId("settings-drive-connect-button").click({ timeout: STEP_TIMEOUT });
+  await seedSyncLearnerSnapshot(pageA, "device_a");
+  await pageA.getByTestId("settings-drive-sync-now-button").click({ timeout: STEP_TIMEOUT });
+  await expect(pageA.locator("#tracker-notice")).toContainText("Google Drive safe sync 完成", { timeout: STEP_TIMEOUT });
+
+  const contextB = await browser.newContext();
+  await drive.install(contextB);
+  const pageB = await contextB.newPage();
+  await gotoTracker(pageB);
+  await primeMockGoogleDrive(pageB);
+  await pageB.evaluate(() => window.VocabTracker.setView("settings"));
+  await pageB.getByTestId("settings-drive-connect-button").click({ timeout: STEP_TIMEOUT });
+  await seedSyncLearnerSnapshot(pageB, "device_b");
+  await pageB.getByTestId("settings-drive-sync-now-button").click({ timeout: STEP_TIMEOUT });
+  await expect(pageB.locator("#tracker-notice")).toContainText("Google Drive safe sync 完成", { timeout: STEP_TIMEOUT });
+
+  const pageASync = await pageA.evaluate(async () => window.VocabTracker.performGoogleDriveSync({ reason: "phase8_merge_pull" }));
+  const counts = await pageA.evaluate(async () => {
+    const attempts = await window.VocabDB.getAll("attempts");
+    const sessions = await window.VocabDB.getAll("sessions");
+    return {
+      attempts: attempts.filter((row) => row.attempt_id.startsWith("pw_sync_attempt_")).length,
+      sessions: sessions.filter((row) => row.session_id.startsWith("pw_sync_session_")).length
+    };
+  });
+
+  expect(pageASync.mergeResult.added.attempts).toBe(1);
+  expect(pageASync.mergeResult.added.sessions).toBe(1);
+  expect(counts).toEqual({ attempts: 2, sessions: 2 });
+  expect(drive.state.payload.summary.attempts).toBe(2);
+  expect(drive.state.payload.summary.sessions).toBe(2);
+
+  await contextA.close();
+  await contextB.close();
+});
+
+test("Drive sync Phase 8 mobile Settings controls are usable at 390x844", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.evaluate(() => window.VocabTracker.setView("settings"));
+
+  await expect(page.getByTestId("settings-drive-sync-panel")).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("settings-drive-auto-sync-row")).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("settings-drive-connect-button")).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("settings-drive-sync-now-button")).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("settings-drive-disconnect-button")).toBeVisible({ timeout: STEP_TIMEOUT });
+
+  const width = await page.evaluate(() => ({
+    scrollWidth: document.documentElement.scrollWidth,
+    clientWidth: document.documentElement.clientWidth
+  }));
+  expect(width.scrollWidth).toBeLessThanOrEqual(width.clientWidth + 1);
 });

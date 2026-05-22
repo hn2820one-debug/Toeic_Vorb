@@ -3,7 +3,7 @@
 // It does NOT cache Grammar / PoS App files.
 
 // Advance CACHE_NAME only when a deployed asset or production seed changes.
-const CACHE_NAME = "toeic-vorb-v46";
+const CACHE_NAME = "toeic-vorb-v48";
 const STATIC_ASSETS = [
   "./",
   "./index.html",

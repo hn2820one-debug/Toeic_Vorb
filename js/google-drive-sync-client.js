@@ -11,6 +11,7 @@
   const MAX_RETRY_ATTEMPTS = 3;
   const BASE_RETRY_DELAY_MS = 750;
   const MAX_RETRY_DELAY_MS = 15000;
+  const DEFAULT_CONNECT_TIMEOUT_MS = 12000;
 
   let tokenClient = null;
   let accessToken = "";
@@ -47,6 +48,11 @@
     error.retryable = true;
     Object.assign(error, extra);
     return error;
+  }
+
+  function connectTimeoutMs() {
+    const configured = Number(config().connectTimeoutMs);
+    return Number.isFinite(configured) && configured > 0 ? configured : DEFAULT_CONNECT_TIMEOUT_MS;
   }
 
   function baseStatus() {
@@ -157,29 +163,51 @@
     const client = await initTokenClient();
 
     return new Promise((resolve, reject) => {
+      let settled = false;
+      const timeoutId = setTimeout(() => {
+        const error = new Error("Google Drive authorization did not finish. Check popup blockers and complete the Google sign-in window.");
+        error.code = "DRIVE_SYNC_CONNECT_TIMEOUT";
+        finishReject(error, "disconnected");
+      }, connectTimeoutMs());
+
+      function finishReject(error, nextState = "error") {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeoutId);
+        accessToken = "";
+        setStatus({ state: nextState, lastAction: "connect", lastError: error.message });
+        reject(error);
+      }
+
+      function finishResolve() {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeoutId);
+        setStatus({ state: "connected", lastAction: "connect", lastError: "" });
+        resolve(getStatus());
+      }
+
       client.callback = (response) => {
         if (response?.error) {
           const error = new Error(response.error_description || response.error);
-          setStatus({ state: "error", lastAction: "connect", lastError: error.message });
-          reject(error);
+          error.code = response.error || "DRIVE_SYNC_CONNECT_ERROR";
+          finishReject(error, "error");
           return;
         }
         accessToken = response?.access_token || "";
         if (!accessToken) {
           const error = new Error("Google Drive did not return an access token.");
-          setStatus({ state: "error", lastAction: "connect", lastError: error.message });
-          reject(error);
+          error.code = "DRIVE_SYNC_MISSING_ACCESS_TOKEN";
+          finishReject(error, "error");
           return;
         }
-        setStatus({ state: "connected", lastAction: "connect", lastError: "" });
-        resolve(getStatus());
+        finishResolve();
       };
 
       try {
         client.requestAccessToken({ prompt: "" });
       } catch (error) {
-        setStatus({ state: "error", lastAction: "connect", lastError: error.message });
-        reject(error);
+        finishReject(error, "error");
       }
     });
   }

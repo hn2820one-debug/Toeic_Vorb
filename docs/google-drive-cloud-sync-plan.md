@@ -43,15 +43,15 @@
 
 ### Phase 2 — Google Cloud / OAuth Setup
 
-Status: repo-side setup verified on 2026-05-23. Web OAuth Client ID is now copied into `js/google-drive-sync-config.js`; live authorization is still blocked on confirming Drive API/consent/test-user setup and adding missing local authorized origins in Google Cloud Console.
+Status: completed on 2026-05-23. Web OAuth Client ID is copied into `js/google-drive-sync-config.js`, and live authorization is validated on normal desktop/mobile browsers for the user's Google Drive account. Remaining local authorized origins are optional follow-up for future local browser auth testing only.
 
-- [ ] Confirm the Google Cloud project used for personal testing.
-- [ ] Enable the Google Drive API in that project.
-- [ ] Configure OAuth consent screen for personal testing.
-- [ ] Add the user's Google account as a test user.
+- [x] Confirm the Google Cloud project used for personal testing.
+- [x] Enable the Google Drive API in that project.
+- [x] Configure OAuth consent screen for personal testing.
+- [x] Add the user's Google account as a test user.
 - [x] Create a Web OAuth Client ID.
-- [ ] Add local development origins such as `http://127.0.0.1:8787`.
-- [ ] Add any active local dev origin used by Playwright or smoke testing.
+- Optional local-only follow-up: add local development origins such as `http://127.0.0.1:8787` when future local browser authorization testing is required.
+- Optional local-only follow-up: add any active local dev origin used by Playwright or smoke testing when future local browser authorization testing is required.
 - [x] Add the GitHub Pages origin for the deployed Program B URL.
 - [x] Store the client ID in a static config location that can be disabled safely when blank: `js/google-drive-sync-config.js`.
 - [x] Verify the app shows Drive Sync as unavailable when the client ID is missing, and disconnected with connect enabled after the client ID is configured.
@@ -70,7 +70,7 @@ Phase 2 repo-side additions:
 
 ### Phase 3 — Drive Auth / API Client
 
-Status: started on 2026-05-23. Repo-side client skeleton is implemented and disabled-safe; the Web OAuth client ID is configured without storing a client secret. Live OAuth/API validation remains blocked until Drive API, OAuth consent/test-user access, missing local authorized origins, and browser authorization are confirmed.
+Status: completed on 2026-05-23. The Drive client is implemented, the Web OAuth client ID is configured without storing a client secret, and live Google authorization is validated in normal desktop/mobile browsers.
 
 - [x] Add a small Drive sync client module without changing app build tooling: `js/google-drive-sync-client.js`.
 - [x] Load Google Identity Services only when the user explicitly connects or sync code asks for a token.
@@ -92,7 +92,7 @@ Phase 3 repo-side additions:
 - [x] Add `tests/google-drive-sync.spec.ts` for the unconfigured/configured safety paths and later Phase 6 auto-sync UX.
 - [x] Add the new config/client assets to `tracker.html` and the service-worker precache.
 - [x] Advance service-worker cache to `toeic-vorb-v40` because shipped JS assets changed.
-- [ ] Validate live Google authorization after Drive API, OAuth consent/test-user access, and local authorized origins are confirmed.
+- [x] Validate live Google authorization in normal desktop/mobile browsers.
 
 ### Phase 4 — Sync Data Contract / Builder
 
@@ -210,31 +210,43 @@ Phase 7 repo-side additions:
 
 ### Phase 8 — Tests / Acceptance
 
-- [ ] Add unit or script coverage for sync payload shape.
-- [ ] Add invalid cloud JSON rejection coverage.
-- [ ] Add idempotent merge coverage for repeated cloud state.
-- [ ] Add seed mismatch warning coverage.
-- [ ] Add mocked Google Identity Services connect coverage.
-- [ ] Add mocked Drive folder/file create coverage.
-- [ ] Add Playwright coverage for first-device lesson completion and cloud push.
-- [ ] Add Playwright coverage for second-device pull and restored Today/Mastery/Review state.
-- [ ] Add two-device merge coverage for attempts and sessions counts.
-- [ ] Add mobile `390x844` coverage for Settings Drive Sync controls.
-- [ ] Run `node scripts/check-doc-consistency.js`.
-- [ ] Run `npm run test:all`.
+Status: completed on 2026-05-23. Acceptance coverage is implemented and green: payload shape, invalid JSON rejection, idempotent merge, seed mismatch warning, mocked GIS connect, first-device cloud push, second-device restore, two-device merge, mobile Settings controls, full regression, and real browser desktop/mobile sync validation all pass.
+
+- [x] Add unit or script coverage for sync payload shape.
+- [x] Add invalid cloud JSON rejection coverage.
+- [x] Add idempotent merge coverage for repeated cloud state.
+- [x] Add seed mismatch warning coverage.
+- [x] Add mocked Google Identity Services connect coverage.
+- [x] Add mocked Drive folder/file create coverage.
+- [x] Add Playwright coverage for first-device lesson completion and cloud push.
+- [x] Add Playwright coverage for second-device pull and restored Today/Mastery/Review state.
+- [x] Add two-device merge coverage for attempts and sessions counts.
+- [x] Add mobile `390x844` coverage for Settings Drive Sync controls.
+- [x] Add timeout handling for stalled/popup-blocked OAuth connect attempts so Connect no longer hangs indefinitely.
+- [x] Validate normal-browser live sync on both desktop and phone using the same Google Drive account.
+- [x] Run `node scripts/check-doc-consistency.js`.
+- [x] Run `npm run test:all`.
+
+Phase 8 repo-side additions:
+
+- [x] `tests/google-drive-sync.spec.ts` now covers mocked GIS connect via Settings controls, stalled OAuth connect timeout handling, invalid cloud JSON rejection, first-device cloud push, second-device restore, two-device merge, and mobile `390x844` Settings operation.
+- [x] `GoogleDriveSyncClient.connect()` now times out stalled GIS popup attempts and returns a retryable disconnected state with a clear popup-blocker / sign-in completion message instead of hanging indefinitely.
+- [x] Live Pages probing in the VS Code embedded browser reached GIS but the popup could not open there; treat embedded-browser popup blocking as a tooling limitation, not as proof that the configured Pages origin is invalid.
+- [x] User confirmed successful same-account desktop/phone live sync in normal browsers on 2026-05-23.
+- [x] Advance service-worker cache to `toeic-vorb-v48` because shipped sync Settings/status assets changed after SYNC completion cleanup.
 
 ## Definition of Done
 
-- [ ] `docs/Future Plan.md` contains `SYNC-01` and states it does not conflict with `PAGES-01`.
-- [ ] This plan remains the detailed checkpoint source for the Drive sync implementation.
-- [ ] Settings exposes Google Drive connect, status, sync now, pause, and disconnect controls.
-- [ ] Same Google Drive account can sync learner records between at least two devices.
-- [ ] Auto sync works while the app is open and the token is valid.
-- [ ] Token expiry, offline state, seed mismatch, and corrupt cloud file paths warn clearly and do not damage local data.
-- [ ] Repeated sync does not duplicate attempts, sessions, review queue items, or word highlights.
-- [ ] Production question/curriculum seed files are never imported from Drive.
-- [ ] `XPLAT-01` manual backup/restore remains available.
-- [ ] Full regression suite passes after implementation.
+- [x] `docs/Future Plan.md` contains `SYNC-01` and states it does not conflict with `PAGES-01`.
+- [x] This plan remains the detailed checkpoint source for the Drive sync implementation.
+- [x] Settings exposes Google Drive connect, status, sync now, pause, and disconnect controls.
+- [x] Same Google Drive account can sync learner records between at least two devices.
+- [x] Auto sync works while the app is open and the token is valid.
+- [x] Token expiry, offline state, seed mismatch, and corrupt cloud file paths warn clearly and do not damage local data.
+- [x] Repeated sync does not duplicate attempts, sessions, review queue items, or word highlights.
+- [x] Production question/curriculum seed files are never imported from Drive.
+- [x] `XPLAT-01` manual backup/restore remains available.
+- [x] Full regression suite passes after implementation.
 
 ## Test Commands
 
@@ -247,3 +259,14 @@ npx playwright test tests/google-drive-sync.spec.ts
 ## Rollback
 
 Rollback should remove or disable only the Drive Sync feature surface and related sync client/tests/docs. No production seed rollback is required because `SYNC-01` must not modify `data/vocab/*`, `SEED_VERSION`, source question JSON, or source curriculum JSON.
+
+## Completion
+
+`SYNC-01` completed on 2026-05-23.
+
+Completion evidence:
+
+- Repo-side Phases 1-8 are green.
+- `tests/google-drive-sync.spec.ts` passes with the full sync acceptance suite.
+- `npm run test:all` passes.
+- The user confirmed successful normal-browser sync on both desktop and phone using the same Google Drive account.

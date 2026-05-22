@@ -12,14 +12,14 @@ The app remains local-first. OAuth is used only to obtain a short-lived browser 
 
 ## Required Google Cloud Setup
 
-- [ ] Create or choose a Google Cloud project for Program B personal testing.
-- [ ] Enable the Google Drive API in that project.
-- [ ] Configure the OAuth consent screen / Google Auth Platform.
-- [ ] Set the app name to `TOEIC Vocabulary Tracker`.
-- [ ] Set the audience for personal testing and add the user's Google account as a test user if required by the selected audience mode.
-- [ ] Add the Drive scope `https://www.googleapis.com/auth/drive.file`.
+- [x] Create or choose a Google Cloud project for Program B personal testing.
+- [x] Enable the Google Drive API in that project.
+- [x] Configure the OAuth consent screen / Google Auth Platform.
+- [x] Set the app name to `TOEIC Vocabulary Tracker`.
+- [x] Set the audience for personal testing and add the user's Google account as a test user if required by the selected audience mode.
+- [x] Add the Drive scope `https://www.googleapis.com/auth/drive.file`.
 - [x] Create an OAuth 2.0 Client ID with application type `Web application`.
-- [ ] Add the missing local authorized JavaScript origins listed below.
+- [ ] Add the missing local authorized JavaScript origins listed below if future local browser authorization testing is needed.
 - [x] Copy the generated Web Client ID.
 - [x] Paste the Web Client ID into `js/google-drive-sync-config.js`.
 - [x] Do not store or paste a client secret into this repo; browser apps use the client ID, not a client secret.
@@ -78,11 +78,11 @@ Observed downloaded Web OAuth client on 2026-05-23:
 - [x] Missing-client-ID disabled state covered by `tests/google-drive-sync.spec.ts`.
 - [x] Web OAuth Client ID provided by user and copied into `js/google-drive-sync-config.js`.
 - [x] Client secret intentionally not copied into repo.
-- [ ] Google Cloud project confirmed by user.
-- [ ] Drive API enabled in Google Cloud.
-- [ ] OAuth consent screen configured.
-- [ ] Test user added if needed.
+- [x] Google Cloud project confirmed by user.
+- [x] Drive API enabled in Google Cloud.
+- [x] OAuth consent screen configured.
+- [x] Test user added if needed.
 - [x] Web OAuth Client ID created.
 - [x] Client ID copied into `js/google-drive-sync-config.js`.
 
-Blocked on: confirming Drive API, OAuth consent screen, test-user access, and adding the missing local authorized origins in Google Cloud Console.
+Live GitHub Pages authorization is verified: the user confirmed successful Google Drive sync on desktop and phone browsers on 2026-05-23. Remaining local authorized-origin additions are optional and only needed for future local browser authorization testing.

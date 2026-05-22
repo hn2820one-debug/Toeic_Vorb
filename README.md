@@ -28,8 +28,7 @@ Program B is a static local-first PWA.
 - Storage: IndexedDB `toeic_vocab_tracker_db`
 - Preferences/session: `toeic_vocab_tracker_preferences`, `toeic_vocab_active_session`
 - No backend
-- No active login or cloud sync in the shipped runtime
-- `SYNC-01` is the only approved future exception: Google Identity Services + Google Drive API learner-record sync, with no backend and no production seed changes
+- Optional `SYNC-01` Google Drive learner-record sync is available in normal browsers as the only approved cloud-sync exception; it remains local-first and does not change production seed data
 - No build step
 - No runtime AI question generation
 
@@ -61,7 +60,7 @@ The active production seed is V0-V3 only. V2 restores `V2-A-71` through `V2-A-80
 | Duplicate stems | 0 |
 | Full quality audit issues | 0 |
 | Seed version | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` |
-| Service worker cache | `toeic-vorb-v46` |
+| Service worker cache | `toeic-vorb-v48` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
