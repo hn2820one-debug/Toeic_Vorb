@@ -1,6 +1,6 @@
 # TO_AI.md — Program B Master Handoff / 程式 B 總交接文件
 
-**Version / 版本:** 10.41
+**Version / 版本:** 10.42
 **Last verified / 最後確認:** 2026-05-23
 **Program / 程式:** TOEIC Vocabulary Tracker (Program B)
 **Path / 路徑:** `C:\Users\Keith\Toeic\toeic-app-Vorb`
@@ -304,14 +304,14 @@ Goal: make the static PWA reliable on GitHub Pages and usable on mobile before t
 
 目標：在下一個內容 promotion 前，先讓 static PWA 在 GitHub Pages 上穩定，並補齊手機端基線體驗。
 
-- Current priority is `PAGES-01`, tracked in `docs/pages-mobile-experience-plan.md`.
+- The GitHub Pages/mobile baseline tracked in `docs/pages-mobile-experience-plan.md` is now complete (`PAGES-01` closed on 2026-05-23).
 - Phase 9 is verified: `npm run test:pages-mobile` is the dedicated shared mobile smoke, and `.github/workflows/e2e.yml` now runs `npm run test:all`.
-- Phase 10 is in progress: release-gate docs are synchronized, the live deployment gate now passes, and no content promotion is authorized while `PAGES-01` remains open.
+- Phase 10 is verified: release-gate docs are synchronized, the live deployment gate passes, and `PAGES-01` is closed after real-device acceptance.
 - Keep the official deploy target as `main` branch + `.github/workflows/pages.yml`; do not switch to `docs/` publishing or a `gh-pages` branch.
 - Do not modify production seed data, enable V4, or continue `V3-W2-08` unless the user explicitly asks for content promotion.
 - Complete the 10 phases / 60 checkpoints, keep the minimum mobile smoke test green, run `npm run test:all`, and complete the GitHub Pages mobile acceptance checklist.
-- Remaining manual acceptance before `PAGES-01` can close: real GitHub Pages URL phone validation, mobile export download confirmation, and execution of the offline/update manual checklist on a real device/browser.
-- Public `main` redeploy is complete and `npm run test:pages-live` already passes; the remaining blockers are the real-device checks only.
+- Real-device acceptance is complete: on 2026-05-23 the user confirmed phone-browser success for the live GitHub Pages URL, export package retrieval, and the repair-entry flow.
+- Public `main` redeploy is complete and `npm run test:pages-live` passes; `PAGES-01` is closed. The recommended next step is Lesson runtime mobile depth testing before any further content-promotion decision.
 
 ### P1 — Documentation and regression cleanup / 文件與測試收斂
 
@@ -333,7 +333,7 @@ Goal: reduce lesson-scope guessing by mixing old target items into V2/V3 core le
 
 - Rebuild wave-1 tranche is complete (16/16); wave-2 has `V3-A-137`–`142` (人事與組織 3 + 行銷與宣傳 1–2 + 財務會計 1–3). `V3-MR-03` covers `V3-A-131`–`135`, and `V3-MR-04` covers `V3-A-136`–`140`. There is no `V3-W1-17` in `wave1_app_lesson_draft.json`.
 - T049 and T050 export reviews are complete with insufficient current V2/V3 learner data; collect fresh exports before any live seed rewrite.
-- Next content process remains `V3-W2-08` → `V3-A-144` (企業經營 1), but it is deferred until `PAGES-01` is complete or the user explicitly asks for content promotion.
+- Next content process remains `V3-W2-08` → `V3-A-144` (企業經營 1), but the recommended next mainline step after `PAGES-01` closure is Lesson runtime mobile depth testing; resume content promotion only when the user explicitly asks for it.
 - Continue later same-stage review pressure in isolated drafts before touching production seed files.
 - Keep `V2-A-71` and future `V3-A-121` as first-core policy exceptions unless cross-stage pressure is explicitly approved.
 - Keep mixed-review lessons assembled from review question IDs.

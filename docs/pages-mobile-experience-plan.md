@@ -86,10 +86,10 @@ Phase 6 結果紀錄：`docs/pages-settings-mobile-audit-2026-05-22.md`。
 - [x] PAGES-07-03 檢查個別檔案下載 button 在手機不互相重疊。
 - [x] PAGES-07-04 檢查 export preview 不造成整頁 horizontal overflow。
 - [x] PAGES-07-05 補 smoke：mobile viewport 下點擊 export package，驗證 download / fallback event。
-- [ ] PAGES-07-06 驗收：手機 Chrome 或 Safari 至少一種能成功取得 export package。
+- [x] PAGES-07-06 驗收：手機 Chrome 或 Safari 至少一種能成功取得 export package。
 
 Phase 7 起始結果紀錄：`docs/pages-export-mobile-audit-2026-05-22.md`。
-Phase 7 驗證狀態：repo 可控範圍已通過，僅剩 `PAGES-07-06` 實機瀏覽器下載驗收未完成。
+Phase 7 驗證狀態：repo 可控範圍、live URL 驗證與實機瀏覽器下載驗收皆已完成；使用者已於 2026-05-23 回報成功取得 export package。
 
 ### Phase 8 — Offline And Update Experience
 
@@ -121,23 +121,24 @@ Phase 9 起始結果紀錄：`docs/pages-mobile-coverage-audit-2026-05-22.md`。
 - [x] PAGES-10-03 更新 `TO_AI.md` current process，標明下一階段仍不改課程內容。
 - [x] PAGES-10-04 記錄尚未處理問題：完整 Lesson runtime mobile、Question Bank mobile、跨瀏覽器 PWA install。
 - [x] PAGES-10-05 每次完成小段後記錄 checkpoint、驗證命令、是否可回滾。
-- [ ] PAGES-10-06 完成後決策：若 Phase 1-10 驗收都過，下一階段才進入「上課流程」手機測試。
+- [x] PAGES-10-06 完成後決策：若 Phase 1-10 驗收都過，下一階段才進入「上課流程」手機測試。
 
 Phase 10 起始結果紀錄：`docs/pages-documentation-release-gate-audit-2026-05-22.md`。
 Phase 10 live deployment 稽核：`docs/pages-live-deployment-audit-2026-05-22.md`。
+Phase 10 結論：`PAGES-01` 已於 2026-05-23 完成；下一階段建議進入 Lesson runtime 的手機深度測試，而不是立刻恢復 content promotion。
 
 ## Acceptance Checklist
 
-- [ ] 十階段 60 個 checkpoint 全部完成。
+- [x] 十階段 60 個 checkpoint 全部完成。
 - [x] 最小 mobile smoke test 已加入並通過。
 - [x] `npm run test:all` 通過。
-- [ ] GitHub Pages 真實 URL 手機驗收完成。
+- [x] GitHub Pages 真實 URL 手機驗收完成。
 - [x] `manifest.json` 在 Pages URL 可讀。
 - [x] service worker scope / cache 行為已驗收，且 `clear-sw.html` 可作修復入口。
 - [x] Settings / Export 在 `390x844` viewport 可操作。
 - [x] 完成紀錄已回寫 `docs/Future Plan.md` 與 `TO_AI.md`。
 
-目前總阻塞：公開 GitHub Pages 已對齊 current repo truth；剩餘 `PAGES-07-06` 與 `PAGES-10-06` 的真機瀏覽器驗收仍未完成。
+目前總阻塞：`PAGES-01` 已完成，目前沒有 Pages/mobile 主線阻塞；下一階段建議進入 Lesson runtime 的手機深度測試。
 
 ## Deferred Work
 
