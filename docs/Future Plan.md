@@ -23,12 +23,12 @@
 
 - Last updated by: Codex
 - Last updated on: 2026-05-23
-- Current focus: `PAGES-01` — GitHub Pages + mobile baseline remains the only mainline gate. Repo-side Pages/mobile hardening is effectively at 58/60 phase checkpoints complete; the remaining mainline blockers are public GitHub Pages redeploy drift plus `PAGES-07-06` and `PAGES-10-06` real-device acceptance. `XPLAT-01` is complete, and `SYNC-01` repo-side Phases 1-7 are verified; neither replaces `PAGES-01`. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
+- Current focus: `PAGES-01` — GitHub Pages + mobile baseline remains the only mainline gate. Public GitHub Pages is now redeployed and aligned with current repo truth; the remaining mainline blockers are `PAGES-07-06` mobile export download acceptance and the closing decision in `PAGES-10-06`, both of which still require real-device validation. `XPLAT-01` is complete, and `SYNC-01` repo-side Phases 1-7 are verified; neither replaces `PAGES-01`. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
 - Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v46`, and `npm run test:all` is green.
 - Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`. `XPLAT-01` added Google Drive manual backup/restore flow without production seed changes.
 - Newly verified: `SYNC-01` repo-side Phases 1-7 are now complete. Phase 1 linkage, Phase 2 repo-side setup, Phase 3 disabled-safe Drive client skeleton, Phase 4 sync payload contract, Phase 5 safe-merge/conflict rules, Phase 6 auto-sync UX/state, and Phase 7 failure-handling/safety are verified in-repo; remaining blockers are external Google Cloud / OAuth authorization setup plus later Phase 8 acceptance coverage. Shipped asset cache is `toeic-vorb-v46`.
 - Current priority rule: 完成 `PAGES-01` 前，不繼續下一個 content promotion，除非使用者明確要求。`SYNC-01` 是 user-requested parallel sync work，不授權任何 content promotion。
-- Blocked on (mainline): 公開 GitHub Pages 部署仍停在舊 seed / 舊 launcher 文案；`PAGES-07-06` 與 `PAGES-10-06` 要在 redeploy 後完成實機驗收。
+- Blocked on (mainline): `PAGES-07-06` 與 `PAGES-10-06` 仍需在真機瀏覽器完成 export download 與最終 GitHub Pages 手機驗收；repo-side 與 live URL 對齊已完成。
 - Blocked on (content rewrite): production V2/V3 rewrites remain blocked until real current learner/export evidence exists (repo export still 2026-05-14 `V1-B-21` only).
 - Note: `V3-W1-17` is not in `wave1_app_lesson_draft.json` (wave-1 ends at `V3-W1-16`); do not plan a W1-17 promotion without a new blueprint slice.
 
@@ -68,7 +68,7 @@
 ### 狀態總覽
 
 - [x] 已完成基礎層：C-01..C-09、C-12、U-01..U-06、D-01..D-09、D-11
-- [ ] 目前唯一主線：`PAGES-01` GitHub Pages + mobile baseline（`docs/pages-mobile-experience-plan.md`；repo-side 58/60 checkpoints complete，剩餘 `PAGES-07-06` / `PAGES-10-06` 與 redeploy 後實機驗收）
+- [ ] 目前唯一主線：`PAGES-01` GitHub Pages + mobile baseline（`docs/pages-mobile-experience-plan.md`；public Pages 已對齊 repo truth，剩餘 `PAGES-07-06` / `PAGES-10-06` 真機驗收）
 - [x] 非主線並行工作：`XPLAT-01` Google Drive 手動跨平台備份 / 還原（使用者指定；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
 - [ ] 非主線並行工作：`SYNC-01` Google Drive 自動跨裝置同步（使用者指定；repo-side Phase 1-7 verified；剩餘 Google Cloud / OAuth live auth 與 Phase 8 acceptance；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
 

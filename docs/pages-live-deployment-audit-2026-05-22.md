@@ -8,7 +8,7 @@ Service worker cache impact: none; this audit verifies deployment state only
 
 ## Result
 
-The real GitHub Pages URL is reachable and its `manifest.json` is readable, but the live deployment is stale relative to the current repo baseline. The deployed launcher still advertises the historical `193 lessons / 4,399 questions` state, and the live curriculum remains on seed `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` instead of the current production seed.
+Updated on 2026-05-23 after commit `ca85b3e` was pushed to `main`: the real GitHub Pages URL is reachable and now matches the current repo baseline for launcher note, curriculum seed, runnable lesson count, manifest fields, and service-worker cache.
 
 ## Verified URL
 
@@ -22,10 +22,10 @@ The real GitHub Pages URL is reachable and its `manifest.json` is readable, but 
 | `manifest.json` readable | Yes | Yes | Pass |
 | `manifest.start_url` | `./index.html` | `./index.html` | Pass |
 | `manifest.scope` | `./` | `./` | Pass |
-| Live `curriculum.seed_version` | `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` | Fail |
-| Live launcher note | `目前內容：V0 + V1 + V2 + V3，共 193 lessons / 4,399 questions（含 22 個混合複習課）` | `目前正式內容：V2 + V3，共 39 課 / 780 題；V0 / V1 已清空，V4 尚未啟用。` | Fail |
-| Live runnable lessons | `0` | `39` | Fail |
-| Live shell cache | `toeic-vorb-v9` | `toeic-vorb-v39` | Fail |
+| Live `curriculum.seed_version` | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` | Pass |
+| Live launcher note | `目前正式內容：V2 + V3，共 39 課 / 780 題；V0 / V1 已清空，V4 尚未啟用。` | `目前正式內容：V2 + V3，共 39 課 / 780 題；V0 / V1 已清空，V4 尚未啟用。` | Pass |
+| Live runnable lessons | `39` | `39` | Pass |
+| Live shell cache | `toeic-vorb-v46` | `toeic-vorb-v46` | Pass |
 
 ## Verification Paths
 
@@ -34,12 +34,11 @@ The real GitHub Pages URL is reachable and its `manifest.json` is readable, but 
 
 ## Findings
 
-- Repo-side Phases 1-10 validation is substantially complete, but live deployment sync is not.
-- `manifest.json` being readable on the public URL is not enough to treat the live deployment as current.
-- Final closure for `PAGES-01` must treat stale public deployment as a release blocker, not as a documentation-only gap.
+- Public Pages now serves the same launcher note, curriculum seed, lesson count, and service-worker cache as the current repo truth.
+- `npm run test:pages-live` now passes against the public URL without soft mode.
+- The remaining `PAGES-01` blockers are no longer deployment drift; they are the real-device acceptance items for export download and final mobile closure.
 
 ## Remaining Work
 
-- Redeploy the current `main` branch to GitHub Pages.
-- Re-run `npm run test:pages-live` against the public URL until it passes without soft mode.
-- Then execute the remaining real-device checks for export download and GitHub Pages phone acceptance.
+- Execute `PAGES-07-06`: confirm on a real phone browser (Chrome or Safari) that Export can successfully deliver the package via folder picker or staged file downloads.
+- Execute `PAGES-10-06`: once all real-device checks pass, formally close `PAGES-01` and decide whether the next phase is Lesson runtime mobile depth testing.

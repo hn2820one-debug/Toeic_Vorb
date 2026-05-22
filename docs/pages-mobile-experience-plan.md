@@ -137,7 +137,7 @@ Phase 10 live deployment 稽核：`docs/pages-live-deployment-audit-2026-05-22.m
 - [x] Settings / Export 在 `390x844` viewport 可操作。
 - [x] 完成紀錄已回寫 `docs/Future Plan.md` 與 `TO_AI.md`。
 
-目前總阻塞：公開 GitHub Pages 部署仍停在舊 seed / 舊 launcher 文案；`PAGES-07-06` 與 `PAGES-10-06` 仍需在 redeploy 後完成實機驗收。
+目前總阻塞：公開 GitHub Pages 已對齊 current repo truth；剩餘 `PAGES-07-06` 與 `PAGES-10-06` 的真機瀏覽器驗收仍未完成。
 
 ## Deferred Work
 

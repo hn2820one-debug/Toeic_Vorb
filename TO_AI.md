@@ -1,6 +1,6 @@
 # TO_AI.md — Program B Master Handoff / 程式 B 總交接文件
 
-**Version / 版本:** 10.40
+**Version / 版本:** 10.41
 **Last verified / 最後確認:** 2026-05-23
 **Program / 程式:** TOEIC Vocabulary Tracker (Program B)
 **Path / 路徑:** `C:\Users\Keith\Toeic\toeic-app-Vorb`
@@ -256,7 +256,7 @@ Medium priority:
 - Full Lesson runtime mobile depth testing is still pending after the shell/settings/export baseline.
 - Question Bank mobile management ergonomics still need a dedicated follow-up pass.
 - Cross-browser PWA install prompt / install-flow behavior is still pending real-device verification.
-- Public GitHub Pages deployment is currently stale: the live URL still serves seed `toeic_vocab_tracker_c004_full_bank_clear_2026_05_18` and the old `193 lessons / 4,399 questions` launcher note.
+- Public GitHub Pages deployment is now aligned with current repo truth: `npm run test:pages-live` passes on the live URL with seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, 39 runnable lessons, the current launcher note, and service-worker cache `toeic-vorb-v46`.
 
 Closed or mostly closed:
 
@@ -306,12 +306,12 @@ Goal: make the static PWA reliable on GitHub Pages and usable on mobile before t
 
 - Current priority is `PAGES-01`, tracked in `docs/pages-mobile-experience-plan.md`.
 - Phase 9 is verified: `npm run test:pages-mobile` is the dedicated shared mobile smoke, and `.github/workflows/e2e.yml` now runs `npm run test:all`.
-- Phase 10 is in progress: release-gate docs are synchronized, live deployment drift is now explicitly checked, and no content promotion is authorized while `PAGES-01` remains open.
+- Phase 10 is in progress: release-gate docs are synchronized, the live deployment gate now passes, and no content promotion is authorized while `PAGES-01` remains open.
 - Keep the official deploy target as `main` branch + `.github/workflows/pages.yml`; do not switch to `docs/` publishing or a `gh-pages` branch.
 - Do not modify production seed data, enable V4, or continue `V3-W2-08` unless the user explicitly asks for content promotion.
 - Complete the 10 phases / 60 checkpoints, keep the minimum mobile smoke test green, run `npm run test:all`, and complete the GitHub Pages mobile acceptance checklist.
 - Remaining manual acceptance before `PAGES-01` can close: real GitHub Pages URL phone validation, mobile export download confirmation, and execution of the offline/update manual checklist on a real device/browser.
-- Before closing `PAGES-01`, redeploy `main` to GitHub Pages and rerun `npm run test:pages-live` until the public URL matches current repo truth.
+- Public `main` redeploy is complete and `npm run test:pages-live` already passes; the remaining blockers are the real-device checks only.
 
 ### P1 — Documentation and regression cleanup / 文件與測試收斂
 
