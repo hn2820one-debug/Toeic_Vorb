@@ -140,6 +140,8 @@ Phase 10 結論：`PAGES-01` 已於 2026-05-23 完成；下一階段建議進入
 
 目前總阻塞：`PAGES-01` 已完成，目前沒有 Pages/mobile 主線阻塞；下一階段建議進入 Lesson runtime 的手機深度測試。
 
+2026-05-23 啟動紀錄：`tests/lesson-flow.spec.ts` 已新增第一個 Lesson runtime mobile probe，覆蓋 `390x844` viewport 下從開始課程、作答、確認、前進到完成課程的基本流程，並檢查沒有整頁 horizontal overflow。
+
 ## Deferred Work
 
 - Lesson runtime 的完整手機答題體驗測試。

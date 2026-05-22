@@ -23,9 +23,10 @@
 
 - Last updated by: Codex
 - Last updated on: 2026-05-23
-- Current focus: post-`PAGES-01` follow-up. GitHub Pages + mobile baseline, `XPLAT-01`, and `SYNC-01` are now complete. The recommended next mainline step is Lesson runtime mobile depth testing. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
+- Current focus: post-`PAGES-01` follow-up. GitHub Pages + mobile baseline, `XPLAT-01`, and `SYNC-01` are now complete. Lesson runtime mobile depth testing has now started with an initial 390x844 full-lesson Playwright probe. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
 - Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v48`, and `npm run test:all` is green.
 - Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`. `XPLAT-01` added Google Drive manual backup/restore flow without production seed changes. `SYNC-01` is now functionally complete after repo-side Phase 1-8 verification plus user-confirmed same-account desktop/phone live sync.
+- Newly started: Lesson runtime mobile depth testing now has its first focused Playwright coverage in `tests/lesson-flow.spec.ts`, validating a 390x844 lesson run from start through finish without page-level horizontal overflow.
 - Current priority rule: `PAGES-01` 已完成。除非使用者明確要求 content promotion，建議先進入 Lesson runtime mobile depth testing；`SYNC-01` 是 user-requested parallel sync work，本身不授權任何 content promotion。
 - Blocked on (mainline): none. `PAGES-01` was closed on 2026-05-23 after live URL verification plus user-confirmed phone export / launcher / tracker / repair-entry acceptance.
 - Blocked on (content rewrite): production V2/V3 rewrites remain blocked until real current learner/export evidence exists (repo export still 2026-05-14 `V1-B-21` only).

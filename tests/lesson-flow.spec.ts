@@ -85,3 +85,47 @@ test("lesson flow: start lesson, answer every question, and finish into error re
   await expect(page.locator(".answer-record").first()).toContainText("你的 A", { timeout: STEP_TIMEOUT });
   await expect(page.locator(".answer-record").first()).toContainText(/\d+\.\d+s/, { timeout: STEP_TIMEOUT });
 });
+
+test("lesson flow: mobile viewport completes the lesson flow without page overflow", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/tracker.html?pw-lesson-flow-mobile=1", { waitUntil: "domcontentloaded", timeout: APP_TIMEOUT });
+  await page.waitForSelector("#tracker-tabs", { state: "visible", timeout: APP_TIMEOUT });
+  await page.waitForFunction(() => typeof window.VocabTracker?.setView === "function", { timeout: APP_TIMEOUT });
+
+  await page.evaluate(() => window.VocabTracker.setView("lesson"));
+
+  const runtimeShell = page.locator(".runtime-shell");
+  const questionText = page.locator(".question-text");
+  const answerButtons = page.locator(".answer-button");
+  const confirmButton = page.getByRole("button", { name: "確認答案" });
+
+  await expect(page.getByRole("button", { name: "開始目前課程" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await page.getByRole("button", { name: "開始目前課程" }).click({ timeout: STEP_TIMEOUT });
+
+  await expect(runtimeShell).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(questionText).toBeVisible({ timeout: STEP_TIMEOUT });
+  await expect(answerButtons).toHaveCount(4, { timeout: STEP_TIMEOUT });
+
+  const hasPageOverflow = await page.evaluate(() => {
+    const root = document.documentElement;
+    return root.scrollWidth > root.clientWidth + 1;
+  });
+  expect(hasPageOverflow).toBe(false);
+
+  for (let index = 0; index < trackerSeed.questionIds.length; index += 1) {
+    await expect(questionText).toBeVisible({ timeout: STEP_TIMEOUT });
+    await expect(answerButtons).toHaveCount(4, { timeout: STEP_TIMEOUT });
+    await expect(answerButtons.first()).toBeVisible({ timeout: STEP_TIMEOUT });
+
+    await answerButtons.first().click({ timeout: STEP_TIMEOUT });
+    await expect(confirmButton).toBeEnabled({ timeout: STEP_TIMEOUT });
+    await confirmButton.click({ timeout: STEP_TIMEOUT });
+    const advanceButton = page.getByRole("button", { name: /^(下一題|查看摘要)$/ });
+    await expect(advanceButton).toBeVisible({ timeout: STEP_TIMEOUT });
+    await advanceButton.click({ timeout: STEP_TIMEOUT });
+  }
+
+  await expect(page.getByRole("button", { name: "完成課程" })).toBeVisible({ timeout: STEP_TIMEOUT });
+  await page.getByRole("button", { name: "完成課程" }).click({ timeout: STEP_TIMEOUT });
+  await expect(page.locator(".tracker-panel h3", { hasText: "錯題回顧與安排" })).toBeVisible({ timeout: APP_TIMEOUT });
+});
