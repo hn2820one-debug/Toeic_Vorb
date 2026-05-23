@@ -24,8 +24,20 @@
     </header>
 
     <div id="empty-seed-banner" class="empty-seed-banner-shell" hidden></div>
+    <div id="tracker-runtime-banners" class="tracker-runtime-banners" aria-live="polite"></div>
     <div id="tracker-notice" class="section tracker-notice-shell"></div>
-    <section id="tracker-view" class="tracker-view"></section>
+    <section id="tracker-view" class="tracker-view" aria-busy="true">
+      <section class="tracker-panel tracker-loading-skeleton" data-testid="lesson-loading-skeleton" aria-label="課程載入中">
+        <div class="skeleton-line skeleton-line-strong"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-grid">
+          <div class="skeleton-tile"></div>
+          <div class="skeleton-tile"></div>
+          <div class="skeleton-tile"></div>
+        </div>
+        <div class="skeleton-button"></div>
+      </section>
+    </section>
   </main>
 
   <script src="./js/vocab-scoring.js"></script>

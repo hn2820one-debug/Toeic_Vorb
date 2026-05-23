@@ -4,7 +4,8 @@ import {
   html,
   renderAdvancedToolsPanel,
   setNotice,
-  loadData
+  loadData,
+  isCompactTrackerViewport
 } from "../state.js";
 
 let renderApp = null;
@@ -146,8 +147,27 @@ export function renderSettings() {
       <aside class="settings-reset-card" data-testid="settings-reset-card">
         <strong>課程續作</strong>
         <p class="muted-note">只會清除目前未完成課程的續作位置，不會刪除作答紀錄、複習隊列、精熟度或匯出資料。</p>
-        <button class="button secondary" type="button" data-testid="settings-clear-session-button" onclick="VocabTracker.clearActiveSession()">清除目前課程續作</button>
+        <button class="button ${isCompactTrackerViewport() ? "warning" : "secondary"}" type="button" data-testid="settings-clear-session-button" onclick="VocabTracker.clearActiveSession()">清除目前課程續作</button>
       </aside>
+    </section>
+    <section class="tracker-panel settings-mobile-panel" data-testid="settings-mobile-learning">
+      <h3>手機學習體驗</h3>
+      <p class="muted-note">僅影響本機顯示，不改變題庫或評分規則。外接鍵盤在課程中仍可使用 A/B/C/D 與 Enter。</p>
+      <div class="settings-mobile-toggles">
+        <label class="settings-inline-toggle" data-testid="settings-mobile-large-text">
+          <input id="setting-mobile-large-text" type="checkbox" ${state.prefs.mobile_large_text ? "checked" : ""}>
+          <span>較大字級（題幹與選項，避免爆版）</span>
+        </label>
+        <label class="settings-inline-toggle" data-testid="settings-mobile-reduced-motion">
+          <input id="setting-mobile-reduced-motion" type="checkbox" ${state.prefs.mobile_reduced_motion ? "checked" : ""}>
+          <span>減少動態效果（含回饋過場）</span>
+        </label>
+        <label class="settings-inline-toggle" data-testid="settings-mobile-low-distraction">
+          <input id="setting-mobile-low-distraction" type="checkbox" ${state.prefs.mobile_low_distraction ? "checked" : ""}>
+          <span>低干擾模式（隱藏非必要提示列）</span>
+        </label>
+      </div>
+      <p class="muted-note settings-mobile-note" data-testid="settings-mobile-wake-lock-note">螢幕常亮：v1 未啟用（避免額外耗電）；左手模式：v1 以全寬底部主按鈕取代，不提供額外切換。</p>
     </section>
     ${renderDriveSyncPanel()}
     ${renderAdvancedToolsPanel({
@@ -181,8 +201,12 @@ export async function saveSettings() {
 
   await window.VocabDB.put("users", user);
   window.VocabDB.savePrefs({
+    active_user_id: user.user_id,
     planned_lessons_this_week: Number($("setting-weekly").value || 5),
-    daily_goal_questions: Number($("setting-daily-goal")?.value || 30)
+    daily_goal_questions: Number($("setting-daily-goal")?.value || 30),
+    mobile_large_text: Boolean($("setting-mobile-large-text")?.checked),
+    mobile_reduced_motion: Boolean($("setting-mobile-reduced-motion")?.checked),
+    mobile_low_distraction: Boolean($("setting-mobile-low-distraction")?.checked)
   });
   window.VocabTracker?.markGoogleDriveLocalChange?.("settings");
   await loadData();
@@ -191,6 +215,10 @@ export async function saveSettings() {
 }
 
 export async function clearActiveSession() {
+  if (isCompactTrackerViewport()) {
+    const ok = window.confirm("確定要清除目前課程續作？\n\n作答紀錄、複習隊列與精熟度不會刪除。");
+    if (!ok) return;
+  }
   window.VocabDB.saveActiveSession(null);
   state.activeSession = null;
   state.runtimeQuestions = [];

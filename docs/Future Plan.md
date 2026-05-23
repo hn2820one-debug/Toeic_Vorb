@@ -23,10 +23,13 @@
 
 - Last updated by: Codex
 - Last updated on: 2026-05-23
-- Current focus: post-`PAGES-01` follow-up. GitHub Pages + mobile baseline, `XPLAT-01`, and `SYNC-01` are now complete. Lesson runtime mobile depth testing has now started with an initial 390x844 full-lesson Playwright probe. See `docs/pages-mobile-experience-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
-- Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v48`, and `npm run test:all` is green.
+- Current focus: post-`PAGES-01` follow-up. GitHub Pages + mobile baseline, `XPLAT-01`, and `SYNC-01` are now complete. Lesson runtime mobile depth testing has now started with an initial 390x844 full-lesson Playwright probe, and the next mainline execution plan is now `docs/lesson-runtime-mobile-depth-plan.md`. See `docs/pages-mobile-experience-plan.md`, `docs/lesson-runtime-mobile-depth-plan.md`, `docs/google-drive-record-portability-plan.md`, and `docs/google-drive-cloud-sync-plan.md`.
+- Current stage: stable local-first production baseline, not the next content-promotion stage. Current repo truth is 39 runnable lessons / 780 question-bank rows / 632 vocab items, `seed_version` `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`, service worker cache `toeic-vorb-v49`, and `npm run test:all` is green.
 - Newly completed: `V3-W2-07` → `V3-A-143` (39 lessons / 780 rows, +23 new questions); seed `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`. `XPLAT-01` added Google Drive manual backup/restore flow without production seed changes. `SYNC-01` is now functionally complete after repo-side Phase 1-8 verification plus user-confirmed same-account desktop/phone live sync.
 - Newly started: Lesson runtime mobile depth testing now has its first focused Playwright coverage in `tests/lesson-flow.spec.ts`, validating a 390x844 lesson run from start through finish without page-level horizontal overflow.
+- Newly completed: `MOBILE-DEPTH-01` Phase 1 baseline is now defined in `docs/lesson-runtime-mobile-phase-1-baseline-2026-05-23.md`, covering viewport tiers, orientation policy, runtime state matrix, touch/typography rules, latency budgets, recovery success criteria, and current mobile Playwright gaps.
+- Newly started: `MOBILE-DEPTH-01` Phase 2 has now shipped its first Lesson pre-start slice, adding a mobile-first CTA hierarchy, compact pre-lesson summary, and local-first / pending-sync launch context, all covered in `tests/lesson-flow.spec.ts`.
+- Newly improved: `MOBILE-DEPTH-01` Phase 1-10 review tightened the mobile release state, closed repo-side Phase 2 entry gaps for Today/Roadmap launch, loading skeleton, resume/fresh-start copy, return-home visibility, empty/review-only entry copy, and bumped the shipped shell cache to `toeic-vorb-v49`.
 - Current priority rule: `PAGES-01` 已完成。除非使用者明確要求 content promotion，建議先進入 Lesson runtime mobile depth testing；`SYNC-01` 是 user-requested parallel sync work，本身不授權任何 content promotion。
 - Blocked on (mainline): none. `PAGES-01` was closed on 2026-05-23 after live URL verification plus user-confirmed phone export / launcher / tracker / repair-entry acceptance.
 - Blocked on (content rewrite): production V2/V3 rewrites remain blocked until real current learner/export evidence exists (repo export still 2026-05-14 `V1-B-21` only).
@@ -54,6 +57,9 @@
 - [x] User-requested parallel / SYNC-01：Google Drive 自動跨裝置同步。
 	Done when: `docs/google-drive-cloud-sync-plan.md` 的 Phase 1-8 全部完成，Settings 提供 Google Drive connect/status/sync now/pause/disconnect，同一 Google Drive 帳戶可在至少兩部裝置 safe merge learner records，重複同步不產生重複資料，seed mismatch/corrupt cloud file/token/offline paths 都安全處理，`XPLAT-01` 手動備份仍保留，且 `npm run test:all` 通過。這是使用者指定的 no-login/no-cloud-sync hard rule scoped exception；只允許 Google Identity Services + Google Drive API 作為 local-first learner-record sync layer，不新增後端、不修改 `data/vocab/*`、不啟用 V4、不改 seed version，也不取代 `PAGES-01`。
 	Completed on: 2026-05-23。Evidence: `docs/google-drive-cloud-sync-plan.md` Phase 1-8 closed, `npm run test:all` passed, and the user confirmed successful same-account desktop/phone sync in normal browsers.
+- [~] Next mainline / MOBILE-DEPTH-01：手機深度學習體驗優化。
+	Done when: `docs/lesson-runtime-mobile-depth-plan.md` 的 10 phases / 120 checkpoints 完成第一輪優先 tranche，Lesson runtime、Review、Today、Mistakes、恢復、安全、手機效能與真機驗收都有明確手機優化產出，且 `npm run test:all` 維持通過。這是 `PAGES-01` 之後的主線 UX 深化工作；它不授權內容 promotion、不修改 `data/vocab/*` production seed，也不改變 local-first 架構。
+	Current progress: Phases 1–10 第一輪 code + automated tests 完成（見 `docs/lesson-runtime-mobile-audit-2026-05-23.md`）；`npm run test:all` green。剩餘：真機 Android + iPhone 簽核、Phase 2 少數 entry 項（Roadmap 啟動、skeleton）。關閉條件與後續選項見 `docs/lesson-runtime-mobile-next-plan-2026-05-23.md`。
 - [x] Step 1 / C-10：完成 wave 2（`V2-A-72` 到 `V2-A-74`）候選草稿、isolated validation、人審與正式 promotion，讓 production 由 1 課擴到 4 課。
 	Done when: `V2-A-74` 候選草稿完成，且 `V2-A-72`、`V2-A-73`、`V2-A-74` 一起通過 release gate 並寫入 live seed。
 - [x] Step 2 / D-10：在第一個多課 production wave 之後固定 inventory refresh / monthly reporting 流程，讓 production / draft / rebuild / archive 四桶統計與 current-truth sync 不再靠手動臨時整理。
@@ -72,7 +78,8 @@
 - [x] 已完成基礎層：C-01..C-09、C-12、U-01..U-06、D-01..D-09、D-11
 - [x] 已完成主線：`PAGES-01` GitHub Pages + mobile baseline（`docs/pages-mobile-experience-plan.md`；public Pages、live gate 與真機驗收已完成）
 - [x] 非主線並行工作：`XPLAT-01` Google Drive 手動跨平台備份 / 還原（使用者指定；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
-- [ ] 非主線並行工作：`SYNC-01` Google Drive 自動跨裝置同步（使用者指定；repo-side Phase 1-8 verified；剩餘 Google Cloud / OAuth live auth；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
+- [x] 非主線並行工作：`SYNC-01` Google Drive 自動跨裝置同步（使用者指定；已完成 Phase 1-8 與 desktop/phone live auth；不改 seed、不碰 content promotion、不解除 PAGES-01 驗收）
+- [ ] 下一個主線：`MOBILE-DEPTH-01` 手機深度學習體驗優化（已建立詳細計畫 `docs/lesson-runtime-mobile-depth-plan.md`，完成 Phase 1-10 第一輪 code + automated tests，且 Phase 2 repo-side entry gaps 已在 2026-05-23 review 後補強；剩餘為真機 Android/iPhone/PWA 簽核與 first-use coach mark 是否需要的產品決策。）
 
 ---
 
@@ -518,6 +525,7 @@ Phase 7 verified on: 2026-05-23
 - [x] upload 前會先 re-read cloud `modifiedTime`；若準備期間雲端檔案變更，會安全 re-merge 一次後再重試 upload。
 - [x] `tests/google-drive-sync.spec.ts` 新增 P7 failure-path 覆蓋：reconnect-required、retryable backoff、sync-version compatibility、duplicate file selection、upload conflict、one-shot re-merge。
 - [x] 因 SYNC completion 文案與 shipped Settings asset 變更，service worker cache 推進到 `toeic-vorb-v48`。
+- [x] 因 `MOBILE-DEPTH-01` Phase 1-10 review shipped tracker shell / mobile entry / CSS asset 變更，service worker cache 推進到 `toeic-vorb-v49`。
 
 Blocked on: none for `SYNC-01`. Optional follow-up only: add local authorized origins later if future local browser authorization testing is needed.
 

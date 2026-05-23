@@ -42,6 +42,13 @@ function callSetView(view) {
   callRender();
 }
 
+function isCompactTrackerViewport() {
+  return typeof window !== "undefined"
+    && Boolean(window.matchMedia?.("(max-width: 860px)").matches);
+}
+
+const MOBILE_REVIEW_CHUNK = 5;
+
 function reviewStateLabel(value) {
   return {
     repeated_error: "反覆錯誤",
@@ -60,8 +67,49 @@ function reviewStateLabel(value) {
   }[value] || value || "待複習";
 }
 
+export function dismissPostLessonSummary() {
+  state.postLessonSummary = null;
+  callRender();
+}
+
+export function renderPostLessonNextSteps() {
+  const summary = state.postLessonSummary;
+  if (!summary) return "";
+  const compact = isCompactTrackerViewport();
+  const dueReview = Number(summary.due_review_count || 0);
+  const primaryCta = dueReview > 0
+    ? `<button class="button primary" type="button" data-testid="post-lesson-start-review" onclick="VocabTracker.startReviewMode('due')">複習到期項目 (${dueReview})</button>`
+    : `<button class="button primary" type="button" data-testid="post-lesson-back-today" onclick="VocabTracker.setView('today')">回今日首頁</button>`;
+  const syncNote = compact
+    ? "本機已保存；同步狀態請稍後在設定查看。"
+    : "作答與精熟度已寫入本機；若 Google Drive 同步尚未完成，資料仍安全保存在裝置上。";
+
+  return `
+    <section class="tracker-panel post-lesson-panel" data-testid="post-lesson-next-steps">
+      <div class="post-lesson-head">
+        <h3>本課完成</h3>
+        <p class="tracker-bigline">${html(summary.lesson_id)} · ${pct(summary.accuracy)}</p>
+        <p class="muted-note" data-testid="post-lesson-recap">${summary.correct_questions}/${summary.total_questions} 題答對 · 精熟度已更新${summary.wrong_questions ? ` · ${summary.wrong_questions} 題待確認錯因` : ""}</p>
+        ${dueReview > 0 ? `<p class="post-lesson-due muted-note" data-testid="post-lesson-due-review">${dueReview} 項到期複習</p>` : `<p class="muted-note">目前沒有到期複習</p>`}
+        <p class="muted-note post-lesson-sync-note">${html(syncNote)}</p>
+      </div>
+      <div class="tracker-actions post-lesson-actions" data-testid="post-lesson-actions">
+        ${primaryCta}
+        <button class="button secondary" type="button" data-testid="post-lesson-mastery" onclick="VocabTracker.setView('mastery')">查看精熟度</button>
+        <button class="button secondary" type="button" data-testid="post-lesson-today" onclick="VocabTracker.setView('today')">今日首頁</button>
+        <button class="button secondary" type="button" data-testid="dismiss-post-lesson" onclick="VocabTracker.dismissPostLessonSummary()">關閉摘要</button>
+      </div>
+    </section>
+  `;
+}
+
+function pct(value) {
+  return `${Math.round(Number(value || 0) * 100)}%`;
+}
+
 export function renderMistakes() {
-  if (state.reviewSessionId) return renderSessionErrorReview(state.reviewSessionId);
+  const postLessonBlock = renderPostLessonNextSteps();
+  if (state.reviewSessionId) return postLessonBlock + renderSessionErrorReview(state.reviewSessionId);
   const pending = state.reviewQueue.filter((item) => item.status === "pending");
   const filter = state.reviewFilter || "due";
   const candidates = getReviewCandidates(filter);
@@ -106,9 +154,20 @@ export function renderMistakes() {
     .sort((a, b) => String(b.last_reviewed_at || "").localeCompare(String(a.last_reviewed_at || "")))
     .slice(0, 8);
 
+  const compact = isCompactTrackerViewport();
+  const chunkHint = compact
+    ? `<p class="muted-note review-chunk-hint" data-testid="review-chunk-hint">手機建議每次先做 ${MOBILE_REVIEW_CHUNK} 題，完成後可再開下一組。</p>`
+    : "";
+  const repeatedFocus = compact && filter === "repeated"
+    ? `<p class="muted-note review-repeated-focus" data-testid="review-repeated-focus">反覆錯誤模式：優先處理 P5 與連續答錯項目。</p>`
+    : "";
+
   return `
-    <section class="tracker-panel">
+    ${postLessonBlock}
+    <section class="tracker-panel mistakes-review-panel" data-testid="mistakes-review-panel">
       <h3>複習模式</h3>
+      ${chunkHint}
+      ${repeatedFocus}
       <div class="tracker-grid review-grid">
         <article class="tracker-stat"><span>到期</span><strong>${counts.due}</strong><small>題</small></article>
         <article class="tracker-stat"><span>高優先</span><strong>${counts.high_priority}</strong><small>題</small></article>
@@ -120,14 +179,15 @@ export function renderMistakes() {
           <button class="tracker-tab ${filter === id ? "active" : ""}" type="button" onclick="VocabTracker.setReviewFilter('${id}')">${html(label)} (${counts[id]})</button>
         `).join("")}
       </div>
-      <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.startReviewMode('${html(filter)}')" ${candidates.rows.length ? "" : "disabled"}>開始複習 (${candidates.rows.length})</button>
+      <div class="tracker-actions mistakes-review-actions" data-testid="mistakes-review-actions">
+        <button class="button primary" type="button" data-testid="start-review-mode" onclick="VocabTracker.startReviewMode('${html(filter)}')" ${candidates.rows.length ? "" : "disabled"}>開始複習 (${candidates.rows.length})</button>
         <button class="button secondary" type="button" onclick="VocabTracker.setView('lesson')">一般課程</button>
         <button class="button secondary" type="button" onclick="VocabTracker.setView('export')">匯出完整資料封包</button>
       </div>
       ${state.lastReviewSummary ? `
-        <div class="tracker-alert ${state.lastReviewSummary.wrong_questions ? "warn" : "ok"}">
-          上次複習：${state.lastReviewSummary.correct_questions}/${state.lastReviewSummary.total_questions} 題答對 · ${state.lastReviewSummary.fixed_items} 項已修正 · ${state.lastReviewSummary.still_weak_items} 項仍不穩 · ${state.lastReviewSummary.repeated_error_items} 項反覆錯誤
+        <div class="tracker-alert review-mini-summary ${state.lastReviewSummary.wrong_questions ? "warn" : "ok"}" data-testid="review-mini-summary">
+          <strong>上次複習</strong>
+          <span>${state.lastReviewSummary.correct_questions}/${state.lastReviewSummary.total_questions} 題答對 · ${state.lastReviewSummary.fixed_items} 項已修正 · ${state.lastReviewSummary.still_weak_items} 項仍不穩 · ${state.lastReviewSummary.repeated_error_items} 項反覆錯誤</span>
         </div>
       ` : ""}
     </section>
@@ -178,8 +238,11 @@ export function renderWrongAttemptList() {
     const q = questionMap[attempt.question_id];
     const vocabItem = itemMap[q?.target_item_id];
     return `
-      <article class="wrong-line">
-        <strong>${html(attempt.lesson_id)} · ${html(q?.question_text || attempt.question_id)}</strong>
+      <article class="wrong-line" data-testid="wrong-attempt-row">
+        <div class="wrong-attempt-context" data-testid="wrong-attempt-context">
+          <span>${html(attempt.lesson_id)} · ${html(questionTypeLabel(q?.type || attempt.question_type))}</span>
+          <p class="question-text small">${html(q?.question_text || attempt.question_id)}</p>
+        </div>
         <small>你的 ${html(attempt.user_answer)} (${html(optionText(q, attempt.user_answer))}) · 正解 ${html(attempt.correct_answer)} (${html(optionText(q, attempt.correct_answer))}) · ${seconds(attempt.response_time_seconds)} · ${html(errorCodeLabel(attempt.error_code || attempt.default_error_code))}</small>
         ${vocabItem?.chinese ? `<div class="vocab-card"><p class="vocab-chinese">${html(vocabItem.chinese)}</p>${vocabItem.example ? `<p class="vocab-example">${html(vocabItem.example)}</p>` : ""}</div>` : ""}
       </article>
@@ -283,6 +346,7 @@ export function renderSessionErrorReview(sessionId) {
   const itemMap = byId(state.vocabItems, "item_id");
   const session = state.sessions.find((s) => s.session_id === sessionId);
   const isV0 = session?.stage === "V0";
+  const compact = isCompactTrackerViewport();
   const attempts = state.attempts.filter((attempt) => attempt.session_id === sessionId && !attempt.is_correct);
   if (!attempts.length) {
     return `
@@ -296,9 +360,12 @@ export function renderSessionErrorReview(sessionId) {
   }
   return `
     ${isV0 ? renderV0Diagnostic(sessionId) : ""}
-    <section class="tracker-panel">
-      <h3>錯題回顧與安排</h3>
-      <p class="muted-note">請確認或調整實際錯因。確認後會同步更新作答紀錄、錯誤日誌、精熟度與複習佇列。</p>
+    <section class="tracker-panel error-review-panel" data-testid="error-review-panel">
+      <div class="error-review-head" data-testid="error-review-summary">
+        <h3>錯題回顧與安排</h3>
+        <p class="tracker-bigline">${attempts.length} 題待確認錯因</p>
+        <p class="muted-note">${compact ? "先儲存錯因再離開；也可稍後回來處理。" : "請確認或調整實際錯因。確認後會同步更新作答紀錄、錯誤日誌、精熟度與複習佇列。"}</p>
+      </div>
       <div class="error-review-list">
         ${attempts.map((attempt) => {
           const q = questionMap[attempt.question_id];
@@ -326,9 +393,9 @@ export function renderSessionErrorReview(sessionId) {
           `;
         }).join("")}
       </div>
-      <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.confirmSessionErrors()">儲存確認後錯因</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.closeSessionReview()">先跳過</button>
+      <div class="tracker-actions error-review-actions" data-testid="error-review-actions">
+        <button class="button primary" type="button" data-testid="confirm-session-errors" onclick="VocabTracker.confirmSessionErrors()">儲存確認後錯因</button>
+        <button class="button secondary" type="button" data-testid="skip-session-review" onclick="VocabTracker.closeSessionReview()">先跳過</button>
       </div>
     </section>
   `;

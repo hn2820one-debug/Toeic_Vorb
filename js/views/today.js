@@ -17,6 +17,12 @@ import {
 } from "../state.js";
 
 const SEAL_ACCURACY_TARGET = 0.85;
+const COMPACT_TRACKER_BREAKPOINT = 860;
+
+function isCompactTrackerViewport() {
+  return typeof window !== "undefined"
+    && Boolean(window.matchMedia?.(`(max-width: ${COMPACT_TRACKER_BREAKPOINT}px)`).matches);
+}
 const SEAL_REPEATED_ERROR_LIMIT = 0.05;
 const SEAL_RECENT_ATTEMPT_LIMIT = 80;
 const SEAL_MIN_RECENT_ATTEMPTS = 20;
@@ -70,18 +76,51 @@ export function renderToday() {
     ? `重跑 ${html(lesson?.lesson_id || "")}`
     : `${html(lesson?.lesson_id || "")} · ${html(lesson?.title || "")}`;
   const nextActionBtn = nextAction === "review_due_items"
-    ? `<button class="button primary" type="button" onclick="VocabTracker.startReviewMode('due')">開始複習</button>`
+    ? `<button class="button primary" type="button" data-testid="today-quick-review" onclick="VocabTracker.startReviewMode('due')">開始複習</button>`
     : nextAction === "open_rebuild_plan"
     ? `<button class="button primary" type="button" onclick="VocabTracker.setView('roadmap')">查看課程地圖</button>`
-    : `<button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">${nextAction === "retake_current_lesson" ? "開始重跑" : "開始課程"}</button>`;
+    : `<button class="button primary" type="button" data-testid="today-start-lesson" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">${nextAction === "retake_current_lesson" ? "開始重跑" : "開始課程"}</button>`;
   const heroStage = lesson?.stage || "REBUILD";
   const heroStageName = lesson?.stage_name || "重建中";
   const heroSubtitle = lesson
     ? `${html(lesson.lesson_id)} · ${html(lesson.title || "尚未選擇課程")}`
     : "production seed 目前為空，可先查看課程地圖或使用題庫管理。";
+  const compact = isCompactTrackerViewport();
+  const statsGridClass = compact ? "tracker-grid tracker-grid--compact-today" : "tracker-grid tracker-grid--five";
+  const secondaryPanels = compact
+    ? `
+      <details class="today-secondary-details" data-testid="today-secondary-details">
+        <summary>錯因與弱點模組</summary>
+        <div class="today-secondary-grid">
+          <article class="tracker-panel">
+            <h3>今日主要錯因</h3>
+            ${topErrors.length ? `<ol class="tracker-list">${topErrors.map(([code, count]) => `<li>${html(errorCodeLabel(code))} <small class="muted-note error-code-tag">${html(code)}</small> <span>${count}</span></li>`).join("")}</ol>` : `<p class="muted-note">今天還沒有錯題紀錄。</p>`}
+          </article>
+          <article class="tracker-panel">
+            <h3>目前較弱模組</h3>
+            ${modules.length ? `<ol class="tracker-list">${modules.map(([type, value]) => `<li>${html(questionTypeLabel(type))} <span>${pct(value)}</span></li>`).join("")}</ol>` : `<p class="muted-note">完成一課後才會顯示模組正確率。</p>`}
+          </article>
+        </div>
+      </details>`
+    : `
+      <article class="tracker-panel">
+        <h3>今日主要錯因</h3>
+        ${topErrors.length ? `<ol class="tracker-list">${topErrors.map(([code, count]) => `<li>${html(errorCodeLabel(code))} <small class="muted-note error-code-tag">${html(code)}</small> <span>${count}</span></li>`).join("")}</ol>` : `<p class="muted-note">今天還沒有錯題紀錄。</p>`}
+      </article>
+      <article class="tracker-panel">
+        <h3>目前較弱模組</h3>
+        ${modules.length ? `<ol class="tracker-list">${modules.map(([type, value]) => `<li>${html(questionTypeLabel(type))} <span>${pct(value)}</span></li>`).join("")}</ol>` : `<p class="muted-note">完成一課後才會顯示模組正確率。</p>`}
+      </article>`;
+
+  const completionMessage = buildCompletionMessage();
+  const completionBanner = completionMessage
+    ? (compact
+      ? `<p class="muted-note today-milestone-note" data-testid="today-milestone-note">${html(completionMessage)}</p>`
+      : `<div class="tracker-alert ok today-milestone-banner" data-testid="today-milestone-banner">${html(completionMessage)}</div>`)
+    : "";
 
   return `
-    ${buildCompletionMessage() ? `<div class="tracker-alert ok">${html(buildCompletionMessage())}</div>` : ""}
+    ${completionBanner}
     ${window.VocabTracker?.hasInstallPrompt?.() && !state.prefs.install_dismissed ? `
       <div class="tracker-alert info install-banner">
         <span>安裝為桌面 App，可離線使用</span>
@@ -99,15 +138,17 @@ export function renderToday() {
       ${nextActionBtn}
     </section>
 
-    <section class="tracker-grid tracker-grid--five">
-      <article class="tracker-stat">
-        <span>今日題數</span>
+    <section class="${statsGridClass}" data-testid="today-stats-row">
+      <article class="tracker-stat today-daily-progress" data-testid="today-daily-progress">
+        <span>${compact ? "今日進度" : "今日題數"}</span>
         <strong>${todayAttempts.length}/${dailyGoal}</strong>
-        <small>${streak > 0 ? `連續 ${streak} 天` : "今天開始"}</small>
-        <div class="daily-goal-bar"><div style="width:${Math.min(100, Math.round(todayAttempts.length / dailyGoal * 100))}%"></div></div>
+        <small data-testid="today-daily-hint">${compact
+          ? (streak >= 2 ? `連續 ${streak} 天 · 依自己的節奏即可` : `目標 ${dailyGoal} 題 · 慢慢來`)
+          : (streak > 0 ? `連續 ${streak} 天` : "今天開始")}</small>
+        <div class="daily-goal-bar" aria-hidden="true"><div style="width:${Math.min(100, Math.round(todayAttempts.length / dailyGoal * 100))}%"></div></div>
       </article>
       <article class="tracker-stat"><span>正確率</span><strong>${pct(accuracy)}</strong><small>${wrongAttempts.length} 題錯誤</small></article>
-      <article class="tracker-stat"><span>平均時間</span><strong>${seconds(avgTime)}</strong><small>每題平均</small></article>
+      ${compact ? "" : `<article class="tracker-stat"><span>平均時間</span><strong>${seconds(avgTime)}</strong><small>每題平均</small></article>`}
       <article class="tracker-stat"><span>課程進度</span><strong>${completed}/${state.lessons.length}</strong><small>${Math.round((completed / (state.lessons.length || 1)) * 100)}%</small></article>
       <article class="tracker-stat${pendingQueue.length ? " stat-alert" : ""}"><span>到期複習</span><strong>${pendingQueue.length}</strong><small>${pendingQueue.length ? "有待複習項目" : "目前清空"}</small></article>
     </section>
@@ -130,17 +171,10 @@ export function renderToday() {
         actionsTestId: "today-advanced-tools-actions",
         note: "匯出完整資料封包與題庫管理屬於進階 / 維護功能；一般學習請優先使用下一步與錯題複習。"
       })}
-      <article class="tracker-panel">
-        <h3>今日主要錯因</h3>
-        ${topErrors.length ? `<ol class="tracker-list">${topErrors.map(([code, count]) => `<li>${html(errorCodeLabel(code))} <small class="muted-note error-code-tag">${html(code)}</small> <span>${count}</span></li>`).join("")}</ol>` : `<p class="muted-note">今天還沒有錯題紀錄。</p>`}
-      </article>
-      <article class="tracker-panel">
-        <h3>目前較弱模組</h3>
-        ${modules.length ? `<ol class="tracker-list">${modules.map(([type, value]) => `<li>${html(questionTypeLabel(type))} <span>${pct(value)}</span></li>`).join("")}</ol>` : `<p class="muted-note">完成一課後才會顯示模組正確率。</p>`}
-      </article>
+      ${secondaryPanels}
     </section>
 
-    ${renderWeeklyStageSummary()}
+    ${renderWeeklyStageSummary(compact)}
   `;
 }
 
@@ -300,7 +334,8 @@ function renderTodayLessonFocus(lesson) {
   `;
 }
 
-export function renderWeeklyStageSummary() {
+export function renderWeeklyStageSummary(compactViewport = false) {
+  const compact = compactViewport || isCompactTrackerViewport();
   const weekSessions = state.sessions.filter((session) => isWithinLastDays(session.date, 7));
   const weekAttempts = state.attempts.filter((attempt) => isWithinLastDays(localDateFromTimestamp(attempt.timestamp), 7));
   const planned = Number(state.prefs.planned_lessons_this_week || 5);
@@ -308,7 +343,7 @@ export function renderWeeklyStageSummary() {
   const weeklyAvg = average(weekAttempts.map((attempt) => attempt.response_time_seconds));
   const fixRate = calculateReviewFixRate();
   const stageRows = (state.curriculum?.stages || [])
-    .map((stage) => renderStageSealReadiness(buildStageSealReadiness(stage)))
+    .map((stage) => renderStageSealReadiness(buildStageSealReadiness(stage), compact))
     .join("");
 
   return `
@@ -323,7 +358,7 @@ export function renderWeeklyStageSummary() {
           <span>剩餘 ${state.lessons.filter((l) => !PASS_STATUSES.has(l.status)).length} 課 · 約 ${planned > 0 ? Math.ceil(state.lessons.filter((l) => !PASS_STATUSES.has(l.status)).length / planned) : "?"} 週</span>
         </div>
       </article>
-      <article class="tracker-panel" data-testid="stage-seal-readiness">
+      <article class="tracker-panel ${compact ? "stage-seal-compact" : ""}" data-testid="stage-seal-readiness">
         <h3>階段封關準備度</h3>
         <div class="stage-seal-list">${stageRows}</div>
       </article>
@@ -421,7 +456,7 @@ export function buildStageSealReadiness(stageMeta) {
   };
 }
 
-function renderStageSealReadiness(readiness) {
+function renderStageSealReadiness(readiness, compact = false) {
   if (readiness.planned) {
     return `
       <div class="stage-seal-card is-planned" data-testid="stage-seal-card-${html(readiness.stage)}">
@@ -444,6 +479,16 @@ function renderStageSealReadiness(readiness) {
           ? "待作答"
           : "未達標";
   const statusClass = readiness.allSealed ? "is-sealed" : readiness.ready ? "is-ready" : readiness.noData ? "is-no-data" : "is-open";
+  const checksToShow = compact
+    ? readiness.checks.filter((check) => !check.ok).slice(0, 2)
+    : readiness.checks;
+  const checksMarkup = checksToShow.length
+    ? checksToShow.map((check) => `
+          <span class="${check.ok ? "ok" : "wait"}">
+            <b>${check.ok ? "完成" : readiness.noData ? "需資料" : readiness.awaitingAttempts ? "待作答" : "待補"}</b> ${html(check.label)}：${html(check.detail)}
+          </span>
+        `).join("")
+    : `<span class="ok"><b>完成</b> 四項檢查皆達標</span>`;
 
   return `
     <div class="stage-seal-card ${statusClass}" data-testid="stage-seal-card-${html(readiness.stage)}">
@@ -452,13 +497,7 @@ function renderStageSealReadiness(readiness) {
         <strong>${label}</strong>
       </div>
       <div class="tracker-progress"><div style="width:${Math.round(readiness.progress * 100)}%"></div></div>
-      <div class="stage-seal-checks">
-        ${readiness.checks.map((check) => `
-          <span class="${check.ok ? "ok" : "wait"}">
-            <b>${check.ok ? "完成" : readiness.noData ? "需資料" : readiness.awaitingAttempts ? "待作答" : "待補"}</b> ${html(check.label)}：${html(check.detail)}
-          </span>
-        `).join("")}
-      </div>
+      <div class="stage-seal-checks">${checksMarkup}</div>
     </div>
   `;
 }

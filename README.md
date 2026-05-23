@@ -60,7 +60,7 @@ The active production seed is V0-V3 only. V2 restores `V2-A-71` through `V2-A-80
 | Duplicate stems | 0 |
 | Full quality audit issues | 0 |
 | Seed version | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` |
-| Service worker cache | `toeic-vorb-v48` |
+| Service worker cache | `toeic-vorb-v49` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|

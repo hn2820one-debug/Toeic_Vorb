@@ -40,7 +40,7 @@ Status: Open
 Severity: High
 Affected files: `index.html`, `tracker.html`
 Problem: Root `index.html` is the Program B launcher, but a stale service worker may still serve older Program B assets until the browser refreshes its cached shell.
-Evidence: `sw.js` caches Program B files with cache `toeic-vorb-v48`; `clear-sw.html` remains the repair path after route or shell-asset changes.
+Evidence: `sw.js` caches Program B files with cache `toeic-vorb-v49`; `clear-sw.html` remains the repair path after route or shell-asset changes.
 Recommended fix: Use `clear-sw.html` or unregister the service worker before regression testing.
 Do not fix now unless it is documentation-only.
 
@@ -140,7 +140,7 @@ Status: Open
 Severity: Medium
 Affected files: `sw.js`, `clear-sw.html`
 Problem: Service worker caches Program B assets; stale cache can hide changes.
-Evidence: `sw.js` explicitly caches Vocabulary Tracker files only and current shell cache is `toeic-vorb-v48`.
+Evidence: `sw.js` explicitly caches Vocabulary Tracker files only and current shell cache is `toeic-vorb-v49`.
 Recommended fix: Keep cache version updated and provide a clear cache-reset path.
 Do not fix now unless it is documentation-only.
 

@@ -142,9 +142,11 @@ Phase 10 結論：`PAGES-01` 已於 2026-05-23 完成；下一階段建議進入
 
 2026-05-23 啟動紀錄：`tests/lesson-flow.spec.ts` 已新增第一個 Lesson runtime mobile probe，覆蓋 `390x844` viewport 下從開始課程、作答、確認、前進到完成課程的基本流程，並檢查沒有整頁 horizontal overflow。
 
+2026-05-23 詳細規劃：後續主線已拆成 `docs/lesson-runtime-mobile-depth-plan.md`，包含 10 phases / 120 checkpoints，範圍涵蓋進課、答題、回饋、暫停恢復、review micro-session、進度動機、離線 / sync aware、無障礙與真機 release gate。
+
 ## Deferred Work
 
-- Lesson runtime 的完整手機答題體驗測試。
+- Lesson runtime 的完整手機答題體驗測試；詳細執行計畫見 `docs/lesson-runtime-mobile-depth-plan.md`。
 - Question Bank 手機管理工具深度優化。
 - 跨瀏覽器 PWA install prompt 差異處理。
 - 真實離線模式自動化測試。

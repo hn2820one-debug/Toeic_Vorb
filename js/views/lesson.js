@@ -12,6 +12,7 @@ import {
   setNotice,
   optionText,
   questionTypeLabel,
+  lessonTypeLabel,
   learningGuidance,
   renderQuestionText,
   normalizeHighlightedText,
@@ -24,9 +25,18 @@ import { buildStageSealReadiness } from "./today.js";
 
 export const REVIEW_LESSON_ID = "REVIEW_QUEUE";
 const REVIEW_QUESTION_LIMIT = 20;
+const MOBILE_REVIEW_CHUNK = 5;
 export const SPEED_TIME_LIMIT = window.VocabScoring?.targetTime("speed_drill") ?? 8;
+const MOBILE_LESSON_BREAKPOINT = 860;
 
 const STAGE_ORDER = ["V0", "V1", "V2", "V3"];
+const COMPACT_STEP_LABELS = {
+  previous_review: "複習",
+  new_vocabulary: "新字",
+  pattern_focus: "搭配",
+  toeic_practice: "TOEIC",
+  error_review_scheduling: "錯題"
+};
 
 function markDriveChange(reason) {
   window.VocabTracker?.markGoogleDriveLocalChange?.(reason);
@@ -35,6 +45,123 @@ function markDriveChange(reason) {
 function findPreviousStageId(stageId) {
   const idx = STAGE_ORDER.indexOf(stageId);
   return idx > 0 ? STAGE_ORDER[idx - 1] : null;
+}
+
+function isCompactLessonViewport() {
+  return typeof window !== "undefined"
+    && Boolean(window.matchMedia?.(`(max-width: ${MOBILE_LESSON_BREAKPOINT}px)`).matches);
+}
+
+function countDueReviewQueue() {
+  const today = window.VocabScoring.localDate();
+  return state.reviewQueue.filter((entry) => (
+    entry.status === "pending"
+    && (!entry.due_date || String(entry.due_date) <= today)
+  )).length;
+}
+
+function lessonDifficultyHint(lesson) {
+  if (!lesson) return "一般";
+  if (lesson.lesson_type === "speed_drill") return "速度";
+  if (lesson.lesson_type === "mixed_review") return "複習";
+  if (lesson.lesson_type === "diagnostic") return "診斷";
+  const minutes = Number(lesson.estimated_minutes || 20);
+  if (minutes >= 25) return "進階";
+  if (minutes >= 18) return "標準";
+  return "入門";
+}
+
+function buildPostLessonSummary(session, metrics) {
+  return {
+    lesson_id: session.lesson_id,
+    lesson_title: session.lesson_title,
+    correct_questions: metrics.correct,
+    total_questions: metrics.total,
+    wrong_questions: metrics.wrong,
+    accuracy: metrics.accuracy,
+    due_review_count: countDueReviewQueue(),
+    completed_at: window.VocabScoring.localIso()
+  };
+}
+
+function resetLessonRuntimeScroll() {
+  if (typeof window === "undefined") return;
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  const view = document.getElementById("tracker-view");
+  if (view) view.scrollTop = 0;
+  const anchor = document.querySelector(".runtime-shell .question-text, .runtime-shell .question-panel");
+  if (anchor) {
+    anchor.scrollIntoView({ block: "start", behavior: "auto" });
+    return;
+  }
+  document.querySelector(".runtime-shell")?.scrollIntoView({ block: "start", behavior: "auto" });
+}
+
+function runtimeStepLabel(step, compact) {
+  if (!compact) return step.label;
+  return COMPACT_STEP_LABELS[step.id] || step.label;
+}
+
+function renderRuntimeActions(session, progress, options = {}) {
+  const {
+    includePrevious = false,
+    includeSkip = false,
+    includePause = true,
+    includeExit = true
+  } = options;
+  const compact = isCompactLessonViewport();
+  const flowButtons = [];
+  const utilityButtons = [];
+
+  if (includePrevious && (!compact || progress.index > 0)) {
+    flowButtons.push(`
+      <button class="button secondary" type="button" onclick="VocabTracker.previousQuestion()" ${progress.index <= 0 ? "disabled" : ""}>上一題</button>
+    `);
+  }
+  if (includeSkip) {
+    flowButtons.push(`
+      <button class="button secondary" type="button" onclick="VocabTracker.nextQuestion()">${compact ? "先略過這題" : "略過 / 下一題"}</button>
+    `);
+  }
+  if (includePause) {
+    utilityButtons.push(`
+      <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "繼續" : "暫停"}</button>
+    `);
+  }
+  if (includeExit) {
+    utilityButtons.push(`
+      <button class="button ${compact ? "warning" : "secondary"}" type="button" onclick="VocabTracker.exitLesson()">離開</button>
+    `);
+  }
+
+  const buttons = [...flowButtons, ...utilityButtons];
+  if (!buttons.length) return "";
+  if (!compact) {
+    return `<div class="runtime-actions">${buttons.join("")}</div>`;
+  }
+
+  const summaryTitle = flowButtons.length ? "其他操作" : "暫停與離開";
+  const summaryNote = flowButtons.length ? "略過、返回或離開時再展開" : "需要中斷或離開時再展開";
+  const groups = [];
+  if (flowButtons.length) {
+    groups.push(`<div class="runtime-action-group">${flowButtons.join("")}</div>`);
+  }
+  if (utilityButtons.length) {
+    groups.push(`<div class="runtime-action-group runtime-action-group-utility">${utilityButtons.join("")}</div>`);
+  }
+  return `
+    <details class="runtime-action-tray" data-testid="runtime-action-tray">
+      <summary>
+        <span class="runtime-action-tray-title">
+          <strong>${summaryTitle}</strong>
+          <small>${summaryNote}</small>
+        </span>
+      </summary>
+      <div class="runtime-action-groups">${groups.join("")}</div>
+    </details>
+  `;
 }
 
 function checkStageSealGate(lessonId) {
@@ -176,9 +303,21 @@ function renderHighlightableText(text, question) {
   return output;
 }
 
+function renderRuntimeModeBadge(session) {
+  if (!session) return "";
+  if (isReviewSession(session)) {
+    return `<span class="runtime-mode-badge review">複習模式</span>`;
+  }
+  if (isSpeedSession(session)) {
+    return `<span class="runtime-mode-badge speed">速度模式 · 點選即答</span>`;
+  }
+  return "";
+}
+
 function renderWordHighlightPanel(question) {
   const session = state.activeSession;
   if (!session || !question) return "";
+  const compact = isCompactLessonViewport();
   const questionHighlights = wordHighlightsForQuestion(question.question_id, session.session_id);
   const lessonHighlights = (state.wordHighlights || []).filter((row) => (
     row.status !== "removed"
@@ -204,14 +343,27 @@ function renderWordHighlightPanel(question) {
       `).join("")}</div>`
     : "";
 
+  const panelBody = `
+    <div class="word-highlight-head">
+      <strong>不熟單字</strong>
+      <span>本題 ${questionHighlights.length} · 本輪 ${totalOccurrences}</span>
+    </div>
+    <div class="word-highlight-chips" data-testid="word-highlight-current">${chips}</div>
+    ${summaryChips}
+  `;
+
+  if (compact) {
+    return `
+      <details class="word-highlight-details compact" data-testid="word-highlight-panel">
+        <summary>標記不熟單字（本題 ${questionHighlights.length}）</summary>
+        <aside class="word-highlight-panel">${panelBody}</aside>
+      </details>
+    `;
+  }
+
   return `
     <aside class="word-highlight-panel" data-testid="word-highlight-panel">
-      <div class="word-highlight-head">
-        <strong>不熟單字</strong>
-        <span>本題 ${questionHighlights.length} · 本輪 ${totalOccurrences}</span>
-      </div>
-      <div class="word-highlight-chips" data-testid="word-highlight-current">${chips}</div>
-      ${summaryChips}
+      ${panelBody}
     </aside>
   `;
 }
@@ -318,7 +470,33 @@ function buildReviewRuntimeFromSession(session) {
   })).filter((row) => row.question);
 }
 
+function renderFeedbackLearningDetails(question, userAnswer, isCorrect, compact) {
+  const inner = `
+    ${question.explanation_zh ? `<p class="feedback-explanation">${html(question.explanation_zh)}</p>` : ""}
+    ${renderPostAnswerLearningCard(question, userAnswer, isCorrect)}
+    ${renderWordHighlightPanel(question)}
+  `;
+  if (!inner.trim()) return "";
+  if (compact) {
+    return `
+      <details class="feedback-learning-details compact" data-testid="feedback-learning-details">
+        <summary>查看解析與詞彙重點</summary>
+        ${inner}
+      </details>
+    `;
+  }
+  return inner;
+}
+
 function renderFeedback(question, userAnswer, isCorrect, hasMore) {
+  const progress = runtimeProgress();
+  const compact = isCompactLessonViewport();
+  const lockedSeconds = state.lockedQuestionSeconds;
+  const lockedNote = lockedSeconds !== null && lockedSeconds !== undefined
+    ? `<small class="feedback-timer-lock">時間已鎖定 · ${Number(lockedSeconds).toFixed(1)}s</small>`
+    : "";
+  const remaining = Math.max(0, progress.total - progress.answered);
+
   const buttons = ["A", "B", "C", "D"].map((letter) => {
     const extraClass = letter === question.correct_answer
       ? "feedback-correct"
@@ -332,17 +510,20 @@ function renderFeedback(question, userAnswer, isCorrect, hasMore) {
   }).join("");
 
   return `
-    <article class="question-panel" data-highlight-capture-zone="lesson" onmouseup="VocabTracker.captureLessonHighlight()">
+    <article class="question-panel feedback-panel feedback-panel-enter" data-testid="feedback-panel" role="status" aria-live="polite" aria-label="答題結果" data-highlight-capture-zone="lesson" onmouseup="VocabTracker.captureLessonHighlight()">
+      <div class="feedback-momentum ${compact ? "micro-feedback-subtle" : ""}" data-testid="feedback-momentum">
+        <span>已完成 <strong>${progress.answered} / ${progress.total}</strong></span>
+        <span class="muted-note">${remaining > 0 ? `剩 ${remaining} 題` : "最後一題"}</span>
+      </div>
       <div class="feedback-banner ${isCorrect ? "correct" : "wrong"}">
-        ${isCorrect ? "✓ 答對" : "✗ 答錯，已標示正解"}
+        <span>${isCorrect ? "✓ 答對" : "✗ 答錯，已標示正解"}</span>
+        ${compact ? lockedNote : ""}
       </div>
       <p class="question-text" data-highlight-source="question_text">${renderHighlightableText(question.question_text, question)}</p>
       <div class="answer-grid">${buttons}</div>
-      ${question.explanation_zh ? `<p class="feedback-explanation">${html(question.explanation_zh)}</p>` : ""}
-      ${renderPostAnswerLearningCard(question, userAnswer, isCorrect)}
-      ${renderWordHighlightPanel(question)}
-      <div class="tracker-actions">
-        <button class="button primary" type="button" onclick="VocabTracker.advanceAfterFeedback()">${hasMore ? "下一題" : "查看摘要"}</button>
+      ${renderFeedbackLearningDetails(question, userAnswer, isCorrect, compact)}
+      <div class="tracker-actions feedback-advance-row">
+        <button class="button primary" type="button" data-testid="feedback-advance" onclick="VocabTracker.advanceAfterFeedback()">${hasMore ? "下一題" : "查看摘要"}</button>
       </div>
     </article>
   `;
@@ -352,12 +533,58 @@ function targetItemForQuestion(question) {
   return state.vocabItems.find((item) => item.item_id === question?.target_item_id);
 }
 
-function renderQuestionGuidance(question) {
+function renderFinishPanel(session, progress) {
+  const compact = isCompactLessonViewport();
+  const isReview = isReviewSession(session);
+  const answers = Object.values(session?.answers || {});
+  const correctCount = answers.filter((answer) => answer.is_correct).length;
+  const recapTotal = Math.max(progress.total, answers.length);
+  const recapAccuracy = recapTotal ? correctCount / recapTotal : 0;
+  const finishTitle = isReview ? "複習完成" : "第 5 步：錯題回顧與安排";
+  const finishNote = isReview
+    ? (compact
+      ? "儲存後會更新複習佇列狀態，可稍後再回 Mistakes 查看。"
+      : "產生這次複習摘要，並更新已修正 / 仍不穩 / 反覆錯誤的佇列狀態。")
+    : (compact
+      ? "下一步會進入錯題回顧；可先確認錯因或稍後再處理。"
+      : "先產生本次課程摘要、套用精熟度判定，再確認錯因。");
+  const finishButton = isReview ? "完成複習" : "完成課程";
+  const localNote = lessonLocalSaveNote();
+
   return `
-    <div class="question-guidance">
-      <strong>${html(questionTypeLabel(question.type))}</strong>
-      <span>${html(learningGuidance(question))}</span>
-    </div>
+    <article class="tracker-panel finish-panel ${isReview ? "review-finish-panel" : ""}" data-testid="finish-panel">
+      <div class="finish-panel-summary" data-testid="finish-panel-summary">
+        <h3>${finishTitle}</h3>
+        <p class="tracker-bigline">${progress.answered}/${progress.total} 題已即時儲存</p>
+        <div class="finish-recap-metrics" data-testid="finish-recap-metrics">
+          <span>正確 <strong>${pct(recapAccuracy)}</strong></span>
+          <span>${correctCount} / ${recapTotal} 題</span>
+          ${!isReview && compact ? `<span class="muted-note">精熟度將在儲存後更新</span>` : ""}
+        </div>
+        ${isReview && compact ? `<p class="finish-panel-hint muted-note">微型複習回合完成 · 可隨時再做下一組</p>` : ""}
+        ${!isReview && compact ? `<p class="finish-panel-hint muted-note">主流程：完成後進入錯題回顧</p>` : ""}
+        ${localNote ? `<p class="finish-panel-hint muted-note">${html(localNote)}</p>` : ""}
+      </div>
+      <p class="muted-note">${finishNote}</p>
+      <div class="tracker-actions finish-panel-actions">
+        <button class="button primary" type="button" data-testid="finish-lesson" onclick="VocabTracker.finishLesson()">${finishButton}</button>
+      </div>
+    </article>
+  `;
+}
+
+function renderQuestionGuidance(question) {
+  const compact = isCompactLessonViewport();
+  return `
+    <details class="question-guidance ${compact ? "compact" : ""}" data-testid="question-guidance" ${compact ? "" : "open"}>
+      <summary>
+        <span class="question-guidance-title">
+          <strong>${html(questionTypeLabel(question.type))}</strong>
+          <small>${compact ? "點開查看答題提示" : "答題提示"}</small>
+        </span>
+      </summary>
+      <p>${html(learningGuidance(question))}</p>
+    </details>
   `;
 }
 
@@ -458,6 +685,129 @@ function plannedLessonQuestionCount(lesson) {
   return total || lesson.target_items?.length || ids.size;
 }
 
+function renderRuntimeStatusPill() {
+  const note = lessonLocalSaveNote();
+  if (!note || !isCompactLessonViewport()) return "";
+  return `<p class="runtime-status-pill muted-note" data-testid="runtime-status-pill" aria-live="polite">${html(note)}</p>`;
+}
+
+function lessonLocalSaveNote() {
+  if (state.connectivity === "offline" || (typeof navigator !== "undefined" && navigator.onLine === false)) {
+    return "離線中 · 確認答案仍會先保存到此裝置";
+  }
+  const autoSync = window.GoogleDriveSyncData?.getAutoSyncState?.() || { enabled: false, pending: false };
+  if (autoSync.enabled && autoSync.pending) {
+    return "本機已保存 · 尚有變更待同步（不影響目前作答）";
+  }
+  return "";
+}
+
+function renderLessonResumeBanner(session, progress) {
+  if (!isCompactLessonViewport() || !session || progress.answered <= 0 || state.lessonResumeBannerDismissed) {
+    return "";
+  }
+  const pausedNote = session.paused ? " · 課程暫停中" : "";
+  return `
+    <div class="lesson-resume-banner" data-testid="lesson-resume-banner">
+      <div>
+        <strong>已恢復本機進度</strong>
+        <span>第 ${progress.index + 1} 題 · 已完成 ${progress.answered}/${progress.total}${pausedNote}</span>
+      </div>
+      <button class="button secondary small" type="button" data-testid="dismiss-resume-banner" onclick="VocabTracker.dismissLessonResumeBanner()">知道了</button>
+    </div>
+  `;
+}
+
+export function dismissLessonResumeBanner() {
+  state.lessonResumeBannerDismissed = true;
+  callRender();
+}
+
+function lessonStartSyncNote() {
+  const autoSync = window.GoogleDriveSyncData?.getAutoSyncState?.() || { enabled: false, pending: false };
+  if (typeof navigator !== "undefined" && navigator.onLine === false) {
+    return "目前離線；開始後你的作答仍會先保存在本機，恢復連線後再處理同步。";
+  }
+  if (autoSync.pending) {
+    return "本機已有待同步變更；開始後你的作答仍會先保存在此裝置，不會因同步狀態而阻擋學習。";
+  }
+  if (autoSync.enabled) {
+    return "本機優先；確認答案後會先保存到此裝置，並在可用時再同步到 Google Drive。";
+  }
+  return "本機優先；確認答案後會先保存到此裝置。若之後需要跨裝置同步，可在設定連接 Google Drive。";
+}
+
+function renderLessonResumeEntry(lesson) {
+  const active = window.VocabDB.loadActiveSession();
+  if (!active || active.lesson_id !== lesson?.lesson_id) return "";
+  const answered = Object.keys(active.answers || {}).length;
+  const total = active.question_ids?.length || 0;
+  const pausedNote = active.paused ? " · 已暫停" : "";
+  return `
+    <div class="lesson-resume-entry" data-testid="lesson-resume-entry">
+      <strong>有未完成的本機進度</strong>
+      <p class="muted-note">已完成 ${answered}/${total} 題${pausedNote} · 可從上次位置繼續</p>
+      <p class="muted-note">重新開始會從第 1 題建立新的續作；已確認答案仍保留在本機作答紀錄。</p>
+      <button class="button primary" type="button" data-testid="resume-lesson" onclick="VocabTracker.resumeLesson()">繼續上次進度</button>
+    </div>
+  `;
+}
+
+function renderLessonStartPanel(lesson) {
+  const isSpeed = lesson?.lesson_type === "speed_drill";
+  const resumeEntry = renderLessonResumeEntry(lesson);
+  const questionCount = plannedLessonQuestionCount(lesson);
+  const estimatedMinutes = lesson?.estimated_minutes || 20;
+  const primaryDetail = isSpeed ? `${SPEED_TIME_LIMIT}s / 題` : "確認後保存";
+  const primaryLabel = isSpeed ? "答題節奏" : "保存方式";
+  const introNote = isSpeed
+    ? "這一課是速度反應模式；點下選項就會立即作答。開始前先確認你已準備好連續快速作答。"
+    : "開始前先看本課重點；真正儲存在你按下「確認答案」後才發生，未確認前不會寫入作答紀錄。";
+
+  return `
+    <section class="tracker-panel lesson-start-panel" data-testid="lesson-start-panel">
+      <div class="lesson-start-head">
+        <h3>開始課程</h3>
+        <p class="tracker-bigline">${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "")}</p>
+      </div>
+      <div class="lesson-start-goal" data-testid="lesson-start-goal">
+        <span><strong>目標</strong> ${html(lessonTypeLabel(lesson?.lesson_type))}</span>
+        <span><strong>難度</strong> ${html(lessonDifficultyHint(lesson))} · ${html(lesson?.stage || "")}</span>
+      </div>
+      ${renderLessonPreview(lesson)}
+      <div class="lesson-start-summary" data-testid="lesson-start-summary">
+        <div class="lesson-start-stat">
+          <strong>${questionCount} 題</strong>
+          <span>本課題數</span>
+        </div>
+        <div class="lesson-start-stat">
+          <strong>約 ${estimatedMinutes} 分鐘</strong>
+          <span>預估時長</span>
+        </div>
+        <div class="lesson-start-stat">
+          <strong>${html(primaryDetail)}</strong>
+          <span>${html(primaryLabel)}</span>
+        </div>
+      </div>
+      <p class="lesson-start-note">${html(introNote)}</p>
+      <p class="lesson-start-sync-note" data-testid="lesson-start-sync-note">${html(lessonStartSyncNote())}</p>
+      ${resumeEntry}
+      ${!isSpeed ? `
+      <details class="step-plan-details lesson-start-steps">
+        <summary>查看學習步驟</summary>
+        <div class="step-plan">
+          ${LESSON_STEPS.map((step) => `<div><strong>${html(step.label)}</strong><span>${step.minutes} min</span></div>`).join("")}
+        </div>
+      </details>` : ""}
+      <div class="tracker-actions lesson-start-actions" data-testid="lesson-start-actions">
+        ${resumeEntry ? `<button class="button secondary" type="button" data-testid="restart-current-lesson" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">重新開始</button>` : `<button class="button primary" type="button" data-testid="start-current-lesson" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">開始目前課程</button>`}
+        <button class="button ${resumeEntry ? "secondary" : "secondary"}" type="button" onclick="VocabTracker.setView('roadmap')">選擇課程</button>
+        <button class="button secondary" type="button" data-testid="lesson-return-home" onclick="location.href='./index.html'">返回首頁</button>
+      </div>
+    </section>
+  `;
+}
+
 // --- Speed Mode rendering ---
 
 function renderSpeedLesson(lesson, row, progress) {
@@ -484,6 +834,7 @@ function renderSpeedLesson(lesson, row, progress) {
       <div class="tracker-progress runtime-progress"><div style="width:${width}%"></div></div>
       <article class="question-panel speed-question" data-highlight-capture-zone="lesson" onmouseup="VocabTracker.captureLessonHighlight()">
         <div class="question-meta">
+          ${renderRuntimeModeBadge(session)}
           <span>${html(questionTypeLabel(question.type))}</span>
           <span>目標 ${window.VocabScoring.targetTime(question.type)}s</span>
         </div>
@@ -496,11 +847,9 @@ function renderSpeedLesson(lesson, row, progress) {
             </button>
           `).join("")}
         </div>
-        ${renderWordHighlightPanel(question)}
+        ${isCompactLessonViewport() ? "" : renderWordHighlightPanel(question)}
       </article>
-      <div class="runtime-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開</button>
-      </div>
+      ${renderRuntimeActions(session, progress, { includePrevious: false, includeSkip: false, includePause: false })}
     </section>
   `;
 }
@@ -581,16 +930,20 @@ function renderSpeedSummary(session) {
 }
 
 function renderEmptyLessonState() {
+  const dueReview = countDueReviewQueue();
   return `
     <section class="tracker-panel lesson-empty-state" data-testid="lesson-empty-state">
       <h3>正式課程重建中</h3>
       <p class="tracker-bigline">目前沒有可開始的 production 課程。</p>
-      <p class="muted-note">production seed 已清空，正式課程會依 Future Plan 重新建立。你仍可查看進度、匯出本機資料，或進入題庫管理檢查 IndexedDB 內容。</p>
+      <p class="muted-note">${dueReview
+        ? `目前沒有新課可開始，但有 ${dueReview} 個到期複習項目；可先用複習模式延續手機微型學習。`
+        : "production seed 已清空，正式課程會依 Future Plan 重新建立。你仍可查看進度、匯出本機資料，或進入題庫管理檢查 IndexedDB 內容。"}</p>
       <div class="tracker-actions">
+        ${dueReview ? `<button class="button primary" type="button" onclick="VocabTracker.startReviewMode('due')">開始複習</button>` : ""}
         <button class="button secondary" type="button" onclick="VocabTracker.setView('today')">回到 Today</button>
         <button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">課程地圖</button>
         <button class="button secondary" type="button" onclick="VocabTracker.setView('bank')">題庫管理</button>
-        <button class="button primary" type="button" onclick="VocabTracker.setView('export')">匯出完整資料封包</button>
+        <button class="button ${dueReview ? "secondary" : "primary"}" type="button" onclick="VocabTracker.setView('export')">匯出完整資料封包</button>
       </div>
     </section>
   `;
@@ -611,26 +964,7 @@ export function renderLesson() {
   if (!state.activeSession) {
     const lesson = currentLesson();
     if (!lesson) return renderEmptyLessonState();
-    const isSpeed = lesson?.lesson_type === "speed_drill";
-    return `
-      <section class="tracker-panel">
-        <h3>開始課程</h3>
-        <p class="tracker-bigline">${html(lesson?.lesson_id || "-")} · ${html(lesson?.title || "")}</p>
-        ${renderLessonPreview(lesson)}
-        ${!isSpeed ? `
-        <p class="lesson-quick-meta">本課 ${plannedLessonQuestionCount(lesson)} 題 · 約 ${lesson?.estimated_minutes || 20} 分鐘</p>
-        <details class="step-plan-details">
-          <summary>查看學習步驟</summary>
-          <div class="step-plan">
-            ${LESSON_STEPS.map((step) => `<div><strong>${html(step.label)}</strong><span>${step.minutes} min</span></div>`).join("")}
-          </div>
-        </details>` : ""}
-        <div class="tracker-actions">
-          <button class="button primary" type="button" onclick="VocabTracker.startLesson('${html(lesson?.lesson_id || "")}')">開始目前課程</button>
-          <button class="button secondary" type="button" onclick="VocabTracker.setView('roadmap')">選擇課程</button>
-        </div>
-      </section>
-    `;
+    return renderLessonStartPanel(lesson);
   }
 
   const session = state.activeSession;
@@ -660,10 +994,7 @@ export function renderLesson() {
           <section class="runtime-shell">
             ${renderRuntimeHeader(lesson, row.step)}
             ${renderFeedback(question, answerData.user_answer, answerData.is_correct, hasMore)}
-            <div class="runtime-actions">
-              <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "繼續" : "暫停"}</button>
-              <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開</button>
-            </div>
+            ${renderRuntimeActions(session, progress, { includePrevious: false, includeSkip: false })}
           </section>
         `;
       }
@@ -674,20 +1005,10 @@ export function renderLesson() {
   const allAnswered = progress.answered >= progress.total && progress.total > 0;
 
   if (allAnswered) {
-    const finishTitle = isReviewSession(session) ? "複習摘要" : "第 5 步：錯題回顧與安排";
-    const finishNote = isReviewSession(session)
-      ? "產生這次複習摘要，並更新已修正 / 仍不穩 / 反覆錯誤的佇列狀態。"
-      : "先產生本次課程摘要、套用精熟度判定，再確認錯因。";
-    const finishButton = isReviewSession(session) ? "完成複習" : "完成課程";
     return `
       <section class="runtime-shell">
         ${renderRuntimeHeader(lesson, "error_review_scheduling")}
-        <article class="tracker-panel finish-panel">
-          <h3>${finishTitle}</h3>
-          <p class="tracker-bigline">${progress.answered}/${progress.total} 題已即時儲存。</p>
-          <p class="muted-note">${finishNote}</p>
-          <button class="button primary" type="button" onclick="VocabTracker.finishLesson()">${finishButton}</button>
-        </article>
+        ${renderFinishPanel(session, progress)}
       </section>
     `;
   }
@@ -703,13 +1024,31 @@ export function renderLesson() {
   }
 
   const savedAnswer = session.answers?.[question.question_id]?.user_answer || null;
+  const pendingForQuestion = session.pending_answer?.question_id === question.question_id
+    ? session.pending_answer.letter
+    : null;
+  if (!savedAnswer && pendingForQuestion && state.pendingAnswer !== pendingForQuestion) {
+    state.pendingAnswer = pendingForQuestion;
+  }
   const selected = savedAnswer || state.pendingAnswer;
+  const compact = isCompactLessonViewport();
+  const confirmNote = savedAnswer
+    ? (compact ? "答案已鎖定" : "答案已鎖定並儲存，對錯會等回顧時再顯示。")
+    : selected
+      ? (compact ? `已選 ${html(selected)}` : `已選擇 ${html(selected)}，按下「確認答案」後才會儲存。`)
+      : (compact ? "請先選擇答案" : "請先選一個答案，再按下「確認答案」。在你確認前，系統不會儲存。");
+
+  const localNote = lessonLocalSaveNote();
+  const showInlineLocalNote = localNote && !isCompactLessonViewport();
 
   return `
-    <section class="runtime-shell">
+    <section class="runtime-shell lesson-runtime-shell" data-testid="lesson-runtime-shell">
+      ${renderLessonResumeBanner(session, progress)}
       ${renderRuntimeHeader(lesson, row.step)}
-      <article class="question-panel" data-highlight-capture-zone="lesson" onmouseup="VocabTracker.captureLessonHighlight()">
+      ${showInlineLocalNote ? `<p class="runtime-local-note" data-testid="runtime-local-note">${html(localNote)}</p>` : ""}
+      <article class="question-panel" role="group" aria-label="作答區 · 第 ${progress.index + 1} 題，共 ${progress.total} 題" data-highlight-capture-zone="lesson" onmouseup="VocabTracker.captureLessonHighlight()">
         <div class="question-meta">
+          ${renderRuntimeModeBadge(session)}
           <span>${html(questionTypeLabel(question.type))}</span>
           <span>Q ${progress.index + 1} / ${progress.total}</span>
           <span>目標 ${window.VocabScoring.targetTime(question.type)}s</span>
@@ -718,25 +1057,20 @@ export function renderLesson() {
         <p class="question-text" data-highlight-source="question_text">${renderHighlightableText(question.question_text, question)}</p>
         <div class="answer-grid">
           ${["A", "B", "C", "D"].map((letter) => `
-            <button class="answer-button ${selected === letter ? "selected" : ""}" type="button" ${savedAnswer || session.paused ? "disabled" : ""} onclick="VocabTracker.answerCurrent('${letter}')">
+            <button class="answer-button ${selected === letter ? "selected" : ""}" type="button" aria-pressed="${selected === letter ? "true" : "false"}" aria-label="選項 ${letter}" ${savedAnswer || session.paused ? "disabled" : ""} onclick="VocabTracker.answerCurrent('${letter}')">
               <strong>${letter}</strong>
               <span data-highlight-source="option_${letter}">${renderHighlightableText(question.options?.[letter] || "", question)}</span>
             </button>
           `).join("")}
         </div>
         ${renderWordHighlightPanel(question)}
-        <p class="keyboard-hint">快捷鍵：A / B / C / D 選擇 · Enter 確認</p>
-        <div class="confirm-answer-row">
-          <p class="muted-note">${savedAnswer ? "答案已鎖定並儲存，對錯會等回顧時再顯示。" : selected ? `已選擇 ${html(selected)}，按下「確認答案」後才會儲存。` : "請先選一個答案，再按下「確認答案」。在你確認前，系統不會儲存。"}</p>
-          <button class="button primary" type="button" onclick="VocabTracker.confirmCurrentAnswer()" ${!selected || savedAnswer || session.paused ? "disabled" : ""}>確認答案</button>
+        ${isCompactLessonViewport() ? "" : `<p class="keyboard-hint">快捷鍵：A / B / C / D 選擇 · Enter 確認</p>`}
+        <div class="confirm-answer-row" data-testid="confirm-answer-row">
+          <p class="muted-note">${confirmNote}</p>
+          <button class="button primary" type="button" data-testid="confirm-answer" aria-label="確認答案" onclick="VocabTracker.confirmCurrentAnswer()" ${!selected || savedAnswer || session.paused || state.confirmingAnswer ? "disabled" : ""}>確認答案</button>
         </div>
       </article>
-      <div class="runtime-actions">
-        <button class="button secondary" type="button" onclick="VocabTracker.previousQuestion()" ${progress.index <= 0 ? "disabled" : ""}>上一題</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.nextQuestion()">略過 / 下一題</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.togglePause()">${session.paused ? "繼續" : "暫停"}</button>
-        <button class="button secondary" type="button" onclick="VocabTracker.exitLesson()">離開</button>
-      </div>
+      ${renderRuntimeActions(session, progress, { includePrevious: true, includeSkip: true })}
     </section>
   `;
 }
@@ -744,6 +1078,7 @@ export function renderLesson() {
 export function renderRuntimeHeader(lesson, currentStepId) {
   const progress = runtimeProgress();
   const session = state.activeSession;
+  const compact = isCompactLessonViewport();
   const stepItems = isReviewSession(session)
     ? `
       <span class="step-chip active">${html(reviewFilterLabel(session.review_filter))}</span>
@@ -751,12 +1086,12 @@ export function renderRuntimeHeader(lesson, currentStepId) {
       <span class="step-chip">${html(session.review_ids?.length || 0)} 個項目</span>
     `
     : LESSON_STEPS.map((step) => `
-      <span class="step-chip ${step.id === currentStepId ? "active" : ""}">${html(step.label)}</span>
+      <span class="step-chip ${step.id === currentStepId ? "active" : ""}">${html(runtimeStepLabel(step, compact))}</span>
     `).join("");
   const width = Math.round((progress.answered / Math.max(progress.total, 1)) * 100);
   return `
-    <article class="runtime-head">
-      <div>
+    <article class="runtime-head lesson-runtime-head" data-testid="lesson-runtime-head">
+      <div class="runtime-head-main">
         <div class="tracker-kicker">${html(lesson?.lesson_id || session.lesson_id)}</div>
         <h2>${html(lesson?.title || session.lesson_title)}</h2>
       </div>
@@ -766,8 +1101,16 @@ export function renderRuntimeHeader(lesson, currentStepId) {
       </div>
     </article>
     <div class="step-strip">${stepItems}</div>
-    <div class="tracker-progress runtime-progress"><div style="width:${width}%"></div></div>
-    ${session.paused ? `<div class="tracker-alert warn">課程已暫停。繼續後才會重新計算作答時間。</div>` : ""}
+    <div class="tracker-progress runtime-progress ${compact ? "runtime-progress-sticky" : ""}" data-testid="runtime-progress"><div style="width:${width}%"></div></div>
+    ${renderRuntimeStatusPill()}
+    ${isReviewSession(session) && compact ? `<p class="review-partial-exit-hint muted-note" data-testid="review-partial-exit-hint">可先完成本組再離開；進度會保留在本機。</p>` : ""}
+    ${session.paused ? `
+      <div class="tracker-alert warn lesson-paused-alert" data-testid="lesson-paused-alert">
+        <strong>課程已暫停</strong>
+        <span>已儲存進度 ${progress.answered}/${progress.total} 題 · 計時已停止 · 按「繼續」恢復</span>
+      </div>
+    ` : ""}
+    ${!compact && lessonLocalSaveNote() && !session.paused ? `<p class="runtime-local-note runtime-local-note-inline" data-testid="runtime-local-note">${html(lessonLocalSaveNote())}</p>` : ""}
   `;
 }
 
@@ -883,12 +1226,18 @@ export function buildRuntimeQuestions(lesson, allLessonQuestions, session) {
 }
 
 export function ensureQuestionClock(questionId) {
+  const session = state.activeSession;
   if (state.currentQuestionKey !== questionId) {
     state.currentQuestionKey = questionId;
-    state.questionStartedAt = Date.now();
-    state.pendingAnswer = null;
+    state.questionStartedAt = session?.paused ? null : Date.now();
+    const pendingForQuestion = session?.pending_answer?.question_id === questionId
+      ? session.pending_answer.letter
+      : null;
+    state.pendingAnswer = pendingForQuestion;
     state.lockedQuestionSeconds = null;
     state.speedTimerFired = false;
+  } else if (!state.questionStartedAt && session && !session.paused) {
+    state.questionStartedAt = Date.now();
   }
 }
 
@@ -930,6 +1279,23 @@ export async function prepareRuntime(lessonId, existingSession) {
   return { lesson, runtime };
 }
 
+export async function resumeLesson() {
+  const active = window.VocabDB.loadActiveSession();
+  if (!active?.lesson_id) {
+    setNotice("目前沒有可恢復的課程進度。", "warn");
+    return;
+  }
+  state.activeSession = active;
+  state.lessonResumeBannerDismissed = false;
+  state.pendingAnswer = active.pending_answer?.letter || null;
+  const { runtime } = await prepareRuntime(active.lesson_id, active);
+  if (!runtime.length) {
+    setNotice("找不到可恢復的課程題目。", "warn");
+    return;
+  }
+  callSetView("lesson");
+}
+
 export async function startLesson(lessonId, opts = {}) {
   if (!lessonId) {
     setNotice("目前沒有可開始的正式課程；production seed 正在重建。", "warn");
@@ -944,6 +1310,8 @@ export async function startLesson(lessonId, opts = {}) {
   const active = window.VocabDB.loadActiveSession();
   if (active && active.lesson_id === lessonId) {
     state.activeSession = active;
+    const resumePending = active.pending_answer?.letter || null;
+    state.pendingAnswer = resumePending;
     const { runtime } = await prepareRuntime(lessonId, active);
     if (!runtime.length) {
       window.VocabDB.saveActiveSession(null);
@@ -996,6 +1364,7 @@ export async function startLesson(lessonId, opts = {}) {
   };
 
   state.activeSession = session;
+  state.lessonResumeBannerDismissed = false;
   state.currentQuestionKey = null;
   state.questionStartedAt = null;
   state.pendingAnswer = null;
@@ -1031,7 +1400,8 @@ export async function startReviewMode(filter = "due") {
     return;
   }
 
-  const review = getReviewCandidates(filter, REVIEW_QUESTION_LIMIT);
+  const reviewLimit = isCompactLessonViewport() ? MOBILE_REVIEW_CHUNK : REVIEW_QUESTION_LIMIT;
+  const review = getReviewCandidates(filter, reviewLimit);
   if (!review.rows.length) {
     setNotice(`目前沒有可用的「${review.label}」複習題。`, "warn");
     callSetView("mistakes");
@@ -1065,6 +1435,7 @@ export async function startReviewMode(filter = "due") {
   };
 
   state.activeSession = session;
+  state.lessonResumeBannerDismissed = false;
   state.runtimeQuestions = review.rows;
   state.currentQuestionKey = null;
   state.questionStartedAt = null;
@@ -1128,6 +1499,8 @@ export function answerCurrent(letter) {
   const question = row.question;
   if (session.answers?.[question.question_id]) return;
   state.pendingAnswer = letter;
+  session.pending_answer = { question_id: question.question_id, letter };
+  window.VocabDB.saveActiveSession(session);
   callRender();
 }
 
@@ -1135,12 +1508,16 @@ export async function confirmCurrentAnswer() {
   const session = state.activeSession;
   const progress = runtimeProgress();
   const row = progress.current;
-  if (!session || !row || session.paused) return;
+  if (!session || !row || session.paused || state.confirmingAnswer) return;
   const question = row.question;
   if (session.answers?.[question.question_id]) return;
   const letter = state.pendingAnswer;
   if (!letter) return;
 
+  state.confirmingAnswer = true;
+  callRender();
+
+  try {
   const responseTime = Math.max(0.2, (Date.now() - (state.questionStartedAt || Date.now())) / 1000);
   const vocabItem = state.vocabItems.find((item) => item.item_id === question.target_item_id);
   const previousWrongCount = Number(vocabItem?.wrong_count || 0);
@@ -1200,9 +1577,14 @@ export async function confirmCurrentAnswer() {
   state.showFeedback = true;
   state.currentQuestionKey = question.question_id;
   state.pendingAnswer = null;
+  delete session.pending_answer;
   state.questionStartedAt = null;
   state.lockedQuestionSeconds = attempt.response_time_seconds;
+  window.VocabDB.saveActiveSession(session);
   callRender();
+  } finally {
+    state.confirmingAnswer = false;
+  }
 }
 
 // Speed mode: click-to-answer with auto-advance (no confirm button, no feedback screen)
@@ -1410,8 +1792,14 @@ export function advanceAfterFeedback() {
   window.VocabDB.saveActiveSession(session);
   state.currentQuestionKey = null;
   state.pendingAnswer = null;
+  delete session.pending_answer;
   state.lockedQuestionSeconds = null;
+  window.VocabDB.saveActiveSession(session);
   callRender();
+  if (isCompactLessonViewport()) {
+    resetLessonRuntimeScroll();
+    requestAnimationFrame(() => resetLessonRuntimeScroll());
+  }
 }
 
 export function nextQuestion() {
@@ -1419,9 +1807,14 @@ export function nextQuestion() {
   state.activeSession.current_index = Math.min(state.runtimeQuestions.length, (state.activeSession.current_index || 0) + 1);
   state.currentQuestionKey = null;
   state.pendingAnswer = null;
+  delete state.activeSession.pending_answer;
   state.lockedQuestionSeconds = null;
   window.VocabDB.saveActiveSession(state.activeSession);
   callRender();
+  if (isCompactLessonViewport()) {
+    resetLessonRuntimeScroll();
+    requestAnimationFrame(() => resetLessonRuntimeScroll());
+  }
 }
 
 export function previousQuestion() {
@@ -1429,9 +1822,14 @@ export function previousQuestion() {
   state.activeSession.current_index = Math.max(0, (state.activeSession.current_index || 0) - 1);
   state.currentQuestionKey = null;
   state.pendingAnswer = null;
+  delete state.activeSession.pending_answer;
   state.lockedQuestionSeconds = null;
   window.VocabDB.saveActiveSession(state.activeSession);
   callRender();
+  if (isCompactLessonViewport()) {
+    resetLessonRuntimeScroll();
+    requestAnimationFrame(() => resetLessonRuntimeScroll());
+  }
 }
 
 export function togglePause() {
@@ -1452,7 +1850,14 @@ export function togglePause() {
 }
 
 export function exitLesson() {
-  if (state.activeSession) window.VocabDB.saveActiveSession(state.activeSession);
+  const session = state.activeSession;
+  if (session && isCompactLessonViewport()) {
+    const progress = runtimeProgress();
+    const label = isReviewSession(session) ? "複習" : "課程";
+    const message = `已完成 ${progress.answered}/${progress.total} 題會保留在本機。確定離開${label}？`;
+    if (!window.confirm(message)) return;
+  }
+  if (session) window.VocabDB.saveActiveSession(session);
   callSetView("today");
 }
 
@@ -1748,7 +2153,16 @@ export async function finishLesson() {
     state.activeSession = null;
     state.currentQuestionKey = null;
     state.reviewSessionId = session.session_id;
+    state.postLessonSummary = buildPostLessonSummary(session, {
+      correct,
+      total,
+      wrong,
+      accuracy
+    });
     await loadData();
+    if (state.postLessonSummary) {
+      state.postLessonSummary.due_review_count = countDueReviewQueue();
+    }
     markDriveChange("lesson_completion");
     callSetView("mistakes");
   } finally {

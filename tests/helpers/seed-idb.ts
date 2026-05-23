@@ -167,6 +167,8 @@ const seedCurriculum = {
 function trackerReady() {
   const view = document.getElementById("tracker-view");
   if (!view || !window.VocabTracker) return false;
+  if (view.getAttribute("aria-busy") === "true") return false;
+  if (view.querySelector("[data-testid='lesson-loading-skeleton']")) return false;
   return !(view.textContent || "").includes("Loading TOEIC Vocabulary Tracker");
 }
 

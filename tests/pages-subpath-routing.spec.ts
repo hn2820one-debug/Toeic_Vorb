@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { acceptNextConfirm } from "./helpers/mobile-dialogs";
 import { clearIndexedDb, waitForApp } from "./helpers/seed-idb";
 
 const APP_TIMEOUT = 30_000;
@@ -14,7 +15,7 @@ const artifactDirs = ["css", "js", "data", "icons"];
 const MANIFEST_HREF = "./manifest.json";
 const APPLE_TOUCH_ICON_HREF = "./icons/icon-192.svg";
 const SW_SCRIPT_HREF = "./sw.js";
-const SW_CACHE_NAME = "toeic-vorb-v48";
+const SW_CACHE_NAME = "toeic-vorb-v49";
 const LAUNCHER_STATUS_TEXT = "目前正式內容：V2 + V3，共 39 課 / 780 題；V0 / V1 已清空，V4 尚未啟用。";
 
 function assertSafeStagePath(targetPath: string) {
@@ -386,6 +387,7 @@ test("settings: mobile Settings stays single-column, uses touch-sized controls, 
   await expect(page.locator("#setting-user")).toHaveValue("Mobile Settings Test", { timeout: STEP_TIMEOUT });
   await expect(page.locator("#setting-daily-goal")).toHaveValue("42", { timeout: STEP_TIMEOUT });
 
+  acceptNextConfirm(page);
   await page.getByTestId("settings-clear-session-button").scrollIntoViewIfNeeded();
   await page.getByTestId("settings-clear-session-button").click({ timeout: STEP_TIMEOUT });
   await expect(page.locator("#tracker-notice .tracker-alert.ok")).toContainText("已清除目前課程續作。", { timeout: STEP_TIMEOUT });

@@ -26,6 +26,7 @@ import {
   advanceAfterFeedback,
   nextQuestion,
   previousQuestion,
+  resumeLesson,
   togglePause,
   exitLesson,
   finishLesson,
@@ -37,13 +38,15 @@ import {
   isSpeedSession,
   addItemToReview,
   captureLessonHighlight,
-  removeLessonHighlight
+  removeLessonHighlight,
+  dismissLessonResumeBanner
 } from "./views/lesson.js";
 import {
   configureMistakesView,
   renderMistakes,
   confirmSessionErrors,
   closeSessionReview,
+  dismissPostLessonSummary,
   markQueueDone,
   setReviewFilter
 } from "./views/mistakes.js";
@@ -156,6 +159,19 @@ import {
     }
   }
 
+  function isActiveLessonRuntime() {
+    return Boolean(state.activeSession && state.view === "lesson");
+  }
+
+  function flushDeferredDriveSync() {
+    if (!state.deferDriveSyncUntilLessonEnd) return;
+    state.deferDriveSyncUntilLessonEnd = false;
+    const auto = driveAutoSyncState();
+    if (auto.enabled && auto.pending) {
+      scheduleGoogleDriveAutoSync("lesson_end", { mark: false, delayMs: 800 });
+    }
+  }
+
   function scheduleGoogleDriveAutoSync(reason = "local_change", options = {}) {
     const shouldMark = options.mark !== false;
     const delayMs = Number.isFinite(Number(options.delayMs)) ? Number(options.delayMs) : 1500;
@@ -165,6 +181,10 @@ import {
     if (driveAutoSyncTimer) {
       clearTimeout(driveAutoSyncTimer);
       driveAutoSyncTimer = null;
+    }
+    if (isActiveLessonRuntime() && shouldMark) {
+      state.deferDriveSyncUntilLessonEnd = true;
+      return { scheduled: false, deferred: true, auto };
     }
     if (!auto?.enabled || !canRunGoogleDriveAutoSync()) return { scheduled: false, auto };
     driveAutoSyncTimer = setTimeout(() => {
@@ -179,11 +199,66 @@ import {
   }
 
   window.addEventListener("online", () => {
+    state.connectivity = "online";
     const auto = driveAutoSyncState();
-    if (auto.enabled && auto.pending) {
+    if (!isActiveLessonRuntime() && auto.enabled && auto.pending) {
       scheduleGoogleDriveAutoSync("online_retry", { mark: false, delayMs: 1000 });
     }
+    if (!isActiveLessonRuntime()) render();
   });
+
+  window.addEventListener("offline", () => {
+    state.connectivity = "offline";
+    if (!isActiveLessonRuntime()) render();
+  });
+
+  function dismissSwUpdateNotice() {
+    state.swUpdatePending = false;
+    render();
+  }
+
+  async function watchServiceWorkerUpdates() {
+    if (!("serviceWorker" in navigator)) return;
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      registration.addEventListener("updatefound", () => {
+        const worker = registration.installing;
+        if (!worker) return;
+        worker.addEventListener("statechange", () => {
+          if (worker.state === "installed" && navigator.serviceWorker.controller) {
+            state.swUpdatePending = true;
+            if (!isActiveLessonRuntime()) render();
+          }
+        });
+      });
+    } catch (_error) {
+      // Ignore SW registration failures in unsupported contexts.
+    }
+  }
+
+  function renderConnectivityBanners() {
+    const parts = [];
+    if (state.swUpdatePending && !isActiveLessonRuntime()) {
+      parts.push(`
+        <aside class="tracker-alert info sw-update-banner" data-testid="sw-update-banner" aria-live="polite">
+          <span>有新版本可更新（建議完成目前題組後再重新整理）</span>
+          <div class="sw-update-actions">
+            <button class="button secondary small" type="button" data-testid="sw-update-reload" onclick="location.reload()">重新整理</button>
+            <a class="button secondary small" href="./clear-sw.html" data-testid="sw-update-repair">修復快取</a>
+            <button class="button secondary small" type="button" data-testid="dismiss-sw-update" onclick="VocabTracker.dismissSwUpdateNotice()">稍後</button>
+          </div>
+        </aside>
+      `);
+    }
+    if (state.connectivity === "offline" && !isActiveLessonRuntime()) {
+      parts.push(`
+        <aside class="tracker-alert warn offline-banner" data-testid="offline-banner" aria-live="polite">
+          <span>目前離線 · 學習資料仍會保存在此裝置</span>
+        </aside>
+      `);
+    }
+    return parts.join("");
+  }
 
   function renderShell() {
     const completed = state.lessons.filter((lesson) => PASS_STATUSES.has(lesson.status)).length;
@@ -234,11 +309,17 @@ import {
       clearInterval(state.tickId);
       state.tickId = null;
     }
+    lastQuestionTimerLabel = "";
   }
+
+  let lastQuestionTimerLabel = "";
 
   function startTicker() {
     if (state.tickId) return;
-    state.tickId = setInterval(updateRuntimeTimers, 1000);
+    const intervalMs = state.activeSession && state.view === "lesson" && window.matchMedia?.("(max-width: 860px)").matches
+      ? 500
+      : 1000;
+    state.tickId = setInterval(updateRuntimeTimers, intervalMs);
   }
 
   function lessonElapsedSeconds() {
@@ -262,12 +343,18 @@ import {
     if (questionTimer) {
       if (state.lockedQuestionSeconds !== null && state.lockedQuestionSeconds !== undefined) {
         questionTimer.textContent = seconds(state.lockedQuestionSeconds);
+        questionTimer.classList.add("is-locked");
         return;
       }
+      questionTimer.classList.remove("is-locked");
       const value = state.activeSession.paused || !state.questionStartedAt
         ? 0
         : Math.max(0, (Date.now() - state.questionStartedAt) / 1000);
-      questionTimer.textContent = seconds(value);
+      const label = seconds(value);
+      if (label !== lastQuestionTimerLabel) {
+        questionTimer.textContent = label;
+        lastQuestionTimerLabel = label;
+      }
     }
     if (isSpeedSession(state.activeSession) && !state.activeSession.paused && state.questionStartedAt) {
       const currentQId = state.currentQuestionKey;
@@ -286,12 +373,26 @@ import {
     }
   }
 
+  function applyTrackerDisplayPrefs() {
+    const prefs = state.prefs || {};
+    const root = document.documentElement;
+    const systemReducedMotion = Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
+    root.classList.toggle("tracker-large-text", Boolean(prefs.mobile_large_text));
+    root.classList.toggle("tracker-reduced-motion", Boolean(prefs.mobile_reduced_motion) || systemReducedMotion);
+    root.classList.toggle("tracker-low-distraction", Boolean(prefs.mobile_low_distraction));
+  }
+
   function render() {
+    applyTrackerDisplayPrefs();
     renderShell();
     stopTicker();
 
+    const bannerHost = $("tracker-runtime-banners");
+    if (bannerHost) bannerHost.innerHTML = renderConnectivityBanners();
+
     const view = $("tracker-view");
     if (!view) return;
+    view.removeAttribute("aria-busy");
 
     if (state.view === "today") view.innerHTML = renderToday();
     if (state.view === "roadmap") view.innerHTML = renderRoadmap();
@@ -315,6 +416,7 @@ import {
   function setView(view) {
     state.view = view;
     if (view !== "mistakes") state.reviewSessionId = null;
+    if (view !== "lesson" && !state.activeSession) flushDeferredDriveSync();
     if (view !== "lesson") state.stageSealPending = null;
     render();
   }
@@ -363,7 +465,19 @@ import {
       if (!window.indexedDB) {
         throw new Error("NO_IDB");
       }
-      $("tracker-view").innerHTML = `<section class="tracker-panel"><p class="muted-note">Loading TOEIC Vocabulary Tracker...</p></section>`;
+      $("tracker-view").setAttribute("aria-busy", "true");
+      $("tracker-view").innerHTML = `
+        <section class="tracker-panel tracker-loading-skeleton" data-testid="lesson-loading-skeleton" aria-label="課程載入中">
+          <div class="skeleton-line skeleton-line-strong"></div>
+          <div class="skeleton-line"></div>
+          <div class="skeleton-grid">
+            <div class="skeleton-tile"></div>
+            <div class="skeleton-tile"></div>
+            <div class="skeleton-tile"></div>
+          </div>
+          <div class="skeleton-button"></div>
+        </section>
+      `;
       const seed = await window.VocabDB.seedIfNeeded();
       state.grammarLinks = await window.VocabDB.fetchJSON("./data/vocab/grammar_links.json").catch(() => ({}));
       await loadData();
@@ -372,6 +486,8 @@ import {
         state.activeSession = active;
         await prepareRuntime(active.lesson_id, active);
       }
+      state.connectivity = typeof navigator !== "undefined" && navigator.onLine === false ? "offline" : "online";
+      watchServiceWorkerUpdates();
       render();
       scheduleGoogleDriveAutoSync("app_start", { mark: false, delayMs: 0 });
       if (seed.seeded) setNotice("Seeded V0-V3 curriculum and question bank into IndexedDB.", "ok");
@@ -381,6 +497,7 @@ import {
       const msg = isIdbError
         ? "此瀏覽器不支援 IndexedDB。請使用 Chrome / Edge / Firefox 的正常模式（非隱私模式）開啟。"
         : html(err.message || String(err));
+      $("tracker-view").removeAttribute("aria-busy");
       $("tracker-view").innerHTML = `<section class="tracker-panel"><div class="tracker-alert danger">${msg}</div></section>`;
     }
   }
@@ -465,6 +582,9 @@ import {
     togglePause,
     triggerInstall,
     dismissInstall,
+    dismissLessonResumeBanner,
+    dismissPostLessonSummary,
+    dismissSwUpdateNotice,
     hasInstallPrompt
   };
 })();

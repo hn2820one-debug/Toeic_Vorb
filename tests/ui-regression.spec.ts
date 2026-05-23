@@ -155,7 +155,8 @@ test("lesson view: live production lesson shows normal start CTA", async ({ page
   await expect(page.getByTestId("lesson-empty-state")).toHaveCount(0);
   await expect(page.locator(".tracker-panel h3", { hasText: "開始課程" })).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(page.locator(".tracker-bigline")).toContainText("V2-A-71 · Office Equipment Scene Vocabulary", { timeout: STEP_TIMEOUT });
-  await expect(page.locator(".lesson-quick-meta")).toContainText("本課 24 題 · 約 45 分鐘", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("lesson-start-summary")).toContainText("24", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("lesson-start-summary")).toContainText("45", { timeout: STEP_TIMEOUT });
   await expect(page.getByRole("button", { name: "開始目前課程" })).toBeVisible({ timeout: STEP_TIMEOUT });
   await expect(page.locator(".lesson-preview")).toContainText("extension", { timeout: STEP_TIMEOUT });
 });

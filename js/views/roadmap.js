@@ -67,7 +67,7 @@ export function renderRoadmap() {
           <select onchange="VocabTracker.changeLessonStatus('${html(lesson.lesson_id)}', this.value)">
             ${["not_started", "in_progress", "completed", "completed_with_reinforcement", "needs_retake", "sealed"].map((status) => `<option value="${status}" ${lesson.status === status ? "selected" : ""}>${statusLabel(status)}</option>`).join("")}
           </select>
-          <button class="button small" type="button" onclick="VocabTracker.startLesson('${html(lesson.lesson_id)}')">開始</button>
+          <button class="button small" type="button" data-testid="roadmap-start-lesson" onclick="VocabTracker.startLesson('${html(lesson.lesson_id)}')">開始</button>
         </div>
       </article>
     `;

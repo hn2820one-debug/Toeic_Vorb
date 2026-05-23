@@ -1,4 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
+import { acceptNextConfirm } from "./helpers/mobile-dialogs";
 import { clearIndexedDb, waitForApp } from "./helpers/seed-idb";
 
 const APP_TIMEOUT = 30_000;
@@ -115,6 +116,12 @@ test("all main pages can be clicked and used from the launcher", async ({ page }
   await expect(page.getByRole("button", { name: "確認答案" })).toBeEnabled({ timeout: STEP_TIMEOUT });
   await page.getByRole("button", { name: "確認答案" }).click({ timeout: STEP_TIMEOUT });
   await expect(page.locator(".feedback-banner")).toBeVisible({ timeout: STEP_TIMEOUT });
+  await page.getByTestId("feedback-advance").click({ timeout: STEP_TIMEOUT });
+  acceptNextConfirm(page);
+  const actionTray = page.getByTestId("runtime-action-tray");
+  if (await actionTray.count()) {
+    await actionTray.locator("summary").click({ timeout: STEP_TIMEOUT });
+  }
   await page.getByRole("button", { name: "離開" }).click({ timeout: STEP_TIMEOUT });
   await expect(page.locator("#tracker-tabs .tracker-tab.active")).toHaveText("今日", { timeout: STEP_TIMEOUT });
   await expect(page.locator(".tracker-hero")).toBeVisible({ timeout: STEP_TIMEOUT });
@@ -154,6 +161,7 @@ test("all main pages can be clicked and used from the launcher", async ({ page }
   await page.locator("#setting-daily-goal").fill("42");
   await page.getByTestId("settings-save-button").click({ timeout: STEP_TIMEOUT });
   await expect(page.locator("#tracker-notice")).toContainText("設定已儲存", { timeout: STEP_TIMEOUT });
+  acceptNextConfirm(page);
   await page.getByTestId("settings-clear-session-button").click({ timeout: STEP_TIMEOUT });
   await expect(page.locator("#tracker-notice")).toContainText("已清除目前課程續作", { timeout: STEP_TIMEOUT });
 

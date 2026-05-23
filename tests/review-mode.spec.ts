@@ -114,3 +114,38 @@ test("review mode: due queue creates review attempts and export effectiveness", 
   expect(effectivenessCsv).toContain("error_code");
   expect(effectivenessCsv).toContain("1");
 });
+
+test("review mode: mobile due queue starts a five-question chunk", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await gotoSeededTracker(page);
+  await seedReviewQueue(page);
+  await page.reload({ waitUntil: "domcontentloaded", timeout: APP_TIMEOUT });
+  await page.waitForFunction(() => typeof window.VocabTracker?.setView === "function", { timeout: APP_TIMEOUT });
+
+  await page.evaluate(() => window.VocabTracker.setView("mistakes"));
+  await expect(page.getByTestId("review-chunk-hint")).toContainText("5 題", { timeout: STEP_TIMEOUT });
+  await page.getByTestId("start-review-mode").click({ timeout: STEP_TIMEOUT });
+
+  await expect(page.locator(".runtime-mode-badge")).toContainText("複習模式", { timeout: STEP_TIMEOUT });
+  await expect(page.locator(".question-meta")).toContainText("Q 1 / 5", { timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("review-partial-exit-hint")).toBeVisible({ timeout: STEP_TIMEOUT });
+});
+
+test("review mode: mobile chunk completion shows mini summary on mistakes", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await gotoSeededTracker(page);
+  await seedReviewQueue(page);
+  await page.reload({ waitUntil: "domcontentloaded", timeout: APP_TIMEOUT });
+  await page.waitForFunction(() => typeof window.VocabTracker?.setView === "function", { timeout: APP_TIMEOUT });
+
+  await page.evaluate(() => window.VocabTracker.setView("mistakes"));
+  await page.getByTestId("start-review-mode").click({ timeout: STEP_TIMEOUT });
+
+  for (let index = 0; index < trackerSeed.questionIds.length; index += 1) {
+    await answerCurrentCorrect(page);
+  }
+
+  await page.getByRole("button", { name: "完成複習" }).click({ timeout: STEP_TIMEOUT });
+  await expect(page.getByTestId("review-mini-summary")).toBeVisible({ timeout: APP_TIMEOUT });
+  await expect(page.getByTestId("review-mini-summary")).toContainText("5", { timeout: STEP_TIMEOUT });
+});

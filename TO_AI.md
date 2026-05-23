@@ -37,7 +37,7 @@ The runnable production seed is V0-V3 only. V2 restores `V2-A-71` through `V2-A-
 | Duplicate stems / 重複題幹 | 0 |
 | Full quality audit issues / 全題庫品質問題 | 0 |
 | Seed version / 種子版本 | `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22` |
-| Service worker cache / SW 快取 | `toeic-vorb-v48` |
+| Service worker cache / SW 快取 | `toeic-vorb-v49` |
 
 | Stage | Lessons | Questions | Status |
 |---|---:|---:|---|
@@ -169,7 +169,7 @@ Content quality and seed cleanup:
 - C-11 selected and validated `V3-W1-01` as the first V3 draft production candidate in `drafts/v0-v3-rebuild/v3_w1_01_candidate_draft_pack.json`; the human review is `docs/wave-retrospectives/2026-05-21-c11-v3-w1-01-current-baseline-review.md`. The isolated current-baseline audit scope was 12 lessons / 264 questions and passed with 0 blocking issues, 0 explanation warnings, and 0 preferred stem length warnings.
 - V3 wave 16 promoted `V3-W2-05` to live `V3-A-141` (財務會計 搭配詞 2), adding 23 new question rows and 6 vocab items while reusing `v3_a_140_rv_024` for cross-lesson pressure.
 - V3 wave 17 promoted `V3-W2-06` to live `V3-A-142` (財務會計 搭配詞 3), adding 23 new question rows and 6 vocab items while reusing `v3_a_141_rv_024` for cross-lesson pressure.
-- V3 wave 18 promoted `V3-W2-07` to live `V3-A-143` (財務會計 搭配詞 4), adding 23 new question rows and 3 vocab items while reusing `v3_a_142_rv_024` for cross-lesson pressure. Current seed is `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`; current service worker cache is `toeic-vorb-v48` after the 2026-05-23 SYNC-01 completion cleanup update.
+- V3 wave 18 promoted `V3-W2-07` to live `V3-A-143` (財務會計 搭配詞 4), adding 23 new question rows and 3 vocab items while reusing `v3_a_142_rv_024` for cross-lesson pressure. Current seed is `toeic_vocab_tracker_v3_w2_07_wave_18_2026_05_22`; current service worker cache is `toeic-vorb-v49` after the 2026-05-23 mobile Phase 1-10 review and entry/skeleton improvements.
 - C-10 execution has completed `T031` through `T037` for `V2-A-72`: the validated draft candidate is `drafts/v0-v3-rebuild/v2_a_72_candidate_draft_pack.json`, and the human review is `docs/wave-retrospectives/2026-05-20-t031-t037-v2-a-72-candidate-review.md`.
 
 Learning workflow:
@@ -253,10 +253,10 @@ Medium priority:
 - Attempts accumulate without a retention policy.
 - DB version upgrade paths are not covered by migration tests.
 - Export package is not zipped; browser fallback downloads individual files.
-- Full Lesson runtime mobile depth testing is still pending after the shell/settings/export baseline.
+- Lesson runtime mobile depth work is now tracked in `docs/lesson-runtime-mobile-depth-plan.md`; Phase 1 baseline is completed in `docs/lesson-runtime-mobile-phase-1-baseline-2026-05-23.md`, Phase 2 has started with a mobile-friendly Lesson pre-start panel plus sync-aware launch context, and Phase 3 has started with a denser mobile runtime header/guidance treatment. The next slices are resume/fresh-start framing, long-text runtime stress cases, review mobile flow, wider viewport coverage, and accessibility.
 - Question Bank mobile management ergonomics still need a dedicated follow-up pass.
 - Cross-browser PWA install prompt / install-flow behavior is still pending real-device verification.
-- Public GitHub Pages deployment remains aligned with the last released repo truth, and `npm run test:pages-live` passes against the public URL. The local repo cache name is now `toeic-vorb-v48`; redeploy before treating the public shell cache as updated.
+- Public GitHub Pages deployment was last verified after the SYNC cleanup. Current repo truth now uses service-worker cache `toeic-vorb-v49`; run the normal Pages live gate after deployment before claiming the public URL is aligned again.
 
 Closed or mostly closed:
 

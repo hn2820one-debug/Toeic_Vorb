@@ -46,10 +46,16 @@ export const state = {
   currentQuestionKey: null,
   questionStartedAt: null,
   pendingAnswer: null,
+  confirmingAnswer: false,
   lockedQuestionSeconds: null,
   reviewSessionId: null,
   reviewFilter: "due",
   lastReviewSummary: null,
+  postLessonSummary: null,
+  lessonResumeBannerDismissed: false,
+  swUpdatePending: false,
+  deferDriveSyncUntilLessonEnd: false,
+  connectivity: "online",
   roadmapFilters: {
     stage: "",
     status: "",
@@ -406,7 +412,12 @@ export async function loadData() {
   ]);
 
   state.curriculum = curriculumRows.find((row) => row.course_id === window.VocabDB.COURSE_ID) || curriculumRows[0] || null;
-  state.user = users[0] || { user_id: "Keith", display_name: "Keith", baseline_score: 570, target_score: 750 };
+  state.prefs = window.VocabDB.loadPrefs();
+  const preferredUserId = state.prefs.active_user_id || state.curriculum?.default_user?.user_id || "Keith";
+  state.user = users.find((user) => user.user_id === preferredUserId)
+    || users.find((user) => user.user_id === "Keith")
+    || users[0]
+    || { user_id: "Keith", display_name: "Keith", baseline_score: 570, target_score: 750 };
   state.lessons = lessons.sort((a, b) => (a.lesson_number || 0) - (b.lesson_number || 0));
   state.questions = questions;
   state.questionEdits = questionEdits.sort((a, b) => String(b.edited_at || "").localeCompare(String(a.edited_at || "")));
@@ -415,7 +426,6 @@ export async function loadData() {
   state.sessions = sessions.sort((a, b) => String(a.date).localeCompare(String(b.date)));
   state.errorLogs = errorLogs;
   state.reviewQueue = reviewQueue.sort((a, b) => (b.priority || 0) - (a.priority || 0) || String(a.due_date).localeCompare(String(b.due_date)));
-  state.prefs = window.VocabDB.loadPrefs();
   state.wordHighlights = loadWordHighlights();
 }
 
@@ -426,6 +436,13 @@ export function currentLesson() {
   return state.lessons.find((lesson) => !PASS_STATUSES.has(lesson.status) && lesson.status !== "needs_retake")
     || state.lessons.find((lesson) => lesson.status === "needs_retake")
     || state.lessons[0];
+}
+
+export const COMPACT_TRACKER_BREAKPOINT = 860;
+
+export function isCompactTrackerViewport() {
+  return typeof window !== "undefined"
+    && Boolean(window.matchMedia?.(`(max-width: ${COMPACT_TRACKER_BREAKPOINT}px)`).matches);
 }
 
 export function topCounts(records, field, limit) {
